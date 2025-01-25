@@ -1,0 +1,5 @@
+title=HotS with allies
+desc=Heart of the Swarm with AI allies and changed mechanics and progression
+author=Nekroguk&Amun4ik
+campaign=HOTS
+version=0.01
