@@ -2,4 +2,4 @@ title=HotS: Overhaul with Allies
 desc=Heart of the Swarm with AI allies and total overhaul of game mechanics, progression and balance.
 author=Nekroguk&Amun4ik
 campaign=HOTS
-version=0.1
+version=0.2
