@@ -1,0 +1,5 @@
+title=Coop AI ReOverhaul
+desc=Wings of Liberty campaign with Allied AI, increased difficulty and balance changes to all factions. Based on Coop AI canddiable version and Evolution Complete Dependency
+author=Nekromant
+campaign=WoL
+version=ReAllies 1.9.7(1)
