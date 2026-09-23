@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="CycloneWeaponLaunchMissileAlternate2">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HydraliskFrenzy2">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-frenzy.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="1.5"/>
+    </CBehaviorBuff>
+    <CBehaviorPowerSource id="NexusPowerSource">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-building-protoss-pylon.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <Radius value="15"/>
+        <CliffLevelFlags index="Higher" value="0"/>
+    </CBehaviorPowerSource>
+    <CBehaviorBuff id="ZerglingArmorShred">
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-buildingarmor.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <MaxStackCount value="3"/>
+        <Duration value="4"/>
+        <Modification>
+            <LifeArmorBonus value="-1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ZagaraAgressionAura">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-frenzy.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <Duration value="0.5"/>
+        <Modification MoveSpeedMultiplier="1.1" AttackSpeedMultiplier="1.1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NafashFrenzy">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-frenzy.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="1.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PrimalingSplashResist">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0.75">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NaktulNydusTimedLife" parent="TimedLife">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="90"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaEggPopStun">
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification TimeScale="0.01">
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+        <Duration value="0.0625"/>
+        <TimeScaleSource Value="Global"/>
+        <!--FinalEffect value="Pop"/-->
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaTrainPrecursor">
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <RateMultiplierArray index="Progress" value="0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <!--FinalEffect value="Pop"/-->
+    <CBehaviorBuff id="BanelingExplode2">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Modification>
+            <DeathResponse Chance="1" Effect="ToxicNestExplodeSet"/>
+        </Modification>
+        <AINotifyEffect value="VolatileBurstU"/>
+        <DamageResponse Fatal="1" Handled="ToxicNestExplodeSet" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="QueenBurstHeal2">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-transfusion.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="2.43"/>
+        <Period value="0.5"/>
+        <InitialEffect value="QueenBurstHeal2"/>
+        <PeriodicEffect value="QueenBurstHeal2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TargetFire">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="2"/>
+        <Duration value="5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ZagaraVoidCoopSpawnHunterKillersTimedLife">
+        <Modification>
+            <StateFlags index="UnitAttrOnHeroic" value="1"/>
+            <StateFlags index="SuppressFoodUsed" value="1"/>
+        </Modification>
+        <Duration value="20"/>
+        <KillCredit Value="Caster"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ZagaraVoidCoopMassFrenzyTarget">
+        <Alignment value="Positive"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <Duration value="15"/>
+        <Modification MoveSpeedMultiplier="1.25" AttackSpeedMultiplier="1.25"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-frenzy.dds"/>
+        <BehaviorCategories index="Fast" value="1"/>
+    </CBehaviorBuff>
+</Catalog>

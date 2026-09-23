@@ -1,0 +1,2700 @@
+include "TriggerLibs/NativeLib"
+include "TriggerLibs/SwarmLib"
+include "TriggerLibs/SwarmCampaignLib"
+include "Lib0D99C9FF"
+include "LibF1378293"
+
+include "LibD8BB74C6_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: HotSWithAlliesLibrary
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void libD8BB74C6_InitLibraries () {
+    libNtve_InitVariables();
+    libHots_InitVariables();
+    libSwaC_InitVariables();
+    lib0D99C9FF_InitVariables();
+    libF1378293_InitVariables();
+}
+
+// Variable Initialization
+bool libD8BB74C6_InitVariables_completed = false;
+
+void libD8BB74C6_InitVariables () {
+    int init_i;
+
+    if (libD8BB74C6_InitVariables_completed) {
+        return;
+    }
+
+    libD8BB74C6_InitVariables_completed = true;
+
+    libD8BB74C6_gv_player = 1;
+    libD8BB74C6_gv_allies = PlayerGroupEmpty();
+    libD8BB74C6_gv_alliesPlayer = PlayerGroupEmpty();
+    for (init_i = 0; init_i <= 1000; init_i += 1) {
+        libD8BB74C6_gv_bullyAllyImage[init_i] = "";
+    }
+    for (init_i = 0; init_i <= 1000; init_i += 1) {
+        libD8BB74C6_gv_bullyAllyImageTexttag[init_i] = c_textTagNone;
+    }
+    libD8BB74C6_gv_naktulHeroPing = c_invalidPingId;
+    libD8BB74C6_gv_zagaraHeroPing = c_invalidPingId;
+    libD8BB74C6_gv_nafashHeroPing = c_invalidPingId;
+    libD8BB74C6_gv_dehakaHeroPing = c_invalidPingId;
+    libD8BB74C6_gv_stukovHeroPing = c_invalidPingId;
+    for (init_i = 0; init_i <= 6; init_i += 1) {
+        libD8BB74C6_gv_allyHasHero[init_i] = true;
+    }
+    for (init_i = 0; init_i <= 16; init_i += 1) {
+        libD8BB74C6_gv_aIResourcePanelDialog[init_i] = c_invalidDialogId;
+    }
+    for (init_i = 0; init_i <= 16; init_i += 1) {
+        libD8BB74C6_gv_aIResourcePanelMineralsLabel[init_i] = c_invalidDialogControlId;
+    }
+    for (init_i = 0; init_i <= 16; init_i += 1) {
+        libD8BB74C6_gv_aIResourcePanelVespeneLabel[init_i] = c_invalidDialogControlId;
+    }
+    for (init_i = 0; init_i <= 16; init_i += 1) {
+        libD8BB74C6_gv_aIResourcePanelSupplyLabel[init_i] = c_invalidDialogControlId;
+    }
+}
+
+// Presets
+// Functions
+void libD8BB74C6_gf_RescueUnitforAI (unit lp_cHOSEN_UNIT, point lp_tARGET_POINT, int lp_cHOSEN_PLAYER, bool lp_iMMIDIATE_ATTACK) {
+    // Automatic Variable Declarations
+    // Implementation
+    libNtve_gf_PauseUnit(lp_cHOSEN_UNIT, false);
+    libNtve_gf_MakeUnitInvulnerable(lp_cHOSEN_UNIT, false);
+    libNtve_gf_RescueUnit(lp_cHOSEN_UNIT, lp_cHOSEN_PLAYER, true);
+    AISetUnitScriptControlled(lp_cHOSEN_UNIT, false);
+    if ((lp_tARGET_POINT != null)) {
+        libNtve_gf_AICast(lp_cHOSEN_UNIT, OrderTargetingPoint(AbilityCommand("attack", 0), lp_tARGET_POINT));
+    }
+
+    UnitSetInfoTip(lp_cHOSEN_UNIT, UnitTypeGetName(UnitGetType(lp_cHOSEN_UNIT)));
+    if ((lp_iMMIDIATE_ATTACK == true) && (UnitGetType(lp_cHOSEN_UNIT) != "Drone")) {
+        AISetUnitSuicide(lp_cHOSEN_UNIT, true);
+    }
+
+    if ((lp_iMMIDIATE_ATTACK == false) && (UnitGetType(lp_cHOSEN_UNIT) != "Drone")) {
+        AIAttackWaveUseUnit(lp_cHOSEN_PLAYER, lp_cHOSEN_UNIT);
+    }
+
+}
+
+void libD8BB74C6_gf_RescueDroneforAI (unit lp_cHOSEN_UNIT, int lp_cHOSEN_PLAYER, bool lp_mUTATE_HATCHERY, point lp_tARGET_POINT) {
+    // Automatic Variable Declarations
+    // Implementation
+    libNtve_gf_PauseUnit(lp_cHOSEN_UNIT, false);
+    libNtve_gf_MakeUnitInvulnerable(lp_cHOSEN_UNIT, false);
+    libNtve_gf_RescueUnit(lp_cHOSEN_UNIT, lp_cHOSEN_PLAYER, true);
+    UnitSetInfoTip(lp_cHOSEN_UNIT, UnitTypeGetName(UnitGetType(lp_cHOSEN_UNIT)));
+    AISetUnitScriptControlled(lp_cHOSEN_UNIT, false);
+    if ((lp_tARGET_POINT != null)) {
+        libNtve_gf_AICast(lp_cHOSEN_UNIT, OrderTargetingPoint(AbilityCommand("move", 0), lp_tARGET_POINT));
+    }
+
+    if ((lp_mUTATE_HATCHERY == true) && (UnitGetType(lp_cHOSEN_UNIT) == "Drone") && (lp_tARGET_POINT != null)) {
+        libNtve_gf_MakeUnitInvulnerable(lp_cHOSEN_UNIT, true);
+        libNtve_gf_AICast(lp_cHOSEN_UNIT, OrderTargetingPoint(AbilityCommand("ZergBuild", 0), lp_tARGET_POINT));
+    }
+
+}
+
+trigger auto_libD8BB74C6_gf_AttackArrowPing_Trigger = null;
+point auto_libD8BB74C6_gf_AttackArrowPing_lp_startpoint;
+point auto_libD8BB74C6_gf_AttackArrowPing_lp_endpoint;
+
+void libD8BB74C6_gf_AttackArrowPing (point lp_startpoint, point lp_endpoint) {
+    auto_libD8BB74C6_gf_AttackArrowPing_lp_startpoint = lp_startpoint;
+    auto_libD8BB74C6_gf_AttackArrowPing_lp_endpoint = lp_endpoint;
+
+    if (auto_libD8BB74C6_gf_AttackArrowPing_Trigger == null) {
+        auto_libD8BB74C6_gf_AttackArrowPing_Trigger = TriggerCreate("auto_libD8BB74C6_gf_AttackArrowPing_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libD8BB74C6_gf_AttackArrowPing_Trigger, false, false);
+}
+
+bool auto_libD8BB74C6_gf_AttackArrowPing_TriggerFunc (bool testConds, bool runActions) {
+    point lp_startpoint = auto_libD8BB74C6_gf_AttackArrowPing_lp_startpoint;
+    point lp_endpoint = auto_libD8BB74C6_gf_AttackArrowPing_lp_endpoint;
+
+    int init_i;
+
+    // Variable Declarations
+    fixed lv_distancebetweenlaunchandend;
+    int[32] lv_pings;
+    int lv_foreachint_i;
+    int lv_distancechunks;
+    fixed lv_distbwpings;
+    fixed lv_delaybetweencreatingnewping;
+    fixed lv_pinglifetime;
+
+    // Automatic Variable Declarations
+    int auto93258C46_ae;
+    const int auto93258C46_ai = 1;
+    const int autoAB22CB23_ae = 31;
+    const int autoAB22CB23_ai = 1;
+
+    // Variable Initialization
+    for (init_i = 0; init_i <= 31; init_i += 1) {
+        lv_pings[init_i] = c_invalidPingId;
+    }
+    lv_distbwpings = 12.0;
+    lv_delaybetweencreatingnewping = 0.1;
+    lv_pinglifetime = 3.0;
+
+    // Implementation
+    lv_distancebetweenlaunchandend = DistanceBetweenPoints(lp_startpoint, lp_endpoint);
+    lv_distancechunks = FixedToInt((lv_distancebetweenlaunchandend / lv_distbwpings));
+    auto93258C46_ae = lv_distancechunks;
+    lv_foreachint_i = 1;
+    for ( ; ( (auto93258C46_ai >= 0 && lv_foreachint_i <= auto93258C46_ae) || (auto93258C46_ai < 0 && lv_foreachint_i >= auto93258C46_ae) ) ; lv_foreachint_i += auto93258C46_ai ) {
+        libNtve_gf_CreatePingFacingAngle(PlayerGroupAll(), "PingArrow", libNtve_gf_PointOffsetTowardsPoint(lp_startpoint, (lv_distbwpings * IntToFixed(lv_foreachint_i)), lp_endpoint), ColorWithAlpha(100.00, 0.00, 0.00, 24.71), lv_pinglifetime, AngleBetweenPoints(lp_startpoint, lp_endpoint));
+        PingSetScale(PingLastCreated(), 0.5);
+        PingSetTooltip(PingLastCreated(), StringExternal("Param/Value/lib_D8BB74C6_B762BF46"));
+        lv_pings[lv_foreachint_i] = PingLastCreated();
+        Wait(lv_delaybetweencreatingnewping, c_timeReal);
+    }
+    Wait(8.0, c_timeGame);
+    lv_foreachint_i = 0;
+    for ( ; ( (autoAB22CB23_ai >= 0 && lv_foreachint_i <= autoAB22CB23_ae) || (autoAB22CB23_ai < 0 && lv_foreachint_i >= autoAB22CB23_ae) ) ; lv_foreachint_i += autoAB22CB23_ai ) {
+        PingDestroy(lv_pings[lv_foreachint_i]);
+    }
+    return true;
+}
+
+void libD8BB74C6_gf_RegisterBullyAlly (int lp_player, int lp_iD, string lp_icon) {
+    // Automatic Variable Declarations
+    // Implementation
+    libD8BB74C6_gv_bullyAllyPlayer[lp_iD] = lp_player;
+    libD8BB74C6_gv_bullyAllyImage[lp_iD] = lp_icon;
+}
+
+void libD8BB74C6_gf_RegisterBully (string lp_unitType, string lp_placementModel, int lp_facing) {
+    // Automatic Variable Declarations
+    // Implementation
+    libD8BB74C6_gv_bullyTypeCount = (libD8BB74C6_gv_bullyTypeCount + 1);
+    libD8BB74C6_gv_bullyTypes[libD8BB74C6_gv_bullyTypeCount] = lp_unitType;
+    libD8BB74C6_gv_bullyPlacementModels[libD8BB74C6_gv_bullyTypeCount] = lp_placementModel;
+    libD8BB74C6_gv_bullyRotation[libD8BB74C6_gv_bullyTypeCount] = lp_facing;
+}
+
+void libD8BB74C6_gf_RegisterZerg () {
+    // Automatic Variable Declarations
+    // Implementation
+    libD8BB74C6_gf_RegisterBully("Hatchery", "HatcheryPlacement", 0);
+    libD8BB74C6_gf_RegisterBully("SpawningPool", "SpawningPoolPlacement", 0);
+    libD8BB74C6_gf_RegisterBully("Extractor", "ExtractorPlacement", 315);
+    libD8BB74C6_gf_RegisterBully("RoachWarren", "RoachWarrenPlacement", 315);
+    libD8BB74C6_gf_RegisterBully("EvolutionChamber", "EvolutionChamberPlacement", 315);
+    libD8BB74C6_gf_RegisterBully("SpineCrawler", "SpineCrawlerPlacement", 315);
+    libD8BB74C6_gf_RegisterBully("SporeCrawler", "SporeCrawlerPlacement", 315);
+    libD8BB74C6_gf_RegisterBully("CreepTumor", "CreepTumorPlacement", 0);
+    libD8BB74C6_gf_RegisterBully("Lair", "HatcheryPlacement", 0);
+    libD8BB74C6_gf_RegisterBully("HydraliskDen", "HydraliskDenPlacement", 315);
+}
+
+void libD8BB74C6_gf_RegisterTerran () {
+    // Automatic Variable Declarations
+}
+
+void libD8BB74C6_gf_RegisterProtoss () {
+    // Automatic Variable Declarations
+}
+
+void libD8BB74C6_gf_RegisterCustom () {
+    // Automatic Variable Declarations
+    // Implementation
+    libD8BB74C6_gf_RegisterBully("LarvaColony", "NydusCanalCreeperPlacement", 0);
+    libD8BB74C6_gf_RegisterBully("ToxicNest", "CreepTumorPlacement", 0);
+}
+
+void libD8BB74C6_gf_RestartBulliesPreview () {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((libD8BB74C6_gv_showBulliesPreview == true)) {
+        TriggerExecute(libD8BB74C6_gt_Showbullieseffect, true, false);
+        TriggerExecute(libD8BB74C6_gt_Showbullieseffect, true, false);
+    }
+
+}
+
+trigger auto_libD8BB74C6_gf_StartNaktulAI_Trigger = null;
+int auto_libD8BB74C6_gf_StartNaktulAI_lp_minerals;
+int auto_libD8BB74C6_gf_StartNaktulAI_lp_gas;
+point auto_libD8BB74C6_gf_StartNaktulAI_lp_gatherPoint;
+point auto_libD8BB74C6_gf_StartNaktulAI_lp_heroSpawnPoint;
+
+void libD8BB74C6_gf_StartNaktulAI (int lp_minerals, int lp_gas, point lp_gatherPoint, point lp_heroSpawnPoint) {
+    auto_libD8BB74C6_gf_StartNaktulAI_lp_minerals = lp_minerals;
+    auto_libD8BB74C6_gf_StartNaktulAI_lp_gas = lp_gas;
+    auto_libD8BB74C6_gf_StartNaktulAI_lp_gatherPoint = lp_gatherPoint;
+    auto_libD8BB74C6_gf_StartNaktulAI_lp_heroSpawnPoint = lp_heroSpawnPoint;
+
+    if (auto_libD8BB74C6_gf_StartNaktulAI_Trigger == null) {
+        auto_libD8BB74C6_gf_StartNaktulAI_Trigger = TriggerCreate("auto_libD8BB74C6_gf_StartNaktulAI_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libD8BB74C6_gf_StartNaktulAI_Trigger, false, false);
+}
+
+bool auto_libD8BB74C6_gf_StartNaktulAI_TriggerFunc (bool testConds, bool runActions) {
+    int lp_minerals = auto_libD8BB74C6_gf_StartNaktulAI_lp_minerals;
+    int lp_gas = auto_libD8BB74C6_gf_StartNaktulAI_lp_gas;
+    point lp_gatherPoint = auto_libD8BB74C6_gf_StartNaktulAI_lp_gatherPoint;
+    point lp_heroSpawnPoint = auto_libD8BB74C6_gf_StartNaktulAI_lp_heroSpawnPoint;
+
+    // Variable Declarations
+    int lv_i;
+
+    // Automatic Variable Declarations
+    int autoD4C3D2BF_val;
+
+    // Variable Initialization
+
+    // Implementation
+    if ((libD8BB74C6_gv_naktulAlly == 0)) {
+        return true;
+    }
+
+    libD8BB74C6_gf_RegisterBullyAlly(libD8BB74C6_gv_naktulAlly, 1, "Assets\\Textures\\btn-commander-naktul.dds");
+    PlayerSetColorIndex(libD8BB74C6_gv_naktulAlly, 13, true);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropMinerals, c_playerPropOperSetTo, lp_minerals);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropVespene, c_playerPropOperSetTo, lp_gas);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropSuppliesLimit, c_playerPropOperSetTo, 150);
+    AISetAPM(libD8BB74C6_gv_naktulAlly, libHots_gf_DifficultyValueInt2(2000, 1500, 1000));
+    lib0D99C9FF_gf_SetDefensiveAIForPlayer(libD8BB74C6_gv_naktulAlly);
+    lib0D99C9FF_gf_MakeHeroesFlee(libD8BB74C6_gv_naktulAlly);
+    AISetDifficulty(libD8BB74C6_gv_naktulAlly, c_diffEnableDangerMap, true);
+    AISetDifficulty(libD8BB74C6_gv_naktulAlly, c_diffWaveAvoidDanger, true);
+    if ((libSwaC_gf_MissionStatusCheck("ZLab3", libSwaC_ge_MissionStatus_Completed) == true)) {
+        TechTreeUpgradeAddLevel(libD8BB74C6_gv_naktulAlly, "UnknownUpgrade", 1);
+    }
+
+    if ((libD8BB74C6_gv_aILastPlayerIndex < 5)) {
+        libD8BB74C6_gv_aILastPlayerIndex += 1;
+        libD8BB74C6_gv_aIPlayerIndex[libD8BB74C6_gv_aILastPlayerIndex] = libD8BB74C6_gv_naktulAlly;
+        libD8BB74C6_gv_naktulIndex = libD8BB74C6_gv_aILastPlayerIndex;
+        AIAttackWaveSetGatherPoint(libD8BB74C6_gv_naktulAlly, lp_gatherPoint);
+        libD8BB74C6_gf_CreateHero(libD8BB74C6_gv_naktulIndex, lp_heroSpawnPoint);
+    }
+
+    autoD4C3D2BF_val = PlayerDifficulty(1);
+    if (autoD4C3D2BF_val == 1) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_naktulAlly, "HotSCampaignLarvaCountEasy", 1);
+    }
+    else if (autoD4C3D2BF_val == 2) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_naktulAlly, "HotSCampaignLarvaCountMedium", 1);
+    }
+    else if (autoD4C3D2BF_val == 3) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_naktulAlly, "HotSCampaignLarvaCountHard", 1);
+    }
+    else if (autoD4C3D2BF_val == 4) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_naktulAlly, "HotSCampaignLarvaCountHard", 1);
+    }
+    else {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_naktulAlly, "HotSCampaignLarvaCount", 1);
+    }
+    return true;
+}
+
+trigger auto_libD8BB74C6_gf_StartNafashAI_Trigger = null;
+int auto_libD8BB74C6_gf_StartNafashAI_lp_minerals;
+int auto_libD8BB74C6_gf_StartNafashAI_lp_gas;
+point auto_libD8BB74C6_gf_StartNafashAI_lp_gatherPoint;
+point auto_libD8BB74C6_gf_StartNafashAI_lp_heroSpawnPoint;
+
+void libD8BB74C6_gf_StartNafashAI (int lp_minerals, int lp_gas, point lp_gatherPoint, point lp_heroSpawnPoint) {
+    auto_libD8BB74C6_gf_StartNafashAI_lp_minerals = lp_minerals;
+    auto_libD8BB74C6_gf_StartNafashAI_lp_gas = lp_gas;
+    auto_libD8BB74C6_gf_StartNafashAI_lp_gatherPoint = lp_gatherPoint;
+    auto_libD8BB74C6_gf_StartNafashAI_lp_heroSpawnPoint = lp_heroSpawnPoint;
+
+    if (auto_libD8BB74C6_gf_StartNafashAI_Trigger == null) {
+        auto_libD8BB74C6_gf_StartNafashAI_Trigger = TriggerCreate("auto_libD8BB74C6_gf_StartNafashAI_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libD8BB74C6_gf_StartNafashAI_Trigger, false, false);
+}
+
+bool auto_libD8BB74C6_gf_StartNafashAI_TriggerFunc (bool testConds, bool runActions) {
+    int lp_minerals = auto_libD8BB74C6_gf_StartNafashAI_lp_minerals;
+    int lp_gas = auto_libD8BB74C6_gf_StartNafashAI_lp_gas;
+    point lp_gatherPoint = auto_libD8BB74C6_gf_StartNafashAI_lp_gatherPoint;
+    point lp_heroSpawnPoint = auto_libD8BB74C6_gf_StartNafashAI_lp_heroSpawnPoint;
+
+    // Variable Declarations
+    int lv_i;
+
+    // Automatic Variable Declarations
+    int autoC3FF7944_val;
+
+    // Variable Initialization
+
+    // Implementation
+    if ((libD8BB74C6_gv_nafashAlly == 0)) {
+        return true;
+    }
+
+    TechTreeUpgradeAddLevel(libD8BB74C6_gv_nafashAlly, "NafashUpgrade", 1);
+    PlayerSetColorIndex(libD8BB74C6_gv_nafashAlly, 16, true);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropMinerals, c_playerPropOperSetTo, lp_minerals);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropVespene, c_playerPropOperSetTo, lp_gas);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropSuppliesLimit, c_playerPropOperSetTo, 150);
+    AISetAPM(libD8BB74C6_gv_nafashAlly, libHots_gf_DifficultyValueInt2(2000, 1500, 1000));
+    lib0D99C9FF_gf_SetDefensiveAIForPlayer(libD8BB74C6_gv_nafashAlly);
+    lib0D99C9FF_gf_MakeHeroesFlee(libD8BB74C6_gv_nafashAlly);
+    AISetDifficulty(libD8BB74C6_gv_nafashAlly, c_diffEnableDangerMap, true);
+    AISetDifficulty(libD8BB74C6_gv_nafashAlly, c_diffWaveAvoidDanger, true);
+    if ((libD8BB74C6_gv_aILastPlayerIndex < 5)) {
+        libD8BB74C6_gv_aILastPlayerIndex += 1;
+        libD8BB74C6_gv_aIPlayerIndex[libD8BB74C6_gv_aILastPlayerIndex] = libD8BB74C6_gv_nafashAlly;
+        libD8BB74C6_gv_nafashIndex = libD8BB74C6_gv_aILastPlayerIndex;
+        AIAttackWaveSetGatherPoint(libD8BB74C6_gv_nafashAlly, lp_gatherPoint);
+        libD8BB74C6_gf_CreateHero(libD8BB74C6_gv_nafashIndex, lp_heroSpawnPoint);
+    }
+
+    autoC3FF7944_val = PlayerDifficulty(1);
+    if (autoC3FF7944_val == 1) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountEasy", 1);
+    }
+    else if (autoC3FF7944_val == 2) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountMedium", 1);
+    }
+    else if (autoC3FF7944_val == 3) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountHard", 1);
+    }
+    else if (autoC3FF7944_val == 4) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountHard", 1);
+    }
+    else {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCount", 1);
+    }
+    return true;
+}
+
+trigger auto_libD8BB74C6_gf_StartZagaraAI_Trigger = null;
+int auto_libD8BB74C6_gf_StartZagaraAI_lp_minerals;
+int auto_libD8BB74C6_gf_StartZagaraAI_lp_gas;
+point auto_libD8BB74C6_gf_StartZagaraAI_lp_gatherPoint;
+point auto_libD8BB74C6_gf_StartZagaraAI_lp_heroSpawnPoint;
+
+void libD8BB74C6_gf_StartZagaraAI (int lp_minerals, int lp_gas, point lp_gatherPoint, point lp_heroSpawnPoint) {
+    auto_libD8BB74C6_gf_StartZagaraAI_lp_minerals = lp_minerals;
+    auto_libD8BB74C6_gf_StartZagaraAI_lp_gas = lp_gas;
+    auto_libD8BB74C6_gf_StartZagaraAI_lp_gatherPoint = lp_gatherPoint;
+    auto_libD8BB74C6_gf_StartZagaraAI_lp_heroSpawnPoint = lp_heroSpawnPoint;
+
+    if (auto_libD8BB74C6_gf_StartZagaraAI_Trigger == null) {
+        auto_libD8BB74C6_gf_StartZagaraAI_Trigger = TriggerCreate("auto_libD8BB74C6_gf_StartZagaraAI_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libD8BB74C6_gf_StartZagaraAI_Trigger, false, false);
+}
+
+bool auto_libD8BB74C6_gf_StartZagaraAI_TriggerFunc (bool testConds, bool runActions) {
+    int lp_minerals = auto_libD8BB74C6_gf_StartZagaraAI_lp_minerals;
+    int lp_gas = auto_libD8BB74C6_gf_StartZagaraAI_lp_gas;
+    point lp_gatherPoint = auto_libD8BB74C6_gf_StartZagaraAI_lp_gatherPoint;
+    point lp_heroSpawnPoint = auto_libD8BB74C6_gf_StartZagaraAI_lp_heroSpawnPoint;
+
+    // Variable Declarations
+    int lv_i;
+
+    // Automatic Variable Declarations
+    int autoB7E5680C_val;
+
+    // Variable Initialization
+
+    // Implementation
+    if ((libD8BB74C6_gv_zagaraAlly == 0)) {
+        return true;
+    }
+
+    TechTreeUpgradeAddLevel(libD8BB74C6_gv_zagaraAlly, "ZagaraUpgrade", 1);
+    PlayerSetColorIndex(libD8BB74C6_gv_zagaraAlly, 17, true);
+    AISetAPM(libD8BB74C6_gv_zagaraAlly, libHots_gf_DifficultyValueInt2(1500, 1000, 750));
+    PlayerModifyPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropMinerals, c_playerPropOperSetTo, lp_minerals);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropVespene, c_playerPropOperSetTo, lp_gas);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesLimit, c_playerPropOperSetTo, 150);
+    if ((libD8BB74C6_gv_aILastPlayerIndex < 5)) {
+        libD8BB74C6_gv_aILastPlayerIndex += 1;
+        libD8BB74C6_gv_aIPlayerIndex[libD8BB74C6_gv_aILastPlayerIndex] = libD8BB74C6_gv_zagaraAlly;
+        libD8BB74C6_gv_zagaraIndex = libD8BB74C6_gv_aILastPlayerIndex;
+        AIAttackWaveSetGatherPoint(libD8BB74C6_gv_zagaraAlly, lp_gatherPoint);
+        libD8BB74C6_gf_CreateHero(libD8BB74C6_gv_zagaraIndex, lp_heroSpawnPoint);
+    }
+
+    autoB7E5680C_val = PlayerDifficulty(1);
+    if (autoB7E5680C_val == 1) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountEasy", 1);
+    }
+    else if (autoB7E5680C_val == 2) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountMedium", 1);
+    }
+    else if (autoB7E5680C_val == 3) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountHard", 1);
+    }
+    else if (autoB7E5680C_val == 4) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountHard", 1);
+    }
+    else {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCount", 1);
+    }
+    if ((libSwaC_gf_MissionStatus("ZChar3") == libSwaC_ge_MissionStatus_Completed)) {
+        AISetAPM(libD8BB74C6_gv_zagaraAlly, libHots_gf_DifficultyValueInt2(2000, 1500, 1000));
+        lib0D99C9FF_gf_SetDefensiveAIForPlayer(libD8BB74C6_gv_zagaraAlly);
+        lib0D99C9FF_gf_MakeHeroesFlee(libD8BB74C6_gv_zagaraAlly);
+        AISetDifficulty(libD8BB74C6_gv_zagaraAlly, c_diffEnableDangerMap, true);
+    }
+
+    if ((libSwaC_gf_MissionStatus("ZZerus3") == libSwaC_ge_MissionStatus_Completed) && (libSwaC_gf_MissionStatus("ZExpedition3") == libSwaC_ge_MissionStatus_Completed)) {
+        AISetAPM(libD8BB74C6_gv_zagaraAlly, libHots_gf_DifficultyValueInt2(2500, 1750, 1250));
+    }
+
+    if ((libSwaC_gf_MissionStatus("ZHybrid3") == libSwaC_ge_MissionStatus_Completed) && (libSwaC_gf_MissionStatus("ZSpace2") == libSwaC_ge_MissionStatus_Completed)) {
+        AISetAPM(libD8BB74C6_gv_zagaraAlly, libHots_gf_DifficultyValueInt2(3000, 2225, 1500));
+    }
+
+    return true;
+}
+
+trigger auto_libD8BB74C6_gf_StartDehakaAI_Trigger = null;
+int auto_libD8BB74C6_gf_StartDehakaAI_lp_minerals;
+int auto_libD8BB74C6_gf_StartDehakaAI_lp_gas;
+point auto_libD8BB74C6_gf_StartDehakaAI_lp_gatherPoint;
+point auto_libD8BB74C6_gf_StartDehakaAI_lp_heroSpawnPoint;
+
+void libD8BB74C6_gf_StartDehakaAI (int lp_minerals, int lp_gas, point lp_gatherPoint, point lp_heroSpawnPoint) {
+    auto_libD8BB74C6_gf_StartDehakaAI_lp_minerals = lp_minerals;
+    auto_libD8BB74C6_gf_StartDehakaAI_lp_gas = lp_gas;
+    auto_libD8BB74C6_gf_StartDehakaAI_lp_gatherPoint = lp_gatherPoint;
+    auto_libD8BB74C6_gf_StartDehakaAI_lp_heroSpawnPoint = lp_heroSpawnPoint;
+
+    if (auto_libD8BB74C6_gf_StartDehakaAI_Trigger == null) {
+        auto_libD8BB74C6_gf_StartDehakaAI_Trigger = TriggerCreate("auto_libD8BB74C6_gf_StartDehakaAI_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libD8BB74C6_gf_StartDehakaAI_Trigger, false, false);
+}
+
+bool auto_libD8BB74C6_gf_StartDehakaAI_TriggerFunc (bool testConds, bool runActions) {
+    int lp_minerals = auto_libD8BB74C6_gf_StartDehakaAI_lp_minerals;
+    int lp_gas = auto_libD8BB74C6_gf_StartDehakaAI_lp_gas;
+    point lp_gatherPoint = auto_libD8BB74C6_gf_StartDehakaAI_lp_gatherPoint;
+    point lp_heroSpawnPoint = auto_libD8BB74C6_gf_StartDehakaAI_lp_heroSpawnPoint;
+
+    // Variable Declarations
+    int lv_i;
+
+    // Automatic Variable Declarations
+    int auto569A70BD_val;
+
+    // Variable Initialization
+
+    // Implementation
+    if ((libD8BB74C6_gv_dehakaAlly == 0)) {
+        return true;
+    }
+
+    PlayerSetColorIndex(libD8BB74C6_gv_dehakaAlly, 5, true);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_dehakaAlly, c_playerPropMinerals, c_playerPropOperSetTo, lp_minerals);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_dehakaAlly, c_playerPropVespene, c_playerPropOperSetTo, lp_gas);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_dehakaAlly, c_playerPropSuppliesLimit, c_playerPropOperSetTo, 150);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_dehakaAlly, c_playerPropSuppliesMade, c_playerPropOperSetTo, 150);
+    AISetAPM(libD8BB74C6_gv_dehakaAlly, libHots_gf_DifficultyValueInt2(2000, 1500, 1000));
+    lib0D99C9FF_gf_SetDefensiveAIForPlayer(libD8BB74C6_gv_dehakaAlly);
+    lib0D99C9FF_gf_MakeHeroesFlee(libD8BB74C6_gv_dehakaAlly);
+    AISetDifficulty(libD8BB74C6_gv_dehakaAlly, c_diffEnableDangerMap, true);
+    AISetDifficulty(libD8BB74C6_gv_dehakaAlly, c_diffWaveAvoidDanger, true);
+    if ((libD8BB74C6_gv_aILastPlayerIndex < 5)) {
+        libD8BB74C6_gv_aILastPlayerIndex += 1;
+        libD8BB74C6_gv_aIPlayerIndex[libD8BB74C6_gv_aILastPlayerIndex] = libD8BB74C6_gv_dehakaAlly;
+        libD8BB74C6_gv_dehakaIndex = libD8BB74C6_gv_aILastPlayerIndex;
+        AIAttackWaveSetGatherPoint(libD8BB74C6_gv_dehakaAlly, lp_gatherPoint);
+        libD8BB74C6_gf_CreateHero(libD8BB74C6_gv_dehakaIndex, lp_heroSpawnPoint);
+    }
+
+    auto569A70BD_val = PlayerDifficulty(1);
+    if (auto569A70BD_val == 1) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountEasy", 1);
+    }
+    else if (auto569A70BD_val == 2) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountMedium", 1);
+    }
+    else if (auto569A70BD_val == 3) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountHard", 1);
+    }
+    else if (auto569A70BD_val == 4) {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCountHard", 1);
+    }
+    else {
+        libNtve_gf_SetUpgradeLevelForPlayer(libD8BB74C6_gv_nafashAlly, "HotSCampaignLarvaCount", 1);
+    }
+    return true;
+}
+
+void libD8BB74C6_gf_ToggleCovertOpsforPlayer (int lp_player) {
+    // Automatic Variable Declarations
+    // Implementation
+    TechTreeUpgradeAddLevel(lp_player, "JackhammerConcussionGrenades", 1);
+    TechTreeUpgradeAddLevel(lp_player, "CombatShield", 1);
+    TechTreeUpgradeAddLevel(lp_player, "RavenCorvidReactor", 1);
+    TechTreeUpgradeAddLevel(lp_player, "DominionFaction", 1);
+    TechTreeUpgradeAddLevel(lp_player, "StabilizerMedPacks", 1);
+    TechTreeUpgradeAddLevel(lp_player, "OcularImplants", 1);
+    TechTreeUpgradeAddLevel(lp_player, "PermanentCloakGhost", 1);
+    TechTreeUpgradeAddLevel(lp_player, "ClusterWarheads", 1);
+    TechTreeUpgradeAddLevel(lp_player, "CrossSpectrumDampeners", 1);
+    TechTreeUpgradeAddLevel(lp_player, "AresClassWeaponsSystemViking", 1);
+    TechTreeUpgradeAddLevel(lp_player, "HALORockets", 1);
+    TechTreeUpgradeAddLevel(lp_player, "MaelstromRounds", 1);
+    TechTreeUpgradeAddLevel(lp_player, "LaserTargetingSystemSiegeTank", 1);
+    TechTreeUpgradeAddLevel(lp_player, "HighCapacityBarrels", 1);
+    TechTreeUpgradeAddLevel(lp_player, "TransformationServos", 1);
+    TechTreeUpgradeAddLevel(lp_player, "AresClassWeaponsSystem", 1);
+    TechTreeUpgradeAddLevel(lp_player, "MultilockTargetingSystems", 1);
+    TechTreeUpgradeAddLevel(lp_player, "DualFusionWelders", 1);
+    TechTreeUpgradeAddLevel(lp_player, "ProjectileAccelerators", 1);
+    TechTreeUpgradeAddLevel(lp_player, "NeosteelFrame", 1);
+    TechTreeUpgradeAddLevel(lp_player, "FireSuppressionSystems", 1);
+    TechTreeUpgradeAddLevel(lp_player, "ReinforcedSuperstructure", 1);
+    TechTreeUpgradeAddLevel(lp_player, "HailstormMissilePods", 1);
+    TechTreeUpgradeAddLevel(lp_player, "HiSecAutoTracking", 1);
+    TechTreeUpgradeAddLevel(lp_player, "AdvancedHealingAI", 1);
+    TechTreeUpgradeAddLevel(lp_player, "MedivacRapidDeployment", 1);
+    TechTreeUpgradeAddLevel(lp_player, "CovertOpsUpgrade", 1);
+}
+
+int libD8BB74C6_gf_GetArrayIndexForPlayer (int lp_playerID) {
+    // Variable Declarations
+    int lv_i;
+
+    // Automatic Variable Declarations
+    const int autoCD33DD52_ae = 6;
+    const int autoCD33DD52_ai = 1;
+
+    // Variable Initialization
+
+    // Implementation
+    lv_i = 1;
+    for ( ; ( (autoCD33DD52_ai >= 0 && lv_i <= autoCD33DD52_ae) || (autoCD33DD52_ai < 0 && lv_i >= autoCD33DD52_ae) ) ; lv_i += autoCD33DD52_ai ) {
+        if ((libD8BB74C6_gv_aIPlayerIndex[lv_i] == lp_playerID)) {
+            return lv_i;
+        }
+
+    }
+    return 0;
+}
+
+void libD8BB74C6_gf_CreateHero (int lp_allyIndex, point lp_point) {
+    // Automatic Variable Declarations
+    int autoE4180956_val;
+
+    // Implementation
+    if ((libD8BB74C6_gv_allyHasHero[lp_allyIndex] == false)) {
+        return ;
+    }
+
+    autoE4180956_val = lp_allyIndex;
+    if (autoE4180956_val == libD8BB74C6_gv_naktulIndex) {
+        libNtve_gf_CreateUnitsAtPoint2(1, "BroodMother", 0, libD8BB74C6_gv_naktulAlly, lp_point);
+        libD8BB74C6_gv_naktulHero = UnitLastCreated();
+        libNtve_gf_CreatePingFacingAngle(PlayerGroupAll(), "PingCircle", UnitGetPosition(UnitLastCreated()), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(libD8BB74C6_gv_naktulAlly, false)), 0.0, 270.0);
+        PingSetScale(PingLastCreated(), 0.4);
+        PingSetTooltip(PingLastCreated(), StringExternal("Param/Value/lib_D8BB74C6_812D6511"));
+        PingSetUnit(PingLastCreated(), UnitLastCreated());
+        libD8BB74C6_gv_naktulHeroPing = PingLastCreated();
+        AIAddBully(libD8BB74C6_gv_naktulAlly, UnitGetType(UnitLastCreated()), UnitGetPosition(UnitLastCreated()), 13);
+    }
+    else if (autoE4180956_val == libD8BB74C6_gv_nafashIndex) {
+        libNtve_gf_CreateUnitsAtPoint2(1, "Nafash", 0, libD8BB74C6_gv_nafashAlly, lp_point);
+        libD8BB74C6_gv_nafashHero = UnitLastCreated();
+        libNtve_gf_CreatePingFacingAngle(PlayerGroupAll(), "PingCircle", UnitGetPosition(UnitLastCreated()), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(libD8BB74C6_gv_nafashAlly, false)), 0.0, 270.0);
+        PingSetScale(PingLastCreated(), 0.4);
+        PingSetTooltip(PingLastCreated(), StringExternal("Param/Value/lib_D8BB74C6_5437EFED"));
+        PingSetUnit(PingLastCreated(), UnitLastCreated());
+        libD8BB74C6_gv_nafashHeroPing = PingLastCreated();
+        AIAddBully(libD8BB74C6_gv_nafashAlly, UnitGetType(UnitLastCreated()), UnitGetPosition(UnitLastCreated()), 13);
+    }
+    else if (autoE4180956_val == libD8BB74C6_gv_zagaraIndex) {
+        libNtve_gf_CreateUnitsAtPoint2(1, "ZagaraVoidCoop", 0, libD8BB74C6_gv_zagaraAlly, lp_point);
+        libD8BB74C6_gv_zagaraHero = UnitLastCreated();
+        libNtve_gf_CreatePingFacingAngle(PlayerGroupAll(), "PingCircle", UnitGetPosition(UnitLastCreated()), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(libD8BB74C6_gv_zagaraAlly, false)), 0.0, 270.0);
+        PingSetScale(PingLastCreated(), 0.4);
+        PingSetTooltip(PingLastCreated(), StringExternal("Param/Value/lib_D8BB74C6_7819261B"));
+        PingSetUnit(PingLastCreated(), UnitLastCreated());
+        libD8BB74C6_gv_zagaraHeroPing = PingLastCreated();
+        AIAddBully(libD8BB74C6_gv_zagaraAlly, UnitGetType(UnitLastCreated()), UnitGetPosition(UnitLastCreated()), 13);
+    }
+    else if (autoE4180956_val == libD8BB74C6_gv_dehakaIndex) {
+        libNtve_gf_CreateUnitsAtPoint2(1, "DehakaCoop", 0, libD8BB74C6_gv_dehakaAlly, lp_point);
+        libD8BB74C6_gv_dehakaHero = UnitLastCreated();
+        libNtve_gf_CreatePingFacingAngle(PlayerGroupAll(), "PingCircle", UnitGetPosition(UnitLastCreated()), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(libD8BB74C6_gv_dehakaAlly, false)), 0.0, 270.0);
+        PingSetScale(PingLastCreated(), 0.4);
+        PingSetTooltip(PingLastCreated(), StringExternal("Param/Value/lib_D8BB74C6_83588EA0"));
+        PingSetUnit(PingLastCreated(), UnitLastCreated());
+        libD8BB74C6_gv_dehakaHeroPing = PingLastCreated();
+        AIAddBully(libD8BB74C6_gv_dehakaAlly, UnitGetType(UnitLastCreated()), UnitGetPosition(UnitLastCreated()), 13);
+    }
+    else {
+    }
+}
+
+trigger auto_libD8BB74C6_gf_AIHeroRevive_Trigger = null;
+string auto_libD8BB74C6_gf_AIHeroRevive_lp_heroType;
+int auto_libD8BB74C6_gf_AIHeroRevive_lp_player;
+fixed auto_libD8BB74C6_gf_AIHeroRevive_lp_reviveTime;
+
+void libD8BB74C6_gf_AIHeroRevive (string lp_heroType, int lp_player, fixed lp_reviveTime) {
+    auto_libD8BB74C6_gf_AIHeroRevive_lp_heroType = lp_heroType;
+    auto_libD8BB74C6_gf_AIHeroRevive_lp_player = lp_player;
+    auto_libD8BB74C6_gf_AIHeroRevive_lp_reviveTime = lp_reviveTime;
+
+    if (auto_libD8BB74C6_gf_AIHeroRevive_Trigger == null) {
+        auto_libD8BB74C6_gf_AIHeroRevive_Trigger = TriggerCreate("auto_libD8BB74C6_gf_AIHeroRevive_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libD8BB74C6_gf_AIHeroRevive_Trigger, false, false);
+}
+
+bool auto_libD8BB74C6_gf_AIHeroRevive_TriggerFunc (bool testConds, bool runActions) {
+    string lp_heroType = auto_libD8BB74C6_gf_AIHeroRevive_lp_heroType;
+    int lp_player = auto_libD8BB74C6_gf_AIHeroRevive_lp_player;
+    fixed lp_reviveTime = auto_libD8BB74C6_gf_AIHeroRevive_lp_reviveTime;
+
+    // Variable Declarations
+    unitgroup lv_townHalls;
+    bool lv_revive;
+    point lv_reviveAt;
+    unit lv_cocoon;
+    timer lv_reviveTimer;
+
+    // Automatic Variable Declarations
+    string auto97C2A7AA_val;
+    string auto2B80A5A5_val;
+
+    // Variable Initialization
+    lv_townHalls = UnitGroupEmpty();
+    lv_reviveTimer = TimerCreate();
+
+    // Implementation
+    auto97C2A7AA_val = lp_heroType;
+    if (auto97C2A7AA_val == "BroodMother") {
+        PingSetVisible(libD8BB74C6_gv_naktulHeroPing, false);
+    }
+    else if (auto97C2A7AA_val == "Nafash") {
+        PingSetVisible(libD8BB74C6_gv_nafashHeroPing, false);
+    }
+    else if (auto97C2A7AA_val == "ZagaraVoidCoop") {
+        PingSetVisible(libD8BB74C6_gv_zagaraHeroPing, false);
+    }
+    else if (auto97C2A7AA_val == "DehakaCoop") {
+        PingSetVisible(libD8BB74C6_gv_dehakaHeroPing, false);
+    }
+    else if (auto97C2A7AA_val == "InfestedStukov") {
+        PingSetVisible(libD8BB74C6_gv_stukovHeroPing, false);
+    }
+    else {
+    }
+    Wait(2.0, c_timeAI);
+    while ((lv_revive == false)) {
+        Wait(1.0, c_timeAI);
+        lv_townHalls = UnitGroup("Hatchery", lp_player, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        UnitGroupAddUnitGroup(lv_townHalls, UnitGroup("Lair", lp_player, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
+        UnitGroupAddUnitGroup(lv_townHalls, UnitGroup("Hive", lp_player, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
+        UnitGroupAddUnitGroup(lv_townHalls, UnitGroup("DehakaHatchery", lp_player, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
+        if ((UnitGroupCount(lv_townHalls, c_unitCountAlive) > 0)) {
+            lv_revive = true;
+        }
+
+    }
+    if ((lv_revive == true)) {
+        lv_reviveAt = UnitGetPosition(UnitGroupClosestToPoint(lv_townHalls, PlayerStartLocation(lp_player)));
+        libNtve_gf_CreateUnitsWithDefaultFacing(1, "KerriganReviveCocoon", 0, lp_player, lv_reviveAt);
+        lv_cocoon = UnitLastCreated();
+        TimerStart(lv_reviveTimer, lp_reviveTime, false, c_timeAI);
+        libNtve_gf_WaitForTimer(TimerLastStarted(), 0.0, false);
+        libNtve_gf_CreateUnitsAtPoint2(1, lp_heroType, c_unitCreateIgnorePlacement, lp_player, UnitGetPosition(lv_cocoon));
+        UnitCreateEffectUnit(UnitLastCreated(), "KerriganReviveHeal", UnitLastCreated());
+        UnitKill(lv_cocoon);
+        auto2B80A5A5_val = lp_heroType;
+        if (auto2B80A5A5_val == "BroodMother") {
+            libD8BB74C6_gv_naktulHero = UnitLastCreated();
+            PingSetVisible(libD8BB74C6_gv_naktulHeroPing, true);
+            PingSetUnit(libD8BB74C6_gv_naktulHeroPing, UnitLastCreated());
+        }
+        else if (auto2B80A5A5_val == "ZagaraVoidCoop") {
+            libD8BB74C6_gv_zagaraHero = UnitLastCreated();
+            PingSetVisible(libD8BB74C6_gv_zagaraHeroPing, true);
+            PingSetUnit(libD8BB74C6_gv_zagaraHeroPing, UnitLastCreated());
+        }
+        else if (auto2B80A5A5_val == "Nafash") {
+            libD8BB74C6_gv_nafashHero = UnitLastCreated();
+            PingSetVisible(libD8BB74C6_gv_nafashHeroPing, true);
+            PingSetUnit(libD8BB74C6_gv_nafashHeroPing, UnitLastCreated());
+        }
+        else if (auto2B80A5A5_val == "DehakaCoop") {
+            libD8BB74C6_gv_dehakaHero = UnitLastCreated();
+            PingSetVisible(libD8BB74C6_gv_dehakaHeroPing, true);
+            PingSetUnit(libD8BB74C6_gv_dehakaHeroPing, UnitLastCreated());
+        }
+        else if (auto2B80A5A5_val == "InfestedStukov") {
+            libD8BB74C6_gv_stukovHero = UnitLastCreated();
+            PingSetVisible(libD8BB74C6_gv_stukovHeroPing, true);
+            PingSetUnit(libD8BB74C6_gv_stukovHeroPing, UnitLastCreated());
+        }
+        else {
+        }
+    }
+
+    return true;
+}
+
+void libD8BB74C6_gf_CreateAIResourcePanel (int lp_player, int lp_position, string lp_image, text lp_name, int lp_style) {
+    // Variable Declarations
+    string[3] lv_dialogItems;
+    text lv_supplyLabelColor;
+
+    // Automatic Variable Declarations
+    string auto0C7DCEC0_val;
+    string auto4935CE45_val;
+    string autoE57AC219_val;
+
+    // Variable Initialization
+    lv_supplyLabelColor = StringToText("");
+
+    // Implementation
+    libD8BB74C6_gv_aIResourcePanelCommanderName[lp_player] = lp_name;
+    if ((lp_style == libD8BB74C6_ge_AIResourcePanelStyles_Default)) {
+        auto0C7DCEC0_val = PlayerRace(lp_player);
+        if (auto0C7DCEC0_val == "Terr") {
+            lv_dialogItems[0] = "Assets\\Textures\\ui_console_tooltip_background_defaultterran.dds";
+        }
+        else if (auto0C7DCEC0_val == "Zerg") {
+            lv_dialogItems[0] = "Assets\\Textures\\ui_console_tooltip_background_defaultzerg.dds";
+        }
+        else if (auto0C7DCEC0_val == "Prot") {
+            lv_dialogItems[0] = "Assets\\Textures\\ui_console_tooltip_background_defaultprotoss.dds";
+        }
+        else {
+            lv_dialogItems[0] = "Assets\\Textures\\ui_console_tooltip_background_defaultprotoss.dds";
+        }
+    }
+    else {
+        lv_dialogItems[0] = libD8BB74C6_gf_AIResourcePanelGetImageFromStyle(lp_style);
+    }
+    auto4935CE45_val = PlayerRace(lp_player);
+    if (auto4935CE45_val == "Terr") {
+        lv_dialogItems[1] = "Assets\\Textures\\icon-gas-terran-nobg.dds";
+    }
+    else if (auto4935CE45_val == "Zerg") {
+        lv_dialogItems[1] = "Assets\\Textures\\icon-gas-zerg_nobg.dds";
+    }
+    else if (auto4935CE45_val == "Prot") {
+        lv_dialogItems[1] = "Assets\\Textures\\icon-gas-protoss-nobg.dds";
+    }
+    else {
+        lv_dialogItems[1] = "Assets\\Textures\\icon-gas-protoss-nobg.dds";
+    }
+    autoE57AC219_val = PlayerRace(lp_player);
+    if (autoE57AC219_val == "Terr") {
+        lv_dialogItems[2] = "Assets\\Textures\\icon-supply-terran_nobg.dds";
+    }
+    else if (autoE57AC219_val == "Zerg") {
+        lv_dialogItems[2] = "Assets\\Textures\\icon-supply-zerg_nobg.dds";
+    }
+    else if (autoE57AC219_val == "Prot") {
+        lv_dialogItems[2] = "Assets\\Textures\\icon-supply-protoss_nobg.dds";
+    }
+    else {
+        lv_dialogItems[2] = "Assets\\Textures\\icon-supply-protoss_nobg.dds";
+    }
+    if ((PlayerGetPropertyFixed(lp_player, c_playerPropSuppliesUsed) > PlayerGetPropertyFixed(lp_player, c_playerPropSuppliesMade))) {
+        lv_supplyLabelColor = StringExternal("Param/Value/lib_D8BB74C6_3663E195");
+    }
+    else {
+        lv_supplyLabelColor = StringToText("");
+    }
+    if ((libD8BB74C6_gv_aIResourcePanelDialog[lp_player] == c_invalidDialogId)) {
+        DialogCreate(435, 48, c_anchorTopRight, 5, (( lp_position - 1) * 47), false);
+        libD8BB74C6_gv_aIResourcePanelDialog[lp_player] = DialogLastCreated();
+        DialogSetTransparency(libD8BB74C6_gv_aIResourcePanelDialog[lp_player], 20.0);
+        TextExpressionSetToken("Param/Expression/lib_D8BB74C6_18718C7C", "A", libD8BB74C6_gv_aIResourcePanelCommanderName[lp_player]);
+        libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 32, 32, c_anchorTopLeft, 40, 8, TextExpressionAssemble("Param/Expression/lib_D8BB74C6_18718C7C"), "Assets\\Textures\\icon-mineral-nobg.dds", c_triggerImageTypeNormal, false, Color(100,100,100), c_triggerBlendModeNormal);
+        TextExpressionSetToken("Param/Expression/lib_D8BB74C6_20F824E6", "A", libD8BB74C6_gv_aIResourcePanelCommanderName[lp_player]);
+        libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 32, 32, c_anchorTopLeft, 168, 8, TextExpressionAssemble("Param/Expression/lib_D8BB74C6_20F824E6"), lv_dialogItems[1], c_triggerImageTypeNormal, false, Color(100,100,100), c_triggerBlendModeNormal);
+        TextExpressionSetToken("Param/Expression/lib_D8BB74C6_DEA8E2A1", "A", libD8BB74C6_gv_aIResourcePanelCommanderName[lp_player]);
+        libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 32, 32, c_anchorTopLeft, 293, 8, TextExpressionAssemble("Param/Expression/lib_D8BB74C6_DEA8E2A1"), lv_dialogItems[2], c_triggerImageTypeNormal, false, Color(100,100,100), c_triggerBlendModeNormal);
+        libNtve_gf_CreateDialogItemLabel(libD8BB74C6_gv_aIResourcePanelDialog[lp_player], 95, 32, c_anchorTopLeft, 76, 8, IntToText(PlayerGetPropertyInt(lp_player, c_playerPropMinerals)), ColorWithAlpha(0,0,0,0), false, 2.0);
+        libD8BB74C6_gv_aIResourcePanelMineralsLabel[lp_player] = DialogControlLastCreated();
+        libNtve_gf_SetDialogItemStyle(libD8BB74C6_gv_aIResourcePanelMineralsLabel[lp_player], "ResourcePanel", PlayerGroupAll());
+        libNtve_gf_CreateDialogItemLabel(libD8BB74C6_gv_aIResourcePanelDialog[lp_player], 95, 32, c_anchorTopLeft, 203, 8, IntToText(PlayerGetPropertyInt(lp_player, c_playerPropVespene)), ColorWithAlpha(0,0,0,0), false, 2.0);
+        libD8BB74C6_gv_aIResourcePanelVespeneLabel[lp_player] = DialogControlLastCreated();
+        libNtve_gf_SetDialogItemStyle(libD8BB74C6_gv_aIResourcePanelVespeneLabel[lp_player], "ResourcePanel", PlayerGroupAll());
+        TextExpressionSetToken("Param/Expression/lib_D8BB74C6_0A626AD5", "C", lv_supplyLabelColor);
+        TextExpressionSetToken("Param/Expression/lib_D8BB74C6_0A626AD5", "A", IntToText(PlayerGetPropertyInt(lp_player, c_playerPropSuppliesUsed)));
+        TextExpressionSetToken("Param/Expression/lib_D8BB74C6_0A626AD5", "B", IntToText(PlayerGetPropertyInt(lp_player, c_playerPropSuppliesMade)));
+        libNtve_gf_CreateDialogItemLabel(libD8BB74C6_gv_aIResourcePanelDialog[lp_player], 115, 32, c_anchorTopLeft, 332, 8, TextExpressionAssemble("Param/Expression/lib_D8BB74C6_0A626AD5"), ColorWithAlpha(0,0,0,0), false, 2.0);
+        libD8BB74C6_gv_aIResourcePanelSupplyLabel[lp_player] = DialogControlLastCreated();
+        libNtve_gf_SetDialogItemStyle(libD8BB74C6_gv_aIResourcePanelSupplyLabel[lp_player], "ResourcePanel", PlayerGroupAll());
+        TextExpressionSetToken("Param/Expression/lib_D8BB74C6_10F15188", "A", libD8BB74C6_gv_aIResourcePanelCommanderName[lp_player]);
+        libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 38, 38, c_anchorTopLeft, 5, 5, TextExpressionAssemble("Param/Expression/lib_D8BB74C6_10F15188"), lp_image, c_triggerImageTypeNormal, false, Color(100,100,100), c_triggerBlendModeNormal);
+    }
+
+    DialogSetImage(libD8BB74C6_gv_aIResourcePanelDialog[lp_player], lv_dialogItems[0]);
+}
+
+void libD8BB74C6_gf_ShowHideAIResourcePanel (int lp_player, bool lp_showHide) {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((libD8BB74C6_gv_aIResourcePanelDialog[lp_player] != c_invalidDialogId)) {
+        if ((lp_showHide == true)) {
+            DialogSetVisible(libD8BB74C6_gv_aIResourcePanelDialog[lp_player], PlayerGroupAll(), true);
+        }
+        else {
+            DialogSetVisible(libD8BB74C6_gv_aIResourcePanelDialog[lp_player], PlayerGroupAll(), false);
+        }
+    }
+
+}
+
+void libD8BB74C6_gf_DestroyAIResourcePanel (int lp_player) {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((libD8BB74C6_gv_aIResourcePanelDialog[lp_player] != c_invalidDialogId)) {
+        DialogDestroy(libD8BB74C6_gv_aIResourcePanelDialog[lp_player]);
+    }
+
+}
+
+string libD8BB74C6_gf_AIResourcePanelGetImageFromStyle (int lp_style) {
+    // Automatic Variable Declarations
+    int auto9E6B6507_val;
+
+    // Implementation
+    auto9E6B6507_val = lp_style;
+    if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_ArcadePurple) {
+        return "Assets\\Textures\\ui_console_tooltip_background_arcadecabinetpurple.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_ProtossLightBlue) {
+        return "Assets\\Textures\\ui_console_tooltip_background_defaultprotoss.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_TerranGreen) {
+        return "Assets\\Textures\\ui_console_tooltip_background_defaultterran.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_ZergMutedOrange) {
+        return "Assets\\Textures\\ui_console_tooltip_background_defaultzerg.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_EvolvedYellow) {
+        return "Assets\\Textures\\ui_console_tooltip_background_evolved.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_ForgedRed) {
+        return "Assets\\Textures\\ui_console_tooltip_background_forged.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_GalacticViolet) {
+        return "Assets\\Textures\\ui_console_tooltip_background_galactic.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_IhanriiVibrantAquamarine) {
+        return "Assets\\Textures\\ui_console_tooltip_background_ihanrii.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_ImperialMengsk) {
+        return "Assets\\Textures\\ui_console_tooltip_background_imperial.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_MachinedOrange) {
+        return "Assets\\Textures\\ui_console_tooltip_background_machined.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_MirasMaraudersVeryMutedPink) {
+        return "Assets\\Textures\\ui_console_tooltip_background_mirasmarauders.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_NerazimMutedPurple) {
+        return "Assets\\Textures\\ui_console_tooltip_background_nerazim.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_PrimalGreener) {
+        return "Assets\\Textures\\ui_console_tooltip_background_primal.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_PurifierVibrantHotOrange) {
+        return "Assets\\Textures\\ui_console_tooltip_background_purifier.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_SimulantHotOrange) {
+        return "Assets\\Textures\\ui_console_tooltip_background_simulant.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_SpecialForcesNova) {
+        return "Assets\\Textures\\ui_console_tooltip_background_specialforces.dds";
+    }
+    else if (auto9E6B6507_val == libD8BB74C6_ge_AIResourcePanelStyles_TyradorMutedPurple) {
+        return "Assets\\Textures\\ui_console_tooltip_background_tyrador.dds";
+    }
+    else {
+    }
+    return "Assets\\Textures\\ui_console_tooltip_background_defaultprotoss.dds";
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Disable achievments
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_Disableachievments_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    AchievementsDisable(1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_Disableachievments_Init () {
+    libD8BB74C6_gt_Disableachievments = TriggerCreate("libD8BB74C6_gt_Disableachievments_Func");
+    TriggerAddEventTimeElapsed(libD8BB74C6_gt_Disableachievments, 1.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Load
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_Load_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    AIReqAddSpecialMaker("CreepTumorBurrowed", "CreepTumorBurrowed", "CreepTumorBuild", 0);
+    AIReqAddSpecialMaker("ToxicNest", "BroodMother", "QueenBuild2", 0);
+    BankLoad("HotSWithAlliesBank", libD8BB74C6_gv_player);
+    libD8BB74C6_gv_hotSWithAlliesBank = BankLastCreated();
+    PlayerGroupAdd(libD8BB74C6_gv_alliesPlayer, libD8BB74C6_gv_player);
+    Wait(0.1, c_timeGame);
+    PlayerModifyPropertyInt(libD8BB74C6_gv_player, c_playerPropSuppliesLimit, c_playerPropOperSetTo, 150);
+    if ((libD8BB74C6_gv_naktulAlly != 0)) {
+        PlayerGroupAdd(libD8BB74C6_gv_alliesPlayer, libD8BB74C6_gv_naktulAlly);
+        PlayerGroupAdd(libD8BB74C6_gv_allies, libD8BB74C6_gv_naktulAlly);
+    }
+
+    if ((libD8BB74C6_gv_nafashAlly != 0)) {
+        PlayerGroupAdd(libD8BB74C6_gv_alliesPlayer, libD8BB74C6_gv_nafashAlly);
+        PlayerGroupAdd(libD8BB74C6_gv_allies, libD8BB74C6_gv_nafashAlly);
+    }
+
+    if ((libD8BB74C6_gv_zagaraAlly != 0)) {
+        PlayerGroupAdd(libD8BB74C6_gv_alliesPlayer, libD8BB74C6_gv_nafashAlly);
+        PlayerGroupAdd(libD8BB74C6_gv_allies, libD8BB74C6_gv_nafashAlly);
+    }
+
+    if ((libD8BB74C6_gv_dehakaAlly != 0)) {
+        PlayerGroupAdd(libD8BB74C6_gv_alliesPlayer, libD8BB74C6_gv_nafashAlly);
+        PlayerGroupAdd(libD8BB74C6_gv_allies, libD8BB74C6_gv_nafashAlly);
+    }
+
+    TriggerExecute(libD8BB74C6_gt_LoadTechs, true, false);
+    TriggerExecute(libD8BB74C6_gt_LoadTechsNaktul, true, false);
+    TriggerExecute(libD8BB74C6_gt_AISettings, true, false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_Load_Init () {
+    libD8BB74C6_gt_Load = TriggerCreate("libD8BB74C6_gt_Load_Func");
+    TriggerAddEventMapInit(libD8BB74C6_gt_Load);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Load Techs
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_LoadTechs_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_i;
+
+    // Automatic Variable Declarations
+    const int auto5DF6B59B_ae = 1000;
+    const int auto5DF6B59B_ai = 1;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((libSwaC_gf_MissionStatusCheck("ZLab2", libSwaC_ge_MissionStatus_Completed) == true)) {
+        libSwaC_gf_EnableCampaignTechUnit(true, "Hydralisk", libD8BB74C6_gv_player);
+        libSwaC_gf_EnableCampaignTechUnit(true, "Roach", libD8BB74C6_gv_player);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "HydraliskSpeedUpgrade", true);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "zerglingmovementspeed", true);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "GlialReconstitution", true);
+    }
+    else {
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "HydraliskSpeedUpgrade", false);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "zerglingmovementspeed", false);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "GlialReconstitution", false);
+    }
+    if ((libSwaC_gf_MissionStatusCheck("ZLab3", libSwaC_ge_MissionStatus_Completed) == true)) {
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "ChitinousImplementation", true);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "BarbarousMutation", true);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "AgressiveRegeneration", true);
+        if ((BankValueGetAsFlag(libD8BB74C6_gv_hotSWithAlliesBank, "New Units", "LarvaColony") == true)) {
+            TechTreeUnitAllow(libD8BB74C6_gv_player, "LarvaColony", true);
+            TechTreeUnitAllow(libD8BB74C6_gv_zagaraAlly, "LarvaColony", true);
+            TechTreeUnitAllow(libD8BB74C6_gv_nafashAlly, "LarvaColony", true);
+            TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "LarvaColony", true);
+        }
+        else {
+            TechTreeUnitAllow(libD8BB74C6_gv_player, "LarvaColony", false);
+            TechTreeUnitAllow(libD8BB74C6_gv_zagaraAlly, "LarvaColony", false);
+            TechTreeUnitAllow(libD8BB74C6_gv_nafashAlly, "LarvaColony", false);
+            TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "LarvaColony", false);
+            lv_i = 1;
+            for ( ; ( (auto5DF6B59B_ai >= 0 && lv_i <= auto5DF6B59B_ae) || (auto5DF6B59B_ai < 0 && lv_i >= auto5DF6B59B_ae) ) ; lv_i += auto5DF6B59B_ai ) {
+                if ((libD8BB74C6_gv_bullyUnitTypes[lv_i] == "LarvaColony")) {
+                    libD8BB74C6_gv_bullyActive[lv_i] = false;
+                }
+
+            }
+        }
+    }
+    else {
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "ChitinousImplementation", false);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "BarbarousMutation", false);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_player, "AgressiveRegeneration", false);
+    }
+    if (((libSwaC_gf_MissionStatusCheck("ZExpedition1", libSwaC_ge_MissionStatus_Completed) == true) || (libSwaC_gf_MissionStatusCheck("ZChar2", libSwaC_ge_MissionStatus_Completed) == true))) {
+        TechTreeUnitAllow(libD8BB74C6_gv_player, "Lair", true);
+    }
+    else {
+        TechTreeUnitAllow(libD8BB74C6_gv_player, "Lair", false);
+    }
+    if ((libSwaC_gf_MissionStatusCheck("ZExpedition1", libSwaC_ge_MissionStatus_Completed) == true)) {
+        TechTreeUnitAllow(libD8BB74C6_gv_player, "Ravager", true);
+        TechTreeUpgradeAllow(1, "ravagerrange", true);
+    }
+    else {
+        TechTreeUnitAllow(libD8BB74C6_gv_player, "Ravager", false);
+        TechTreeUpgradeAllow(1, "ravagerrange", false);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_LoadTechs_Init () {
+    libD8BB74C6_gt_LoadTechs = TriggerCreate("libD8BB74C6_gt_LoadTechs_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Load Techs - Naktul
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_LoadTechsNaktul_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_i;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if (((libSwaC_gf_MissionStatusCheck("ZExpedition1", libSwaC_ge_MissionStatus_Completed) == true) || (libSwaC_gf_MissionStatusCheck("ZChar2", libSwaC_ge_MissionStatus_Completed) == true))) {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Lair", true);
+    }
+    else {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Lair", false);
+    }
+    if (((libSwaC_gf_MissionStatusCheck("ZExpedition2", libSwaC_ge_MissionStatus_Completed) == true) || (libSwaC_gf_MissionStatusCheck("ZChar2", libSwaC_ge_MissionStatus_Completed) == true))) {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Spire", true);
+    }
+    else {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Spire", false);
+    }
+    if ((libSwaC_gf_MissionStatusCheck("ZExpedition1", libSwaC_ge_MissionStatus_Completed) == true)) {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Ravager", true);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_naktulAlly, "ravagerrange", true);
+    }
+    else {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Ravager", false);
+        TechTreeUpgradeAllow(libD8BB74C6_gv_naktulAlly, "ravagerrange", false);
+    }
+    if ((libSwaC_gf_MissionStatusCheck("ZExpedition2", libSwaC_ge_MissionStatus_Completed) == true)) {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Mutalisk", true);
+    }
+    else {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Mutalisk", false);
+    }
+    if ((libSwaC_gf_MissionStatusCheck("ZChar1", libSwaC_ge_MissionStatus_Completed) == true)) {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Baneling", true);
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "BanelingNest", true);
+    }
+    else {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Baneling", false);
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "BanelingNest", false);
+    }
+    if ((libSwaC_gf_MissionStatusCheck("ZChar2", libSwaC_ge_MissionStatus_Completed) == true)) {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Scourge", true);
+    }
+    else {
+        TechTreeUnitAllow(libD8BB74C6_gv_naktulAlly, "Scourge", false);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_LoadTechsNaktul_Init () {
+    libD8BB74C6_gt_LoadTechsNaktul = TriggerCreate("libD8BB74C6_gt_LoadTechsNaktul_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: AIOptions
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_AISettings_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto3DD65AEF_g;
+    int auto3DD65AEF_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto3DD65AEF_g = PlayerGroupActive();
+    auto3DD65AEF_var = -1;
+    while (true) {
+        auto3DD65AEF_var = PlayerGroupNextPlayer(auto3DD65AEF_g, auto3DD65AEF_var);
+        if (auto3DD65AEF_var < 0) { break; }
+        if ((auto3DD65AEF_var != 1)) {
+            AISetDifficulty(auto3DD65AEF_var, c_diffUseExtraScouts, false);
+            AIHarvestRate(auto3DD65AEF_var, 1);
+            AISetDifficulty(auto3DD65AEF_var, c_diffEnableDangerMap, false);
+            AISetDifficulty(auto3DD65AEF_var, c_diffWaveAvoidDanger, false);
+            AISetDifficulty(auto3DD65AEF_var, c_diffAutoBuildPrereqs, false);
+            TechTreeAbilityAllow(auto3DD65AEF_var, AbilityCommand("MengskWraithCloak", 0), false);
+            TechTreeAbilityAllow(auto3DD65AEF_var, AbilityCommand("BansheeCloak", 0), false);
+            TechTreeAbilityAllow(auto3DD65AEF_var, AbilityCommand("DuskWingBansheeCloakingField", 0), false);
+            TechTreeAbilityAllow(auto3DD65AEF_var, AbilityCommand("GhostCloak", 0), false);
+            TechTreeAbilityAllow(auto3DD65AEF_var, AbilityCommand("MengskBansheeCloakingField", 0), false);
+            TechTreeAbilityAllow(auto3DD65AEF_var, AbilityCommand("WraithCloak", 0), false);
+            TechTreeAbilityAllow(auto3DD65AEF_var, AbilityCommand("BurrowQueenDown", 0), false);
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_AISettings_Init () {
+    libD8BB74C6_gt_AISettings = TriggerCreate("libD8BB74C6_gt_AISettings_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Share Mineral Pickup with Allies
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_ShareMineralPickupwithAllies_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(((libD8BB74C6_gv_naktulAlly != 0) || (libD8BB74C6_gv_nafashAlly != 0) || (libD8BB74C6_gv_zagaraAlly != 0) || (libD8BB74C6_gv_dehakaAlly != 0)))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((libD8BB74C6_gv_naktulAlly != 0)) {
+        PlayerModifyPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropMinerals, c_playerPropOperAdd, 25);
+    }
+
+    if ((libD8BB74C6_gv_nafashAlly != 0)) {
+        PlayerModifyPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropMinerals, c_playerPropOperAdd, 25);
+    }
+
+    if ((libD8BB74C6_gv_zagaraAlly != 0)) {
+        PlayerModifyPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropMinerals, c_playerPropOperAdd, 25);
+    }
+
+    if ((libD8BB74C6_gv_dehakaAlly != 0)) {
+        PlayerModifyPropertyInt(libD8BB74C6_gv_dehakaAlly, c_playerPropMinerals, c_playerPropOperAdd, 25);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_ShareMineralPickupwithAllies_Init () {
+    libD8BB74C6_gt_ShareMineralPickupwithAllies = TriggerCreate("libD8BB74C6_gt_ShareMineralPickupwithAllies_Func");
+    TriggerAddEventUnitAbility(libD8BB74C6_gt_ShareMineralPickupwithAllies, null, AbilityCommand("PickupMinerals100", 0), c_unitAbilStageExecute, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Share Vespene Pickup with Allies
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_ShareVespenePickupwithAllies_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(((libD8BB74C6_gv_naktulAlly != 0) || (libD8BB74C6_gv_nafashAlly != 0) || (libD8BB74C6_gv_zagaraAlly != 0) || (libD8BB74C6_gv_dehakaAlly != 0)))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((libD8BB74C6_gv_naktulAlly != 0)) {
+        PlayerModifyPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropVespene, c_playerPropOperAdd, 25);
+    }
+
+    if ((libD8BB74C6_gv_nafashAlly != 0)) {
+        PlayerModifyPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropVespene, c_playerPropOperAdd, 25);
+    }
+
+    if ((libD8BB74C6_gv_zagaraAlly != 0)) {
+        PlayerModifyPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropVespene, c_playerPropOperAdd, 25);
+    }
+
+    if ((libD8BB74C6_gv_dehakaAlly != 0)) {
+        PlayerModifyPropertyInt(libD8BB74C6_gv_dehakaAlly, c_playerPropVespene, c_playerPropOperAdd, 25);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_ShareVespenePickupwithAllies_Init () {
+    libD8BB74C6_gt_ShareVespenePickupwithAllies = TriggerCreate("libD8BB74C6_gt_ShareVespenePickupwithAllies_Func");
+    TriggerAddEventUnitAbility(libD8BB74C6_gt_ShareVespenePickupwithAllies, null, AbilityCommand("PickupGas100", 0), c_unitAbilStageExecute, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: AI Supply Block Preventer
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_AISupplyBlockPreventer_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((libD8BB74C6_gv_zagaraAlly != 0) && (PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesUsed) >= PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesMade)) && (PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesMade) < PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesLimit))) {
+        libNtve_gf_AICast(UnitGroupRandomUnit(UnitGroup("Larva", libD8BB74C6_gv_zagaraAlly, RegionPlayableMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive), Order(AbilityCommand("LarvaTrain", 2)));
+    }
+    if ((libD8BB74C6_gv_naktulAlly != 0) && (PlayerGetPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropSuppliesUsed) >= PlayerGetPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropSuppliesMade)) && (PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesMade) < PlayerGetPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropSuppliesLimit))) {
+        libNtve_gf_AICast(UnitGroupRandomUnit(UnitGroup("Larva", libD8BB74C6_gv_naktulAlly, RegionPlayableMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive), Order(AbilityCommand("LarvaTrain", 2)));
+    }
+    if ((libD8BB74C6_gv_nafashAlly != 0) && (PlayerGetPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropSuppliesUsed) >= PlayerGetPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropSuppliesMade)) && (PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesMade) < PlayerGetPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropSuppliesLimit))) {
+        libNtve_gf_AICast(UnitGroupRandomUnit(UnitGroup("Larva", libD8BB74C6_gv_nafashAlly, RegionPlayableMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive), Order(AbilityCommand("LarvaTrain", 2)));
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_AISupplyBlockPreventer_Init () {
+    libD8BB74C6_gt_AISupplyBlockPreventer = TriggerCreate("libD8BB74C6_gt_AISupplyBlockPreventer_Func");
+    TriggerAddEventTimePeriodic(libD8BB74C6_gt_AISupplyBlockPreventer, 30.0, c_timeAI);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Show Bullits Ini
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_ShowBullitsIni_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    string lv_s;
+    point lv_point;
+    int lv_i;
+    int lv_n;
+    string lv_allyS;
+    int lv_allyId;
+
+    // Automatic Variable Declarations
+    int autoB8B3A37D_ae;
+    const int autoB8B3A37D_ai = 1;
+    const int auto1B384C91_ae = 1000;
+    const int auto1B384C91_ai = 1;
+    const int autoA9CF0A9A_ae = 1000;
+    const int autoA9CF0A9A_ai = 1;
+
+    // Variable Initialization
+    lv_s = "";
+    lv_allyS = "";
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libD8BB74C6_gf_RegisterZerg();
+    libD8BB74C6_gf_RegisterTerran();
+    libD8BB74C6_gf_RegisterProtoss();
+    libD8BB74C6_gf_RegisterCustom();
+    Wait(0.1, c_timeGame);
+    autoB8B3A37D_ae = libD8BB74C6_gv_bullyTypeCount;
+    lv_i = 1;
+    for ( ; ( (autoB8B3A37D_ai >= 0 && lv_i <= autoB8B3A37D_ae) || (autoB8B3A37D_ai < 0 && lv_i >= autoB8B3A37D_ae) ) ; lv_i += autoB8B3A37D_ai ) {
+        lv_allyId = 1;
+        for ( ; ( (auto1B384C91_ai >= 0 && lv_allyId <= auto1B384C91_ae) || (auto1B384C91_ai < 0 && lv_allyId >= auto1B384C91_ae) ) ; lv_allyId += auto1B384C91_ai ) {
+            if ((libD8BB74C6_gv_bullyAllyPlayer[lv_allyId] != 0)) {
+                lv_n = 1;
+                for ( ; ( (autoA9CF0A9A_ai >= 0 && lv_n <= autoA9CF0A9A_ae) || (autoA9CF0A9A_ai < 0 && lv_n >= autoA9CF0A9A_ae) ) ; lv_n += autoA9CF0A9A_ai ) {
+                    if ((lv_allyId < 10)) {
+                        lv_allyS = ("0" + IntToString(lv_allyId));
+                    }
+                    else {
+                        lv_allyS = IntToString(lv_allyId);
+                    }
+                    lv_s = ("Bully_" + lv_allyS);
+                    lv_s = (lv_s + "_");
+                    lv_s = (lv_s + (libD8BB74C6_gv_bullyTypes[lv_i]));
+                    lv_s = (lv_s + "_");
+                    lv_s = (lv_s + IntToString(lv_n));
+                    lv_point = PointFromName(lv_s);
+                    if ((lv_point != null)) {
+                        libD8BB74C6_gv_bullyCount = (libD8BB74C6_gv_bullyCount + 1);
+                        libD8BB74C6_gv_bullyPositions[libD8BB74C6_gv_bullyCount] = lv_point;
+                        libD8BB74C6_gv_bullyPointRotation[libD8BB74C6_gv_bullyCount] = libD8BB74C6_gv_bullyRotation[lv_i];
+                        libD8BB74C6_gv_bullyUnitTypes[libD8BB74C6_gv_bullyCount] = libD8BB74C6_gv_bullyTypes[lv_i];
+                        libD8BB74C6_gv_bullyPointPlacement[libD8BB74C6_gv_bullyCount] = libD8BB74C6_gv_bullyPlacementModels[lv_i];
+                        libD8BB74C6_gv_bullyActive[libD8BB74C6_gv_bullyCount] = true;
+                        libD8BB74C6_gv_bullyAllyID[libD8BB74C6_gv_bullyCount] = lv_allyId;
+                        libD8BB74C6_gv_bullyPlayer[libD8BB74C6_gv_bullyCount] = libD8BB74C6_gv_bullyAllyPlayer[lv_allyId];
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_ShowBullitsIni_Init () {
+    libD8BB74C6_gt_ShowBullitsIni = TriggerCreate("libD8BB74C6_gt_ShowBullitsIni_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Show bullies effect
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_Showbullieseffect_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_i;
+    unitgroup lv_ug;
+    string lv_s;
+
+    // Automatic Variable Declarations
+    int auto915767D6_ae;
+    const int auto915767D6_ai = 1;
+    int auto578E5D52_ae;
+    const int auto578E5D52_ai = 1;
+    int auto3D773CF4_ae;
+    const int auto3D773CF4_ai = 1;
+
+    // Variable Initialization
+    lv_ug = UnitGroupEmpty();
+    lv_s = "";
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((libD8BB74C6_gv_showBulliesPreview == false)) {
+        libD8BB74C6_gv_showBulliesPreview = true;
+        auto578E5D52_ae = libD8BB74C6_gv_bullyCount;
+        lv_i = 1;
+        for ( ; ( (auto578E5D52_ai >= 0 && lv_i <= auto578E5D52_ae) || (auto578E5D52_ai < 0 && lv_i >= auto578E5D52_ae) ) ; lv_i += auto578E5D52_ai ) {
+            libNtve_gf_KillModel(libD8BB74C6_gv_bulliesPreviewActor[lv_i]);
+            TextTagDestroy(libD8BB74C6_gv_bullyAllyImageTexttag[lv_i]);
+        }
+        auto3D773CF4_ae = libD8BB74C6_gv_bullyCount;
+        lv_i = 1;
+        for ( ; ( (auto3D773CF4_ai >= 0 && lv_i <= auto3D773CF4_ae) || (auto3D773CF4_ai < 0 && lv_i >= auto3D773CF4_ae) ) ; lv_i += auto3D773CF4_ai ) {
+            lv_ug = UnitGroupAlliance(libD8BB74C6_gv_player, c_unitAllianceAlly, RegionCircle(PointWithOffset(libD8BB74C6_gv_bullyPositions[lv_i], 0.0, 0.0), 0.5), UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+            if ((UnitGroupCount(lv_ug, c_unitCountAlive) == 0) && (libD8BB74C6_gv_bullyActive[lv_i] == true)) {
+                libNtve_gf_CreateModelAtPoint(libD8BB74C6_gv_bullyPointPlacement[lv_i], libD8BB74C6_gv_bullyPositions[lv_i]);
+                if ((libD8BB74C6_gv_bullyPointRotation[lv_i] != 0)) {
+                    ActorSend(libNtve_gf_ActorLastCreated(), libNtve_gf_SetFacing(libD8BB74C6_gv_bullyPointRotation[lv_i]));
+                }
+                libD8BB74C6_gv_bulliesPreviewActor[lv_i] = libNtve_gf_ActorLastCreated();
+                if ((libD8BB74C6_gv_bullyPlayer[lv_i] != 0)) {
+                    lv_s = ("<img path=\"" + libD8BB74C6_gv_bullyAllyImage[libD8BB74C6_gv_bullyAllyID[lv_i]]);
+                    lv_s = (lv_s + "\"height=\"32\" width=\"32\"/>");
+                    TextTagCreate(StringToText(lv_s), 24, libD8BB74C6_gv_bullyPositions[lv_i], 0.5, true, true, PlayerGroupAll());
+                    TextTagSetFogVisibility(TextTagLastCreated(), c_visTypeFog);
+                    libD8BB74C6_gv_bullyAllyImageTexttag[lv_i] = TextTagLastCreated();
+                }
+            }
+            else {
+                libNtve_gf_KillModel(libD8BB74C6_gv_bulliesPreviewActor[lv_i]);
+                TextTagDestroy(libD8BB74C6_gv_bullyAllyImageTexttag[lv_i]);
+            }
+        }
+    }
+    else {
+        libD8BB74C6_gv_showBulliesPreview = false;
+        auto915767D6_ae = libD8BB74C6_gv_bullyCount;
+        lv_i = 1;
+        for ( ; ( (auto915767D6_ai >= 0 && lv_i <= auto915767D6_ae) || (auto915767D6_ai < 0 && lv_i >= auto915767D6_ae) ) ; lv_i += auto915767D6_ai ) {
+            libNtve_gf_KillModel(libD8BB74C6_gv_bulliesPreviewActor[lv_i]);
+            TextTagDestroy(libD8BB74C6_gv_bullyAllyImageTexttag[lv_i]);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_Showbullieseffect_Init () {
+    libD8BB74C6_gt_Showbullieseffect = TriggerCreate("libD8BB74C6_gt_Showbullieseffect_Func");
+    TriggerAddEventChatMessage(libD8BB74C6_gt_Showbullieseffect, c_playerAny, "showbully", true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Bullies remove on Construction 
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_BulliesremoveonConstruction_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_i;
+    point lv_p;
+
+    // Automatic Variable Declarations
+    int autoD7E502E9_ae;
+    const int autoD7E502E9_ai = 1;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_PlayerIsEnemy(libD8BB74C6_gv_player, EventPlayer(), libNtve_ge_PlayerRelation_Ally) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_p = UnitGetPosition(EventUnitProgressUnit());
+    autoD7E502E9_ae = libD8BB74C6_gv_bullyCount;
+    lv_i = 1;
+    for ( ; ( (autoD7E502E9_ai >= 0 && lv_i <= autoD7E502E9_ae) || (autoD7E502E9_ai < 0 && lv_i >= autoD7E502E9_ae) ) ; lv_i += autoD7E502E9_ai ) {
+        if ((DistanceBetweenPoints(lv_p, libD8BB74C6_gv_bullyPositions[lv_i]) <= 0.5)) {
+            libNtve_gf_KillModel(libD8BB74C6_gv_bulliesPreviewActor[lv_i]);
+            TextTagDestroy(libD8BB74C6_gv_bullyAllyImageTexttag[lv_i]);
+            break;
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_BulliesremoveonConstruction_Init () {
+    libD8BB74C6_gt_BulliesremoveonConstruction = TriggerCreate("libD8BB74C6_gt_BulliesremoveonConstruction_Func");
+    TriggerAddEventUnitConstructProgress(libD8BB74C6_gt_BulliesremoveonConstruction, null, c_unitProgressStageStart);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Return bully on death
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_Returnbullyondeath_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_i;
+    point lv_p;
+    unitgroup lv_ug;
+    string lv_s;
+
+    // Automatic Variable Declarations
+    int auto6D3B69A2_ae;
+    const int auto6D3B69A2_ai = 1;
+
+    // Variable Initialization
+    lv_ug = UnitGroupEmpty();
+    lv_s = "";
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_PlayerIsEnemy(libD8BB74C6_gv_player, EventPlayer(), libNtve_ge_PlayerRelation_Ally) == true))) {
+            return false;
+        }
+
+        if (!((UnitTypeTestAttribute(UnitGetType(EventUnit()), c_unitAttributeStructure) == true))) {
+            return false;
+        }
+
+        if (!((libD8BB74C6_gv_showBulliesPreview == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_p = UnitGetPosition(EventUnit());
+    auto6D3B69A2_ae = libD8BB74C6_gv_bullyCount;
+    lv_i = 1;
+    for ( ; ( (auto6D3B69A2_ai >= 0 && lv_i <= auto6D3B69A2_ae) || (auto6D3B69A2_ai < 0 && lv_i >= auto6D3B69A2_ae) ) ; lv_i += auto6D3B69A2_ai ) {
+        if ((DistanceBetweenPoints(lv_p, libD8BB74C6_gv_bullyPositions[lv_i]) <= 0.5)) {
+            lv_ug = UnitGroupAlliance(libD8BB74C6_gv_player, c_unitAllianceAlly, RegionCircle(PointWithOffset(libD8BB74C6_gv_bullyPositions[lv_i], 0.0, 0.0), 0.5), UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+            if ((UnitGroupCount(lv_ug, c_unitCountAlive) == 0)) {
+                libNtve_gf_CreateModelAtPoint(libD8BB74C6_gv_bullyPointPlacement[lv_i], libD8BB74C6_gv_bullyPositions[lv_i]);
+                if ((libD8BB74C6_gv_bullyPointRotation[lv_i] != 0)) {
+                    ActorSend(libNtve_gf_ActorLastCreated(), libNtve_gf_SetFacing(libD8BB74C6_gv_bullyPointRotation[lv_i]));
+                }
+                libD8BB74C6_gv_bulliesPreviewActor[lv_i] = libNtve_gf_ActorLastCreated();
+                if ((libD8BB74C6_gv_bullyPlayer[lv_i] != 0)) {
+                    lv_s = ("<img path=\"" + libD8BB74C6_gv_bullyAllyImage[libD8BB74C6_gv_bullyAllyID[lv_i]]);
+                    lv_s = (lv_s + "\"height=\"32\" width=\"32\"/>");
+                    TextTagCreate(StringToText(lv_s), 24, libD8BB74C6_gv_bullyPositions[lv_i], 0.5, true, true, PlayerGroupAll());
+                    TextTagSetFogVisibility(TextTagLastCreated(), c_visTypeFog);
+                    libD8BB74C6_gv_bullyAllyImageTexttag[lv_i] = TextTagLastCreated();
+                }
+            }
+            else {
+                break;
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_Returnbullyondeath_Init () {
+    libD8BB74C6_gt_Returnbullyondeath = TriggerCreate("libD8BB74C6_gt_Returnbullyondeath_Func");
+    TriggerAddEventUnitDied(libD8BB74C6_gt_Returnbullyondeath, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Naktul Warning
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_NaktulWarning_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerActiveCount(TriggerGetCurrent()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_89A6D576") + StringExternal("Param/Value/lib_D8BB74C6_3856C553")));
+    Wait(30.0, c_timeGame);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_NaktulWarning_Init () {
+    libD8BB74C6_gt_NaktulWarning = TriggerCreate("libD8BB74C6_gt_NaktulWarning_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Naktul War
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_NaktulWar_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerActiveCount(TriggerGetCurrent()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_821557DC") + StringExternal("Param/Value/lib_D8BB74C6_177CE4FA")));
+    libNtve_gf_SetAlliance(libD8BB74C6_gv_player, libD8BB74C6_gv_naktulAlly, libNtve_ge_AllianceSetting_EnemyWithSharedVision);
+    while (!((libD8BB74C6_gv_badReputationNaktul < 100))) {
+        Wait(1.0, c_timeAI);
+    }
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_5C929157") + StringExternal("Param/Value/lib_D8BB74C6_4B60A8E6")));
+    libNtve_gf_SetAlliance(libD8BB74C6_gv_player, libD8BB74C6_gv_naktulAlly, libNtve_ge_AllianceSetting_AllyWithSharedVisionAndPushable);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_NaktulWar_Init () {
+    libD8BB74C6_gt_NaktulWar = TriggerCreate("libD8BB74C6_gt_NaktulWar_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Zagara Warning
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_ZagaraWarning_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerActiveCount(TriggerGetCurrent()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_2C51282E") + StringExternal("Param/Value/lib_D8BB74C6_86D06402")));
+    Wait(30.0, c_timeGame);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_ZagaraWarning_Init () {
+    libD8BB74C6_gt_ZagaraWarning = TriggerCreate("libD8BB74C6_gt_ZagaraWarning_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Zagara War
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_ZagaraWar_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerActiveCount(TriggerGetCurrent()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_509CAF07") + StringExternal("Param/Value/lib_D8BB74C6_0C00953D")));
+    libNtve_gf_SetAlliance(libD8BB74C6_gv_player, libD8BB74C6_gv_zagaraAlly, libNtve_ge_AllianceSetting_EnemyWithSharedVision);
+    while (!((libD8BB74C6_gv_badReputationZagara < 100))) {
+        Wait(1.0, c_timeAI);
+    }
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_40854760") + StringExternal("Param/Value/lib_D8BB74C6_E9DC64F1")));
+    libNtve_gf_SetAlliance(libD8BB74C6_gv_player, libD8BB74C6_gv_zagaraAlly, libNtve_ge_AllianceSetting_AllyWithSharedVisionAndPushable);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_ZagaraWar_Init () {
+    libD8BB74C6_gt_ZagaraWar = TriggerCreate("libD8BB74C6_gt_ZagaraWar_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nafash Warning
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_NafashWarning_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerActiveCount(TriggerGetCurrent()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_04D1671B") + StringExternal("Param/Value/lib_D8BB74C6_61E463DF")));
+    Wait(30.0, c_timeGame);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_NafashWarning_Init () {
+    libD8BB74C6_gt_NafashWarning = TriggerCreate("libD8BB74C6_gt_NafashWarning_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nafash War
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_NafashWar_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerActiveCount(TriggerGetCurrent()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_37B20476") + StringExternal("Param/Value/lib_D8BB74C6_50258FA5")));
+    libNtve_gf_SetAlliance(libD8BB74C6_gv_player, libD8BB74C6_gv_nafashAlly, libNtve_ge_AllianceSetting_EnemyWithSharedVision);
+    while (!((libD8BB74C6_gv_badReputationNafash < 100))) {
+        Wait(1.0, c_timeAI);
+    }
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_957DCD4F") + StringExternal("Param/Value/lib_D8BB74C6_49FB0C47")));
+    libNtve_gf_SetAlliance(libD8BB74C6_gv_player, libD8BB74C6_gv_nafashAlly, libNtve_ge_AllianceSetting_AllyWithSharedVisionAndPushable);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_NafashWar_Init () {
+    libD8BB74C6_gt_NafashWar = TriggerCreate("libD8BB74C6_gt_NafashWar_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Dehaka Warning
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_DehakaWarning_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerActiveCount(TriggerGetCurrent()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_68B22358") + StringExternal("Param/Value/lib_D8BB74C6_74807CD1")));
+    Wait(30.0, c_timeGame);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_DehakaWarning_Init () {
+    libD8BB74C6_gt_DehakaWarning = TriggerCreate("libD8BB74C6_gt_DehakaWarning_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Dehaka War
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_DehakaWar_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerActiveCount(TriggerGetCurrent()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_5A404FC3") + StringExternal("Param/Value/lib_D8BB74C6_C9FBBC16")));
+    libNtve_gf_SetAlliance(libD8BB74C6_gv_player, libD8BB74C6_gv_dehakaAlly, libNtve_ge_AllianceSetting_EnemyWithSharedVision);
+    while (!((libD8BB74C6_gv_badReputationDehaka < 100))) {
+        Wait(1.0, c_timeAI);
+    }
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_3F604087") + StringExternal("Param/Value/lib_D8BB74C6_756BABDA")));
+    libNtve_gf_SetAlliance(libD8BB74C6_gv_player, libD8BB74C6_gv_dehakaAlly, libNtve_ge_AllianceSetting_AllyWithSharedVisionAndPushable);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_DehakaWar_Init () {
+    libD8BB74C6_gt_DehakaWar = TriggerCreate("libD8BB74C6_gt_DehakaWar_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Stukov Warning
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_StukovWarning_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerActiveCount(TriggerGetCurrent()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_41146A22") + StringExternal("Param/Value/lib_D8BB74C6_0DBBDE58")));
+    Wait(30.0, c_timeGame);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_StukovWarning_Init () {
+    libD8BB74C6_gt_StukovWarning = TriggerCreate("libD8BB74C6_gt_StukovWarning_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Stukov War
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_StukovWar_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerActiveCount(TriggerGetCurrent()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_BB8F90A4") + StringExternal("Param/Value/lib_D8BB74C6_B2DA0232")));
+    libNtve_gf_SetAlliance(libD8BB74C6_gv_player, libD8BB74C6_gv_stukovAlly, libNtve_ge_AllianceSetting_EnemyWithSharedVision);
+    while (!((libD8BB74C6_gv_badReputationStukov < 100))) {
+        Wait(1.0, c_timeAI);
+    }
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (StringExternal("Param/Value/lib_D8BB74C6_BAC4B91A") + StringExternal("Param/Value/lib_D8BB74C6_23ED9FB4")));
+    libNtve_gf_SetAlliance(libD8BB74C6_gv_player, libD8BB74C6_gv_stukovAlly, libNtve_ge_AllianceSetting_AllyWithSharedVisionAndPushable);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_StukovWar_Init () {
+    libD8BB74C6_gt_StukovWar = TriggerCreate("libD8BB74C6_gt_StukovWar_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Improve Reputation Overtime
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_ImproveReputationOvertime_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(((libD8BB74C6_gv_badReputationNaktul > 0) || (libD8BB74C6_gv_badReputationStukov > 0) || (libD8BB74C6_gv_badReputationZagara > 0) || (libD8BB74C6_gv_badReputationNafash > 0) || (libD8BB74C6_gv_badReputationDehaka > 0)))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((libD8BB74C6_gv_badReputationNaktul > 0)) {
+        libD8BB74C6_gv_badReputationNaktul -= 1;
+    }
+
+    if ((libD8BB74C6_gv_badReputationZagara > 0)) {
+        libD8BB74C6_gv_badReputationZagara -= 1;
+    }
+
+    if ((libD8BB74C6_gv_badReputationStukov > 0)) {
+        libD8BB74C6_gv_badReputationStukov -= 1;
+    }
+
+    if ((libD8BB74C6_gv_badReputationNafash > 0)) {
+        libD8BB74C6_gv_badReputationNafash -= 1;
+    }
+
+    if ((libD8BB74C6_gv_badReputationDehaka > 0)) {
+        libD8BB74C6_gv_badReputationDehaka -= 1;
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_ImproveReputationOvertime_Init () {
+    libD8BB74C6_gt_ImproveReputationOvertime = TriggerCreate("libD8BB74C6_gt_ImproveReputationOvertime_Func");
+    TriggerAddEventTimePeriodic(libD8BB74C6_gt_ImproveReputationOvertime, 1.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Player Attacks AI Handler
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_PlayerAttacksAIHandler_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    point lv_damagePoint;
+    point lv_point;
+    region lv_damageRegion;
+    region lv_pointRegion;
+    unitgroup lv_defenders;
+
+    // Automatic Variable Declarations
+    unitgroup autoDFC70388_g;
+    int autoDFC70388_u;
+    unit autoDFC70388_var;
+    unitgroup auto0072BAE9_g;
+    int auto0072BAE9_u;
+    unit auto0072BAE9_var;
+    fixed autoF3CEA3D0_at;
+    unitgroup auto22D80E26_g;
+    int auto22D80E26_u;
+    unit auto22D80E26_var;
+
+    // Variable Initialization
+    lv_damagePoint = UnitGetPosition(EventUnitDamageSourceUnit());
+    lv_point = UnitGetPosition(EventUnit());
+    lv_damageRegion = RegionCircle(lv_damagePoint, 6.0);
+    lv_pointRegion = RegionCircle(lv_point, 6.0);
+    lv_defenders = UnitGroupEmpty();
+
+    // Conditions
+    if (testConds) {
+        if (!((PlayerGetAlliance(EventPlayer(), c_allianceIdPassive, EventUnitDamageSourcePlayer()) == true))) {
+            return false;
+        }
+
+        if (!((AIIsCampaign(EventPlayer()) == true))) {
+            return false;
+        }
+
+        if (!((EventUnitDamageSourcePlayer() != EventPlayer()))) {
+            return false;
+        }
+
+        if (!((AITimeIsPaused() == false))) {
+            return false;
+        }
+
+        if (!((OrderGetAbilityCommand(UnitOrder(EventUnitDamageSourceUnit(), 0)) == AbilityCommand("attack", 0)))) {
+            return false;
+        }
+
+        if (!((EventUnitDamageEffect() != "SplashDamage"))) {
+            return false;
+        }
+
+        if (!((EventUnitDamageAmount() > 2.0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoDFC70388_g = UnitGroup(null, EventPlayer(), lv_pointRegion, UnitFilter(0, 0, (1 << c_targetFilterWorker) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 5);
+    autoDFC70388_u = UnitGroupCount(autoDFC70388_g, c_unitCountAll);
+    for (;; autoDFC70388_u -= 1) {
+        autoDFC70388_var = UnitGroupUnitFromEnd(autoDFC70388_g, autoDFC70388_u);
+        if (autoDFC70388_var == null) { break; }
+        if ((UnitCanAttackTarget(autoDFC70388_var, EventUnitDamageSourceUnit()) == true) && ((UnitOrderCount(autoDFC70388_var) == 0) || (AIUnitIsInCombat(autoDFC70388_var) == false))) {
+            UnitGroupAdd(lv_defenders, autoDFC70388_var);
+            libNtve_gf_AICast(autoDFC70388_var, OrderTargetingUnit(AbilityCommand("attack", 0), EventUnitDamageSourceUnit()));
+        }
+
+    }
+    auto0072BAE9_g = UnitGroup(null, EventPlayer(), lv_damageRegion, UnitFilter(0, 0, (1 << c_targetFilterWorker) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 5);
+    auto0072BAE9_u = UnitGroupCount(auto0072BAE9_g, c_unitCountAll);
+    for (;; auto0072BAE9_u -= 1) {
+        auto0072BAE9_var = UnitGroupUnitFromEnd(auto0072BAE9_g, auto0072BAE9_u);
+        if (auto0072BAE9_var == null) { break; }
+        if ((UnitCanAttackTarget(auto0072BAE9_var, EventUnitDamageSourceUnit()) == true) && ((UnitOrderCount(auto0072BAE9_var) == 0) || (AIUnitIsInCombat(auto0072BAE9_var) == false))) {
+            UnitGroupAdd(lv_defenders, auto0072BAE9_var);
+            libNtve_gf_AICast(auto0072BAE9_var, OrderTargetingUnit(AbilityCommand("attack", 0), EventUnitDamageSourceUnit()));
+        }
+
+    }
+    autoF3CEA3D0_at = 0;
+    while (!((libNtve_gf_UnitInRegion(EventUnitDamageSourceUnit(), lv_damageRegion) == false) && (libNtve_gf_UnitInRegion(EventUnitDamageSourceUnit(), lv_pointRegion) == false)) && autoF3CEA3D0_at <= 20.0) {
+        Wait(1.0, c_timeAI);
+        autoF3CEA3D0_at = autoF3CEA3D0_at + 1.0;
+    }
+    auto22D80E26_g = lv_defenders;
+    auto22D80E26_u = UnitGroupCount(auto22D80E26_g, c_unitCountAll);
+    for (;; auto22D80E26_u -= 1) {
+        auto22D80E26_var = UnitGroupUnitFromEnd(auto22D80E26_g, auto22D80E26_u);
+        if (auto22D80E26_var == null) { break; }
+        libNtve_gf_AICast(auto22D80E26_var, Order(AbilityCommand("stop", 0)));
+    }
+    if ((EventUnitDamageSourcePlayer() == libD8BB74C6_gv_player) && (EventPlayer() == libD8BB74C6_gv_naktulAlly) && (libD8BB74C6_gv_naktulAlly != 0)) {
+        libD8BB74C6_gv_badReputationNaktul += 5;
+        if ((libD8BB74C6_gv_badReputationNaktul >= 50)) {
+            if ((libD8BB74C6_gv_badReputationNaktul >= 100)) {
+                TriggerExecute(libD8BB74C6_gt_NaktulWar, true, false);
+            }
+            else {
+                TriggerExecute(libD8BB74C6_gt_NaktulWarning, true, false);
+            }
+        }
+
+    }
+
+    if ((EventUnitDamageSourcePlayer() == libD8BB74C6_gv_player) && (EventPlayer() == libD8BB74C6_gv_nafashAlly) && (libD8BB74C6_gv_nafashAlly != 0)) {
+        libD8BB74C6_gv_badReputationNafash += 5;
+        if ((libD8BB74C6_gv_badReputationNafash >= 50)) {
+            if ((libD8BB74C6_gv_badReputationNafash >= 100)) {
+                TriggerExecute(libD8BB74C6_gt_NafashWar, true, false);
+            }
+            else {
+                TriggerExecute(libD8BB74C6_gt_NafashWarning, true, false);
+            }
+        }
+
+    }
+
+    if ((EventUnitDamageSourcePlayer() == libD8BB74C6_gv_player) && (EventPlayer() == libD8BB74C6_gv_zagaraAlly) && (libD8BB74C6_gv_zagaraAlly != 0)) {
+        libD8BB74C6_gv_badReputationZagara += 5;
+        if ((libD8BB74C6_gv_badReputationZagara >= 50)) {
+            if ((libD8BB74C6_gv_badReputationZagara >= 100)) {
+                TriggerExecute(libD8BB74C6_gt_ZagaraWar, true, false);
+            }
+            else {
+                TriggerExecute(libD8BB74C6_gt_ZagaraWarning, true, false);
+            }
+        }
+
+    }
+
+    if ((EventUnitDamageSourcePlayer() == libD8BB74C6_gv_player) && (EventPlayer() == libD8BB74C6_gv_dehakaAlly) && (libD8BB74C6_gv_dehakaAlly != 0)) {
+        libD8BB74C6_gv_badReputationDehaka += 5;
+        if ((libD8BB74C6_gv_badReputationDehaka >= 50)) {
+            if ((libD8BB74C6_gv_badReputationDehaka >= 100)) {
+                TriggerExecute(libD8BB74C6_gt_DehakaWar, true, false);
+            }
+            else {
+                TriggerExecute(libD8BB74C6_gt_DehakaWarning, true, false);
+            }
+        }
+
+    }
+
+    if ((EventUnitDamageSourcePlayer() == libD8BB74C6_gv_player) && (EventPlayer() == libD8BB74C6_gv_stukovAlly) && (libD8BB74C6_gv_stukovAlly != 0)) {
+        libD8BB74C6_gv_badReputationStukov += 5;
+        if ((libD8BB74C6_gv_badReputationStukov >= 50)) {
+            if ((libD8BB74C6_gv_badReputationStukov >= 100)) {
+                TriggerExecute(libD8BB74C6_gt_StukovWar, true, false);
+            }
+            else {
+                TriggerExecute(libD8BB74C6_gt_StukovWarning, true, false);
+            }
+        }
+
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_PlayerAttacksAIHandler_Init () {
+    libD8BB74C6_gt_PlayerAttacksAIHandler = TriggerCreate("libD8BB74C6_gt_PlayerAttacksAIHandler_Func");
+    TriggerAddEventUnitDamaged(libD8BB74C6_gt_PlayerAttacksAIHandler, null, c_unitDamageTypeAny, c_unitDamageEither, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Handle AI Hero Death
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_HandleAIHeroDeath_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unit auto36AD092C_val;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto36AD092C_val = EventUnit();
+    if (auto36AD092C_val == libD8BB74C6_gv_naktulHero) {
+        libD8BB74C6_gf_AIHeroRevive("BroodMother", libD8BB74C6_gv_naktulAlly, 60.0);
+    }
+    else if (auto36AD092C_val == libD8BB74C6_gv_nafashHero) {
+        libD8BB74C6_gf_AIHeroRevive("Nafash", libD8BB74C6_gv_nafashAlly, 60.0);
+    }
+    else if (auto36AD092C_val == libD8BB74C6_gv_zagaraHero) {
+        libD8BB74C6_gf_AIHeroRevive("ZagaraVoidCoop", libD8BB74C6_gv_zagaraAlly, 60.0);
+    }
+    else if (auto36AD092C_val == libD8BB74C6_gv_dehakaHero) {
+        libD8BB74C6_gf_AIHeroRevive("DehakaCoop", libD8BB74C6_gv_dehakaAlly, 60.0);
+    }
+    else {
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_HandleAIHeroDeath_Init () {
+    libD8BB74C6_gt_HandleAIHeroDeath = TriggerCreate("libD8BB74C6_gt_HandleAIHeroDeath_Func");
+    TriggerAddEventUnitDied(libD8BB74C6_gt_HandleAIHeroDeath, UnitRefFromVariable("libD8BB74C6_gv_naktulHero"));
+    TriggerAddEventUnitDied(libD8BB74C6_gt_HandleAIHeroDeath, UnitRefFromVariable("libD8BB74C6_gv_nafashHero"));
+    TriggerAddEventUnitDied(libD8BB74C6_gt_HandleAIHeroDeath, UnitRefFromVariable("libD8BB74C6_gv_zagaraHero"));
+    TriggerAddEventUnitDied(libD8BB74C6_gt_HandleAIHeroDeath, UnitRefFromVariable("libD8BB74C6_gv_dehakaHero"));
+    TriggerAddEventUnitDied(libD8BB74C6_gt_HandleAIHeroDeath, UnitRefFromVariable("libD8BB74C6_gv_stukovHero"));
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Naktul - Nydus Abiity
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_NaktulNydusAbiity_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_nydus;
+
+    // Automatic Variable Declarations
+    unitgroup auto8EDC75B5_g;
+    int auto8EDC75B5_u;
+    unit auto8EDC75B5_var;
+    unitgroup auto17923284_g;
+    int auto17923284_u;
+    unit auto17923284_var;
+    unitgroup auto4FC1CD26_g;
+    int auto4FC1CD26_u;
+    unit auto4FC1CD26_var;
+    unitgroup autoCBFC2874_g;
+    int autoCBFC2874_u;
+    unit autoCBFC2874_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateUnitsAtPoint2(1, "NydusCanal", c_unitCreateIgnorePlacement, EventPlayer(), EventUnitTargetPoint());
+    libNtve_gf_MakeUnitInvulnerable(UnitLastCreated(), true);
+    lv_nydus = UnitLastCreated();
+    libNtve_gf_PlayAnimation(libNtve_gf_MainActorofUnit(UnitLastCreated()), c_animNameDefault, "Birth 02", 0, c_animTimeDefault);
+    SoundPlay(SoundLink("NydusWorm_Birth", -1), PlayerGroupAll(), 100.0, 0.0);
+    Wait(3.7, c_timeGame);
+    libNtve_gf_PlayAnimation(libNtve_gf_MainActorofUnit(lv_nydus), c_animNameDefault, "Spell", 0, c_animTimeDefault);
+    SoundPlayOnUnit(SoundLink("NydusWorm_Unload", -1), PlayerGroupAll(), lv_nydus, 0.0, 100.0, 0.0);
+    Wait(0.5, c_timeGame);
+    libNtve_gf_CreateUnitsAtPoint2(3, "Zergling2", 0, EventPlayer(), EventUnitTargetPoint());
+    auto8EDC75B5_g = UnitLastCreatedGroup();
+    auto8EDC75B5_u = UnitGroupCount(auto8EDC75B5_g, c_unitCountAll);
+    for (;; auto8EDC75B5_u -= 1) {
+        auto8EDC75B5_var = UnitGroupUnitFromEnd(auto8EDC75B5_g, auto8EDC75B5_u);
+        if (auto8EDC75B5_var == null) { break; }
+        AISetUnitSuicide(auto8EDC75B5_var, true);
+        UnitBehaviorAdd(auto8EDC75B5_var, "AutoTurretTimedLife", EventUnit(), 1);
+    }
+    libNtve_gf_CreateUnitsAtPoint2(1, "Roach2", 0, EventPlayer(), EventUnitTargetPoint());
+    auto17923284_g = UnitLastCreatedGroup();
+    auto17923284_u = UnitGroupCount(auto17923284_g, c_unitCountAll);
+    for (;; auto17923284_u -= 1) {
+        auto17923284_var = UnitGroupUnitFromEnd(auto17923284_g, auto17923284_u);
+        if (auto17923284_var == null) { break; }
+        UnitBehaviorAdd(auto17923284_var, "AutoTurretTimedLife", EventUnit(), 1);
+        AISetUnitSuicide(auto17923284_var, true);
+    }
+    Wait(0.5, c_timeGame);
+    libNtve_gf_PlayAnimation(libNtve_gf_MainActorofUnit(lv_nydus), c_animNameDefault, "Spell", 0, c_animTimeDefault);
+    SoundPlayOnUnit(SoundLink("NydusWorm_Unload", -1), PlayerGroupAll(), lv_nydus, 0.0, 100.0, 0.0);
+    libNtve_gf_CreateUnitsAtPoint2(3, "Zergling2", 0, EventPlayer(), EventUnitTargetPoint());
+    auto4FC1CD26_g = UnitLastCreatedGroup();
+    auto4FC1CD26_u = UnitGroupCount(auto4FC1CD26_g, c_unitCountAll);
+    for (;; auto4FC1CD26_u -= 1) {
+        auto4FC1CD26_var = UnitGroupUnitFromEnd(auto4FC1CD26_g, auto4FC1CD26_u);
+        if (auto4FC1CD26_var == null) { break; }
+        UnitBehaviorAdd(auto4FC1CD26_var, "AutoTurretTimedLife", EventUnit(), 1);
+        AISetUnitSuicide(auto4FC1CD26_var, true);
+    }
+    libNtve_gf_CreateUnitsAtPoint2(1, "Hydralisk2", 0, EventPlayer(), EventUnitTargetPoint());
+    autoCBFC2874_g = UnitLastCreatedGroup();
+    autoCBFC2874_u = UnitGroupCount(autoCBFC2874_g, c_unitCountAll);
+    for (;; autoCBFC2874_u -= 1) {
+        autoCBFC2874_var = UnitGroupUnitFromEnd(autoCBFC2874_g, autoCBFC2874_u);
+        if (autoCBFC2874_var == null) { break; }
+        UnitBehaviorAdd(autoCBFC2874_var, "AutoTurretTimedLife", EventUnit(), 1);
+        AISetUnitSuicide(autoCBFC2874_var, true);
+    }
+    Wait(1.0, c_timeGame);
+    libNtve_gf_PlayAnimation(libNtve_gf_MainActorofUnit(lv_nydus), c_animNameDefault, "Unburrow", c_animFlagNonLooping, c_animTimeDefault);
+    SoundPlayOnUnit(SoundLink("Zerg_BurrowLarge", -1), PlayerGroupAll(), lv_nydus, 0.0, 100.0, 0.0);
+    Wait(2.8, c_timeGame);
+    UnitRemove(lv_nydus);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_NaktulNydusAbiity_Init () {
+    libD8BB74C6_gt_NaktulNydusAbiity = TriggerCreate("libD8BB74C6_gt_NaktulNydusAbiity_Func");
+    TriggerAddEventUnitAbility(libD8BB74C6_gt_NaktulNydusAbiity, null, AbilityCommand("NaktulSummonNydus", 0), c_unitAbilStageExecute, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Naktul - Use Nydus - Offensive
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_NaktulUseNydusOffensive_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) == "BroodMother"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_AICast(EventUnit(), OrderTargetingPoint(AbilityCommand("NaktulSummonNydus", 0), UnitGetPosition(libNtve_gf_AcquiredTarget())));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_NaktulUseNydusOffensive_Init () {
+    libD8BB74C6_gt_NaktulUseNydusOffensive = TriggerCreate("libD8BB74C6_gt_NaktulUseNydusOffensive_Func");
+    TriggerAddEventUnitStartedAttack2(libD8BB74C6_gt_NaktulUseNydusOffensive, null, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Naktul - Use Nydus - Defensive
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_NaktulUseNydusDefensive_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnitDamageSourceUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(EventUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) == "BroodMother"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_AICast(EventUnit(), OrderTargetingPoint(AbilityCommand("NaktulSummonNydus", 0), UnitGetPosition(EventUnitDamageSourceUnit())));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_NaktulUseNydusDefensive_Init () {
+    libD8BB74C6_gt_NaktulUseNydusDefensive = TriggerCreate("libD8BB74C6_gt_NaktulUseNydusDefensive_Func");
+    TriggerAddEventUnitDamaged(libD8BB74C6_gt_NaktulUseNydusDefensive, null, c_unitDamageTypeAny, c_unitDamageNonFatal, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nafash - Use Kinetic - Offensive
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_NafashUseKineticOffensive_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) == "Nafash"))) {
+            return false;
+        }
+
+        if (!((UnitGetPropertyFixed(libNtve_gf_AcquiredTarget(), c_unitPropLife, c_unitPropCurrent) > 150.0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_AICast(EventUnit(), OrderTargetingUnit(AbilityCommand("KerriganVoidKineticBlast", 0), libNtve_gf_AcquiredTarget()));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_NafashUseKineticOffensive_Init () {
+    libD8BB74C6_gt_NafashUseKineticOffensive = TriggerCreate("libD8BB74C6_gt_NafashUseKineticOffensive_Func");
+    TriggerAddEventUnitStartedAttack2(libD8BB74C6_gt_NafashUseKineticOffensive, null, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nafash - Use Kinetic - Defensive
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_NafashUseKineticDefensive_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnitDamageSourceUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(EventUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) == "Nafash"))) {
+            return false;
+        }
+
+        if (!((UnitGetPropertyFixed(EventUnitDamageSourceUnit(), c_unitPropLife, c_unitPropCurrent) > 150.0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_AICast(EventUnit(), OrderTargetingUnit(AbilityCommand("KerriganVoidKineticBlast", 0), EventUnitDamageSourceUnit()));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_NafashUseKineticDefensive_Init () {
+    libD8BB74C6_gt_NafashUseKineticDefensive = TriggerCreate("libD8BB74C6_gt_NafashUseKineticDefensive_Func");
+    TriggerAddEventUnitDamaged(libD8BB74C6_gt_NafashUseKineticDefensive, null, c_unitDamageTypeAny, c_unitDamageNonFatal, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Ghost - EMP Offensive
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_GhostEMPOffensive_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) == "Ghost"))) {
+            return false;
+        }
+
+        if (!(((UnitGetPropertyFixed(libNtve_gf_AcquiredTarget(), c_unitPropEnergy, c_unitPropCurrent) >= 50.0) || (UnitGetPropertyFixed(libNtve_gf_AcquiredTarget(), c_unitPropShields, c_unitPropCurrent) >= 100.0)))) {
+            return false;
+        }
+
+        if (!((UnitTypeTestAttribute(UnitGetType(libNtve_gf_AcquiredTarget()), c_unitAttributeStructure) == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_AICast(EventUnit(), OrderTargetingPoint(AbilityCommand("EMP", 0), UnitGetPosition(libNtve_gf_AcquiredTarget())));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_GhostEMPOffensive_Init () {
+    libD8BB74C6_gt_GhostEMPOffensive = TriggerCreate("libD8BB74C6_gt_GhostEMPOffensive_Func");
+    TriggerEnable(libD8BB74C6_gt_GhostEMPOffensive, false);
+    TriggerAddEventUnitStartedAttack2(libD8BB74C6_gt_GhostEMPOffensive, null, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Ghost - EMP Defensive
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_GhostEMPDefensive_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) == "Ghost"))) {
+            return false;
+        }
+
+        if (!(((UnitGetPropertyFixed(EventUnitDamageSourceUnit(), c_unitPropEnergy, c_unitPropCurrent) >= 50.0) || (UnitGetPropertyFixed(EventUnitDamageSourceUnit(), c_unitPropShields, c_unitPropCurrent) >= 100.0)))) {
+            return false;
+        }
+
+        if (!((UnitTypeTestAttribute(UnitGetType(EventUnitDamageSourceUnit()), c_unitAttributeStructure) == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_AICast(EventUnit(), OrderTargetingPoint(AbilityCommand("EMP", 0), UnitGetPosition(EventUnitDamageSourceUnit())));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_GhostEMPDefensive_Init () {
+    libD8BB74C6_gt_GhostEMPDefensive = TriggerCreate("libD8BB74C6_gt_GhostEMPDefensive_Func");
+    TriggerEnable(libD8BB74C6_gt_GhostEMPDefensive, false);
+    TriggerAddEventUnitDamaged(libD8BB74C6_gt_GhostEMPDefensive, null, c_unitDamageTypeAny, c_unitDamageNonFatal, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Zagara - Banelings - Offensive
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_ZagaraBanelingsOffensive_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) == "ZagaraVoidCoop"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_AICast(EventUnit(), OrderTargetingPoint(AbilityCommand("ZagaraVoidCoopBanelingBarrage", 0), UnitGetPosition(libNtve_gf_AcquiredTarget())));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_ZagaraBanelingsOffensive_Init () {
+    libD8BB74C6_gt_ZagaraBanelingsOffensive = TriggerCreate("libD8BB74C6_gt_ZagaraBanelingsOffensive_Func");
+    TriggerAddEventUnitStartedAttack2(libD8BB74C6_gt_ZagaraBanelingsOffensive, null, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Zagara - Banelings - Defensive
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_ZagaraBanelingsDefensive_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnitDamageSourceUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(EventUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) == "ZagaraVoidCoop"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_AICast(EventUnit(), OrderTargetingPoint(AbilityCommand("ZagaraVoidCoopBanelingBarrage", 0), UnitGetPosition(EventUnitDamageSourceUnit())));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_ZagaraBanelingsDefensive_Init () {
+    libD8BB74C6_gt_ZagaraBanelingsDefensive = TriggerCreate("libD8BB74C6_gt_ZagaraBanelingsDefensive_Func");
+    TriggerAddEventUnitDamaged(libD8BB74C6_gt_ZagaraBanelingsDefensive, null, c_unitDamageTypeAny, c_unitDamageNonFatal, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Zagara - Use Hunter Killers - Offensive
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_ZagaraUseHunterKillersOffensive_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) == "ZagaraVoidCoop"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_AICast(EventUnit(), OrderTargetingPoint(AbilityCommand("ZagaraVoidCoopSpawnHunterKillers", 0), UnitGetPosition(EventUnit())));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_ZagaraUseHunterKillersOffensive_Init () {
+    libD8BB74C6_gt_ZagaraUseHunterKillersOffensive = TriggerCreate("libD8BB74C6_gt_ZagaraUseHunterKillersOffensive_Func");
+    TriggerAddEventUnitStartedAttack2(libD8BB74C6_gt_ZagaraUseHunterKillersOffensive, null, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Zagara - Use Hunter Killers - Defensive
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_ZagaraUseHunterKillersDefensive_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnitDamageSourceUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(EventUnit()) != libD8BB74C6_gv_player))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) == "ZagaraVoidCoop"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_AICast(EventUnit(), OrderTargetingPoint(AbilityCommand("ZagaraVoidCoopSpawnHunterKillers", 0), UnitGetPosition(EventUnit())));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_ZagaraUseHunterKillersDefensive_Init () {
+    libD8BB74C6_gt_ZagaraUseHunterKillersDefensive = TriggerCreate("libD8BB74C6_gt_ZagaraUseHunterKillersDefensive_Func");
+    TriggerAddEventUnitDamaged(libD8BB74C6_gt_ZagaraUseHunterKillersDefensive, null, c_unitDamageTypeAny, c_unitDamageNonFatal, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: AIResourcePanelUpdater
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_AIResourcePanelUpdater_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_player;
+    text lv_supplyLabelColor;
+
+    // Automatic Variable Declarations
+    const int autoB1BD5D2D_ae = 16;
+    const int autoB1BD5D2D_ai = 1;
+
+    // Variable Initialization
+    lv_supplyLabelColor = StringToText("");
+
+    // Conditions
+    if (testConds) {
+        if (!((TriggerIsEnabled(TriggerGetCurrent()) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TriggerEnable(TriggerGetCurrent(), false);
+    while (true) {
+        lv_player = 1;
+        for ( ; ( (autoB1BD5D2D_ai >= 0 && lv_player <= autoB1BD5D2D_ae) || (autoB1BD5D2D_ai < 0 && lv_player >= autoB1BD5D2D_ae) ) ; lv_player += autoB1BD5D2D_ai ) {
+            if ((libD8BB74C6_gv_aIResourcePanelDialog[lv_player] != c_invalidDialogId)) {
+                libNtve_gf_SetDialogItemText(libD8BB74C6_gv_aIResourcePanelMineralsLabel[lv_player], IntToText(PlayerGetPropertyInt(lv_player, c_playerPropMinerals)), PlayerGroupAll());
+                libNtve_gf_SetDialogItemText(libD8BB74C6_gv_aIResourcePanelVespeneLabel[lv_player], IntToText(PlayerGetPropertyInt(lv_player, c_playerPropVespene)), PlayerGroupAll());
+                if ((PlayerGetPropertyFixed(lv_player, c_playerPropSuppliesUsed) > PlayerGetPropertyFixed(lv_player, c_playerPropSuppliesMade))) {
+                    lv_supplyLabelColor = StringExternal("Param/Value/lib_D8BB74C6_5D7BE01E");
+                }
+                else {
+                    lv_supplyLabelColor = StringToText("");
+                }
+                if ((PlayerGetPropertyFixed(lv_player, c_playerPropSuppliesMade) > PlayerGetPropertyFixed(lv_player, c_playerPropSuppliesLimit))) {
+                    TextExpressionSetToken("Param/Expression/lib_D8BB74C6_33BDB053", "C", lv_supplyLabelColor);
+                    TextExpressionSetToken("Param/Expression/lib_D8BB74C6_33BDB053", "A", IntToText(PlayerGetPropertyInt(lv_player, c_playerPropSuppliesUsed)));
+                    TextExpressionSetToken("Param/Expression/lib_D8BB74C6_33BDB053", "B", IntToText(PlayerGetPropertyInt(lv_player, c_playerPropSuppliesLimit)));
+                    libNtve_gf_SetDialogItemText(libD8BB74C6_gv_aIResourcePanelSupplyLabel[lv_player], TextExpressionAssemble("Param/Expression/lib_D8BB74C6_33BDB053"), PlayerGroupAll());
+                }
+                else {
+                    TextExpressionSetToken("Param/Expression/lib_D8BB74C6_50E8AE0A", "C", lv_supplyLabelColor);
+                    TextExpressionSetToken("Param/Expression/lib_D8BB74C6_50E8AE0A", "A", IntToText(PlayerGetPropertyInt(lv_player, c_playerPropSuppliesUsed)));
+                    TextExpressionSetToken("Param/Expression/lib_D8BB74C6_50E8AE0A", "B", IntToText(PlayerGetPropertyInt(lv_player, c_playerPropSuppliesMade)));
+                    libNtve_gf_SetDialogItemText(libD8BB74C6_gv_aIResourcePanelSupplyLabel[lv_player], TextExpressionAssemble("Param/Expression/lib_D8BB74C6_50E8AE0A"), PlayerGroupAll());
+                }
+            }
+
+        }
+        Wait(0.0625, c_timeAI);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_AIResourcePanelUpdater_Init () {
+    libD8BB74C6_gt_AIResourcePanelUpdater = TriggerCreate("libD8BB74C6_gt_AIResourcePanelUpdater_Func");
+    TriggerAddEventMapInit(libD8BB74C6_gt_AIResourcePanelUpdater);
+}
+
+void libD8BB74C6_InitTriggers () {
+    libD8BB74C6_gt_Disableachievments_Init();
+    libD8BB74C6_gt_Load_Init();
+    libD8BB74C6_gt_LoadTechs_Init();
+    libD8BB74C6_gt_LoadTechsNaktul_Init();
+    libD8BB74C6_gt_AISettings_Init();
+    libD8BB74C6_gt_ShareMineralPickupwithAllies_Init();
+    libD8BB74C6_gt_ShareVespenePickupwithAllies_Init();
+    libD8BB74C6_gt_AISupplyBlockPreventer_Init();
+    libD8BB74C6_gt_ShowBullitsIni_Init();
+    libD8BB74C6_gt_Showbullieseffect_Init();
+    libD8BB74C6_gt_BulliesremoveonConstruction_Init();
+    libD8BB74C6_gt_Returnbullyondeath_Init();
+    libD8BB74C6_gt_NaktulWarning_Init();
+    libD8BB74C6_gt_NaktulWar_Init();
+    libD8BB74C6_gt_ZagaraWarning_Init();
+    libD8BB74C6_gt_ZagaraWar_Init();
+    libD8BB74C6_gt_NafashWarning_Init();
+    libD8BB74C6_gt_NafashWar_Init();
+    libD8BB74C6_gt_DehakaWarning_Init();
+    libD8BB74C6_gt_DehakaWar_Init();
+    libD8BB74C6_gt_StukovWarning_Init();
+    libD8BB74C6_gt_StukovWar_Init();
+    libD8BB74C6_gt_ImproveReputationOvertime_Init();
+    libD8BB74C6_gt_PlayerAttacksAIHandler_Init();
+    libD8BB74C6_gt_HandleAIHeroDeath_Init();
+    libD8BB74C6_gt_NaktulNydusAbiity_Init();
+    libD8BB74C6_gt_NaktulUseNydusOffensive_Init();
+    libD8BB74C6_gt_NaktulUseNydusDefensive_Init();
+    libD8BB74C6_gt_NafashUseKineticOffensive_Init();
+    libD8BB74C6_gt_NafashUseKineticDefensive_Init();
+    libD8BB74C6_gt_GhostEMPOffensive_Init();
+    libD8BB74C6_gt_GhostEMPDefensive_Init();
+    libD8BB74C6_gt_ZagaraBanelingsOffensive_Init();
+    libD8BB74C6_gt_ZagaraBanelingsDefensive_Init();
+    libD8BB74C6_gt_ZagaraUseHunterKillersOffensive_Init();
+    libD8BB74C6_gt_ZagaraUseHunterKillersDefensive_Init();
+    libD8BB74C6_gt_AIResourcePanelUpdater_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_InitLib_completed = false;
+
+void libD8BB74C6_InitLib () {
+    if (libD8BB74C6_InitLib_completed) {
+        return;
+    }
+
+    libD8BB74C6_InitLib_completed = true;
+
+    libD8BB74C6_InitLibraries();
+    libD8BB74C6_InitVariables();
+    libD8BB74C6_InitTriggers();
+}
+

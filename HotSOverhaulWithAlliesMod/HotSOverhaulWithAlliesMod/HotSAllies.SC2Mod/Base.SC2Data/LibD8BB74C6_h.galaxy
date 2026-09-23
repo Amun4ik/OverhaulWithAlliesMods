@@ -1,0 +1,149 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: HotSWithAlliesLibrary
+//--------------------------------------------------------------------------------------------------
+// Preset Declarations
+const int libD8BB74C6_ge_AIResourcePanelStyles_Default = 0;
+const int libD8BB74C6_ge_AIResourcePanelStyles_ArcadePurple = 1;
+const int libD8BB74C6_ge_AIResourcePanelStyles_ProtossLightBlue = 2;
+const int libD8BB74C6_ge_AIResourcePanelStyles_TerranGreen = 3;
+const int libD8BB74C6_ge_AIResourcePanelStyles_ZergMutedOrange = 4;
+const int libD8BB74C6_ge_AIResourcePanelStyles_EvolvedYellow = 5;
+const int libD8BB74C6_ge_AIResourcePanelStyles_ForgedRed = 6;
+const int libD8BB74C6_ge_AIResourcePanelStyles_GalacticViolet = 7;
+const int libD8BB74C6_ge_AIResourcePanelStyles_IhanriiVibrantAquamarine = 8;
+const int libD8BB74C6_ge_AIResourcePanelStyles_ImperialMengsk = 9;
+const int libD8BB74C6_ge_AIResourcePanelStyles_MachinedOrange = 10;
+const int libD8BB74C6_ge_AIResourcePanelStyles_MirasMaraudersVeryMutedPink = 11;
+const int libD8BB74C6_ge_AIResourcePanelStyles_NerazimMutedPurple = 12;
+const int libD8BB74C6_ge_AIResourcePanelStyles_PrimalGreener = 13;
+const int libD8BB74C6_ge_AIResourcePanelStyles_PurifierVibrantHotOrange = 14;
+const int libD8BB74C6_ge_AIResourcePanelStyles_SimulantHotOrange = 15;
+const int libD8BB74C6_ge_AIResourcePanelStyles_SpecialForcesNova = 16;
+const int libD8BB74C6_ge_AIResourcePanelStyles_TyradorMutedPurple = 17;
+
+// Variable Declarations
+int libD8BB74C6_gv_player;
+int libD8BB74C6_gv_naktulAlly;
+int libD8BB74C6_gv_zagaraAlly;
+int libD8BB74C6_gv_nafashAlly;
+int libD8BB74C6_gv_dehakaAlly;
+int libD8BB74C6_gv_stukovAlly;
+int libD8BB74C6_gv_raynorAlly;
+playergroup libD8BB74C6_gv_allies;
+playergroup libD8BB74C6_gv_alliesPlayer;
+bank libD8BB74C6_gv_hotSWithAlliesBank;
+int libD8BB74C6_gv_bullyCount;
+bool[1001] libD8BB74C6_gv_bullyActive;
+int[1001] libD8BB74C6_gv_bullyPlayer;
+int[1001] libD8BB74C6_gv_bullyRotation;
+int[1001] libD8BB74C6_gv_bullyPointRotation;
+string[1001] libD8BB74C6_gv_bullyUnitTypes;
+string[1001] libD8BB74C6_gv_bullyTypes;
+string[1001] libD8BB74C6_gv_bullyPlacementModels;
+string[1001] libD8BB74C6_gv_bullyPointPlacement;
+int libD8BB74C6_gv_bullyTypeCount;
+point[1001] libD8BB74C6_gv_bullyPositions;
+actor[1001] libD8BB74C6_gv_bulliesPreviewActor;
+bool libD8BB74C6_gv_showBulliesPreview;
+int[1001] libD8BB74C6_gv_bullyAllyID;
+int[1001] libD8BB74C6_gv_bullyAllyPlayer;
+string[1001] libD8BB74C6_gv_bullyAllyImage;
+int[1001] libD8BB74C6_gv_bullyAllyImageTexttag;
+int libD8BB74C6_gv_badReputationNaktul;
+int libD8BB74C6_gv_badReputationZagara;
+int libD8BB74C6_gv_badReputationNafash;
+int libD8BB74C6_gv_badReputationDehaka;
+int libD8BB74C6_gv_badReputationStukov;
+int[7] libD8BB74C6_gv_aIPlayerIndex;
+int libD8BB74C6_gv_naktulIndex;
+int libD8BB74C6_gv_zagaraIndex;
+int libD8BB74C6_gv_stukovIndex;
+int libD8BB74C6_gv_dehakaIndex;
+int libD8BB74C6_gv_nafashIndex;
+int libD8BB74C6_gv_raynorIndex;
+int libD8BB74C6_gv_aILastPlayerIndex;
+unit libD8BB74C6_gv_naktulHero;
+unit libD8BB74C6_gv_zagaraHero;
+unit libD8BB74C6_gv_nafashHero;
+unit libD8BB74C6_gv_dehakaHero;
+unit libD8BB74C6_gv_stukovHero;
+int libD8BB74C6_gv_naktulHeroPing;
+int libD8BB74C6_gv_zagaraHeroPing;
+int libD8BB74C6_gv_nafashHeroPing;
+int libD8BB74C6_gv_dehakaHeroPing;
+int libD8BB74C6_gv_stukovHeroPing;
+bool[7] libD8BB74C6_gv_allyHasHero;
+int[17] libD8BB74C6_gv_aIResourcePanelDialog;
+text[17] libD8BB74C6_gv_aIResourcePanelCommanderName;
+int[17] libD8BB74C6_gv_aIResourcePanelMineralsLabel;
+int[17] libD8BB74C6_gv_aIResourcePanelVespeneLabel;
+int[17] libD8BB74C6_gv_aIResourcePanelSupplyLabel;
+
+// Function Declarations
+void libD8BB74C6_gf_RescueUnitforAI (unit lp_cHOSEN_UNIT, point lp_tARGET_POINT, int lp_cHOSEN_PLAYER, bool lp_iMMIDIATE_ATTACK);
+void libD8BB74C6_gf_RescueDroneforAI (unit lp_cHOSEN_UNIT, int lp_cHOSEN_PLAYER, bool lp_mUTATE_HATCHERY, point lp_tARGET_POINT);
+void libD8BB74C6_gf_AttackArrowPing (point lp_startpoint, point lp_endpoint);
+void libD8BB74C6_gf_RegisterBullyAlly (int lp_player, int lp_iD, string lp_icon);
+void libD8BB74C6_gf_RegisterBully (string lp_unitType, string lp_placementModel, int lp_facing);
+void libD8BB74C6_gf_RegisterZerg ();
+void libD8BB74C6_gf_RegisterTerran ();
+void libD8BB74C6_gf_RegisterProtoss ();
+void libD8BB74C6_gf_RegisterCustom ();
+void libD8BB74C6_gf_RestartBulliesPreview ();
+void libD8BB74C6_gf_StartNaktulAI (int lp_minerals, int lp_gas, point lp_gatherPoint, point lp_heroSpawnPoint);
+void libD8BB74C6_gf_StartNafashAI (int lp_minerals, int lp_gas, point lp_gatherPoint, point lp_heroSpawnPoint);
+void libD8BB74C6_gf_StartZagaraAI (int lp_minerals, int lp_gas, point lp_gatherPoint, point lp_heroSpawnPoint);
+void libD8BB74C6_gf_StartDehakaAI (int lp_minerals, int lp_gas, point lp_gatherPoint, point lp_heroSpawnPoint);
+void libD8BB74C6_gf_ToggleCovertOpsforPlayer (int lp_player);
+int libD8BB74C6_gf_GetArrayIndexForPlayer (int lp_playerID);
+void libD8BB74C6_gf_CreateHero (int lp_allyIndex, point lp_point);
+void libD8BB74C6_gf_AIHeroRevive (string lp_heroType, int lp_player, fixed lp_reviveTime);
+void libD8BB74C6_gf_CreateAIResourcePanel (int lp_player, int lp_position, string lp_image, text lp_name, int lp_style);
+void libD8BB74C6_gf_ShowHideAIResourcePanel (int lp_player, bool lp_showHide);
+void libD8BB74C6_gf_DestroyAIResourcePanel (int lp_player);
+string libD8BB74C6_gf_AIResourcePanelGetImageFromStyle (int lp_style);
+
+// Trigger Declarations
+trigger libD8BB74C6_gt_Disableachievments;
+trigger libD8BB74C6_gt_Load;
+trigger libD8BB74C6_gt_LoadTechs;
+trigger libD8BB74C6_gt_LoadTechsNaktul;
+trigger libD8BB74C6_gt_AISettings;
+trigger libD8BB74C6_gt_ShareMineralPickupwithAllies;
+trigger libD8BB74C6_gt_ShareVespenePickupwithAllies;
+trigger libD8BB74C6_gt_AISupplyBlockPreventer;
+trigger libD8BB74C6_gt_ShowBullitsIni;
+trigger libD8BB74C6_gt_Showbullieseffect;
+trigger libD8BB74C6_gt_BulliesremoveonConstruction;
+trigger libD8BB74C6_gt_Returnbullyondeath;
+trigger libD8BB74C6_gt_NaktulWarning;
+trigger libD8BB74C6_gt_NaktulWar;
+trigger libD8BB74C6_gt_ZagaraWarning;
+trigger libD8BB74C6_gt_ZagaraWar;
+trigger libD8BB74C6_gt_NafashWarning;
+trigger libD8BB74C6_gt_NafashWar;
+trigger libD8BB74C6_gt_DehakaWarning;
+trigger libD8BB74C6_gt_DehakaWar;
+trigger libD8BB74C6_gt_StukovWarning;
+trigger libD8BB74C6_gt_StukovWar;
+trigger libD8BB74C6_gt_ImproveReputationOvertime;
+trigger libD8BB74C6_gt_PlayerAttacksAIHandler;
+trigger libD8BB74C6_gt_HandleAIHeroDeath;
+trigger libD8BB74C6_gt_NaktulNydusAbiity;
+trigger libD8BB74C6_gt_NaktulUseNydusOffensive;
+trigger libD8BB74C6_gt_NaktulUseNydusDefensive;
+trigger libD8BB74C6_gt_NafashUseKineticOffensive;
+trigger libD8BB74C6_gt_NafashUseKineticDefensive;
+trigger libD8BB74C6_gt_GhostEMPOffensive;
+trigger libD8BB74C6_gt_GhostEMPDefensive;
+trigger libD8BB74C6_gt_ZagaraBanelingsOffensive;
+trigger libD8BB74C6_gt_ZagaraBanelingsDefensive;
+trigger libD8BB74C6_gt_ZagaraUseHunterKillersOffensive;
+trigger libD8BB74C6_gt_ZagaraUseHunterKillersDefensive;
+trigger libD8BB74C6_gt_AIResourcePanelUpdater;
+
+// Library Initialization
+void libD8BB74C6_InitVariables ();
+

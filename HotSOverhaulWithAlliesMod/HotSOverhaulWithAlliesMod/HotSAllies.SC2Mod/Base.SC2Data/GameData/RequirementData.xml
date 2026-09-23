@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="HaveRoachSpeed">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeGlialReconstitutionCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveStabilizedBile2">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgraderavagerrangeCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveHydraliskSpeed">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeHydraliskSpeedUpgradeCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnAgressiveRegen">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="EqCountUpgradeAgressiveRegenerationQueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnBarborous">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="EqCountUpgradeBarbarousMutationQueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnGlialReconstitution">
+        <NodeArray index="Use" Link=""/>
+    </CRequirement>
+    <CRequirement id="LearnHydraliskSpeedUpgrade">
+        <NodeArray index="Use" Link=""/>
+    </CRequirement>
+    <CRequirement id="LearnStabilizedBile">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgraderavagerrangeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnZergGroundArmor1">
+        <NodeArray index="Show" Link="EqCountUpgradeZergArmorLevel1QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnChitinousDNA">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="EqCountUpgradeChitinousImplementationQueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnZergGroundArmor2">
+        <NodeArray index="Use" Link="AndEq1695466224CountUpgradeZergArmorLevel1CompleteOnly1CountUnitAlias_LairCompleteOnly1515591279TechTreeCheat"/>
+        <NodeArray index="Show" Link="EqCountUpgradeZergArmorLevel2QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnZergGroundArmor3">
+        <NodeArray index="Use" Link="AndEq4090499265CountUpgradeZergArmorLevel2CompleteOnly1CountUnitHiveCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="EqCountUpgradeZergArmorLevel3QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnZergMeleeWeapon1">
+        <NodeArray index="Show" Link="EqCountUpgradeZergMeleeDamageLevel1QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnZergMeleeWeapon2">
+        <NodeArray index="Use" Link="AndEq1542947369CountUpgradeZergMeleeDamageLevel1CompleteOnly1CountUnitAlias_LairCompleteOnly1515591279TechTreeCheat"/>
+        <NodeArray index="Show" Link="EqCountUpgradeZergMeleeDamageLevel2QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnZergMeleeWeapon3">
+        <NodeArray index="Use" Link="AndEq2480428841CountUpgradeZergMeleeDamageLevel2CompleteOnly1CountUnitHiveCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="EqCountUpgradeZergMeleeDamageLevel3QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnZergMissileWeapon1">
+        <NodeArray index="Show" Link="EqCountUpgradeZergRangeDamageLevel1QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnZergMissileWeapon2">
+        <NodeArray index="Use" Link="AndEq2966286162CountUpgradeZergRangeDamageLevel1CompleteOnly1CountUnitAlias_LairCompleteOnly1515591279TechTreeCheat"/>
+        <NodeArray index="Show" Link="EqCountUpgradeZergRangeDamageLevel2QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnZergMissileWeapon3">
+        <NodeArray index="Use" Link="AndEq2358983352CountUpgradeZergRangeDamageLevel2CompleteOnly1CountUnitHiveCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="EqCountUpgradeZergRangeDamageLevel3QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="NoUmojanUpgrade">
+        <EditorCategories value="Race:Zerg,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeUmojanUpgradeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseCovertOpsTerran">
+        <EditorCategories value="Race:Zerg,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeCovertOpsUpgradeCompleteOnly"/>
+    </CRequirement>
+</Catalog>

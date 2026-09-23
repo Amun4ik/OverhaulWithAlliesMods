@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUser id="DifficultySettings">
+        <Instances index="5" Id="[Override]Casual">
+            <Fixed Fixed="1">
+                <Field Id="DamageTakenRatio"/>
+            </Fixed>
+        </Instances>
+        <Instances index="6" Id="[Override]Brutal">
+            <Fixed index="0" Fixed="1"/>
+            <Text index="0" removed="1"/>
+        </Instances>
+        <Instances index="7" removed="1"/>
+        <Instances index="8" removed="1"/>
+        <Instances index="9" removed="1"/>
+    </CUser>
+</Catalog>

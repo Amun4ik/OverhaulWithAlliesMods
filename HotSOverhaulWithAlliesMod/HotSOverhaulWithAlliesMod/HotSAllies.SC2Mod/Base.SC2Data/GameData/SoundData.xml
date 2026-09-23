@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorSound id="Dehaka_FootstepStomp_S_Sound" parent="SoundOneShot">
+        <Sound value="Dehaka_FootstepStomp_S"/>
+    </CActorSound>
+    <CSound id="Cyclone_Missile_Impact2" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Cyclone_Missile_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cyclone_Missile_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cyclone_Missile_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cyclone_Missile_Impact_04.wav" FacialGroup=""/>
+        <DupeDestroyCount value="3"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupeThresholdPoints/>
+        <DupeThresholdPoints Count="3" Volume="-3.000000"/>
+        <DupePrioritization value="Oldest"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-13.000000,-11.000000"/>
+    </CSound>
+    <CSound id="Cyclone_Missile_Launch2" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Cyclone_Missile_Launch_01e.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cyclone_Missile_Launch_02e.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cyclone_Missile_Launch_03e.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cyclone_Missile_Launch_04e.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cyclone_Missile_Launch_05e.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cyclone_Missile_Launch_05f.wav" FacialGroup=""/>
+        <DupeDestroyCount value="3"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupeThresholdPoints/>
+        <DupeThresholdPoints Count="4" Volume="-4.000000"/>
+        <DupePrioritization value="Oldest"/>
+        <Pitch value="-3.000000,0.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="ZergInfested_SpawnEggLaunch" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\BroodLord\Broodlord_AttackLaunch0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\BroodLord\Broodlord_AttackLaunch1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\BroodLord\Broodlord_AttackLaunch2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\BroodLord\Broodlord_AttackLaunch3.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\BroodLord\Broodlord_AttackLaunch4.wav"/>
+        <Category value="Combat"/>
+        <DupeDestroyCount value="6"/>
+        <DupeMuteCount value="6"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-8.000000,-4.000000"/>
+    </CSound>
+    <CSound id="Primal_Zerg_BirthSplash" parent="Ambience_Object">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_9.wav" FacialGroup=""/>
+        <Pitch value="-12.000000,-10.000000"/>
+        <Volume value="-2.000000,0.000000"/>
+    </CSound>
+    <CSound id="MonsterLarge_VoxIdleGrowl_DelayedLoop" parent="Ambience_Object">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl09.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl10.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl11.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl12.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl13.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl14.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl15.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterLarge_VoxIdleGrowl16.wav" FacialGroup=""/>
+        <DupeMuteCount value="2"/>
+        <LoopCount value="-1"/>
+        <Pitch value="-2.000000,2.000000"/>
+        <Volume value="-7.000000,-3.000000"/>
+        <LoopDelay value="5000,20000"/>
+    </CSound>
+    <CSound id="PrimalEgg_ReadyPopExplosion" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Birth0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Birth1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Birth2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Birth3.wav"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="ZagaraAC_Baneling_Suicide" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide3.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide4.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide5.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide6.wav"/>
+        <DupeMuteCount value="6"/>
+        <DupeThresholdPoints/>
+        <DupeThresholdPoints Count="5" Volume="-6.000000"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-2.000000,-2.000000"/>
+    </CSound>
+    <CSound id="ZagaraAC_MassFrenzy" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Yagdra_Vx_Roar_2.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,0.000000"/>
+        <Volume value="2.000000,2.000000"/>
+        <PanLevel value="0.800000"/>
+        <Spread value="30.000000"/>
+    </CSound>
+    <CSound id="Dehaka_LeapLandBasic" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Ultra_Land00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultra_Land01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultra_Land02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultra_Land03.wav" FacialGroup=""/>
+        <Pitch value="-6.000000,0.000000"/>
+        <Volume value="2.000000,4.000000"/>
+    </CSound>
+    <CSound id="Dehaka_Footstep_S" parent="Movement">
+        <AssetArray File="Assets\Sounds\Kraith_Fs_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Fs_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Fs_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Fs_4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Fs_5.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="200"/>
+        <Pitch value="-6.000000,-2.000000"/>
+        <Volume value="-13.000000,-10.000000"/>
+        <EditorCategories value="Race:Zerg"/>
+        <PlayDelay value="0,30"/>
+    </CSound>
+</Catalog>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CButton id="CommanderTraitAbathurBiomass"/>
+    <CButton id="Disguise"/>
+    <CButton id="GroovedSpines2">
+        <Name value="Button/Name/StabilizedBile"/>
+        <Tooltip value="Button/Tooltip/StabilizedBile"/>
+        <Icon value="Assets\Textures\btn-ability-zerg-abathur-corrosivebilelarge.dds"/>
+        <AlertName value="Button/Name/StabilizedBile"/>
+        <AlertTooltip value="Button/Tooltip/StabilizedBile"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-abathur-corrosivebilelarge.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="HotSMetabolicBoost">
+        <Icon value="Assets\Textures\btn-upgrade-zerg-metabolicboost.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-zerg-metabolicboost.dds"/>
+    </CButton>
+    <CButton id="K5ArmorAura">
+        <AlertName value="Chitinous DNA Implementation"/>
+    </CButton>
+    <CButton id="LarvaColony">
+        <Icon value="Assets\Textures\btn-unit-zerg-nyduscreeptower.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-nyduscreeptower.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="DehakaDrone">
+        <Icon value="Assets\Textures\btn-unit-collection-primal-Drone.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collection-primal-Drone.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="MuscularAugments">
+        <Icon value="Assets\Textures\btn-upgrade-zerg-evolvemuscularaugments.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-zerg-evolvemuscularaugments.dds"/>
+    </CButton>
+    <CButton id="DehakaHatchery">
+        <Icon value="Assets\Textures\btn-building-dehaka-primalhatchery.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-dehaka-primalhatchery.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="DehakaBarracks">
+        <Icon value="Assets\Textures\btn-building-dehaka-primalBarracks.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-dehaka-primalBarracks.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="DehakaZergling">
+        <Icon value="Assets\Textures\btn-unit-collection-primal-Zergling.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collection-primal-Zergling.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="DehakaRoach">
+        <Icon value="Assets\Textures\btn-unit-collection-primal-Roach.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collection-primal-Roach.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="DehakaHydralisk">
+        <Icon value="Assets\Textures\btn-unit-collection-primal-Hydralisk.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collection-primal-Hydralisk.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="DehakaSwarmHost">
+        <Icon value="Assets\Textures\btn-unit-collection-primal-creeperhost.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collection-primal-creeperhost.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="DehakaUltralisk">
+        <Icon value="Assets\Textures\btn-unit-collection-primal-Ultralisk.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collection-primal-Ultralisk.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="DehakaGlevigStructure">
+        <Icon value="Assets\Textures\BTN-Building-Dehaka-GlevigNest.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Building-Dehaka-GlevigNest.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="DehakaMurvarStructure">
+        <Icon value="Assets\Textures\BTN-Building-Dehaka-MurvarNest.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Building-Dehaka-MurvarNest.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="DehakaDakrunStructure">
+        <Icon value="Assets\Textures\BTN-Building-Dehaka-DakrunNest.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Building-Dehaka-DakrunNest.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="DehakaNydusDestroyer">
+        <Icon value="Assets\Textures\btn-building-dehaka-primalwurm.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-dehaka-primalwurm.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="RoachSpeed"/>
+    <CButton id="RoachSpeed2">
+        <Name value="Button/Name/RavagerSpeed"/>
+        <Tooltip value="Button/Tooltip/RavagerSpeed"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-glialreconstitution.dds"/>
+        <AlertName value="Button/Name/RavagerSpeed"/>
+        <AlertTooltip value="Button/Tooltip/RavagerSpeed"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-zerg-glialreconstitution.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="ZagaraVoidCoopBanelingBarrage">
+        <TooltipAppender Validator="HaveMasteryZagaraBanelingDamage" Text="Button/Tooltip/MasteryBanelingAttackDamageAppend"/>
+    </CButton>
+    <CButton id="ZagaraVoidCoopMassFrenzy">
+        <Icon value="Assets\Textures\btn-upgrade-zerg-frenzy.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-zerg-frenzy.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="ZagaraVoidCoopSpawnHunterKillers"/>
+    <CButton id="DehakaLeapStomp">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-leapattack.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-dehaka-leapattack.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="MammothBreath">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-mammothbreath.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-dehaka-mammothbreath.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CButton>
+    <CButton id="DehakaConsume">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-consume.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-dehaka-consume.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+        <TooltipAppender Validator="HaveMasteryDehakaConsumeDuration" Text="Button/Tooltip/MasteryDehakaConsumeDurationAppend"/>
+        <TooltipAppender Validator="HaveMasteryDehakaConsumeHealing" Text="Button/Tooltip/MasteryDehakaConsumeHealingAppend"/>
+        <TooltipAppender Validator="CommanderPrestigeDehakaDevour" Text="Button/Tooltip/CommanderPrestigeDehakaDevourUpgrade"/>
+    </CButton>
+    <CButton id="hydraliskspeed2">
+        <Name value="Button/Name/ravagerrange"/>
+        <Tooltip value="Button/Tooltip/ravagerrange"/>
+        <Icon value="Assets\Textures\btn-ability-zerg-abathur-corrosivebilelarge.dds"/>
+        <AlertName value="Button/Name/ravagerrange"/>
+        <AlertTooltip value="Button/Tooltip/ravagerrange"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-zerg-groovedspines.dds"/>
+        <Hotkey value="Button/Hotkey/ravagerrange"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+</Catalog>

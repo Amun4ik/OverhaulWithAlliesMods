@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorCombine id="BunkerIsEmpty2">
+        <Type value="And"/>
+        <CombineArray value="HasNoCargo"/>
+        <CombineArray value="IsNotConstructing"/>
+        <CombineArray value="NoUmojanUpgrade"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="MassiveOrHeroic">
+        <ResultFailed value="CantTargetThatUnit"/>
+        <CombineArray value="IsMassive"/>
+        <CombineArray value="IsHeroic"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="NoUmojanUpgrade">
+        <ResultNoPlayer value="Error"/>
+        <Find value="1"/>
+        <Value value="NoUmojanUpgrade"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="NoCovertOpsUpgrade">
+        <ResultNoPlayer value="Error"/>
+        <Find value="1"/>
+        <Value value="UseCovertOpsTerran"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="NotHeroicAndNotMassive">
+        <Type value="And"/>
+        <CombineArray value="NotHeroic"/>
+        <CombineArray value="NotMassive"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="TechReactorIsDetached2">
+        <Type value="And"/>
+        <CombineArray value="IsTechReactor"/>
+        <CombineArray value="IsNotConstructing"/>
+        <CombineArray value="NoUmojanUpgrade"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="TornadoMaxDistance">
+        <Range value="8"/>
+        <!--Pathing value="1"/-->
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitFilters id="TornadoMissileFilters">
+        <Filters value="Visible;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorLocationEnumArea id="ToxicNestValidator">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Compare="GE" Count="1" Radius="1"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitFilters id="MultipleHitAttackTargetFilter">
+        <Filters value="-;Stasis,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareOrderTargetRange id="DehakaLeapRangeCheck">
+        <Compare value="GT"/>
+        <AbilLink value="DehakaLeapStomp"/>
+        <Value value="12"/>
+    </CValidatorUnitCompareOrderTargetRange>
+</Catalog>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preload>
+<Asset path="assets\textures\icon-mineral-nobg.dds" Type="Image"/>
+<Abil id="CreepTumorBuild"/>
+<Abil id="QueenBuild2"/>
+<Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="AutoTurretTimedLife"/>
+<Effect id="KerriganReviveHeal"/>
+<Model id="PingArrow"/>
+<Model id="SporeCrawlerPlacement"/>
+<Model id="SpineCrawlerPlacement"/>
+<Model id="ExtractorPlacement"/>
+<Model id="NydusCanalCreeperPlacement"/>
+<Model id="CreepTumorPlacement"/>
+<Model id="EvolutionChamberPlacement"/>
+<Model id="HatcheryPlacement"/>
+<Model id="HydraliskDenPlacement"/>
+<Model id="RoachWarrenPlacement"/>
+<Model id="SpawningPoolPlacement"/>
+<Model id="PingCircle"/>
+<Sound id="Zerg_BurrowLarge"/>
+<Sound id="NydusWorm_Unload"/>
+<Sound id="NydusWorm_Birth"/>
+<Unit id="Hatchery"/>
+<Unit id="CreepTumor"/>
+<Unit id="Extractor"/>
+<Unit id="SpawningPool"/>
+<Unit id="EvolutionChamber"/>
+<Unit id="HydraliskDen"/>
+<Unit id="RoachWarren"/>
+<Unit id="SpineCrawler"/>
+<Unit id="SporeCrawler"/>
+<Unit id="Lair"/>
+<Unit id="CreepTumorBurrowed"/>
+<Unit id="NydusCanal"/>
+<Unit id="BroodMother"/>
+<Unit id="KerriganReviveCocoon"/>
+<Unit id="ZagaraVoidCoop"/>
+<Unit id="ToxicNest"/>
+<Unit id="LarvaColony"/>
+<Unit id="DehakaCoop"/>
+<Unit id="Hydralisk2"/>
+<Unit id="Roach2"/>
+<Unit id="Nafash"/>
+<Unit id="Zergling2"/>
+</Preload>

@@ -1,0 +1,3027 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="HunterKiller">
+        <Model value="HunterKiller.m3"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="MengskMarauderLMWeapon">
+        <Model value="Assets\Effects\Terran\Marauder_ConcussiveShell_MP_Missile\Marauder_ConcussiveShell_MP_Missile.m3"/>
+    </CModel>
+    <CModel id="Mothership">
+        <Model value="Assets\Units\Protoss\Mothership_Golden\Mothership_Golden.m3"/>
+    </CModel>
+    <CModel id="PrimalZergBuildingBuild" parent="Building" Race="Zerg">
+        <Model value="Assets\Buildings\Zerg\Dehaka_Primal_ZergBuild_Coop\Dehaka_Primal_ZergBuild_Coop.m3"/>
+        <SelectionLayer value="2"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionRadius value="0.454300"/>
+        <ShadowRadius value="0.454300"/>
+    </CModel>
+    <CModel id="ATSLaserBatteryLMWeapon">
+        <Model value="Assets\Effects\Terran\BattlecruiserPlasmaMissile\BattlecruiserPlasmaMissile.m3"/>
+    </CModel>
+    <CModel id="Adept">
+        <Model value="Assets\Units\Protoss\Adept\Adept.m3"/>
+    </CModel>
+    <CModel id="AdeptDeath">
+        <Model value="Assets\Units\Protoss\Adept_Death\Adept_Death.m3"/>
+    </CModel>
+    <CModel id="AutomatedRefinery2" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Umojan\RefineryAutomated_Umojan\RefineryAutomated_Umojan.m3"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="2.250000"/>
+        <ShadowRadius value="2.250000"/>
+    </CModel>
+    <CModel id="AutomatedRefineryBuild2" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Umojan\Umojan_RefineryBuild\Umojan_RefineryBuild.m3"/>
+        <SelectionLayer value="2"/>
+    </CModel>
+    <CModel id="AutomatedRefineryDeath2" parent="BuildingDeath">
+        <Model value="Assets\Buildings\Umojan\RefineryAutomated_Death_Umojan\RefineryAutomated_Death_Umojan.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Barracks2" parent="BarracksBase">
+        <Model value="Assets\Buildings\Umojan\Barracks_Umojan\Barracks_Umojan.m3"/>
+    </CModel>
+    <CModel id="BarracksBuild2" parent="BarracksBuildBase">
+        <Model value="Assets\Buildings\Umojan\Umojan_Build\Umojan_Build_A.m3"/>
+    </CModel>
+    <CModel id="BarracksDeath2" parent="BarracksDeathBase">
+        <Model value="Assets\Buildings\Umojan\Barracks_Umojan_Death\Barracks_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="BarracksFlyDeath2" parent="BarracksFlyDeathBase">
+        <Model value="Assets\Buildings\Umojan\Barracks_Umojan_Fly_Death\Barracks_Umojan_Fly_Death.m3"/>
+    </CModel>
+    <CModel id="Battlecruiser">
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <AttachProps Id="Ref_Center" RadiusShield="2.500000"/>
+    </CModel>
+    <CModel id="BroodMother">
+        <ScaleMax value="0.950000,0.950000,0.950000"/>
+        <ScaleMin value="0.950000,0.950000,0.950000"/>
+    </CModel>
+    <CModel id="DehakaHatcheryBuild" Prefix="Buildings\" Race="Zerg">
+        <Model value="Assets\Buildings\Zerg\Dehaka_Primal_ZergBuild_Coop\Dehaka_Primal_ZergBuild_Coop.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Lighting value="PrimalZergBuildingBuild"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="0.454300"/>
+        <ShadowRadius value="0.454300"/>
+    </CModel>
+    <CModel id="DehakaTrainEggMissile" parent="MissileFX">
+        <Model value="Assets\Units\Zerg\Primal_Egg_Coop\Primal_Egg_Coop.m3"/>
+        <Occlusion value="Show"/>
+        <SelectionLayer value="3"/>
+        <SquibTypeDefault value="Flesh"/>
+        <SelectionRadius value="0.666500"/>
+        <ShadowRadius value="0.666500"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalEgg_DeathExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.843000"/>
+            <Payload value="PrimalEgg_DeathExplosion"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaHatchery" parent="Building" Race="Zerg">
+        <Model value="Assets\Buildings\Zerg\Dehaka_Primal_Hatchery_Coop\Dehaka_Primal_Hatchery_Coop.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigher16"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="2.940600"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="TechPurchaseCommandCenter"/>
+        <UnitGlossaryCamera value="Star2CameraHigher16"/>
+        <Events>
+            <Anim value="Spell,Alternate"/>
+            <Name value="PrimalZergSpit"/>
+            <Type value="Custom"/>
+            <Time value="0.062500"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaHatcheryDeath" parent="DehakaHatchery"/>
+    <CModel id="DehakaHatcheryUprooted" parent="Building" Race="Zerg">
+        <Model value="Assets\Buildings\Zerg\Dehaka_Primal_Hatchery_Coop\Dehaka_Primal_Hatchery_Coop.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigher16"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="2.940600"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="TechPurchaseCommandCenter"/>
+        <UnitGlossaryCamera value="Star2CameraHigher16"/>
+        <Events>
+            <Anim value="Attack"/>
+            <Name value="PrimalZergSpit"/>
+            <Type value="Custom"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Alternate,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.919000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Alternate,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.077000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Alternate,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.852000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Alternate,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.167000"/>
+        </Events>
+        <Events Anim="Walk,00" Name="Footstep" Type="Sound"/>
+        <Events>
+            <Anim value="Walk,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.999000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.501000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.497000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.465000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.637000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.495000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.627000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.754000"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.462000"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.945000"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="2.339000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Alternate,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.124000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Alternate,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.256000"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaTrainEggDrone" parent="RacePersistentSpellFX" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Primal_Egg_Coop\Primal_Egg_Coop.m3"/>
+        <SelectionLayer value="2"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalEgg_DeathExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.843000"/>
+            <Payload value="PrimalEgg_DeathExplosion"/>
+        </Events>
+    </CModel>
+    <CModel id="Bunker2" parent="BunkerBase">
+        <Model value="Assets\Buildings\Umojan\Bunker_Umojan\Bunker_Umojan.m3"/>
+    </CModel>
+    <CModel id="BunkerBuild2" parent="BunkerBuildBase">
+        <Model value="Assets\Buildings\Umojan\Umojan_Build\Umojan_Build_A.m3"/>
+    </CModel>
+    <CModel id="BunkerDeath2" parent="BunkerDeathBase">
+        <Model value="Assets\Buildings\Umojan\Bunker_Umojan_Empty_Death\Bunker_Umojan_Empty_Death.m3"/>
+    </CModel>
+    <CModel id="BunkerDeathEmpty2" parent="BunkerEmptyDeathBase">
+        <Model value="Assets\Buildings\Umojan\Bunker_Umojan_Empty_Death\Bunker_Umojan_Empty_Death.m3"/>
+    </CModel>
+    <CModel id="Bunker_CovertOps">
+        <Model value="Assets\Buildings\Terran\Bunker_CovertOps_Upgrade\Bunker_CovertOps_Upgrade.m3"/>
+    </CModel>
+    <CModel id="Bunker_CovertOps_Death">
+        <Model value="Assets\Buildings\Terran\Bunker_CovertOps_Upgrade_Death\Bunker_CovertOps_Upgrade_Death.m3"/>
+    </CModel>
+    <CModel id="CommandCenter2" parent="CommandCenterBase">
+        <Model value="Assets\Buildings\Umojan\CommandCenter_Umojan\CommandCenter_Umojan.m3"/>
+    </CModel>
+    <CModel id="CommandCenterDeath2" parent="CommandCenterDeathBase">
+        <Model value="Assets\Buildings\Umojan\CommandCenter_Umojan_Death\CommandCenter_Umojan_Death.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.070000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.230000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.510000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.630000"/>
+        </Events>
+    </CModel>
+    <CModel id="CommandCenterFlyDeath2" parent="CommandCenterFlyDeathBase">
+        <Model value="Assets\Buildings\Terran\CommandCenterFlyDeathEx1\CommandCenterFlyDeathEx1.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.070000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.230000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.510000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.630000"/>
+        </Events>
+    </CModel>
+    <CModel id="CycloneMissile">
+        <Model value="Assets\COOP\Stetmann\Effects\Hydralisk_Stetmann_COOP_MissileRangeUpgrade\Hydralisk_Stetmann_COOP_MissileRangeUpgrade.m3"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="CycloneMissileImpact">
+        <Model value="Assets\Effects\Protoss\ScoutAirMissileImpact\ScoutAirMissileImpact.m3"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="CycloneMissileLaunch">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponLaunch\ScoutWeaponLaunch.m3"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="Dehaka">
+        <Model value="Assets\Units\Zerg\Dehaka_Coop_Young\Dehaka_Coop_Young.m3"/>
+    </CModel>
+    <CModel id="PrimalNeedleSpinesWeapon">
+        <Model value="Assets\Effects\Zerg\Dehaka_Coop_ThornSpike_Missile\Dehaka_Coop_ThornSpike_Missile.m3"/>
+    </CModel>
+    <CModel id="Primal_Zerg_Spit" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Zerg\Primal_Zerg_Spit\Primal_Zerg_Spit.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="DehakaCocoonFinishDeath" parent="RacePersistentSpellFX" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Primal_Egg_Coop\Primal_Egg_Coop.m3"/>
+        <Events>
+            <Anim value="Birth,00"/>
+            <Name value="InfestedCocoon_Civilian_Birth"/>
+            <Type value="Sound"/>
+            <Time value="0.007000"/>
+            <Payload value="InfestedCocoon_Civilian_Birth"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="InfestedCocoon_Civilian_Death"/>
+            <Type value="Sound"/>
+            <Time value="0.011000"/>
+            <Payload value="InfestedCocoon_Civilian_Death"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="InfestedCocoon_Death"/>
+            <Type value="Sound"/>
+            <Time value="0.875000"/>
+            <Payload value="InfestedCocoon_Death"/>
+        </Events>
+        <SelectionLayer value="2"/>
+        <SquibTypeDefault value="Flesh"/>
+    </CModel>
+    <CModel id="Primal_Zerg_BirthSmokeSmall" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Zerg\Primal_Zerg_BirthSmoke\Primal_Zerg_BirthSmoke.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.400000,0.400000,0.400000"/>
+        <ScaleMin value="0.400000,0.400000,0.400000"/>
+    </CModel>
+    <CModel id="EngineeringBay2" parent="EngineeringBayBase">
+        <Model value="Assets\Buildings\Terran\EngineeringBayEx1\EngineeringBayEx1.m3"/>
+    </CModel>
+    <CModel id="Dehaka_Primal_Hatchery_Coop_Placement" parent="Placement" Race="Zerg">
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="EngineeringBayBuild2" parent="EngineeringBayBuildBase">
+        <Model value="Assets\Buildings\Umojan\Umojan_Build\Umojan_Build_A.m3"/>
+    </CModel>
+    <CModel id="EngineeringBayDeath2" parent="EngineeringBayDeathBase">
+        <Model value="Assets\Buildings\Terran\EngineeringBayDeathEx1\EngineeringBayDeathEx1.m3"/>
+    </CModel>
+    <CModel id="Ghost2" parent="GhostBase">
+        <Model value="Assets\Units\Terran\Ghost_Umojan\Ghost_Umojan.m3"/>
+    </CModel>
+    <CModel id="GhostDeath2" parent="GhostDeathBase">
+        <Model value="Assets\Units\Terran\Ghost_Umojan_Death\Ghost_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="GhostPortrait2" parent="GhostPortraitBase">
+        <Model value="Assets\Portraits\Terran\Ghost_Umojan_Portrait\Ghost_Umojan_Portrait.m3"/>
+        <Flags index="Download" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ghost_umojan_portrait_static.dds"/>
+        <Lighting value="GhostPortrait"/>
+    </CModel>
+    <CModel id="Hydralisk2" parent="HydraliskBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_Collection_Webby\Hydralisk_Collection_Webby.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeath2" parent="HydraliskDeathBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_Collection_Webby_Death\Hydralisk_Collection_Webby_Death.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathAcid2" parent="HydraliskDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_Collection_Webby_DeathAcid\Hydralisk_Collection_Webby_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathFire2" parent="HydraliskDeathFireBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_Collection_Webby_DeathFire\Hydralisk_Collection_Webby_DeathFire.m3"/>
+    </CModel>
+    <CModel id="HydraliskPortrait2" parent="HydraliskPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Hydralisk_Webby_Collection_Portrait\Hydralisk_Webby_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\HydraliskPortrait_Static.dds"/>
+        <Lighting value="Hydralisk_Webby_Collection_Portrait"/>
+    </CModel>
+    <CModel id="ImmortalAiur">
+        <Model value="Assets\Units\Protoss\Immortal_CollectionSkin_Adun\Immortal_CollectionSkin_Adun.m3"/>
+    </CModel>
+    <CModel id="ImmortalAiurDeath">
+        <Model value="Assets\Units\Protoss\Immortal_CollectionSkin_Adun_Death\Immortal_CollectionSkin_Adun_Death.m3"/>
+    </CModel>
+    <CModel id="InfestedArmory">
+        <Model value="Assets\Buildings\Zerg\Armory_Stukov_COOP\Armory_Stukov_COOP.m3"/>
+    </CModel>
+    <CModel id="InfestedBarracks">
+        <Model value="Assets\Buildings\Zerg\Barracks_Stukov_COOP\Barracks_Stukov_COOP.m3"/>
+    </CModel>
+    <CModel id="InfestedBunker">
+        <Model value="Assets\Units\Zerg\InfestedBunker_Coop_Structure\InfestedBunker_Coop_Structure.m3"/>
+    </CModel>
+    <CModel id="InfestedCC">
+        <Model value="Assets\Buildings\Zerg\CommandCenter_Stukov_COOP\CommandCenter_Stukov_COOP.m3"/>
+    </CModel>
+    <CModel id="InfestedEngBay">
+        <Model value="Assets\Buildings\Zerg\EngineeringBay_Stukov_COOP\EngineeringBay_Stukov_COOP.m3"/>
+    </CModel>
+    <CModel id="InfestedFactory">
+        <Model value="Assets\Buildings\Zerg\Factory_Stukov_COOP\Factory_Stukov_COOP.m3"/>
+    </CModel>
+    <CModel id="InfestedMissileTurret">
+        <Model value="Assets\Buildings\Zerg\MissileTurret_Stukov_COOP\MissileTurret_Stukov_COOP.m3"/>
+    </CModel>
+    <CModel id="InfestedRefinery">
+        <Model value="Assets\Buildings\Zerg\Refinery_Stukov_COOP\Refinery_Stukov_COOP.m3"/>
+    </CModel>
+    <CModel id="InfestedStarport">
+        <Model value="Assets\Buildings\Zerg\Starport_Stukov_COOP\Starport_Stukov_COOP.m3"/>
+    </CModel>
+    <CModel id="Marauder2" parent="MarauderBase">
+        <Model value="Assets\Units\Terran\Marauder_Umojan\Marauder_Umojan.m3"/>
+    </CModel>
+    <CModel id="MarauderDeath2" parent="MarauderDeathBase">
+        <Model value="Assets\Units\Terran\Marauder_Umojan_Death\Marauder_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="MarauderPortrait2" parent="MarauderPortraitBase">
+        <Model value="Assets\Portraits\Terran\Marauder_Umojan_Portrait\Marauder_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\MarauderPortrait_Static.dds"/>
+        <Lighting value="Marauder_Umojan_Portrait"/>
+    </CModel>
+    <CModel id="Marine2" parent="MarineBase">
+        <Model value="Assets\Units\Terran\Marine_Umojan\Marine_Umojan.m3"/>
+    </CModel>
+    <CModel id="MarineDeath2" parent="MarineDeathBase">
+        <Model value="Assets\Units\Terran\Marine_Umojan_Death\Marine_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="MarineDeathAcid2" parent="MarineDeathAcidBase">
+        <Model value="Assets\Units\Terran\Marine_Umojan_DeathAcid\Marine_Umojan_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="MarineDeathEviscerate2" parent="MarineDeathEviscerateBase">
+        <Model value="Assets\Units\Terran\Marine_Umojan_DeathEviscerate\Marine_Umojan_DeathEviscerate.m3"/>
+    </CModel>
+    <CModel id="MarineDeathFire2" parent="MarineDeathFireBase">
+        <Model value="Assets\Units\Terran\Marine_Umojan_DeathFire\Marine_Umojan_DeathFire.m3"/>
+    </CModel>
+    <CModel id="MarinePortrait2" parent="MarinePortraitBase">
+        <Model value="Assets\Portraits\Terran\Marine_Umojan_Portrait\Marine_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\marine_umojan_portrait_static.dds"/>
+        <Lighting value="Marine_Umojan_Portrait"/>
+    </CModel>
+    <CModel id="Medic2" parent="Unit" Race="Terran">
+        <Model value="Medic_Umojan.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="MedicDeath2" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\MedicDeath\MedicDeath.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="MedicPortrait2" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\Marine_Umojan_Portrait\Marine_Umojan_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\MedicPortrait.fxa"/>
+        <Image value="Assets\Textures\MedicPortrait_Static.dds"/>
+        <Lighting value="MedicPortrait"/>
+    </CModel>
+    <CModel id="MengskBC">
+        <Model value="Assets\COOP\Mengsk\Units\Battlecruiser_Mengsk_COOP\Battlecruiser_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskBanshee">
+        <Model value="Assets\Models\Banshee_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskDiamondback">
+        <Model value="Assets\Models\Diamondback_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskDiamondbackDeath">
+        <Model value="Assets\Models\Diamondback_Mengsk_COOP_Death.m3"/>
+    </CModel>
+    <CModel id="MengskFirebat">
+        <Model value="Assets\Models\Firebat_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskGoliath">
+        <Model value="Assets\Models\Goliath_Mengsk_Coop.m3"/>
+    </CModel>
+    <CModel id="MengskMarauder">
+        <Model value="Assets\COOP\Mengsk\Units\Marauder_Mengsk_COOP\Marauder_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskMarine">
+        <Model value="Assets\Models\Marine_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskMedic">
+        <Model value="Assets\Models\Medic_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskReaper">
+        <Model value="Assets\Models\Reaper_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskSiegeTank">
+        <Model value="Assets\COOP\Mengsk\Units\SiegeTank_Mengsk_COOP\SiegeTank_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskSiegeTankSieged">
+        <Model value="Assets\COOP\Mengsk\Units\SiegeTank_Mengsk_COOP_Sieged\SiegeTank_Mengsk_COOP_Sieged.m3"/>
+    </CModel>
+    <CModel id="MengskSiegeTankSiegedMorph">
+        <Model value="Assets\COOP\Mengsk\Units\SiegeTank_Mengsk_COOP_Morph\SiegeTank_Mengsk_COOP_Morph.m3"/>
+    </CModel>
+    <CModel id="MengskThor">
+        <Model value="Assets\COOP\Mengsk\Units\Thor_Mengsk_COOP\Thor_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskThorDeath">
+        <Model value="Assets\COOP\Mengsk\Units\Thor_Mengsk_COOP_Death\Thor_Mengsk_COOP_Death.m3"/>
+    </CModel>
+    <CModel id="MengskVikingAssault">
+        <Model value="Assets\COOP\Mengsk\Units\Viking_Mengsk_COOP_Assault\Viking_Mengsk_COOP_Assault.m3"/>
+    </CModel>
+    <CModel id="MengskVikingFighter">
+        <Model value="Assets\COOP\Mengsk\Units\Viking_Mengsk_COOP_Fighter\Viking_Mengsk_COOP_Fighter.m3"/>
+    </CModel>
+    <CModel id="MengskVikingMorph">
+        <Model value="Assets\COOP\Mengsk\Units\Viking_Mengsk_COOP_Morph\Viking_Mengsk_COOP_Morph.m3"/>
+    </CModel>
+    <CModel id="MengskWraith">
+        <Model value="Assets\Models\Wraith_Mengsk_COOP.m3"/>
+    </CModel>
+    <CModel id="MengskWraithDeath">
+        <Model value="Assets\Models\Wraith_Mengsk_COOP_Death.m3"/>
+    </CModel>
+    <CModel id="MissileTurret2" parent="MissileTurretBase">
+        <Model value="Assets\Buildings\Umojan\MissileTurret_Umojan\MissileTurret_Umojan.m3"/>
+    </CModel>
+    <CModel id="MissileTurretBuild2" parent="MissileTurretBuildBase">
+        <Model value="Assets\Buildings\Umojan\Umojan_BuildSmall\Umojan_BuildSmall.m3"/>
+    </CModel>
+    <CModel id="MissileTurretDeath2" parent="MissileTurretDeathBase">
+        <Model value="Assets\Buildings\Umojan\MissileTurret_Umojan_Death\MissileTurret_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="PrimalRoachMissileImpact">
+        <Model value="Assets\Effects\Zerg\YagdraFireBallMissileImpact\YagdraFireBallMissileImpact.m3"/>
+    </CModel>
+    <CModel id="PrimalRoachWeapon">
+        <Model value="Assets\Effects\Zerg\YagdraFireBallMissile\YagdraFireBallMissile.m3"/>
+    </CModel>
+    <CModel id="RaynorAttackImpact">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponImpact\ScoutWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="RaynorAttackLaunch">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponLaunch\ScoutWeaponLaunch.m3"/>
+    </CModel>
+    <CModel id="RaynorLabAttackImpact">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponImpact\ScoutWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="RaynorLabAttackLaunch">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponLaunch\ScoutWeaponLaunch.m3"/>
+    </CModel>
+    <CModel id="Refinery_CovertOps">
+        <Model value="Assets\Buildings\Terran\RefineryAutomated_BlackOps_COOP\RefineryAutomated_BlackOps_COOP.m3"/>
+    </CModel>
+    <CModel id="Refinery_CovertOps_Death">
+        <Model value="Assets\Buildings\Terran\RefineryAutomatedDeath_BlackOps_COOP\RefineryAutomatedDeath_BlackOps_COOP.m3"/>
+    </CModel>
+    <CModel id="Roach2" parent="RoachBase">
+        <Model value="Assets\Units\Zerg\Roach_CollectionSkin_Webby\Roach_CollectionSkin_Webby.m3"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
+    <CModel id="RoachDeath2" parent="RoachDeathBase">
+        <Model value="Assets\Units\Zerg\Roach_CollectionSkin_Webby_Death\Roach_CollectionSkin_Webby_Death.m3"/>
+    </CModel>
+    <CModel id="RoachDeathAcid2" parent="RoachDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Roach_CollectionSkin_Webby_DeathAcid\Roach_CollectionSkin_Webby_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="RoachDeathFire2" parent="RoachDeathFireBase">
+        <Model value="Assets\Units\Zerg\Roach_CollectionSkin_Webby_DeathFire\Roach_CollectionSkin_Webby_DeathFire.m3"/>
+    </CModel>
+    <CModel id="RoachPortrait2" parent="RoachPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Roach_Webby_Collection_Portrait\Roach_Webby_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\roach_webby_collection_portrait_static.dds"/>
+        <Lighting value="RoachPortrait"/>
+    </CModel>
+    <CModel id="SCV2" parent="SCVBase">
+        <Model value="Assets\Units\Terran\SCV_Umojan\SCV_Umojan.m3"/>
+    </CModel>
+    <CModel id="SCVDeath2" parent="SCVDeathBase">
+        <Model value="Assets\Units\Terran\SCV_Umojan_Death\SCV_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="SCVPortrait2" parent="SCVPortraitBase">
+        <Model value="Assets\Portraits\Terran\SCV_Umojan_Portrait\SCV_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\scv_umojan_portrait_static.dds"/>
+        <Lighting value="SCVPortrait"/>
+    </CModel>
+    <CModel id="SiegeTank2" parent="SiegeTankBase">
+        <Model value="Assets\Units\Terran\SiegeTank_Umojan\SiegeTank_Umojan.m3"/>
+    </CModel>
+    <CModel id="SiegeTankDeath2" parent="SiegeTankDeathBase">
+        <Model value="Assets\Units\Terran\SiegeTank_Umojan_Death\SiegeTank_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="SiegeTankPortrait2" parent="SiegeTankPortraitBase">
+        <Model value="Assets\Portraits\Terran\SiegeTank_Umojan_Portrait\SiegeTank_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\SiegeTankPortrait_Static.dds"/>
+        <Lighting value="SiegeTankPortrait"/>
+    </CModel>
+    <CModel id="SiegeTankSieged2" parent="SiegeTankSiegedBase">
+        <Model value="Assets\Units\Terran\SiegeTank_Umojan_Sieged\SiegeTank_Umojan_Sieged.m3"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedDeath2" parent="SiegeTankSiegedDeathBase">
+        <Model value="Assets\Units\Terran\SiegeTank_Umojan_Sieged_Death\SiegeTank_Umojan_Sieged_Death.m3"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedMorph2" parent="SiegeTankMorphBase">
+        <Model value="Assets\Units\Terran\SiegeTank_Umojan_Morph\SiegeTank_Umojan_Morph.m3"/>
+    </CModel>
+    <CModel id="StalkerPurifier">
+        <Model value="Assets\Units\Protoss\Stalker_Purifier_Collection\Stalker_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="StalkerPurifierDeath">
+        <Model value="Assets\Units\Protoss\Stalker_Purifier_Collection_Death\Stalker_Purifier_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="StalkerPurifierPortrait">
+        <Model value="Assets\Portraits\Protoss\Stalker_Purifier_Collection_Portrait\Stalker_Purifier_Collection_Portrait.m3"/>
+    </CModel>
+    <CModel id="StalkerShakuras">
+        <Model value="Assets\Units\Protoss\Stalker_Deluxe_Collection\Stalker_Deluxe_Collection.m3"/>
+    </CModel>
+    <CModel id="StalkerShakurasDeath">
+        <Model value="Assets\Units\Protoss\Stalker_Deluxe_Collection_Death\Stalker_Deluxe_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="SupplyDepot2" parent="SupplyDepotBase">
+        <Model value="Assets\Buildings\Umojan\SupplyDepot_Umojan\SupplyDepot_Umojan.m3"/>
+    </CModel>
+    <CModel id="SupplyDepotBuild2" parent="SupplyDepotBuildBase">
+        <Model value="Assets\Buildings\Umojan\Umojan_Build\Umojan_Build_A.m3"/>
+    </CModel>
+    <CModel id="SupplyDepotDeath2" parent="SupplyDepotDeathBase">
+        <Model value="Assets\Buildings\Umojan\SupplyDepot_Umojan_Death\SupplyDepot_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="TechReactor3" parent="TechLabBase">
+        <Model value="Assets\Models\TechReactor_BlackOps .m3"/>
+        <Lighting value="TechLab"/>
+    </CModel>
+    <CModel id="Thor2" parent="ThorBase">
+        <Model value="Assets\Units\Terran\Thor_Umojan\Thor_Umojan.m3"/>
+    </CModel>
+    <CModel id="ThorDeath2" parent="ThorDeathBase">
+        <Model value="Assets\Units\Terran\Thor_Umojan_Death\Thor_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="ThorPortrait2" parent="ThorPortraitBase">
+        <Model value="Assets\Portraits\Terran\Thor_Umojan_Portrait\Thor_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\ThorPortrait_Static.dds"/>
+        <Lighting value="Thor_Umojan_Portrait"/>
+    </CModel>
+    <CModel id="ToxicNest" parent="CreepTumorBase"/>
+    <CModel id="ToxicNestDeath" parent="CreepTumorDeathBase">
+        <Model value="Assets\Buildings\Zerg\ToxicNest_Death\ToxicNest_Death.m3"/>
+    </CModel>
+    <CModel id="Cyclone2" parent="CycloneBase">
+        <Model value="Assets\Units\Terran\Cyclone_Umojan\Cyclone_Umojan.m3"/>
+    </CModel>
+    <CModel id="CycloneDeath2" parent="CycloneDeathBase">
+        <Model value="Assets\Units\Terran\Cyclone_Umojan_Death\Cyclone_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="CyclonePortrait2" parent="CyclonePortraitBase">
+        <Model value="Assets\Portraits\Terran\Cyclone_Umojan_Portrait\Cyclone_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\cyclone_umojan_portrait_static.dds"/>
+        <Lighting value="Cyclone_Umojan_Portrait"/>
+    </CModel>
+    <CModel id="Factory2" parent="FactoryBase">
+        <Model value="Assets\Buildings\Umojan\Factory_Umojan\Factory_Umojan.m3"/>
+    </CModel>
+    <CModel id="FactoryBuild2" parent="FactoryBuildBase">
+        <Model value="Assets\Buildings\Umojan\Umojan_Build\Umojan_Build_A.m3"/>
+    </CModel>
+    <CModel id="FactoryDeath2" parent="FactoryDeathBase">
+        <Model value="Assets\Buildings\Umojan\Factory_Umojan_Death\Factory_Umojan_Death.m3"/>
+    </CModel>
+    <CModel id="FactoryFlyDeath2" parent="FactoryFlyDeathBase">
+        <Model value="Assets\Buildings\Umojan\Factory_Umojan_Fly_Death\Factory_Umojan_Fly_Death.m3"/>
+    </CModel>
+    <CModel id="NydusCanalCreeper">
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="NydusCanalCreeperDeath">
+        <Model value="Assets\Effects\Zerg\ZergBuildingDeath\ZergBuildingDeath.m3"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="NydusCanalCreeperDeathAcid">
+        <Model value="Assets\Effects\Zerg\ZergBuildingDeath\ZergBuildingDeath.m3"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="NydusCanalCreeperDeathFire">
+        <Model value="Assets\Effects\Zerg\ZergBuildingDeath\ZergBuildingDeath.m3"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="NydusCanalCreeperPlacement">
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="NydusCreeperRumble">
+        <Model value="Assets\Buildings\Zerg\ZergBuild\ZergBuild.m3"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="PsiDisruptor2" parent="Building">
+        <Model value="Assets\Buildings\Umojan\SigmaProjector_Umojan\SigmaProjector_Umojan.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value=""/>
+        <PlanetPanelCamera value="Star2CameraHigh06"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="0.800000"/>
+        <ShadowRadius value="0.800000"/>
+        <TechPurchaseCamera value="Star2CameraHigh06"/>
+        <UnitGlossaryCamera value="Star2CameraHigh06"/>
+    </CModel>
+    <CModel id="PsiDisruptorBuild2" parent="TerranBuildingBuildSmall">
+        <Model value="Assets\Buildings\Umojan\Umojan_BuildSmall\Umojan_BuildSmall.m3"/>
+    </CModel>
+    <CModel id="PsiDisruptorDeath2" parent="BuildingDeath">
+        <Model value="Assets\Buildings\Umojan\SigmaProjector_Umojan_Death\SigmaProjector_Umojan_Death.m3"/>
+        <LowQualityModel value="PsiDisruptorDeathLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TechReactor2" parent="TechLabBase">
+        <Model value="Assets\Buildings\Umojan\TechReactor_Umojan\TechReactor_Umojan.m3"/>
+        <Lighting value="TechLab"/>
+    </CModel>
+    <CModel id="TechReactorBuild2" parent="TerranBuildingBuildSmall">
+        <Model value="Assets\Buildings\Umojan\Umojan_BuildSmall\Umojan_BuildSmall.m3"/>
+    </CModel>
+    <CModel id="TechReactorDeath2" parent="BuildingDeath" Race="Terran">
+        <Model value="Assets\Buildings\Umojan\TechReactor_Umojan_Death\TechReactor_Umojan_Death.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="TechReactorDetachedDeath2" parent="BuildingDeath" Race="Terran">
+        <Model value="Assets\Buildings\Umojan\TechReactor_Umojan_Detached_Death\TechReactor_Umojan_Detached_Death.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Flags index="TeenSafe" value="1"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="UmojanAdjutant" parent="TerranBuildingPortraitBase">
+        <Model value="Adjutant_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\Adjutant_Umojan_Portrait_Static.dds"/>
+        <Lighting value="Adjutant_CovertOps_Collection_Portrait"/>
+    </CModel>
+    <CModel id="Predator2" parent="Unit">
+        <Model value="Assets\Models\Predator_Cerberus_umojan.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="1.300000,1.300000,1.300000"/>
+        <ScaleMin value="1.300000,1.300000,1.300000"/>
+        <SelectionRadius value="0.400000"/>
+        <ShadowRadius value="0.400000"/>
+        <TechPurchaseCamera value="Star2CameraMid04"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="Nafash" parent="Unit" Race="Zerg">
+        <Model value="Zagara_Primal_DS_TC.m3"/>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Zagara_footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.450000"/>
+            <Payload value="Zagara_footstep"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Zagara_footstep2"/>
+            <Type value="Sound"/>
+            <Time value="0.470000"/>
+            <Payload value="Zagara_footstep2"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Zagara_footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.950000"/>
+            <Payload value="Zagara_footstep"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Zagara_footstep2"/>
+            <Type value="Sound"/>
+            <Time value="0.970000"/>
+            <Payload value="Zagara_footstep2"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh08"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionRadius value="0.972100"/>
+        <ShadowRadius value="0.750000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraHigh08"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.000000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraHigh08"/>
+    </CModel>
+    <CModel id="NafashDeath" parent="UnitDeath" Race="Zerg">
+        <Model value="Zagara_Primal_DS_TC_Death.m3"/>
+        <LowQualityModel value="ZergMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="NafashPortrait" parent="FXAPortrait" Race="Zerg">
+        <Model value="Assets\StoryModeCharacters\Zerg\SMX1_Zagara_Background_Portrait\SMX1_Zagara_Background_Portrait.m3"/>
+        <Flags index="Download" value="1"/>
+        <Image value="Assets\Textures\Zagara_SMX1_Primal_Portrait_Static.dds"/>
+        <Lighting value="ZagaraPortrait"/>
+    </CModel>
+    <CModel id="NafashPortraitAddition" parent="FXAPortrait" Race="Zerg">
+        <Model value="Zagara_SMX1_Primal_TC_PortraitAddition.m3"/>
+    </CModel>
+    <CModel id="ZaGaraAcidSpinesMissile2" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\FrenzyMissile\FrenzyMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="1.333000,1.333000,1.333000"/>
+        <ScaleMin value="1.333000,1.333000,1.333000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+    </CModel>
+    <CModel id="Zergling2" parent="ZerglingBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby\Zergling_CollectionSkin_Webby.m3"/>
+        <ScaleMax value="0.840000,0.840000,0.840000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="ZerglingDeath2" parent="ZerglingDeathBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby_Death\Zergling_CollectionSkin_Webby_Death.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathAcid2" parent="ZerglingDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby_DeathAcid\Zergling_CollectionSkin_Webby_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathEviscerate2" parent="ZerglingDeathEviscerateBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby_DeathEviscerate\Zergling_CollectionSkin_Webby_DeathEviscerate.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathFire2" parent="ZerglingDeathFireBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby_DeathFire\Zergling_CollectionSkin_Webby_DeathFire.m3"/>
+    </CModel>
+    <CModel id="ZerglingPortrait2" parent="ZerglingPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Zergling_Webby_Collection_Portrait\Zergling_Webby_Collection_Portrait.m3"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ZerglingPortrait_Static.dds"/>
+        <Lighting value="Zergling_Webby_Collection_Portrait"/>
+    </CModel>
+    <CModel id="DehakaBarracks" parent="Building" Race="Zerg">
+        <Model value="Assets\Buildings\Zerg\Dehaka_Primal_Barracks_Coop\Dehaka_Primal_Barracks_Coop.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigher16"/>
+        <Radius value="1.250000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="TechPurchaseCommandCenter"/>
+        <UnitGlossaryCamera value="Star2CameraHigher16"/>
+        <Events>
+            <Anim value="Spell,Alternate"/>
+            <Name value="PrimalZergSpit"/>
+            <Type value="Custom"/>
+            <Time value="0.062500"/>
+        </Events>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="DehakaBarracksDeath" parent="DehakaBarracks"/>
+    <CModel id="DehakaTrainEggRoach" parent="RacePersistentSpellFX" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Primal_Egg_Coop\Primal_Egg_Coop.m3"/>
+        <SelectionLayer value="2"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalEgg_DeathExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.843000"/>
+            <Payload value="PrimalEgg_DeathExplosion"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaRoachLevel2Weapon" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\FrenzyMissile\FrenzyMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="DehakaRoachAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\RoachWeaponImpact\RoachWeaponImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="DehakaRoachMissileImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\RoachMissileImpactEx1\RoachMissileImpactEx1.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="DehakaTrainEggZergling" parent="RacePersistentSpellFX" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Primal_Egg_Coop\Primal_Egg_Coop.m3"/>
+        <SelectionLayer value="2"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalEgg_DeathExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.843000"/>
+            <Payload value="PrimalEgg_DeathExplosion"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaHydraliskLevel2Weapon" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\FrenzyMissile\FrenzyMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="Dehaka_Primal_Wurm_Coop" parent="Building" Race="Zerg">
+        <AttachProps Id="Ref_TurretZ">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <Events>
+            <Anim value="Unburrow,00"/>
+            <Name value="GroundBurst"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="NydusDestroyer_Unburrow"/>
+        </Events>
+        <Events>
+            <Anim value="Unburrow,00"/>
+            <Name value="Roar"/>
+            <Type value="Sound"/>
+            <Time value="1.050000"/>
+            <Payload value="NydusDestroyer_Ready"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,01"/>
+            <Name value="PrimalZergSpit"/>
+            <Type value="Custom"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,Superior"/>
+            <Name value="PrimalZergSpit"/>
+            <Type value="Custom"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,Inferior"/>
+            <Name value="PrimalZergSpit"/>
+            <Type value="Custom"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events Anim="Spell" Name="PrimalZergSpit" Type="Custom"/>
+        <Events>
+            <Anim value="Spell"/>
+            <Name value="PrimalZergSpit"/>
+            <Type value="Custom"/>
+            <Time value="1.166000"/>
+        </Events>
+        <PlanetPanelCamera value="Star2CameraHigher20"/>
+        <Radius value="1.200000"/>
+        <ScaleMax value="0.450000,0.450000,0.450000"/>
+        <ScaleMin value="0.450000,0.450000,0.450000"/>
+        <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="2.000000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraHigher20"/>
+        <UnitGlossaryCamera value="Star2CameraHigher20"/>
+    </CModel>
+    <CModel id="Dehaka_Primal_Wurm_Coop_Death" parent="BuildingDeath" Race="Zerg">
+        <LowQualityModel value="ZergLargeBuildingDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Zerg_ExplosionLarge"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Zerg_ExplosionLarge"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="DeathRoar"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+            <Payload value="PrimalWurm_Death"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="DeathRoar"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+            <Payload value="PrimalWurm_DeathLong"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="DeathRoar"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+            <Payload value="PrimalWurm_Death"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="DeathRoar"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+            <Payload value="PrimalWurm_DeathLong"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalWurm_BodyfallWhoosh"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+            <Payload value="PrimalWurm_BodyfallWhoosh"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="DeathThud"/>
+            <Type value="Sound"/>
+            <Time value="1.450000"/>
+            <Payload value="PrimalWurm_Bodyfall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="PrimalWurm_BodyfallWhoosh"/>
+            <Type value="Sound"/>
+            <Time value="3.250000"/>
+            <Payload value="PrimalWurm_BodyfallWhoosh"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="DeathThud"/>
+            <Type value="Sound"/>
+            <Time value="4.170000"/>
+            <Payload value="PrimalWurm_Bodyfall"/>
+        </Events>
+    </CModel>
+    <CModel id="Dehaka_Primal_Wurm_Coop_DeathFire" parent="BuildingDeath" Race="Zerg">
+        <LowQualityModel value="ZergLargeBuildingDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalWurm_BodyfallWhoosh"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+            <Payload value="PrimalWurm_BodyfallWhoosh"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="PrimalWurm_BodyfallWhoosh"/>
+            <Type value="Sound"/>
+            <Time value="3.250000"/>
+            <Payload value="PrimalWurm_BodyfallWhoosh"/>
+        </Events>
+        <Events>
+            <Anim value="Death,Fire,00"/>
+            <Name value="DeathThud"/>
+            <Type value="Sound"/>
+            <Time value="1.450000"/>
+            <Payload value="PrimalWurm_Bodyfall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,Fire,01"/>
+            <Name value="DeathThud"/>
+            <Type value="Sound"/>
+            <Time value="4.170000"/>
+            <Payload value="PrimalWurm_Bodyfall"/>
+        </Events>
+    </CModel>
+    <CModel id="Dehaka_Primal_Wurm_Coop_DeathAcid" parent="BuildingDeath" Race="Zerg">
+        <LowQualityModel value="ZergLargeBuildingDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalWurm_BodyfallWhoosh"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+            <Payload value="PrimalWurm_BodyfallWhoosh"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="PrimalWurm_BodyfallWhoosh"/>
+            <Type value="Sound"/>
+            <Time value="3.250000"/>
+            <Payload value="PrimalWurm_BodyfallWhoosh"/>
+        </Events>
+        <Events>
+            <Anim value="Death,Fire,00"/>
+            <Name value="DeathThud"/>
+            <Type value="Sound"/>
+            <Time value="1.450000"/>
+            <Payload value="PrimalWurm_Bodyfall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,Fire,01"/>
+            <Name value="DeathThud"/>
+            <Type value="Sound"/>
+            <Time value="4.170000"/>
+            <Payload value="PrimalWurm_Bodyfall"/>
+        </Events>
+    </CModel>
+    <CModel id="Dehaka_Primal_Wurm_Coop_Placement" parent="Placement" Race="Zerg">
+        <Radius value="2.000000"/>
+        <ScaleMax value="0.450000,0.450000,0.450000"/>
+        <ScaleMin value="0.450000,0.450000,0.450000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+    </CModel>
+    <CModel id="DehakaNydusDestroyerWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\ZergNydusAttackerMissile\ZergNydusAttackerMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.550000,0.550000,0.550000"/>
+        <ScaleMin value="0.550000,0.550000,0.550000"/>
+    </CModel>
+    <CModel id="DehakaNydusDestroyerAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\ZergNydusAttackerMissileDeath\ZergNydusAttackerMissileDeath.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.550000,0.550000,0.550000"/>
+        <ScaleMin value="0.550000,0.550000,0.550000"/>
+    </CModel>
+    <CModel id="Dehaka_Nest_Dakrun_COOP_Placement" parent="Placement" Race="Zerg">
+        <PlanetPanelCamera value="Star2CameraLow15"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraLow15"/>
+        <UnitGlossaryCamera value="Star2CameraLow15"/>
+    </CModel>
+    <CModel id="Dehaka_Nest_Glevig_COOP_Placement" parent="Placement" Race="Zerg">
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="Dehaka_Nest_Murvar_COOP_Placement" parent="Placement" Race="Zerg">
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="DehakaGlevigStructure" parent="Unit" Race="Zerg">
+        <Model value="Assets\Buildings\Zerg\Dehaka_Nest_Glevig_Coop\Dehaka_Nest_Glevig_Coop.m3"/>
+        <PlanetPanelCamera value="Star2CameraLow15"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraLow15"/>
+        <UnitGlossaryCamera value="Star2CameraLow15"/>
+        <Events>
+            <Anim value="Burrow,00"/>
+            <Name value="DehakaMonsterDen_Sink"/>
+            <Type value="Sound"/>
+            <Time value="1.000000"/>
+            <Payload value="DehakaMonsterDen_Sink"/>
+        </Events>
+        <Events>
+            <Anim value="Burrow,00"/>
+            <Name value="DehakaMonsterDen_SinkPlume"/>
+            <Type value="Sound"/>
+            <Time value="2.200000"/>
+            <Payload value="DehakaMonsterDen_SinkPlume"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaMurvarStructure" parent="Unit" Race="Zerg">
+        <Model value="Assets\Buildings\Zerg\Dehaka_Nest_Murvar_Coop\Dehaka_Nest_Murvar_Coop.m3"/>
+        <PlanetPanelCamera value="Star2CameraLow15"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraLow15"/>
+        <UnitGlossaryCamera value="Star2CameraLow15"/>
+        <Events>
+            <Anim value="Burrow,00"/>
+            <Name value="DehakaMonsterDen_Sink"/>
+            <Type value="Sound"/>
+            <Time value="0.900000"/>
+            <Payload value="DehakaMonsterDen_Sink"/>
+        </Events>
+        <Events>
+            <Anim value="Burrow,00"/>
+            <Name value="DehakaMonsterDen_SinkPlume"/>
+            <Type value="Sound"/>
+            <Time value="2.200000"/>
+            <Payload value="DehakaMonsterDen_SinkPlume"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaDakrunStructure" parent="Unit" Race="Zerg">
+        <Model value="Assets\Buildings\Zerg\Dehaka_Nest_Dakrun_COOP\Dehaka_Nest_Dakrun_COOP.m3"/>
+        <PlanetPanelCamera value="Star2CameraLow15"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraLow15"/>
+        <UnitGlossaryCamera value="Star2CameraLow15"/>
+        <Events>
+            <Anim value="Burrow,00"/>
+            <Name value="DehakaMonsterDen_Sink"/>
+            <Type value="Sound"/>
+            <Time value="0.900000"/>
+            <Payload value="DehakaMonsterDen_Sink"/>
+        </Events>
+        <Events>
+            <Anim value="Burrow,00"/>
+            <Name value="DehakaMonsterDen_SinkPlume"/>
+            <Type value="Sound"/>
+            <Time value="2.200000"/>
+            <Payload value="DehakaMonsterDen_SinkPlume"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaGlevigStructureAttachExtra" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Glevig_Coop\Glevig_Coop.m3"/>
+        <PlanetPanelCamera value="Star2CameraLow15"/>
+        <Radius value="2.000000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Events>
+            <Anim value="Stand,Alternate,00"/>
+            <Name value="Inhale"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="GlevigDen_Inhale"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Alternate,00"/>
+            <Name value="Chomp"/>
+            <Type value="Sound"/>
+            <Time value="0.450000"/>
+            <Payload value="GlevigDen_Chomp"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="GlevigDen_Unburrow"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="GlevigDen_Unburrow"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="GlevigDen_Inhale"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="GlevigDen_Inhale"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="GlevigDen_Chomp"/>
+            <Type value="Sound"/>
+            <Time value="0.616000"/>
+            <Payload value="GlevigDen_Chomp"/>
+        </Events>
+        <Events>
+            <Anim value="Work,Alternate,Start,00"/>
+            <Name value="Glevig_InDenDeathVox"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Glevig_InDenDeathVox"/>
+        </Events>
+        <Events>
+            <Anim value="Work,Alternate,Start,00"/>
+            <Name value="Glevig_InDenBurrow"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Glevig_InDenBurrow"/>
+        </Events>
+        <Events>
+            <Anim value="Work,Alternate,Start,00"/>
+            <Name value="Glevig_InDenBurrow"/>
+            <Type value="Sound"/>
+            <Time value="0.400000"/>
+            <Payload value="Glevig_InDenBurrow"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaMurvarStructureAttachExtra" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Murvar_Coop\Murvar_Coop.m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="1.750000,1.750000,1.750000"/>
+        <ScaleMin value="1.750000,1.750000,1.750000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Events>
+            <Anim value="Work,Alternate,Start,00"/>
+            <Name value="Murvar_InDenDeathVox"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Murvar_InDenDeathVox"/>
+        </Events>
+        <Events>
+            <Anim value="Work,Alternate,Start,00"/>
+            <Name value="Murvar_InDenBurrow"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Murvar_InDenBurrow"/>
+        </Events>
+        <Events>
+            <Anim value="Work,Alternate,Start,00"/>
+            <Name value="Murvar_InDenBurrow"/>
+            <Type value="Sound"/>
+            <Time value="0.400000"/>
+            <Payload value="Murvar_InDenBurrow"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaDakrunStructureAttachExtra" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Dakrun_Coop\Dakrun_Coop.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid09"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Events>
+            <Anim value="Work,Alternate,Start,00"/>
+            <Name value="Dakrun_InDenDeathVox"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Dakrun_InDenDeathVox"/>
+        </Events>
+        <Events>
+            <Anim value="Work,Alternate,Start,00"/>
+            <Name value="Dakrun_InDenBurrowBigger"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Dakrun_InDenBurrowBigger"/>
+        </Events>
+        <Events>
+            <Anim value="Work,Alternate,Start,00"/>
+            <Name value="Dakrun_InDenBurrow"/>
+            <Type value="Sound"/>
+            <Time value="0.400000"/>
+            <Payload value="Dakrun_InDenBurrow"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="DakrunDen_BirthFootstep"/>
+            <Type value="Sound"/>
+            <Time value="0.688000"/>
+            <Payload value="DakrunDen_BirthFootstep"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="DakrunDen_BirthFootstep"/>
+            <Type value="Sound"/>
+            <Time value="3.715000"/>
+            <Payload value="DakrunDen_BirthFootstep"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="DakrunDen_BirthFootstep"/>
+            <Type value="Sound"/>
+            <Time value="3.394000"/>
+            <Payload value="DakrunDen_BirthFootstep"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="DakrunDen_BirthFootstep"/>
+            <Type value="Sound"/>
+            <Time value="5.381000"/>
+            <Payload value="DakrunDen_BirthFootstep"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="DakrunDen_BirthFootstep"/>
+            <Type value="Sound"/>
+            <Time value="0.977000"/>
+            <Payload value="DakrunDen_BirthFootstep"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="DakrunDen_Unburrow"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="DakrunDen_Unburrow"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="Dakrun_BirthVox"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Dakrun_BirthVox"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="DakrunDen_Chomp"/>
+            <Type value="Sound"/>
+            <Time value="1.457000"/>
+            <Payload value="DakrunDen_Chomp"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="DakrunDen_Chomp"/>
+            <Type value="Sound"/>
+            <Time value="1.903000"/>
+            <Payload value="DakrunDen_Chomp"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="DakrunDen_Chomp"/>
+            <Type value="Sound"/>
+            <Time value="3.131000"/>
+            <Payload value="DakrunDen_Chomp"/>
+        </Events>
+        <Events>
+            <Anim value="Build,D,Start,00"/>
+            <Name value="DakrunDen_Chomp"/>
+            <Type value="Sound"/>
+            <Time value="5.105000"/>
+            <Payload value="DakrunDen_Chomp"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaGlevigStructureAttachSplat" parent="Unit" Race="Zerg">
+        <Model value="Assets/Splats/Dehaka_Nest_Glevig_COOP_Splat/Dehaka_Nest_Glevig_COOP_Splat.m3"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="DehakaMurvarStructureAttachSplat" parent="Unit" Race="Zerg">
+        <Model value="Assets/Splats/Dehaka_Nest_Murvar_COOP_Splat/Dehaka_Nest_Murvar_COOP_Splat.m3"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="DehakaDakrunStructureAttachSplat" parent="Unit" Race="Zerg">
+        <Model value="Assets/Splats/Dehaka_Nest_Dakrun_COOP_Splat/Dehaka_Nest_Dakrun_COOP_Splat.m3"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <!--CModel id="DehakaGlevigStructure" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Glevig_Coop\Glevig_Coop.m3"/>
+        <PlanetPanelCamera value="Star2CameraLow15"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraLow15"/>
+        <UnitGlossaryCamera value="Star2CameraLow15"/>
+    </CModel>
+    <CModel id="DehakaGlevigStructureDeath" parent="UnitDeath" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Glevig_Coop_Death\Glevig_Coop_Death.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="0.610000"/>
+            <Payload value="Yagdra_VoxRoar"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death03"/>
+            <Type value="Sound"/>
+            <Time value="0.730000"/>
+            <Payload value="Yagdra_BodyHit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death05a"/>
+            <Type value="Sound"/>
+            <Time value="2.770000"/>
+            <Payload value="Yagdra_DeathRoar2"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death06"/>
+            <Type value="Sound"/>
+            <Time value="3.510000"/>
+            <Payload value="Yagdra_BodyHitJuice"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death07"/>
+            <Type value="Sound"/>
+            <Time value="3.590000"/>
+            <Payload value="Zerus01_Brakk_Meat_Splats"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death08"/>
+            <Type value="Sound"/>
+            <Time value="5.050000"/>
+            <Payload value="Yagdra_DieBodyFall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death09"/>
+            <Type value="Sound"/>
+            <Time value="5.600000"/>
+            <Payload value="Yagdra_VoxDieGurgle"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death10"/>
+            <Type value="Sound"/>
+            <Time value="5.840000"/>
+            <Payload value="Yagdra_BloodPool"/>
+        </Events>
+        <Radius value="1.200000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+        <SquibTypeDefault value="Flesh"/>
+    </CModel>
+    <CModel id="DehakaMurvarStructure" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Murvar_Coop\Murvar_Coop.m3"/>
+        <AttachProps Id="Ref_Weapon">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 10">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 11">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 12">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 13">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 14">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <Events>
+            <Anim value="Spell,Start"/>
+            <Name value="Slivan_Vox_KungFuPose"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Slivan_Vox_KungFuPose"/>
+        </Events>
+        <Events>
+            <Anim value="Attack"/>
+            <Name value="Slivan_Vox_Grunt_Spit"/>
+            <Type value="Sound"/>
+            <Time value="0.210000"/>
+            <Payload value="Slivan_Vox_Grunt_Spit"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Slivan_FootSteps"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Kraith_Foley_LargeFootSteps"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Slivan_FootSteps"/>
+            <Type value="Sound"/>
+            <Time value="1.010000"/>
+            <Payload value="Kraith_Foley_LargeFootSteps"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Slivan_FootSteps"/>
+            <Type value="Sound"/>
+            <Time value="1.140000"/>
+            <Payload value="Slivan_FootSteps"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Slivan_FootSteps"/>
+            <Type value="Sound"/>
+            <Time value="1.860000"/>
+            <Payload value="Slivan_FootSteps"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Slivan_Vox_Giberish"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Slivan_Vox_Giberish"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="1.750000,1.750000,1.750000"/>
+        <ScaleMin value="1.750000,1.750000,1.750000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Flesh"/>
+    </CModel>
+    <CModel id="DehakaMurvarStructureDeath" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Murvar_Coop_Death\Murvar_Coop_Death.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_DeathRoar_Vox"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Slivan_DeathRoar_Vox"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_BodyHit"/>
+            <Type value="Sound"/>
+            <Time value="0.290010"/>
+            <Payload value="Slivan_BodyHit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_DeathBlowJuice"/>
+            <Type value="Sound"/>
+            <Time value="0.790000"/>
+            <Payload value="Slivan_DeathBlowJuice"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_DeathBlow"/>
+            <Type value="Sound"/>
+            <Time value="1.090000"/>
+            <Payload value="Slivan_DeathBlow"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_Death_BodyFall"/>
+            <Type value="Sound"/>
+            <Time value="1.730000"/>
+            <Payload value="Slivan_Death_BodyFall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_Death_BodyFall_Vox"/>
+            <Type value="Sound"/>
+            <Time value="1.740000"/>
+            <Payload value="Slivan_Death_BodyFall_Vox"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Kraith_ImpactSlap_Eso"/>
+            <Type value="Sound"/>
+            <Time value="2.240000"/>
+            <Payload value="Kraith_ImpactSlap_Eso"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_MeatSplatGround"/>
+            <Type value="Sound"/>
+            <Time value="2.920000"/>
+            <Payload value="Slivan_MeatSplatGround"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_EggSplatGround"/>
+            <Type value="Sound"/>
+            <Time value="3.280000"/>
+            <Payload value="Slivan_EggSplatGround"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_MeatSplatGround"/>
+            <Type value="Sound"/>
+            <Time value="3.380000"/>
+            <Payload value="Slivan_MeatSplatGround"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_EggSplatGround"/>
+            <Type value="Sound"/>
+            <Time value="3.600000"/>
+            <Payload value="Slivan_EggSplatGround"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_EggSplatGround"/>
+            <Type value="Sound"/>
+            <Time value="4.010000"/>
+            <Payload value="Slivan_EggSplatGround"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_MeatSplatGround"/>
+            <Type value="Sound"/>
+            <Time value="4.430000"/>
+            <Payload value="Slivan_MeatSplatGround"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_EggSplatGround"/>
+            <Type value="Sound"/>
+            <Time value="4.500000"/>
+            <Payload value="Slivan_EggSplatGround"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_MeatSplatGround"/>
+            <Type value="Sound"/>
+            <Time value="4.960000"/>
+            <Payload value="Slivan_MeatSplatGround"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_EggSplatGround"/>
+            <Type value="Sound"/>
+            <Time value="5.090000"/>
+            <Payload value="Slivan_EggSplatGround"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_DeathBlowJuice"/>
+            <Type value="Sound"/>
+            <Time value="2.230000"/>
+            <Payload value="Slivan_DeathBlowJuice"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_DeathBurst1"/>
+            <Type value="Sound"/>
+            <Time value="2.250000"/>
+            <Payload value="Slivan_DeathBurst1"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Slivan_DeathBurst2"/>
+            <Type value="Sound"/>
+            <Time value="2.250000"/>
+            <Payload value="Slivan_DeathBurst2"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <SquibTypeDefault value="Flesh"/>
+    </CModel>
+    <CModel id="DehakaDakrunStructure" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Dakrun_Coop\Dakrun_Coop.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid09"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="1.500000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraMid09"/>
+        <UnitGlossaryCamera value="Star2CameraMid09"/>
+    </CModel>
+    <CModel id="DehakaDakrunStructureDeath" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Dakrun_Coop_Death\Dakrun_Coop_Death.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="DeathExplosion00"/>
+            <Type value="Sound"/>
+            <Time value="0.650000"/>
+            <Payload value="Zerg_ExplosionLarge"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="DeathExplosion00"/>
+            <Type value="Sound"/>
+            <Time value="1.900000"/>
+            <Payload value="Kraith_BodyFall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="DeathExplosion00"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+            <Payload value="Kraith_DeathHit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="DeathExplosion00"/>
+            <Type value="Sound"/>
+            <Time value="1.340000"/>
+            <Payload value="Kraith_DeathHit_Splatter"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="DeathExplosion00"/>
+            <Type value="Sound"/>
+            <Time value="1.820000"/>
+            <Payload value="Kraith_Vox_DieHit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="1.820000"/>
+            <Payload value="Kraith_BodyFall_Mn"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="1.970000"/>
+            <Payload value="Kraith_BodyFall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="2.150000"/>
+            <Payload value="Kraith_DeadHeartBeat"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="2.640000"/>
+            <Payload value="Kraith_DeadHeartBeat"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="2.880000"/>
+            <Payload value="Kraith_DeadHeartBeat"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="3.370000"/>
+            <Payload value="Kraith_DeadHeartBeat"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="3.650000"/>
+            <Payload value="Kraith_DeadHeartBeat"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="4.160000"/>
+            <Payload value="Kraith_DeadHeartBeat"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="4.390000"/>
+            <Payload value="Kraith_DeadHeartBeat"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="5.020000"/>
+            <Payload value="Kraith_DeadHeartBeat"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="5.120000"/>
+            <Payload value="Kraith_Vox_DeathLast_Breaths"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="5.220000"/>
+            <Payload value="Kraith_DeadHeartBeat"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="6.160000"/>
+            <Payload value="Kraith_DeadHeartBeat"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Death00"/>
+            <Type value="Sound"/>
+            <Time value="6.390000"/>
+            <Payload value="Kraith_DeadHeartBeat2"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <Radius value="0.800000"/>
+        <ShadowRadius value="0.800000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.000000"/>
+        <TipabilityWidth value="0.600000"/>
+    </CModel-->
+    <CModel id="Primal_Wurm_Base_Coop" parent="RacePersistentSpellFX" Race="Zerg">
+        <Events>
+            <Anim value="Burrow,00"/>
+            <Name value="Dakrun_Base_SinkHole"/>
+            <Type value="Sound"/>
+            <Time value="1.600000"/>
+            <Payload value="Dakrun_Base_SinkHole"/>
+        </Events>
+        <Events>
+            <Anim value="Burrow,00"/>
+            <Name value="Primal_Murvar_Base_Sinkhole"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+            <Payload value="Primal_Murvar_Base_Sinkhole"/>
+        </Events>
+    </CModel>
+    <CModel id="Primal_Dakrun_Base_Coop" parent="RacePersistentSpellFX" Race="Zerg">
+        <Events>
+            <Anim value="Burrow,00"/>
+            <Name value="Dakrun_Base_SinkHole"/>
+            <Type value="Sound"/>
+            <Time value="1.700000"/>
+            <Payload value="Dakrun_Base_SinkHole"/>
+        </Events>
+        <Events>
+            <Anim value="Burrow,00"/>
+            <Name value="Primal_Murvar_Base_Sinkhole"/>
+            <Type value="Sound"/>
+            <Time value="0.151000"/>
+            <Payload value="Primal_Murvar_Base_Sinkhole"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaTrainEggHydralisk" parent="RacePersistentSpellFX" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Primal_Egg_Coop\Primal_Egg_Coop.m3"/>
+        <SelectionLayer value="2"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalEgg_DeathExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.843000"/>
+            <Payload value="PrimalEgg_DeathExplosion"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaTrainEggUltralisk" parent="RacePersistentSpellFX" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Primal_Egg_Coop\Primal_Egg_Coop.m3"/>
+        <SelectionLayer value="2"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalEgg_DeathExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.843000"/>
+            <Payload value="PrimalEgg_DeathExplosion"/>
+        </Events>
+    </CModel>
+    <CModel id="Dehaka_Nest_COOP" parent="Building" Race="Zerg">
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigher06"/>
+        <Radius value="1.250000"/>
+        <SelectionRadius value="2.800000"/>
+        <ShadowRadius value="1.000000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+        <SelectionLayer value="2"/>
+    </CModel>
+    <CModel id="DehakaCoopPortrait" parent="FXAPortrait" Race="Zerg">
+        <Model value="Assets\StoryModeCharacters\Zerg\SMX1_PrimalZergCommanderT1_Background_Portrait\SMX1_PrimalZergCommanderT1_Background_Portrait.m3"/>
+        <Image value="Assets\Textures\SMX1_PrimalZergCommanderT1Portrait_Static.dds"/>
+        <FacialController value="LocalizedData\Facial\SMX1_Dehaka.fxa"/>
+        <Flags index="Download" value="1"/>
+    </CModel>
+    <CModel id="DehakaCoopPortraitAddition" parent="FXAPortrait" Race="Zerg">
+        <Model value="Assets\StoryModeCharacters\Zerg\SMX1_PrimalZergCommanderT1\SMX1_PrimalZergCommanderT1.m3"/>
+        <!--RequiredAnims value="Assets\StoryModeCharacters\Zerg\SMX1_PrimalZergCommanderT1_RequiredAnims_Portrait\SMX1_PrimalZergCommanderT1_RequiredAnims_Portrait.m3a"/-->
+        <FacialController value="LocalizedData\Facial\SMX1_Dehaka.fxa"/>
+        <Flags index="Download" value="1"/>
+    </CModel>
+    <CModel id="Dehaka_Primal_Barracks_Coop_Placement" parent="Placement" Race="Zerg">
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="DehakaGlevigStructureBuild" parent="PrimalZergBuildingBuild"/>
+    <CModel id="DehakaMurvarStructureBuild" parent="PrimalZergBuildingBuild"/>
+    <CModel id="DehakaDakrunStructureBuild" parent="PrimalZergBuildingBuild"/>
+    <CModel id="DehakaNydusDestroyerBuild" parent="PrimalZergBuildingBuild"/>
+    <CModel id="DehakaBarracksBuild" parent="PrimalZergBuildingBuild"/>
+    <CModel id="Primal_Zerg_BirthSmokeLarge" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Zerg\Primal_Zerg_BirthSmoke\Primal_Zerg_BirthSmoke.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="Primal_Zerg_BirthSmoke" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Zerg\Primal_Zerg_BirthSmoke\Primal_Zerg_BirthSmoke.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="ZagaraVoidCoop" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Zagara\Zagara.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh08"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionRadius value="0.972100"/>
+        <ShadowRadius value="0.750000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraHigh08"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.000000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraHigh08"/>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Zagara_footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.450000"/>
+            <Payload value="Zagara_footstep"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Zagara_footstep2"/>
+            <Type value="Sound"/>
+            <Time value="0.470000"/>
+            <Payload value="Zagara_footstep2"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Zagara_footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.950000"/>
+            <Payload value="Zagara_footstep"/>
+        </Events>
+        <Events>
+            <Anim value="Walk"/>
+            <Name value="Zagara_footstep2"/>
+            <Type value="Sound"/>
+            <Time value="0.970000"/>
+            <Payload value="Zagara_footstep2"/>
+        </Events>
+    </CModel>
+    <CModel id="ZagaraVoidCoopRangedWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+    </CModel>
+    <CModel id="ZagaraVoidCoopRangedAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Zerg\HydraliskMissileLaunch\HydraliskMissileLaunch.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <!--CModel id="ZagaraVoidCoopRangedAttackImpact" parent="LaunchFX">
+        <Model value="Assets\Effects\Zerg\HydraliskMissileImpact\HydraliskMissileImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel-->
+    <CModel id="ZagaraVoidCoopRangedAttackImpactShield" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\HydraliskMissileImpactShield\HydraliskMissileImpactShield.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="ZagaraVoidCoopMeleeAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\DarkTemplarWeaponImpact\DarkTemplarWeaponImpact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="ZagaraVoidCoopBanelingBarrageWeapon" parent="MissileFX">
+        <Occlusion value="Show"/>
+        <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="ZagaraVoidCoopBanelingBarrageWeaponAddition" parent="MissileFX">
+        <Occlusion value="Show"/>
+        <Model value="Assets\Units\Zerg\Baneling\Baneling.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.468700"/>
+        <Radius value="0.400000"/>
+        <ShadowRadius value="0.468700"/>
+    </CModel>
+    <CModel id="ZagaraVoidCoopRangedAttackMissileAddition" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\RoachMissile\RoachMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.250000,0.250000,0.250000"/>
+        <ScaleMin value="0.250000,0.250000,0.250000"/>
+    </CModel>
+    <CModel id="DehakaConsumeTentacle" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\Dehaka_Coop_Consume\Dehaka_Coop_Consume.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Lighting value=""/>
+    </CModel>
+    <CModel id="Dehaka_Coop_Burrow_In" parent="RaceOneShotSpellFX" Race="Zerg"/>
+    <CModel id="Dehaka_Coop_Burrow_Out" parent="RaceOneShotSpellFX" Race="Zerg"/>
+    <CModel id="Dehaka_Coop_Young" parent="Unit" Race="Zerg">
+        <Lighting value="Dehaka"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigher06"/>
+        <Radius value="1.250000"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraHigher06"/>
+        <UnitGlossaryCamera value="Star2CameraHigher06"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hardpoint 01">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hardpoint 02">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hardpoint 03">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hardpoint 04">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hardpoint 05">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hardpoint 06">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hardpoint 07">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hardpoint 08">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hardpoint 09">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Hardpoint 10">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <Events>
+            <Anim value="Attack,A"/>
+            <Name value="DehakaAttackSwipe"/>
+            <Type value="Custom"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,A"/>
+            <Name value="DehakaAttackVox"/>
+            <Type value="Custom"/>
+            <Time value="0.001000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,A"/>
+            <Name value="DehakaAttackImpact"/>
+            <Type value="Custom"/>
+            <Time value="0.120000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,B"/>
+            <Name value="DehakaAttackSwipe"/>
+            <Type value="Custom"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,B"/>
+            <Name value="DehakaAttackVox"/>
+            <Type value="Custom"/>
+            <Time value="0.001000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,B"/>
+            <Name value="DehakaAttackImpact"/>
+            <Type value="Custom"/>
+            <Time value="0.120000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,C"/>
+            <Name value="DehakaAttackSwipe"/>
+            <Type value="Custom"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,C"/>
+            <Name value="DehakaAttackVox"/>
+            <Type value="Custom"/>
+            <Time value="0.001000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,C"/>
+            <Name value="DehakaAttackImpact"/>
+            <Type value="Custom"/>
+            <Time value="0.120000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,D"/>
+            <Name value="DehakaAttackSwipe"/>
+            <Type value="Custom"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,D"/>
+            <Name value="DehakaAttackVox"/>
+            <Type value="Custom"/>
+            <Time value="0.001000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,D"/>
+            <Name value="DehakaAttackImpact"/>
+            <Type value="Custom"/>
+            <Time value="0.120000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.088000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.499000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,01"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.068000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,01"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.530000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,01"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.902000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,01"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.334000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,02"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.071000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,02"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.501000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,02"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.073000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,02"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.502000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,03"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.067000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,03"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,03"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.067000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,03"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.503000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.175000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.619000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="2.124000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="2.484000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.415000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,B,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.557000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,B,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.888000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,C,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.258000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,C,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="2.057000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,C,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="2.481000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,D,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.202000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,D,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.533000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.208000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.426000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.886000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,A,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.068000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,B,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.901000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,C,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.089000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,C,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.036000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,E,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.748000"/>
+        </Events>
+        <Events>
+            <Anim value="Burrow,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.063000"/>
+        </Events>
+        <Events>
+            <Anim value="Burrow,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.260000"/>
+        </Events>
+        <Events>
+            <Anim value="Burrow,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.359000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.141000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.565000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Start,Ready,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.187000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Start,Ready,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.631000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Ready,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.385000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Ready,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.205000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Ready,Start,S,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.442000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Ready,Start,S,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.620000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Ready,End,S,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.236000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Ready,End,S,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.694000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.061000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.492000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.061000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,A,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.491000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.767000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.868000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,H,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.033000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,H,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.495000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,B,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.033000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,B,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.462000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,C,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.033000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,C,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.495000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,G,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.033000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,G,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.462000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,E,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.033000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,E,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.462000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,F,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.033000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,F,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.476000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,D,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.033000"/>
+        </Events>
+        <Events>
+            <Anim value="Walk,D,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.462000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.118000"/>
+        </Events>
+        <Events>
+            <Anim value="Channel,Hearth,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="2.906000"/>
+        </Events>
+        <Events>
+            <Anim value="Channel,Hearth,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="4.498000"/>
+        </Events>
+        <Events>
+            <Anim value="Channel,Hearth,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="5.026000"/>
+        </Events>
+        <Events>
+            <Anim value="Channel,Hearth,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.132000"/>
+        </Events>
+        <Events>
+            <Anim value="Channel,Hearth,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.264000"/>
+        </Events>
+        <Events>
+            <Anim value="Channel,Hearth,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.358000"/>
+        </Events>
+        <Events>
+            <Anim value="Channel,Hearth,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.462000"/>
+        </Events>
+        <Events>
+            <Anim value="Channel,Hearth,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.561000"/>
+        </Events>
+        <Events>
+            <Anim value="Channel,Hearth,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.693000"/>
+        </Events>
+        <Events>
+            <Anim value="Taunt,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.066000"/>
+        </Events>
+        <Events>
+            <Anim value="Taunt,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.935000"/>
+        </Events>
+        <Events>
+            <Anim value="Taunt,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="2.439000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,X,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.495000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,X,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.843000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,Y,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.506000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,Y,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.154000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,F,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.033000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,F,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.528000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,F,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.031000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,F,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.683000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,F,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.947000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Victory,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.186000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Victory,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.662000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Victory,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="2.632000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DanceVox"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.594000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DanceKick"/>
+            <Type value="Sound"/>
+            <Time value="4.103000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="FootstepStomp"/>
+            <Type value="Sound"/>
+            <Time value="4.623000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipe"/>
+            <Type value="Sound"/>
+            <Time value="0.591000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipe"/>
+            <Type value="Sound"/>
+            <Time value="0.885000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipe"/>
+            <Type value="Sound"/>
+            <Time value="1.400000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipe"/>
+            <Type value="Sound"/>
+            <Time value="1.728000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipe"/>
+            <Type value="Sound"/>
+            <Time value="2.224000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipeQuick"/>
+            <Type value="Sound"/>
+            <Time value="2.291000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipeQuick"/>
+            <Type value="Sound"/>
+            <Time value="2.561000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipeQuick"/>
+            <Type value="Sound"/>
+            <Time value="2.813000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipeQuick"/>
+            <Type value="Sound"/>
+            <Time value="2.973000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipeQuick"/>
+            <Type value="Sound"/>
+            <Time value="3.243000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipe"/>
+            <Type value="Sound"/>
+            <Time value="3.526000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Dance,00"/>
+            <Name value="DehakaDanceArmSwipe"/>
+            <Type value="Sound"/>
+            <Time value="4.126000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,H,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="2.370000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,H,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="2.883000"/>
+        </Events>
+        <Events Anim="Spell,G,Start,00" Name="Footstep" Type="Sound"/>
+        <Events>
+            <Anim value="Spell,G,Start,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.023000"/>
+        </Events>
+        <Events Anim="Spell,G,End,00" Name="Footstep" Type="Sound"/>
+        <Events>
+            <Anim value="Spell,G,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.019000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,G,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="1.014000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,G,End,00"/>
+            <Name value="Footstep"/>
+            <Type value="Sound"/>
+            <Time value="0.614000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Alternate,Start,00"/>
+            <Name value="Dehaka_DenReviveUnburrow"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Dehaka_DenReviveUnburrow"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work,End,00"/>
+            <Name value="Dehaka_FootstepUnburrow"/>
+            <Type value="Sound"/>
+            <Time value="1.718000"/>
+            <Payload value="Dehaka_FootstepUnburrow"/>
+        </Events>
+        <Model value="Assets\Units\Zerg\Dehaka_Coop_Mammoth\Dehaka_Coop_Mammoth.m3"/>
+    </CModel>
+    <CModel id="DehakaStompModelSmall" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\Dehaka_Coop_Young_Leap\Dehaka_Coop_Young_Leap.m3"/>
+    </CModel>
+    <CModel id="DehakaStompModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\Dehaka_Coop_Leap\Dehaka_Coop_Leap.m3"/>
+    </CModel>
+    <CModel id="DehakaStompImpactModel" parent="RaceImpactFX" Race="Zerg">
+        <Model value="Assets\Effects\Zerg\DehakaAttackImpact\DehakaAttackImpact.m3"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CModel>
+    <CModel id="MammothBreathModel" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\Dehaka_MammothBreath_Ground_Impact\Dehaka_MammothBreath_Ground_Impact.m3"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CModel>
+    <CModel id="MammothBreathGroundTrail" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\Dehaka_MammothBreath_Ground_Trail\Dehaka_MammothBreath_Ground_Trail.m3"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CModel>
+    <CModel id="MammothBreathGroundFire" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\Dehaka_MammothBreath_Ground_Fire\Dehaka_MammothBreath_Ground_Fire.m3"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CModel>
+    <CModel id="MammothBreathImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_SolarBeam_Impact\Dragoon_Purifier_Coop_SolarBeam_Impact.m3"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CModel>
+    <CModel id="DehakaConsumeImpactModel" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\Dehaka_Coop_Consume_Impact\Dehaka_Coop_Consume_Impact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="DehakaConsumeImpactModelVerticle" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\Dehaka_Coop_Consume_Impact_Verticle\Dehaka_Coop_Consume_Impact_Verticle.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="MammothBreathMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_SolarBeam\Dragoon_Purifier_Coop_SolarBeam.m3"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CModel>
+    <CModel id="DehakaSwipeGuideImpact" parent="RaceImpactFX" Race="Zerg">
+        <Model value="Assets\Effects\Zerg\DehakaAttackImpact\DehakaAttackImpact.m3"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CModel>
+    <CModel id="ZergAOEStrechLine_Zerg_NoColor_Mid" parent="UI">
+        <Model value="Assets/UI/Cursors/ZergAOEStrechLine_Zerg_NoColor_Mid/ZergAOEStrechLine_Zerg_NoColor_Mid.m3"/>
+    </CModel>
+</Catalog>

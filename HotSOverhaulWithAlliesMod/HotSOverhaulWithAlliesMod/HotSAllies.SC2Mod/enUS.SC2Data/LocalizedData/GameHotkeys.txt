@@ -1,0 +1,4 @@
+﻿Button/Hotkey/HydraliskDen=Y
+Button/Hotkey/LarvaColony=Q
+Button/Hotkey/hydraliskspeed2=G
+Button/Hotkey/ravagerrange=C

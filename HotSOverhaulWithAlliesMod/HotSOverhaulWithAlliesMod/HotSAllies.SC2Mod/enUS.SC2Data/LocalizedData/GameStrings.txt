@@ -1,0 +1,268 @@
+﻿Abil/Name/BurrowCreepTumorDown2=Burrow
+Abil/Name/Explode2=Explode
+Abil/Name/MorphRoachToRavager=Morph (Roach -> Ravager)
+Abil/Name/NafashFrenzy=Nafash Frenzy
+Abil/Name/NaktulSummonNydus=Naktul Summon Nydus
+Abil/Name/QueenBuild2=Build
+Abil/Name/QueenBurstHeal2=Naktul Burst Heal
+Abil/Name/SpawnLarva2=Larva Swarm
+Abil/Name/ZagaraVoidCoopBanelingBarrage=Zagara - Baneling Barrage
+Abil/Name/ZagaraVoidCoopBurrow=Zagara Burrow
+Abil/Name/ZagaraVoidCoopMassFrenzy=Zagara Mass Frenzy
+Abil/Name/ZagaraVoidCoopSpawnHunterKillers=Zagara - Hunter Killers
+Abil/Name/ZagaraVoidCoopUnburrow=Zagara Unburrow
+Behavior/Name/HydraliskFrenzy2=Frenzy
+Behavior/Name/NafashFrenzy=Nafash Frenzy
+Behavior/Name/QueenBurstHeal2=Rapid Transfusion
+Behavior/Name/ZagaraAgressionAura=Zagara Agression Aura
+Behavior/Name/ZerglingArmorShred=Zergling Armor Shred
+Behavior/Tooltip/HydraliskFrenzy2=Attack speed increased.
+Behavior/Tooltip/NafashFrenzy=Attack speed increased.
+Behavior/Tooltip/QueenBurstHeal2=Regenerating life.
+Behavior/Tooltip/ZagaraAgressionAura=This unit's attack speed and movement speed has been increased.
+Behavior/Tooltip/ZerglingArmorShred=Zergling pierced armor of target unit.
+Button/Name/CommanderTraitAbathurBiomass=Agressive Regeneration
+Button/Name/Disguise=Barbarous Mutation
+Button/Name/K5ArmorAura=Chitinous DNA Implementation
+Button/Name/LarvaColony=Mutate into Larva Colony
+Button/Name/RavagerSpeed=Glial Reconstitution
+Button/Name/RoachSpeed=Glial Reconstitution
+Button/Name/StabilizedBile=Stabilized Plasma
+Button/Name/ravagerrange=Evolve Stabilized Plasma
+Button/Tooltip/CommanderTraitAbathurBiomass=Allow all defense structures to regenerate HP in combat. Also increase their regeneration rate by 50%
+Button/Tooltip/DarkTemplarAiur=Aiur Faction<n/>Deadly warrior-assassin. Restore 6 shields with every attack.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/Disguise=Improves offensive capabilities of all defense structures.
+Button/Tooltip/EvolveGlialRegeneration=Increases the movement speed of <c val="ffff8a">Roaches</c> and <c val="ffff8a">Ravagers</c>.
+Button/Tooltip/Hydralisk2=Ranged attacker. Can morph into a Lurker.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/ImmortalShakuras=Nerazim Faction<n/>Assault Strider.<n/><n/><c val="FFFF8A">Can attack air and ground units.</c>
+Button/Tooltip/K5ArmorAura=Increases HP of all defense structures by 100 and armor by 2.
+Button/Tooltip/LarvaColony=Automatically uses Spawn Larvae on nearby Hatcheries. Must be placed right next to hatchery.
+Button/Tooltip/MuscularAugments=Hydralisk movement speed increased by 25%.
+Button/Tooltip/Nafash=The first of Kerrigan's Broodmothers. Seeks to create a Swarm of her own on Char.
+Button/Tooltip/NovaSnipe=Fires a psi-charged bullet, dealing 125 (+75 vs psionic) damage to target.
+Button/Tooltip/PickupGas100Text=<s val="Kicker_Gas">+75 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><n/><s val="Kicker_Gas">+25<IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/> For Allies
+Button/Tooltip/PickupGasProtoss100Text=<s val="Kicker_Gas">+75 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><n/><s val="Kicker_Gas">+25<IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/> For Allies
+Button/Tooltip/PickupMinerals100Text=<s val="Kicker_Minerals">+75 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/><n/><s val="Kicker_Minerals">+25 <IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/> For Allies
+Button/Tooltip/Predator2=Anti-infantry specialist that deals area damage with each attack.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/PsionicLift=Enemies in target area are stunned for <d ref="Behavior,PsionicLift,Duration"/> seconds and take 15 (30 vs light) damage over time.<n/><n/><c val="ffff8a">Does not stun heroic and massive units.</c>
+Button/Tooltip/RapidRegeneration=The Roach regenerates life very quickly. His regeneration is doubled and even faster while burrowed.
+Button/Tooltip/RavagerSpeed=Ravager speed increased by 22%.
+Button/Tooltip/Replicant=Robotic support unit. Can repair and heal protoss units.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/Roach2=Assault unit. Regenerates life quickly when burrowed. Can morph into a Ravager.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/RoguePurifierSupportDroneA=Prototype sniper vehicle.
+Button/Tooltip/StabilizedBile=Ravager gains +1 attack range.
+Button/Tooltip/ToxicNest=A creep generator. Creep feeds nearby Zerg structures.<n/><n/><c val="#ColorAttackInfo">Bonus: Zerg move faster on creep.</c>
+Button/Tooltip/UmojanCyclone=Mobile assault drone. Can use Lock On to quickly fire while moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Zergling2=Fast melee creature. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/ravagerrange=Increase the attack range of <c val="ffff8a">Ravagers</c> by +1.
+Chitinous DNA Implementation=Chitinous DNA Implementation
+DocInfo/Name=Just Another StarCraft II Mod
+Effect/Name/AcidSalivaLM2=Needle Spines (Missile)
+Effect/Name/AcidSalivaU2=Needle Spines
+Effect/Name/AnnihilatorAttackSet=Annihilator Attack Set
+Effect/Name/BroodMotherAirLM2=Brood Mother Ground LM
+Effect/Name/CerberusFlamethrowerAB=Cerberus Flamethrower AB
+Effect/Name/CerberusFlamethrowerDamage=Cerberus Flamethrower Damage
+Effect/Name/CerberusFlamethrowerSearch=Cerberus Flamethrower Search
+Effect/Name/Claws2=Claws (Damage)
+Effect/Name/CycloneAttackWeaponDamage2=Cyclone Attack Weapon Damage
+Effect/Name/CycloneAttackWeaponLaunchMissileLeft2=Cyclone Attack Weapon Launch Missile Left
+Effect/Name/CycloneAttackWeaponLaunchMissileLeftSet2=Cyclone Attack Weapon Launch Missile Left Set
+Effect/Name/CycloneAttackWeaponLaunchMissileRight2=Cyclone Attack Weapon Launch Missile Right
+Effect/Name/CycloneAttackWeaponLaunchMissileRightSet2=Cyclone Attack Weapon Launch Missile Right Set
+Effect/Name/CycloneAttackWeaponLaunchMissileSwitch2=Cyclone Attack Weapon Launch Missile Switch
+Effect/Name/CycloneLaunchPersistent=Cyclone Launch Persistent
+Effect/Name/CycloneWeaponLaunchMissileAlternateAB2=Cyclone Weapon Launch Missile Alternate AB
+Effect/Name/CycloneWeaponLaunchMissileAlternateRB2=Cyclone Weapon Launch Missile Alternate RB
+Effect/Name/HellionTank2=Umojan Predator
+Effect/Name/HotSBanelingExplodeLargeSearchAll2=Toxic Nest Explode Search All
+Effect/Name/HotSBanelingExplodeLargeSearchDamage2=Toxic Nest Explode Search Damage
+Effect/Name/HotSRemoveBanelingExplodeLargeDeathBehavior2=Remove Toxic Nest Explode Death Behavior
+Effect/Name/HydraliskFrenzyApplyBehavior2=Hydralisk Frenzy Apply Behavior
+Effect/Name/KerriganEpilogueDamageAuraTargetAB2=Zagara Agression Aura Target
+Effect/Name/NaktulSummonNydusDamage=Naktul Summon Nydus Damage
+Effect/Name/NeedleSpinesDamage2=Needle Spines
+Effect/Name/NeedleSpinesLaunchMissile2=Needle Spines
+Effect/Name/QueenBurstHeal2=Naktul Burst Heal
+Effect/Name/QueenBurstHealApplyBehavior2=Naktul Burst Heal Apply Behavior
+Effect/Name/RenegadeLongboltMissileU=Freya Missile Launchers
+Effect/Name/SikariAttackSet=Sikari Attack Set
+Effect/Name/ToxicNestExplodeSet=Toxic Nest Explode Set
+Effect/Name/UmojanCycloneSearch=Umojan Cyclone Search
+Effect/Name/ZaGaraAcidSpinesDamage2=Acid Spines (Damage)
+Effect/Name/ZaGaraAcidSpinesLaunchMissile2=Acid Spines (Launch Missile)
+Effect/Name/ZagaraAgressionAuraSearch=Zagara Agression Aura Search
+Essence Beast=Essence Beast
+Essence Devourer=Essence Beast
+Experimental Shield Generator=Experimental Shield Generator
+Glaive=Hydralisk
+GlaiveStrain=Glaive Strain
+Krotonn=Krotonn
+Param/Expression/lib_D8BB74C6_0A626AD5=~C~~A~/~B~
+Param/Expression/lib_D8BB74C6_10F15188=~A~
+Param/Expression/lib_D8BB74C6_18718C7C=~A~'s Minerals
+Param/Expression/lib_D8BB74C6_20F824E6=~A~'s Vespene
+Param/Expression/lib_D8BB74C6_33BDB053=~C~~A~/~B~
+Param/Expression/lib_D8BB74C6_50E8AE0A=~C~~A~/~B~
+Param/Expression/lib_D8BB74C6_DEA8E2A1=~A~'s Supply
+Param/Value/lib_D8BB74C6_04D1671B=[Allies] <c val="f1598d">Nafash</c>: 
+Param/Value/lib_D8BB74C6_0C00953D=So be it.
+Param/Value/lib_D8BB74C6_0DBBDE58=What the hell are you doing, Kerrigan?
+Param/Value/lib_D8BB74C6_177CE4FA=Are you trying to betray us, my queen?
+Param/Value/lib_D8BB74C6_23ED9FB4=I hope you've calmed down, Kerrigan.
+Param/Value/lib_D8BB74C6_2C51282E=[Allies] <c val="bd58e3">Zagara</c>: 
+Param/Value/lib_D8BB74C6_3663E195=<c val="FF0000">
+Param/Value/lib_D8BB74C6_37B20476=[Allies] <c val="f1598d">Nafash</c>: 
+Param/Value/lib_D8BB74C6_3856C553=My queen, why are you attacking my brood?
+Param/Value/lib_D8BB74C6_3F604087=[Allies] <c val="449825">Dehaka</c>: 
+Param/Value/lib_D8BB74C6_40854760=[Allies] <c val="bd58e3">Zagara</c>: 
+Param/Value/lib_D8BB74C6_41146A22=[Allies] <c val="3f3f3f">Stukov</c>: 
+Param/Value/lib_D8BB74C6_49FB0C47=I think you've realized your mistakes, my queen. 
+Param/Value/lib_D8BB74C6_4B60A8E6=My queen, will you not betray us again?
+Param/Value/lib_D8BB74C6_50258FA5=Survival of the fittest.
+Param/Value/lib_D8BB74C6_509CAF07=[Allies] <c val="bd58e3">Zagara</c>: 
+Param/Value/lib_D8BB74C6_5437EFED=Nafash
+Param/Value/lib_D8BB74C6_548A2CCE='s Minerals
+Param/Value/lib_D8BB74C6_5A404FC3=[Allies] <c val="449825">Dehaka</c>: 
+Param/Value/lib_D8BB74C6_5C929157=[Allies] <c val="90ee90">Naktul</c>: 
+Param/Value/lib_D8BB74C6_5D7BE01E=<c val="FF0000">
+Param/Value/lib_D8BB74C6_61E463DF=Don't do what you'll regret, my queen.
+Param/Value/lib_D8BB74C6_68B22358=[Allies] <c val="449825">Dehaka</c>: 
+Param/Value/lib_D8BB74C6_74807CD1=Are you trying to steal my essence?
+Param/Value/lib_D8BB74C6_756BABDA=The wind has stopped and the river flows.
+Param/Value/lib_D8BB74C6_7819261B=Zagara
+Param/Value/lib_D8BB74C6_80373CD0='s Minerals
+Param/Value/lib_D8BB74C6_812D6511=Naktul
+Param/Value/lib_D8BB74C6_821557DC=[Allies] <c val="90ee90">Naktul</c>: 
+Param/Value/lib_D8BB74C6_83588EA0=Dehaka
+Param/Value/lib_D8BB74C6_86D06402=Is this another trial, my queen?
+Param/Value/lib_D8BB74C6_89A6D576=[Allies] <c val="90ee90">Naktul</c>: 
+Param/Value/lib_D8BB74C6_8ED0649B='s Vespene
+Param/Value/lib_D8BB74C6_957DCD4F=[Allies] <c val="f1598d">Nafash</c>: 
+Param/Value/lib_D8BB74C6_B2DA0232=Just like old times, да?
+Param/Value/lib_D8BB74C6_B762BF46=Attack Path
+Param/Value/lib_D8BB74C6_BAC4B91A=[Allies] <c val="3f3f3f">Stukov</c>: 
+Param/Value/lib_D8BB74C6_BB8F90A4=[Allies] <c val="3f3f3f">Stukov</c>: 
+Param/Value/lib_D8BB74C6_C9FBBC16=I will consume your essence.
+Param/Value/lib_D8BB74C6_E9DC64F1=Is the trial over, my queen?
+Primal Carapace=Primal Carapace
+Primal Strain=Primaling Strain
+Primaling=Zergling
+RequirementNode/Tooltip/Eq1542947369CountUpgradeZergMeleeDamageLevel1CompleteOnly1=Zerg Melee Attacks Level 1
+RequirementNode/Tooltip/Eq1695466224CountUpgradeZergArmorLevel1CompleteOnly1=Zerg Ground Carapace Level 1
+RequirementNode/Tooltip/Eq2358983352CountUpgradeZergRangeDamageLevel2CompleteOnly1=Zerg Missile Attacks Level 2
+RequirementNode/Tooltip/Eq2480428841CountUpgradeZergMeleeDamageLevel2CompleteOnly1=Zerg Melee Attacks Level 2
+RequirementNode/Tooltip/Eq2966286162CountUpgradeZergRangeDamageLevel1CompleteOnly1=Zerg Missile Attacks Level 1
+RequirementNode/Tooltip/Eq4090499265CountUpgradeZergArmorLevel2CompleteOnly1=Zerg Ground Carapace Level 2
+UI/TeamColor09=Violet
+UI/TeamColor16=Nafash Red
+UI/TeamColor17=Zagara Violet
+Unit/LifeArmorName/PrimalZergArmor=Primal Carapace
+Unit/Name/ColossusPurifier=Scorcher
+Unit/Name/DehakaBarracks=Primal Warden
+Unit/Name/DehakaCoopReviveCocoon=Dehaka Cave
+Unit/Name/DehakaDakrunStructure=Dakrun Cave
+Unit/Name/DehakaDrone=Primal Gatherer
+Unit/Name/DehakaGlevigStructure=Glevig Cave
+Unit/Name/DehakaHatchery=Primal Lord
+Unit/Name/DehakaMurvarStructure=Murvar Cave
+Unit/Name/DehakaNydusDestroyer=Acid Wurm
+Unit/Name/DehakaTrainEgg=Primal Egg
+Unit/Name/DehakaUltraliskLevel2=Ultralisk
+Unit/Name/DehakaUltraliskLevel2Burrowed=Ultralisk
+Unit/Name/DehakaZerglingLevel2Burrowed=Zergling
+Unit/Name/HotSTorrasque=Torrasque
+Unit/Name/Hydralisk2=Hydralisk
+Unit/Name/ImmortalAiur=Undying
+Unit/Name/KerriganReviveCocoon=Hero's Cocoon
+Unit/Name/LarvaColony=Larva Colony
+Unit/Name/Nafash=Nafash
+Unit/Name/NydusNetwork=Nydus Network
+Unit/Name/Predator2=Umojan Predator
+Unit/Name/PrimalFlyer=Aranatar
+Unit/Name/PrimalHydralisk=Sikari
+Unit/Name/PrimalMutalisk=Cyphia
+Unit/Name/PrimalRoach=Aguna
+Unit/Name/PrimalTownHallUprooted=Brood Guardian
+Unit/Name/PrimalUltralisk=Chitan
+Unit/Name/PrimalZergling=Krotonn
+Unit/Name/Replicant=Clarion
+Unit/Name/Roach2=Roach
+Unit/Name/RoguePurifierSupportDroneA=Optecton
+Unit/Name/StalkerShakuras=Shadow Hunter
+Unit/Name/TitanMechAssault=Archangel class Titan Mech
+Unit/Name/TitanMechFighter=Archangel class Titan Mech
+Unit/Name/ToxicNest=Toxic Nest
+Unit/Name/UmojanCyclone=Umojan Cyclone
+Unit/Name/ZaGaraAcidSpinesMissile2=Acid Spines Missile
+Unit/Name/ZagaraVoidCoop=Zagara
+Unit/Name/ZealotAiur=Praetorian
+Unit/Name/Zergling2=Zergling
+UnitSubtitle/NydusStrain=<n/>Nydus Strain
+UnitSubtitle/PrimalMutalisk=Essence Beast
+UnitSubtitle/PrimalRoach=Essence Beast
+UnitSubtitle/PrimalUltralisk=Essence Beast
+Upgrade/Name/AgressiveRegeneration=Agressive Regeneration
+Upgrade/Name/BarbarousMutation=Barbarous Mutation
+Upgrade/Name/ChitinousImplementation=Chitinous DNA Implementation
+Upgrade/Name/CovertOpsUpgrade=Covert Ops Upgrade
+Upgrade/Name/DominionFaction=Dominion Faction
+Upgrade/Name/InfantryArmorLevel1=Infantry Armor Level 1
+Upgrade/Name/InfantryArmorLevel2=Infantry Armor Level 2
+Upgrade/Name/InfantryArmorLevel3=Infantry Armor Level 3
+Upgrade/Name/InfantryDamageLevel1=Infantry Damage Level 1
+Upgrade/Name/InfantryDamageLevel2=Infantry Damage Level 2
+Upgrade/Name/InfantryDamageLevel3=Infantry Damage Level 3
+Upgrade/Name/NafashUpgrade=Nafash Upgrade
+Upgrade/Name/ShipArmorLevel1=Ship Armor Level 1
+Upgrade/Name/ShipArmorLevel2=Ship Armor Level 2
+Upgrade/Name/ShipArmorLevel3=Ship Armor Level 3
+Upgrade/Name/ShipDamageLevel1=Ship Damage Level 1
+Upgrade/Name/ShipDamageLevel2=Ship Damage Level 2
+Upgrade/Name/ShipDamageLevel3=Ship Damage Level 3
+Upgrade/Name/UmojanUpgrade=Umojan Skins Upgrade
+Upgrade/Name/UnknownUpgrade=Naktul Upgrade
+Upgrade/Name/VehicleArmorLevel1=Vehicle Armor Level 1
+Upgrade/Name/VehicleArmorLevel2=Vehicle Armor Level 2
+Upgrade/Name/VehicleArmorLevel3=Vehicle Armor Level 3
+Upgrade/Name/VehicleDamageLevel1=Vehicle Damage Level 1
+Upgrade/Name/VehicleDamageLevel2=Vehicle Damage Level 2
+Upgrade/Name/VehicleDamageLevel3=Vehicle Damage Level 3
+Upgrade/Name/ZagaraUpgrade=Zagara Upgrade
+Upgrade/Name/ZergArmorLevel1=ZergArmor Level 1
+Upgrade/Name/ZergArmorLevel2=ZergArmor Level 2
+Upgrade/Name/ZergArmorLevel3=ZergArmor Level 3
+Upgrade/Name/ZergMeleeDamageLevel1=ZergMelee Damage Level 1
+Upgrade/Name/ZergMeleeDamageLevel12=Zerg Melee Damage Level 1
+Upgrade/Name/ZergMeleeDamageLevel2=ZergMelee Damage Level 2
+Upgrade/Name/ZergMeleeDamageLevel3=ZergMelee Damage Level 3
+Upgrade/Name/ZergRangeDamageLevel1=ZergRange Damage Level 1
+Upgrade/Name/ZergRangeDamageLevel2=ZergRange Damage Level 2
+Upgrade/Name/ZergRangeDamageLevel3=ZergRange Damage Level 3
+Upgrade/Name/ravagerrange=Stabilized Plasma
+Wasp=Roach
+WaspStrain=Wasp Strain
+Weapon/Name/AcidSaliva2=Acid Saliva
+Weapon/Name/Annihilator=Shadow Cannons
+Weapon/Name/DehakaHydraliskLevel2Melee=Hydralisk Melee
+Weapon/Name/DehakaHydraliskLevel2NeedleSpines=Glaive wurm
+Weapon/Name/DehakaRoachLevel2=Acid Sting
+Weapon/Name/DehakaRoachLevel2Melee=Needle Spines
+Weapon/Name/DehakaZerglingLevel2=Claws
+Weapon/Name/GoliathGUpgraded=GoliathGUpgraded
+Weapon/Name/HydraliskMelee2=Melee
+Weapon/Name/KelmorianMinerGaussRifle=Gauss Carbine
+Weapon/Name/MengskMarine=C-15 Chemical Gauss Rifle
+Weapon/Name/MengskSiegeTank=90mm Royal Cannon
+Weapon/Name/MengskSiegeTankSieged=Royal Shock Cannon
+Weapon/Name/NeedleSpines2=Needle Spines
+Weapon/Name/PrimalRoach=Claws
+Weapon/Name/RaynorLabWeapon=С-17 Experimental Energy Rifle
+Weapon/Name/RenegadeLongboltMissile=Freya Missiles Launcher
+Weapon/Name/ReplicantWeapon=9000 volts of pain
+Weapon/Name/RoachMelee2=Needle Spines (Melee)
+Weapon/Name/RoguePurifierSupportDroneAWeapon=Repulsor Weapon
+Weapon/Name/TyphoonMissilePod2=Enterprise Missile Launcher
+Weapon/Name/TyphoonMissilePod21=Enterprise Missile Launcher
+Weapon/Name/UmojanPredatorWeapon=Cerberus Flamethrower
+Weapon/Name/ZaGaraAcidSpines2=Acid Spines

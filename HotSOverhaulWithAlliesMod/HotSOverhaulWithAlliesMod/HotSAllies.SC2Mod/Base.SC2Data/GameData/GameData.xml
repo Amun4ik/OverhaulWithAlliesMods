@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CGame id="Dflt">
+        <TeamColors Name="UI/TeamColor16" UserChoice="1" AttributeId="tc16">
+            <Value index="Diffuse" value="0.905800,0.278300,0.317600,1.000000"/>
+            <Value index="Emissive" value="0.745100,0.062700,0.086100,1.000000"/>
+            <Value index="Selected" value="0.941176,0.235294,0.235294,1.000000"/>
+            <Value index="Attacked" value="1.000000,1.000000,0.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors>
+            <Name value="UI/TeamColor17"/>
+            <UserChoice value="1"/>
+            <MinPlayerCount value="8"/>
+            <AttributeId value="tc17"/>
+            <Value index="Diffuse" value="0.221600,0.103900,0.788200,1.000000"/>
+            <Value index="Emissive" value="0.121569,0.003922,0.788235,1.000000"/>
+            <Value index="Selected" value="0.537255,0.462745,0.996078,1.000000"/>
+            <Value index="Attacked" value="1.000000,0.200000,0.200000,1.000000"/>
+        </TeamColors>
+    </CGame>
+</Catalog>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementAnd id="AndEq1542947369CountUpgradeZergMeleeDamageLevel1CompleteOnly1CountUnitAlias_LairCompleteOnly1515591279TechTreeCheat">
+        <OperandArray value="Eq1542947369CountUpgradeZergMeleeDamageLevel1CompleteOnly1"/>
+        <OperandArray value="CountUnitAlias_LairCompleteOnly1515591279TechTreeCheat"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndEq1695466224CountUpgradeZergArmorLevel1CompleteOnly1CountUnitAlias_LairCompleteOnly1515591279TechTreeCheat">
+        <OperandArray value="Eq1695466224CountUpgradeZergArmorLevel1CompleteOnly1"/>
+        <OperandArray value="CountUnitAlias_LairCompleteOnly1515591279TechTreeCheat"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndEq2358983352CountUpgradeZergRangeDamageLevel2CompleteOnly1CountUnitHiveCompleteOnlyTechTreeCheat">
+        <OperandArray value="Eq2358983352CountUpgradeZergRangeDamageLevel2CompleteOnly1"/>
+        <OperandArray value="CountUnitHiveCompleteOnlyTechTreeCheat"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndEq2480428841CountUpgradeZergMeleeDamageLevel2CompleteOnly1CountUnitHiveCompleteOnlyTechTreeCheat">
+        <OperandArray value="Eq2480428841CountUpgradeZergMeleeDamageLevel2CompleteOnly1"/>
+        <OperandArray value="CountUnitHiveCompleteOnlyTechTreeCheat"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndEq2966286162CountUpgradeZergRangeDamageLevel1CompleteOnly1CountUnitAlias_LairCompleteOnly1515591279TechTreeCheat">
+        <OperandArray value="Eq2966286162CountUpgradeZergRangeDamageLevel1CompleteOnly1"/>
+        <OperandArray value="CountUnitAlias_LairCompleteOnly1515591279TechTreeCheat"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndEq4090499265CountUpgradeZergArmorLevel2CompleteOnly1CountUnitHiveCompleteOnlyTechTreeCheat">
+        <OperandArray value="Eq4090499265CountUpgradeZergArmorLevel2CompleteOnly1"/>
+        <OperandArray value="CountUnitHiveCompleteOnlyTechTreeCheat"/>
+    </CRequirementAnd>
+    <CRequirementCountUpgrade id="CountUpgradeAgressiveRegenerationQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AgressiveRegeneration" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBarbarousMutationQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BarbarousMutation" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeChitinousImplementationQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ChitinousImplementation" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCovertOpsUpgradeCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CovertOpsUpgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeGlialReconstitutionCompleteOnlyTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="GlialReconstitution" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHydraliskSpeedUpgradeCompleteOnlyTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="HydraliskSpeedUpgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUmojanUpgradeCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UmojanUpgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergArmorLevel1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergArmorLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergArmorLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergArmorLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergArmorLevel2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergArmorLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergArmorLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergArmorLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergArmorLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergArmorLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergMeleeDamageLevel1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergMeleeDamageLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergMeleeDamageLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergMeleeDamageLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergMeleeDamageLevel2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergMeleeDamageLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergMeleeDamageLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergMeleeDamageLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergMeleeDamageLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergMeleeDamageLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergRangeDamageLevel1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergRangeDamageLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergRangeDamageLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergRangeDamageLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergRangeDamageLevel2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergRangeDamageLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergRangeDamageLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergRangeDamageLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZergRangeDamageLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZergRangeDamageLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgraderavagerrangeCompleteOnlyTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ravagerrange" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgraderavagerrangeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ravagerrange" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementEq id="Eq1542947369CountUpgradeZergMeleeDamageLevel1CompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeZergMeleeDamageLevel1CompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq1695466224CountUpgradeZergArmorLevel1CompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeZergArmorLevel1CompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq2358983352CountUpgradeZergRangeDamageLevel2CompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeZergRangeDamageLevel2CompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq2480428841CountUpgradeZergMeleeDamageLevel2CompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeZergMeleeDamageLevel2CompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq2966286162CountUpgradeZergRangeDamageLevel1CompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeZergRangeDamageLevel1CompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq4090499265CountUpgradeZergArmorLevel2CompleteOnly1">
+        <OperandArray index="0" value="CountUpgradeZergArmorLevel2CompleteOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeAgressiveRegenerationQueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeAgressiveRegenerationQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeBarbarousMutationQueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeBarbarousMutationQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeChitinousImplementationQueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeChitinousImplementationQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeZergArmorLevel1QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeZergArmorLevel1QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeZergArmorLevel2QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeZergArmorLevel2QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeZergArmorLevel3QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeZergArmorLevel3QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeZergMeleeDamageLevel1QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeZergMeleeDamageLevel1QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeZergMeleeDamageLevel2QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeZergMeleeDamageLevel2QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeZergMeleeDamageLevel3QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeZergMeleeDamageLevel3QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeZergRangeDamageLevel1QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeZergRangeDamageLevel1QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeZergRangeDamageLevel2QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeZergRangeDamageLevel2QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeZergRangeDamageLevel3QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeZergRangeDamageLevel3QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementNot id="NotCountUpgraderavagerrangeQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgraderavagerrangeQueuedOrBetter"/>
+    </CRequirementNot>
+</Catalog>
