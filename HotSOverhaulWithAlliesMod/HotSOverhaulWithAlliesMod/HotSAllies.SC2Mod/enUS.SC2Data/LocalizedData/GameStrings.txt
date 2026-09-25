@@ -1,4 +1,6 @@
-﻿Abil/Name/BurrowCreepTumorDown2=Burrow
+﻿Abil/Name/AlliedAIOrderAttack=AlliedAIOrderAttack
+Abil/Name/AlliedAIOrderDefend=AlliedAIOrderDefend
+Abil/Name/BurrowCreepTumorDown2=Burrow
 Abil/Name/Explode2=Explode
 Abil/Name/MorphRoachToRavager=Morph (Roach -> Ravager)
 Abil/Name/NafashFrenzy=Nafash Frenzy
@@ -21,6 +23,9 @@ Behavior/Tooltip/NafashFrenzy=Attack speed increased.
 Behavior/Tooltip/QueenBurstHeal2=Regenerating life.
 Behavior/Tooltip/ZagaraAgressionAura=This unit's attack speed and movement speed has been increased.
 Behavior/Tooltip/ZerglingArmorShred=Zergling pierced armor of target unit.
+Button/Name/AlliedAIAttack=AlliedAIAttack
+Button/Name/AlliedAIDefend=AlliedAIDefend
+Button/Name/CommanderControllerIcon1=Naktul
 Button/Name/CommanderTraitAbathurBiomass=Agressive Regeneration
 Button/Name/Disguise=Barbarous Mutation
 Button/Name/K5ArmorAura=Chitinous DNA Implementation
@@ -111,6 +116,7 @@ Param/Value/lib_D8BB74C6_0DBBDE58=What the hell are you doing, Kerrigan?
 Param/Value/lib_D8BB74C6_177CE4FA=Are you trying to betray us, my queen?
 Param/Value/lib_D8BB74C6_23ED9FB4=I hope you've calmed down, Kerrigan.
 Param/Value/lib_D8BB74C6_2C51282E=[Allies] <c val="bd58e3">Zagara</c>: 
+Param/Value/lib_D8BB74C6_34C24FE6=<s val="HeaderExtendedTemplate">Alt+C</s>
 Param/Value/lib_D8BB74C6_3663E195=<c val="FF0000">
 Param/Value/lib_D8BB74C6_37B20476=[Allies] <c val="f1598d">Nafash</c>: 
 Param/Value/lib_D8BB74C6_3856C553=My queen, why are you attacking my brood?
@@ -139,6 +145,7 @@ Param/Value/lib_D8BB74C6_86D06402=Is this another trial, my queen?
 Param/Value/lib_D8BB74C6_89A6D576=[Allies] <c val="90ee90">Naktul</c>: 
 Param/Value/lib_D8BB74C6_8ED0649B='s Vespene
 Param/Value/lib_D8BB74C6_957DCD4F=[Allies] <c val="f1598d">Nafash</c>: 
+Param/Value/lib_D8BB74C6_AFE8DA5C=<s val="AllianceHeader">Command Allies</s><n/><n/>Use "Place Beacon" to set the target area your allies will send their units to.<n/><n/>The Strategy menu allows you to decide whether your allies will send their units at the enemy or stay home and defend.
 Param/Value/lib_D8BB74C6_B2DA0232=Just like old times, да?
 Param/Value/lib_D8BB74C6_B762BF46=Attack Path
 Param/Value/lib_D8BB74C6_BAC4B91A=[Allies] <c val="3f3f3f">Stukov</c>: 
@@ -158,6 +165,7 @@ UI/TeamColor09=Violet
 UI/TeamColor16=Nafash Red
 UI/TeamColor17=Zagara Violet
 Unit/LifeArmorName/PrimalZergArmor=Primal Carapace
+Unit/Name/AlliedAIOrderPanel=Allies Control Panel
 Unit/Name/ColossusPurifier=Scorcher
 Unit/Name/DehakaBarracks=Primal Warden
 Unit/Name/DehakaCoopReviveCocoon=Dehaka Cave

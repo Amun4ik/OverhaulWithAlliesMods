@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectTarget id="AlliedAIOrderAttack">
+        <Effect index="0" value="DummyEffectTarget"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="Abil/AlliedAICancelBeacon"/>
+            <Cooldown Link="Abil/AlliedAICancelBeacon" TimeUse="2"/>
+        </Cost>
+        <Range value="1000"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAIAttack"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="250mmStrikeCannons">
         <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="AlliedAIOrderDefend">
+        <Effect index="0" value="DummyEffectTarget"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="Abil/AlliedAICancelBeacon"/>
+            <Cooldown Link="Abil/AlliedAICancelBeacon" TimeUse="10"/>
+        </Cost>
+        <Range value="1000"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAIDefend"/>
     </CAbilEffectTarget>
     <CAbilTrain id="BarracksTrain">
         <InfoArray index="Train5">

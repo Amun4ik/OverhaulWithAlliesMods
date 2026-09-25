@@ -120,6 +120,22 @@
         <GlossaryPriority value="4"/>
         <TauntDuration index="Dance" value="5"/>
     </CUnit>
+    <CUnit id="AlliedAIOrderPanel">
+        <FlagArray index="Invulnerable" value="1"/>
+        <AbilArray Link="AlliedAIOrderDefend"/>
+        <AbilArray Link="AlliedAIOrderAttack"/>
+        <CardLayouts>
+            <LayoutButtons Face="CommanderControllerIcon1" Type="Submenu" SubmenuCardId="0002" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="AlliedAISwarmy" Type="AbilCmd" AbilCmd="AlliedAIStrategySwarm,255" Row="2" Column="1"/>
+            <LayoutButtons Face="AlliedAIPower" Type="AbilCmd" AbilCmd="AlliedAIStrategyPower,255" Row="2" Column="2"/>
+            <LayoutButtons Face="AlliedAIDefend" Type="AbilCmd" AbilCmd="AlliedAIOrderDefend,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="AlliedAIAttack" Type="AbilCmd" AbilCmd="AlliedAIOrderAttack,Execute" Row="0" Column="0"/>
+        </CardLayouts>
+        <CargoSize value="1"/>
+    </CUnit>
     <CUnit id="Adept">
         <LifeRegenDelay value="10"/>
         <LifeRegenRate value="0.1484"/>

@@ -80,6 +80,10 @@ text[17] libD8BB74C6_gv_aIResourcePanelCommanderName;
 int[17] libD8BB74C6_gv_aIResourcePanelMineralsLabel;
 int[17] libD8BB74C6_gv_aIResourcePanelVespeneLabel;
 int[17] libD8BB74C6_gv_aIResourcePanelSupplyLabel;
+unit libD8BB74C6_gv_aIController;
+int libD8BB74C6_gv_aIControllerDialog;
+int libD8BB74C6_gv_aIControllerButton;
+bool libD8BB74C6_gv_alliedUIActive;
 
 // Function Declarations
 void libD8BB74C6_gf_RescueUnitforAI (unit lp_cHOSEN_UNIT, point lp_tARGET_POINT, int lp_cHOSEN_PLAYER, bool lp_iMMIDIATE_ATTACK);
@@ -104,6 +108,7 @@ void libD8BB74C6_gf_CreateAIResourcePanel (int lp_player, int lp_position, strin
 void libD8BB74C6_gf_ShowHideAIResourcePanel (int lp_player, bool lp_showHide);
 void libD8BB74C6_gf_DestroyAIResourcePanel (int lp_player);
 string libD8BB74C6_gf_AIResourcePanelGetImageFromStyle (int lp_style);
+void libD8BB74C6_gf_CreateAIController ();
 
 // Trigger Declarations
 trigger libD8BB74C6_gt_Disableachievments;
@@ -143,6 +148,12 @@ trigger libD8BB74C6_gt_ZagaraBanelingsDefensive;
 trigger libD8BB74C6_gt_ZagaraUseHunterKillersOffensive;
 trigger libD8BB74C6_gt_ZagaraUseHunterKillersDefensive;
 trigger libD8BB74C6_gt_AIResourcePanelUpdater;
+trigger libD8BB74C6_gt_NaktulFortify;
+trigger libD8BB74C6_gt_InitAlliedAIUI;
+trigger libD8BB74C6_gt_AlliedAIClicked;
+trigger libD8BB74C6_gt_AlliedAIHotkey;
+trigger libD8BB74C6_gt_AlliedAIDeselected;
+trigger libD8BB74C6_gt_AlliedAIDeselectedHotkey;
 
 // Library Initialization
 void libD8BB74C6_InitVariables ();

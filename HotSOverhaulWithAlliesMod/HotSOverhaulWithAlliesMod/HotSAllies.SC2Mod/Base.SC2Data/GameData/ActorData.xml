@@ -65,6 +65,38 @@
         <DeathArray index="Normal" ModelLink="DehakaTrainEgg" SoundLink="PrimalEgg_PreDeathExplosion"/>
         <SoundArray index="What" value="Egg_What"/>
     </CActorUnit>
+    <CActorUnit id="AlliedAIOrderPanel" parent="ZergBuildingEx" unitName="AlliedAIOrderPanel">
+        <Macros value="MacroTownhallDeco_Zerg"/>
+        <Macros value="ZergHatcheryPlayerDecalMacro"/>
+        <Macros value="SprayHelperMacro"/>
+        <Macros value="ZerglingRespawnAnim"/>
+        <AcceptedHostedPropTransfers index="Decal" value="0"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom Hatchery; MorphTo Lair" Send="Create ZergHatcheryToLair"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom Hatchery; MorphTo Lair" Send="AnimGroupApply B"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom Hatchery; MorphTo Lair" Send="AnimGroupRemove B"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom Hatchery; MorphTo Lair" Send="AnimClearAllBut Stand"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom Hatchery; MorphTo Lair" Send="AnimBaselineStart"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom Hatchery; MorphTo Lair" Send="AnimPlay MorphCancel Cover,End,A"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Hatchery; MorphTo Lair" Send="Destroy"/>
+        <On Terms="UnitBirth.AlliedAIOrderPanel" Send="Create PlayerLogoDoodadList"/>
+        <On Terms="UnitBirth.AlliedAIOrderPanel; PlayerHasClanDecal" Send="Create ZergClanFlag"/>
+        <On Terms="UnitBirth.AlliedAIOrderPanel; PlayerHasTrophy" Send="Create ZergPlayerTrophy"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HasZergGenericDeath" Send="DeathCustomize Detached"/>
+        <Model value="Invisible"/>
+        <BuildModel value="Invisible"/>
+        <PlacementModel value="Invisible"/>
+        <PortraitModel value="Overlord_Webby_Portrait"/>
+        <BarOffset value="135"/>
+        <BarWidth value="200"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\black.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\ui_glues_help_armyicon_zerg.dds"/>
+        <UnitIcon value="Assets\Textures\ui_glues_help_armyicon_zerg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\black.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <!--                                                                                         -->
     <!-- Armory ................................................................................ -->
     <!--                                                                                         -->
@@ -156,6 +188,12 @@
         <StageArray AnimProps="Build,C,Stand"/>
         <StageArray AnimProps="Build,D"/>
     </CActorProgress>
+    <CActorUnit id="AllyControl" parent="PolygonBase" unitName="AllyControl">
+        <Model value="ShapePyramid"/>
+        <BuildModel value="ShapePyramid"/>
+        <DeathArray index="Normal" ModelLink="ShapePyramid"/>
+        <PlacementModel value="ShapePyramid"/>
+    </CActorUnit>
     <CActorSound id="Zerg_BuildingMorphStart">
         <On Terms="Abil.SIBasicBuild.BuiltStart" Send="Create"/>
         <On Terms="Abil.ZagaraVoidCoopCreepMaster.BuiltStart" Send="Create"/>

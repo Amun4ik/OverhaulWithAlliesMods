@@ -3,6 +3,7 @@ Abil/EditorPrefix/Explode2=Toxic Nest -
 Abil/EditorPrefix/MorphRoachToRavager=Roach -
 Abil/EditorPrefix/QueenBuild2=Naktul -
 Abil/EditorPrefix/SpawnLarva2=Larva colony -
+Actor/Name/AllyControl=AllyControl
 Actor/Name/CerberusFlamethrowerAttack=CerberusFlamethrowerAttack
 Actor/Name/Cyclone2=Cyclone
 Actor/Name/CycloneMissile2=Cyclone Missile

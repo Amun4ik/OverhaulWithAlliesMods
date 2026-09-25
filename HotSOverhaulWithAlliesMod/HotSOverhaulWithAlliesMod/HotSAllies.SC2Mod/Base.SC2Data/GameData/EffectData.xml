@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectSet id="DummyEffectTarget">
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
     <CEffectDamage id="ATALaserBatteryU">
         <AttributeBonus index="Light" value="4"/>
         <Amount value="8"/>

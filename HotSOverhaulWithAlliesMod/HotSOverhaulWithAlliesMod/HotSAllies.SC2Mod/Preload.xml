@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Preload>
+<Asset path="assets\textures\ui_tipicon_campaign_zergstructure.dds" Type="Image"/>
 <Asset path="assets\textures\icon-mineral-nobg.dds" Type="Image"/>
 <Abil id="CreepTumorBuild"/>
 <Abil id="QueenBuild2"/>
@@ -21,6 +22,8 @@
 <Sound id="Zerg_BurrowLarge"/>
 <Sound id="NydusWorm_Unload"/>
 <Sound id="NydusWorm_Birth"/>
+<Sound id="UI_PushButtonSelect"/>
+<Sound id="zMission_Lab03_BroodMother01_020"/>
 <Unit id="Hatchery"/>
 <Unit id="CreepTumor"/>
 <Unit id="Extractor"/>
@@ -43,4 +46,5 @@
 <Unit id="Roach2"/>
 <Unit id="Nafash"/>
 <Unit id="Zergling2"/>
+<Unit id="AlliedAIOrderPanel"/>
 </Preload>

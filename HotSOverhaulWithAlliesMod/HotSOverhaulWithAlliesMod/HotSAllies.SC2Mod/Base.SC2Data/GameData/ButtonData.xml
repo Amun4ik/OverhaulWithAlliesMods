@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="AlliedAIAttack">
+        <Icon value="Assets\Textures\command_attack_ac.dds"/>
+        <AlertIcon value="Assets\Textures\command_attack_ac.dds"/>
+    </CButton>
+    <CButton id="AlliedAIDefend">
+        <Icon value="Assets\Textures\command_defend_ac.dds"/>
+        <AlertIcon value="Assets\Textures\command_defend_ac.dds"/>
+    </CButton>
+    <CButton id="CommanderControllerIcon1">
+        <Icon value="Assets\Textures\btn-commander-naktul.dds"/>
+        <AlertIcon value="Assets\Textures\btn-commander-naktul.dds"/>
+    </CButton>
     <CButton id="CommanderTraitAbathurBiomass"/>
     <CButton id="Disguise"/>
     <CButton id="GroovedSpines2">

@@ -59,6 +59,8 @@ void libD8BB74C6_InitVariables () {
     for (init_i = 0; init_i <= 16; init_i += 1) {
         libD8BB74C6_gv_aIResourcePanelSupplyLabel[init_i] = c_invalidDialogControlId;
     }
+    libD8BB74C6_gv_aIControllerDialog = c_invalidDialogId;
+    libD8BB74C6_gv_aIControllerButton = c_invalidDialogControlId;
 }
 
 // Presets
@@ -935,6 +937,28 @@ string libD8BB74C6_gf_AIResourcePanelGetImageFromStyle (int lp_style) {
     return "Assets\\Textures\\ui_console_tooltip_background_defaultprotoss.dds";
 }
 
+trigger auto_libD8BB74C6_gf_CreateAIController_Trigger = null;
+
+void libD8BB74C6_gf_CreateAIController () {
+    if (auto_libD8BB74C6_gf_CreateAIController_Trigger == null) {
+        auto_libD8BB74C6_gf_CreateAIController_Trigger = TriggerCreate("auto_libD8BB74C6_gf_CreateAIController_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libD8BB74C6_gf_CreateAIController_Trigger, false, false);
+}
+
+bool auto_libD8BB74C6_gf_CreateAIController_TriggerFunc (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((UnitIsAlive(libD8BB74C6_gv_aIController) == false)) {
+        libNtve_gf_CreateUnitsAtPoint2(1, "AlliedAIOrderPanel", c_unitCreateIgnorePlacement, 1, Point(0.0, 0.0));
+        libD8BB74C6_gv_aIController = UnitLastCreated();
+        TriggerExecute(libD8BB74C6_gt_InitAlliedAIUI, true, false);
+    }
+
+    return true;
+}
+
 // Triggers
 //--------------------------------------------------------------------------------------------------
 // Trigger: Disable achievments
@@ -976,6 +1000,7 @@ bool libD8BB74C6_gt_Load_Func (bool testConds, bool runActions) {
     if ((libD8BB74C6_gv_naktulAlly != 0)) {
         PlayerGroupAdd(libD8BB74C6_gv_alliesPlayer, libD8BB74C6_gv_naktulAlly);
         PlayerGroupAdd(libD8BB74C6_gv_allies, libD8BB74C6_gv_naktulAlly);
+        libD8BB74C6_gf_CreateAIController();
     }
 
     if ((libD8BB74C6_gv_nafashAlly != 0)) {
@@ -2641,6 +2666,215 @@ void libD8BB74C6_gt_AIResourcePanelUpdater_Init () {
     TriggerAddEventMapInit(libD8BB74C6_gt_AIResourcePanelUpdater);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Naktul Fortify
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_NaktulFortify_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    region lv_bullyArea;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    SoundPlayForPlayer(SoundLink("zMission_Lab03_BroodMother01_020", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    lv_bullyArea = RegionCircle(EventUnitTargetPoint(), 4.0);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "SpineCrawler", EventUnitTargetPoint(), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", EventUnitTargetPoint(), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", EventUnitTargetPoint(), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", EventUnitTargetPoint(), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", EventUnitTargetPoint(), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Hydralisk", EventUnitTargetPoint(), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Roach", EventUnitTargetPoint(), 1);
+    libNtve_gf_CreateModelAtPoint(null, EventUnitTargetPoint());
+    Wait(10.0, c_timeGame);
+    libNtve_gf_KillModel(libNtve_gf_ActorLastCreated());
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_NaktulFortify_Init () {
+    libD8BB74C6_gt_NaktulFortify = TriggerCreate("libD8BB74C6_gt_NaktulFortify_Func");
+    TriggerAddEventUnitAbility(libD8BB74C6_gt_NaktulFortify, null, AbilityCommand("AlliedAIOrderDefend", 0), c_unitAbilStageComplete, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init Allied AI UI
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_InitAlliedAIUI_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TriggerEnable(TriggerGetCurrent(), false);
+    DialogCreate(76, 76, c_anchorBottomRight, 5, 450, true);
+    libD8BB74C6_gv_aIControllerDialog = DialogLastCreated();
+    libNtve_gf_CreateDialogItemButton(libD8BB74C6_gv_aIControllerDialog, 76, 76, c_anchorCenter, 0, 0, StringExternal("Param/Value/lib_D8BB74C6_AFE8DA5C"), StringToText(""), "Assets\\Textures\\ui_tipicon_campaign_zergstructure.dds");
+    libD8BB74C6_gv_aIControllerButton = DialogControlLastCreated();
+    libNtve_gf_SetDialogItemImage(DialogControlLastCreated(), "Assets\\Textures\\ui_tipicon_campaign_zergstructure.dds", PlayerGroupAll());
+    libNtve_gf_SetDialogItemImageType(DialogControlLastCreated(), c_triggerImageTypeNormal, PlayerGroupAll());
+    libNtve_gf_SetDialogItemBackgroundVisible(DialogControlLastCreated(), false, PlayerGroupAll());
+    libNtve_gf_SetDialogItemHotkey(DialogControlLastCreated(), c_hotkeyHeroSelect2, PlayerGroupAll());
+    libNtve_gf_CreateDialogItemLabel(libD8BB74C6_gv_aIControllerDialog, 76, 28, c_anchorTopRight, 0, 0, StringExternal("Param/Value/lib_D8BB74C6_34C24FE6"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    DialogSetVisible(libD8BB74C6_gv_aIControllerDialog, PlayerGroupAll(), true);
+    DialogControlSetVisible(libD8BB74C6_gv_aIControllerButton, PlayerGroupAll(), true);
+    TriggerEnable(libD8BB74C6_gt_AlliedAIClicked, true);
+    TriggerEnable(libD8BB74C6_gt_AlliedAIHotkey, true);
+    TriggerEnable(libD8BB74C6_gt_AlliedAIDeselectedHotkey, true);
+    TriggerEnable(libD8BB74C6_gt_AlliedAIDeselected, true);
+    while (true) {
+        if ((libNtve_gf_PlayerInCinematicMode(1) == true)) {
+            DialogSetVisible(libD8BB74C6_gv_aIControllerDialog, PlayerGroupAll(), false);
+        }
+        else {
+            DialogSetVisible(libD8BB74C6_gv_aIControllerDialog, PlayerGroupAll(), true);
+        }
+        Wait(0.1, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_InitAlliedAIUI_Init () {
+    libD8BB74C6_gt_InitAlliedAIUI = TriggerCreate("libD8BB74C6_gt_InitAlliedAIUI_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Allied AI Clicked
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_AlliedAIClicked_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((EventDialogControl() == libD8BB74C6_gv_aIControllerButton))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_StoreUnitSelection(1, libNtve_ge_UnitSelectionStoreOption_ClearUnitSelection);
+    UnitGroupSelect(UnitGroupSelected(1), 1, false);
+    SoundPlayForPlayer(SoundLink("UI_PushButtonSelect", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    UnitSelect(libD8BB74C6_gv_aIController, 1, true);
+    libD8BB74C6_gv_alliedUIActive = true;
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_AlliedAIClicked_Init () {
+    libD8BB74C6_gt_AlliedAIClicked = TriggerCreate("libD8BB74C6_gt_AlliedAIClicked_Func");
+    TriggerEnable(libD8BB74C6_gt_AlliedAIClicked, false);
+    TriggerAddEventDialogControl(libD8BB74C6_gt_AlliedAIClicked, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Allied AI Hotkey
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_AlliedAIHotkey_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_PlayerInCinematicMode(1) == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_StoreUnitSelection(1, libNtve_ge_UnitSelectionStoreOption_ClearUnitSelection);
+    UnitGroupSelect(UnitGroupSelected(1), 1, false);
+    SoundPlayForPlayer(SoundLink("UI_PushButtonSelect", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    UnitSelect(libD8BB74C6_gv_aIController, 1, true);
+    libD8BB74C6_gv_alliedUIActive = true;
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_AlliedAIHotkey_Init () {
+    libD8BB74C6_gt_AlliedAIHotkey = TriggerCreate("libD8BB74C6_gt_AlliedAIHotkey_Func");
+    TriggerEnable(libD8BB74C6_gt_AlliedAIHotkey, false);
+    TriggerAddEventKeyPressed(libD8BB74C6_gt_AlliedAIHotkey, 1, c_keyC, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateRequire);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Allied AI Deselected
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_AlliedAIDeselected_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((EventUnit() == libD8BB74C6_gv_aIController))) {
+            return false;
+        }
+
+        if (!((libD8BB74C6_gv_alliedUIActive == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libD8BB74C6_gv_alliedUIActive = false;
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_AlliedAIDeselected_Init () {
+    libD8BB74C6_gt_AlliedAIDeselected = TriggerCreate("libD8BB74C6_gt_AlliedAIDeselected_Func");
+    TriggerEnable(libD8BB74C6_gt_AlliedAIDeselected, false);
+    TriggerAddEventUnitSelected(libD8BB74C6_gt_AlliedAIDeselected, null, c_playerAny, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Allied AI Deselected Hotkey
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_AlliedAIDeselectedHotkey_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((libD8BB74C6_gv_alliedUIActive == true))) {
+            return false;
+        }
+
+        if (!((UnitAbilityCheck(libD8BB74C6_gv_aIController, "AlliedAICancelBeacon", true) == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libD8BB74C6_gv_alliedUIActive = false;
+    UnitSelect(libD8BB74C6_gv_aIController, 1, false);
+    libNtve_gf_RestoreUnitSelection(1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_AlliedAIDeselectedHotkey_Init () {
+    libD8BB74C6_gt_AlliedAIDeselectedHotkey = TriggerCreate("libD8BB74C6_gt_AlliedAIDeselectedHotkey_Func");
+    TriggerEnable(libD8BB74C6_gt_AlliedAIDeselectedHotkey, false);
+    TriggerAddEventKeyPressed(libD8BB74C6_gt_AlliedAIDeselectedHotkey, 1, c_keyEscape, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
+}
+
 void libD8BB74C6_InitTriggers () {
     libD8BB74C6_gt_Disableachievments_Init();
     libD8BB74C6_gt_Load_Init();
@@ -2679,6 +2913,12 @@ void libD8BB74C6_InitTriggers () {
     libD8BB74C6_gt_ZagaraUseHunterKillersOffensive_Init();
     libD8BB74C6_gt_ZagaraUseHunterKillersDefensive_Init();
     libD8BB74C6_gt_AIResourcePanelUpdater_Init();
+    libD8BB74C6_gt_NaktulFortify_Init();
+    libD8BB74C6_gt_InitAlliedAIUI_Init();
+    libD8BB74C6_gt_AlliedAIClicked_Init();
+    libD8BB74C6_gt_AlliedAIHotkey_Init();
+    libD8BB74C6_gt_AlliedAIDeselected_Init();
+    libD8BB74C6_gt_AlliedAIDeselectedHotkey_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
