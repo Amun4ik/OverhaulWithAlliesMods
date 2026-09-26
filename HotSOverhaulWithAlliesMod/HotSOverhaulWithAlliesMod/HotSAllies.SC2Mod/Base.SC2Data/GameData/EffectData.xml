@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectSet id="MineralFieldExhausted">
+        <EffectArray value="MineralFieldExhaustedUser"/>
+        <EffectArray value="MineralFieldExhaustedEnum"/>
+        <EffectArray value="MineralFieldExhaustedResource"/>
+    </CEffectSet>
+    <CEffectEnumArea id="MineralFieldExhaustedEnum">
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Ground,HarvestableResource;UnderConstruction,Dead"/>
+        <AreaArray MaxCount="1" Radius="1" Effect="MineralFieldExhaustedEnumSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="MineralFieldExhaustedEnumSet">
+        <EffectArray value="MineralFieldExhaustedHarvestable"/>
+        <EffectArray value="MineralFieldExhaustedResource"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="MineralFieldExhaustedHarvestable"/>
+    <CEffectModifyUnit id="MineralFieldExhaustedResource">
+        <Resources value="10"/>
+    </CEffectModifyUnit>
+    <CEffectUserData id="MineralFieldExhaustedUser">
+        <Key value="MineralFieldExhausted"/>
+        <SourceKey value="MineralFieldExhausted"/>
+        <Operation value="Set"/>
+        <TargetLocationType value="Unit"/>
+        <BehaviorScope Value="Source" Behavior="MineralFieldExhausted"/>
+    </CEffectUserData>
+    <CEffectSet id="CarryHarvestableVespeneGeyserGasInitial">
+        <EffectArray value="CarryHarvestableVespeneGeyserGasSearchForGeyser"/>
+    </CEffectSet>
+    <CEffectEnumArea id="CarryHarvestableVespeneGeyserGasSearchForGeyser">
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Structure,HarvestableResource;Ally,Enemy,Missile,Dead"/>
+        <AreaArray MaxCount="1" Radius="0.5" Effect="CarryHarvestableVespeneGeyserGasSetPalletSize"/>
+        <AreaRelativeOffset value="0,-1"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="CarryHarvestableVespeneGeyserGasSetPalletSize">
+        <ValidatorArray value="GeyserIsExhausted"/>
+        <ImpactLocation Value="SourceUnit"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="GeyserExhaustedCheck">
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Structure,RawResource,Uncommandable;Missile,Dead"/>
+        <AreaArray MaxCount="1" Radius="0.5" Effect="GeyserExhaustedCheckAB"/>
+    </CEffectEnumArea>
+    <CEffectSet id="GeyserExhaustedEnumSet">
+        <EffectArray value="GeyserExhaustedHarvestable"/>
+        <EffectArray value="GeyserExhaustedResource"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="GeyserExhaustedHarvestable"/>
+    <CEffectApplyBehavior id="GeyserExhaustedCheckAB">
+        <ValidatorArray index="0" value="GeyserIsExhausted"/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="GeyserExhaustedHarvestable"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="GeyserExhaustedResource">
+        <Resources value="1000000"/>
+    </CEffectModifyUnit>
+    <CEffectUserData id="GeyserExhaustedUser">
+        <Key value="GeyserExhausted"/>
+        <SourceKey value="GeyserExhausted"/>
+        <Operation value="Set"/>
+        <TargetLocationType value="Unit"/>
+        <BehaviorScope Value="Source" Behavior="GeyserExhaustedRaw"/>
+    </CEffectUserData>
+    <CEffectSet id="GeyserExhausted">
+        <EffectArray value="GeyserExhaustedUser"/>
+        <EffectArray value="GeyserExhaustedEnum"/>
+        <EffectArray value="GeyserExhaustedResource"/>
+    </CEffectSet>
+    <CEffectEnumArea id="RawVespeneGeyserEnum">
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Ground,HarvestableResource;Dead"/>
+        <AreaArray MaxCount="1" Radius="1" Effect="RawVespeneGeyserEnumSet"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="GeyserExhaustedEnum">
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Ground,HarvestableResource;UnderConstruction,Dead"/>
+        <AreaArray MaxCount="1" Radius="1" Effect="GeyserExhaustedEnumSet"/>
+    </CEffectEnumArea>
+    <CEffectRemoveBehavior id="RawVespeneGeyserGasRB">
+        <BehaviorLink value="RawVespeneGeyserGas"/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="RawVespeneGeyserEnumSet"/>
+    <CEffectSet id="RefinerySCBWCreate">
+        <EffectArray value="RefineryRichSearch"/>
+        <EffectArray value="GeyserExhaustedCheck"/>
+    </CEffectSet>
     <CEffectSet id="DummyEffectTarget">
         <TargetLocationType value="UnitOrPoint"/>
     </CEffectSet>

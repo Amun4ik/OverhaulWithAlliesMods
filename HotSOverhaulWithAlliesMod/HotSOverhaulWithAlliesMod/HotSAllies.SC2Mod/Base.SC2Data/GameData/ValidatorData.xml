@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorCombine id="GeyserRawIsExhausted">
+        <CombineArray value="GeyserExhausted"/>
+        <CombineArray value="GeyserExhaustedUser"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="GeyserNotExhausted">
+        <CombineArray value="GeyserExhaustedRaw"/>
+        <CombineArray value="GeyserExhaustedHarvestable"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="GeyserIsExhausted">
+        <CombineArray value="GeyserExhaustedRaw"/>
+        <CombineArray value="GeyserExhaustedHarvestable"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorEffectTreeUserData id="GeyserExhaustedUser">
+        <Key value="GeyserExhausted"/>
+        <Value value="1"/>
+        <BehaviorScope Value="Source" Behavior="GeyserExhaustedRaw"/>
+    </CValidatorEffectTreeUserData>
+    <CValidatorUnitCompareBehaviorCount id="GeyserExhaustedRaw">
+        <Behavior value="GeyserExhaustedRaw"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="GeyserExhaustedHarvestable">
+        <Behavior value="GeyserExhaustedHarvestable"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareResourceContents id="GeyserExhausted"/>
+    <CValidatorCombine id="NotMineralFieldRawisExhausted">
+        <CombineArray value="MineralsExhausted"/>
+        <CombineArray value="MineralsExhaustedUser"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareResourceContents id="MineralsExhausted"/>
+    <CValidatorEffectTreeUserData id="MineralsExhaustedUser">
+        <Key value="GeyserExhausted"/>
+        <Value value="1"/>
+        <BehaviorScope Value="Source" Behavior="MineralFieldExhausted"/>
+    </CValidatorEffectTreeUserData>
+    <CValidatorCombine id="MineralFieldRawisExhausted">
+        <CombineArray value="MineralsExhausted"/>
+        <CombineArray value="MineralsExhaustedUser"/>
+    </CValidatorCombine>
     <CValidatorCombine id="BunkerIsEmpty2">
         <Type value="And"/>
         <CombineArray value="HasNoCargo"/>

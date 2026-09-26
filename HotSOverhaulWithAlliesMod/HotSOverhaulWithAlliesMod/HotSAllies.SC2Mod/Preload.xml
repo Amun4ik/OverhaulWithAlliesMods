@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Preload>
-<Asset path="assets\textures\ui_tipicon_campaign_zergstructure.dds" Type="Image"/>
+<Asset path="assets\textures\ui_hots_button_shared_hero_hover.dds" Type="Image"/>
+<Asset path="assets\textures\ui_battlenet_glues_scorescreen_raceicon_zerg.dds" Type="Image"/>
+<Asset path="assets\textures\ui_hots_button_shared_hero_normal.dds" Type="Image"/>
 <Asset path="assets\textures\icon-mineral-nobg.dds" Type="Image"/>
 <Abil id="CreepTumorBuild"/>
 <Abil id="QueenBuild2"/>
 <Actor id="SYSTEM_ActorConfig"/>
 <Behavior id="AutoTurretTimedLife"/>
+<Behavior id="GeyserExhaustedHarvestable"/>
 <Effect id="KerriganReviveHeal"/>
+<Model id="BeaconDefend"/>
 <Model id="PingArrow"/>
 <Model id="SporeCrawlerPlacement"/>
 <Model id="SpineCrawlerPlacement"/>
@@ -42,9 +46,9 @@
 <Unit id="ToxicNest"/>
 <Unit id="LarvaColony"/>
 <Unit id="DehakaCoop"/>
+<Unit id="AlliedAIOrderPanel"/>
 <Unit id="Hydralisk2"/>
 <Unit id="Roach2"/>
 <Unit id="Nafash"/>
 <Unit id="Zergling2"/>
-<Unit id="AlliedAIOrderPanel"/>
 </Preload>

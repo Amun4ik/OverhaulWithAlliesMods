@@ -119,6 +119,8 @@ trigger libD8BB74C6_gt_AISettings;
 trigger libD8BB74C6_gt_ShareMineralPickupwithAllies;
 trigger libD8BB74C6_gt_ShareVespenePickupwithAllies;
 trigger libD8BB74C6_gt_AISupplyBlockPreventer;
+trigger libD8BB74C6_gt_RestoreInfiniteResources;
+trigger libD8BB74C6_gt_Checkifgeyserdepleted;
 trigger libD8BB74C6_gt_ShowBullitsIni;
 trigger libD8BB74C6_gt_Showbullieseffect;
 trigger libD8BB74C6_gt_BulliesremoveonConstruction;

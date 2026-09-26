@@ -1,5 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="GeyserExhaustedRaw">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\icon-gas.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="GeyserRawIsExhausted"/>
+        <Period value="0.0625"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffect value="GeyserExhausted"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GeyserExhaustedHarvestable">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\icon-gas.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <ResourceHarvestAmountMultiplier index="Vespene" value="-0.75"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GeyserExhaustedRawRich">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\icon-gas.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="GeyserRawIsExhausted"/>
+        <Period value="0.0625"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffect value="RichGeyserExhausted"/>
+    </CBehaviorBuff>
+    <CBehaviorResource id="MineralFieldMinerals">
+        <EmptyHarvestAmount value="2"/>
+        <Flags index="RemoveWhenEmpty" value="0"/>
+        <Capacity value="1000000"/>
+    </CBehaviorResource>
+    <CBehaviorBuff id="MineralFieldExhaustedHarvestable">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\icon-mineral-terran.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <ResourceHarvestAmountMultiplier index="Minerals" value="-0.625"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MineralFieldExhausted">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\icon-mineral-terran.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="MineralFieldRawisExhausted"/>
+        <Period value="0.0625"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffect value="MineralFieldExhausted"/>
+    </CBehaviorBuff>
+    <CBehaviorResource id="HarvestableRichVespeneGeyserGas">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableRichVespeneGeyserGasProtoss">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableRichVespeneGeyserGasZerg">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableVespeneGeyserGas">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableVespeneGeyserGasProtoss">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableVespeneGeyserGasZerg">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="RawRichVespeneGeyserGas">
+        <Capacity value="1000000"/>
+        <Contents value="5000"/>
+        <HarvestAmount value="8"/>
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="RawVespeneGeyserGas">
+        <Capacity value="1000000"/>
+        <Contents value="5000"/>
+        <EmptyHarvestAmount value="1"/>
+    </CBehaviorResource>
     <CBehaviorBuff id="CycloneWeaponLaunchMissileAlternate2">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>

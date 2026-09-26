@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CModel id="BeaconArmyPing">
-        <ScaleMax value="0.250000,0.250000,0.250000"/>
+        <ScaleMax value="0.010000,0.010000,0.010000"/>
         <ScaleMin value="0.250000,0.250000,0.250000"/>
     </CModel>
     <CModel id="HunterKiller">

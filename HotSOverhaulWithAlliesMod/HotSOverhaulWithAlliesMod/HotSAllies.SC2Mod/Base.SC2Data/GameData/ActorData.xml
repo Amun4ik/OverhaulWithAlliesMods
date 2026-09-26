@@ -65,6 +65,120 @@
         <DeathArray index="Normal" ModelLink="DehakaTrainEgg" SoundLink="PrimalEgg_PreDeathExplosion"/>
         <SoundArray index="What" value="Egg_What"/>
     </CActorUnit>
+    <CActorUnit id="AssimilatorRich">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="Assimilator">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="Extractor">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="ExtractorRich">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="Refinery">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="RefineryRich">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="VespeneGeyser">
+        <On index="73" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="SpacePlatformGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="ShakurasVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="RichVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <On index="80" Terms="Behavior.RawRichVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawRichVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="PurifierVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="ProtossVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorEventMacro id="GeyserExhausted">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="UnitBirth.*.Normal" Send="TimerSet 0.100000 GeyserDepleteCheck"/>
+        <On Terms="UnitConstruction.*.Finish" Send="TimerSet 0.100000 GeyserDepleteCheck"/>
+        <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="SetTintColor 255,170,170"/>
+        <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="AnimGroupRemove D"/>
+        <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="AnimGroupApply B"/>
+    </CActorEventMacro>
+    <CActorUnit id="MineralField">
+        <StatusBarFlags index="Workers" value="0"/>
+        <On Terms="Behavior.MineralFieldExhausted.On" Send="SetTintColor 255,128,128"/>
+    </CActorUnit>
+    <CActorModel id="CarryHarvestableRichVespeneGeyserGas">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableRichVespeneGeyserGasProtoss">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableRichVespeneGeyserGasZerg">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableVespeneGeyserGas">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableVespeneGeyserGasProtoss">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableVespeneGeyserGasZerg">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
     <CActorUnit id="AlliedAIOrderPanel" parent="ZergBuildingEx" unitName="AlliedAIOrderPanel">
         <Macros value="MacroTownhallDeco_Zerg"/>
         <Macros value="ZergHatcheryPlayerDecalMacro"/>
@@ -118,6 +232,7 @@
         <On Terms="Upgrade.CovertOpsUpgrade.Add" Send="ModelSwap Refinery_CovertOps 255 PreventAllDynamicTextureTransfers"/>
         <On Terms="UnitBirth; ValidateUnit NoCovertOpsUpgrade" Send="ModelSwap Refinery_CovertOps 255 PreventAllDynamicTextureTransfers"/>
         <DeathCustoms ModelLink="AutomatedRefineryDeath2" SoundLink="AutomatedRefinery_Explode" Name="Umojan"/>
+        <Macros value="GeyserExhausted"/>
     </CActorUnit>
     <CActorModel id="AutomatedRefineryBuild">
         <On Terms="ActorCreation; ValidateUnit NoUmojanUpgrade" Send="ModelSwap AutomatedRefineryBuild2"/>

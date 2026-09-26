@@ -120,6 +120,27 @@
         <GlossaryPriority value="4"/>
         <TauntDuration index="Dance" value="5"/>
     </CUnit>
+    <CUnit id="MineralField">
+        <BehaviorArray Link="MineralFieldExhausted"/>
+    </CUnit>
+    <CUnit id="VespeneGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+    <CUnit id="ProtossVespeneGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+    <CUnit id="PurifierVespeneGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+    <CUnit id="RichVespeneGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+    <CUnit id="ShakurasVespeneGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+    <CUnit id="SpacePlatformGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
     <CUnit id="AlliedAIOrderPanel">
         <FlagArray index="Invulnerable" value="1"/>
         <AbilArray Link="AlliedAIOrderDefend"/>
@@ -843,6 +864,8 @@
     <CUnit id="InfestedBunker">
         <LifeRegenDelay value="10"/>
         <LifeRegenRate value="4.5"/>
+        <AbilArray Link="BunkerAttack"/>
+        <AbilArray Link="AttackRedirect"/>
     </CUnit>
     <CUnit id="InfestedCC">
         <LifeRegenDelay value="10"/>

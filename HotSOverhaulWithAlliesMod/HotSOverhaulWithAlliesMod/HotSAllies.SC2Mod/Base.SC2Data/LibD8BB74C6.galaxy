@@ -1000,7 +1000,6 @@ bool libD8BB74C6_gt_Load_Func (bool testConds, bool runActions) {
     if ((libD8BB74C6_gv_naktulAlly != 0)) {
         PlayerGroupAdd(libD8BB74C6_gv_alliesPlayer, libD8BB74C6_gv_naktulAlly);
         PlayerGroupAdd(libD8BB74C6_gv_allies, libD8BB74C6_gv_naktulAlly);
-        libD8BB74C6_gf_CreateAIController();
     }
 
     if ((libD8BB74C6_gv_nafashAlly != 0)) {
@@ -1326,6 +1325,79 @@ bool libD8BB74C6_gt_AISupplyBlockPreventer_Func (bool testConds, bool runActions
 void libD8BB74C6_gt_AISupplyBlockPreventer_Init () {
     libD8BB74C6_gt_AISupplyBlockPreventer = TriggerCreate("libD8BB74C6_gt_AISupplyBlockPreventer_Func");
     TriggerAddEventTimePeriodic(libD8BB74C6_gt_AISupplyBlockPreventer, 30.0, c_timeAI);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Restore Infinite Resources
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_RestoreInfiniteResources_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup autoB84BD8CC_g;
+    int autoB84BD8CC_u;
+    unit autoB84BD8CC_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoB84BD8CC_g = UnitGroup(null, c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterLight) | (1 << c_targetFilterMissile), (1 << (c_targetFilterHidden - 32))), 0);
+    autoB84BD8CC_u = UnitGroupCount(autoB84BD8CC_g, c_unitCountAll);
+    for (;; autoB84BD8CC_u -= 1) {
+        autoB84BD8CC_var = UnitGroupUnitFromEnd(autoB84BD8CC_g, autoB84BD8CC_u);
+        if (autoB84BD8CC_var == null) { break; }
+        if ((libNtve_gf_UnitGetPropertyResources(autoB84BD8CC_var, c_unitPropCurrent) <= 300) && ((UnitGetType(autoB84BD8CC_var) == "Refinery") || (UnitGetType(autoB84BD8CC_var) == "AutomatedRefinery") || (UnitGetType(autoB84BD8CC_var) == "RefineryRich") || (UnitGetType(autoB84BD8CC_var) == "Extractor") || (UnitGetType(autoB84BD8CC_var) == "ExtractorPurifier") || (UnitGetType(autoB84BD8CC_var) == "ExtractorRich") || (UnitGetType(autoB84BD8CC_var) == "ExtractorShakuras") || (UnitGetType(autoB84BD8CC_var) == "ExtractorPipes") || (UnitGetType(autoB84BD8CC_var) == "AutomatedExtractor") || (UnitGetType(autoB84BD8CC_var) == "Assimilator") || (UnitGetType(autoB84BD8CC_var) == "AssimilatorProtossGeyser") || (UnitGetType(autoB84BD8CC_var) == "AssimilatorPurifierGeyser") || (UnitGetType(autoB84BD8CC_var) == "AssimilatorRich") || (UnitGetType(autoB84BD8CC_var) == "AssimilatorShakurasGeyser") || (UnitGetType(autoB84BD8CC_var) == "AutomatedAssimilator") || (UnitGetType(autoB84BD8CC_var) == "MineralField")) && ((UnitHasBehavior(autoB84BD8CC_var, "MineralFieldExhaustedHarvestable") == true) || (UnitHasBehavior(autoB84BD8CC_var, "GeyserExhaustedHarvestable") == true))) {
+            UnitSetPropertyFixed(autoB84BD8CC_var, c_unitPropResources, (libNtve_gf_UnitGetPropertyResources(autoB84BD8CC_var, c_unitPropCurrent) + 50));
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_RestoreInfiniteResources_Init () {
+    libD8BB74C6_gt_RestoreInfiniteResources = TriggerCreate("libD8BB74C6_gt_RestoreInfiniteResources_Func");
+    TriggerAddEventTimePeriodic(libD8BB74C6_gt_RestoreInfiniteResources, 20.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Check if geyser depleted
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_Checkifgeyserdepleted_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto78293454_g;
+    int auto78293454_u;
+    unit auto78293454_var;
+
+    // Conditions
+    if (testConds) {
+        if (!(((UnitGetType(EventUnitProgressUnit()) == "Refinery") || (UnitGetType(EventUnitProgressUnit()) == "AutomatedRefinery") || (UnitGetType(EventUnitProgressUnit()) == "RefineryRich") || (UnitGetType(EventUnitProgressUnit()) == "Extractor") || (UnitGetType(EventUnitProgressUnit()) == "ExtractorPurifier") || (UnitGetType(EventUnitProgressUnit()) == "ExtractorRich") || (UnitGetType(EventUnitProgressUnit()) == "ExtractorShakuras") || (UnitGetType(EventUnitProgressUnit()) == "ExtractorPipes") || (UnitGetType(EventUnitProgressUnit()) == "AutomatedExtractor") || (UnitGetType(EventUnitProgressUnit()) == "Assimilator") || (UnitGetType(EventUnitProgressUnit()) == "AssimilatorProtossGeyser") || (UnitGetType(EventUnitProgressUnit()) == "AssimilatorPurifierGeyser") || (UnitGetType(EventUnitProgressUnit()) == "AssimilatorRich") || (UnitGetType(EventUnitProgressUnit()) == "AssimilatorShakurasGeyser") || (UnitGetType(EventUnitProgressUnit()) == "AutomatedAssimilator")))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto78293454_g = UnitGroup(null, c_playerAny, RegionCircle(UnitGetPosition(EventUnitProgressUnit()), 1.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    auto78293454_u = UnitGroupCount(auto78293454_g, c_unitCountAll);
+    for (;; auto78293454_u -= 1) {
+        auto78293454_var = UnitGroupUnitFromEnd(auto78293454_g, auto78293454_u);
+        if (auto78293454_var == null) { break; }
+        if ((UnitHasBehavior2(auto78293454_var, "GeyserExhaustedRaw") == true)) {
+            UnitBehaviorAdd(EventUnitProgressUnit(), "GeyserExhaustedHarvestable", EventUnitProgressUnit(), 1);
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_Checkifgeyserdepleted_Init () {
+    libD8BB74C6_gt_Checkifgeyserdepleted = TriggerCreate("libD8BB74C6_gt_Checkifgeyserdepleted_Func");
+    TriggerAddEventUnitConstructProgress(libD8BB74C6_gt_Checkifgeyserdepleted, null, c_unitProgressStageComplete);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2683,15 +2755,15 @@ bool libD8BB74C6_gt_NaktulFortify_Func (bool testConds, bool runActions) {
 
     SoundPlayForPlayer(SoundLink("zMission_Lab03_BroodMother01_020", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
     lv_bullyArea = RegionCircle(EventUnitTargetPoint(), 4.0);
-    AIAddBully(libD8BB74C6_gv_naktulAlly, "SpineCrawler", EventUnitTargetPoint(), 1);
-    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", EventUnitTargetPoint(), 1);
-    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", EventUnitTargetPoint(), 1);
-    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", EventUnitTargetPoint(), 1);
-    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", EventUnitTargetPoint(), 1);
-    AIAddBully(libD8BB74C6_gv_naktulAlly, "Hydralisk", EventUnitTargetPoint(), 1);
-    AIAddBully(libD8BB74C6_gv_naktulAlly, "Roach", EventUnitTargetPoint(), 1);
-    libNtve_gf_CreateModelAtPoint(null, EventUnitTargetPoint());
-    Wait(10.0, c_timeGame);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "SpineCrawler", RegionRandomPoint(lv_bullyArea), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", RegionRandomPoint(lv_bullyArea), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", RegionRandomPoint(lv_bullyArea), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", RegionRandomPoint(lv_bullyArea), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Zergling", RegionRandomPoint(lv_bullyArea), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Hydralisk", RegionRandomPoint(lv_bullyArea), 1);
+    AIAddBully(libD8BB74C6_gv_naktulAlly, "Roach", RegionRandomPoint(lv_bullyArea), 1);
+    libNtve_gf_CreateModelAtPoint("BeaconDefend", EventUnitTargetPoint());
+    Wait(60.0, c_timeGame);
     libNtve_gf_KillModel(libNtve_gf_ActorLastCreated());
     return true;
 }
@@ -2713,15 +2785,15 @@ bool libD8BB74C6_gt_InitAlliedAIUI_Func (bool testConds, bool runActions) {
     }
 
     TriggerEnable(TriggerGetCurrent(), false);
-    DialogCreate(76, 76, c_anchorBottomRight, 5, 450, true);
+    DialogCreate(80, 80, c_anchorBottomRight, 5, 350, true);
     libD8BB74C6_gv_aIControllerDialog = DialogLastCreated();
-    libNtve_gf_CreateDialogItemButton(libD8BB74C6_gv_aIControllerDialog, 76, 76, c_anchorCenter, 0, 0, StringExternal("Param/Value/lib_D8BB74C6_AFE8DA5C"), StringToText(""), "Assets\\Textures\\ui_tipicon_campaign_zergstructure.dds");
+    libNtve_gf_CreateDialogItemButton(libD8BB74C6_gv_aIControllerDialog, 76, 76, c_anchorCenter, 0, 0, StringExternal("Param/Value/lib_D8BB74C6_AFE8DA5C"), StringToText(""), "Assets\\Textures\\ui_hots_button_shared_hero_hover.dds");
     libD8BB74C6_gv_aIControllerButton = DialogControlLastCreated();
-    libNtve_gf_SetDialogItemImage(DialogControlLastCreated(), "Assets\\Textures\\ui_tipicon_campaign_zergstructure.dds", PlayerGroupAll());
+    libNtve_gf_SetDialogItemImage(DialogControlLastCreated(), "Assets\\Textures\\ui_hots_button_shared_hero_normal.dds", PlayerGroupAll());
     libNtve_gf_SetDialogItemImageType(DialogControlLastCreated(), c_triggerImageTypeNormal, PlayerGroupAll());
     libNtve_gf_SetDialogItemBackgroundVisible(DialogControlLastCreated(), false, PlayerGroupAll());
     libNtve_gf_SetDialogItemHotkey(DialogControlLastCreated(), c_hotkeyHeroSelect2, PlayerGroupAll());
-    libNtve_gf_CreateDialogItemLabel(libD8BB74C6_gv_aIControllerDialog, 76, 28, c_anchorTopRight, 0, 0, StringExternal("Param/Value/lib_D8BB74C6_34C24FE6"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 60, 60, c_anchorCenter, 0, 0, StringToText(""), "Assets\\Textures\\ui_battlenet_glues_scorescreen_raceicon_zerg.dds", c_triggerImageTypeNormal, true, Color(84*100/255,0,129*100/255), c_triggerBlendModeNormal);
     DialogSetVisible(libD8BB74C6_gv_aIControllerDialog, PlayerGroupAll(), true);
     DialogControlSetVisible(libD8BB74C6_gv_aIControllerButton, PlayerGroupAll(), true);
     TriggerEnable(libD8BB74C6_gt_AlliedAIClicked, true);
@@ -2884,6 +2956,8 @@ void libD8BB74C6_InitTriggers () {
     libD8BB74C6_gt_ShareMineralPickupwithAllies_Init();
     libD8BB74C6_gt_ShareVespenePickupwithAllies_Init();
     libD8BB74C6_gt_AISupplyBlockPreventer_Init();
+    libD8BB74C6_gt_RestoreInfiniteResources_Init();
+    libD8BB74C6_gt_Checkifgeyserdepleted_Init();
     libD8BB74C6_gt_ShowBullitsIni_Init();
     libD8BB74C6_gt_Showbullieseffect_Init();
     libD8BB74C6_gt_BulliesremoveonConstruction_Init();
