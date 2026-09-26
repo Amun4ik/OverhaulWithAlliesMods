@@ -99,10 +99,12 @@
     <CWeaponLegacy id="GoliathA">
         <Range value="7"/>
         <Period value="2.25"/>
+        <DisplayAttackCount value="4"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="GoliathAUpgraded">
         <Range value="7"/>
         <Period value="2.25"/>
+        <DisplayAttackCount value="4"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="GoliathG">
         <Period value="1.2"/>

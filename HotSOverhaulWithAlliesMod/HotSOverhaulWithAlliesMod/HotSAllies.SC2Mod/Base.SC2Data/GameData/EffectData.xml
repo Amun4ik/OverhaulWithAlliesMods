@@ -626,7 +626,7 @@
         <PeriodicPeriodArray value="0.11"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="GoliathAU">
-        <AttributeBonus index="Armored" value="5"/>
+        <AttributeBonus index="Armored" value="3"/>
         <Amount value="5"/>
     </CEffectDamage>
     <CEffectDamage id="GoliathG">
