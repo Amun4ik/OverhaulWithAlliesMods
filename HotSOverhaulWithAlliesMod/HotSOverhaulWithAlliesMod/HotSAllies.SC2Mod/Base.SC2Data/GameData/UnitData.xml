@@ -123,6 +123,11 @@
     <CUnit id="MineralField">
         <BehaviorArray Link="MineralFieldExhausted"/>
     </CUnit>
+    <CUnit id="StalkerPurifier">
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <LifeArmor value="2"/>
+    </CUnit>
     <CUnit id="VespeneGeyser">
         <BehaviorArray Link="GeyserExhaustedRaw"/>
     </CUnit>
@@ -535,9 +540,9 @@
     </CUnit>
     <!-- StalkerAiur is swapped out for Dragoon -->
     <CUnit id="Dragoon">
-        <LifeStart value="130"/>
-        <LifeMax value="130"/>
-        <LifeArmor value="2"/>
+        <ShieldsStart value="100"/>
+        <ShieldsMax value="100"/>
+        <ShieldArmor value="1"/>
     </CUnit>
     <CUnit id="DroneBurrowed">
         <LifeRegenRate value="1"/>
@@ -1710,12 +1715,6 @@
         <LifeRegenRate value="3"/>
         <SpeedMultiplierCreep value="2"/>
         <CostResource index="Minerals" value="150"/>
-    </CUnit>
-    <CUnit id="StalkerPurifier">
-        <ShieldsStart value="100"/>
-        <ShieldsMax value="100"/>
-        <ShieldArmor value="1"/>
-        <ShieldRegenRate value="4"/>
     </CUnit>
     <CUnit id="StalkerShakuras">
         <LifeStart value="90"/>

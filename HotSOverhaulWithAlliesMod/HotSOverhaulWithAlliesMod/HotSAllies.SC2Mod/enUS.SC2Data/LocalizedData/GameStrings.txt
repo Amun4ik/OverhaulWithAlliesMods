@@ -110,6 +110,7 @@ Param/Expression/lib_D8BB74C6_20F824E6=~A~'s Vespene
 Param/Expression/lib_D8BB74C6_33BDB053=~C~~A~/~B~
 Param/Expression/lib_D8BB74C6_50E8AE0A=~C~~A~/~B~
 Param/Expression/lib_D8BB74C6_DEA8E2A1=~A~'s Supply
+Param/Expression/lib_D8BB74C6_E328F92C=Ally to Player Trades on cooldown for ~A~ seconds.
 Param/Value/lib_D8BB74C6_04D1671B=[Allies] <c val="f1598d">Nafash</c>: 
 Param/Value/lib_D8BB74C6_0C00953D=So be it.
 Param/Value/lib_D8BB74C6_0DBBDE58=What the hell are you doing, Kerrigan?

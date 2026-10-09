@@ -26,6 +26,7 @@
 <Sound id="Zerg_BurrowLarge"/>
 <Sound id="NydusWorm_Unload"/>
 <Sound id="NydusWorm_Birth"/>
+<Sound id="Alert_BaseUnderAttackKlaxon"/>
 <Sound id="UI_PushButtonSelect"/>
 <Sound id="zMission_Lab03_BroodMother01_020"/>
 <Unit id="Hatchery"/>
