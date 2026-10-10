@@ -794,7 +794,7 @@ bool lib7D432011_gt_Checkifgeyserdepleted_Func (bool testConds, bool runActions)
     for (;; autoF3ACD5F5_u -= 1) {
         autoF3ACD5F5_var = UnitGroupUnitFromEnd(autoF3ACD5F5_g, autoF3ACD5F5_u);
         if (autoF3ACD5F5_var == null) { break; }
-        if ((UnitHasBehavior2(autoF3ACD5F5_var, "GeyserExhaustedRaw") == true)) {
+        if ((UnitHasBehavior(autoF3ACD5F5_var, "GeyserExhaustedRaw") == true)) {
             UnitBehaviorAdd(EventUnitProgressUnit(), "GeyserExhaustedHarvestable", EventUnitProgressUnit(), 1);
         }
 
@@ -889,7 +889,7 @@ bool lib7D432011_gt_TychusFortify_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    lv_bullyArea = RegionCircle(EventUnitTargetPoint(), 5.0);
+    lv_bullyArea = RegionCircle(EventUnitTargetPoint(), 3.0);
     AIAddBully(lib7D432011_gv_tychusAlly, "Bunker", RegionGetCenter(lv_bullyArea), 1);
     AIAddBully(lib7D432011_gv_tychusAlly, "Marine", RegionRandomPoint(lv_bullyArea), 1);
     AIAddBully(lib7D432011_gv_tychusAlly, "Marine", RegionRandomPoint(lv_bullyArea), 1);

@@ -3568,19 +3568,19 @@
             <FunctionCall Type="FunctionCall" Library="7D432011" Id="EC5CEFBF"/>
         </Element>
         <Element Type="FunctionCall" Id="EC5CEFBF">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="142FF15A"/>
-            <Parameter Type="Param" Library="7D432011" Id="003BB3AF"/>
-            <Parameter Type="Param" Library="7D432011" Id="9C30248E"/>
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="ABD41ECF"/>
+            <Parameter Type="Param" Library="7D432011" Id="F9F38BBE"/>
+            <Parameter Type="Param" Library="7D432011" Id="76F24D7D"/>
         </Element>
-        <Element Type="Param" Id="003BB3AF">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="033DFD05"/>
-            <FunctionCall Type="FunctionCall" Library="7D432011" Id="FE594AC6"/>
+        <Element Type="Param" Id="F9F38BBE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="E163785B"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="25E7F106"/>
         </Element>
-        <Element Type="FunctionCall" Id="FE594AC6">
+        <Element Type="FunctionCall" Id="25E7F106">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="19CE733E"/>
         </Element>
-        <Element Type="Param" Id="9C30248E">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="B29EDD13"/>
+        <Element Type="Param" Id="76F24D7D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="D54684BD"/>
             <Value>GeyserExhaustedRaw</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Behavior"/>
@@ -7752,7 +7752,7 @@
         </Element>
         <Element Type="Param" Id="C86B4D56">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000050"/>
-            <Value>5.0</Value>
+            <Value>3.0</Value>
             <ValueType Type="fixed"/>
         </Element>
         <Element Type="Param" Id="EC66950D">

@@ -288,6 +288,7 @@
     </CUnit>
     <CUnit id="SCV">
         <Mover value="CliffJumper"/>
+        <BehaviorArray Link="ReaperJump"/>
     </CUnit>
     <CUnit id="Separatist">
         <LifeStart value="35"/>

@@ -1433,7 +1433,7 @@ bool libD8BB74C6_gt_Checkifgeyserdepleted_Func (bool testConds, bool runActions)
     for (;; auto78293454_u -= 1) {
         auto78293454_var = UnitGroupUnitFromEnd(auto78293454_g, auto78293454_u);
         if (auto78293454_var == null) { break; }
-        if ((UnitHasBehavior2(auto78293454_var, "GeyserExhaustedRaw") == true)) {
+        if ((UnitHasBehavior(auto78293454_var, "GeyserExhaustedRaw") == true)) {
             UnitBehaviorAdd(EventUnitProgressUnit(), "GeyserExhaustedHarvestable", EventUnitProgressUnit(), 1);
         }
 

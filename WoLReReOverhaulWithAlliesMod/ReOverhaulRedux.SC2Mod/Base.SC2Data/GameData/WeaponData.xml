@@ -144,5 +144,6 @@
         <Backswing value="0"/>
         <Effect value="LurkerMP"/>
         <LegacyOptions index="KeepChanneling" value="1"/>
+        <DisplayAttackCount value="11"/>
     </CWeaponLegacy>
 </Catalog>
