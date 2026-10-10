@@ -1,0 +1,62 @@
+﻿Button/Name/CommanderControllerIcon1=CommanderControllerIcon1
+Button/Name/CommanderControllerIcon2=CommanderControllerIcon2
+Button/Name/ExperimentalPlasmaGun=Experimental Scourge Rifle Grenade
+Button/Name/TossGrenade=HE Grenade
+Button/Tooltip/Cyclone=Mobile assault drone. Effective against Air targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/ExperimentalPlasmaGun=Raynor uses his rifle to launch Scourge RPG, Dealing 130 Damage.
+Button/Tooltip/HERC2=Front-line infantry. Can use Grapple.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/LeadFarmer=Commando's Chaingun deals splash damage in a small area around the target.
+Button/Tooltip/RaynorCommando=Mysterious Field Captain of the Rebellion. Has a infantry railgun with different rounds.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
+Button/Tooltip/Stetmann=Jezik can heal and repair at lightning speed. Also can take control over weak minded enemy. <n/><n/><c val="#ColorAttackInfo">Has no attack.</c><n/>
+Button/Tooltip/TossGrenade=Tosses a grenade that explodes for <d ref="Effect,TossGrenadeDamage,Amount"/> damage in a radius. <n/><n/><c val="ffff8a">Does not harm friendly units.</c>
+Button/Tooltip/TychusChaingun=A scoundrel, a Pirate and "Good" old friend of Raynor. Has a shit ton of explosives.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
+Button/Tooltip/TychusCommando=Commando can throw demolition charge. Deal damage in small area. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
+Button/Tooltip/TychusCommando2=Long-hand of Dominion Infantry Corp. <n/><n/><c val="#ColorAttackInfo">Can attack ground</c><n/>
+Button/Tooltip/Vulture2=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Effect/Name/CycloneRocketBarrage=Cyclone Rocket Barrage Air
+Effect/Name/CycloneRocketBarrage2=Cyclone Rocket Barrage Ground
+Effect/Name/HERCWeaponDamage2=HERC Weapon Damage
+Effect/Name/PunisherGrenadesLM2=Loyalist Grenades
+Effect/Name/PunisherGrenadesSet2=Loyalist Grenades
+Effect/Name/PunisherGrenadesU2=Loyalist Grenades
+Param/Expression/lib_7D432011_226087B8=~A~'s Supply
+Param/Expression/lib_7D432011_316909C0=~C~~A~/~B~
+Param/Expression/lib_7D432011_5B275374=~C~~A~/~B~
+Param/Expression/lib_7D432011_AD2AD8F6=~A~'s Minerals
+Param/Expression/lib_7D432011_D5CADF89=~A~
+Param/Expression/lib_7D432011_F534FC22=~A~'s Vespene
+Param/Expression/lib_7D432011_FA3FD038=~C~~A~/~B~
+Param/Value/lib_7D432011_0DAF6DE7='s Minerals
+Param/Value/lib_7D432011_40CFB344=<s val="AllianceHeader">Command Allies</s><n/><n/>Use "Place Beacon" to set the target area your allies will send their units to.<n/><n/>The Strategy menu allows you to decide whether your allies will send their units at the enemy or stay home and defend.
+Param/Value/lib_7D432011_5DF2BD34=Attack Path
+Param/Value/lib_7D432011_A2F1FE8A='s Vespene
+Param/Value/lib_7D432011_C284B794='s Minerals
+Param/Value/lib_7D432011_C95425DE=<c val="FF0000">
+Param/Value/lib_7D432011_F4E42484=<c val="FF0000">
+Unit/Name/DominionKillTeam=Red Raven
+Unit/Name/HERC2=Kovalskiy
+Unit/Name/HERCCompound=Bar "100 Rads"
+Unit/Name/Loyalist=Loyalist
+Unit/Name/MengskReaper=Samuel Horsh
+Unit/Name/PunisherGrenadesLMWeapon2=Loyalist Grenades
+Unit/Name/RaynorCommando=Nekromant
+Unit/Name/Stetmann=Jezik
+Unit/Name/Swann=Defender
+Unit/Name/TychusCommando=Commando
+Unit/Name/TychusCommando2=Loyalist
+Unit/Name/Vulture2=Thunderlord
+UnitKillRank/Swann1=Sergeant
+UnitKillRank/Tychus2=Private
+UnitKillRank/Tychus3=Veteran
+Upgrade/Name/DominionForces=Dominion Forces
+Upgrade/Name/Mercenarys=Mercenarys
+Upgrade/Name/RebellionForces=Rebellion Forces
+Upgrade/Name/ToshGoons=Tosh Goons
+Upgrade/Name/TychusBoys=Tychus Boys
+Weapon/Name/CommandoRifle=Infantry Railgun Tyranny's End
+Weapon/Name/DominionKillTeam=Eradicator Grenades
+Weapon/Name/HERCWeapon2=H1 Flash Welder
+Weapon/Name/PunisherGrenades2=Diplomacy Grenades
+Weapon/Name/TyphoonMissilePod=Typhoon Ground-Ground Missiles
+Weapon/Name/TyphoonMissilePod2=Typhoon Ground-Air Missiles
+Weapon/Name/Vulture2=Ultra-Sonic Weapon

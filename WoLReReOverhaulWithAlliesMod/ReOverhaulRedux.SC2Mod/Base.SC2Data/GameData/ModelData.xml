@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="BarrageModel">
+        <Model value="Assets\Effects\Terran\Nova_PulseGrenade\Nova_PulseGrenade.m3"/>
+    </CModel>
+    <CModel id="Cyclone">
+        <Model value="Assets\Terran\Unit_Eyeser_Cyclone.m3"/>
+    </CModel>
+    <CModel id="CycloneMissile">
+        <Model value="Assets\Effects\Terran\Xanthos_Missile\Xanthos_Missile.m3"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="CycloneMissileImpact">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellion_BasicGrenade_Coop_Impact\MiraHorner_Hellion_BasicGrenade_Coop_Impact.m3"/>
+    </CModel>
+    <CModel id="DominionKillTeam">
+        <Model value="Assets\Terran\RattleSnake_ViperVersion.m3"/>
+    </CModel>
+    <CModel id="ExperimentalPlasmaGunImpact">
+        <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile_Burst\MiraHorner_Carrier_Coop_Missile_Burst.m3"/>
+    </CModel>
+    <CModel id="ExperimentalPlasmaGunWeapon">
+        <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile\MiraHorner_Carrier_Coop_Missile.m3"/>
+    </CModel>
+    <CModel id="Ghost_Umojan_Portrait">
+        <Model value="Assets\UED Portraits\Ghost_Mercenary_Portrait.m3"/>
+    </CModel>
+    <CModel id="HERC2" parent="Unit" Race="Terran">
+        <Model value="Assets\Terran\Bastion.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh04"/>
+        <Radius value="0.600000"/>
+        <SelectionRadius value="0.600000"/>
+        <ShadowRadius value="0.600000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <UnitGlossaryCamera value="Star2CameraHigh04"/>
+    </CModel>
+    <CModel id="HERCAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\HERC_Gun_Launch\HERC_Gun_Launch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="HERCDeath2" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Terran\Bastion_Death.m3"/>
+        <LowQualityModel value="TerranSmallUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="HercPortrait2" parent="Portrait" Race="Protoss">
+        <Model value="Assets\Portraits\Terran\OdinPortrait\OdinPortrait.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Image value="Assets\Textures\odinportrait_static.dds"/>
+        <Lighting value="HERCPortrait"/>
+    </CModel>
+    <CModel id="MarauderKillSquadPortrait">
+        <Model value="Assets\Terran\Marauder_Viper_Portrait.m3"/>
+    </CModel>
+    <CModel id="MedicStetmann">
+        <Model value="Assets\Terran\DaveSpectreFieldTechnicSuit.m3"/>
+    </CModel>
+    <CModel id="MengskReaper">
+        <Model value="Assets\Terran\Reaper.m3"/>
+    </CModel>
+    <CModel id="PunisherGrenadesLMWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Raynor">
+        <Model value="Assets\Units\Terran\MarineRaynorEx1\MarineRaynorEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommando">
+        <Model value="Assets\Terran\Marine_RailSniper.m3"/>
+    </CModel>
+    <CModel id="RaynorCommandoAttackImpact">
+        <Model value="Assets\Effects\Terran\DiamondbackMissileImpact\DiamondbackMissileImpact.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="RaynorCommandoAttackLaunch">
+        <Model value="Assets\Effects\Terran\MagrailMunition_Launch\MagrailMunition_Launch.m3"/>
+    </CModel>
+    <CModel id="RaynorSnipeBeam">
+        <Model value="Assets\Effects\Terran\WarHoundRailGunMissile\WarHoundRailGunMissile.m3"/>
+    </CModel>
+    <CModel id="RaynorSnipeLaunchSquib">
+        <Model value="Assets\Effects\Terran\MagrailMunition_Launch\MagrailMunition_Launch.m3"/>
+    </CModel>
+    <CModel id="ReaperPortrait">
+        <Model value="Assets\Terran\Reaper_Portrait.m3"/>
+    </CModel>
+    <CModel id="StetmannMedicPortrait">
+        <Model value="Assets\Terran\DaveSpectrePortrait.m3"/>
+    </CModel>
+    <CModel id="Swann">
+        <Model value="Assets\Terran\dominion-rockettrooperleader.m3"/>
+    </CModel>
+    <CModel id="TitanMechFighter">
+        <Model value="Assets\UED Units\Viper_NightRaven_V1.m3"/>
+    </CModel>
+    <CModel id="TychusChaingun">
+        <Model value="Assets\COOP\Tychus\Units\Tychus_Heavens_COOP\Tychus_Heavens_COOP.m3"/>
+    </CModel>
+    <CModel id="TychusCommando">
+        <Model value="Assets\Terran\Heavy_Gunner.m3"/>
+    </CModel>
+    <CModel id="TychusCommando2" parent="Unit">
+        <Model value="Assets\Terran\heavytychus-grenade.m3"/>
+        <AttachProps Id="Ref_Hardpoint 02"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <ScaleMax value="1.150000,1.150000,1.150000"/>
+        <ScaleMin value="1.150000,1.150000,1.150000"/>
+        <SelectionRadius value="0.416500"/>
+        <ShadowRadius value="0.416500"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraMid04"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="TychusCommandoAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\AutoTurretWeaponLaunch\AutoTurretWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="DutchTurretAttackLaunch"/>
+    </CModel>
+    <CModel id="TychusCommandoDeathFire2" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\MarineTychusDeathFire\MarineTychusDeathFire.m3"/>
+    </CModel>
+    <CModel id="TychusPortrait"/>
+    <CModel id="TychusPortrait2" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\Hellion_CovertOps_Collection_Portrait\Hellion_CovertOps_Collection_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\HellionPortrait.fxa"/>
+        <Image value="Assets\Textures\hellion_covertops_collection_portrait_static.dds"/>
+        <Lighting value="TychusPortrait"/>
+    </CModel>
+    <CModel id="Vulture2" parent="Unit">
+        <Model value="Assets\UED Units\Kelmorian_Vulture.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.722000"/>
+        <ShadowRadius value="0.722000"/>
+        <TechPurchaseCamera value="TechPurchaseVehicle"/>
+        <Tipability value="1.000000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
+    <CModel id="VultureDeath2" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Effects\Terran\Nova_PulseGrenade\Nova_PulseGrenade.m3"/>
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="VulturePortrait2" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\UED Portraits\UED_Goliath_Portrait2.m3"/>
+        <FacialController value="LocalizedData\Facial\GoliathPortrait.fxa"/>
+        <Image value="Assets\UED Portraits\Portrait-UED-Wraith-Static.dds"/>
+        <Lighting value="VulturePortrait"/>
+    </CModel>
+    <CUnit id="AlliedAIOrderPanel">
+        <FlagArray index="Invulnerable" value="1"/>
+        <AbilArray Link="AlliedAIOrderDefend"/>
+        <AbilArray Link="AlliedAIOrderAttack"/>
+        <CardLayouts>
+            <LayoutButtons Face="CommanderControllerIcon1" Type="Submenu" SubmenuCardId="0002" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="AlliedAISwarmy" Type="AbilCmd" AbilCmd="AlliedAIStrategySwarm,255" Row="2" Column="1"/>
+            <LayoutButtons Face="AlliedAIPower" Type="AbilCmd" AbilCmd="AlliedAIStrategyPower,255" Row="2" Column="2"/>
+            <LayoutButtons Face="AlliedAIDefend" Type="AbilCmd" AbilCmd="AlliedAIOrderDefend,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="AlliedAIAttack" Type="AbilCmd" AbilCmd="AlliedAIOrderAttack,Execute" Row="0" Column="0"/>
+        </CardLayouts>
+        <CargoSize value="1"/>
+    </CUnit>
+</Catalog>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilEffectTarget id="AlliedAIOrderAttack">
+        <Effect index="0" value="DummyEffectTarget"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="Abil/AlliedAICancelBeacon"/>
+            <Cooldown Link="Abil/AlliedAICancelBeacon" TimeUse="2"/>
+        </Cost>
+        <Range value="1000"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAIAttack"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="AlliedAIOrderDefend">
+        <Effect index="0" value="DummyEffectTarget"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="Abil/AlliedAICancelBeacon"/>
+            <Cooldown Link="Abil/AlliedAICancelBeacon" TimeUse="10"/>
+        </Cost>
+        <Range value="1000"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAIDefend"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="BonesHeal">
+        <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
+    </CAbilEffectTarget>
+    <!-- Reaper AutoCast Bombs-->
+    <CAbilEffectTarget id="D8Charge">
+        <Range index="0" value="7"/>
+        <AutoCastRange value="7"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ExperimentalPlasmaGun">
+        <Cost index="0">
+            <Charge CountMax="2" CountStart="2" TimeUse="60"/>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <Range index="0" value="8"/>
+        <CastIntroTime index="0" value="0.45"/>
+    </CAbilEffectTarget>
+    <CAbilAugment id="HellbatCharge">
+        <Cost>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+    </CAbilAugment>
+    <CAbilEffectInstant id="NovaApolloCloak">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="NovaPersonalDefensiveMatrix">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="NovaSnipeStone">
+        <Cost>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="1"/>
+                <Link value="Abil/NovaSnipeStone"/>
+                <TimeUse value="30"/>
+            </Charge>
+            <Cooldown Link="Abil/NovaSnipeStone" TimeUse="4"/>
+        </Cost>
+        <CastIntroTime index="0" value="0.65"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="NovaWeaponHellfireShotgunBlast">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="45"/>
+            </Charge>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <CastIntroTime index="0" value="0.3"/>
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
+    <!-- Spectre Psionic Lash -->
+    <CAbilEffectTarget id="Obliterate">
+        <Range index="0" value="9"/>
+        <PrepTime index="0" value="2"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PlaceHealingDrone">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="60"/>
+            </Charge>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <Range index="0" value="4"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PsionicLift">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
+    <!-- TValerian02a Shared Command Card -->
+    <CAbilEffectTarget id="RaynorSnipe">
+        <Cost index="0">
+            <Cooldown TimeUse="45"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="TitanMechBombardment">
+        <Cost>
+            <Charge Link="Abil/TitanMechBombardment"/>
+            <Cooldown Link="Abil/TitanMechBombardment" TimeUse="240"/>
+        </Cost>
+        <Range index="0" value="10"/>
+        <CastIntroTime value="5"/>
+    </CAbilEffectTarget>
+    <CAbilAugment id="TornadoMissile">
+        <Cost>
+            <Cooldown TimeUse="10"/>
+        </Cost>
+        <AutoCastFilters value="Ground,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CAbilAugment>
+    <CAbilEffectTarget id="UltrasonicPulseEnhanced">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="30"/>
+            </Charge>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+    </CAbilEffectTarget>
+</Catalog>

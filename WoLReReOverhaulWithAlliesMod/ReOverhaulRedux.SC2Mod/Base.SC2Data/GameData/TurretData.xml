@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTurret id="Cyclone">
+        <Fidget TurningRate="42.7148"/>
+    </CTurret>
+    <CTurret id="CycloneWeaponTurret">
+        <Fidget TurningRate="46.7578"/>
+    </CTurret>
+</Catalog>

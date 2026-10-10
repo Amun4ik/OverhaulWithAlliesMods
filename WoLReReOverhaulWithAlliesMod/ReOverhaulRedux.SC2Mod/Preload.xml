@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preload>
+<Asset path="assets\textures\ui_hots_button_shared_hero_hover.dds" Type="Image"/>
+<Asset path="assets\textures\ui_hots_button_shared_hero_normal.dds" Type="Image"/>
+<Asset path="assets\textures\icon-mineral-nobg.dds" Type="Image"/>
+<Abil id="CreepTumorBuild"/>
+<Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="GeyserExhaustedHarvestable"/>
+<Model id="BeaconDefend"/>
+<Model id="PingArrow"/>
+<Sound id="UI_PushButtonSelect"/>
+<Unit id="CreepTumorBurrowed"/>
+<Unit id="AlliedAIOrderPanel"/>
+</Preload>

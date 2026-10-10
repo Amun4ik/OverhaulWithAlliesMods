@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CWeaponLegacy id="CommandoRifle">
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="D8Charge">
+        <Options index="Disabled" value="0"/>
+        <Options index="Hidden" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <TargetFilters value="Ground,Armored,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="1.2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DevilDogFlameThrower">
+        <Period value="0.82"/>
+        <DamagePoint value="0.1"/>
+        <Backswing value="0.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DominionKillTeam">
+        <Range value="8"/>
+        <Period value="2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DutchConcussiveGrenade">
+        <MinScanRange value="6"/>
+        <Range value="6"/>
+        <Period value="1.6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Firebat">
+        <Period value="0.86"/>
+        <DamagePoint value="0.1"/>
+        <Backswing value="0.2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HERCWeapon">
+        <Range value="2"/>
+        <Period value="1.4"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HERCWeapon2">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="HERCWeaponDamage2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <Period value="1.4"/>
+        <DamagePoint value="0.2"/>
+        <Effect value="HERCWeaponDamage2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InfernalFlameThrower">
+        <Period value="1.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MengskReaperD8Charge">
+        <Period value="1.2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MengskReaperP38ScytheGuassPistol">
+        <MinScanRange value="6"/>
+        <Range value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MercHellionInfernalFlameThrower">
+        <Period value="1.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MercReaperD8Charge">
+        <TargetFilters value="Ground,Armored,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1.2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MercReaperP38ScytheGuassPistol">
+        <TargetFilters value="Ground,Visible;Armored,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="5"/>
+        <Period value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="P38ScytheGuassPistol">
+        <TargetFilters value="Ground,Visible;Armored,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PunisherGrenades2">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="PunisherGrenadesU2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Period value="1.5"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.0124"/>
+        <Effect value="PunisherGrenadesLM2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Specter">
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TychusChaingun">
+        <Period value="0.35"/>
+        <!--         <Effect value="TychusChaingun"/> -->
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TychusCommandoChaingun">
+        <MinScanRange value="6"/>
+        <Range value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TyphoonMissilePod">
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6"/>
+        <Range value="6"/>
+        <Period value="1.2"/>
+        <Effect value="CycloneRocketBarrage2"/>
+        <Arc value="4.9987"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TyphoonMissilePod2">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="CycloneAttackWeaponDamage"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="9"/>
+        <Range value="9"/>
+        <Period value="0.8"/>
+        <Effect value="CycloneRocketBarrage"/>
+        <Arc value="4.9987"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Vulture2">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="LurkerMPDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="9.5"/>
+        <Range value="9.5"/>
+        <Period value="2.25"/>
+        <Backswing value="0"/>
+        <Effect value="LurkerMP"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+    </CWeaponLegacy>
+</Catalog>

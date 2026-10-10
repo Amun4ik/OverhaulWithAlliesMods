@@ -1,0 +1,78 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: WoLReoverhaul
+//--------------------------------------------------------------------------------------------------
+// Preset Declarations
+const int lib7D432011_ge_AIResourcePanelStyles_Default = 0;
+const int lib7D432011_ge_AIResourcePanelStyles_ArcadePurple = 1;
+const int lib7D432011_ge_AIResourcePanelStyles_ProtossLightBlue = 2;
+const int lib7D432011_ge_AIResourcePanelStyles_TerranGreen = 3;
+const int lib7D432011_ge_AIResourcePanelStyles_ZergMutedOrange = 4;
+const int lib7D432011_ge_AIResourcePanelStyles_EvolvedYellow = 5;
+const int lib7D432011_ge_AIResourcePanelStyles_ForgedRed = 6;
+const int lib7D432011_ge_AIResourcePanelStyles_GalacticViolet = 7;
+const int lib7D432011_ge_AIResourcePanelStyles_IhanriiVibrantAquamarine = 8;
+const int lib7D432011_ge_AIResourcePanelStyles_ImperialMengsk = 9;
+const int lib7D432011_ge_AIResourcePanelStyles_MachinedOrange = 10;
+const int lib7D432011_ge_AIResourcePanelStyles_MirasMaraudersVeryMutedPink = 11;
+const int lib7D432011_ge_AIResourcePanelStyles_NerazimMutedPurple = 12;
+const int lib7D432011_ge_AIResourcePanelStyles_PrimalGreener = 13;
+const int lib7D432011_ge_AIResourcePanelStyles_PurifierVibrantHotOrange = 14;
+const int lib7D432011_ge_AIResourcePanelStyles_SimulantHotOrange = 15;
+const int lib7D432011_ge_AIResourcePanelStyles_SpecialForcesNova = 16;
+const int lib7D432011_ge_AIResourcePanelStyles_TyradorMutedPurple = 17;
+
+// Variable Declarations
+int lib7D432011_gv_player;
+int lib7D432011_gv_tychusAlly;
+int lib7D432011_gv_rebelsAlly;
+int lib7D432011_gv_toshAlly;
+int lib7D432011_gv_mercsAlly;
+int lib7D432011_gv_dominionAlly;
+playergroup lib7D432011_gv_allies;
+playergroup lib7D432011_gv_alliesPlayer;
+bank lib7D432011_gv_woLReoverhaulBank;
+int[17] lib7D432011_gv_aIResourcePanelDialog;
+text[17] lib7D432011_gv_aIResourcePanelCommanderName;
+int[17] lib7D432011_gv_aIResourcePanelMineralsLabel;
+int[17] lib7D432011_gv_aIResourcePanelVespeneLabel;
+int[17] lib7D432011_gv_aIResourcePanelSupplyLabel;
+unit lib7D432011_gv_aIController;
+int lib7D432011_gv_aIControllerDialog;
+int lib7D432011_gv_aIControllerButton;
+bool lib7D432011_gv_alliedUIActive;
+
+// Function Declarations
+void lib7D432011_gf_RescueUnitforAI (unit lp_cHOSEN_UNIT, point lp_tARGET_POINT, int lp_cHOSEN_PLAYER, bool lp_iMMIDIATE_ATTACK);
+void lib7D432011_gf_AttackArrowPing (point lp_startpoint, point lp_endpoint);
+void lib7D432011_gf_StartTychusAI (int lp_minerals, int lp_gas, point lp_gatherPoint);
+void lib7D432011_gf_StartRebelsAI (int lp_minerals, int lp_gas, point lp_gatherPoint);
+void lib7D432011_gf_StartToshAI (int lp_minerals, int lp_gas, point lp_gatherPoint);
+void lib7D432011_gf_StartMercsAI (int lp_minerals, int lp_gas, point lp_gatherPoint);
+void lib7D432011_gf_CreateAIResourcePanel (int lp_player, int lp_position, string lp_image, text lp_name, int lp_style);
+void lib7D432011_gf_ShowHideAIResourcePanel (int lp_player, bool lp_showHide);
+void lib7D432011_gf_DestroyAIResourcePanel (int lp_player);
+string lib7D432011_gf_AIResourcePanelGetImageFromStyle (int lp_style);
+void lib7D432011_gf_CreateAIController ();
+
+// Trigger Declarations
+trigger lib7D432011_gt_Disableachievments;
+trigger lib7D432011_gt_Load;
+trigger lib7D432011_gt_LoadTechs;
+trigger lib7D432011_gt_AISettings;
+trigger lib7D432011_gt_ShareMineralPickupwithAllies;
+trigger lib7D432011_gt_ShareVespenePickupwithAllies;
+trigger lib7D432011_gt_RestoreInfiniteResources;
+trigger lib7D432011_gt_Checkifgeyserdepleted;
+trigger lib7D432011_gt_AIResourcePanelUpdater;
+trigger lib7D432011_gt_TychusFortify;
+trigger lib7D432011_gt_InitAlliedAIUI;
+trigger lib7D432011_gt_AlliedAIClicked;
+trigger lib7D432011_gt_AlliedAIHotkey;
+trigger lib7D432011_gt_AlliedAIDeselected;
+trigger lib7D432011_gt_AlliedAIDeselectedHotkey;
+
+// Library Initialization
+void lib7D432011_InitVariables ();
+

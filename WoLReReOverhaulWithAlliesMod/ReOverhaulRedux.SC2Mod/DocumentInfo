@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DocInfo>
+    <Dependencies>
+        <Value>bnet:Void (Campaign)/0.0/999,file:Campaigns/Void.SC2Campaign</Value>
+        <Value>bnet:Nova Covert Ops (Art Mod)/0.0/999,file:Mods/NovaStoryAssets.SC2Mod</Value>
+        <Value>file:Mods\kit_liberty_story.SC2Mod</Value>
+        <Value>file:Mods\ImprovedCampaignAI.SC2Mod</Value>
+        <Value>file:Mods\SCEvo_Assets.SC2Mod</Value>
+        <Value>file:Mods\ReOverhaulReduxAssets2.SC2Mod</Value>
+        <Value>file:Mods\ReOverhaulReduxAssets.SC2Mod</Value>
+    </Dependencies>
+</DocInfo>

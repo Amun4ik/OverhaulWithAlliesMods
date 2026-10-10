@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade id="DominionForces">
+        <EffectArray Reference="Unit,Marine,LifeMax" Value="25"/>
+        <EffectArray Reference="Unit,Marine,LifeStart" Value="25"/>
+        <EffectArray Operation="Subtract" Reference="Weapon,GuassRifle,Range" Value="1"/>
+        <EffectArray Reference="Effect,GuassRifle,Amount" Value="2"/>
+        <EffectArray Reference="Unit,Medic,LifeStart" Value="20"/>
+        <EffectArray Reference="Unit,Medic,LifeMax" Value="20"/>
+        <EffectArray Reference="Unit,Medic,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Firebat,LifeStart" Value="40"/>
+        <EffectArray Reference="Unit,Firebat,LifeMax" Value="40"/>
+        <EffectArray Reference="Unit,Firebat,LifeArmor" Value="1"/>
+        <EffectArray Reference="Effect,FirebatUFull,Amount" Value="2"/>
+        <EffectArray Reference="Unit,Marauder,LifeStart" Value="50"/>
+        <EffectArray Reference="Unit,Marauder,LifeMax" Value="50"/>
+        <EffectArray Reference="Effect,PunisherGrenadesU,Amount" Value="5"/>
+        <EffectArray Operation="Subtract" Reference="Weapon,PunisherGrenades,Range" Value="2.5"/>
+        <EffectArray Reference="Unit,Reaper,LifeStart" Value="20"/>
+        <EffectArray Reference="Unit,Reaper,LifeMax" Value="20"/>
+        <EffectArray Reference="Unit,Reaper,LifeArmor" Value="2"/>
+        <EffectArray Reference="Unit,Ghost,LifeStart" Value="80"/>
+        <EffectArray Reference="Unit,Ghost,LifeMax" Value="80"/>
+        <EffectArray Reference="Unit,Ghost,LifeArmor" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="Mercenarys"/>
+    <CUpgrade id="RebellionForces"/>
+    <CUpgrade id="ToshGoons"/>
+    <CUpgrade id="TychusBoys"/>
+</Catalog>

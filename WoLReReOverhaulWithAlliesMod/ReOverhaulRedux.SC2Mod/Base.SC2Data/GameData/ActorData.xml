@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <!--                                                                                         -->
+    <!-- Swann ................................................................................. -->
+    <!--                                                                                         -->
+    <CActorUnit id="AlliedAIOrderPanel" parent="ZergBuildingEx" unitName="AlliedAIOrderPanel">
+        <Macros value="MacroTownhallDeco_Zerg"/>
+        <Macros value="ZergHatcheryPlayerDecalMacro"/>
+        <Macros value="SprayHelperMacro"/>
+        <Macros value="ZerglingRespawnAnim"/>
+        <AcceptedHostedPropTransfers index="Decal" value="0"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom Hatchery; MorphTo Lair" Send="Create ZergHatcheryToLair"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom Hatchery; MorphTo Lair" Send="AnimGroupApply B"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom Hatchery; MorphTo Lair" Send="AnimGroupRemove B"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom Hatchery; MorphTo Lair" Send="AnimClearAllBut Stand"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom Hatchery; MorphTo Lair" Send="AnimBaselineStart"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom Hatchery; MorphTo Lair" Send="AnimPlay MorphCancel Cover,End,A"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Hatchery; MorphTo Lair" Send="Destroy"/>
+        <On Terms="UnitBirth.AlliedAIOrderPanel" Send="Create PlayerLogoDoodadList"/>
+        <On Terms="UnitBirth.AlliedAIOrderPanel; PlayerHasClanDecal" Send="Create ZergClanFlag"/>
+        <On Terms="UnitBirth.AlliedAIOrderPanel; PlayerHasTrophy" Send="Create ZergPlayerTrophy"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HasZergGenericDeath" Send="DeathCustomize Detached"/>
+        <Model value="Invisible"/>
+        <BuildModel value="Invisible"/>
+        <PlacementModel value="Invisible"/>
+        <PortraitModel value="Overlord_Webby_Portrait"/>
+        <BarOffset value="135"/>
+        <BarWidth value="200"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\black.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\ui_glues_help_armyicon_zerg.dds"/>
+        <UnitIcon value="Assets\Textures\ui_glues_help_armyicon_zerg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\black.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="Dutch">
+        <UnitKillRank index="0" Text="UnitKillRank/Swann1"/>
+    </CActorUnit>
+    <CActorUnit id="HERC2" parent="GenericUnitStandard" unitName="HERC2">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Marauder_Land"/>
+        <On Terms="Abil.Grapple.SourceCastStart" Send="AnimBracketStart Work Stand,Work,Start Stand,Work Stand,Work,End"/>
+        <On Terms="Effect.GrappleLaunchCasterImpact.Start" Send="AnimBracketStop Work"/>
+        <On Terms="Effect.GrappleCreatePlaceholderRemove.Start" Send="AnimBracketStop Work"/>
+        <On Terms="Abil.HercGrapple.SourceCastStart" Send="AnimBracketStart Work Stand,Work,Start Stand,Work Stand,Work,End"/>
+        <On Terms="Effect.HercGrappleLaunchCasterImpact.Start" Send="AnimBracketStop Work"/>
+        <On Terms="Effect.HercGrappleCreatePlaceholderRemove.Start" Send="AnimBracketStop Work"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="HERCDeath2" SoundLink="Ghost_Explode"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="MPOdinPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.400000"/>
+            <RangeDown value="0.400000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="55"/>
+        <BarWidth value="55"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-herc.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="Jumper_Ready"/>
+        <SoundArray index="Help" value="Jumper_Help"/>
+        <SoundArray index="What" value="Jumper_What"/>
+        <SoundArray index="Yes" value="Jumper_Yes"/>
+        <SoundArray index="Attack" value="Jumper_Attack"/>
+        <SoundArray index="Pissed" value="Jumper_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-herc.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-herc.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="LurkerMPAttackSpikeEx2">
+        <Model value="ScarabAttackImpact"/>
+    </CActorModel>
+    <CActorAction id="MarauderAttack2" parent="MarauderAttackBase" effectImpact="PunisherGrenadesU2" effectLaunch="PunisherGrenadesLM">
+        <On Terms="Effect.PunisherGrenadesLM2.Start; At Caster; !ValidateEffect PunisherGrenadesResearched" Send="Create"/>
+        <LaunchAttachQuery Methods="AMPatternMarauder" Fallback="Hardpoint"/>
+        <LaunchAssets Model="MarauderAttackLaunch"/>
+        <Missile value="MarauderAttackMissile2"/>
+        <ImpactPhysics Name="PunisherGrenadesImpact" MatchKeys="Basic" Physics="MarauderAttackDeathForce"/>
+    </CActorAction>
+    <CActorMissile id="MarauderAttackMissile2" parent="GenericAttackMissile" unitName="PunisherGrenadesLMWeapon2"/>
+    <CActorUnit id="MineralField">
+        <StatusBarFlags index="Workers" value="0"/>
+        <On Terms="Behavior.MineralFieldExhausted.On" Send="SetTintColor 255,128,128"/>
+    </CActorUnit>
+    <CActorModel id="CarryHarvestableRichVespeneGeyserGas">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableRichVespeneGeyserGasProtoss">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableRichVespeneGeyserGasZerg">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableVespeneGeyserGas">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableVespeneGeyserGasProtoss">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableVespeneGeyserGasZerg">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorEventMacro id="GeyserExhausted">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="UnitBirth.*.Normal" Send="TimerSet 0.100000 GeyserDepleteCheck"/>
+        <On Terms="UnitConstruction.*.Finish" Send="TimerSet 0.100000 GeyserDepleteCheck"/>
+        <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="SetTintColor 255,170,170"/>
+        <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="AnimGroupRemove D"/>
+        <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="AnimGroupApply B"/>
+    </CActorEventMacro>
+    <!-- Heroes -->
+    <CActorUnit id="Raynor01">
+        <On Terms="Abil.ExperimentalPlasmaGun.SourceCastStart" Send="AnimPlay {} Attack"/>
+        <On Terms="Abil.TossGrenade.SourceCastStart" Send="AnimPlay {} Spell 0 -1.000000 -1.000000 1.500000 AsDuration"/>
+        <CustomUnitStatusFrame value=""/>
+    </CActorUnit>
+    <!--                                                                                         -->
+    <!-- Raynor Commando ....................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="RaynorCommando">
+        <SoundArray index="Birth" value="Ghost_Ready"/>
+        <SoundArray index="Ready" value="Ghost_Ready"/>
+        <SoundArray index="Help" value="Ghost_Help"/>
+        <SoundArray index="What" value="Ghost_What"/>
+        <SoundArray index="Yes" value="Ghost_Yes"/>
+        <SoundArray index="Attack" value="Ghost_Attack"/>
+        <SoundArray index="Pissed" value="Ghost_Pissed"/>
+        <SoundArray index="Movement" value="Ghost_Yes"/>
+        <SoundArray index="Board" value="Ghost_Ready"/>
+        <SoundArray index="Click" value="Ghost_Yes"/>
+        <SoundArray index="ClickError" value="Ghost_Pissed"/>
+        <SoundArray index="Highlight" value="Ghost_CloakOnVO"/>
+        <PortraitModel value="Ghost_Umojan_Portrait"/>
+    </CActorUnit>
+    <CActorUnit id="Tosh">
+        <CustomUnitStatusFrame value=""/>
+    </CActorUnit>
+    <!--                                                                                         -->
+    <!-- Tychus Commando ....................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="TychusCommando">
+        <UnitKillRank index="0" Text="UnitKillRank/Tychus3"/>
+        <PortraitModel value="Marauder_CovertOps_Portrait"/>
+    </CActorUnit>
+    <CActorUnit id="TychusCommando2" parent="GenericUnitStandard" unitName="TychusCommando2">
+        <Aliases value="_UnitSmall"/>
+        <On Terms="Abil.BonesTossGrenade.SourceCastStart" Send="$Spell 0 -1.000000 -1.000000 2.000000 AsTimeScale"/>
+        <On Terms="ActorCreation" Send="TextureSelectById Decal_Campaign_Tychus_01"/>
+        <HostedAttaches>
+            <AttachQuery Methods="AMFilterHardpoint02" Fallback="Weapon"/>
+            <HostSiteOps Ops="SOpAttachHardPoint02"/>
+        </HostedAttaches>
+        <ModelFlags index="SuppressPlayerDecals" value="1"/>
+        <DeathArray index="Normal" SoundLink="Tychus_Explode"/>
+        <DeathArray index="Fire" ModelLink="TychusCommandoDeathFire2" SoundLink="Uni_DeathFXFire"/>
+        <PortraitModel value="TychusPortrait2"/>
+        <StandAnimTurnTime value="5"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="BonesTossGrenade,Execute" Sound="Tychus_TossGrenadeVO"/>
+        <BarOffset value="50"/>
+        <BarWidth value="50"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-marine-tychus.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\ui-heroicon-tychus.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Birth" value="Tychus_Birth"/>
+        <SoundArray index="Ready" value="Tychus_Ready"/>
+        <SoundArray index="Help" value="Tychus_Help"/>
+        <SoundArray index="What" value="Tychus_What"/>
+        <SoundArray index="Yes" value="Tychus_Yes"/>
+        <SoundArray index="Attack" value="Tychus_Attack"/>
+        <SoundArray index="Pissed" value="Tychus_Pissed"/>
+        <SoundArray index="Movement" value="Tychus_Movement"/>
+        <SoundArray index="Turning" value="Tychus_Turning"/>
+        <SoundArray index="Board" value="Tychus_Board"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-MarineTychus.dds"/>
+        <UnitKillRank Text="UnitKillRank/Tychus2"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-marine-tychus.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="VespeneGeyser">
+        <On index="73" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="SpacePlatformGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="ShakurasVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="RichVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <On index="80" Terms="Behavior.RawRichVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawRichVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="PurifierVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="ProtossVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start PlayForever,NonLooping 0.000000 0.300000 22.200001 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="AssimilatorRich">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="Assimilator">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="Extractor">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="ExtractorRich">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="Refinery">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="RefineryRich">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="SetTintColor 255,170,170"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
+        <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
+    </CActorUnit>
+    <CActorUnit id="Vulture2" parent="GenericUnitStandard" unitName="Vulture2">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Upgrade.DOM.Add" Send="ModelSwap DOMVulture"/>
+        <On Terms="ActorCreation; ValidateUnit HaveDOM" Send="ModelSwap DOMVulture"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="VultureDeath2" SoundLink="Vulture_Explode"/>
+        <PortraitModel value="VulturePortrait2"/>
+        <AbilSoundArray AbilCmd="VultureSpiderMines,Execute" Sound="Vulture_SpiderMinePlace"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Vulture.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="40"/>
+        <SoundArray index="Ready" value="Vulture_Ready"/>
+        <SoundArray index="Help" value="Vulture_Help"/>
+        <SoundArray index="What" value="Vulture_What"/>
+        <SoundArray index="Yes" value="Vulture_Yes"/>
+        <SoundArray index="Attack" value="Vulture_Attack"/>
+        <SoundArray index="Pissed" value="Vulture_Pissed"/>
+        <SoundArray index="Movement" value="Vulture_Mv_Start"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Vulture.dds"/>
+        </Wireframe>
+    </CActorUnit>
+</Catalog>

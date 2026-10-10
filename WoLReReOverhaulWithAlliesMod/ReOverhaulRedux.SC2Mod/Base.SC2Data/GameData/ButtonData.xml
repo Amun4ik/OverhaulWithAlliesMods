@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CButton id="AlliedAIAttack">
+        <Icon value="Assets\Textures\command_attack_ac.dds"/>
+        <AlertIcon value="Assets\Textures\command_attack_ac.dds"/>
+    </CButton>
+    <CButton id="AlliedAIDefend">
+        <Icon value="Assets\Textures\command_defend_ac.dds"/>
+        <AlertIcon value="Assets\Textures\command_defend_ac.dds"/>
+    </CButton>
+    <CButton id="CommanderControllerIcon1">
+        <Icon value="Assets\Textures\btn-commander-tychus.dds"/>
+        <AlertIcon value="Assets\Textures\btn-commander-tychus.dds"/>
+    </CButton>
+    <CButton id="CommanderControllerIcon2">
+        <Icon value="Assets\Textures\btn-commander-tychus.dds"/>
+        <AlertIcon value="Assets\Textures\btn-commander-tychus.dds"/>
+    </CButton>
+</Catalog>
