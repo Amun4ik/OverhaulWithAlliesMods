@@ -91,6 +91,10 @@
         <ImpactPhysics Name="PunisherGrenadesImpact" MatchKeys="Basic" Physics="MarauderAttackDeathForce"/>
     </CActorAction>
     <CActorMissile id="MarauderAttackMissile2" parent="GenericAttackMissile" unitName="PunisherGrenadesLMWeapon2"/>
+    <CActorUnit id="Marine">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap MarineXPR2"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap MarineXPR2"/>
+    </CActorUnit>
     <CActorUnit id="MineralField">
         <StatusBarFlags index="Workers" value="0"/>
         <On Terms="Behavior.MineralFieldExhausted.On" Send="SetTintColor 255,128,128"/>

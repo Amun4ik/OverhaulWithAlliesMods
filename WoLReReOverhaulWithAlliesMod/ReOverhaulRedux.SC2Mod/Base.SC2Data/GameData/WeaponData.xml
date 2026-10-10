@@ -31,6 +31,23 @@
         <DamagePoint value="0.1"/>
         <Backswing value="0.2"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="GoliathA">
+        <DisplayAttackCount value="4"/>
+        <Period value="2.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GoliathAUpgraded">
+        <DisplayAttackCount value="4"/>
+        <Range value="7"/>
+        <Period value="2.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GoliathG">
+        <DisplayAttackCount value="2"/>
+        <Effect value="GoliathA2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GoliathGUpgraded">
+        <DisplayAttackCount value="2"/>
+        <Effect value="GoliathA2"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="HERCWeapon">
         <Range value="2"/>
         <Period value="1.4"/>
@@ -38,12 +55,12 @@
     <CWeaponLegacy id="HERCWeapon2">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
-        <DisplayEffect value="HERCWeaponDamage2"/>
+        <DisplayEffect value="NovaWeaponBlazefireBladeGunDamageUncloaked"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="2"/>
         <Period value="1.4"/>
         <DamagePoint value="0.2"/>
-        <Effect value="HERCWeaponDamage2"/>
+        <Effect value="NovaWeaponBlazefireBladeGunDamageUncloaked"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="InfernalFlameThrower">
         <Period value="1.5"/>

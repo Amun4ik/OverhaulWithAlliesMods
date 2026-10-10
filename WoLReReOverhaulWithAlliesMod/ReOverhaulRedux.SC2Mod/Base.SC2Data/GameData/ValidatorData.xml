@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorPlayerRequirement id="HaveBlackOps2">
+        <Find value="1"/>
+        <Value value="HaveBlackOps2"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitFilters id="TornadoMissileFilters">
         <Filters value="Ground,Visible;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CValidatorUnitFilters>

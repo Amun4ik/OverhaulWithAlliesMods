@@ -1,1 +1,2 @@
 ﻿Button/Hotkey/TossGrenade=Q
+Button/Hotkey/UltrasonicPulseEnhanced=Q

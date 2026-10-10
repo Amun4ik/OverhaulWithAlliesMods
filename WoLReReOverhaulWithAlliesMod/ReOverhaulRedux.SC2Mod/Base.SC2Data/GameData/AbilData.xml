@@ -51,6 +51,7 @@
         <Cost index="0">
             <Vital index="Energy" value="0"/>
         </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectInstant>
     <CAbilEffectTarget id="NovaSnipeStone">
         <Cost>
@@ -134,5 +135,6 @@
             </Charge>
             <Cooldown TimeUse="3"/>
         </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectTarget>
 </Catalog>

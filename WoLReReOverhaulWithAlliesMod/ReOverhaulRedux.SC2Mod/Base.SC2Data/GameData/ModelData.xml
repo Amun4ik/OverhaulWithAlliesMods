@@ -54,6 +54,78 @@
     <CModel id="MarauderKillSquadPortrait">
         <Model value="Assets\Terran\Marauder_Viper_Portrait.m3"/>
     </CModel>
+    <CModel id="MarineXPR2" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\MarineXPReward\MarineXPReward.m3"/>
+        <RequiredAnims value="Assets\Units\Terran\Marine_SwarmAnims\Marine_SwarmAnims.m3a"/>
+        <Events>
+            <Anim value="Stand,Victory,00"/>
+            <Name value="SquibStart"/>
+            <Type value="Custom"/>
+            <Time value="3.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Victory,00"/>
+            <Name value="SquibStop"/>
+            <Type value="Custom"/>
+            <Time value="4.650000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Victory,01"/>
+            <Name value="SquibStart"/>
+            <Type value="Custom"/>
+            <Time value="0.350000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Victory,01"/>
+            <Name value="SquibStop"/>
+            <Type value="Custom"/>
+            <Time value="2.350000"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="MarineXPR22" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\Marine_Remastered\Marine_Remastered.m3"/>
+        <RequiredAnims value="Assets\Units\Terran\Marine_SwarmAnims\Marine_SwarmAnims.m3a"/>
+        <Events>
+            <Anim value="Stand,Victory,00"/>
+            <Name value="SquibStart"/>
+            <Type value="Custom"/>
+            <Time value="3.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Victory,00"/>
+            <Name value="SquibStop"/>
+            <Type value="Custom"/>
+            <Time value="4.650000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Victory,01"/>
+            <Name value="SquibStart"/>
+            <Type value="Custom"/>
+            <Time value="0.350000"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Victory,01"/>
+            <Name value="SquibStop"/>
+            <Type value="Custom"/>
+            <Time value="2.350000"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
     <CModel id="MedicStetmann">
         <Model value="Assets\Terran\DaveSpectreFieldTechnicSuit.m3"/>
     </CModel>
@@ -80,6 +152,9 @@
     </CModel>
     <CModel id="RaynorSnipeBeam">
         <Model value="Assets\Effects\Terran\WarHoundRailGunMissile\WarHoundRailGunMissile.m3"/>
+    </CModel>
+    <CModel id="RaynorSnipeBigBloodImpact">
+        <Model value="Assets\Effects\Terran\DiamondbackMissileImpact\DiamondbackMissileImpact.m3"/>
     </CModel>
     <CModel id="RaynorSnipeLaunchSquib">
         <Model value="Assets\Effects\Terran\MagrailMunition_Launch\MagrailMunition_Launch.m3"/>

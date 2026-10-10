@@ -15,7 +15,10 @@ Button/Tooltip/TychusCommando2=Long-hand of Dominion Infantry Corp. <n/><n/><c v
 Button/Tooltip/Vulture2=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Effect/Name/CycloneRocketBarrage=Cyclone Rocket Barrage Air
 Effect/Name/CycloneRocketBarrage2=Cyclone Rocket Barrage Ground
-Effect/Name/HERCWeaponDamage2=HERC Weapon Damage
+Effect/Name/GoliathA2=Ground Attack
+Effect/Name/LurkerMP=Ultra-Sonic
+Effect/Name/LurkerMPDamage=Ultra-Sonic
+Effect/Name/LurkerMPSearch=Ultra-Sonic
 Effect/Name/PunisherGrenadesLM2=Loyalist Grenades
 Effect/Name/PunisherGrenadesSet2=Loyalist Grenades
 Effect/Name/PunisherGrenadesU2=Loyalist Grenades

@@ -65,17 +65,36 @@
         <AttributeFactor index="Biological" value="1"/>
         <Amount value="10"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="GoliathA">
+        <PeriodCount value="4"/>
+        <PeriodicPeriodArray index="0" value="0.21"/>
+        <PeriodicPeriodArray value="0.21"/>
+        <PeriodicPeriodArray value="0.21"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="GoliathA2">
+        <ValidatorArray value="CasterIsNotHidden"/>
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="GoliathG"/>
+        <PeriodicEffectArray value="GoliathG"/>
+        <PeriodicEffectArray value="GoliathG"/>
+        <PeriodicPeriodArray value="0.35"/>
+        <PeriodicPeriodArray value="0.35"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="GoliathAU">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeFactor index="Armored" value="0.5"/>
+        <Amount value="6"/>
+    </CEffectDamage>
+    <CEffectDamage id="GoliathG">
+        <Amount value="10"/>
+        <AreaArray Fraction="0.5"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
     <CEffectDamage id="HERCWeaponDamage">
         <AreaArray index="0" Arc="360" Radius="1.5" Fraction="0.25"/>
-    </CEffectDamage>
-    <CEffectDamage id="HERCWeaponDamage2" parent="DU_WEAP_MISSILE">
-        <KindSplash value="Splash"/>
-        <Amount value="40"/>
-        <AreaArray Radius="1.5" Fraction="0.25"/>
-        <ExcludeArray Value="Target"/>
-        <SearchFilters value="Ground;Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
-        <SearchFlags index="CenterAtLaunch" value="1"/>
-        <SearchFlags index="OffsetByUnitRadius" value="0"/>
     </CEffectDamage>
     <CEffectDamage id="HammerSecurityDamage">
         <AttributeBonus index="Armored" value="0"/>
@@ -95,7 +114,7 @@
     <CEffectCreatePersistent id="LurkerMP">
         <PeriodCount value="11"/>
         <PeriodicOffsetArray value="0,-11,0"/>
-        <PeriodicPeriodArray index="0" value="0.1"/>
+        <PeriodicPeriodArray index="0" value="0.06"/>
         <PeriodicPeriodArray index="1" removed="1"/>
         <PeriodicPeriodArray index="2" removed="1"/>
         <PeriodicPeriodArray index="3" removed="1"/>
@@ -105,6 +124,7 @@
         <PeriodicPeriodArray index="7" removed="1"/>
         <PeriodicPeriodArray index="8" removed="1"/>
         <PeriodicPeriodArray index="9" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="LurkerMPDamage">
         <EditorCategories value="Race:Terran"/>
@@ -114,6 +134,7 @@
     </CEffectDamage>
     <CEffectEnumArea id="LurkerMPSearch">
         <AreaArray index="0" Radius="0.825"/>
+        <EditorCategories value="Race:Terran"/>
     </CEffectEnumArea>
     <CEffectDamage id="MengskReaperD8ChargeDamage">
         <Amount value="45"/>
@@ -205,6 +226,11 @@
     </CEffectSet>
     <CEffectDamage id="NovaSnipeStoneDamage">
         <Amount value="175"/>
+    </CEffectDamage>
+    <CEffectDamage id="NovaWeaponBlazefireBladeGunDamageUncloaked">
+        <Amount value="40"/>
+        <AreaArray index="0" Radius="1.25" Fraction="0.25"/>
+        <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="NovaWeaponHellfireShotgunBlast">
         <PeriodCount value="2"/>
@@ -303,7 +329,7 @@
         <PeriodicOffsetArray index="16" value="0,-34,0"/>
         <PeriodicOffsetArray index="17" value="0,-36,0"/>
         <PeriodicOffsetArray index="18" value="0,-38,0"/>
-        <PeriodicOffsetArray index="19" removed="1"/>
+        <PeriodicOffsetArray index="19" value="0,-40,0"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="TitanMechBombardmentDamage">
         <Amount value="30"/>
