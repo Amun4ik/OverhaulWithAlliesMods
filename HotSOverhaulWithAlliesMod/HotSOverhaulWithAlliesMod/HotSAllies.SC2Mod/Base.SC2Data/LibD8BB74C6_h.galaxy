@@ -161,6 +161,7 @@ trigger libD8BB74C6_gt_AlliedAIClicked;
 trigger libD8BB74C6_gt_AlliedAIHotkey;
 trigger libD8BB74C6_gt_AlliedAIDeselected;
 trigger libD8BB74C6_gt_AlliedAIDeselectedHotkey;
+trigger libD8BB74C6_gt_AttackWavePings;
 trigger libD8BB74C6_gt_DemandResourcesCooldown;
 trigger libD8BB74C6_gt_DemandCDWarning;
 

@@ -103,12 +103,14 @@ Experimental Shield Generator=Experimental Shield Generator
 Glaive=Hydralisk
 GlaiveStrain=Glaive Strain
 Krotonn=Krotonn
+Param/Expression/lib_D8BB74C6_005246DC=~A~ Attack Wave
 Param/Expression/lib_D8BB74C6_0A626AD5=~C~~A~/~B~
 Param/Expression/lib_D8BB74C6_10F15188=~A~
 Param/Expression/lib_D8BB74C6_18718C7C=~A~'s Minerals
 Param/Expression/lib_D8BB74C6_20F824E6=~A~'s Vespene
 Param/Expression/lib_D8BB74C6_33BDB053=~C~~A~/~B~
 Param/Expression/lib_D8BB74C6_50E8AE0A=~C~~A~/~B~
+Param/Expression/lib_D8BB74C6_9319D98A=~A~ Attack Wave
 Param/Expression/lib_D8BB74C6_DEA8E2A1=~A~'s Supply
 Param/Expression/lib_D8BB74C6_E328F92C=Ally to Player Trades on cooldown for ~A~ seconds.
 Param/Value/lib_D8BB74C6_04D1671B=[Allies] <c val="f1598d">Nafash</c>: 

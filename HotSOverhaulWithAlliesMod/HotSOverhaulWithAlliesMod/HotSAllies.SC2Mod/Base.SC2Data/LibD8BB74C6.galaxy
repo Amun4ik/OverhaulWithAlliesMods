@@ -3031,6 +3031,48 @@ void libD8BB74C6_gt_AlliedAIDeselectedHotkey_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Attack Wave Pings
+//--------------------------------------------------------------------------------------------------
+bool libD8BB74C6_gt_AttackWavePings_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_aIPlayer;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((AIWaveUnitCount(EventPlayerWave()) > 3))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_aIPlayer = UnitGetOwner(UnitGroupRandomUnit(AIWaveGetUnits(EventPlayerWave()), c_unitCountAlive));
+    if ((PlayerGroupHasPlayer(libD8BB74C6_gv_allies, lv_aIPlayer) == true) && ((AIWaveState(EventPlayerWave()) >= 2) && (AIWaveState(EventPlayerWave()) <= 4)) && (AIWaveEval(EventPlayerWave()) >= 500)) {
+        TextExpressionSetToken("Param/Expression/lib_D8BB74C6_9319D98A", "A", PlayerName(lv_aIPlayer));
+        lib0D99C9FF_gf_AttachPingtoWave(EventPlayerWave(), lib0D99C9FF_gv_pingColorDefault, lib0D99C9FF_gv_pingModelDefault, TextExpressionAssemble("Param/Expression/lib_D8BB74C6_9319D98A"));
+    }
+
+    if ((PlayerGroupHasPlayer(libD8BB74C6_gv_allies, lv_aIPlayer) == false) && ((AIWaveState(EventPlayerWave()) >= 2) && (AIWaveState(EventPlayerWave()) <= 4)) && (AIWaveEval(EventPlayerWave()) >= 200)) {
+        TextExpressionSetToken("Param/Expression/lib_D8BB74C6_005246DC", "A", PlayerName(lv_aIPlayer));
+        lib0D99C9FF_gf_AttachPingtoWave(EventPlayerWave(), lib0D99C9FF_gv_pingColorDefault, lib0D99C9FF_gv_pingModelDefault, TextExpressionAssemble("Param/Expression/lib_D8BB74C6_005246DC"));
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libD8BB74C6_gt_AttackWavePings_Init () {
+    libD8BB74C6_gt_AttackWavePings = TriggerCreate("libD8BB74C6_gt_AttackWavePings_Func");
+    TriggerAddEventPlayerAIWave(libD8BB74C6_gt_AttackWavePings, c_playerAny);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Demand Resources + Cooldown
 //--------------------------------------------------------------------------------------------------
 bool libD8BB74C6_gt_DemandResourcesCooldown_Func (bool testConds, bool runActions) {
@@ -3168,6 +3210,7 @@ void libD8BB74C6_InitTriggers () {
     libD8BB74C6_gt_AlliedAIHotkey_Init();
     libD8BB74C6_gt_AlliedAIDeselected_Init();
     libD8BB74C6_gt_AlliedAIDeselectedHotkey_Init();
+    libD8BB74C6_gt_AttackWavePings_Init();
     libD8BB74C6_gt_DemandResourcesCooldown_Init();
     libD8BB74C6_gt_DemandCDWarning_Init();
 }
