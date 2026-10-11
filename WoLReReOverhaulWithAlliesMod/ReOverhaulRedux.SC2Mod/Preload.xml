@@ -8,7 +8,11 @@
 <Behavior id="GeyserExhaustedHarvestable"/>
 <Model id="BeaconDefend"/>
 <Model id="PingArrow"/>
+<Sound id="Alert_BaseUnderAttackKlaxon"/>
 <Sound id="UI_PushButtonSelect"/>
+<Unit id="SupplyDepot"/>
+<Unit id="Pylon"/>
+<Unit id="Overlord"/>
 <Unit id="CreepTumorBurrowed"/>
 <Unit id="AlliedAIOrderPanel"/>
 </Preload>

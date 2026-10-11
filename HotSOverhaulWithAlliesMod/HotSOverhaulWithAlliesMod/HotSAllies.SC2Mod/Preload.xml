@@ -29,6 +29,8 @@
 <Sound id="Alert_BaseUnderAttackKlaxon"/>
 <Sound id="UI_PushButtonSelect"/>
 <Sound id="zMission_Lab03_BroodMother01_020"/>
+<Unit id="SupplyDepot"/>
+<Unit id="Pylon"/>
 <Unit id="Hatchery"/>
 <Unit id="CreepTumor"/>
 <Unit id="Extractor"/>
@@ -39,6 +41,7 @@
 <Unit id="SpineCrawler"/>
 <Unit id="SporeCrawler"/>
 <Unit id="Lair"/>
+<Unit id="Overlord"/>
 <Unit id="CreepTumorBurrowed"/>
 <Unit id="NydusCanal"/>
 <Unit id="BroodMother"/>

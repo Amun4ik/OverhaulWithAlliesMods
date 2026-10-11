@@ -1,6 +1,7 @@
 include "TriggerLibs/NativeLib"
 include "TriggerLibs/SwarmLib"
 include "Lib0D99C9FF"
+include "LibF1378293"
 
 include "Lib7D432011_h"
 
@@ -12,6 +13,7 @@ void lib7D432011_InitLibraries () {
     libNtve_InitVariables();
     libHots_InitVariables();
     lib0D99C9FF_InitVariables();
+    libF1378293_InitVariables();
 }
 
 // Variable Initialization
@@ -43,6 +45,8 @@ void lib7D432011_InitVariables () {
     }
     lib7D432011_gv_aIControllerDialog = c_invalidDialogId;
     lib7D432011_gv_aIControllerButton = c_invalidDialogControlId;
+    lib7D432011_gv_resourceTradeCooldownTimer = TimerCreate();
+    lib7D432011_gv_resourceTradeCD = 240.0;
 }
 
 // Presets
@@ -736,6 +740,85 @@ void lib7D432011_gt_ShareVespenePickupwithAllies_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: AI Supply Block Preventer
+//--------------------------------------------------------------------------------------------------
+bool lib7D432011_gt_AISupplyBlockPreventer_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoA6941983_g;
+    int autoA6941983_var;
+    string autoAEA91760_val;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoA6941983_g = lib7D432011_gv_allies;
+    autoA6941983_var = -1;
+    while (true) {
+        autoA6941983_var = PlayerGroupNextPlayer(autoA6941983_g, autoA6941983_var);
+        if (autoA6941983_var < 0) { break; }
+        if ((PlayerGetPropertyInt(autoA6941983_var, c_playerPropSuppliesUsed) >= PlayerGetPropertyInt(autoA6941983_var, c_playerPropSuppliesMade)) && (PlayerGetPropertyInt(autoA6941983_var, c_playerPropSuppliesMade) < PlayerGetPropertyInt(autoA6941983_var, c_playerPropSuppliesLimit))) {
+            autoAEA91760_val = PlayerRace(autoA6941983_var);
+            if (autoAEA91760_val == "Prot") {
+                libF1378293_gf_BuildIfNotInQueue(autoA6941983_var, "Pylon", libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, (lib0D99C9FF_gf_FarmCount(autoA6941983_var, "Pylon") + 1), null, libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, -1, libF1378293_gv_power, 3);
+            }
+            else if (autoAEA91760_val == "Terr") {
+                libF1378293_gf_BuildIfNotInQueue(autoA6941983_var, "SupplyDepot", libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, (lib0D99C9FF_gf_FarmCount(autoA6941983_var, "SupplyDepot") + 1), null, libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, -1, 0x00010000 | 0x00020000, 3);
+            }
+            else if (autoAEA91760_val == "Zerg") {
+                libF1378293_gf_TrainUnitIfNotInQueue(autoA6941983_var, "Overlord", libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, (lib0D99C9FF_gf_FarmCount(autoA6941983_var, "Overlord") + 1), null, libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, -1, 3);
+            }
+            else {
+            }
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib7D432011_gt_AISupplyBlockPreventer_Init () {
+    lib7D432011_gt_AISupplyBlockPreventer = TriggerCreate("lib7D432011_gt_AISupplyBlockPreventer_Func");
+    TriggerAddEventTimePeriodic(lib7D432011_gt_AISupplyBlockPreventer, 10.0, c_timeAI);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: AI Build supplies only if needed
+//--------------------------------------------------------------------------------------------------
+bool lib7D432011_gt_AIBuildsuppliesonlyifneeded_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoB7A00B44_g;
+    int autoB7A00B44_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoB7A00B44_g = lib7D432011_gv_allies;
+    autoB7A00B44_var = -1;
+    while (true) {
+        autoB7A00B44_var = PlayerGroupNextPlayer(autoB7A00B44_g, autoB7A00B44_var);
+        if (autoB7A00B44_var < 0) { break; }
+        if ((PlayerGetPropertyInt(autoB7A00B44_var, c_playerPropSuppliesUsed) >= (PlayerGetPropertyInt(autoB7A00B44_var, c_playerPropSuppliesMade) - 8)) && (PlayerGetPropertyInt(autoB7A00B44_var, c_playerPropSuppliesMade) < PlayerGetPropertyInt(autoB7A00B44_var, c_playerPropSuppliesLimit))) {
+            TechTreeUnitAllow(autoB7A00B44_var, "SupplyDepot", true);
+            TechTreeUnitAllow(autoB7A00B44_var, "Overlord", true);
+        }
+        else {
+            TechTreeUnitAllow(autoB7A00B44_var, "SupplyDepot", false);
+            TechTreeUnitAllow(autoB7A00B44_var, "Overlord", false);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib7D432011_gt_AIBuildsuppliesonlyifneeded_Init () {
+    lib7D432011_gt_AIBuildsuppliesonlyifneeded = TriggerCreate("lib7D432011_gt_AIBuildsuppliesonlyifneeded_Func");
+    TriggerAddEventTimePeriodic(lib7D432011_gt_AIBuildsuppliesonlyifneeded, 2.0, c_timeAI);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Restore Infinite Resources
 //--------------------------------------------------------------------------------------------------
 bool lib7D432011_gt_RestoreInfiniteResources_Func (bool testConds, bool runActions) {
@@ -1081,6 +1164,133 @@ void lib7D432011_gt_AlliedAIDeselectedHotkey_Init () {
     TriggerAddEventKeyPressed(lib7D432011_gt_AlliedAIDeselectedHotkey, 1, c_keyEscape, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Attack Wave Pings
+//--------------------------------------------------------------------------------------------------
+bool lib7D432011_gt_AttackWavePings_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_aIPlayer;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((AIWaveUnitCount(EventPlayerWave()) > 3))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_aIPlayer = UnitGetOwner(UnitGroupRandomUnit(AIWaveGetUnits(EventPlayerWave()), c_unitCountAlive));
+    if ((PlayerGroupHasPlayer(lib7D432011_gv_allies, lv_aIPlayer) == true) && ((AIWaveState(EventPlayerWave()) >= 2) && (AIWaveState(EventPlayerWave()) <= 4)) && (AIWaveEval(EventPlayerWave()) >= 200)) {
+        TextExpressionSetToken("Param/Expression/lib_7D432011_A25D9EB8", "A", PlayerName(lv_aIPlayer));
+        lib0D99C9FF_gf_AttachPingtoWave(EventPlayerWave(), lib0D99C9FF_gv_pingColorDefault, lib0D99C9FF_gv_pingModelDefault, TextExpressionAssemble("Param/Expression/lib_7D432011_A25D9EB8"));
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib7D432011_gt_AttackWavePings_Init () {
+    lib7D432011_gt_AttackWavePings = TriggerCreate("lib7D432011_gt_AttackWavePings_Func");
+    TriggerAddEventPlayerAIWave(lib7D432011_gt_AttackWavePings, c_playerAny);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Demand Resources + Cooldown
+//--------------------------------------------------------------------------------------------------
+bool lib7D432011_gt_DemandResourcesCooldown_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_allyArrayIndex;
+    int lv_index;
+    int lv_bestPlayer;
+    int lv_maxResources;
+    int lv_currentResources;
+    fixed lv_resourceTradeCDTime;
+
+    // Automatic Variable Declarations
+    playergroup autoAEF1ED18_g;
+    int autoAEF1ED18_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoAEF1ED18_g = lib7D432011_gv_allies;
+    autoAEF1ED18_var = -1;
+    while (true) {
+        autoAEF1ED18_var = PlayerGroupNextPlayer(autoAEF1ED18_g, autoAEF1ED18_var);
+        if (autoAEF1ED18_var < 0) { break; }
+        lv_currentResources = (PlayerGetPropertyInt(autoAEF1ED18_var, c_playerPropMinerals) + PlayerGetPropertyInt(autoAEF1ED18_var, c_playerPropVespene));
+        if ((lv_currentResources > lv_maxResources) && (AIHasRes(autoAEF1ED18_var, EventResourceRequestAmount(c_resourceTypeMinerals), EventResourceRequestAmount(c_resourceTypeVespene)) == true)) {
+            lv_maxResources = lv_currentResources;
+            lv_bestPlayer = autoAEF1ED18_var;
+        }
+
+    }
+    if ((lv_bestPlayer != 0) && (AIHasRes(lv_bestPlayer, EventResourceRequestAmount(c_resourceTypeMinerals), EventResourceRequestAmount(c_resourceTypeVespene)) == true)) {
+        PlayerModifyPropertyInt(1, c_playerPropMinerals, c_playerPropOperAdd, EventResourceRequestAmount(c_resourceTypeMinerals));
+        PlayerModifyPropertyInt(1, c_playerPropVespene, c_playerPropOperAdd, EventResourceRequestAmount(c_resourceTypeVespene));
+        PlayerModifyPropertyInt(lv_bestPlayer, c_playerPropMinerals, c_playerPropOperSubtract, EventResourceRequestAmount(c_resourceTypeMinerals));
+        PlayerModifyPropertyInt(lv_bestPlayer, c_playerPropVespene, c_playerPropOperSubtract, EventResourceRequestAmount(c_resourceTypeVespene));
+        lib7D432011_gv_demandDisabled = true;
+        TriggerEnable(TriggerGetCurrent(), false);
+        lv_resourceTradeCDTime = ((EventResourceRequestAmount(c_resourceTypeMinerals) + EventResourceRequestAmount(c_resourceTypeVespene)) * 0.25);
+        lv_resourceTradeCDTime = libNtve_gf_ArithmeticRealClamp(lv_resourceTradeCDTime, 60.0, 300.0);
+        TimerStart(lib7D432011_gv_resourceTradeCooldownTimer, lv_resourceTradeCDTime, false, c_timeAI);
+        Wait(lv_resourceTradeCDTime, c_timeAI);
+        TriggerEnable(TriggerGetCurrent(), true);
+        lib7D432011_gv_demandDisabled = false;
+
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib7D432011_gt_DemandResourcesCooldown_Init () {
+    lib7D432011_gt_DemandResourcesCooldown = TriggerCreate("lib7D432011_gt_DemandResourcesCooldown_Func");
+    TriggerAddEventResourceRequest(lib7D432011_gt_DemandResourcesCooldown, 1);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Demand CD Warning
+//--------------------------------------------------------------------------------------------------
+bool lib7D432011_gt_DemandCDWarning_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((lib7D432011_gv_demandDisabled == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    SoundPlayForPlayer(SoundLink("Alert_BaseUnderAttackKlaxon", -1), c_maxPlayers, PlayerGroupAll(), 150.0, 0.0);
+    UIClearMessages(PlayerGroupAll(), c_messageAreaAll);
+    TextExpressionSetToken("Param/Expression/lib_7D432011_ADBDE260", "A", FixedToText(TimerGetRemaining(lib7D432011_gv_resourceTradeCooldownTimer), 0));
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_7D432011_ADBDE260"));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib7D432011_gt_DemandCDWarning_Init () {
+    lib7D432011_gt_DemandCDWarning = TriggerCreate("lib7D432011_gt_DemandCDWarning_Func");
+    TriggerAddEventResourceRequest(lib7D432011_gt_DemandCDWarning, 1);
+}
+
 void lib7D432011_InitTriggers () {
     lib7D432011_gt_Disableachievments_Init();
     lib7D432011_gt_Load_Init();
@@ -1088,6 +1298,8 @@ void lib7D432011_InitTriggers () {
     lib7D432011_gt_AISettings_Init();
     lib7D432011_gt_ShareMineralPickupwithAllies_Init();
     lib7D432011_gt_ShareVespenePickupwithAllies_Init();
+    lib7D432011_gt_AISupplyBlockPreventer_Init();
+    lib7D432011_gt_AIBuildsuppliesonlyifneeded_Init();
     lib7D432011_gt_RestoreInfiniteResources_Init();
     lib7D432011_gt_Checkifgeyserdepleted_Init();
     lib7D432011_gt_AIResourcePanelUpdater_Init();
@@ -1097,6 +1309,9 @@ void lib7D432011_InitTriggers () {
     lib7D432011_gt_AlliedAIHotkey_Init();
     lib7D432011_gt_AlliedAIDeselected_Init();
     lib7D432011_gt_AlliedAIDeselectedHotkey_Init();
+    lib7D432011_gt_AttackWavePings_Init();
+    lib7D432011_gt_DemandResourcesCooldown_Init();
+    lib7D432011_gt_DemandCDWarning_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

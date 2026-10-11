@@ -42,6 +42,9 @@ unit lib7D432011_gv_aIController;
 int lib7D432011_gv_aIControllerDialog;
 int lib7D432011_gv_aIControllerButton;
 bool lib7D432011_gv_alliedUIActive;
+bool lib7D432011_gv_demandDisabled;
+timer lib7D432011_gv_resourceTradeCooldownTimer;
+fixed lib7D432011_gv_resourceTradeCD;
 
 // Function Declarations
 void lib7D432011_gf_RescueUnitforAI (unit lp_cHOSEN_UNIT, point lp_tARGET_POINT, int lp_cHOSEN_PLAYER, bool lp_iMMIDIATE_ATTACK);
@@ -63,6 +66,8 @@ trigger lib7D432011_gt_LoadTechs;
 trigger lib7D432011_gt_AISettings;
 trigger lib7D432011_gt_ShareMineralPickupwithAllies;
 trigger lib7D432011_gt_ShareVespenePickupwithAllies;
+trigger lib7D432011_gt_AISupplyBlockPreventer;
+trigger lib7D432011_gt_AIBuildsuppliesonlyifneeded;
 trigger lib7D432011_gt_RestoreInfiniteResources;
 trigger lib7D432011_gt_Checkifgeyserdepleted;
 trigger lib7D432011_gt_AIResourcePanelUpdater;
@@ -72,6 +77,9 @@ trigger lib7D432011_gt_AlliedAIClicked;
 trigger lib7D432011_gt_AlliedAIHotkey;
 trigger lib7D432011_gt_AlliedAIDeselected;
 trigger lib7D432011_gt_AlliedAIDeselectedHotkey;
+trigger lib7D432011_gt_AttackWavePings;
+trigger lib7D432011_gt_DemandResourcesCooldown;
+trigger lib7D432011_gt_DemandCDWarning;
 
 // Library Initialization
 void lib7D432011_InitVariables ();

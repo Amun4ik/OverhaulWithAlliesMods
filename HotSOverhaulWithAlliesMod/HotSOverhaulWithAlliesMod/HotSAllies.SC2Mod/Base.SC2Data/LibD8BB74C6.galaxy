@@ -1315,19 +1315,34 @@ void libD8BB74C6_gt_ShareVespenePickupwithAllies_Init () {
 //--------------------------------------------------------------------------------------------------
 bool libD8BB74C6_gt_AISupplyBlockPreventer_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
+    playergroup auto970FF2D2_g;
+    int auto970FF2D2_var;
+    string auto5543B5F0_val;
+
     // Actions
     if (!runActions) {
         return true;
     }
 
-    if ((libD8BB74C6_gv_zagaraAlly != 0) && (PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesUsed) >= PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesMade)) && (PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesMade) < PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesLimit))) {
-        libNtve_gf_AICast(UnitGroupRandomUnit(UnitGroup("Larva", libD8BB74C6_gv_zagaraAlly, RegionPlayableMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive), Order(AbilityCommand("LarvaTrain", 2)));
-    }
-    if ((libD8BB74C6_gv_naktulAlly != 0) && (PlayerGetPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropSuppliesUsed) >= PlayerGetPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropSuppliesMade)) && (PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesMade) < PlayerGetPropertyInt(libD8BB74C6_gv_naktulAlly, c_playerPropSuppliesLimit))) {
-        libNtve_gf_AICast(UnitGroupRandomUnit(UnitGroup("Larva", libD8BB74C6_gv_naktulAlly, RegionPlayableMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive), Order(AbilityCommand("LarvaTrain", 2)));
-    }
-    if ((libD8BB74C6_gv_nafashAlly != 0) && (PlayerGetPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropSuppliesUsed) >= PlayerGetPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropSuppliesMade)) && (PlayerGetPropertyInt(libD8BB74C6_gv_zagaraAlly, c_playerPropSuppliesMade) < PlayerGetPropertyInt(libD8BB74C6_gv_nafashAlly, c_playerPropSuppliesLimit))) {
-        libNtve_gf_AICast(UnitGroupRandomUnit(UnitGroup("Larva", libD8BB74C6_gv_nafashAlly, RegionPlayableMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive), Order(AbilityCommand("LarvaTrain", 2)));
+    auto970FF2D2_g = libD8BB74C6_gv_allies;
+    auto970FF2D2_var = -1;
+    while (true) {
+        auto970FF2D2_var = PlayerGroupNextPlayer(auto970FF2D2_g, auto970FF2D2_var);
+        if (auto970FF2D2_var < 0) { break; }
+        if ((PlayerGetPropertyInt(auto970FF2D2_var, c_playerPropSuppliesUsed) >= PlayerGetPropertyInt(auto970FF2D2_var, c_playerPropSuppliesMade)) && (PlayerGetPropertyInt(auto970FF2D2_var, c_playerPropSuppliesMade) < PlayerGetPropertyInt(auto970FF2D2_var, c_playerPropSuppliesLimit))) {
+            auto5543B5F0_val = PlayerRace(auto970FF2D2_var);
+            if (auto5543B5F0_val == "Prot") {
+                libF1378293_gf_BuildIfNotInQueue(auto970FF2D2_var, "Pylon", libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, 1, null, libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, -1, libF1378293_gv_power, 1);
+            }
+            else if (auto5543B5F0_val == "Terr") {
+                libF1378293_gf_BuildIfNotInQueue(auto970FF2D2_var, "SupplyDepot", libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, 1, null, libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, -1, 0x00010000 | 0x00020000, 1);
+            }
+            else if (auto5543B5F0_val == "Zerg") {
+                libF1378293_gf_TrainUnitIfNotInQueue(auto970FF2D2_var, "Overlord", libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, 1, null, libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, -1, 1);
+            }
+            else {
+            }
+        }
     }
     return true;
 }
@@ -1343,26 +1358,26 @@ void libD8BB74C6_gt_AISupplyBlockPreventer_Init () {
 //--------------------------------------------------------------------------------------------------
 bool libD8BB74C6_gt_AIBuildsuppliesonlyifneeded_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
-    playergroup autoA3F25472_g;
-    int autoA3F25472_var;
+    playergroup auto604283FF_g;
+    int auto604283FF_var;
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    autoA3F25472_g = libD8BB74C6_gv_allies;
-    autoA3F25472_var = -1;
+    auto604283FF_g = libD8BB74C6_gv_allies;
+    auto604283FF_var = -1;
     while (true) {
-        autoA3F25472_var = PlayerGroupNextPlayer(autoA3F25472_g, autoA3F25472_var);
-        if (autoA3F25472_var < 0) { break; }
-        if ((PlayerGetPropertyInt(autoA3F25472_var, c_playerPropMinerals) >= 100) && (PlayerGetPropertyInt(autoA3F25472_var, c_playerPropSuppliesUsed) >= (PlayerGetPropertyInt(autoA3F25472_var, c_playerPropSuppliesMade) - 8)) && (PlayerGetPropertyInt(autoA3F25472_var, c_playerPropSuppliesMade) < PlayerGetPropertyInt(autoA3F25472_var, c_playerPropSuppliesLimit))) {
-            TechTreeUnitAllow(autoA3F25472_var, "SupplyDepot", true);
-            TechTreeUnitAllow(autoA3F25472_var, "Overlord", true);
+        auto604283FF_var = PlayerGroupNextPlayer(auto604283FF_g, auto604283FF_var);
+        if (auto604283FF_var < 0) { break; }
+        if ((PlayerGetPropertyInt(auto604283FF_var, c_playerPropSuppliesUsed) >= (PlayerGetPropertyInt(auto604283FF_var, c_playerPropSuppliesMade) - 8)) && (PlayerGetPropertyInt(auto604283FF_var, c_playerPropSuppliesMade) < PlayerGetPropertyInt(auto604283FF_var, c_playerPropSuppliesLimit))) {
+            TechTreeUnitAllow(auto604283FF_var, "SupplyDepot", true);
+            TechTreeUnitAllow(auto604283FF_var, "Overlord", true);
         }
         else {
-            TechTreeUnitAllow(autoA3F25472_var, "SupplyDepot", false);
-            TechTreeUnitAllow(autoA3F25472_var, "Overlord", false);
+            TechTreeUnitAllow(auto604283FF_var, "SupplyDepot", false);
+            TechTreeUnitAllow(auto604283FF_var, "Overlord", false);
         }
     }
     return true;
