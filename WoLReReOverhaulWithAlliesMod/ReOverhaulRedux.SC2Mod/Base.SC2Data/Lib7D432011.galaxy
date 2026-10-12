@@ -321,6 +321,28 @@ bool auto_lib7D432011_gf_StartMercsAI_TriggerFunc (bool testConds, bool runActio
     return true;
 }
 
+trigger auto_lib7D432011_gf_StartNafash_Trigger = null;
+int auto_lib7D432011_gf_StartNafash_lp_player;
+
+void lib7D432011_gf_StartNafash (int lp_player) {
+    auto_lib7D432011_gf_StartNafash_lp_player = lp_player;
+
+    if (auto_lib7D432011_gf_StartNafash_Trigger == null) {
+        auto_lib7D432011_gf_StartNafash_Trigger = TriggerCreate("auto_lib7D432011_gf_StartNafash_TriggerFunc");
+    }
+
+    TriggerExecute(auto_lib7D432011_gf_StartNafash_Trigger, false, false);
+}
+
+bool auto_lib7D432011_gf_StartNafash_TriggerFunc (bool testConds, bool runActions) {
+    int lp_player = auto_lib7D432011_gf_StartNafash_lp_player;
+
+    // Automatic Variable Declarations
+    // Implementation
+    TechTreeUpgradeAddLevel(lp_player, "zerglingattackspeed", 1);
+    return true;
+}
+
 void lib7D432011_gf_CreateAIResourcePanel (int lp_player, int lp_position, string lp_image, text lp_name, int lp_style) {
     // Variable Declarations
     string[3] lv_dialogItems;

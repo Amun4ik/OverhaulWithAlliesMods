@@ -68,6 +68,7 @@ Model/Name/VultureDeath2=Vulture Death
 Model/Name/VulturePortrait2=Portrait - Vulture
 Requirement/Name/HaveBlackOps2=Have Dominion Forces
 RequirementNode/Name/CountUpgradeDominionForcesCompleteOnly=CountUpgrade(DominionForces,CompleteOnly)
+Unit/EditorPrefix/AlliedAIOrderPanel=AlliedAIController
 Unit/EditorPrefix/Armory=Terran Unit - 
 Unit/EditorPrefix/AutoTurret=Terran Unit - 
 Unit/EditorPrefix/AutomatedRefinery=Terran Unit - 

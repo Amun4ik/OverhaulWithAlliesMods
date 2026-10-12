@@ -41,7 +41,7 @@ Param/Value/lib_7D432011_C95425DE=<c val="FF0000">
 Param/Value/lib_7D432011_F4E42484=<c val="FF0000">
 Unit/Name/DominionKillTeam=Red Raven
 Unit/Name/HERC2=Kovalskiy
-Unit/Name/HERCCompound=Bar "100 Rads"
+Unit/Name/HERCCompound=100 Rads bar
 Unit/Name/Loyalist=Loyalist
 Unit/Name/MengskReaper=Samuel Horsh
 Unit/Name/PunisherGrenadesLMWeapon2=Loyalist Grenades

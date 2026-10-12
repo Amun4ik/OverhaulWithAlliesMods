@@ -13,7 +13,7 @@
         <AlertIcon value="Assets\Textures\btn-commander-tychus.dds"/>
     </CButton>
     <CButton id="CommanderControllerIcon2">
-        <Icon value="Assets\Textures\btn-commander-tychus.dds"/>
-        <AlertIcon value="Assets\Textures\btn-commander-tychus.dds"/>
+        <Icon value="btn-commander-rebels.dds"/>
+        <AlertIcon value="btn-commander-rebels.dds"/>
     </CButton>
 </Catalog>

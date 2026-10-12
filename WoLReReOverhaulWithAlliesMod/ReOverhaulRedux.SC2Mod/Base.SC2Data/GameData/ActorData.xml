@@ -23,7 +23,7 @@
         <Model value="Invisible"/>
         <BuildModel value="Invisible"/>
         <PlacementModel value="Invisible"/>
-        <PortraitModel value="Overlord_Webby_Portrait"/>
+        <PortraitModel value=""/>
         <BarOffset value="135"/>
         <BarWidth value="200"/>
         <GroupIcon>
@@ -38,6 +38,10 @@
     <CActorUnit id="Dutch">
         <UnitKillRank index="0" Text="UnitKillRank/Swann1"/>
     </CActorUnit>
+    <!-- Removing the normal creation to make silent kills more silent, created in the actor instead -->
+    <CActorSound id="Ghost_Death">
+        <On Terms="UnitDeath.RaynorCommando; PassChance 100.000000" Send="Create"/>
+    </CActorSound>
     <CActorUnit id="HERC2" parent="GenericUnitStandard" unitName="HERC2">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
@@ -137,20 +141,17 @@
     <!-- Raynor Commando ....................................................................... -->
     <!--                                                                                         -->
     <CActorUnit id="RaynorCommando">
-        <SoundArray index="Birth" value="Ghost_Ready"/>
         <SoundArray index="Ready" value="Ghost_Ready"/>
         <SoundArray index="Help" value="Ghost_Help"/>
         <SoundArray index="What" value="Ghost_What"/>
         <SoundArray index="Yes" value="Ghost_Yes"/>
         <SoundArray index="Attack" value="Ghost_Attack"/>
         <SoundArray index="Pissed" value="Ghost_Pissed"/>
-        <SoundArray index="Movement" value="Ghost_Yes"/>
-        <SoundArray index="Board" value="Ghost_Ready"/>
-        <SoundArray index="Click" value="Ghost_Yes"/>
-        <SoundArray index="ClickError" value="Ghost_Pissed"/>
-        <SoundArray index="Highlight" value="Ghost_CloakOnVO"/>
         <PortraitModel value="Ghost_Umojan_Portrait"/>
     </CActorUnit>
+    <CActorSound id="Raynor_Death">
+        <On index="3" removed="1"/>
+    </CActorSound>
     <CActorUnit id="Tosh">
         <CustomUnitStatusFrame value=""/>
     </CActorUnit>

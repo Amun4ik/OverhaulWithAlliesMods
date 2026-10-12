@@ -53,6 +53,7 @@ void lib7D432011_gf_StartTychusAI (int lp_minerals, int lp_gas, point lp_gatherP
 void lib7D432011_gf_StartRebelsAI (int lp_minerals, int lp_gas, point lp_gatherPoint);
 void lib7D432011_gf_StartToshAI (int lp_minerals, int lp_gas, point lp_gatherPoint);
 void lib7D432011_gf_StartMercsAI (int lp_minerals, int lp_gas, point lp_gatherPoint);
+void lib7D432011_gf_StartNafash (int lp_player);
 void lib7D432011_gf_CreateAIResourcePanel (int lp_player, int lp_position, string lp_image, text lp_name, int lp_style);
 void lib7D432011_gf_ShowHideAIResourcePanel (int lp_player, bool lp_showHide);
 void lib7D432011_gf_DestroyAIResourcePanel (int lp_player);
