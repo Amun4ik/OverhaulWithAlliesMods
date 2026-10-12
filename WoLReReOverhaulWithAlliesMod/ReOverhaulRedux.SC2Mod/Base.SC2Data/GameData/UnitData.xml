@@ -4,8 +4,11 @@
         <FlagArray index="Invulnerable" value="1"/>
         <AbilArray Link="AlliedAIOrderDefend"/>
         <AbilArray Link="AlliedAIOrderAttack"/>
+        <AbilArray Link="DisableAlliedPings"/>
         <CardLayouts>
             <LayoutButtons Face="CommanderControllerIcon1" Type="Submenu" SubmenuCardId="0002" Row="0" Column="0"/>
+            <LayoutButtons Face="DisableAllyPing" Type="AbilCmd" AbilCmd="DisableAlliedPings,On" Row="1" Column="4"/>
+            <LayoutButtons Face="EnableAllyPing" Type="AbilCmd" AbilCmd="DisableAlliedPings,Off" Row="1" Column="4"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>

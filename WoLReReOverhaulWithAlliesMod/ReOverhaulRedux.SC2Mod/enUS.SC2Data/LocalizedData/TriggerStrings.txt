@@ -78,6 +78,7 @@ Trigger/Name/lib_7D432011_09AFA887=Share Mineral Pickup with Allies
 Trigger/Name/lib_7D432011_0FDCCF33=Restore Infinite Resources
 Trigger/Name/lib_7D432011_1C7FD6C9=Demand Resources + Cooldown
 Trigger/Name/lib_7D432011_272F8F5B=AI Build supplies only if needed
+Trigger/Name/lib_7D432011_2E6F1480=Disable/enable pings
 Trigger/Name/lib_7D432011_42663E15=Init Allied AI UI
 Trigger/Name/lib_7D432011_438A0058=Allied AI Deselected
 Trigger/Name/lib_7D432011_52DFCDF0=Load Techs

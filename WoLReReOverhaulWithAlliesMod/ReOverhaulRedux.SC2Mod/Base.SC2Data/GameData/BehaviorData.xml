@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="DisableAlliedPing">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
     <CBehaviorResource id="MineralFieldMinerals">
         <EmptyHarvestAmount value="2"/>
         <Flags index="RemoveWhenEmpty" value="0"/>

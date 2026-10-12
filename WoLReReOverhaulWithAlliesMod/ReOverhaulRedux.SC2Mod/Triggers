@@ -8420,6 +8420,7 @@
             <Item Type="Variable" Library="7D432011" Id="C5B680CC"/>
             <Item Type="Variable" Library="7D432011" Id="25333415"/>
             <Item Type="Variable" Library="7D432011" Id="E6E7F084"/>
+            <Item Type="Trigger" Library="7D432011" Id="2E6F1480"/>
             <Item Type="Trigger" Library="7D432011" Id="59D6E7CA"/>
             <Item Type="FunctionDef" Library="7D432011" Id="D2B563A0"/>
             <Item Type="Trigger" Library="7D432011" Id="42663E15"/>
@@ -8460,6 +8461,237 @@
         </Element>
         <Element Type="Param" Id="B49B54CD">
             <Preset Type="PresetValue" Library="Ntve" Id="FAC49C47"/>
+        </Element>
+        <Element Type="Trigger" Id="2E6F1480">
+            <Event Type="FunctionCall" Library="7D432011" Id="07CEEBFF"/>
+            <Event Type="FunctionCall" Library="7D432011" Id="C0513949"/>
+            <Action Type="FunctionCall" Library="7D432011" Id="EA96665B"/>
+        </Element>
+        <Element Type="FunctionCall" Id="07CEEBFF">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D00F9D6F"/>
+            <Parameter Type="Param" Library="7D432011" Id="FAB8F78E"/>
+            <Parameter Type="Param" Library="7D432011" Id="AD3CD213"/>
+            <Parameter Type="Param" Library="7D432011" Id="FF29861E"/>
+            <Parameter Type="Param" Library="7D432011" Id="436AC0B2"/>
+        </Element>
+        <Element Type="Param" Id="FAB8F78E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EE631277"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
+        <Element Type="Param" Id="AD3CD213">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BB4C37B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000257"/>
+        </Element>
+        <Element Type="Param" Id="FF29861E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ACC52290"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="03977D39"/>
+        </Element>
+        <Element Type="Param" Id="436AC0B2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="3F2584C8"/>
+            <Value>DisableAlliedPings</Value>
+            <ValueType Type="abilcmd"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C0513949">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D00F9D6F"/>
+            <Parameter Type="Param" Library="7D432011" Id="09C0886C"/>
+            <Parameter Type="Param" Library="7D432011" Id="D5C623E2"/>
+            <Parameter Type="Param" Library="7D432011" Id="B43062B8"/>
+            <Parameter Type="Param" Library="7D432011" Id="D93E9AD3"/>
+        </Element>
+        <Element Type="Param" Id="09C0886C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EE631277"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
+        <Element Type="Param" Id="D5C623E2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BB4C37B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000257"/>
+        </Element>
+        <Element Type="Param" Id="B43062B8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ACC52290"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="03977D39"/>
+        </Element>
+        <Element Type="Param" Id="D93E9AD3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="3F2584C8"/>
+            <Value>DisableAlliedPings</Value>
+            <ValueType Type="abilcmd"/>
+            <ValueId Id="1"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EA96665B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="039AFDB1"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="7837AADF"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="017C3AAD"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="B3209DFC"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="D1F2F36B"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="6A23277F"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="790D7080"/>
+        </Element>
+        <Element Type="FunctionCall" Id="039AFDB1">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D18723EA"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000005"/>
+            <Parameter Type="Param" Library="7D432011" Id="796261A0"/>
+            <Parameter Type="Param" Library="7D432011" Id="28A286DD"/>
+            <Parameter Type="Param" Library="7D432011" Id="1DBE6E32"/>
+        </Element>
+        <Element Type="Param" Id="796261A0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="2A9AC2CF"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="54E0CB0D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="54E0CB0D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
+        </Element>
+        <Element Type="Param" Id="28A286DD">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A08E936"/>
+            <Value>AttackTownAlly_Prot</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Alert"/>
+        </Element>
+        <Element Type="Param" Id="1DBE6E32">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EBFEEFC7"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="7837AADF">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D18723EA"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000005"/>
+            <Parameter Type="Param" Library="7D432011" Id="EFCCFE15"/>
+            <Parameter Type="Param" Library="7D432011" Id="E47654B6"/>
+            <Parameter Type="Param" Library="7D432011" Id="A9CAD3FA"/>
+        </Element>
+        <Element Type="Param" Id="EFCCFE15">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="2A9AC2CF"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="C4140F6F"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C4140F6F">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
+        </Element>
+        <Element Type="Param" Id="E47654B6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A08E936"/>
+            <Value>AttackTownAlly_Terr</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Alert"/>
+        </Element>
+        <Element Type="Param" Id="A9CAD3FA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EBFEEFC7"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="017C3AAD">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D18723EA"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000005"/>
+            <Parameter Type="Param" Library="7D432011" Id="2D6A8879"/>
+            <Parameter Type="Param" Library="7D432011" Id="BAE54793"/>
+            <Parameter Type="Param" Library="7D432011" Id="222B1EFE"/>
+        </Element>
+        <Element Type="Param" Id="2D6A8879">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="2A9AC2CF"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="3D2968AF"/>
+        </Element>
+        <Element Type="FunctionCall" Id="3D2968AF">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
+        </Element>
+        <Element Type="Param" Id="BAE54793">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A08E936"/>
+            <Value>AttackTownAlly_Zerg</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Alert"/>
+        </Element>
+        <Element Type="Param" Id="222B1EFE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EBFEEFC7"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B3209DFC">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <Parameter Type="Param" Library="7D432011" Id="7BDCF9BE"/>
+            <Parameter Type="Param" Library="7D432011" Id="7B61AC73"/>
+            <Parameter Type="Param" Library="7D432011" Id="F2658128"/>
+        </Element>
+        <Element Type="Param" Id="7BDCF9BE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="06005962"/>
+        </Element>
+        <Element Type="FunctionCall" Id="06005962">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000314"/>
+        </Element>
+        <Element Type="Param" Id="7B61AC73">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="F2658128">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>DisableAlliedPings</Value>
+            <ValueType Type="abilcmd"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D1F2F36B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D18723EA"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="7D432011" Id="04B6E52D"/>
+            <Parameter Type="Param" Library="7D432011" Id="C4CABFFE"/>
+            <Parameter Type="Param" Library="7D432011" Id="13AD9272"/>
+        </Element>
+        <Element Type="Param" Id="04B6E52D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="2A9AC2CF"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="453687AD"/>
+        </Element>
+        <Element Type="FunctionCall" Id="453687AD">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
+        </Element>
+        <Element Type="Param" Id="C4CABFFE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A08E936"/>
+            <Value>AttackTownAlly_Prot</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Alert"/>
+        </Element>
+        <Element Type="Param" Id="13AD9272">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EBFEEFC7"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000121"/>
+        </Element>
+        <Element Type="FunctionCall" Id="6A23277F">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D18723EA"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="7D432011" Id="6FF94274"/>
+            <Parameter Type="Param" Library="7D432011" Id="E557FA84"/>
+            <Parameter Type="Param" Library="7D432011" Id="F5EFB17C"/>
+        </Element>
+        <Element Type="Param" Id="6FF94274">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="2A9AC2CF"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="2DA5C36C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2DA5C36C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
+        </Element>
+        <Element Type="Param" Id="E557FA84">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A08E936"/>
+            <Value>AttackTownAlly_Terr</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Alert"/>
+        </Element>
+        <Element Type="Param" Id="F5EFB17C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EBFEEFC7"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000121"/>
+        </Element>
+        <Element Type="FunctionCall" Id="790D7080">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D18723EA"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="7D432011" Id="D2C6FDAF"/>
+            <Parameter Type="Param" Library="7D432011" Id="BF3891F7"/>
+            <Parameter Type="Param" Library="7D432011" Id="9F23DD1C"/>
+        </Element>
+        <Element Type="Param" Id="D2C6FDAF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="2A9AC2CF"/>
+            <FunctionCall Type="FunctionCall" Library="7D432011" Id="77891612"/>
+        </Element>
+        <Element Type="FunctionCall" Id="77891612">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
+        </Element>
+        <Element Type="Param" Id="BF3891F7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A08E936"/>
+            <Value>AttackTownAlly_Zerg</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Alert"/>
+        </Element>
+        <Element Type="Param" Id="9F23DD1C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EBFEEFC7"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000121"/>
         </Element>
         <Element Type="Trigger" Id="59D6E7CA">
             <Variable Type="Variable" Library="7D432011" Id="5343469C"/>

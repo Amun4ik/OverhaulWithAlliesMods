@@ -980,6 +980,36 @@ void lib7D432011_gt_AIResourcePanelUpdater_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Disable/enable pings
+//--------------------------------------------------------------------------------------------------
+bool lib7D432011_gt_Disableenablepings_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((EventUnitAbility() == AbilityCommand("DisableAlliedPings", 0))) {
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Prot", false);
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Terr", false);
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Zerg", false);
+    }
+    else {
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Prot", true);
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Terr", true);
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Zerg", true);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib7D432011_gt_Disableenablepings_Init () {
+    lib7D432011_gt_Disableenablepings = TriggerCreate("lib7D432011_gt_Disableenablepings_Func");
+    TriggerAddEventUnitAbility(lib7D432011_gt_Disableenablepings, null, AbilityCommand("DisableAlliedPings", 0), c_unitAbilStageAll, false);
+    TriggerAddEventUnitAbility(lib7D432011_gt_Disableenablepings, null, AbilityCommand("DisableAlliedPings", 1), c_unitAbilStageAll, false);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Tychus Fortify
 //--------------------------------------------------------------------------------------------------
 bool lib7D432011_gt_TychusFortify_Func (bool testConds, bool runActions) {
@@ -1325,6 +1355,7 @@ void lib7D432011_InitTriggers () {
     lib7D432011_gt_RestoreInfiniteResources_Init();
     lib7D432011_gt_Checkifgeyserdepleted_Init();
     lib7D432011_gt_AIResourcePanelUpdater_Init();
+    lib7D432011_gt_Disableenablepings_Init();
     lib7D432011_gt_TychusFortify_Init();
     lib7D432011_gt_InitAlliedAIUI_Init();
     lib7D432011_gt_AlliedAIClicked_Init();

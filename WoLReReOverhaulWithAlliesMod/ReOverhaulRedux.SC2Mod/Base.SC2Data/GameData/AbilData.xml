@@ -110,6 +110,18 @@
             <Cooldown TimeUse="45"/>
         </Cost>
     </CAbilEffectTarget>
+    <CAbilBehavior id="DisableAlliedPings">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="DisableAllyPing">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="EnableAllyPing">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <BehaviorArray value="DisableAlliedPing"/>
+    </CAbilBehavior>
     <CAbilEffectTarget id="TitanMechBombardment">
         <Cost>
             <Charge Link="Abil/TitanMechBombardment"/>

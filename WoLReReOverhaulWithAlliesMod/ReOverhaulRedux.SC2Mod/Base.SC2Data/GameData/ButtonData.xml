@@ -8,6 +8,14 @@
         <Icon value="Assets\Textures\command_defend_ac.dds"/>
         <AlertIcon value="Assets\Textures\command_defend_ac.dds"/>
     </CButton>
+    <CButton id="DisableAllyPing">
+        <Icon value="Assets\Textures\btn-ability-mengsk-blimp-propagandamode.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-blimp-propagandamode.dds"/>
+    </CButton>
+    <CButton id="EnableAllyPing">
+        <Icon value="Assets\Textures\btn-ability-mengsk-blimp-movementmode.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-blimp-movementmode.dds"/>
+    </CButton>
     <CButton id="CommanderControllerIcon1">
         <Icon value="Assets\Textures\btn-commander-tychus.dds"/>
         <AlertIcon value="Assets\Textures\btn-commander-tychus.dds"/>
