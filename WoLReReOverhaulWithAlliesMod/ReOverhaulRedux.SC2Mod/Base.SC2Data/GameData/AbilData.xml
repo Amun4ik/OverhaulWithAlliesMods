@@ -41,6 +41,9 @@
             <Cooldown TimeUse="5"/>
         </Cost>
     </CAbilAugment>
+    <CAbilEffectTarget id="MercMedicHeal">
+        <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
+    </CAbilEffectTarget>
     <CAbilEffectInstant id="NovaApolloCloak">
         <Cost index="0">
             <Vital index="Energy" value="0"/>
@@ -50,6 +53,7 @@
     <CAbilEffectInstant id="NovaPersonalDefensiveMatrix">
         <Cost index="0">
             <Vital index="Energy" value="0"/>
+            <Cooldown TimeUse="45"/>
         </Cost>
         <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectInstant>
@@ -140,13 +144,14 @@
         <Cost index="0">
             <Vital index="Energy" value="0"/>
             <Charge>
-                <CountMax value="2"/>
+                <CountMax value="3"/>
                 <CountStart value="1"/>
                 <CountUse value="1"/>
                 <TimeUse value="30"/>
             </Charge>
-            <Cooldown TimeUse="3"/>
+            <Cooldown TimeUse="2"/>
         </Cost>
         <CmdButtonArray index="Execute" Requirements=""/>
+        <Range index="0" value="9"/>
     </CAbilEffectTarget>
 </Catalog>

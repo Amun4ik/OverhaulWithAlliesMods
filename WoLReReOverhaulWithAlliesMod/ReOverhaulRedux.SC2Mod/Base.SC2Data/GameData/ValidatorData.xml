@@ -26,6 +26,22 @@
         <Behavior value="GeyserExhaustedHarvestable"/>
     </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareResourceContents id="GeyserExhausted"/>
+    <CValidatorPlayerRequirement id="HaveBlackOps22">
+        <Find value="1"/>
+        <Value value="HaveBlackOps22"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBlackOps23">
+        <Find value="1"/>
+        <Value value="HaveBlackOps25"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBlackOps24">
+        <Find value="1"/>
+        <Value value="HaveBlackOps24"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBlackOps25">
+        <Find value="1"/>
+        <Value value="HaveBlackOps23"/>
+    </CValidatorPlayerRequirement>
     <CValidatorCombine id="NotMineralFieldRawisExhausted">
         <CombineArray value="MineralsExhausted"/>
         <CombineArray value="MineralsExhaustedUser"/>

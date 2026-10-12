@@ -38,10 +38,27 @@
     <CActorUnit id="Dutch">
         <UnitKillRank index="0" Text="UnitKillRank/Swann1"/>
     </CActorUnit>
+    <CActorUnit id="Firebat">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Firebat2"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Firebat2"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap Firebat22"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps22" Send="ModelSwap Firebat22"/>
+    </CActorUnit>
+    <!-- Ghost Steady Targeting -->
+    <CActorUnit id="Ghost">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Ghost2"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Ghost2"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap Ghost22"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps22" Send="ModelSwap Ghost22"/>
+    </CActorUnit>
     <!-- Removing the normal creation to make silent kills more silent, created in the actor instead -->
     <CActorSound id="Ghost_Death">
         <On Terms="UnitDeath.RaynorCommando; PassChance 100.000000" Send="Create"/>
     </CActorSound>
+    <CActorUnit id="HERC">
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap HERC3"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps25" Send="ModelSwap HERC3"/>
+    </CActorUnit>
     <CActorUnit id="HERC2" parent="GenericUnitStandard" unitName="HERC2">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
@@ -87,6 +104,12 @@
     <CActorModel id="LurkerMPAttackSpikeEx2">
         <Model value="ScarabAttackImpact"/>
     </CActorModel>
+    <CActorUnit id="Marauder">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Marauder_Merc"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Marauder_Merc"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap DominionKillTeam2"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps25" Send="ModelSwap DominionKillTeam2"/>
+    </CActorUnit>
     <CActorAction id="MarauderAttack2" parent="MarauderAttackBase" effectImpact="PunisherGrenadesU2" effectLaunch="PunisherGrenadesLM">
         <On Terms="Effect.PunisherGrenadesLM2.Start; At Caster; !ValidateEffect PunisherGrenadesResearched" Send="Create"/>
         <LaunchAttachQuery Methods="AMPatternMarauder" Fallback="Hardpoint"/>
@@ -98,6 +121,16 @@
     <CActorUnit id="Marine">
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap MarineXPR2"/>
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap MarineXPR2"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap MarineXPR22"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps22" Send="ModelSwap MarineXPR22"/>
+    </CActorUnit>
+    <CActorUnit id="Medic">
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap Medic2"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps22" Send="ModelSwap Medic2"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Medic2"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps25" Send="ModelSwap Medic2"/>
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Medic22"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Medic22"/>
     </CActorUnit>
     <CActorUnit id="MineralField">
         <StatusBarFlags index="Workers" value="0"/>
@@ -152,6 +185,12 @@
     <CActorSound id="Raynor_Death">
         <On index="3" removed="1"/>
     </CActorSound>
+    <CActorMissile id="Reaper">
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Reaper_Junker"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps25" Send="ModelSwap Reaper_Junker"/>
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Reaper_Merc"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Reaper_Merc"/>
+    </CActorMissile>
     <CActorUnit id="Tosh">
         <CustomUnitStatusFrame value=""/>
     </CActorUnit>

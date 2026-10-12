@@ -14,8 +14,23 @@
     <CModel id="CycloneMissileImpact">
         <Model value="Assets\Effects\Terran\MiraHorner_Hellion_BasicGrenade_Coop_Impact\MiraHorner_Hellion_BasicGrenade_Coop_Impact.m3"/>
     </CModel>
+    <CModel id="DevilDog">
+        <Model value="Assets\COOP\Tychus\Units\Firebat_Heavens_COOP\Firebat_Heavens_COOP.m3"/>
+    </CModel>
     <CModel id="DominionKillTeam">
         <Model value="Assets\Terran\RattleSnake_ViperVersion.m3"/>
+    </CModel>
+    <CModel id="DominionKillTeam2" parent="Unit">
+        <Model value="Assets\Units\Terran\MarauderKillSquad\MarauderKillSquad.m3"/>
+        <AttachProps Id="Ref_Weapon Right">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon Left">
+            <Keys index="Weapon" value="1"/>
+        </AttachProps>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="DominionKillTeam"/>
+        <Occlusion value="Show"/>
     </CModel>
     <CModel id="ExperimentalPlasmaGunImpact">
         <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile_Burst\MiraHorner_Carrier_Coop_Missile_Burst.m3"/>
@@ -23,11 +38,45 @@
     <CModel id="ExperimentalPlasmaGunWeapon">
         <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile\MiraHorner_Carrier_Coop_Missile.m3"/>
     </CModel>
+    <CModel id="Firebat2" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\FirebatMercenary\FirebatMercenary.m3"/>
+        <Lighting value="Firebat"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="Firebat22" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\FirebatSCBW\FirebatSCBW.m3"/>
+        <Lighting value="Firebat"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="Ghost2" parent="GhostBase">
+        <Model value="Assets\Units\Terran\Ghost_BlackOps\Ghost_BlackOps.m3"/>
+        <Lighting value="Ghost"/>
+    </CModel>
+    <CModel id="Ghost22" parent="GhostBase">
+        <Model value="Assets\Terran\Ghost_SC1.m3"/>
+        <Lighting value="Ghost"/>
+    </CModel>
     <CModel id="Ghost_Umojan_Portrait">
         <Model value="Assets\UED Portraits\Ghost_Mercenary_Portrait.m3"/>
     </CModel>
     <CModel id="HERC2" parent="Unit" Race="Terran">
         <Model value="Assets\Terran\Bastion.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh04"/>
+        <Radius value="0.600000"/>
+        <SelectionRadius value="0.600000"/>
+        <ShadowRadius value="0.600000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <UnitGlossaryCamera value="Star2CameraHigh04"/>
+    </CModel>
+    <CModel id="HERC3" parent="Unit" Race="Terran">
+        <Model value="Assets\Terran\HERC_Junker_Collection.m3"/>
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraHigh04"/>
         <Radius value="0.600000"/>
@@ -45,6 +94,9 @@
         <LowQualityModel value="TerranSmallUnitDeathLow"/>
         <Occlusion value="Show"/>
     </CModel>
+    <CModel id="HammerSecurity">
+        <Model value="Assets\COOP\Tychus\Units\Marauder_Heavens_COOP\Marauder_Heavens_COOP.m3"/>
+    </CModel>
     <CModel id="HercPortrait2" parent="Portrait" Race="Protoss">
         <Model value="Assets\Portraits\Terran\OdinPortrait\OdinPortrait.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -53,6 +105,9 @@
     </CModel>
     <CModel id="MarauderKillSquadPortrait">
         <Model value="Assets\Terran\Marauder_Viper_Portrait.m3"/>
+    </CModel>
+    <CModel id="MarineMercenaryPortrait">
+        <Model value="Assets\Terran\Marine_Cerberus_Portrait.m3"/>
     </CModel>
     <CModel id="MarineXPR2" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\MarineXPReward\MarineXPReward.m3"/>
@@ -126,11 +181,41 @@
         <TechPurchaseCamera value="TechPurchaseInfantry"/>
         <UnitGlossaryCamera value="Star2CameraMid03"/>
     </CModel>
+    <CModel id="Medic2" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\MedicKillSquad\MedicKillSquad.m3"/>
+        <Lighting value="Medic"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="Medic22" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\MedicMercenary\MedicMercenary.m3"/>
+        <Lighting value="Medic"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
     <CModel id="MedicStetmann">
         <Model value="Assets\Terran\DaveSpectreFieldTechnicSuit.m3"/>
     </CModel>
     <CModel id="MengskReaper">
         <Model value="Assets\Terran\Reaper.m3"/>
+    </CModel>
+    <CModel id="MercMedic">
+        <Model value="Assets\COOP\Tychus\Units\Medic_Heavens_COOP\Medic_Heavens_COOP.m3"/>
+    </CModel>
+    <CModel id="MercReaper">
+        <Model value="Assets\COOP\Tychus\Units\Reaper_Heavens_COOP\Reaper_Heavens_COOP.m3"/>
     </CModel>
     <CModel id="PunisherGrenadesLMWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
@@ -207,13 +292,13 @@
         <Lighting value="TychusPortrait"/>
     </CModel>
     <CModel id="Vulture2" parent="Unit">
-        <Model value="Assets\UED Units\Kelmorian_Vulture.m3"/>
+        <Model value="Assets\Terran\Terran_Shatterer_V3.m3"/>
         <EditorCategories value="Race:Terran"/>
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraMid07"/>
         <Radius value="0.650000"/>
-        <ScaleMax value="0.850000,0.850000,0.850000"/>
-        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
         <SelectionRadius value="0.722000"/>
         <ShadowRadius value="0.722000"/>
         <TechPurchaseCamera value="TechPurchaseVehicle"/>
@@ -233,6 +318,9 @@
         <FacialController value="LocalizedData\Facial\GoliathPortrait.fxa"/>
         <Image value="Assets\UED Portraits\Portrait-UED-Wraith-Static.dds"/>
         <Lighting value="VulturePortrait"/>
+    </CModel>
+    <CModel id="WarPig">
+        <Model value="Assets\Terran\Marine_Cerberus.m3"/>
     </CModel>
     <CUnit id="AlliedAIOrderPanel">
         <FlagArray index="Invulnerable" value="1"/>

@@ -9,7 +9,7 @@
         <Options index="Disabled" value="0"/>
         <Options index="Hidden" value="0"/>
         <Options index="RequireEnabledAttackAbil" value="0"/>
-        <TargetFilters value="Ground,Armored,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Ground,Visible;Light,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="1.2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DevilDogFlameThrower">
@@ -55,12 +55,12 @@
     <CWeaponLegacy id="HERCWeapon2">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
-        <DisplayEffect value="NovaWeaponBlazefireBladeGunDamageUncloaked"/>
+        <DisplayEffect value="NovaWeaponBlazefireBladeGunDamageCloaked"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="2"/>
         <Period value="1.4"/>
         <DamagePoint value="0.2"/>
-        <Effect value="NovaWeaponBlazefireBladeGunDamageUncloaked"/>
+        <Effect value="NovaWeaponBlazefireBladeGunDamageCloakedSwitch"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="InfernalFlameThrower">
         <Period value="1.5"/>
@@ -76,12 +76,12 @@
         <Period value="1.25"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MercReaperD8Charge">
-        <TargetFilters value="Ground,Armored,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Ground,Visible;Light,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="6"/>
         <Period value="1.2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MercReaperP38ScytheGuassPistol">
-        <TargetFilters value="Ground,Visible;Armored,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Ground,Light,Visible;Armored,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="5"/>
         <Period value="1"/>
     </CWeaponLegacy>

@@ -10,6 +10,7 @@ Button/Tooltip/Cyclone=Mobile assault drone. Effective against Air targets.<n/><
 Button/Tooltip/ExperimentalPlasmaGun=Raynor uses his rifle to launch Scourge RPG, Dealing 130 Damage.
 Button/Tooltip/HERC2=Front-line infantry. Can use Grapple.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/LeadFarmer=Commando's Chaingun deals splash damage in a small area around the target.
+Button/Tooltip/MercReaper=Former Dominion Elite Reaper Corp. Strong and dangerous Raider. Can jump up and down cliffs.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommando=Mysterious Field Captain of the Rebellion. Has a infantry railgun with different rounds.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/Stetmann=Jezik can heal and repair at lightning speed. Also can take control over weak minded enemy. <n/><n/><c val="#ColorAttackInfo">Has no attack.</c><n/>
 Button/Tooltip/TossGrenade=Tosses a grenade that explodes for <d ref="Effect,TossGrenadeDamage,Amount"/> damage in a radius. <n/><n/><c val="ffff8a">Does not harm friendly units.</c>
@@ -49,6 +50,7 @@ Unit/Name/HERC2=Kovalskiy
 Unit/Name/HERCCompound=100 Rads bar
 Unit/Name/Loyalist=Loyalist
 Unit/Name/MengskReaper=Samuel Horsh
+Unit/Name/MercReaper=Death Scythe
 Unit/Name/PunisherGrenadesLMWeapon2=Loyalist Grenades
 Unit/Name/RaynorCommando=Nekromant
 Unit/Name/Stetmann=Jezik
@@ -71,3 +73,8 @@ Weapon/Name/PunisherGrenades2=Diplomacy Grenades
 Weapon/Name/TyphoonMissilePod=Typhoon Ground-Ground Missiles
 Weapon/Name/TyphoonMissilePod2=Typhoon Ground-Air Missiles
 Weapon/Name/Vulture2=Ultra-Sonic Weapon
+Weapon/Tip/D8Charge=Only used against non-light targets
+Weapon/Tip/MengskReaperD8Charge=Only used against structure
+Weapon/Tip/MercReaperD8Charge=Only used against non-light targets
+Weapon/Tip/MercReaperP38ScytheGuassPistol=Only used against light targets
+Weapon/Tip/P38ScytheGuassPistol=Only used against light units

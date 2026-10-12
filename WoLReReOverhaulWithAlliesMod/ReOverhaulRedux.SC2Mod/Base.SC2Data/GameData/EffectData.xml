@@ -129,11 +129,11 @@
     <CEffectDamage id="LurkerMPDamage">
         <EditorCategories value="Race:Terran"/>
         <AttributeFactor index="Structure" value="-0.5"/>
-        <ShieldFactor value="1"/>
-        <Amount value="16"/>
+        <ShieldFactor value="0.5"/>
+        <Amount value="10"/>
     </CEffectDamage>
     <CEffectEnumArea id="LurkerMPSearch">
-        <AreaArray index="0" Radius="0.825"/>
+        <AreaArray index="0" Radius="0.675"/>
         <EditorCategories value="Race:Terran"/>
     </CEffectEnumArea>
     <CEffectDamage id="MengskReaperD8ChargeDamage">
@@ -226,6 +226,11 @@
     </CEffectSet>
     <CEffectDamage id="NovaSnipeStoneDamage">
         <Amount value="175"/>
+    </CEffectDamage>
+    <CEffectDamage id="NovaWeaponBlazefireBladeGunDamageCloaked">
+        <Amount value="40"/>
+        <AreaArray index="0" Radius="1.25" Fraction="0.25"/>
+        <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectDamage id="NovaWeaponBlazefireBladeGunDamageUncloaked">
         <Amount value="40"/>
@@ -357,6 +362,7 @@
     </CEffectDamage>
     <CEffectEnumArea id="UltrasonicPulseEnhancedSearchArea">
         <SearchFilters value="-;Self,Player,Ally,Neutral,Structure,Heroic,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray index="0" Radius="3"/>
     </CEffectEnumArea>
     <CEffectDamage id="VultureU">
         <AttributeBonus index="Light" value="0"/>

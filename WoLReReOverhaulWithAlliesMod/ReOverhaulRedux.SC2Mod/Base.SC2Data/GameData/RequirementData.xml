@@ -4,4 +4,20 @@
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeDominionForcesCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="HaveBlackOps22">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeRebellionForcesCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveBlackOps23">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeToshGoonsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveBlackOps24">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeTychusBoysCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveBlackOps25">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeMercenarysCompleteOnly"/>
+    </CRequirement>
 </Catalog>
