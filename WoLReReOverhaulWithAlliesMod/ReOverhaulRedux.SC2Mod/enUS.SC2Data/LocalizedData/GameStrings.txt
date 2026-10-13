@@ -21,6 +21,7 @@ Button/Name/DisableAllyPing=DisableAllyPing
 Button/Name/EnableAllyPing=EnableAllyPing
 Button/Name/ExperimentalPlasmaGun=Experimental Scourge Rifle Grenade
 Button/Name/TossGrenade=HE Grenade
+Button/Tooltip/AlliedAIOrderPanel1=im tired boss
 Button/Tooltip/Cyclone=Mobile assault drone. Effective against Air targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/ExperimentalPlasmaGun=Raynor uses his rifle to launch Scourge RPG, Dealing 130 Damage.
 Button/Tooltip/HERC2=Front-line infantry. Can use Grapple.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -76,7 +77,7 @@ Param/Value/lib_7D432011_C284B794='s Minerals
 Param/Value/lib_7D432011_C95425DE=<c val="FF0000">
 Param/Value/lib_7D432011_CDF1E372=(DEBUG) Tychus set to defensive
 Param/Value/lib_7D432011_F4E42484=<c val="FF0000">
-Unit/Name/AlliedAIOrderPanel=ㅤ
+Unit/Name/AlliedAIOrderPanel1=Allies
 Unit/Name/DominionKillTeam=Red Raven
 Unit/Name/HERC2=Kovalskiy
 Unit/Name/HERCCompound=100 Rads bar

@@ -584,7 +584,7 @@ bool auto_lib7D432011_gf_CreateAIController_TriggerFunc (bool testConds, bool ru
     // Automatic Variable Declarations
     // Implementation
     if ((UnitIsAlive(lib7D432011_gv_aIController) == false)) {
-        libNtve_gf_CreateUnitsAtPoint2(1, "AlliedAIOrderPanel", c_unitCreateIgnorePlacement, 1, Point(0.0, 0.0));
+        libNtve_gf_CreateUnitsAtPoint2(1, "AlliedAIOrderPanel1", c_unitCreateIgnorePlacement, 1, Point(0.0, 0.0));
         lib7D432011_gv_aIController = UnitLastCreated();
         TriggerExecute(lib7D432011_gt_InitAlliedAIUI, true, false);
     }
@@ -1174,7 +1174,7 @@ bool lib7D432011_gt_Tychuschangemode_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Conditions
     if (testConds) {
-        if (!((UnitGetType(EventUnit()) == "AlliedAIOrderPanel"))) {
+        if (!((UnitGetType(EventUnit()) == "AlliedAIOrderPanel1"))) {
             return false;
         }
     }
@@ -1225,7 +1225,7 @@ bool lib7D432011_gt_TychusFortify_Func (bool testConds, bool runActions) {
 
     // Conditions
     if (testConds) {
-        if (!((UnitGetType(EventUnit()) == "AlliedAIOrderPanel"))) {
+        if (!((UnitGetType(EventUnit()) == "AlliedAIOrderPanel1"))) {
             return false;
         }
     }

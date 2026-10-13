@@ -10394,7 +10394,7 @@
         </Element>
         <Element Type="Param" Id="FFC3188D">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
-            <Value>AlliedAIOrderPanel</Value>
+            <Value>AlliedAIOrderPanel1</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Unit"/>
         </Element>
@@ -10720,7 +10720,7 @@
         </Element>
         <Element Type="Param" Id="DA1F5C0C">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
-            <Value>AlliedAIOrderPanel</Value>
+            <Value>AlliedAIOrderPanel1</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Unit"/>
         </Element>
@@ -11075,7 +11075,7 @@
         </Element>
         <Element Type="Param" Id="8F88FFC5">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="99ECA820"/>
-            <Value>AlliedAIOrderPanel</Value>
+            <Value>AlliedAIOrderPanel1</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Unit"/>
         </Element>
