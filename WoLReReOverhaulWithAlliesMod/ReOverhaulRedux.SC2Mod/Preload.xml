@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Preload>
-<Asset path="assets\textures\ui_hots_button_shared_hero_hover.dds" Type="Image"/>
-<Asset path="assets\textures\ui_hots_button_shared_hero_normal.dds" Type="Image"/>
+<Asset path="alliedcontrollerpress.dds" Type="Image"/>
+<Asset path="alliedcontrollerpressover.dds" Type="Image"/>
 <Asset path="assets\textures\icon-mineral-nobg.dds" Type="Image"/>
 <Abil id="CreepTumorBuild"/>
 <Actor id="SYSTEM_ActorConfig"/>
@@ -11,6 +11,8 @@
 <Sound id="Alert_BaseUnderAttackKlaxon"/>
 <Sound id="UI_PushButtonSelect"/>
 <Unit id="SupplyDepot"/>
+<Unit id="SCV"/>
+<Unit id="Marine"/>
 <Unit id="Pylon"/>
 <Unit id="Overlord"/>
 <Unit id="CreepTumorBurrowed"/>

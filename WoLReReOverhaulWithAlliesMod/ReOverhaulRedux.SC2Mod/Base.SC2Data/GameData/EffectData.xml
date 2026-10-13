@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="AllyAggressiveModeApply">
+        <EditorCategories value=""/>
+        <Behavior value="AllyAggressiveMode"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="AllyAggressiveModeApply2">
+        <EditorCategories value=""/>
+        <Behavior value="AllyDefensiveMode"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="AllyNormalModeApply">
+        <EditorCategories value=""/>
+        <Behavior value="AllyNormalMode"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="AllyAggressiveModeRemove">
+        <EditorCategories value=""/>
+        <BehaviorLink value="AllyDefensiveMode"/>
+    </CEffectRemoveBehavior>
+    <CEffectRemoveBehavior id="AllyAggressiveModeRemove2">
+        <EditorCategories value=""/>
+        <BehaviorLink value="AllyNormalMode"/>
+    </CEffectRemoveBehavior>
+    <CEffectRemoveBehavior id="AllyDefensiveModeRemove2">
+        <EditorCategories value=""/>
+        <BehaviorLink value="AllyNormalMode"/>
+    </CEffectRemoveBehavior>
+    <CEffectRemoveBehavior id="AllyDefensiveModeRemove">
+        <EditorCategories value=""/>
+        <BehaviorLink value="AllyAggressiveMode"/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="AllyAggressiveModeSet">
+        <EditorCategories value=""/>
+        <EffectArray value="AllyAggressiveModeRemove"/>
+        <EffectArray value="AllyAggressiveModeRemove2"/>
+        <EffectArray value="AllyAggressiveModeApply"/>
+    </CEffectSet>
+    <CEffectRemoveBehavior id="AllyNormalModeRemove2">
+        <EditorCategories value=""/>
+        <BehaviorLink value="AllyDefensiveMode"/>
+    </CEffectRemoveBehavior>
+    <CEffectRemoveBehavior id="AllyNormalModeRemove">
+        <EditorCategories value=""/>
+        <BehaviorLink value="AllyAggressiveMode"/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="AllyDefensiveModeSet">
+        <EditorCategories value=""/>
+        <EffectArray value="AllyDefensiveModeRemove"/>
+        <EffectArray value="AllyDefensiveModeRemove2"/>
+        <EffectArray value="AllyAggressiveModeApply2"/>
+    </CEffectSet>
+    <CEffectSet id="AllyNormalModeSet">
+        <EditorCategories value=""/>
+        <EffectArray value="AllyNormalModeRemove"/>
+        <EffectArray value="AllyNormalModeRemove2"/>
+        <EffectArray value="AllyNormalModeApply"/>
+    </CEffectSet>
     <CEffectSet id="DummyEffectTarget">
         <TargetLocationType value="UnitOrPoint"/>
     </CEffectSet>
@@ -53,6 +107,7 @@
         <AttributeBonus index="Massive" value="25"/>
         <Amount value="30"/>
     </CEffectDamage>
+    <CEffectSet id="DummyEffectUnit"/>
     <CEffectDamage id="DutchConcussiveGrenadeDamage">
         <AttributeFactor index="Armored" value="0.5"/>
         <Amount value="20"/>

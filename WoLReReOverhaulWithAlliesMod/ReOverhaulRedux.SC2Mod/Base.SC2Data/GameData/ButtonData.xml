@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="AlliedAIDefensive">
+        <Icon value="Assets\Textures\aicommand_defend1.dds"/>
+        <AlertIcon value="Assets\Textures\aicommand_defend1.dds"/>
+    </CButton>
     <CButton id="AlliedAIAttack">
         <Icon value="Assets\Textures\command_attack_ac.dds"/>
         <AlertIcon value="Assets\Textures\command_attack_ac.dds"/>
     </CButton>
+    <CButton id="AlliedAINormal">
+        <Icon value="Assets\Textures\aicommand_idle1.dds"/>
+        <AlertIcon value="Assets\Textures\aicommand_idle1.dds"/>
+    </CButton>
+    <CButton id="AlliedAIForceAttack">
+        <Icon value="Assets\Textures\ui_aicommand_build_open_aggressivepush.dds"/>
+        <AlertIcon value="Assets\Textures\ui_aicommand_build_open_aggressivepush.dds"/>
+    </CButton>
     <CButton id="AlliedAIDefend">
         <Icon value="Assets\Textures\command_defend_ac.dds"/>
         <AlertIcon value="Assets\Textures\command_defend_ac.dds"/>
+    </CButton>
+    <CButton id="AlliedAIAggressive">
+        <Icon value="Assets\Textures\aicommand_harass1.dds"/>
+        <AlertIcon value="Assets\Textures\aicommand_harass1.dds"/>
     </CButton>
     <CButton id="DisableAllyPing">
         <Icon value="Assets\Textures\btn-ability-mengsk-blimp-propagandamode.dds"/>

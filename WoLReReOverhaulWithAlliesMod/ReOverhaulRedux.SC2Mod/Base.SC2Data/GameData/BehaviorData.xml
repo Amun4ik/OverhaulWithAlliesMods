@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="AllyDefensiveMode">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AllyNormalMode">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DisableAlliedPing">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AllyAggressiveMode">
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorResource id="MineralFieldMinerals">
@@ -58,8 +67,7 @@
     <CBehaviorResource id="RawVespeneGeyserGas">
         <Capacity value="1000000"/>
         <Contents value="5000"/>
-        <HarvestAmount value="8"/>
-        <EmptyHarvestAmount value="2"/>
+        <EmptyHarvestAmount value="1"/>
     </CBehaviorResource>
     <CBehaviorBuff id="GeyserExhaustedRaw">
         <Alignment value="Negative"/>

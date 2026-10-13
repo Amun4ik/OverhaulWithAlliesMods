@@ -1,7 +1,22 @@
-﻿Abil/Name/DisableAlliedPings=Disable Allies Attack Ping
+﻿Abil/Name/AlliedAIOrderAttack=AlliedAIOrderAttack
+Abil/Name/AlliedAIOrderDefend=AlliedAIOrderDefend
+Abil/Name/AlliedAIOrderForceAttack=AlliedAIOrderForceAttack
+Abil/Name/AllyAgressiveMode=AllyAgressiveMode
+Abil/Name/AllyDefensiveMode=AllyDefensiveMode
+Abil/Name/AllyNormalMode=AllyNormalMode
+Abil/Name/DisableAlliedPings=Disable Allies Attack Ping
+Behavior/Name/AllyAggressiveMode=AllyAggressiveMode
+Behavior/Name/AllyDefensiveMode=AllyDefensiveMode
+Behavior/Name/AllyNormalMode=AllyNormalMode
 Behavior/Name/DisableAlliedPing=DisableAlliedPing
-Button/Name/CommanderControllerIcon1=CommanderControllerIcon1
-Button/Name/CommanderControllerIcon2=CommanderControllerIcon2
+Button/Name/AlliedAIAggressive=AlliedAIAggressive
+Button/Name/AlliedAIAttack=AlliedAIAttack
+Button/Name/AlliedAIDefend=AlliedAIDefend
+Button/Name/AlliedAIDefensive=AlliedAIDefensive
+Button/Name/AlliedAIForceAttack=AlliedAIForceAttack
+Button/Name/AlliedAINormal=AlliedAINormal
+Button/Name/CommanderControllerIcon1=CommanderControllerIcon
+Button/Name/CommanderControllerIcon2=CommanderControllerIcon
 Button/Name/DisableAllyPing=DisableAllyPing
 Button/Name/EnableAllyPing=EnableAllyPing
 Button/Name/ExperimentalPlasmaGun=Experimental Scourge Rifle Grenade
@@ -18,8 +33,21 @@ Button/Tooltip/TychusChaingun=A scoundrel, a Pirate and "Good" old friend of Ray
 Button/Tooltip/TychusCommando=Commando can throw demolition charge. Deal damage in small area. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/TychusCommando2=Long-hand of Dominion Infantry Corp. <n/><n/><c val="#ColorAttackInfo">Can attack ground</c><n/>
 Button/Tooltip/Vulture2=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Effect/Name/AllyAggressiveModeApply=AllyAggressiveModeApply
+Effect/Name/AllyAggressiveModeApply2=AllyDefensiveModeApply
+Effect/Name/AllyAggressiveModeRemove=AllyAggressiveModeRemove
+Effect/Name/AllyAggressiveModeRemove2=AllyAggressiveModeRemove2
+Effect/Name/AllyAggressiveModeSet=AllyAggressiveModeSet
+Effect/Name/AllyDefensiveModeRemove=AllyDefensiveModeRemove
+Effect/Name/AllyDefensiveModeRemove2=AllyDefensiveModeRemove2
+Effect/Name/AllyDefensiveModeSet=AllyDefensiveModeSet
+Effect/Name/AllyNormalModeApply=AllyNormalModeApply
+Effect/Name/AllyNormalModeRemove=AllyNormalModeRemove
+Effect/Name/AllyNormalModeRemove2=AllyNormalModeRemove2
+Effect/Name/AllyNormalModeSet=AllyNormalModeSet
 Effect/Name/CycloneRocketBarrage=Cyclone Rocket Barrage Air
 Effect/Name/CycloneRocketBarrage2=Cyclone Rocket Barrage Ground
+Effect/Name/DummyEffectUnit=DummyEffectUnit
 Effect/Name/GoliathA2=Ground Attack
 Effect/Name/LurkerMP=Ultra-Sonic
 Effect/Name/LurkerMPDamage=Ultra-Sonic
@@ -30,19 +58,23 @@ Effect/Name/PunisherGrenadesU2=Loyalist Grenades
 Param/Expression/lib_7D432011_226087B8=~A~'s Supply
 Param/Expression/lib_7D432011_316909C0=~C~~A~/~B~
 Param/Expression/lib_7D432011_5B275374=~C~~A~/~B~
-Param/Expression/lib_7D432011_84BBC09D=~A~ Attack Wave
 Param/Expression/lib_7D432011_A25D9EB8=~A~ Attack Wave
 Param/Expression/lib_7D432011_AD2AD8F6=~A~'s Minerals
 Param/Expression/lib_7D432011_ADBDE260=Ally to Player Trades on cooldown for ~A~ seconds.
 Param/Expression/lib_7D432011_D5CADF89=~A~
 Param/Expression/lib_7D432011_F534FC22=~A~'s Vespene
 Param/Expression/lib_7D432011_FA3FD038=~C~~A~/~B~
+Param/Value/lib_7D432011_0752C8BD=(DEBUG) Rebels not detected
 Param/Value/lib_7D432011_0DAF6DE7='s Minerals
 Param/Value/lib_7D432011_40CFB344=<s val="AllianceHeader">Command Allies</s><n/><n/>Use "Place Beacon" to set the target area your allies will send their units to.<n/><n/>The Strategy menu allows you to decide whether your allies will send their units at the enemy or stay home and defend.
 Param/Value/lib_7D432011_5DF2BD34=Attack Path
+Param/Value/lib_7D432011_667DFCA0=(DEBUG) Tychus set to normal
+Param/Value/lib_7D432011_68C83814=(DEBUG) Tychus not detected
 Param/Value/lib_7D432011_A2F1FE8A='s Vespene
+Param/Value/lib_7D432011_AA68A45E=(DEBUG) Tychus set to aggressive
 Param/Value/lib_7D432011_C284B794='s Minerals
 Param/Value/lib_7D432011_C95425DE=<c val="FF0000">
+Param/Value/lib_7D432011_CDF1E372=(DEBUG) Tychus set to defensive
 Param/Value/lib_7D432011_F4E42484=<c val="FF0000">
 Unit/Name/AlliedAIOrderPanel=ㅤ
 Unit/Name/DominionKillTeam=Red Raven

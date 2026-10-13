@@ -20,6 +20,41 @@
         <Range value="1000"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAIDefend"/>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="AlliedAIOrderForceAttack">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DummyEffectUnit"/>
+        <Cost>
+            <Cooldown TimeUse="6"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAIForceAttack"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="AllyAgressiveMode">
+        <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="AllyAggressiveModeSet"/>
+        <Cost>
+            <Cooldown Link="Abil/AllyNormalMode" Location="Global" TimeUse="5"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAIAggressive" Requirements="AllyAggressiveModeReq"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="AllyDefensiveMode">
+        <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="AllyDefensiveModeSet"/>
+        <Cost>
+            <Cooldown Link="Abil/AllyNormalMode" Location="Global" TimeUse="5"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAIDefensive" Requirements="AllyDefensiveModeReq"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="AllyNormalMode">
+        <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="AllyNormalModeSet"/>
+        <Cost>
+            <Cooldown Location="Global" TimeUse="5"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAINormal" Requirements="AllyNormalModeReq"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="BonesHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
