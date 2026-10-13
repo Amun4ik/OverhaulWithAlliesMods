@@ -2,17 +2,14 @@
 <Catalog>
     <CRequirementCountBehavior id="CountBehaviorAllyAggressiveModeCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="AllyAggressiveMode" State="CompleteOnlyAtUnit" Unlock="1"/>
     </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorAllyDefensiveModeCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="AllyDefensiveMode" State="CompleteOnlyAtUnit" Unlock="1"/>
     </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorAllyNormalModeCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="AllyNormalMode" State="CompleteOnlyAtUnit" Unlock="1"/>
     </CRequirementCountBehavior>
     <CRequirementCountUpgrade id="CountUpgradeDominionForcesCompleteOnly">
@@ -35,4 +32,16 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="TychusBoys" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementNot id="NotCountBehaviorAllyAggressiveModeCompleteOnlyAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountBehaviorAllyAggressiveModeCompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorAllyDefensiveModeCompleteOnlyAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountBehaviorAllyDefensiveModeCompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorAllyNormalModeCompleteOnlyAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountBehaviorAllyNormalModeCompleteOnlyAtUnit"/>
+    </CRequirementNot>
 </Catalog>

@@ -3,7 +3,7 @@
     <!--                                                                                         -->
     <!-- Swann ................................................................................. -->
     <!--                                                                                         -->
-    <CActorUnit id="AlliedAIOrderPanel" parent="ZergBuildingEx" unitName="AlliedAIOrderPanel1">
+    <CActorUnit id="AlliedAIOrderPanel" parent="ZergBuildingEx" unitName="AlliedAIOrderPanel">
         <Macros value="MacroTownhallDeco_Zerg"/>
         <Macros value="ZergHatcheryPlayerDecalMacro"/>
         <Macros value="SprayHelperMacro"/>
@@ -16,9 +16,9 @@
         <On Terms="AbilMorph.*.Cancel; MorphFrom Hatchery; MorphTo Lair" Send="AnimBaselineStart"/>
         <On Terms="AbilMorph.*.Cancel; MorphFrom Hatchery; MorphTo Lair" Send="AnimPlay MorphCancel Cover,End,A"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom Hatchery; MorphTo Lair" Send="Destroy"/>
-        <On Terms="UnitBirth.AlliedAIOrderPanel1" Send="Create PlayerLogoDoodadList"/>
-        <On Terms="UnitBirth.AlliedAIOrderPanel1; PlayerHasClanDecal" Send="Create ZergClanFlag"/>
-        <On Terms="UnitBirth.AlliedAIOrderPanel1; PlayerHasTrophy" Send="Create ZergPlayerTrophy"/>
+        <On Terms="UnitBirth.AlliedAIOrderPanel" Send="Create PlayerLogoDoodadList"/>
+        <On Terms="UnitBirth.AlliedAIOrderPanel; PlayerHasClanDecal" Send="Create ZergClanFlag"/>
+        <On Terms="UnitBirth.AlliedAIOrderPanel; PlayerHasTrophy" Send="Create ZergPlayerTrophy"/>
         <On Terms="UnitDeathCustomize; ValidateUnit HasZergGenericDeath" Send="DeathCustomize Detached"/>
         <Model value="Invisible"/>
         <BuildModel value="Invisible"/>
@@ -34,7 +34,6 @@
         <Wireframe>
             <Image value="Assets\Textures\black.dds"/>
         </Wireframe>
-        <HighlightTooltip value="Unit/Name/AlliedAIOrderPanel"/>
     </CActorUnit>
     <CActorUnit id="Dutch">
         <UnitKillRank index="0" Text="UnitKillRank/Swann1"/>
