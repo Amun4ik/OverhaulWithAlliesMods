@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="90mmCannons">
+        <MinScanRange value="8.5"/>
+        <Range value="8"/>
+        <Period value="1.8"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="90mmCannons2">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <Period value="1.15"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AutoTurret">
+        <Period value="0.72"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="CommandoRifle">
         <MinScanRange value="7"/>
         <Range value="7"/>
         <Period value="2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CrucioShockCannon">
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <MinimumRange value="3"/>
+        <Period value="5"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="D8Charge">
         <Options index="Disabled" value="0"/>
@@ -17,6 +40,65 @@
         <DamagePoint value="0.1"/>
         <Backswing value="0.25"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Diamondback">
+        <DisplayAttackCount value="1"/>
+        <MinScanRange value="7.5"/>
+        <Range value="7"/>
+        <Period value="2.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Diamondback2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="IgnoreThreat" value="1"/>
+        <Options index="IgnoreAttackPriority" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="DiamondbackBeam2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSTrackedByDiamondback"/>
+            <SortArray value="TSThreatenDiamondback"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="TSTransientDiamondback"/>
+        </AcquireTargetSorts>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <Marker Count="0" Link="Effect/Diamondback2AttackTrackerCP">
+            <MatchFlags index="CasterUnit" value="1"/>
+        </Marker>
+        <Cost>
+            <Vital index="Shields" value="-5"/>
+        </Cost>
+        <Period value="2.25"/>
+        <Effect value="DiamondbackDamageSet2"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Diamondback3">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="IgnoreThreat" value="1"/>
+        <Options index="IgnoreAttackPriority" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="DiamondbackBeam3"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSTrackedByDiamondback"/>
+            <SortArray value="TSThreatenDiamondback"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="TSTransientDiamondback"/>
+        </AcquireTargetSorts>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <Marker Count="0" Link="Effect/Diamondback3AttackTrackerCP">
+            <MatchFlags index="CasterUnit" value="1"/>
+        </Marker>
+        <Period value="0.8"/>
+        <Effect value="DiamondbackBeam3"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="DominionKillTeam">
         <Range value="8"/>
         <Period value="2"/>
@@ -25,6 +107,12 @@
         <MinScanRange value="6"/>
         <Range value="6"/>
         <Period value="1.6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DutchTurretFlameThrower">
+        <DisplayEffect value="LurkerMPDamage"/>
+        <Range value="9"/>
+        <Period value="2.5"/>
+        <Effect value="LurkerMP"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Firebat">
         <Period value="0.86"/>
@@ -65,6 +153,33 @@
     <CWeaponLegacy id="InfernalFlameThrower">
         <Period value="1.5"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Kit@90mmCannonsFake">
+        <MinScanRange value="8.5"/>
+        <Range value="8"/>
+        <Period value="1.8"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Kit@90mmCannonsFake2">
+        <Name value="Weapon/Name/90mmCannons"/>
+        <EditorCategories value="Race:Terran"/>
+        <Tip value="Weapon/Tip/90mmCannons"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="90mmCannons2"/>
+        <DisplayName value="Weapon/Name/90mmCannons"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Marker Link="Weapon/90mmCannons"/>
+        <Cost>
+            <Cooldown Link="Weapon/90mmCannons"/>
+        </Cost>
+        <Period value="1.15"/>
+        <Effect value="Kit@90mmCannonsDummy2"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="MengskReaperD8Charge">
         <Period value="1.2"/>
     </CWeaponLegacy>
@@ -100,6 +215,19 @@
         <DamagePoint value="0"/>
         <Backswing value="0.0124"/>
         <Effect value="PunisherGrenadesLM2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RailGunTurret">
+        <DisplayEffect value="RenegadeLongboltMissileU"/>
+        <Range value="7"/>
+        <Effect value="RenegadeLongboltMissileLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RenegadeLongboltMissile">
+        <DisplayEffect value="DiamondbackBeam2"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Period value="1.25"/>
+        <Effect value="Diamondback2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Specter">
         <MinScanRange value="7"/>

@@ -5,6 +5,8 @@ Abil/Name/AllyAgressiveMode=AllyAgressiveMode
 Abil/Name/AllyDefensiveMode=AllyDefensiveMode
 Abil/Name/AllyNormalMode=AllyNormalMode
 Abil/Name/DisableAlliedPings=Disable Allies Attack Ping
+Abil/Name/ImmortalOverload=Barrier - Life Triggered
+Actor/HighlightTooltip/RenegadeMissileTurret=
 Behavior/Name/AllyAggressiveMode=AllyAggressiveMode
 Behavior/Name/AllyDefensiveMode=AllyDefensiveMode
 Behavior/Name/AllyNormalMode=AllyNormalMode
@@ -20,21 +22,26 @@ Button/Name/CommanderControllerIcon2=CommanderControllerIcon
 Button/Name/DisableAllyPing=DisableAllyPing
 Button/Name/EnableAllyPing=EnableAllyPing
 Button/Name/ExperimentalPlasmaGun=Experimental Scourge Rifle Grenade
+Button/Name/NovaXanthosToggleRepairModeOn=Self Repair
 Button/Name/TossGrenade=HE Grenade
 Button/Tooltip/AlliedAIOrderPanel=im tired boss
 Button/Tooltip/Cyclone=Mobile assault drone. Effective against Air targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Diamondback2=Light armored experimental vehicle. Rebellion command transfer all their machines for our use. Deal additional damage in chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Diamondback3=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/ExperimentalPlasmaGun=Raynor uses his rifle to launch Scourge RPG, Dealing 130 Damage.
 Button/Tooltip/HERC2=Front-line infantry. Can use Grapple.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/LeadFarmer=Commando's Chaingun deals splash damage in a small area around the target.
 Button/Tooltip/MercReaper=Former Dominion Elite Reaper Corp. Strong and dangerous Raider. Can jump up and down cliffs.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
-Button/Tooltip/MissileTurret2=Anti-air defensive structure.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c><n/><c val="FFE303">Detector</c>
+Button/Tooltip/NovaXanthosToggleRepairModeOn=Order vehicle crew to repair their vehicle. During this vehicle is vulnerable to enemy fire, which stops repair process. Crew unable to move or attack during repair time.
 Button/Tooltip/RaynorCommando=Mysterious Field Captain of the Rebellion. Has a infantry railgun with different rounds.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
+Button/Tooltip/RenegadeMissileTurret=Experimental defense turret. Deal damage in a chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c><n/><c val="FFE303">Detector</c>
 Button/Tooltip/Stetmann=Jezik can heal and repair at lightning speed. Also can take control over weak minded enemy. <n/><n/><c val="#ColorAttackInfo">Has no attack.</c><n/>
 Button/Tooltip/TossGrenade=Tosses a grenade that explodes for <d ref="Effect,TossGrenadeDamage,Amount"/> damage in a radius. <n/><n/><c val="ffff8a">Does not harm friendly units.</c>
 Button/Tooltip/TychusChaingun=A scoundrel, a Pirate and "Good" old friend of Raynor. Has a shit ton of explosives.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/TychusCommando=Commando can throw demolition charge. Deal damage in small area. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/TychusCommando2=Long-hand of Dominion Infantry Corp. <n/><n/><c val="#ColorAttackInfo">Can attack ground</c><n/>
 Button/Tooltip/Vulture2=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Effect/Name/90mmCannons2=Arclite Cannon (Damage)
 Effect/Name/AllyAggressiveModeApply=AllyAggressiveModeApply
 Effect/Name/AllyAggressiveModeApply2=AllyDefensiveModeApply
 Effect/Name/AllyAggressiveModeRemove=AllyAggressiveModeRemove
@@ -49,6 +56,11 @@ Effect/Name/AllyNormalModeRemove2=AllyNormalModeRemove2
 Effect/Name/AllyNormalModeSet=AllyNormalModeSet
 Effect/Name/CycloneRocketBarrage=Cyclone Rocket Barrage Air
 Effect/Name/CycloneRocketBarrage2=Cyclone Rocket Barrage Ground
+Effect/Name/Diamondback=Redeemer (Set)
+Effect/Name/Diamondback2=Eviscerator (Set)
+Effect/Name/DiamondbackBeam=Redeemer (Beam)
+Effect/Name/DiamondbackBeam2=Eviscerator (Beam)
+Effect/Name/DiamondbackBeam3=Eviscerator (Beam)
 Effect/Name/DummyEffectUnit=DummyEffectUnit
 Effect/Name/GoliathA2=Ground Attack
 Effect/Name/LurkerMP=Ultra-Sonic
@@ -57,6 +69,8 @@ Effect/Name/LurkerMPSearch=Ultra-Sonic
 Effect/Name/PunisherGrenadesLM2=Loyalist Grenades
 Effect/Name/PunisherGrenadesSet2=Loyalist Grenades
 Effect/Name/PunisherGrenadesU2=Loyalist Grenades
+Effect/Name/RenegadeLongboltMissileLM=Grenade Missile
+Effect/Name/RenegadeLongboltMissileU=Grenade Missile
 Param/Expression/lib_7D432011_226087B8=~A~'s Supply
 Param/Expression/lib_7D432011_316909C0=~C~~A~/~B~
 Param/Expression/lib_7D432011_5B275374=~C~~A~/~B~
@@ -81,6 +95,8 @@ Param/Value/lib_7D432011_CDF1E372=(DEBUG) Tychus set to defensive
 Param/Value/lib_7D432011_F4E42484=<c val="FF0000">
 Param/Value/lib_7D432011_FAA4D8DC=(DEBUG) Enabling pings
 Unit/Name/AlliedAIOrderPanel=Allies
+Unit/Name/Diamondback2=Tesla Tank
+Unit/Name/Diamondback3=Shaymen
 Unit/Name/DominionKillTeam=Red Raven
 Unit/Name/FlamingBetty=Ultra-Sonic Turret
 Unit/Name/GunTower=AT-45 Emplacement
@@ -90,11 +106,11 @@ Unit/Name/KorhalPalaceTurret=Mortar Pit
 Unit/Name/Loyalist=Loyalist
 Unit/Name/MengskReaper=Samuel Horsh
 Unit/Name/MercReaper=Death Scythe
-Unit/Name/MissileTurret2=Tesla Coil
 Unit/Name/PunisherGrenadesLMWeapon2=Loyalist Grenades
 Unit/Name/RailGunTurret=Grenade Turret
 Unit/Name/RaynorCommando=Nekromant
-Unit/Name/RenegadeMissileTurret=Howitzer Turret
+Unit/Name/RenegadeMissileTurret=Tesla Coil
+Unit/Name/SiegeTank2=Bastion Tank
 Unit/Name/Stetmann=Jezik
 Unit/Name/Swann=Defender
 Unit/Name/TychusCommando=Commando
@@ -108,15 +124,23 @@ Upgrade/Name/Mercenarys=Mercenarys
 Upgrade/Name/RebellionForces=Rebellion Forces
 Upgrade/Name/ToshGoons=Tosh Goons
 Upgrade/Name/TychusBoys=Tychus Boys
+Weapon/Name/90mmCannons=70mm Cannons
+Weapon/Name/90mmCannons2=70mm Cannons
 Weapon/Name/CommandoRifle=Infantry Railgun Tyranny's End
+Weapon/Name/Diamondback=Redeemer Heavy Rail Gun
+Weapon/Name/Diamondback2=Tesla Capacitors
+Weapon/Name/Diamondback3=Eviscerator Rail Gun
 Weapon/Name/DominionKillTeam=Eradicator Grenades
 Weapon/Name/HERCWeapon2=H1 Flash Welder
 Weapon/Name/LongboltMissile2=Longbolt Missile
 Weapon/Name/PunisherGrenades2=Diplomacy Grenades
+Weapon/Name/RailGunTurret=Drakken Grenade Launcher
+Weapon/Name/RenegadeLongboltMissile=Tesla Coil
 Weapon/Name/TyphoonMissilePod=Typhoon Ground-Ground Missiles
 Weapon/Name/TyphoonMissilePod2=Typhoon Ground-Air Missiles
 Weapon/Name/Vulture2=Ultra-Sonic Weapon
 Weapon/Tip/D8Charge=Only used against non-light targets
+Weapon/Tip/Diamondback2=Restore 5 shields each attack.
 Weapon/Tip/MengskReaperD8Charge=Only used against structure
 Weapon/Tip/MercReaperD8Charge=Only used against non-light targets
 Weapon/Tip/MercReaperP38ScytheGuassPistol=Only used against light targets

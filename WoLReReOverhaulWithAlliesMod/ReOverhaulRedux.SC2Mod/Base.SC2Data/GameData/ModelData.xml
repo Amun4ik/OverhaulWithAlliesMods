@@ -17,6 +17,88 @@
     <CModel id="DevilDog">
         <Model value="Assets\COOP\Tychus\Units\Firebat_Heavens_COOP\Firebat_Heavens_COOP.m3"/>
     </CModel>
+    <CModel id="Diamondback">
+        <Model value="Assets\Terran\NC_Diamondback_BlueAttack.m3"/>
+    </CModel>
+    <CModel id="Diamondback2" parent="Unit" Race="Terran">
+        <Model value="Assets\Terran\Terran_TeslaTank.m3"/>
+        <Events>
+            <Anim value="Stand,Morph,End"/>
+            <Name value="DiamondbackCapture"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Diamondback_Capture"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.866400"/>
+        <ShadowRadius value="0.866400"/>
+        <TechPurchaseCamera value="TechPurchaseDiamondback"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.000000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
+    <CModel id="Diamondback3" parent="Unit" Race="Terran">
+        <Model value="Assets\Terran\Riptide.m3"/>
+        <Events>
+            <Anim value="Stand,Morph,End"/>
+            <Name value="DiamondbackCapture"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Diamondback_Capture"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.866400"/>
+        <ShadowRadius value="0.866400"/>
+        <TechPurchaseCamera value="TechPurchaseDiamondback"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.000000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
+    <CModel id="DiamondbackAttackBeam2" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\ArchonBeam\ArchonBeam.m3"/>
+        <LowQualityModel value="DiamondbackAttackBeamLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="DiamondbackAttackBeam3" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\ArchangelAttackBeam\ArchangelAttackBeam.m3"/>
+        <LowQualityModel value="DiamondbackAttackBeamLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="DiamondbackDeath2" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\DiamondbackDeath\DiamondbackDeath.m3"/>
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="DiamondbackDeath3" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\DiamondbackDeath\DiamondbackDeath.m3"/>
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="DiamondbackPortrait">
+        <Model value="Assets\Terran\NC_Diamondback_Portrait.m3"/>
+    </CModel>
+    <CModel id="DiamondbackPortrait2" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\DiamondbackPortrait\DiamondbackPortrait.m3"/>
+        <FacialController value="LocalizedData\Facial\DiamondbackPortrait.fxa"/>
+        <Image value="Assets\Textures\DiamondbackPortrait_Static.dds"/>
+        <Lighting value="DiamondbackPortrait"/>
+    </CModel>
+    <CModel id="DiamondbackPortrait3" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\SCV_HornerHan_Portrait\SCV_HornerHan_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\SCVPortrait.fxa"/>
+        <Image value="Assets\Textures\SCVSCBW@portrait_static.dds"/>
+        <Lighting value="DiamondbackPortrait"/>
+    </CModel>
     <CModel id="DominionKillTeam">
         <Model value="Assets\Terran\RattleSnake_ViperVersion.m3"/>
     </CModel>
@@ -65,6 +147,9 @@
     <CModel id="Ghost_Umojan_Portrait">
         <Model value="Assets\UED Portraits\Ghost_Mercenary_Portrait.m3"/>
     </CModel>
+    <CModel id="HERC">
+        <Model value="Assets\Terran\HERC_Junker_Collection.m3"/>
+    </CModel>
     <CModel id="HERC2" parent="Unit" Race="Terran">
         <Model value="Assets\Terran\Bastion.m3"/>
         <Occlusion value="Show"/>
@@ -76,7 +161,7 @@
         <UnitGlossaryCamera value="Star2CameraHigh04"/>
     </CModel>
     <CModel id="HERC3" parent="Unit" Race="Terran">
-        <Model value="Assets\Terran\HERC_Junker_Collection.m3"/>
+        <Model value="Assets\Units\Terran\HERC\HERC.m3"/>
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraHigh04"/>
         <Radius value="0.600000"/>
@@ -102,6 +187,9 @@
         <EditorCategories value="Race:Terran"/>
         <Image value="Assets\Textures\odinportrait_static.dds"/>
         <Lighting value="HERCPortrait"/>
+    </CModel>
+    <CModel id="KerriganEnergyAttack">
+        <Model value="Assets\Effects\Protoss\ArchonBeam\ArchonBeam.m3"/>
     </CModel>
     <CModel id="MarauderKillSquadPortrait">
         <Model value="Assets\Terran\Marauder_Viper_Portrait.m3"/>
@@ -217,9 +305,16 @@
     <CModel id="MercReaper">
         <Model value="Assets\COOP\Tychus\Units\Reaper_Heavens_COOP\Reaper_Heavens_COOP.m3"/>
     </CModel>
+    <CModel id="NovaGunTurretCloakField">
+        <Model value="Assets\Terran\dominion-engiturret.m3"/>
+    </CModel>
     <CModel id="PunisherGrenadesLMWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
         <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RailGunTurret">
+        <Model value="Assets\Terran\dominion-turret-granede.m3"/>
+        <AttachProps Id="Ref_TurretZ"/>
     </CModel>
     <CModel id="Raynor">
         <Model value="Assets\Units\Terran\MarineRaynorEx1\MarineRaynorEx1.m3"/>
@@ -246,6 +341,43 @@
     </CModel>
     <CModel id="ReaperPortrait">
         <Model value="Assets\Terran\Reaper_Portrait.m3"/>
+    </CModel>
+    <CModel id="RenegadeLongboltMissileWeapon">
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="RenegadeMissileTurret">
+        <Model value="Assets\Terran\Terran_TeslaCoil.m3"/>
+        <AttachProps Id="Ref_TurretZ"/>
+    </CModel>
+    <CModel id="RenegadeMissileTurretPlacement">
+        <Model value="Assets\Terran\Terran_TeslaCoil_Placement.m3"/>
+    </CModel>
+    <CModel id="SiegeTank2" parent="SiegeTankBase">
+        <Model value="Assets\Terran\Predator_Tank.m3"/>
+    </CModel>
+    <CModel id="SiegeTankAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>
+        <LowQualityModel value="SiegeTankAttackImpactLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SiegeTankAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\TankWeaponLaunch\TankWeaponLaunch.m3"/>
+        <LowQualityModel value="SiegeTankAttackLaunchLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SiegeTankDeath2" parent="SiegeTankDeathBase">
+        <Model value="Assets\Units\Terran\SiegeTankDeathEx1\SiegeTankDeathEx1.m3"/>
+    </CModel>
+    <CModel id="SiegeTankPortrait2" parent="SiegeTankPortraitBase">
+        <Model value="Assets\Portraits\Terran\HerculesPortrait\HerculesPortrait.m3"/>
+        <FacialController value="LocalizedData\Facial\HerculesPortrait.fxa"/>
+        <Image value="Assets\Textures\herculesportrait_static.dds"/>
+        <Lighting value="SiegeTankPortrait"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedAttackImpact">
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
     </CModel>
     <CModel id="StetmannMedicPortrait">
         <Model value="Assets\Terran\DaveSpectrePortrait.m3"/>

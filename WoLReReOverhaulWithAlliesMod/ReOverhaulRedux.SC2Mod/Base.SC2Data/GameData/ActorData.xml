@@ -35,6 +35,114 @@
             <Image value="Assets\Textures\black.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorUnit id="Diamondback2" parent="GenericUnitStandard" unitName="Diamondback2">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Abil.attack.ReadyStop" Target="DiamondbackAttackBeam" Send="SetOpacity 0.000000 0.250000"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Diamondback_Land"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <On Terms="Abil.attack.ReadyStop" Target="DiamondbackAttackBeam" Send="Destroy"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="DiamondbackDeath2" SoundLink="Diamondback_Explode"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <PortraitModel value="DiamondbackPortrait2"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Diamondback.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="Birth" value="Diamondback_Birth"/>
+        <GroupSoundArray index="Ready" value="Diamondback_Ready"/>
+        <GroupSoundArray index="Help" value="Diamondback_Help"/>
+        <GroupSoundArray index="What" value="Diamondback_What"/>
+        <GroupSoundArray index="Yes" value="Diamondback_Yes"/>
+        <GroupSoundArray index="Attack" value="Diamondback_Attack"/>
+        <GroupSoundArray index="Pissed" value="SpiderMinePissed"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="40"/>
+        <SoundArray index="Ready" value="Diamondback_Ready"/>
+        <SoundArray index="Help" value="Diamondback_Help"/>
+        <SoundArray index="What" value="Diamondback_What"/>
+        <SoundArray index="Yes" value="Diamondback_Yes"/>
+        <SoundArray index="Attack" value="Diamondback_Attack"/>
+        <SoundArray index="Pissed" value="Diamondback_Pissed"/>
+        <SoundArray index="Movement" value="Diamondback_Movement"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-diamondback.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Diamondback.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="Diamondback3" parent="GenericUnitStandard" unitName="Diamondback3">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Abil.attack.ReadyStop" Target="DiamondbackAttackBeam" Send="SetOpacity 0.000000 0.250000"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Diamondback_Land"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <On Terms="Abil.attack.ReadyStop" Target="DiamondbackAttackBeam" Send="Destroy"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="DiamondbackDeath3" SoundLink="Diamondback_Explode"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <PortraitModel value="DiamondbackPortrait3"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Diamondback.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="Birth" value="Diamondback_Birth"/>
+        <GroupSoundArray index="Ready" value="Diamondback_Ready"/>
+        <GroupSoundArray index="Help" value="Diamondback_Help"/>
+        <GroupSoundArray index="What" value="Diamondback_What"/>
+        <GroupSoundArray index="Yes" value="Diamondback_Yes"/>
+        <GroupSoundArray index="Attack" value="Diamondback_Attack"/>
+        <GroupSoundArray index="Pissed" value="SpiderMinePissed"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="40"/>
+        <SoundArray index="Ready" value="Diamondback_Ready"/>
+        <SoundArray index="Help" value="Diamondback_Help"/>
+        <SoundArray index="What" value="Diamondback_What"/>
+        <SoundArray index="Yes" value="Diamondback_Yes"/>
+        <SoundArray index="Attack" value="Diamondback_Attack"/>
+        <SoundArray index="Pissed" value="Diamondback_Pissed"/>
+        <SoundArray index="Movement" value="Diamondback_Movement"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-diamondback.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Diamondback.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="DiamondbackAttack2" parent="GenericAttack" effectAttack="DiamondbackBeam2">
+        <LaunchAttachQuery Methods="AMFilterWeapon"/>
+        <LaunchAssets Sound="Diamondback_AttackImpact"/>
+        <Beam value="DiamondbackAttackBeam2"/>
+        <BeamScope value="Caster"/>
+        <ImpactPhysics Name="RailgunImpact" MatchKeys="Basic" Physics="MengskDiamondbackAttackDeathForce"/>
+    </CActorAction>
+    <CActorAction id="DiamondbackAttack3" parent="GenericAttack" effectAttack="DiamondbackBeam3">
+        <LaunchAttachQuery Methods="AMFilterWeapon"/>
+        <LaunchAssets Sound="Diamondback_AttackImpact"/>
+        <Beam value="DiamondbackAttackBeam3"/>
+        <BeamScope value="Caster"/>
+        <ImpactPhysics Name="RailgunImpact" MatchKeys="Basic" Physics="MengskDiamondbackAttackDeathForce"/>
+    </CActorAction>
+    <CActorBeamSimple id="DiamondbackAttackBeam2" parent="GenericAttackBeam">
+        <On Terms="ActorCreation; ValidateEffect DiamondbackCharged" Send="ModelSwap DiamondbackAttackBeamCharged"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+    </CActorBeamSimple>
+    <CActorBeamSimple id="DiamondbackAttackBeam3" parent="GenericAttackBeam">
+        <On Terms="ActorCreation; ValidateEffect DiamondbackCharged" Send="ModelSwap DiamondbackAttackBeamCharged"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+    </CActorBeamSimple>
     <CActorUnit id="Dutch">
         <UnitKillRank index="0" Text="UnitKillRank/Swann1"/>
     </CActorUnit>
@@ -55,10 +163,6 @@
     <CActorSound id="Ghost_Death">
         <On Terms="UnitDeath.RaynorCommando; PassChance 100.000000" Send="Create"/>
     </CActorSound>
-    <CActorUnit id="HERC">
-        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap HERC3"/>
-        <On Terms="UnitBirth; ValidateUnit HaveBlackOps25" Send="ModelSwap HERC3"/>
-    </CActorUnit>
     <CActorUnit id="HERC2" parent="GenericUnitStandard" unitName="HERC2">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
@@ -190,6 +294,110 @@
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps25" Send="ModelSwap Reaper_Junker"/>
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Reaper_Merc"/>
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Reaper_Merc"/>
+    </CActorMissile>
+    <CActorMissile id="SiegeTank2" parent="GenericUnitMorph" unitName="SiegeTank2">
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <Macros value="SnowVisualUnitMacro"/>
+        <Inherits index="ModelMaterials" value="1"/>
+        <AcceptedTransfers index="ModelMaterials" value="1"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_Land"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <On Terms="Upgrade.BlackOps.Add" Send="ModelSwap SiegeTank_BlackOps_Tank"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps" Send="ModelSwap SiegeTank_BlackOps_Tank"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveBlackOps" Send="DeathCustomize BlackOps"/>
+        <On Terms="Effect.SiegeTankJumpJetCreateCP.Start" Send="AnimPlay JumpStart Jump,Start"/>
+        <On Terms="Effect.SiegeTankJumpJetCreateCP.Start" Send="TimerSet 0.500000 JumpStart"/>
+        <On Terms="TimerExpired; TimerName JumpStart" Send="AnimClear JumpStart"/>
+        <On Terms="TimerExpired; TimerName JumpStart" Send="AnimPlay Jump Jump"/>
+        <On Terms="MotionPhaseStart; MotionPhase 2" Send="AnimClear Jump"/>
+        <On Terms="MotionPhaseStart; MotionPhase 2" Send="AnimPlay JumpEnd Jump,End 0 -1.000000 -1.000000 4.000000 AsDuration"/>
+        <On Terms="UnitMovementUpdate; AnimPlaying JumpEnd" Send="AnimClear JumpEnd"/>
+        <On Terms="WeaponStart.*.AttackStart; AnimPlaying JumpEnd" Send="AnimClear JumpEnd"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_BlackOps_JumpJets_Land"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SiegeTankDeath2" SoundLink="SiegeTank_Explode"/>
+        <DeathCustoms ModelLink="TerranLargeUnitDeathLow" Name="AntiGravTerran"/>
+        <DeathCustoms ActorModel="SiegeTankDeathRagdoll" ModelLink="SiegeTankDeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathCustoms ModelLink="SiegeTank_BlackOps_Death" Name="BlackOps"/>
+        <DeathCustomData Name="RagdollBasic"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="SiegeTankPortrait2"/>
+        <StandAnimTurnTime value="3.33"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSiegeTank"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="1"/>
+        <AbilSoundArray AbilCmd="SiegeMode,Execute" Sound="SiegeTank_SiegeModeVO"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <ErrorArray Error="CantSeeBuildLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantSeeLandLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantBuildLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantLandLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CouldntReachTarget" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantSeeBuildLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantSeeLandLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantBuildLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantLandLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CouldntReachTarget" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-TankMode.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="SiegeTank_Ready"/>
+        <SoundArray index="Help" value="SiegeTank_Help"/>
+        <SoundArray index="What" value="SiegeTank_What"/>
+        <SoundArray index="Yes" value="SiegeTank_Yes"/>
+        <SoundArray index="Attack" value="SiegeTank_Attack"/>
+        <SoundArray index="Pissed" value="SiegeTank_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-TankMode.dds"/>
+        </Wireframe>
+    </CActorMissile>
+    <CActorAction id="SiegeTankAttack2" parent="GenericAttack" effectAttack="90mmCannons2">
+        <LaunchAttachQuery Methods="AMPatternRollingStripe"/>
+        <LaunchAssets Model="SiegeTankAttackLaunch2" Sound="SiegeTank_AttackLaunch"/>
+        <ImpactMap index="None" Model="SiegeTankAttackImpact2" Sound="SiegeTank_AttackImpact"/>
+        <ImpactPhysics Name="90mmCannonImpact" MatchKeys="Basic" Physics="SiegeTankAttackForce"/>
+    </CActorAction>
+    <CActorMissile id="SiegeTankSieged">
+        <Scale value="1.100000"/>
     </CActorMissile>
     <CActorUnit id="Tosh">
         <CustomUnitStatusFrame value=""/>

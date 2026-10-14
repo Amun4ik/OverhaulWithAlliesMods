@@ -76,6 +76,9 @@
             <Cooldown TimeUse="5"/>
         </Cost>
     </CAbilAugment>
+    <CAbilEffectInstant id="ImmortalOverload">
+        <AutoCastValidatorArray index="0" value="CasterLifeNotFull"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="MercMedicHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
@@ -161,6 +164,16 @@
         <Flags index="Transient" value="1"/>
         <BehaviorArray value="DisableAlliedPing"/>
     </CAbilBehavior>
+    <!-- Thor Self Repair -->
+    <CAbilEffectInstant id="SelfRepair">
+        <Cost index="0">
+            <Cooldown TimeUse="120"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="SiegeTankSiegedJumpJet">
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="TitanMechBombardment">
         <Cost>
             <Charge Link="Abil/TitanMechBombardment"/>

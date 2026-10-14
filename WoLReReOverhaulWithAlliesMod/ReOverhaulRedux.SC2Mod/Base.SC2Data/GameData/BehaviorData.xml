@@ -95,6 +95,12 @@
         <PeriodCount value="1"/>
         <PeriodicEffect value="RichGeyserExhausted"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="SelfRepair">
+        <Duration value="30"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="15"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="VoodooShield">
         <Duration value="20"/>
         <Modification>

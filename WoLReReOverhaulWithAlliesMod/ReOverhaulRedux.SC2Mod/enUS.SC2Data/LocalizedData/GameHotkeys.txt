@@ -1,2 +1,4 @@
-﻿Button/Hotkey/TossGrenade=Q
+﻿Button/Hotkey/DeploySpiderMines=W
+Button/Hotkey/NovaXanthosToggleRepairModeOn=R
+Button/Hotkey/TossGrenade=Q
 Button/Hotkey/UltrasonicPulseEnhanced=Q

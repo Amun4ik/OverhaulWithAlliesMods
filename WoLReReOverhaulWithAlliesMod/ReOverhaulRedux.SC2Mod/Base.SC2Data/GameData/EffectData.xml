@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectDamage id="90mmCannons">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeFactor index="Armored" value="0.5"/>
+        <Amount value="30"/>
+    </CEffectDamage>
+    <CEffectDamage id="90mmCannons2" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeFactor index="Armored" value="0.5"/>
+        <Kind value="Ranged"/>
+        <Amount value="24"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="AllyAggressiveModeApply">
         <EditorCategories value=""/>
         <Behavior value="AllyAggressiveMode"/>
@@ -54,6 +66,128 @@
         <EffectArray value="AllyNormalModeRemove2"/>
         <EffectArray value="AllyNormalModeApply"/>
     </CEffectSet>
+    <CEffectDamage id="AutoTurret">
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectSet id="ChainReaction1">
+        <EffectArray index="1" value="ChainReaction1Damage"/>
+        <EffectArray index="2" value="ChainReactionMarker"/>
+        <EffectArray index="3" removed="1"/>
+        <EffectArray index="4" removed="1"/>
+    </CEffectSet>
+    <CEffectDamage id="ChainReaction1Damage">
+        <Amount value="0"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="ChainReaction1Delay">
+        <ValidatorArray index="0" removed="1"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="ChainReaction1SearchForNewTarget">
+        <SearchFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectSet id="ChainReaction2">
+        <!--ValidatorArray value="noMarkers"/-->
+        <ValidatorArray index="0" removed="1"/>
+        <EffectArray index="1" value="ChainReaction2Damage"/>
+        <EffectArray index="2" value="ChainReactionMarker"/>
+        <EffectArray index="3" removed="1"/>
+    </CEffectSet>
+    <CEffectDamage id="ChainReaction2Damage">
+        <ShieldFactor value="0.5"/>
+        <Amount value="4"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="ChainReaction2SearchForNewTarget">
+        <SearchFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectSet id="ChainReaction3">
+        <!--ValidatorArray value="noMarkers"/-->
+        <ValidatorArray index="0" removed="1"/>
+        <EffectArray index="1" value="ChainReaction3Damage"/>
+        <EffectArray index="2" value="ChainReactionMarker"/>
+        <EffectArray index="3" removed="1"/>
+    </CEffectSet>
+    <CEffectDamage id="ChainReaction3Damage">
+        <ShieldFactor value="0.5"/>
+        <Amount value="4"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="ChainReaction3SearchForNewTarget">
+        <SearchFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectSet id="ChainReaction4">
+        <!--ValidatorArray value="noMarkers"/-->
+        <ValidatorArray index="0" removed="1"/>
+        <EffectArray index="1" value="ChainReaction4Damage"/>
+        <EffectArray index="2" value="ChainReactionMarker"/>
+        <EffectArray index="3" removed="1"/>
+    </CEffectSet>
+    <CEffectDamage id="ChainReaction4Damage">
+        <ShieldFactor value="0.5"/>
+        <Amount value="4"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="ChainReaction4SearchForNewTarget">
+        <SearchFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectSet id="ChainReaction5">
+        <!--ValidatorArray value="noMarkers"/-->
+        <ValidatorArray index="0" removed="1"/>
+        <EffectArray index="0" value="ChainReaction5Damage"/>
+        <EffectArray index="1" removed="1"/>
+    </CEffectSet>
+    <CEffectDamage id="ChainReaction5Damage">
+        <ShieldFactor value="0.5"/>
+        <Amount value="4"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonBlast">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeFactor index="Armored" value="0.5"/>
+        <Amount value="60"/>
+        <AreaArray index="0" Radius="0.5"/>
+        <AreaArray index="1" Radius="1"/>
+        <AreaArray index="2" Radius="2"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonDirected">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeFactor index="Armored" value="0.5"/>
+        <Amount value="60"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonDummy">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeFactor index="Armored" value="0.5"/>
+        <Amount value="60"/>
+    </CEffectDamage>
+    <CEffectSet id="Diamondback2">
+        <ValidatorArray value="CasterIsNotHidden"/>
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="DiamondbackBeam2"/>
+        <EffectArray value="ChainReaction1"/>
+    </CEffectSet>
+    <CEffectDamage id="DiamondbackBeam">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeFactor index="Mechanical" value="0.5"/>
+        <AttributeFactor index="Massive" value="0.5"/>
+        <Amount value="40"/>
+    </CEffectDamage>
+    <CEffectDamage id="DiamondbackBeam2" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <ShieldFactor value="0.5"/>
+        <Kind value="Ranged"/>
+        <Amount value="16"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectDamage id="DiamondbackBeam3" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Kind value="Ranged"/>
+        <Amount value="8"/>
+        <Death value="Eviscerate"/>
+    </CEffectDamage>
+    <CEffectSet id="DiamondbackDamageSet2">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="DiamondbackTransientTrackerAB2"/>
+        <EffectArray value="Diamondback2"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="DiamondbackTransientTrackerAB2">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="DiamondbackTransientTracker"/>
+    </CEffectApplyBehavior>
     <CEffectSet id="DummyEffectTarget">
         <TargetLocationType value="UnitOrPoint"/>
     </CEffectSet>
@@ -166,6 +300,13 @@
         <AttributeFactor index="Biological" value="1"/>
         <Amount value="10"/>
     </CEffectDamage>
+    <CEffectDamage id="Kit@90mmCannonsDummy2" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="0"/>
+        <ResponseFlags index="Flee" value="0"/>
+        <Visibility value="Hidden"/>
+        <Flags index="Notification" value="0"/>
+    </CEffectDamage>
     <CEffectCreatePersistent id="LurkerMP">
         <PeriodCount value="11"/>
         <PeriodicOffsetArray value="0,-11,0"/>
@@ -201,7 +342,7 @@
     <CEffectDamage id="MercHellionInfernalFlameThrower">
         <AttributeBonus index="Light" value="0"/>
         <AttributeFactor index="Biological" value="1"/>
-        <Amount value="15"/>
+        <Amount value="16"/>
     </CEffectDamage>
     <CEffectDamage id="MercReaperD8ChargeDamage">
         <Amount value="25"/>
@@ -306,6 +447,11 @@
         <AttributeFactor index="Light" value="1"/>
         <Amount value="5"/>
     </CEffectDamage>
+    <CEffectDamage id="PerditionTurretFlameThrowerDamage">
+        <AttributeBonus index="Light" value="0"/>
+        <AttributeFactor index="Biological" value="1"/>
+        <Amount value="14"/>
+    </CEffectDamage>
     <CEffectDamage id="Predator">
         <Amount value="20"/>
     </CEffectDamage>
@@ -357,6 +503,10 @@
         <EffectArray value="RefineryRichSearch"/>
         <EffectArray value="GeyserExhaustedCheck"/>
     </CEffectSet>
+    <CEffectDamage id="RenegadeLongboltMissileU">
+        <AttributeFactor index="Armored" value="1"/>
+        <Amount value="25"/>
+    </CEffectDamage>
     <CEffectEnumArea id="RetributionFieldSearch">
         <AreaArray index="0" Radius="0.75"/>
     </CEffectEnumArea>
