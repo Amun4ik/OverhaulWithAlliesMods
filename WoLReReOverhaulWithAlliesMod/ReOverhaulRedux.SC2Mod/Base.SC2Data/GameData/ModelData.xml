@@ -221,6 +221,9 @@
         <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
+    <CModel id="RailGunTurret">
+        <Model value="Assets\Terran\dominion-turret-granede.m3"/>
+    </CModel>
     <CModel id="Raynor">
         <Model value="Assets\Units\Terran\MarineRaynorEx1\MarineRaynorEx1.m3"/>
     </CModel>
@@ -246,6 +249,18 @@
     </CModel>
     <CModel id="ReaperPortrait">
         <Model value="Assets\Terran\Reaper_Portrait.m3"/>
+    </CModel>
+    <CModel id="RenegadeMissileTurret">
+        <Model value="Assets\Terran\dominion-engiturret.m3"/>
+    </CModel>
+    <CModel id="RenegadeMissileTurretDeath">
+        <Model value="Assets\Units\Terran\SiegeTank_Merc_Collection_SiegedDeath\SiegeTank_Merc_Collection_SiegedDeath.m3"/>
+    </CModel>
+    <CModel id="RenegadeMissileTurretPlacement">
+        <Model value="Assets\Units\Terran\SiegeTankMercenary\SiegeTankMercenary.m3"/>
+    </CModel>
+    <CModel id="Separatist">
+        <Model value="Assets\Terran\Light_Infantry_Shield.m3"/>
     </CModel>
     <CModel id="StetmannMedicPortrait">
         <Model value="Assets\Terran\DaveSpectrePortrait.m3"/>

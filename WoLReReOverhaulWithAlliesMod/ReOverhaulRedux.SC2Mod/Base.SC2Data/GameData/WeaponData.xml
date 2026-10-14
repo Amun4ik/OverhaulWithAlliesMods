@@ -26,6 +26,10 @@
         <Range value="6"/>
         <Period value="1.6"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="DutchTurretFlameThrower">
+        <DisplayEffect value="LurkerMPDamage"/>
+        <Effect value="LurkerMP"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="Firebat">
         <Period value="0.86"/>
         <DamagePoint value="0.1"/>
@@ -65,6 +69,17 @@
     <CWeaponLegacy id="InfernalFlameThrower">
         <Period value="1.5"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="LongboltMissile2">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <DisplayEffect value="LongboltMissileU"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <RangeSlop value="0"/>
+        <Period value="0.8608"/>
+        <Effect value="LongboltMissile"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="MengskReaperD8Charge">
         <Period value="1.2"/>
     </CWeaponLegacy>
@@ -100,6 +115,18 @@
         <DamagePoint value="0"/>
         <Backswing value="0.0124"/>
         <Effect value="PunisherGrenadesLM2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RailGunTurret">
+        <DisplayEffect value="RenegadeLongboltMissileU"/>
+        <Effect value="RenegadeLongboltMissileLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RenegadeLongboltMissile">
+        <DisplayEffect value="SkyTankMissileBarrageDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="12"/>
+        <Period value="2"/>
+        <Effect value="SkyTankMissileBarrageCP"/>
+        <DisplayAttackCount value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Specter">
         <MinScanRange value="7"/>

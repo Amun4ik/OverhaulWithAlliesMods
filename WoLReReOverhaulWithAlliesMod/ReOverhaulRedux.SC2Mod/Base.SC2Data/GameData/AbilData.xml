@@ -55,6 +55,13 @@
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAINormal" Requirements="AllyNormalModeReq"/>
     </CAbilEffectInstant>
+    <!-- Terran Train Abilities Fix -->
+    <CAbilTrain id="BarracksTrain">
+        <InfoArray index="Train9" Time="35">
+            <Button DefaultButtonFace="TrainHERC" Requirements="HaveAttachedTechLab"/>
+            <Unit value="HERC"/>
+        </InfoArray>
+    </CAbilTrain>
     <CAbilEffectTarget id="BonesHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
