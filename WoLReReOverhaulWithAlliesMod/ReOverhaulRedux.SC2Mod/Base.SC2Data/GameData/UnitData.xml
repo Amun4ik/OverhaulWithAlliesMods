@@ -13,6 +13,7 @@
             <LayoutButtons Face="CommanderControllerIcon1" Type="Submenu" SubmenuCardId="0002" Row="0" Column="0"/>
             <LayoutButtons Face="DisableAllyPing" Type="AbilCmd" AbilCmd="DisableAlliedPings,On" Row="1" Column="4"/>
             <LayoutButtons Face="EnableAllyPing" Type="AbilCmd" AbilCmd="DisableAlliedPings,Off" Row="1" Column="4"/>
+            <LayoutButtons Face="CommanderControllerIcon2" Type="Submenu" SubmenuCardId="0002" Row="0" Column="1"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>

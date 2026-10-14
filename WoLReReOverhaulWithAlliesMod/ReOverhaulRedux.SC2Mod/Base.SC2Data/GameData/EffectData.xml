@@ -306,11 +306,6 @@
         <AttributeFactor index="Light" value="1"/>
         <Amount value="5"/>
     </CEffectDamage>
-    <CEffectDamage id="PerditionTurretFlameThrowerDamage">
-        <AttributeBonus index="Light" value="0"/>
-        <AttributeFactor index="Biological" value="1"/>
-        <Amount value="12"/>
-    </CEffectDamage>
     <CEffectDamage id="Predator">
         <Amount value="20"/>
     </CEffectDamage>

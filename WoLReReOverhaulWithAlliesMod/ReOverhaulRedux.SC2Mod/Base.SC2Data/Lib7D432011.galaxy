@@ -1074,6 +1074,11 @@ void lib7D432011_gt_AIResourcePanelUpdater_Init () {
 //--------------------------------------------------------------------------------------------------
 bool lib7D432011_gt_Disableenablepings_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
+    playergroup autoDAE0D62E_g;
+    int autoDAE0D62E_var;
+    playergroup auto67D5CACF_g;
+    int auto67D5CACF_var;
+
     // Actions
     if (!runActions) {
         return true;
@@ -1083,11 +1088,33 @@ bool lib7D432011_gt_Disableenablepings_Func (bool testConds, bool runActions) {
         UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Prot", false);
         UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Terr", false);
         UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Zerg", false);
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackUnitAlly_Prot", false);
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackUnitAlly_Terr", false);
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackUnitAlly_Zerg", false);
+        auto67D5CACF_g = PlayerGroupAlliance(c_playerGroupAlly, lib7D432011_gv_player);
+        auto67D5CACF_var = -1;
+        while (true) {
+            auto67D5CACF_var = PlayerGroupNextPlayer(auto67D5CACF_g, auto67D5CACF_var);
+            if (auto67D5CACF_var < 0) { break; }
+            PlayerSetAlliance(auto67D5CACF_var, c_allianceIdSeekHelp, lib7D432011_gv_player, false);
+        }
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_7D432011_22A28EA7"));
     }
     else {
         UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Prot", true);
         UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Terr", true);
         UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Zerg", true);
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackUnitAlly_Prot", true);
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackUnitAlly_Terr", true);
+        UISetAlertTypeVisible(PlayerGroupAll(), "AttackUnitAlly_Zerg", true);
+        autoDAE0D62E_g = PlayerGroupAlliance(c_playerGroupAlly, lib7D432011_gv_player);
+        autoDAE0D62E_var = -1;
+        while (true) {
+            autoDAE0D62E_var = PlayerGroupNextPlayer(autoDAE0D62E_g, autoDAE0D62E_var);
+            if (autoDAE0D62E_var < 0) { break; }
+            PlayerSetAlliance(autoDAE0D62E_var, c_allianceIdSeekHelp, lib7D432011_gv_player, true);
+        }
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_7D432011_FAA4D8DC"));
     }
     return true;
 }
@@ -1095,8 +1122,8 @@ bool lib7D432011_gt_Disableenablepings_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib7D432011_gt_Disableenablepings_Init () {
     lib7D432011_gt_Disableenablepings = TriggerCreate("lib7D432011_gt_Disableenablepings_Func");
-    TriggerAddEventUnitAbility(lib7D432011_gt_Disableenablepings, null, AbilityCommand("DisableAlliedPings", 0), c_unitAbilStageAll, false);
-    TriggerAddEventUnitAbility(lib7D432011_gt_Disableenablepings, null, AbilityCommand("DisableAlliedPings", 1), c_unitAbilStageAll, false);
+    TriggerAddEventUnitAbility(lib7D432011_gt_Disableenablepings, null, AbilityCommand("DisableAlliedPings", 0), c_unitAbilStageComplete, false);
+    TriggerAddEventUnitAbility(lib7D432011_gt_Disableenablepings, null, AbilityCommand("DisableAlliedPings", 1), c_unitAbilStageComplete, false);
 }
 
 //--------------------------------------------------------------------------------------------------

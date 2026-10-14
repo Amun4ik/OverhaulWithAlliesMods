@@ -164,45 +164,6 @@
         <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="AnimGroupRemove D"/>
         <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="AnimGroupApply B"/>
     </CActorEventMacro>
-    <CActorUnit id="MissileTurret">
-        <On index="80" Terms="Signal.*.test" Send="Create TurretUnitDeathModel"/>
-        <On index="81" Terms="Signal.*.test" Send="SetOpacity"/>
-        <On index="82" Terms="Upgrade.BlackOps.Add" Send="ModelSwap MissileTurret_BlackOps_COOP"/>
-        <On index="83" Terms="ActorCreation; ValidateUnit HaveBlackOps" Send="ModelSwap MissileTurret_BlackOps_COOP"/>
-        <On index="84" removed="1"/>
-        <On index="85" removed="1"/>
-        <On index="86" removed="1"/>
-    </CActorUnit>
-    <CActorUnit id="MissileTurret2" parent="TerranBuildingEx" unitName="MissileTurret2">
-        <Aliases value="_UnitHuge"/>
-        <Macros value="SnowVisualBuildingMacro"/>
-        <On Terms="Signal.*.test" Send="Create TurretUnitDeathModel"/>
-        <On Terms="Signal.*.test" Send="SetOpacity"/>
-        <On Terms="Upgrade.BlackOps.Add" Send="ModelSwap MissileTurret_BlackOps_COOP"/>
-        <On Terms="ActorCreation; ValidateUnit HaveBlackOps" Send="ModelSwap MissileTurret_BlackOps_COOP"/>
-        <Model value="MissileTurret"/>
-        <CreepHeightClass value="Small"/>
-        <BuildModel value="MissileTurret"/>
-        <DeathArray index="Normal" ModelLink="MissileTurretDeath"/>
-        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="MissileTurret_Explode"/>
-        <DeathCustoms ModelLink="MissileTurretTitaniumHousingDeath" Name="Upgrade"/>
-        <PlacementModel value="MissileTurretPlacement"/>
-        <PlacementSound value="Terran_BuildingPlacementSmall"/>
-        <PlacementActorModel value="MissileTurretSkinnablePlacementModel"/>
-        <PortraitModel value="MissileTurretPortrait"/>
-        <BarOffset value="90"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\Wireframe-Terran-MissileTurret.dds"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
-        <SoundArray index="Ready" value="MissileTurret_Ready"/>
-        <SoundArray index="What" value="MissileTurret_What"/>
-        <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\Wireframe-Terran-MissileTurret.dds"/>
-        </Wireframe>
-    </CActorUnit>
     <!-- Heroes -->
     <CActorUnit id="Raynor01">
         <On Terms="Abil.ExperimentalPlasmaGun.SourceCastStart" Send="AnimPlay {} Attack"/>
@@ -230,13 +191,6 @@
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Reaper_Merc"/>
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Reaper_Merc"/>
     </CActorMissile>
-    <CActorAction id="RenegadeMissileTurretAttack">
-        <LaunchAttachQuery Fallback="Weapon"/>
-    </CActorAction>
-    <CActorAction id="SkyTankMissileBarrageMissileAttack">
-        <!--On Terms="Effect.SkyTankMissileBarrageDamage.Start; At Caster" Send="ActionDamage"/-->
-        <LaunchAttachQuery Methods="AMRandomUniform AMFilterWeapon" Fallback="Weapon"/>
-    </CActorAction>
     <CActorUnit id="Tosh">
         <CustomUnitStatusFrame value=""/>
     </CActorUnit>

@@ -68,6 +68,7 @@ Param/Expression/lib_7D432011_F534FC22=~A~'s Vespene
 Param/Expression/lib_7D432011_FA3FD038=~C~~A~/~B~
 Param/Value/lib_7D432011_0752C8BD=(DEBUG) Rebels not detected
 Param/Value/lib_7D432011_0DAF6DE7='s Minerals
+Param/Value/lib_7D432011_22A28EA7=(DEBUG) Disabling pings
 Param/Value/lib_7D432011_40CFB344=<s val="AllianceHeader">Command Allies</s><n/><n/>Use "Place Beacon" to set the target area your allies will send their units to.<n/><n/>The Strategy menu allows you to decide whether your allies will send their units at the enemy or stay home and defend.
 Param/Value/lib_7D432011_5DF2BD34=Attack Path
 Param/Value/lib_7D432011_667DFCA0=(DEBUG) Tychus set to normal
@@ -78,6 +79,7 @@ Param/Value/lib_7D432011_C284B794='s Minerals
 Param/Value/lib_7D432011_C95425DE=<c val="FF0000">
 Param/Value/lib_7D432011_CDF1E372=(DEBUG) Tychus set to defensive
 Param/Value/lib_7D432011_F4E42484=<c val="FF0000">
+Param/Value/lib_7D432011_FAA4D8DC=(DEBUG) Enabling pings
 Unit/Name/AlliedAIOrderPanel=Allies
 Unit/Name/DominionKillTeam=Red Raven
 Unit/Name/FlamingBetty=Ultra-Sonic Turret
