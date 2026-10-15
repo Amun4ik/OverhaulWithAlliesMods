@@ -38,6 +38,10 @@
         <Find value="1"/>
         <Value value="HaveBlackOps24"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBlackOps242">
+        <Find value="1"/>
+        <Value value="HaveBlackOps242"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveBlackOps25">
         <Find value="1"/>
         <Value value="HaveBlackOps23"/>
@@ -61,6 +65,10 @@
         <Find value="1"/>
         <Value value="HaveBlackOps2"/>
     </CValidatorPlayerRequirement>
+    <CValidatorLocationCompareRange id="TornadoMaxDistance">
+        <Range value="7"/>
+        <!--Pathing value="1"/-->
+    </CValidatorLocationCompareRange>
     <CValidatorUnitFilters id="TornadoMissileFilters">
         <Filters value="Ground,Visible;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CValidatorUnitFilters>

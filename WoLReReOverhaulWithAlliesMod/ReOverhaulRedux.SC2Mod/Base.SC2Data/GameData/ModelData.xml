@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="AutoTurret2" parent="AutoTurretBase">
+        <Model value="Assets\Buildings\Terran\AutoTurret_Umojan\AutoTurret_Umojan.m3"/>
+    </CModel>
+    <CModel id="AutoTurret22" parent="AutoTurretBase">
+        <Model value="Assets\COOP\Tychus\Buildings\AutoTurret_Heavens_COOP_Warhound\AutoTurret_Heavens_COOP_Warhound.m3"/>
+    </CModel>
     <CModel id="BarrageModel">
         <Model value="Assets\Effects\Terran\Nova_PulseGrenade\Nova_PulseGrenade.m3"/>
+    </CModel>
+    <CModel id="Bunker2" parent="BunkerBase">
+        <Model value="Assets\Buildings\Terran\BunkerSCBW\BunkerSCBW.m3"/>
+    </CModel>
+    <CModel id="Bunker22" parent="BunkerBase">
+        <Model value="Assets\COOP\Mengsk\Buildings\SupplyBunker_Mengsk_COOP_Upgraded\SupplyBunker_Mengsk_COOP_Upgraded.m3"/>
+    </CModel>
+    <CModel id="CommandCenter2" parent="CommandCenterBase">
+        <Model value="Assets\Buildings\Terran\CommandCenter_Remastered\CommandCenter_Remastered.m3"/>
+    </CModel>
+    <CModel id="CommandCenter22" parent="CommandCenterBase">
+        <Model value="Assets\Units\Terran\CommandCenter_HornerHan_Coop\CommandCenter_HornerHan_Coop.m3"/>
     </CModel>
     <CModel id="Cyclone">
         <Model value="Assets\Terran\Unit_Eyeser_Cyclone.m3"/>
@@ -16,9 +34,6 @@
     </CModel>
     <CModel id="DevilDog">
         <Model value="Assets\COOP\Tychus\Units\Firebat_Heavens_COOP\Firebat_Heavens_COOP.m3"/>
-    </CModel>
-    <CModel id="Diamondback">
-        <Model value="Assets\Terran\NC_Diamondback_BlueAttack.m3"/>
     </CModel>
     <CModel id="Diamondback2" parent="Unit" Race="Terran">
         <Model value="Assets\Terran\Terran_TeslaTank.m3"/>
@@ -64,13 +79,57 @@
         <TipabilityWidth value="0.800000"/>
         <UnitGlossaryCamera value="Star2CameraMid07"/>
     </CModel>
+    <CModel id="Diamondback4" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\Diamondback\Diamondback.m3"/>
+        <Events>
+            <Anim value="Stand,Morph,End"/>
+            <Name value="DiamondbackCapture"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Diamondback_Capture"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionRadius value="0.866400"/>
+        <ShadowRadius value="0.866400"/>
+        <TechPurchaseCamera value="TechPurchaseDiamondback"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.000000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
+    <CModel id="Diamondback42" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\Diamondback\Diamondback.m3"/>
+        <Events>
+            <Anim value="Stand,Morph,End"/>
+            <Name value="DiamondbackCapture"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Diamondback_Capture"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionRadius value="0.866400"/>
+        <ShadowRadius value="0.866400"/>
+        <TechPurchaseCamera value="TechPurchaseDiamondback"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.000000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
     <CModel id="DiamondbackAttackBeam2" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\ArchonBeam\ArchonBeam.m3"/>
         <LowQualityModel value="DiamondbackAttackBeamLow"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="DiamondbackAttackBeam3" parent="PersistentSpellFX">
-        <Model value="Assets\Effects\Terran\ArchangelAttackBeam\ArchangelAttackBeam.m3"/>
+        <Model value="Assets\Effects\Terran\GhostSnipeBeam\GhostSnipeBeam.m3"/>
         <LowQualityModel value="DiamondbackAttackBeamLow"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
@@ -147,6 +206,98 @@
     <CModel id="Ghost_Umojan_Portrait">
         <Model value="Assets\UED Portraits\Ghost_Mercenary_Portrait.m3"/>
     </CModel>
+    <CModel id="Goliath2" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\GoliathMercenary\GoliathMercenary.m3"/>
+        <AttachProps Id="Ref_TurretZ">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="SetB" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="SetB" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="SetB" value="4"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="SetB" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 06">
+            <Keys index="SetB" value="3"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 07">
+            <Keys index="SetB" value="5"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh09"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+        <SelectionRadius value="0.999700"/>
+        <ShadowRadius value="0.999700"/>
+        <TechPurchaseCamera value="TechPurchaseGoliath"/>
+        <TextureDeclares Prefix="Goliath_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+        </TextureDeclares>
+        <UnitGlossaryCamera value="Star2CameraHigh09"/>
+        <Variations Probability="1">
+            <TextureExpressionsForEditor Slot="main" Expression="RequireAll diffuse"/>
+        </Variations>
+    </CModel>
+    <CModel id="Goliath22" parent="Unit" Race="Terran">
+        <Model value="Assets\Terran\Junker_Goliath.m3"/>
+        <AttachProps Id="Ref_TurretZ">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="SetB" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="SetB" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="SetB" value="4"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="SetB" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 06">
+            <Keys index="SetB" value="3"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 07">
+            <Keys index="SetB" value="5"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh09"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+        <SelectionRadius value="0.999700"/>
+        <ShadowRadius value="0.999700"/>
+        <TechPurchaseCamera value="TechPurchaseGoliath"/>
+        <TextureDeclares Prefix="Goliath_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+        </TextureDeclares>
+        <UnitGlossaryCamera value="Star2CameraHigh09"/>
+        <Variations Probability="1">
+            <TextureExpressionsForEditor Slot="main" Expression="RequireAll diffuse"/>
+        </Variations>
+    </CModel>
     <CModel id="HERC">
         <Model value="Assets\Terran\HERC_Junker_Collection.m3"/>
     </CModel>
@@ -182,6 +333,15 @@
     <CModel id="HammerSecurity">
         <Model value="Assets\COOP\Tychus\Units\Marauder_Heavens_COOP\Marauder_Heavens_COOP.m3"/>
     </CModel>
+    <CModel id="Hellion2" parent="HellionBase">
+        <Model value="Assets\Terran\Unit_Eyeser_Merc_Hellion.m3"/>
+    </CModel>
+    <CModel id="HellionTank2" parent="HellionHellbatBase">
+        <Model value="Assets\Terran\Unit_Eyeser_Merc_Hellbat.m3"/>
+    </CModel>
+    <CModel id="HellionTankMorph2" parent="HellionMorphBase">
+        <Model value="Assets\Terran\Unit_Eyeser_Merc_HH_Morph.m3"/>
+    </CModel>
     <CModel id="HercPortrait2" parent="Portrait" Race="Protoss">
         <Model value="Assets\Portraits\Terran\OdinPortrait\OdinPortrait.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -190,6 +350,22 @@
     </CModel>
     <CModel id="KerriganEnergyAttack">
         <Model value="Assets\Effects\Protoss\ArchonBeam\ArchonBeam.m3"/>
+    </CModel>
+    <CModel id="KorhalPalaceGateAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\GoliathAirMissileImpact\GoliathAirMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.300000,1.300000,1.300000"/>
+        <ScaleMin value="1.300000,1.300000,1.300000"/>
+    </CModel>
+    <CModel id="KorhalPalaceTurret2" parent="Building" Race="Terran">
+        <Model value="Assets\Terran\dominion-turret-mortar.m3"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="0.750000"/>
+        <ShadowRadius value="0.750000"/>
+        <SquibTypeDefault value="Metal"/>
     </CModel>
     <CModel id="MarauderKillSquadPortrait">
         <Model value="Assets\Terran\Marauder_Viper_Portrait.m3"/>
@@ -299,11 +475,26 @@
     <CModel id="MengskReaper">
         <Model value="Assets\Terran\Reaper.m3"/>
     </CModel>
+    <CModel id="MercHellion">
+        <Model value="Assets\Units\Terran\HellionHellbat_Junkers_Deluxe_Collection\HellionHellbat_Junkers_Deluxe_Collection.m3"/>
+    </CModel>
+    <CModel id="MercHellionDeath">
+        <Model value="Assets\Units\Terran\HellionHellbat_Junkers_Deluxe_Collection_Death\HellionHellbat_Junkers_Deluxe_Collection_Death.m3"/>
+    </CModel>
     <CModel id="MercMedic">
         <Model value="Assets\COOP\Tychus\Units\Medic_Heavens_COOP\Medic_Heavens_COOP.m3"/>
     </CModel>
     <CModel id="MercReaper">
         <Model value="Assets\COOP\Tychus\Units\Reaper_Heavens_COOP\Reaper_Heavens_COOP.m3"/>
+    </CModel>
+    <CModel id="MissileTurret2" parent="MissileTurretBase">
+        <Model value="Assets\Units\Terran\MissileTurret_HornerHan_COOP\MissileTurret_HornerHan_COOP.m3"/>
+    </CModel>
+    <CModel id="MissileTurretDeath2" parent="MissileTurretDeathBase">
+        <Model value="Assets\Buildings\Terran\MissileTurretDeathEx1\MissileTurretDeathEx1.m3"/>
+    </CModel>
+    <CModel id="MissileTurret_BlackOps_COOP">
+        <Model value="Assets\Terran\Building_Eyeser_Nova_Missileturret_Upgrade.m3"/>
     </CModel>
     <CModel id="NovaGunTurretCloakField">
         <Model value="Assets\Terran\dominion-engiturret.m3"/>
@@ -313,8 +504,7 @@
         <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="RailGunTurret">
-        <Model value="Assets\Terran\dominion-turret-granede.m3"/>
-        <AttachProps Id="Ref_TurretZ"/>
+        <Model value="Assets\Buildings\Terran\GrenadeTurret\GrenadeTurret.m3"/>
     </CModel>
     <CModel id="Raynor">
         <Model value="Assets\Units\Terran\MarineRaynorEx1\MarineRaynorEx1.m3"/>
@@ -345,6 +535,7 @@
     <CModel id="RenegadeLongboltMissileWeapon">
         <ScaleMax value="1.200000,1.200000,1.200000"/>
         <ScaleMin value="1.200000,1.200000,1.200000"/>
+        <Model value="Assets\Effects\Terran\LockDownMissile\LockDownMissile.m3"/>
     </CModel>
     <CModel id="RenegadeMissileTurret">
         <Model value="Assets\Terran\Terran_TeslaCoil.m3"/>
@@ -353,10 +544,41 @@
     <CModel id="RenegadeMissileTurretPlacement">
         <Model value="Assets\Terran\Terran_TeslaCoil_Placement.m3"/>
     </CModel>
+    <CModel id="SCV2" parent="SCVBase">
+        <Model value="Assets\Units\Terran\SCVSCBW\SCVSCBW.m3"/>
+    </CModel>
+    <CModel id="SiegeBreaker">
+        <Model value="Assets\Units\Terran\Tank_Commando_Collection\Tank_Commando_Collection.m3"/>
+    </CModel>
+    <CModel id="SiegeBreakerSieged">
+        <Model value="Assets\Units\Terran\SiegeTank_Commando_Collection\SiegeTank_Commando_Collection.m3"/>
+    </CModel>
+    <CModel id="SiegeBreakerSiegedMorph">
+        <Model value="Assets\Units\Terran\SiegeTankMorph_Commando_Collection\SiegeTankMorph_Commando_Collection.m3"/>
+    </CModel>
     <CModel id="SiegeTank2" parent="SiegeTankBase">
         <Model value="Assets\Terran\Predator_Tank.m3"/>
     </CModel>
+    <CModel id="SiegeTank3" parent="SiegeTankBase">
+        <Model value="Assets\Terran\Waffentrager.m3"/>
+    </CModel>
+    <CModel id="SiegeTank4" parent="SiegeTankBase">
+        <Model value="Assets\Terran\KMC SiegeTank Tank.m3"/>
+    </CModel>
+    <CModel id="SiegeTank42" parent="SiegeTankBase">
+        <Model value="Assets\Units\Terran\SiegeTankSCBW\SiegeTankSCBW.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
+    <CModel id="SiegeTank43" parent="SiegeTankBase">
+        <Model value="Assets\Units\Terran\TankMercenary\TankMercenary.m3"/>
+    </CModel>
     <CModel id="SiegeTankAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>
+        <LowQualityModel value="SiegeTankAttackImpactLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SiegeTankAttackImpact3" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>
         <LowQualityModel value="SiegeTankAttackImpactLow"/>
         <EditorCategories value="Race:Terran"/>
@@ -366,7 +588,15 @@
         <LowQualityModel value="SiegeTankAttackLaunchLow"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
+    <CModel id="SiegeTankAttackLaunch3" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\TankWeaponLaunch\TankWeaponLaunch.m3"/>
+        <LowQualityModel value="SiegeTankAttackLaunchLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
     <CModel id="SiegeTankDeath2" parent="SiegeTankDeathBase">
+        <Model value="Assets\Units\Terran\SiegeTankDeathEx1\SiegeTankDeathEx1.m3"/>
+    </CModel>
+    <CModel id="SiegeTankDeath3" parent="SiegeTankDeathBase">
         <Model value="Assets\Units\Terran\SiegeTankDeathEx1\SiegeTankDeathEx1.m3"/>
     </CModel>
     <CModel id="SiegeTankPortrait2" parent="SiegeTankPortraitBase">
@@ -375,9 +605,50 @@
         <Image value="Assets\Textures\herculesportrait_static.dds"/>
         <Lighting value="SiegeTankPortrait"/>
     </CModel>
+    <CModel id="SiegeTankPortrait3" parent="SiegeTankPortraitBase">
+        <Model value="Assets\Portraits\Terran\SiegeTankPortrait\SiegeTankPortrait.m3"/>
+        <Image value="Assets\Textures\SiegeTankPortrait_Static.dds"/>
+        <Lighting value="SiegeTankPortrait"/>
+    </CModel>
+    <CModel id="SiegeTankSieged2" parent="SiegeTankSiegedBase">
+        <Model value="Assets\Units\Terran\SiegeTankSCBW\SiegeTankSCBW@Sieged.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
+    <CModel id="SiegeTankSieged22" parent="SiegeTankSiegedBase">
+        <Model value="Assets\Terran\KMC SiegeTank Siege.m3"/>
+    </CModel>
+    <CModel id="SiegeTankSieged222" parent="SiegeTankSiegedBase">
+        <Model value="Assets\Units\Terran\SiegeTankMercenary\SiegeTankMercenary.m3"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedAttackDirectedImpact">
+        <Model value="Assets\Effects\Terran\SiegeTankWeaponImpact\SiegeTankWeaponImpact.m3"/>
+    </CModel>
     <CModel id="SiegeTankSiegedAttackImpact">
         <ScaleMax value="1.200000,1.200000,1.200000"/>
         <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\SiegeTankWeaponImpact\SiegeTankWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedMorph2" parent="SiegeTankMorphBase">
+        <Model value="Assets\Terran\KMC SiegeTank Morph.m3"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedMorph22" parent="SiegeTankMorphBase">
+        <Model value="Assets\Units\Terran\SiegeTankSCBW\SiegeTankSCBW@Morph.m3"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedMorph23" parent="SiegeTankMorphBase">
+        <Model value="Assets\Units\Terran\SiegeTankMercenaryMorph\SiegeTankMercenaryMorph.m3"/>
+    </CModel>
+    <CModel id="SkyTankMissileBarrageMissileWarning">
+        <ScaleMax value="7.500000,7.500000,7.500000"/>
+        <ScaleMin value="7.500000,7.500000,7.500000"/>
+    </CModel>
+    <CModel id="SpartanCompany">
+        <Model value="Assets\UED Units\UED_Goliath_V1.m3"/>
     </CModel>
     <CModel id="StetmannMedicPortrait">
         <Model value="Assets\Terran\DaveSpectrePortrait.m3"/>
@@ -439,11 +710,47 @@
         <TipabilityWidth value="0.400000"/>
         <UnitGlossaryCamera value="Star2CameraMid07"/>
     </CModel>
+    <CModel id="Vulture3" parent="Unit">
+        <Model value="Assets\Units\Terran\Vulture_Ghost\Vulture_Ghost.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.722000"/>
+        <ShadowRadius value="0.722000"/>
+        <TechPurchaseCamera value="TechPurchaseVehicle"/>
+        <Tipability value="1.000000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
+    <CModel id="Vulture32" parent="Unit">
+        <Model value="Assets\Units\Terran\VultureSCBW\VultureSCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.722000"/>
+        <ShadowRadius value="0.722000"/>
+        <TechPurchaseCamera value="TechPurchaseVehicle"/>
+        <Tipability value="1.000000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
     <CModel id="VultureDeath2" parent="UnitDeath" Race="Terran">
         <Model value="Assets\Effects\Terran\Nova_PulseGrenade\Nova_PulseGrenade.m3"/>
         <LowQualityModel value="TerranMediumUnitDeathLow"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="VultureDeath3" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\Vulture_Ghost_Death\Vulture_Ghost_Death.m3"/>
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
     </CModel>
     <CModel id="VulturePortrait2" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\UED Portraits\UED_Goliath_Portrait2.m3"/>
@@ -453,5 +760,14 @@
     </CModel>
     <CModel id="WarPig">
         <Model value="Assets\Terran\Marine_Cerberus.m3"/>
+    </CModel>
+    <CModel id="WidowMine2" parent="WidowMineBase">
+        <Model value="Assets\Units\Terran\WidowMine_CovertOps_Collection\WidowMine_CovertOps_Collection.m3"/>
+    </CModel>
+    <CModel id="WidowMine22" parent="WidowMineBase">
+        <Model value="Assets\Units\Terran\WidowMine_Silver\WidowMine_Silver.m3"/>
+    </CModel>
+    <CModel id="WidowMine222" parent="WidowMineBase">
+        <Model value="Assets\Units\Terran\WidowMine_Junker_Collection\WidowMine_Junker_Collection.m3"/>
     </CModel>
 </Catalog>

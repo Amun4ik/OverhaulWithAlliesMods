@@ -35,6 +35,71 @@
             <Image value="Assets\Textures\black.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorUnit id="AutoTurret">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap AutoTurret_CovertOps_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap AutoTurret_CovertOps_Collection"/>
+        <On Terms="Upgrade.Mercenarys.Add" Send="ModelSwap AutoTurret22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps23" Send="ModelSwap AutoTurret22"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap AutoTurret2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap AutoTurret2"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap AutoTurret_Junker_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap AutoTurret_Junker_Collection"/>
+    </CActorUnit>
+    <!-- Bunker Upgraded Model for Lab Research Only -->
+    <CActorUnit id="Bunker">
+        <Remove index="0" removed="1"/>
+        <Remove index="1" removed="1"/>
+        <Remove index="2" removed="1"/>
+        <Remove index="3" removed="1"/>
+        <Remove index="4" removed="1"/>
+        <Remove index="5" removed="1"/>
+        <On index="82" Terms="Upgrade; ValidateUnit HasCargo"/>
+        <On index="83" Terms="UnitBirth.Bunker; ValidateUnit" Send="ModelSwap"/>
+        <On index="84" Terms="Upgrade.NeosteelFrame; ValidateUnit" Send="ModelSwap"/>
+        <On index="95" Send="ModelSwap"/>
+        <On index="105" Send="ModelSwap"/>
+        <On index="106" Send="ModelSwap"/>
+        <On index="107" Terms="UnitDeathCustomize; ValidateUnit"/>
+        <On index="110" Terms="Upgrade.NeoSteelFrame" Send="ModelSwap"/>
+        <On index="111" Terms="UnitBirth.Bunker; ValidateUnit" Send="ModelSwap"/>
+        <On index="112" Terms="UnitDeathCustomize; ValidateUnit"/>
+        <On index="113" Terms="Upgrade.TychusBoys2.Add; ValidateUnit HasCargo"/>
+        <On index="114" Terms="Upgrade.TychusBoys2.Add; ValidateUnit NotDeadOrConstruction"/>
+        <On index="115" Terms="UnitBirth.Bunker; ValidateUnit HaveBlackOps242"/>
+        <On index="116" Terms="Upgrade.TychusBoys.Add; ValidateUnit HasCargo" Send="AnimGroupApply Stand,Work Stand,Work,Start Stand,Work,End"/>
+        <On Terms="Upgrade.TychusBoys.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap BunkerUpgrade"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps24" Send="ModelSwap BunkerUpgrade"/>
+        <On Terms="Upgrade.RebellionForces.Add; ValidateUnit HasCargo" Send="AnimGroupApply Stand,Work Stand,Work,Start Stand,Work,End"/>
+        <On Terms="Upgrade.RebellionForces.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap Bunker2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap Bunker2"/>
+        <On Terms="Upgrade.Mercenarys.Add; ValidateUnit HasCargo" Send="AnimGroupApply Stand,Work Stand,Work,Start Stand,Work,End"/>
+        <On Terms="Upgrade.Mercenarys.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap Bunker_CovertOps"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps23" Send="ModelSwap Bunker_CovertOps"/>
+        <On Terms="Upgrade.DominionForces.Add; ValidateUnit HasCargo" Send="AnimGroupApply Stand,Work Stand,Work,Start Stand,Work,End"/>
+        <On Terms="Upgrade.DominionForces.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap Bunker22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Bunker22"/>
+    </CActorUnit>
+    <CActorUnit id="CommandCenter">
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap CommandCenter2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap CommandCenter2"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap CommandCenter22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap CommandCenter22"/>
+    </CActorUnit>
+    <CActorUnit id="Cyclone">
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Cyclone_Junker_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Cyclone_Junker_Collection"/>
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Cyclone_CovertOps_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Cyclone_CovertOps_Collection"/>
+    </CActorUnit>
+    <!-- Diamondback attack animation fix -->
+    <CActorUnit id="Diamondback">
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap Diamondback4"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap Diamondback4"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap Diamondback4"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap Diamondback4"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Diamondback42"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Diamondback42"/>
+    </CActorUnit>
     <CActorUnit id="Diamondback2" parent="GenericUnitStandard" unitName="Diamondback2">
         <Aliases value="_UnitLarge"/>
         <Macros value="UnloadDropAnim"/>
@@ -163,6 +228,12 @@
     <CActorSound id="Ghost_Death">
         <On Terms="UnitDeath.RaynorCommando; PassChance 100.000000" Send="Create"/>
     </CActorSound>
+    <CActorMissile id="Goliath">
+        <On Terms="Upgrade.TychusBoys.Add" Send="ModelSwap Goliath22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps24" Send="ModelSwap Goliath22"/>
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Goliath2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Goliath2"/>
+    </CActorMissile>
     <CActorUnit id="HERC2" parent="GenericUnitStandard" unitName="HERC2">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
@@ -205,6 +276,51 @@
             <Image value="Assets\Textures\wireframe-terran-herc.dds"/>
         </Wireframe>
     </CActorUnit>
+    <!-- Hellion Weapon Range Fix -->
+    <CActorUnit id="Hellion">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Hellion2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Hellion2"/>
+    </CActorUnit>
+    <!-- Nuke                                                                                    -->
+    <CActorUnit id="HellionMorphModel">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap HellionTankMorph2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap HellionTankMorph2"/>
+    </CActorUnit>
+    <CActorUnit id="HellionTank">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap HellionTank2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap HellionTank2"/>
+    </CActorUnit>
+    <CActorUnit id="HellionTankMorphModel">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap HellionTankMorph2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap HellionTankMorph2"/>
+    </CActorUnit>
+    <CActorAction id="KorhalPalaceGateAttack2" parent="GenericAttack" effectAttack="KorhalPalaceGateDamage2">
+        <LaunchAttachQuery Methods="AMFilterWeapon"/>
+        <ImpactMap index="None" Model="KorhalPalaceGateAttackImpact2" Sound="VikingFighter_AttackImpact"/>
+    </CActorAction>
+    <CActorUnit id="KorhalPalaceTurret2" parent="TerranBuilding" unitName="KorhalPalaceTurret2">
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimPlay Attack Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimPlay Attack Attack,Inferior"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="MissileTurretDeath2" SoundLink="MissileTurret_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="MissileTurret_Explode"/>
+        <PlacementModel value="MissileTurretPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacementSmall"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <BarOffset value="120"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-MissileTurret.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Ready" value="MissileTurret_What"/>
+        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-MissileTurret.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorModel id="LurkerMPAttackSpikeEx2">
         <Model value="ScarabAttackImpact"/>
     </CActorModel>
@@ -235,6 +351,9 @@
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps25" Send="ModelSwap Medic2"/>
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Medic22"/>
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Medic22"/>
+    </CActorUnit>
+    <CActorUnit id="MercHellion">
+        <Scale value="1.100000"/>
     </CActorUnit>
     <CActorUnit id="MineralField">
         <StatusBarFlags index="Workers" value="0"/>
@@ -268,6 +387,19 @@
         <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="AnimGroupRemove D"/>
         <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="AnimGroupApply B"/>
     </CActorEventMacro>
+    <CActorUnit id="MissileTurret">
+        <On index="80" Terms="ActorCreation; ValidateUnit" Send="ModelSwap"/>
+        <On index="81" Terms="Upgrade.ReinforcedSuperstructure" Send="ModelSwap"/>
+        <On index="82" Terms="UnitDeathCustomize; ValidateUnit"/>
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap MissileTurretTitaniumHousing"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap MissileTurretTitaniumHousing"/>
+        <On Terms="Upgrade.Mercenarys.Add" Send="ModelSwap MissileTurret_CovertOps"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps23" Send="ModelSwap MissileTurret_CovertOps"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap MissileTurret2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap MissileTurret2"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap MissileTurret2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap MissileTurret2"/>
+    </CActorUnit>
     <!-- Heroes -->
     <CActorUnit id="Raynor01">
         <On Terms="Abil.ExperimentalPlasmaGun.SourceCastStart" Send="AnimPlay {} Attack"/>
@@ -294,6 +426,55 @@
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps25" Send="ModelSwap Reaper_Junker"/>
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Reaper_Merc"/>
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Reaper_Merc"/>
+    </CActorMissile>
+    <CActorUnit id="SCV">
+        <On index="102" Send="ModelSwap"/>
+        <On index="103" Send="ModelSwap"/>
+        <On index="104" Send="ModelSwap"/>
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap SCV_Merc_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap SCV_Merc_Collection"/>
+        <On Terms="Upgrade.Mercenarys.Add" Send="ModelSwap SCV_Umojan"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps23" Send="ModelSwap SCV_Umojan"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap SCV2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap SCV2"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap SCV_Junker_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap SCV_Junker_Collection"/>
+    </CActorUnit>
+    <CActorUnit id="SiegeBreaker">
+        <Scale value="1.100000"/>
+    </CActorUnit>
+    <CActorUnit id="SiegeBreakerSiegeModeMorphModel">
+        <Scale value="1.100000"/>
+    </CActorUnit>
+    <CActorUnit id="SiegeBreakerSieged">
+        <Scale value="1.100000"/>
+    </CActorUnit>
+    <CActorUnit id="SiegeBreakerTankModeMorphModel">
+        <Scale value="1.100000"/>
+    </CActorUnit>
+    <CActorMissile id="SiegeModeMorphModel">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap SiegeTankMorph_BlackOps"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap SiegeTankMorph_BlackOps"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap SiegeTankSiegedMorph2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap SiegeTankSiegedMorph2"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap SiegeTankSiegedMorph22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap SiegeTankSiegedMorph22"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap SiegeTank_Junker_Collection_Morph"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap SiegeTank_Junker_Collection_Morph"/>
+        <On Terms="Upgrade.TychusBoys.Add" Send="ModelSwap SiegeTankMorph_BlackOps"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps24" Send="ModelSwap SiegeTankMorph_BlackOps"/>
+    </CActorMissile>
+    <CActorMissile id="SiegeTank">
+        <On Terms="Upgrade.TychusBoys.Add" Send="ModelSwap SiegeTank_BlackOps_Tank"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps24" Send="ModelSwap SiegeTank_BlackOps_Tank"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap SiegeTank4"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap SiegeTank4"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap SiegeTank_Junker_Collection_Tank"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap SiegeTank_Junker_Collection_Tank"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap SiegeTank42"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap SiegeTank42"/>
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap SiegeTank43"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap SiegeTank43"/>
     </CActorMissile>
     <CActorMissile id="SiegeTank2" parent="GenericUnitMorph" unitName="SiegeTank2">
         <Macros value="UnloadDropAnim"/>
@@ -390,15 +571,169 @@
             <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-TankMode.dds"/>
         </Wireframe>
     </CActorMissile>
+    <CActorMissile id="SiegeTank3" parent="GenericUnitMorph" unitName="SiegeTank3">
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <Macros value="SnowVisualUnitMacro"/>
+        <Inherits index="ModelMaterials" value="1"/>
+        <AcceptedTransfers index="ModelMaterials" value="1"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_Land"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <On Terms="Upgrade.BlackOps.Add" Send="ModelSwap SiegeTank_BlackOps_Tank"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps" Send="ModelSwap SiegeTank_BlackOps_Tank"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveBlackOps" Send="DeathCustomize BlackOps"/>
+        <On Terms="Effect.SiegeTankJumpJetCreateCP.Start" Send="AnimPlay JumpStart Jump,Start"/>
+        <On Terms="Effect.SiegeTankJumpJetCreateCP.Start" Send="TimerSet 0.500000 JumpStart"/>
+        <On Terms="TimerExpired; TimerName JumpStart" Send="AnimClear JumpStart"/>
+        <On Terms="TimerExpired; TimerName JumpStart" Send="AnimPlay Jump Jump"/>
+        <On Terms="MotionPhaseStart; MotionPhase 2" Send="AnimClear Jump"/>
+        <On Terms="MotionPhaseStart; MotionPhase 2" Send="AnimPlay JumpEnd Jump,End 0 -1.000000 -1.000000 4.000000 AsDuration"/>
+        <On Terms="UnitMovementUpdate; AnimPlaying JumpEnd" Send="AnimClear JumpEnd"/>
+        <On Terms="WeaponStart.*.AttackStart; AnimPlaying JumpEnd" Send="AnimClear JumpEnd"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_BlackOps_JumpJets_Land"/>
+        <Scale value="1.150000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SiegeTankDeath3" SoundLink="SiegeTank_Explode"/>
+        <DeathCustoms ModelLink="TerranLargeUnitDeathLow" Name="AntiGravTerran"/>
+        <DeathCustoms ActorModel="SiegeTankDeathRagdoll" ModelLink="SiegeTankDeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathCustoms ModelLink="SiegeTank_BlackOps_Death" Name="BlackOps"/>
+        <DeathCustomData Name="RagdollBasic"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="SiegeTankPortrait3"/>
+        <StandAnimTurnTime value="3.33"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSiegeTank"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="1"/>
+        <AbilSoundArray AbilCmd="SiegeMode,Execute" Sound="SiegeTank_SiegeModeVO"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <ErrorArray Error="CantSeeBuildLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantSeeLandLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantBuildLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantLandLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CouldntReachTarget" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantSeeBuildLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantSeeLandLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantBuildLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantLandLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CouldntReachTarget" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-TankMode.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="SiegeTank_Ready"/>
+        <SoundArray index="Help" value="SiegeTank_Help"/>
+        <SoundArray index="What" value="SiegeTank_What"/>
+        <SoundArray index="Yes" value="SiegeTank_Yes"/>
+        <SoundArray index="Attack" value="SiegeTank_Attack"/>
+        <SoundArray index="Pissed" value="SiegeTank_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-TankMode.dds"/>
+        </Wireframe>
+    </CActorMissile>
     <CActorAction id="SiegeTankAttack2" parent="GenericAttack" effectAttack="90mmCannons2">
         <LaunchAttachQuery Methods="AMPatternRollingStripe"/>
         <LaunchAssets Model="SiegeTankAttackLaunch2" Sound="SiegeTank_AttackLaunch"/>
         <ImpactMap index="None" Model="SiegeTankAttackImpact2" Sound="SiegeTank_AttackImpact"/>
         <ImpactPhysics Name="90mmCannonImpact" MatchKeys="Basic" Physics="SiegeTankAttackForce"/>
     </CActorAction>
+    <CActorAction id="SiegeTankAttack3" parent="GenericAttack" effectAttack="90mmCannons3">
+        <LaunchAttachQuery Methods="AMPatternRollingStripe"/>
+        <LaunchAssets Model="SiegeTankAttackLaunch3" Sound="SiegeTank_AttackLaunch"/>
+        <ImpactMap index="None" Model="SiegeTankAttackImpact3" Sound="SiegeTank_AttackImpact"/>
+        <ImpactPhysics Name="90mmCannonImpact" MatchKeys="Basic" Physics="SiegeTankAttackForce"/>
+    </CActorAction>
     <CActorMissile id="SiegeTankSieged">
         <Scale value="1.100000"/>
+        <On Terms="Upgrade.TychusBoys.Add" Send="ModelSwap SiegeTank_BlackOps"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps24" Send="ModelSwap SiegeTank_BlackOps"/>
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap SiegeTankSieged222"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap SiegeTankSieged222"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap SiegeTankSieged22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap SiegeTankSieged22"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap SiegeTankSieged2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap SiegeTankSieged2"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap SiegeTank_Junker_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap SiegeTank_Junker_Collection"/>
     </CActorMissile>
+    <CActorAction id="SiegeTankSiegedAttack2" parent="GenericAttack" effectAttack="CrucioShockCannonBlast2">
+        <LaunchAssets Model="SiegeTankSiegedAttackLaunch" Sound="SiegeTank_SiegedAttackLaunch"/>
+        <ImpactSiteOps Ops="SOpActionCenter SOpTargetUnitZ" HoldPosition="1"/>
+        <ImpactMap index="None" Model="SiegeTankSiegedAttackImpact2" Sound="SiegeTank_SiegedAttackImpact"/>
+        <ImpactPhysics Name="Explosion" MatchKeys="Basic" Physics="SiegeTankSiegedForce"/>
+        <DamageSiteOps Ops="SOpAttachHarness"/>
+        <DamageMap index="None" Model="SiegeTankSiegedAttackDamage"/>
+        <DamageModel value="SiegeTankAttackDamageModel"/>
+        <ShieldFlashType value="Full"/>
+    </CActorAction>
+    <CActorAction id="SiegeTankSiegedAttackDirected2" parent="GenericAttack" effectAttack="CrucioShockCannonDirected">
+        <LaunchAssets Model="SiegeTankSiegedAttackDirectedLaunch" Sound="SiegeTank_SiegedAttackLaunch"/>
+        <ImpactSiteOps Ops="SOpAttachHarness SOpAttachVolumeStandard SOpForwardLaunchGuide"/>
+        <ImpactMap index="None" Model="SiegeTankSiegedAttackDirectedImpact" Sound="SiegeTank_SiegedAttackImpact"/>
+        <ImpactPhysics Name="Explosion" MatchKeys="Basic" Physics="SiegeTankSiegedForce"/>
+        <DamageMap index="None" Model="SiegeTankSiegedAttackDirectedDamage"/>
+        <DamageModel value="SiegeTankAttackDamageModel"/>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
+    <CActorAction id="SkyTankMissileBarrageMissileAttack">
+        <!--On Terms="Effect.SkyTankMissileBarrageDamage.Start; At Caster" Send="ActionDamage"/-->
+        <LaunchAttachQuery Fallback="Weapon"/>
+    </CActorAction>
+    <CActorMissile id="TankModeMorphModel">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap SiegeTankSiegedMorph23"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap SiegeTankSiegedMorph23"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap SiegeTankSiegedMorph2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap SiegeTankSiegedMorph2"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap SiegeTankSiegedMorph22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap SiegeTankSiegedMorph22"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap SiegeTank_Junker_Collection_Morph"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap SiegeTank_Junker_Collection_Morph"/>
+        <On Terms="Upgrade.TychusBoys.Add" Send="ModelSwap SiegeTankMorph_BlackOps"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps24" Send="ModelSwap SiegeTankMorph_BlackOps"/>
+    </CActorMissile>
+    <!-- Thor Wireframes -->
+    <CActorUnit id="Thor">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Thor_Merc_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Thor_Merc_Collection"/>
+        <On Terms="Upgrade.Mercenarys.Add" Send="ModelSwap Thor_Junker_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps23" Send="ModelSwap Thor_Junker_Collection"/>
+    </CActorUnit>
     <CActorUnit id="Tosh">
         <CustomUnitStatusFrame value=""/>
     </CActorUnit>
@@ -531,6 +866,10 @@
         <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
         <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
     </CActorUnit>
+    <CActorUnit id="Vulture">
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap Vulture32"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap Vulture32"/>
+    </CActorUnit>
     <CActorUnit id="Vulture2" parent="GenericUnitStandard" unitName="Vulture2">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
@@ -559,5 +898,47 @@
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-Vulture.dds"/>
         </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="Vulture3" parent="GenericUnitStandard" unitName="Vulture3">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Upgrade.DOM.Add" Send="ModelSwap DOMVulture"/>
+        <On Terms="ActorCreation; ValidateUnit HaveDOM" Send="ModelSwap DOMVulture"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap Vulture32"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap Vulture32"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="VultureDeath3" SoundLink="Vulture_Explode"/>
+        <PortraitModel value="VulturePortrait"/>
+        <AbilSoundArray AbilCmd="VultureSpiderMines,Execute" Sound="Vulture_SpiderMinePlace"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Vulture.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="40"/>
+        <SoundArray index="Ready" value="Vulture_Ready"/>
+        <SoundArray index="Help" value="Vulture_Help"/>
+        <SoundArray index="What" value="Vulture_What"/>
+        <SoundArray index="Yes" value="Vulture_Yes"/>
+        <SoundArray index="Attack" value="Vulture_Attack"/>
+        <SoundArray index="Pissed" value="Vulture_Pissed"/>
+        <SoundArray index="Movement" value="Vulture_Mv_Start"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Vulture.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="WarHound">
+        <Scale value="1.050000"/>
+    </CActorUnit>
+    <CActorUnit id="WidowMine">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap WidowMine2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap WidowMine2"/>
+        <On Terms="Upgrade.Mercenarys.Add" Send="ModelSwap WidowMine22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps23" Send="ModelSwap WidowMine22"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap WidowMine22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap WidowMine222"/>
     </CActorUnit>
 </Catalog>

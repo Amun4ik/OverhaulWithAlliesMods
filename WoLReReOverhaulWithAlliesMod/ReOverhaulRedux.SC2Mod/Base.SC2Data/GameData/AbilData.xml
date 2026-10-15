@@ -63,6 +63,13 @@
         <Range index="0" value="7"/>
         <AutoCastRange value="7"/>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="EMP">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Cooldown TimeUse="45"/>
+        </Cost>
+        <Range index="0" value="8"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="ExperimentalPlasmaGun">
         <Cost index="0">
             <Charge CountMax="2" CountStart="2" TimeUse="60"/>
@@ -144,6 +151,13 @@
         </Cost>
         <Range index="0" value="4"/>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="PsiStrike">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="PsionicLift">
         <Cost index="0">
             <Vital index="Energy" value="0"/>
@@ -206,5 +220,9 @@
         </Cost>
         <CmdButtonArray index="Execute" Requirements=""/>
         <Range index="0" value="9"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="WidowMineAttack">
+        <Range index="0" value="6"/>
+        <AutoCastRange value="6"/>
     </CAbilEffectTarget>
 </Catalog>

@@ -301,13 +301,9 @@
         </CardLayouts>
         <CardLayouts index="1" removed="1"/>
     </CUnit>
-    <CUnit id="GunTurret">
-        <Footprint value="Footprint2x2"/>
-        <PlacementFootprint value="Footprint2x2"/>
-    </CUnit>
-    <CUnit id="GunTurretUnderground">
-        <Footprint value="Footprint2x2Underground"/>
-        <PlacementFootprint value="Footprint2x2Underground"/>
+    <CUnit id="GunTower">
+        <Footprint value="Footprint5x5Contour"/>
+        <PlacementFootprint value="Footprint5x5Contour"/>
     </CUnit>
     <CUnit id="HERC">
         <LifeStart value="200"/>
@@ -408,6 +404,62 @@
         <AbilArray index="5" removed="1"/>
         <CargoSize value="2"/>
     </CUnit>
+    <CUnit id="KorhalPalaceTurret">
+        <BehaviorArray index="0" removed="1"/>
+        <!--GlossaryCategory value="Unit/Category/TerranUnits"/-->
+    </CUnit>
+    <CUnit id="KorhalPalaceTurret2">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="AIDefense" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="400"/>
+        <LifeMax value="400"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <Sight value="11"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="450"/>
+        <CostResource index="Vespene" value="300"/>
+        <RepairTime value="25"/>
+        <AttackTargetPriority value="19"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <BehaviorArray Link="Invulnerable"/>
+        <WeaponArray Link="KorhalPalaceGate2" Turret="KorhalPalaceTurret"/>
+        <WeaponArray Link="KorhalPalaceGate22" Turret="KorhalPalaceTurret"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="AttackBuilding" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="150"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="3"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+    </CUnit>
     <CUnit id="Marauder">
         <CostResource index="Minerals" value="125"/>
     </CUnit>
@@ -434,9 +486,11 @@
         </CardLayouts>
     </CUnit>
     <CUnit id="MercHellion">
-        <LifeStart value="200"/>
-        <LifeMax value="200"/>
-        <CostResource index="Minerals" value="250"/>
+        <LifeStart value="225"/>
+        <LifeMax value="225"/>
+        <CostResource index="Minerals" value="200"/>
+        <LifeArmor value="2"/>
+        <AbilArray Link="PsiStrike"/>
     </CUnit>
     <CUnit id="MercMedic">
         <LifeStart value="100"/>
@@ -562,6 +616,20 @@
         <BehaviorArray Link="ReaperJump"/>
         <Food value="0"/>
     </CUnit>
+    <CUnit id="SentryGun">
+        <LifeStart value="250"/>
+        <LifeMax value="250"/>
+        <LifeArmor value="2"/>
+        <Footprint value="Footprint2x2Contour"/>
+        <PlacementFootprint value="Footprint2x2Contour"/>
+    </CUnit>
+    <CUnit id="SentryGunUnderground">
+        <LifeStart value="250"/>
+        <LifeMax value="250"/>
+        <LifeArmor value="2"/>
+        <Footprint value="Footprint2x2Underground"/>
+        <PlacementFootprint value="Footprint2x2Underground"/>
+    </CUnit>
     <CUnit id="Separatist">
         <LifeStart value="35"/>
         <LifeMax value="35"/>
@@ -584,6 +652,7 @@
             <LayoutButtons index="12" removed="1"/>
             <LayoutButtons index="13" removed="1"/>
         </CardLayouts>
+        <Speed value="2"/>
     </CUnit>
     <CUnit id="SiegeTank2">
         <DeathRevealRadius value="3"/>
@@ -667,6 +736,84 @@
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
     </CUnit>
+    <CUnit id="SiegeTank3">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="AIPressForwardDisabled" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="180"/>
+        <LifeMax value="180"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
+        <Speed value="2"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="64"/>
+        <TurningRate value="360"/>
+        <Sight value="11"/>
+        <Food value="-5"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="275"/>
+        <CostResource index="Vespene" value="225"/>
+        <RepairTime value="45"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="50"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="SelfRepair"/>
+        <BehaviorArray Link="RegenerativeBioSteelSiegeTank"/>
+        <WeaponArray Link="90mmCannons3" Turret="Goliath"/>
+        <WeaponArray Link="Kit@90mmCannonsFake3" Turret="Goliath"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="NovaXanthosToggleRepairModeOn" Type="AbilCmd" AbilCmd="SelfRepair,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="SelfRepair,Cancel" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.875"/>
+        <SeparationRadius value="1"/>
+        <InnerRadius value="0.875"/>
+        <CargoSize value="4"/>
+        <ScoreMake value="275"/>
+        <ScoreKill value="275"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="1"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="SiegeTank"/>
+        <AIEvalFactor value="1.5"/>
+        <TechAliasArray value="Alias_SiegeTank"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="130"/>
+        <GlossaryStrongArray value="Marine"/>
+        <GlossaryStrongArray value="Hydralisk"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryWeakArray value="Banshee"/>
+        <GlossaryWeakArray value="Mutalisk"/>
+        <GlossaryWeakArray value="Immortal"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+    </CUnit>
     <CUnit id="SiegeTankSieged">
         <LifeStart value="325"/>
         <LifeMax value="325"/>
@@ -686,7 +833,7 @@
         <CargoSize value="8"/>
     </CUnit>
     <CUnit id="SkyTankMissileBarrageMissile">
-        <Mover value="ColonyInfestationWeapon"/>
+        <Mover value="KorhalSporeCannonMissileBombardment"/>
     </CUnit>
     <CUnit id="Spectre">
         <LifeStart value="135"/>
@@ -739,6 +886,23 @@
             <LayoutButtons index="8" removed="1"/>
             <LayoutButtons index="9" removed="1"/>
         </CardLayouts>
+    </CUnit>
+    <CUnit id="Thor">
+        <LifeStart value="700"/>
+        <LifeMax value="700"/>
+        <LifeArmor value="4"/>
+        <Food value="-8"/>
+        <CostResource index="Minerals" value="500"/>
+        <CostResource index="Vespene" value="350"/>
+    </CUnit>
+    <CUnit id="ThorAP">
+        <LifeStart value="700"/>
+        <LifeMax value="700"/>
+        <LifeArmor value="4"/>
+        <Speed value="0"/>
+        <Food value="-8"/>
+        <CostResource index="Minerals" value="500"/>
+        <CostResource index="Vespene" value="350"/>
     </CUnit>
     <CUnit id="TychusChaingun">
         <Attributes index="Light" value="0"/>
@@ -915,5 +1079,105 @@
         <GlossaryWeakArray value="Colossus"/>
         <GlossaryWeakArray value="SiegeTank"/>
         <HotkeyCategory value="Unit/Category/TerranStory"/>
+    </CUnit>
+    <CUnit id="Vulture3">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Classic"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="145"/>
+        <LifeMax value="145"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
+        <Speed value="3.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="69.125"/>
+        <Sight value="9"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="100"/>
+        <RepairTime value="25"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="15"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="VultureSpiderMines"/>
+        <AbilArray Link="MakeVultureSpiderMines"/>
+        <AbilArray Link="VultureQueue3"/>
+        <BehaviorArray Link="ScavengingSystemsMechDeath"/>
+        <WeaponArray Link="Vulture"/>
+        <WeaponArray Link="GhostVultureAnimationController"/>
+        <WeaponArray Link="C10CanisterRifleVulture"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="SpiderMine" Type="AbilCmd" AbilCmd="VultureSpiderMines,Execute" Row="2" Column="0"/>
+            <LayoutButtons>
+                <Face value="CerberusMines"/>
+                <Type value="Passive"/>
+                <AbilCmd value="255,255"/>
+                <Requirements value="UseCerberusMines"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="SpiderMineReplenish" Type="AbilCmd" AbilCmd="MakeVultureSpiderMines,Specialize1" Row="2" Column="1"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="VultureQueue3,CancelLast" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.625"/>
+        <SeparationRadius value="0.625"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="75"/>
+        <ScoreKill value="150"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.625"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <TacticalAI value=""/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="90"/>
+        <GlossaryStrongArray value="Zergling"/>
+        <GlossaryStrongArray value="Zealot"/>
+        <GlossaryStrongArray value="Marine"/>
+        <GlossaryWeakArray value="Roach"/>
+        <GlossaryWeakArray value="Colossus"/>
+        <GlossaryWeakArray value="SiegeTank"/>
+        <HotkeyCategory value="Unit/Category/TerranStory"/>
+    </CUnit>
+    <CUnit id="WarHound">
+        <LifeStart value="260"/>
+        <LifeMax value="260"/>
+        <LifeArmor value="2"/>
+        <AbilArray Link="SelfRepair"/>
+        <AbilArray Link="EMP"/>
+        <WeaponArray Link="WarHound2"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Column="2"/>
+            <LayoutButtons Face="OdinEMPBurst" Type="AbilCmd" AbilCmd="EMP,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="NovaXanthosToggleRepairModeOn" Type="AbilCmd" AbilCmd="SelfRepair,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="SelfRepair,Cancel" Row="2" Column="4"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="WidowMine">
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <CostResource index="Vespene" value="50"/>
+    </CUnit>
+    <CUnit id="WidowMineBurrowed">
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <CostResource index="Vespene" value="50"/>
     </CUnit>
 </Catalog>

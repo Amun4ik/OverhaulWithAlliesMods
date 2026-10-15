@@ -25,6 +25,10 @@
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeTychusBoysCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="HaveBlackOps242">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeTychusBoys2CompleteOnly"/>
+    </CRequirement>
     <CRequirement id="HaveBlackOps25">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeMercenarysCompleteOnly"/>
