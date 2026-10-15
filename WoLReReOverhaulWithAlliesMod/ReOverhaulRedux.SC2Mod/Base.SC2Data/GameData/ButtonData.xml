@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="AlliedAIAggressive2">
+        <Icon value="Assets\Textures\aicommand_harass1.dds"/>
+        <AlertIcon value="Assets\Textures\aicommand_harass1.dds"/>
+    </CButton>
     <CButton id="AlliedAIDefensive">
         <Icon value="Assets\Textures\aicommand_defend1.dds"/>
         <AlertIcon value="Assets\Textures\aicommand_defend1.dds"/>
@@ -24,6 +28,10 @@
         <Icon value="Assets\Textures\aicommand_harass1.dds"/>
         <AlertIcon value="Assets\Textures\aicommand_harass1.dds"/>
     </CButton>
+    <CButton id="AlliedControlInfo">
+        <Icon value="Assets\Textures\btn-tips-tutorial.dds"/>
+        <AlertIcon value="Assets\Textures\btn-tips-tutorial.dds"/>
+    </CButton>
     <CButton id="DisableAllyPing">
         <Icon value="Assets\Textures\btn-ability-mengsk-blimp-propagandamode.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-blimp-propagandamode.dds"/>
@@ -32,7 +40,7 @@
         <Icon value="Assets\Textures\btn-ability-mengsk-blimp-movementmode.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-blimp-movementmode.dds"/>
     </CButton>
-    <CButton id="CommanderControllerIcon1">
+    <CButton id="CommanderControllerIcon">
         <Icon value="Assets\Textures\btn-commander-tychus.dds"/>
         <AlertIcon value="Assets\Textures\btn-commander-tychus.dds"/>
     </CButton>

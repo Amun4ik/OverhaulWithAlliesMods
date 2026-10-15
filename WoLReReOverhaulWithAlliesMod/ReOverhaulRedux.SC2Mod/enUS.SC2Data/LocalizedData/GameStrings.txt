@@ -11,28 +11,45 @@ Behavior/Name/AllyAggressiveMode=AllyAggressiveMode
 Behavior/Name/AllyDefensiveMode=AllyDefensiveMode
 Behavior/Name/AllyNormalMode=AllyNormalMode
 Behavior/Name/DisableAlliedPing=DisableAlliedPing
-Button/Name/AlliedAIAggressive=AlliedAIAggressive
-Button/Name/AlliedAIAttack=AlliedAIAttack
-Button/Name/AlliedAIDefend=AlliedAIDefend
-Button/Name/AlliedAIDefensive=AlliedAIDefensive
-Button/Name/AlliedAIForceAttack=AlliedAIForceAttack
-Button/Name/AlliedAINormal=AlliedAINormal
-Button/Name/CommanderControllerIcon1=CommanderControllerIcon
-Button/Name/CommanderControllerIcon2=CommanderControllerIcon
-Button/Name/DisableAllyPing=DisableAllyPing
-Button/Name/EnableAllyPing=EnableAllyPing
+Behavior/Name/GeyserExhaustedHarvestable=Geyser Exhausted
+Button/Name/AlliedAIAggressive=Aggressive Mode
+Button/Name/AlliedAIAggressive2=Aggressive Mode
+Button/Name/AlliedAIAttack=Select Attack Target
+Button/Name/AlliedAIDefend=Fortify Position
+Button/Name/AlliedAIDefensive=Defensive Mode
+Button/Name/AlliedAIForceAttack=Force to Attack
+Button/Name/AlliedAINormal=Normal Mode
+Button/Name/AlliedControlInfo=Raynor's Raiders: Mission Information
+Button/Name/CommanderControllerIcon=Order Raynor's Raiders
+Button/Name/CommanderControllerIcon2=Order Rebels
+Button/Name/DisableAllyPing=Disable Ally Help Pings
+Button/Name/EnableAllyPing=Enable Ally Help Pings
 Button/Name/ExperimentalPlasmaGun=Experimental Scourge Rifle Grenade
 Button/Name/NovaXanthosToggleRepairModeOn=Self Repair
 Button/Name/TossGrenade=HE Grenade
+Button/Tooltip/AlliedAIAggressive=Orders your ally to focus entirely on offense, attacking enemies more frequently while neglecting defense.
+Button/Tooltip/AlliedAIAggressive2=Orders your ally to focus entirely on offense, attacking enemies more frequently while neglecting defense.
+Button/Tooltip/AlliedAIAttack=Set a target point that your ally will prioritize for attacks.
+Button/Tooltip/AlliedAIDefend=Select a point for your ally to build fortifications and deploy units to defend it.
+Button/Tooltip/AlliedAIDefensive=rders your ally to focus entirely on defense. They will attack enemies less frequently, or not at all, depending on the mission.
+Button/Tooltip/AlliedAIForceAttack=Orders your ally to immediately attack with all available forces.<n/><n/><n/><c val="FFFF00">Can cause your ally to leave their base completely unprotected!</c>
+Button/Tooltip/AlliedAINormal=Orders your ally to maintain a balance between offense and defense, ensuring neither is compromised.
 Button/Tooltip/AlliedAIOrderPanel=im tired boss
+Button/Tooltip/AlliedControlInfo=Raynor's Raider's specialization for this mission:<n/><n/>Normal Mode:<n/><n/>Offensive Mode:<n/><n/>Defensive Mode:
+Button/Tooltip/CommanderControllerIcon=Command Raynor's Raiders to change their combat behavior.
+Button/Tooltip/CommanderControllerIcon2=Command Raynor's Raiders to change their combat behavior.
 Button/Tooltip/Cyclone=Mobile assault drone. Effective against Air targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Diamondback2=Light armored experimental vehicle. Rebellion command transfer all their machines for our use. Deal additional damage in chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Diamondback3=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/DisableAllyPing=Turns off those annoying help pings on the minimap.
+Button/Tooltip/EnableAllyPing=Turns those annoying help pings back on.
 Button/Tooltip/ExperimentalPlasmaGun=Raynor uses his rifle to launch Scourge RPG, Dealing 130 Damage.
 Button/Tooltip/HERC2=Front-line infantry. Can use Grapple.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/LeadFarmer=Commando's Chaingun deals splash damage in a small area around the target.
 Button/Tooltip/MercReaper=Former Dominion Elite Reaper Corp. Strong and dangerous Raider. Can jump up and down cliffs.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/NovaXanthosToggleRepairModeOn=Order vehicle crew to repair their vehicle. During this vehicle is vulnerable to enemy fire, which stops repair process. Crew unable to move or attack during repair time.
+Button/Tooltip/PickupGas100Text=<s val="Kicker_Gas">+75 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><n/><s val="Kicker_Gas">+25 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><s val="Kicker_Gas"> For Allies</s>
+Button/Tooltip/PickupMinerals100Text=<s val="Kicker_Minerals">+75 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/><n/><s val="Kicker_Minerals">+25 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/> <s val="Kicker_Minerals"> For Allies</s>
 Button/Tooltip/RaynorCommando=Mysterious Field Captain of the Rebellion. Has a infantry railgun with different rounds.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/RenegadeMissileTurret=Experimental defense turret. Deal damage in a chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c><n/><c val="FFE303">Detector</c>
 Button/Tooltip/Stetmann=Jezik can heal and repair at lightning speed. Also can take control over weak minded enemy. <n/><n/><c val="#ColorAttackInfo">Has no attack.</c><n/>
@@ -82,18 +99,13 @@ Param/Expression/lib_7D432011_F534FC22=~A~'s Vespene
 Param/Expression/lib_7D432011_FA3FD038=~C~~A~/~B~
 Param/Value/lib_7D432011_0752C8BD=(DEBUG) Rebels not detected
 Param/Value/lib_7D432011_0DAF6DE7='s Minerals
-Param/Value/lib_7D432011_22A28EA7=(DEBUG) Disabling pings
 Param/Value/lib_7D432011_40CFB344=<s val="AllianceHeader">Command Allies</s><n/><n/>Use "Place Beacon" to set the target area your allies will send their units to.<n/><n/>The Strategy menu allows you to decide whether your allies will send their units at the enemy or stay home and defend.
 Param/Value/lib_7D432011_5DF2BD34=Attack Path
-Param/Value/lib_7D432011_667DFCA0=(DEBUG) Tychus set to normal
 Param/Value/lib_7D432011_68C83814=(DEBUG) Tychus not detected
 Param/Value/lib_7D432011_A2F1FE8A='s Vespene
-Param/Value/lib_7D432011_AA68A45E=(DEBUG) Tychus set to aggressive
 Param/Value/lib_7D432011_C284B794='s Minerals
 Param/Value/lib_7D432011_C95425DE=<c val="FF0000">
-Param/Value/lib_7D432011_CDF1E372=(DEBUG) Tychus set to defensive
 Param/Value/lib_7D432011_F4E42484=<c val="FF0000">
-Param/Value/lib_7D432011_FAA4D8DC=(DEBUG) Enabling pings
 Unit/Name/AlliedAIOrderPanel=Allies
 Unit/Name/Diamondback2=Tesla Tank
 Unit/Name/Diamondback3=Shaymen

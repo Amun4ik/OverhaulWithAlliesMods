@@ -203,7 +203,6 @@ bool auto_lib7D432011_gf_StartTychusAI_TriggerFunc (bool testConds, bool runActi
     AISetDifficulty(lib7D432011_gv_tychusAlly, c_diffEnableDangerMap, true);
     AISetDifficulty(lib7D432011_gv_tychusAlly, c_diffWaveAvoidDanger, true);
     AIAttackWaveSetGatherPoint(lib7D432011_gv_tychusAlly, lp_gatherPoint);
-    AISetBullyAttackWavePercent(50, lib7D432011_gv_tychusAlly);
     if ((lp_automatedworkers == true)) {
         while (true) {
             libF1378293_gf_TrainUnitIfNotInQueue(lib7D432011_gv_tychusAlly, "SCV", libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, lib0D99C9FF_gf_GetMaxDesiredHarvestPeonCountAllTowns(lib7D432011_gv_tychusAlly), null, libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, -1, 3);
@@ -259,18 +258,18 @@ bool auto_lib7D432011_gf_StartRebelsAI_TriggerFunc (bool testConds, bool runActi
     PlayerModifyPropertyInt(lib7D432011_gv_rebelsAlly, c_playerPropMinerals, c_playerPropOperSetTo, lp_minerals);
     PlayerModifyPropertyInt(lib7D432011_gv_rebelsAlly, c_playerPropVespene, c_playerPropOperSetTo, lp_gas);
     PlayerModifyPropertyInt(lib7D432011_gv_tychusAlly, c_playerPropSuppliesLimit, c_playerPropOperSetTo, lib7D432011_gv_alliesSupplyLimit);
-    AISetAPM(lib7D432011_gv_tychusAlly, libHots_gf_DifficultyValueInt2(2000, 1500, 1000));
-    lib0D99C9FF_gf_SetDefensiveAIForPlayer(lib7D432011_gv_tychusAlly);
-    lib0D99C9FF_gf_MakeHeroesFlee(lib7D432011_gv_tychusAlly);
-    AISetDifficulty(lib7D432011_gv_tychusAlly, c_diffEnableDangerMap, true);
-    AISetDifficulty(lib7D432011_gv_tychusAlly, c_diffWaveAvoidDanger, true);
-    AIAttackWaveSetGatherPoint(lib7D432011_gv_tychusAlly, lp_gatherPoint);
+    AISetAPM(lib7D432011_gv_rebelsAlly, libHots_gf_DifficultyValueInt2(2000, 1500, 1000));
+    lib0D99C9FF_gf_SetDefensiveAIForPlayer(lib7D432011_gv_rebelsAlly);
+    lib0D99C9FF_gf_MakeHeroesFlee(lib7D432011_gv_rebelsAlly);
+    AISetDifficulty(lib7D432011_gv_rebelsAlly, c_diffEnableDangerMap, true);
+    AISetDifficulty(lib7D432011_gv_rebelsAlly, c_diffWaveAvoidDanger, true);
+    AIAttackWaveSetGatherPoint(lib7D432011_gv_rebelsAlly, lp_gatherPoint);
     if ((lp_automatedworkers == true)) {
         while (true) {
-            libF1378293_gf_TrainUnitIfNotInQueue(lib7D432011_gv_tychusAlly, "SCV", libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, lib0D99C9FF_gf_GetMaxDesiredHarvestPeonCountAllTowns(lib7D432011_gv_tychusAlly), null, libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, -1, 3);
+            libF1378293_gf_TrainUnitIfNotInQueue(lib7D432011_gv_rebelsAlly, "SCV", libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, lib0D99C9FF_gf_GetMaxDesiredHarvestPeonCountAllTowns(lib7D432011_gv_rebelsAlly), null, libF1378293_ge_TgAIIncludeAlias_DontIncludeAlias, -1, 3);
             Wait(2.0, c_timeAI);
-            AIClearBuildQueue(lib7D432011_gv_tychusAlly);
-            AIClearTrainQueue(lib7D432011_gv_tychusAlly);
+            AIClearBuildQueue(lib7D432011_gv_rebelsAlly);
+            AIClearTrainQueue(lib7D432011_gv_rebelsAlly);
         }
     }
 
@@ -627,8 +626,6 @@ bool lib7D432011_gt_Load_Func (bool testConds, bool runActions) {
     BankLoad("WoLReoverhaulBank", lib7D432011_gv_player);
     lib7D432011_gv_woLReoverhaulBank = BankLastCreated();
     PlayerGroupAdd(lib7D432011_gv_alliesPlayer, lib7D432011_gv_player);
-    Wait(0.1, c_timeGame);
-    PlayerModifyPropertyInt(lib7D432011_gv_player, c_playerPropSuppliesLimit, c_playerPropOperSetTo, 150);
     if ((lib7D432011_gv_tychusAlly != 0)) {
         PlayerGroupAdd(lib7D432011_gv_alliesPlayer, lib7D432011_gv_tychusAlly);
         PlayerGroupAdd(lib7D432011_gv_allies, lib7D432011_gv_tychusAlly);
@@ -649,6 +646,8 @@ bool lib7D432011_gt_Load_Func (bool testConds, bool runActions) {
         PlayerGroupAdd(lib7D432011_gv_allies, lib7D432011_gv_toshAlly);
     }
 
+    Wait(0.1, c_timeGame);
+    PlayerModifyPropertyInt(lib7D432011_gv_player, c_playerPropSuppliesLimit, c_playerPropOperSetTo, 150);
     TriggerExecute(lib7D432011_gt_LoadTechs, true, false);
     TriggerExecute(lib7D432011_gt_AISettings, true, false);
     return true;
@@ -687,6 +686,8 @@ bool lib7D432011_gt_AISettings_Func (bool testConds, bool runActions) {
     int auto4FFAF8DF_var;
     playergroup autoB12ECF29_g;
     int autoB12ECF29_var;
+    playergroup autoD2211449_g;
+    int autoD2211449_var;
 
     // Actions
     if (!runActions) {
@@ -700,9 +701,6 @@ bool lib7D432011_gt_AISettings_Func (bool testConds, bool runActions) {
         if (auto4FFAF8DF_var < 0) { break; }
         if ((auto4FFAF8DF_var != 1)) {
             TechTreeAbilityAllow(auto4FFAF8DF_var, AbilityCommand("BurrowQueenDown", 0), false);
-            AIHarvestRate(auto4FFAF8DF_var, 1);
-            AISetDifficulty(auto4FFAF8DF_var, c_diffEnableDangerMap, false);
-            AISetDifficulty(auto4FFAF8DF_var, c_diffWaveAvoidDanger, false);
             AISetDifficulty(auto4FFAF8DF_var, c_diffAutoBuildPrereqs, false);
         }
 
@@ -713,8 +711,19 @@ bool lib7D432011_gt_AISettings_Func (bool testConds, bool runActions) {
         autoB12ECF29_var = PlayerGroupNextPlayer(autoB12ECF29_g, autoB12ECF29_var);
         if (autoB12ECF29_var < 0) { break; }
         if ((autoB12ECF29_var != 1)) {
-            AIHarvestRate(autoB12ECF29_var, 5);
             AISetDifficulty(autoB12ECF29_var, c_diffUseExtraScouts, false);
+        }
+
+    }
+    autoD2211449_g = PlayerGroupAlliance(c_playerGroupEnemy, lib7D432011_gv_player);
+    autoD2211449_var = -1;
+    while (true) {
+        autoD2211449_var = PlayerGroupNextPlayer(autoD2211449_g, autoD2211449_var);
+        if (autoD2211449_var < 0) { break; }
+        if ((autoD2211449_var != 1)) {
+            AIHarvestRate(autoD2211449_var, 1);
+            AISetDifficulty(autoD2211449_var, c_diffEnableDangerMap, false);
+            AISetDifficulty(autoD2211449_var, c_diffWaveAvoidDanger, false);
         }
 
     }
@@ -983,7 +992,7 @@ bool lib7D432011_gt_AIInDangerDontBuildWorkers_Func (bool testConds, bool runAct
     while (true) {
         autoCAAFDB2A_var = PlayerGroupNextPlayer(autoCAAFDB2A_g, autoCAAFDB2A_var);
         if (autoCAAFDB2A_var < 0) { break; }
-        if ((lib0D99C9FF_gf_AIUnderThreat(autoCAAFDB2A_var) == true) && (PlayerGetPropertyInt(autoCAAFDB2A_var, c_playerPropMinerals) < 500)) {
+        if ((lib0D99C9FF_gf_AIUnderThreat(autoCAAFDB2A_var) == true) && (PlayerGetPropertyInt(autoCAAFDB2A_var, c_playerPropMinerals) < 800)) {
             TechTreeUnitAllow(autoCAAFDB2A_var, "SCV", false);
             TechTreeUnitAllow(autoCAAFDB2A_var, "Probe", false);
             TechTreeUnitAllow(autoCAAFDB2A_var, "Drone", false);
@@ -1098,7 +1107,6 @@ bool lib7D432011_gt_Disableenablepings_Func (bool testConds, bool runActions) {
             if (auto67D5CACF_var < 0) { break; }
             PlayerSetAlliance(auto67D5CACF_var, c_allianceIdSeekHelp, lib7D432011_gv_player, false);
         }
-        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_7D432011_22A28EA7"));
     }
     else {
         UISetAlertTypeVisible(PlayerGroupAll(), "AttackTownAlly_Prot", true);
@@ -1114,7 +1122,6 @@ bool lib7D432011_gt_Disableenablepings_Func (bool testConds, bool runActions) {
             if (autoDAE0D62E_var < 0) { break; }
             PlayerSetAlliance(autoDAE0D62E_var, c_allianceIdSeekHelp, lib7D432011_gv_player, true);
         }
-        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_7D432011_FAA4D8DC"));
     }
     return true;
 }
@@ -1213,19 +1220,16 @@ bool lib7D432011_gt_Tychuschangemode_Func (bool testConds, bool runActions) {
 
     if ((EventUnitAbility() == AbilityCommand("AllyAgressiveMode", 0))) {
         lib7D432011_gv_tychusMode = 1;
-        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_7D432011_AA68A45E"));
         AISetBullyAttackWavePercent(100, lib7D432011_gv_tychusAlly);
     }
 
     if ((EventUnitAbility() == AbilityCommand("AllyDefensiveMode", 0))) {
         lib7D432011_gv_tychusMode = 2;
-        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_7D432011_CDF1E372"));
         AISetBullyAttackWavePercent(0, lib7D432011_gv_tychusAlly);
     }
 
     if ((EventUnitAbility() == AbilityCommand("AllyNormalMode", 0))) {
         lib7D432011_gv_tychusMode = 0;
-        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_7D432011_667DFCA0"));
         AISetBullyAttackWavePercent(50, lib7D432011_gv_tychusAlly);
     }
 

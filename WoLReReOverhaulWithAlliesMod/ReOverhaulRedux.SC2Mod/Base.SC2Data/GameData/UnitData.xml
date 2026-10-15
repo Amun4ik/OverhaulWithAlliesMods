@@ -10,7 +10,7 @@
         <AbilArray Link="AllyNormalMode"/>
         <AbilArray Link="DisableAlliedPings"/>
         <CardLayouts>
-            <LayoutButtons Face="CommanderControllerIcon1" Type="Submenu" SubmenuCardId="0002" Row="0" Column="0"/>
+            <LayoutButtons Face="CommanderControllerIcon" Type="Submenu" SubmenuCardId="0002" Row="0" Column="0"/>
             <LayoutButtons Face="DisableAllyPing" Type="AbilCmd" AbilCmd="DisableAlliedPings,On" Row="1" Column="4"/>
             <LayoutButtons Face="EnableAllyPing" Type="AbilCmd" AbilCmd="DisableAlliedPings,Off" Row="1" Column="4"/>
             <LayoutButtons Face="CommanderControllerIcon2" Type="Submenu" SubmenuCardId="0002" Row="0" Column="1"/>
@@ -23,7 +23,8 @@
             <LayoutButtons Face="AlliedAINormal" Type="AbilCmd" AbilCmd="AllyNormalMode,Execute" Row="1" Column="0"/>
             <LayoutButtons Face="AlliedAIAggressive" Type="AbilCmd" AbilCmd="AllyAgressiveMode,Execute" Row="1" Column="1"/>
             <LayoutButtons Face="AlliedAIDefensive" Type="AbilCmd" AbilCmd="AllyDefensiveMode,Execute" Row="1" Column="2"/>
-            <LayoutButtons Face="CommanderControllerIcon1" Type="Passive" Row="1" Column="4"/>
+            <LayoutButtons Face="CommanderControllerIcon" Type="Passive" Row="1" Column="4"/>
+            <LayoutButtons Face="AlliedControlInfo" Type="Passive" Row="0" Column="4"/>
         </CardLayouts>
         <CargoSize value="1"/>
     </CUnit>
@@ -559,6 +560,7 @@
     <CUnit id="SCV">
         <Mover value="CliffJumper"/>
         <BehaviorArray Link="ReaperJump"/>
+        <Food value="0"/>
     </CUnit>
     <CUnit id="Separatist">
         <LifeStart value="35"/>

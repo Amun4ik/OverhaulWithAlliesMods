@@ -24,7 +24,7 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="DummyEffectUnit"/>
         <Cost>
-            <Cooldown TimeUse="6"/>
+            <Cooldown TimeUse="30"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAIForceAttack"/>
     </CAbilEffectInstant>
@@ -71,6 +71,11 @@
         <Range index="0" value="8"/>
         <CastIntroTime index="0" value="0.45"/>
     </CAbilEffectTarget>
+    <CAbilTrain id="FactoryTrain">
+        <InfoArray index="Train3">
+            <Button Requirements=""/>
+        </InfoArray>
+    </CAbilTrain>
     <CAbilAugment id="HellbatCharge">
         <Cost>
             <Cooldown TimeUse="5"/>

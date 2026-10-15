@@ -452,6 +452,12 @@
         <AttributeFactor index="Biological" value="1"/>
         <Amount value="14"/>
     </CEffectDamage>
+    <CEffectModifyPlayer id="PickupGas100">
+        <Resources index="Vespene" value="75"/>
+    </CEffectModifyPlayer>
+    <CEffectModifyPlayer id="PickupMinerals100">
+        <Resources index="Minerals" value="75"/>
+    </CEffectModifyPlayer>
     <CEffectDamage id="Predator">
         <Amount value="20"/>
     </CEffectDamage>
