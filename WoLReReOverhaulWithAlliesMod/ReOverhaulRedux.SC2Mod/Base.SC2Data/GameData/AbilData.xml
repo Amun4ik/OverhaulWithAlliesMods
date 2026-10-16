@@ -63,6 +63,13 @@
         <Range index="0" value="7"/>
         <AutoCastRange value="7"/>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="DefensiveMatrix">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Cooldown TimeUse="90"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="EMP">
         <Cost index="0">
             <Vital index="Energy" value="0"/>
@@ -93,6 +100,14 @@
     </CAbilEffectInstant>
     <CAbilEffectTarget id="MercMedicHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="MissilePods">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Cooldown TimeUse="45"/>
+        </Cost>
+        <Range index="0" value="9"/>
+        <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="NovaApolloCloak">
         <Cost index="0">
@@ -193,6 +208,12 @@
     <CAbilEffectTarget id="SiegeTankSiegedJumpJet">
         <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="SnipeVulture">
+        <Cost index="0">
+            <Vital index="Energy" value="50"/>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="TitanMechBombardment">
         <Cost>
             <Charge Link="Abil/TitanMechBombardment"/>
@@ -224,5 +245,19 @@
     <CAbilEffectTarget id="WidowMineAttack">
         <Range index="0" value="6"/>
         <AutoCastRange value="6"/>
+    </CAbilEffectTarget>
+    <!-- Battlecruiser No Energy -->
+    <CAbilEffectTarget id="Yamato">
+        <Cost index="0">
+            <Charge>
+                <CountMax value="0"/>
+                <CountStart value="0"/>
+                <CountUse value="0"/>
+                <TimeUse value="0"/>
+            </Charge>
+            <Cooldown TimeUse="120"/>
+        </Cost>
+        <Range index="0" value="11"/>
+        <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectTarget>
 </Catalog>

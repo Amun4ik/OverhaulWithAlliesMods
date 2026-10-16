@@ -35,6 +35,14 @@
             <Image value="Assets\Textures\black.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorUnit id="AssaultMorphModel">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Viking_MercMorph_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Viking_MercMorph_Collection"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap Viking_Mecha_Morph"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap Viking_Mecha_Morph"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Viking_Junker_Morph"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Viking_Junker_Morph"/>
+    </CActorUnit>
     <CActorUnit id="AutoTurret">
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap AutoTurret_CovertOps_Collection"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap AutoTurret_CovertOps_Collection"/>
@@ -45,6 +53,244 @@
         <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap AutoTurret_Junker_Collection"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap AutoTurret_Junker_Collection"/>
     </CActorUnit>
+    <CActorUnit id="Banshee">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Banshee_Merc_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Banshee_Merc_Collection"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Banshee_Junker_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Banshee_Junker_Collection"/>
+        <!--SoundArray index="Movement" value="Banshee_Movement"/>-->
+    </CActorUnit>
+    <CActorUnit id="Banshee2" parent="GenericUnitStandard" unitName="Banshee2">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <Macros value="PhysicsDeathsVoidAir"/>
+        <On Terms="UnitPortrait.*.Configure; ValidateUnit Cloaked" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End Instant"/>
+        <On Terms="UnitPortrait.*.Configure; ValidateUnit NotCloaked" Target="::PortraitGameSelf" Send="AnimBracketStop Visor Instant"/>
+        <On Terms="Behavior.BansheeCloak.On" Send="StatusIncrement Cloaked"/>
+        <On Terms="Behavior.CloakFieldEffect.On" Send="StatusIncrement Cloaked"/>
+        <On Terms="Behavior.BansheeCloak.Off" Send="StatusDecrement Cloaked"/>
+        <On Terms="Behavior.CloakFieldEffect.Off" Send="StatusDecrement Cloaked"/>
+        <On Terms="Behavior.BansheeCloak.On; IsStatus Cloaked 1" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End"/>
+        <On Terms="Behavior.BansheeCloak.Off; IsStatus Cloaked 0" Target="::PortraitGameSelf" Send="AnimBracketStop Visor"/>
+        <On Terms="Behavior.CloakFieldEffect.On; IsStatus Cloaked 1" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End"/>
+        <On Terms="Behavior.CloakFieldEffect.Off; IsStatus Cloaked 0" Target="::PortraitGameSelf" Send="AnimBracketStop Visor"/>
+        <On Terms="Behavior.BansheeCloakCrossSpectrumDampeners.On" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End"/>
+        <On Terms="Behavior.BansheeCloakCrossSpectrumDampeners.Off" Target="::PortraitGameSelf" Send="AnimBracketStop Visor"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Banshee_Land"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <On Terms="Behavior.BansheeFlyInLeft.On" Send="AnimPlay FlyInLeft Stand,Work 0 0.000000"/>
+        <On Terms="Behavior.BansheeFlyInRight.On" Send="AnimPlay FlyInRight Stand,Work,A 0 0.000000"/>
+        <On Terms="Behavior.BansheeFlyInLeft.On" Send="SetShowStatusBar"/>
+        <On Terms="Behavior.BansheeFlyInRight.On" Send="SetShowStatusBar"/>
+        <On Terms="Behavior.BansheeFlyInLeft.On" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On Terms="Behavior.BansheeFlyInRight.On" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On Terms="Behavior.BansheeFlyInLeft.Off" Send="Create FlyerHelperSplat"/>
+        <On Terms="Behavior.BansheeFlyInRight.Off" Send="Create FlyerHelperSplat"/>
+        <On Terms="Behavior.BansheeFlyInLeft.Off" Send="SetShowStatusBar 1"/>
+        <On Terms="Behavior.BansheeFlyInRight.Off" Send="SetShowStatusBar 1"/>
+        <On Terms="Upgrade.BlackOps.Add" Send="ModelSwap Banshee_BlackOps"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps" Send="ModelSwap Banshee_BlackOps"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps" Send="ModelSwap Banshee_BlackOps"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveBlackOps" Send="DeathCustomize BlackOps"/>
+        <HostSiteOps Ops="SOpBankerBanshee"/>
+        <Scale value="1.200000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <Baselines index="Walk" BlendIn="0.750000" BlendOut="1.000000"/>
+        <BuildModel value="Banshee"/>
+        <DeathArray index="Normal" ModelLink="BansheeDeath" SoundLink="Banshee_Explode"/>
+        <DeathCustoms>
+            <ActorModel value="BansheeDeathRagdoll"/>
+            <ModelLink value="BansheeDeathRagdoll"/>
+            <Name value="RagdollBasic"/>
+            <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathCustoms ModelLink="Banshee_BlackOps_Death" Name="BlackOps"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+        <PlacementModel value="Banshee"/>
+        <PortraitModel value="BansheePortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="5.000000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive15"/>
+        </TerrainSquibs>
+        <AbilSoundArray AbilCmd="BansheeCloak,On" Sound="Banshee_CloakOnVO"/>
+        <BarOffset value="60"/>
+        <BarWidth value="90"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Banshee.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-banshee.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <NameOffset value="60"/>
+        <SoundArray index="Ready" value="Banshee_Ready"/>
+        <SoundArray index="Help" value="Banshee_Help"/>
+        <SoundArray index="What" value="Banshee_What"/>
+        <SoundArray index="Yes" value="Banshee_Yes"/>
+        <SoundArray index="Attack" value="Banshee_Attack"/>
+        <SoundArray index="Pissed" value="Banshee_Pissed"/>
+        <SoundArray index="Movement" value="Banshee_Movement"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-banshee.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Banshee.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="BansheeAttack2" parent="GenericAttack" effectImpact="BacklashRocketsU2" effectLaunch="BacklashRocketsLM2">
+        <LaunchAttachQuery Methods="AMPatternBanshee"/>
+        <LaunchAssets Sound="Banshee_AttackLaunch2"/>
+        <Missile value="BansheeAttackMissile2"/>
+        <ImpactMap index="None" Model="BansheeAttackImpact" Sound="Banshee_AttackImpact2"/>
+        <ImpactPhysics Name="BacklashRocketsImpact" MatchKeys="Basic" Physics="BansheeAttackForce"/>
+        <AcquisitionYawHalfArc value="15.000000"/>
+        <AcquisitionPitchHalfArc value="30.000000"/>
+        <ShieldRippleScaleFactor value="1.100000"/>
+    </CActorAction>
+    <CActorMissile id="BansheeAttackMissile2" parent="GenericAttackMissile" unitName="BacklashRocketsLMWeapon"/>
+    <CActorUnit id="Battlecruiser2" parent="GenericUnitStandard" unitName="Battlecruiser2">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <Macros value="PhysicsDeathsVoidAir"/>
+        <On Terms="ActorCreation; ValidateUnit BattlecruiserUpgraded" Send="AnimBlendTimeApply 0.000000"/>
+        <On Terms="ActorCreation; ValidateUnit BattlecruiserUpgraded" Send="AnimGroupApply A"/>
+        <On Terms="ActorCreation; ValidateUnit BattlecruiserUpgraded" Send="AnimBlendTimeApply"/>
+        <On Terms="Upgrade.BattlecruiserEnableSpecializations.Add; ValidateUnit NotDeadOrConstruction" Send="AnimBlendTimeApply 5.000000"/>
+        <On Terms="Upgrade.BattlecruiserEnableSpecializations.Add; ValidateUnit NotDeadOrConstruction" Send="AnimPlay GLBirth,A"/>
+        <On Terms="Upgrade.BattlecruiserEnableSpecializations.Add; ValidateUnit NotDeadOrConstruction" Send="AnimGroupApply A"/>
+        <On Terms="Upgrade.BattlecruiserEnableSpecializations.Add; ValidateUnit NotDeadOrConstruction" Send="AnimBlendTimeApply"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit BattlecruiserUpgraded" Send="DeathCustomize Upgrade"/>
+        <On Terms="Abil.Yamato.SourcePrepStart" Send="$Spell 0 -1.000000 -1.000000 3.500000 AsDuration"/>
+        <On Terms="Abil.Yamato.SourcePrepStop" Send="AnimClear Spell"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Battlecruiser_Land"/>
+        <On Terms="Behavior.HyperjumpTeleportOut.On" Send="SetOpacity"/>
+        <On Terms="Behavior.HyperjumpTeleportIn.Off" Send="SetOpacity 1.000000"/>
+        <On Terms="Behavior.HyperjumpTeleport.On" Send="Create BattleCruiserTacticalJump_Placement"/>
+        <On Terms="Behavior.HyperjumpTeleportIn.Off" Target="BattleCruiserTacticalJump_Placement" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.HyperjumpTeleportOut.On" Send="Create HyperjumpLaunch"/>
+        <On Terms="Behavior.HyperjumpTeleportIn.On" Send="Create HyperjumpImpact"/>
+        <On Terms="ActorCreation" Send="Create BattlecruiserLookAt00"/>
+        <On Terms="ActorCreation" Send="Create BattlecruiserLookAt01"/>
+        <On Terms="ActorCreation" Send="Create BattlecruiserLookAt02"/>
+        <On Terms="ActorCreation" Send="Create BattlecruiserLookAt03"/>
+        <On Terms="ActorCreation" Send="Create BattlecruiserLookAt04"/>
+        <On Terms="ActorCreation" Send="Create BattlecruiserLookAt05"/>
+        <On Terms="ActorCreation" Send="Create BattlecruiserLookAt06"/>
+        <On Terms="ActorCreation" Send="Create BattlecruiserLookAt07"/>
+        <On Terms="WeaponStart.ATSLaserBattery.AttackStart" Target="_BattlecruiserTurretATS" Send="LookAtEngage Continue"/>
+        <On Terms="WeaponStart.ATALaserBattery.AttackStart" Target="_BattlecruiserTurretATA" Send="LookAtEngage Continue"/>
+        <On Terms="Abil.attack.ReadyStop" Target="_BattlecruiserTurretATS" Send="LookAtDisengage"/>
+        <On Terms="Abil.attack.ReadyStop" Target="_BattlecruiserTurretATA" Send="LookAtDisengage"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <On Terms="Behavior.BattleCruiserFastJump.On" Send="Create HyperjumpImpact"/>
+        <On Terms="Behavior.BattleCruiserFastJump.On" Send="SetVisibility"/>
+        <On Terms="Behavior.BattleCruiserFastJump.Off" Send="SetVisibility 1"/>
+        <On Terms="Upgrade.DOM.Add" Send="ModelSwap BattlecruiserDOM"/>
+        <On Terms="ActorCreation; ValidateUnit HaveDOM" Send="ModelSwap BattlecruiserDOM"/>
+        <On Terms="Upgrade.BlackOps.Add" Send="ModelSwap BattleCruiser_BlackOps_Ex3"/>
+        <On Terms="UnitBirth; ValidateUnit HaveBlackOps" Send="ModelSwap BattleCruiser_BlackOps_Ex3"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveDOM" Send="DeathCustomize Variation10"/>
+        <On Terms="WeaponStart.BattlecruiserWeaponSwitch.AttackStart; WeaponTargetElevation GT -20.000000" Target="_BattlecruiserTurretATA" Send="LookAtEngage Continue"/>
+        <On Terms="WeaponStart.BattlecruiserWeaponSwitch.AttackStart; WeaponTargetElevation LE -20.000000" Target="_BattlecruiserTurretATS" Send="LookAtEngage Continue"/>
+        <On Terms="WeaponStop.BattlecruiserWeaponSwitch.AttackStop" Target="_BattlecruiserTurretATA" Send="LookAtDisengage"/>
+        <On Terms="WeaponStop.BattlecruiserWeaponSwitch.AttackStop" Target="_BattlecruiserTurretATS" Send="LookAtDisengage"/>
+        <HostSiteOps Ops="SOpBankerBattlecruiser"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="BattlecruiserDeath2" SoundLink=""/>
+        <DeathCustoms ModelLink="BattlecruiserDeathA" Name="Upgrade"/>
+        <DeathCustoms>
+            <ActorModel value="BattlecruiserDeathRagdoll"/>
+            <ModelLink value="BattlecruiserDeathRagdoll"/>
+            <Name value="RagdollBasic"/>
+            <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="FireHeavy"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="FireHeavy"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowLarge"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathCustoms ModelLink="BattlecruiserDOMDeath" Name="Variation10"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+        <PortraitModel value="BattlecruiserPortrait2"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="5.150000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive2"/>
+        </TerrainSquibs>
+        <AbilSoundArray AbilCmd="Yamato,Execute" Sound="Battlecruiser_YamatoUpgrade"/>
+        <AbilSoundArray AbilCmd="MissilePods,Execute" Sound="Battlecruiser_MissilePodUpgrade"/>
+        <BarOffset value="75"/>
+        <BarWidth value="130"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Battlecruiser.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-battlecruiser.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <NameOffset value="110"/>
+        <SoundArray index="Ready" value="Battlecruiser_Ready"/>
+        <SoundArray index="Help" value="Battlecruiser_Help"/>
+        <SoundArray index="What" value="Battlecruiser_What"/>
+        <SoundArray index="Yes" value="Battlecruiser_Yes"/>
+        <SoundArray index="Attack" value="Battlecruiser_Attack"/>
+        <SoundArray index="Pissed" value="Battlecruiser_Pissed"/>
+        <SoundArray index="Movement" value="Battlecruiser_Movement"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-battlecruiser.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Battlecruiser.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="BattlecruiserGroundAttack2" parent="GenericAttack" effectImpact="ATSLaserBatteryU2" effectLaunch="ATSLaserBatteryLM2">
+        <LaunchAttachQuery Methods="AMFilterWeaponSetA1 AMRandomUniform"/>
+        <LaunchAssets Sound="Battlecruiser_GroundAttackLaunch"/>
+        <Missile value="BattlecruiserGroundAttackMissile2"/>
+        <ImpactSiteOps Ops="SOpAttachHarness SOpAttachVolumeStandard SOpForwardLaunchGuide"/>
+        <ImpactMap index="None" Model="BattlecruiserGroundAttackImpact" Sound="Battlecruiser_GroundAttackImpact"/>
+        <ImpactPhysics Name="ATSImpact" MatchKeys="Basic" Physics="BattlecruiserAttackGroundForce"/>
+        <ActionFlags index="LaunchForceSite" value="1"/>
+    </CActorAction>
+    <CActorMissile id="BattlecruiserGroundAttackMissile2" parent="GenericAttackMissile" unitName="ATSLaserBatteryLMWeapon"/>
     <!-- Bunker Upgraded Model for Lab Research Only -->
     <CActorUnit id="Bunker">
         <Remove index="0" removed="1"/>
@@ -211,6 +457,14 @@
     <CActorUnit id="Dutch">
         <UnitKillRank index="0" Text="UnitKillRank/Swann1"/>
     </CActorUnit>
+    <CActorUnit id="FighterMorphModel">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Viking_MercMorph_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Viking_MercMorph_Collection"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap Viking_Mecha_Morph"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap Viking_Mecha_Morph"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Viking_Junker_Morph"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Viking_Junker_Morph"/>
+    </CActorUnit>
     <CActorUnit id="Firebat">
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Firebat2"/>
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Firebat2"/>
@@ -281,6 +535,86 @@
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Hellion2"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Hellion2"/>
     </CActorUnit>
+    <CActorUnit id="Hellion2" parent="GenericUnitBase" unitName="Hellion2">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <Macros value="SnowVisualUnitMacro"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="TimerSet 0.250000 KillBeam"/>
+        <On Terms="Abil.attack.ReadyStop" Send="TimerSet 0.250000 KillBeam"/>
+        <On Terms="TimerExpired; TimerName KillBeam" Target="HellionAttackBeam" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Hellion" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom Hellion" Send="Destroy"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimClear Visor 0.000000"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Hellion_Land"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <On Terms="Effect.Kit@InfernalFlameThrowerCP.Start; At Caster" Send="Create Kit@HellionInfernalFlameThrowerModel"/>
+        <On Terms="TimerExpired; TimerName KillBeam" Target="Kit@HellionInfernalFlameThrowerModel" Send="Destroy"/>
+        <Model value="Hellion3"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="Hellion3"/>
+        <DeathArray index="Normal" ModelLink="HellionDeath2" SoundLink="Hellion_Explode"/>
+        <DeathCustoms ModelLink="HellionDeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathCustoms ModelLink="Hellion_BlackOps_Death" Name="BlackOps"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value="Hellion3"/>
+        <PortraitActor value="HellionPortrait"/>
+        <PortraitModel value="HellionPortrait2"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLargeVehicle"/>
+        </TerrainSquibs>
+        <BarOffset value="50"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-hellionex1.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-hellion.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="Hellion_Ready"/>
+        <SoundArray index="Help" value="Hellion_Help"/>
+        <SoundArray index="What" value="Hellion_What"/>
+        <SoundArray index="Yes" value="Hellion_Yes"/>
+        <SoundArray index="Attack" value="Hellion_Attack"/>
+        <SoundArray index="Pissed" value="Hellion_Pissed"/>
+        <SoundArray index="Movement" value="Hellion_Movement"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-hellion.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-hellionex1.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <!-- Nuke                                                                                    -->
     <CActorUnit id="HellionMorphModel">
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap HellionTankMorph2"/>
@@ -321,6 +655,108 @@
             <Image value="Assets\Textures\Wireframe-Terran-MissileTurret.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorUnit id="Liberator">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Liberator_Merc"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Liberator_Merc"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap Liberator_Junker"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap Liberator_Junker"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Liberator_Junker"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Liberator_Junker"/>
+    </CActorUnit>
+    <CActorUnit id="Liberator2" parent="GenericUnitBase" unitName="Liberator1">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <Macros value="PhysicsDeathsVoidAir"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Liberator_Land"/>
+        <On Terms="WeaponStart.LiberatorMissileLaunchers.AttackStart" Send="AnimBracketStart Attack Cover,Start Cover Cover,End"/>
+        <On Terms="WeaponStop.LiberatorMissileLaunchers.AttackStop" Send="TimerSet 2.000000 LiberatorAttack"/>
+        <On Terms="TimerExpired; TimerName LiberatorAttack; ValidateUnitType CasterNotAttacking" Send="AnimBracketStop Attack"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Liberator" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom Liberator" Send="Destroy"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimClear Visor 0.000000"/>
+        <On Terms="ActorCreation" Send="AnimBlendTimeApply 0.000000"/>
+        <On Terms="ActorCreation" Send="AnimBaselineStop"/>
+        <On Terms="ActorCreation" Send="AnimBaselineStart"/>
+        <On Terms="ActorCreation" Send="AnimBlendTimeApply"/>
+        <On Terms="ActorCreation" Send="StatusSet Morphed 0"/>
+        <On Terms="Effect.LiberatorTargetMorphDelayPersistent.Start" Send="Create LiberatorAGBirthSearchIndicatorModel"/>
+        <On Terms="AbilMorph.*.Finish; FlyerHelper All; !ScopeContains FlyerHelperSplat" Send="Create FlyerHelperSplat"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <HostSiteOps Ops="SOpBankerLiberator"/>
+        <Model value="Liberator2"/>
+        <Scale value="0.700000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="Liberator2"/>
+        <DeathArray index="Normal" ModelLink="LiberatorDeath2" SoundLink="Liberator_Death"/>
+        <DeathCustoms>
+            <ActorModel value="LiberatorDeathRagdoll"/>
+            <ModelLink value="LiberatorDeathRagdoll"/>
+            <Name value="RagdollBasic"/>
+            <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+            <BodySquibs Name="Basic" Model="ProtossTinyRobotSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathCustoms ModelLink="Liberator_BlackOps_Death" Name="BlackOps"/>
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+        <PlacementModel value="Liberator2"/>
+        <PortraitModel value="LiberatorPortrait2"/>
+        <AbilSoundArray/>
+        <BarOffset value="50"/>
+        <BarWidth value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-ability-terran-liberator-aamode.dds"/>
+        </GroupIcon>
+        <HighlightTooltip value="Unit/Name/Liberator2"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="TerranFlyer_Ready"/>
+        <SoundArray index="Help" value="TerranFlyer_Help"/>
+        <SoundArray index="What" value="TerranFlyer_What"/>
+        <SoundArray index="Yes" value="TerranFlyer_Yes"/>
+        <SoundArray index="Attack" value="TerranFlyer_Attack"/>
+        <SoundArray index="Pissed" value="TerranFlyer_Pissed"/>
+        <SoundArray index="Movement" value="Liberator_Move_Start"/>
+        <UnitIcon value="Assets\Textures\btn-ability-terran-liberator-aamode.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-liberator-aamode.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="LiberatorAG">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Liberator_Merc"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Liberator_Merc"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap Liberator_Junker"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap Liberator_Junker"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Liberator_Junker"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Liberator_Junker"/>
+    </CActorUnit>
+    <CActorAction id="LiberatorDamageAttack2" parent="GenericAttack" effectImpact="LiberatorMissileDamage2" effectLaunch="LiberatorDamageMissileLM2">
+        <LaunchAttachQuery Methods="AMFilterWeaponSetA0 AMPatternLiberator"/>
+        <LaunchAssets Sound="Liberator_AA_Launch"/>
+        <Missile value="LiberatorDamageAttackMissile2"/>
+        <ImpactSiteOps Ops="SOpAttachCenter SOpRandomPointInCircle1Dot5"/>
+        <ImpactMap index="None" Model="LiberatorAttackImpact2" Sound="Liberator_AA_Launch_Impact"/>
+        <ShieldFlashType value="Full"/>
+    </CActorAction>
+    <CActorMissile id="LiberatorDamageAttackMissile2" parent="GenericAttackMissile" unitName="LiberatorDamageMissile">
+        <Model value="LiberatorDamageMissile2"/>
+    </CActorMissile>
     <CActorModel id="LurkerMPAttackSpikeEx2">
         <Model value="ScarabAttackImpact"/>
     </CActorModel>
@@ -351,6 +787,98 @@
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps25" Send="ModelSwap Medic2"/>
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Medic22"/>
         <On Terms="UnitBirth; ValidateUnit HaveBlackOps2" Send="ModelSwap Medic22"/>
+    </CActorUnit>
+    <CActorUnit id="Medivac2" parent="GenericUnitStandard" unitName="Medivac2">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="MedivacTransportAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <Macros value="PhysicsDeathsVoidAir"/>
+        <On Terms="Abil.MedivacHeal.SourceChannelStart" Send="$Spell PlayForever"/>
+        <On Terms="Abil.MedivacHeal.SourceChannelStop" Send="AnimClear Spell"/>
+        <On Terms="AbilTransport.MedivacTransport.TransportLoad; AbilTransport Thor" Send="Create ThorTransit"/>
+        <On Terms="Signal.*.ThorTransit" Send="RefSetFromMsg ::actor.Thor ::Sender"/>
+        <On Terms="AbilTransport.MedivacTransport.PassengerKilled; AbilTransport Thor" Target="::actor.Thor" Send="Signal Dead"/>
+        <On Terms="UnitDeath" Target="::actor.Thor" Send="Signal Dead"/>
+        <On Terms="ActorCreation; ValidateUnit MedivacUpgrade" Send="ModelSwap MedivacUpgrade"/>
+        <On Terms="Abil.MedivacDoubleBeamHeal.SourceChannelStart" Send="$Spell PlayForever"/>
+        <On Terms="Abil.MedivacDoubleBeamHeal.SourceChannelStop" Send="AnimClear Spell"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Medivac_Land"/>
+        <On Terms="Behavior.MedivacSpeedBoost.On" Send="AnimPlay Turbo Spell,B"/>
+        <On Terms="Behavior.MedivacSpeedBoost.On" Send="StatusSet Turbo 1"/>
+        <On Terms="Behavior.MedivacSpeedBoost.Off" Send="StatusSet Turbo 0"/>
+        <On Terms="UnitMovementUpdate.*.Walk; IsStatus Turbo 1" Send="Create Medivac_MovementAfterburner"/>
+        <On Terms="AbilTransport.MedivacTransport.TransportLoad; AbilTransport ThorAP" Send="Create ThorTransit"/>
+        <On Terms="AbilTransport.MedivacTransport.PassengerKilled; AbilTransport ThorAP" Target="::actor.Thor" Send="Signal Dead"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <On Terms="AbilTransport.MedivacTransport.TransportLoad; AbilTransport SiegeTankSieged" Send="Create SiegeTankLoadTransit"/>
+        <On Terms="Signal.*.SiegeTankLoadTransit" Send="RefSetFromMsg ::actor.SiegeTankSieged ::Sender"/>
+        <On Terms="AbilTransport.MedivacTransport.PassengerKilled; AbilTransport SiegeTankSieged" Target="::actor.SiegeTankSieged" Send="Signal Dead"/>
+        <On Terms="UnitDeath" Target="::actor.SiegeTankSieged" Send="Signal Dead"/>
+        <HostSiteOps Ops="SOpBankerMedivac"/>
+        <Scale value="2.000000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <Baselines index="Walk" BlendIn="1.500000" BlendOut="2.000000"/>
+        <DeathArray index="Normal" ModelLink="MedivacDeath2" SoundLink="Medivac_Explode"/>
+        <DeathCustoms>
+            <ActorModel value="MedivacDeathRagdoll"/>
+            <ModelLink value="MedivacDeathRagdoll"/>
+            <Name value="RagdollBasic"/>
+            <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+        <PortraitModel value="MedivacPortrait2"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="5.000000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive15"/>
+        </TerrainSquibs>
+        <AbilSoundArray AbilCmd="MedivacHeal,Execute" Sound="Medivac_HealVO"/>
+        <AbilSoundArray AbilCmd="MedivacTransport,Load" Sound="Medivac_LoadVO"/>
+        <AbilSoundArray AbilCmd="MedivacTransport,UnloadAt" Sound="Medivac_UnloadVO"/>
+        <BarOffset value="50"/>
+        <BarWidth value="80"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-valkyrie@scbw.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-valkyrie@scbw.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <NameOffset value="50"/>
+        <SoundArray index="Ready" value="Medivac_Ready"/>
+        <SoundArray index="Help" value="Medivac_Help"/>
+        <SoundArray index="What" value="Medivac_What"/>
+        <SoundArray index="Yes" value="Medivac_Yes"/>
+        <SoundArray index="Attack" value="Medivac_Attack"/>
+        <SoundArray index="Pissed" value="Medivac_Pissed"/>
+        <SoundArray index="Movement" value="Medivac_Movement"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-valkyrie@scbw.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Medivac.dds"/>
+        </Wireframe>
     </CActorUnit>
     <CActorUnit id="MercHellion">
         <Scale value="1.100000"/>
@@ -499,6 +1027,10 @@
         <On Terms="UnitMovementUpdate; AnimPlaying JumpEnd" Send="AnimClear JumpEnd"/>
         <On Terms="WeaponStart.*.AttackStart; AnimPlaying JumpEnd" Send="AnimClear JumpEnd"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_BlackOps_JumpJets_Land"/>
+        <On Terms="Behavior.ImmortalOverload.On" Target="Cover" Send="AnimBracketStart {} Cover,Start Cover Cover,End"/>
+        <On Terms="Behavior.ImmortalOverload.On" Send="Create ImmortalOverloadOnSound"/>
+        <On Terms="Behavior.ImmortalOverload.On" Target="Cover" Send="AnimBracketStop"/>
+        <On Terms="Behavior.ImmortalOverload.On" Send="Create ImmortalOverloadOffSound"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" ModelLink="SiegeTankDeath2" SoundLink="SiegeTank_Explode"/>
         <DeathCustoms ModelLink="TerranLargeUnitDeathLow" Name="AntiGravTerran"/>
@@ -715,6 +1247,13 @@
         <!--On Terms="Effect.SkyTankMissileBarrageDamage.Start; At Caster" Send="ActionDamage"/-->
         <LaunchAttachQuery Fallback="Weapon"/>
     </CActorAction>
+    <!-- Spectre fix Nukes and Ultrasonic -->
+    <CActorUnit id="SpecterUnit">
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap Spectre2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap Spectre2"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Spectre2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Spectre2"/>
+    </CActorUnit>
     <CActorMissile id="TankModeMorphModel">
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap SiegeTankSiegedMorph23"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap SiegeTankSiegedMorph23"/>
@@ -866,6 +1405,43 @@
         <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupRemove D"/>
         <On Terms="Effect.GeyserExhaustedHarvestable.Start" Send="AnimGroupApply B"/>
     </CActorUnit>
+    <CActorUnit id="VikingAssault">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Viking_MercAssault_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Viking_MercAssault_Collection"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap Viking_Mecha_Assault"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap Viking_Mecha_Assault"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Viking_Junker_Assault"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Viking_Junker_Assault"/>
+    </CActorUnit>
+    <CActorUnit id="VikingFighter">
+        <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap Viking_MercFighter_Collection"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap Viking_MercFighter_Collection"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap Viking_Mecha_Fighter"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap Viking_Mecha_Fighter"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Viking_Junker_Fighter"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Viking_Junker_Fighter"/>
+    </CActorUnit>
+    <CActorAction id="VikingFighterAttack2" parent="VikingFighterAttackBase" effectImpact="LanzerTorpedoesDamage2" effectLaunch="LanzerTorpedoesLM">
+        <On Terms="Effect.LanzerTorpedoesLM2.Start; At Caster; !ValidateEffect HALORocketsResearched" Send="Create"/>
+        <LaunchAssets Model="VikingFighterAttackLaunch2"/>
+        <Missile value="VikingFighterAttackMissile2"/>
+        <ImpactMap index="None" Model="VikingFighterAttackImpact2"/>
+        <ImpactPhysics Name="LanzerTorpedoImpact" MatchKeys="Basic" Physics="LanzerTorpedoAttackDeathForce"/>
+    </CActorAction>
+    <CActorMissile id="VikingFighterAttackMissile2">
+        <Aliases value="_Unit"/>
+        <Aliases value="_Missile"/>
+        <On Terms="UnitBirth.VikingFighterWeapon2" Send="Create"/>
+        <On Terms="UnitBirth" Send="$Birth PlayForever,NonLooping"/>
+        <On Terms="MotionPhaseStart; MotionPhase 2" Send="AnimClear Birth"/>
+        <On Terms="MotionPhaseStart; MotionPhase 2" Send="AnimPlay Turbo Turbo PlayForever"/>
+        <On Terms="MotionPhaseStart; MotionPhase 3" Send="AnimClear Turbo"/>
+        <On Terms="MotionPhaseStart; MotionPhase 3" Send="$Stand PlayForever"/>
+        <On Terms="UnitDeath" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Model value="VikingFighterWeapon2"/>
+        <PreHost value="_ActorAction"/>
+    </CActorMissile>
     <CActorUnit id="Vulture">
         <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap Vulture32"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap Vulture32"/>
@@ -940,5 +1516,15 @@
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps23" Send="ModelSwap WidowMine22"/>
         <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap WidowMine22"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap WidowMine222"/>
+    </CActorUnit>
+    <CActorUnit id="Wraith">
+        <On Terms="Upgrade.Mercenarys.Add" Send="ModelSwap Wraith222"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps23" Send="ModelSwap Wraith222"/>
+        <On Terms="Upgrade.RebellionForces.Add" Send="ModelSwap Wraith2"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps22" Send="ModelSwap Wraith2"/>
+        <On Terms="Upgrade.TychusBoys2.Add" Send="ModelSwap Wraith22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps242" Send="ModelSwap Wraith22"/>
+        <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Wraith22"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Wraith22"/>
     </CActorUnit>
 </Catalog>

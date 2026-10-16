@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="ATSLaserBatteryLMWeapon">
+        <Model value="Assets\Effects\Terran\BattlecruiserPlasmaMissile\BattlecruiserPlasmaMissile.m3"/>
+    </CModel>
     <CModel id="AutoTurret2" parent="AutoTurretBase">
         <Model value="Assets\Buildings\Terran\AutoTurret_Umojan\AutoTurret_Umojan.m3"/>
     </CModel>
     <CModel id="AutoTurret22" parent="AutoTurretBase">
         <Model value="Assets\COOP\Tychus\Buildings\AutoTurret_Heavens_COOP_Warhound\AutoTurret_Heavens_COOP_Warhound.m3"/>
     </CModel>
+    <CModel id="Banshee2" parent="BansheeBase">
+        <Model value="Assets\Terran\NC_HeloGunship.m3"/>
+        <RequiredAnims value="Assets\Units\Terran\Banshee_NovaAnims\Banshee_NovaAnims.m3a"/>
+        <AttachProps index="0" Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+            <Keys index="Weapon" value="-128"/>
+        </AttachProps>
+        <AttachProps index="1" Id="Ref_Weapon 01">
+            <Keys index="Hit" value="1"/>
+            <Keys index="Weapon" value="-128"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="Hit" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="Hit" value="4"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="Hit" value="6"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 06">
+            <Keys index="Weapon" value="1"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="BansheeMercenaryPortrait">
+        <Model value="Assets\Portraits\Terran\Banshee_CovertOps_Collection_Portrait\Banshee_CovertOps_Collection_Portrait.m3"/>
+    </CModel>
     <CModel id="BarrageModel">
         <Model value="Assets\Effects\Terran\Nova_PulseGrenade\Nova_PulseGrenade.m3"/>
+    </CModel>
+    <CModel id="Battlecruiser2" parent="BattlecruiserBase">
+        <Model value="Assets\Units\Terran\Battlecruiser_Remastered\Battlecruiser_Remastered.m3"/>
+    </CModel>
+    <CModel id="BattlecruiserDeath2" parent="BattlecruiserDeathBase">
+        <Model value="Assets\Units\Terran\Battlecruiser_Remastered_Death\Battlecruiser_Remastered_Death_00.m3"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+    </CModel>
+    <CModel id="BattlecruiserPortrait2" parent="BattlecruiserPortraitBase">
+        <Model value="Assets\Portraits\Terran\BattlecruiserPortrait\BattlecruiserPortrait.m3"/>
+        <Image value="Assets\Textures\BattlecruiserPortrait_Static.dds"/>
+        <Lighting value="BattlecruiserPortrait"/>
     </CModel>
     <CModel id="Bunker2" parent="BunkerBase">
         <Model value="Assets\Buildings\Terran\BunkerSCBW\BunkerSCBW.m3"/>
@@ -31,6 +77,18 @@
     </CModel>
     <CModel id="CycloneMissileImpact">
         <Model value="Assets\Effects\Terran\MiraHorner_Hellion_BasicGrenade_Coop_Impact\MiraHorner_Hellion_BasicGrenade_Coop_Impact.m3"/>
+    </CModel>
+    <CModel id="DRBattlecruiserALMWeapon">
+        <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile\MiraHorner_Carrier_Coop_Missile.m3"/>
+    </CModel>
+    <CModel id="DRBattlecruiserAirAttackImpact">
+        <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile_Burst\MiraHorner_Carrier_Coop_Missile_Burst.m3"/>
+    </CModel>
+    <CModel id="DRBattlecruiserGLMWeapon">
+        <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile\MiraHorner_Carrier_Coop_Missile.m3"/>
+    </CModel>
+    <CModel id="DRBattlecruiserGroundAttackImpact">
+        <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile_Burst\MiraHorner_Carrier_Coop_Missile_Burst.m3"/>
     </CModel>
     <CModel id="DevilDog">
         <Model value="Assets\COOP\Tychus\Units\Firebat_Heavens_COOP\Firebat_Heavens_COOP.m3"/>
@@ -172,6 +230,12 @@
         <EditorCategories value="Race:Terran"/>
         <Lighting value="DominionKillTeam"/>
         <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="DuskWing">
+        <Model value="Assets\Units\Terran\Banshee_CovertsOps_Collection\Banshee_CovertsOps_Collection.m3"/>
+    </CModel>
+    <CModel id="DuskWingBansheeDeath">
+        <Model value="Assets\Units\Terran\Banshee_CovertsOps_Collection_Death\Banshee_CovertsOps_Collection_Death.m3"/>
     </CModel>
     <CModel id="ExperimentalPlasmaGunImpact">
         <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile_Burst\MiraHorner_Carrier_Coop_Missile_Burst.m3"/>
@@ -336,11 +400,29 @@
     <CModel id="Hellion2" parent="HellionBase">
         <Model value="Assets\Terran\Unit_Eyeser_Merc_Hellion.m3"/>
     </CModel>
+    <CModel id="Hellion3" parent="HellionBase">
+        <Model value="Assets\Units\Terran\Stinger\Stinger.m3"/>
+    </CModel>
+    <CModel id="HellionDeath2" parent="HellionDeathBase">
+        <Model value="Assets\Units\Terran\Stinger\StingerDeath.m3"/>
+    </CModel>
+    <CModel id="HellionPortrait2" parent="HellionPortraitBase">
+        <Model value="Assets\Portraits\Terran\StingerSCBW@Portrait\StingerSCBW@Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\StingerSCBW@Portrait.fxa"/>
+        <Image value="Assets\Textures\stingerSCBW@portrait_static.dds"/>
+        <Lighting value="HellionPortrait"/>
+    </CModel>
     <CModel id="HellionTank2" parent="HellionHellbatBase">
         <Model value="Assets\Terran\Unit_Eyeser_Merc_Hellbat.m3"/>
     </CModel>
     <CModel id="HellionTankMorph2" parent="HellionMorphBase">
         <Model value="Assets\Terran\Unit_Eyeser_Merc_HH_Morph.m3"/>
+    </CModel>
+    <CModel id="HelsAngelAssault">
+        <Model value="Assets\Units\Terran\VikingAssault_CovertOps_Collection\VikingAssault_CovertOps_Collection.m3"/>
+    </CModel>
+    <CModel id="HelsAngelFighter">
+        <Model value="Assets\Units\Terran\VikingFighter_CovertOps_Collection\VikingFighter_CovertOps_Collection.m3"/>
     </CModel>
     <CModel id="HercPortrait2" parent="Portrait" Race="Protoss">
         <Model value="Assets\Portraits\Terran\OdinPortrait\OdinPortrait.m3"/>
@@ -366,6 +448,26 @@
         <SelectionRadius value="0.750000"/>
         <ShadowRadius value="0.750000"/>
         <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="Liberator2" parent="LiberatorBase">
+        <Model value="Assets\Terran\SC2Valkyrie_GhostNova_UED.m3"/>
+        <SelectionRadius value="1.000000"/>
+    </CModel>
+    <CModel id="LiberatorAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Impact\Goliath_Lockdown_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="LiberatorDamageMissile2" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Missile\Goliath_Lockdown_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="LiberatorDeath2" parent="LiberatorDeathBase">
+        <Model value="Assets\Units\Terran\ValkyrieDeath\ValkyrieDeath.m3"/>
+    </CModel>
+    <CModel id="LiberatorPortrait2" parent="LiberatorPortraitBase">
+        <Model value="Assets\UED Portraits\ValkyrieRemastered_UED_Portrait.m3"/>
+        <Image value="Assets\Textures\LiberatorPortrait_Static.dds"/>
+        <Lighting value="PortraitLiberatorEx2"/>
     </CModel>
     <CModel id="MarauderKillSquadPortrait">
         <Model value="Assets\Terran\Marauder_Viper_Portrait.m3"/>
@@ -471,6 +573,17 @@
     </CModel>
     <CModel id="MedicStetmann">
         <Model value="Assets\Terran\DaveSpectreFieldTechnicSuit.m3"/>
+    </CModel>
+    <CModel id="Medivac2" parent="MedivacBase">
+        <Model value="Assets\Units\Terran\ValkyrieSCBW\ValkyrieSCBW.m3"/>
+    </CModel>
+    <CModel id="MedivacDeath2" parent="MedivacDeathBase">
+        <Model value="Assets\Units\Terran\ValkyrieSCBW\ValkyrieSCBW@Death.m3"/>
+    </CModel>
+    <CModel id="MedivacPortrait2" parent="MedivacPortraitBase">
+        <Model value="Assets\Portraits\Terran\Valkyrie@PortraitSCBW\Valkyrie@PortraitSCBW.m3"/>
+        <Image value="Assets\Textures\MedivacPortrait_Static.dds"/>
+        <Lighting value="MedivacPortrait"/>
     </CModel>
     <CModel id="MengskReaper">
         <Model value="Assets\Terran\Reaper.m3"/>
@@ -650,6 +763,19 @@
     <CModel id="SpartanCompany">
         <Model value="Assets\UED Units\UED_Goliath_V1.m3"/>
     </CModel>
+    <CModel id="Spectre2" parent="Unit">
+        <Model value="Assets\Terran\Spectre_ToshsGoons_Collection_Male.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
     <CModel id="StetmannMedicPortrait">
         <Model value="Assets\Terran\DaveSpectrePortrait.m3"/>
     </CModel>
@@ -658,6 +784,9 @@
     </CModel>
     <CModel id="TitanMechFighter">
         <Model value="Assets\UED Units\Viper_NightRaven_V1.m3"/>
+    </CModel>
+    <CModel id="Tosh">
+        <Model value="Assets\Terran\Tosh_ToshsGoons_HD.m3"/>
     </CModel>
     <CModel id="TychusChaingun">
         <Model value="Assets\COOP\Tychus\Units\Tychus_Heavens_COOP\Tychus_Heavens_COOP.m3"/>
@@ -693,6 +822,18 @@
         <FacialController value="LocalizedData\Facial\HellionPortrait.fxa"/>
         <Image value="Assets\Textures\hellion_covertops_collection_portrait_static.dds"/>
         <Lighting value="TychusPortrait"/>
+    </CModel>
+    <CModel id="VikingFighterAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Impact\Goliath_Lockdown_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VikingFighterAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileLaunch\VikingFighterMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VikingFighterWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Missile\Goliath_Lockdown_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="Vulture2" parent="Unit">
         <Model value="Assets\Terran\Terran_Shatterer_V3.m3"/>
@@ -769,5 +910,51 @@
     </CModel>
     <CModel id="WidowMine222" parent="WidowMineBase">
         <Model value="Assets\Units\Terran\WidowMine_Junker_Collection\WidowMine_Junker_Collection.m3"/>
+    </CModel>
+    <CModel id="Wraith2" parent="Unit">
+        <Model value="Assets\Units\Terran\WraithSCBW\WraithSCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow04"/>
+        <Radius value="0.625000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+        <TechPurchaseCamera value="TechPurchaseStarship"/>
+        <Tipability value="0.750000"/>
+        <UnitGlossaryCamera value="Star2CameraLow04"/>
+    </CModel>
+    <CModel id="Wraith22" parent="Unit">
+        <Model value="Assets\Units\Terran\Wraith_Junker_Collection\Wraith_Junker_Collection.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow04"/>
+        <Radius value="0.625000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+        <TechPurchaseCamera value="TechPurchaseStarship"/>
+        <Tipability value="0.750000"/>
+        <UnitGlossaryCamera value="Star2CameraLow04"/>
+    </CModel>
+    <CModel id="Wraith222" parent="Unit">
+        <Model value="Assets\Terran\Wraith_Cerberus.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="Wraith22"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow04"/>
+        <Radius value="0.625000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+        <TechPurchaseCamera value="TechPurchaseStarship"/>
+        <Tipability value="0.750000"/>
+        <UnitGlossaryCamera value="Star2CameraLow04"/>
+    </CModel>
+    <CModel id="WreckingCrewAssaultDeath">
+        <Model value="Assets\Units\Terran\VikingAssault_CovertOps_Collection_Death\VikingAssault_CovertOps_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="WreckingCrewFighterDeath">
+        <Model value="Assets\Units\Terran\VikingFighter_CovertOps_Collection_Death\VikingFighter_CovertOps_Collection_Death_00.m3"/>
+    </CModel>
+    <CModel id="WreckingCrewMorph">
+        <Model value="Assets\Units\Terran\VikingMorph_CovertOps_Collection\VikingMorph_CovertOps_Collection.m3"/>
     </CModel>
 </Catalog>
