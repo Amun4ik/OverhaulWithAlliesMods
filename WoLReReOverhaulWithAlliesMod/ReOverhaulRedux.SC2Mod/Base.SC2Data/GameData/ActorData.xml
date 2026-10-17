@@ -203,6 +203,20 @@
         <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Liberator_Junker"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Liberator_Junker"/>
     </CActorUnit>
+    <CActorModel id="RegenImpact2" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.SwarmQueenRegenAuraTarget2.Start; At Target" Send="Create"/>
+        <On Terms="Effect.StukovRegenAuraTarget.Start; At Target" Send="Create"/>
+        <On Terms="Effect.DehakaRegenAuraTarget.Start; At Target" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorModel>
+    <CActorModel id="RegenImpact22" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.SwarmQueenRegenAuraTarget22.Start; At Target" Send="Create"/>
+        <On Terms="Effect.StukovRegenAuraTarget.Start; At Target" Send="Create"/>
+        <On Terms="Effect.DehakaRegenAuraTarget.Start; At Target" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+    </CActorModel>
     <CActorUnit id="Stalker2" parent="GenericUnitBase" unitName="Stalker2">
         <Aliases value="_UnitMedium"/>
         <Macros value="TerrainSquibAnimations"/>
@@ -1336,6 +1350,20 @@
         <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Spectre2"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Spectre2"/>
     </CActorUnit>
+    <CActorModel id="SwarmQueenRegenAuraSplat2" parent="ModelAddition">
+        <On Terms="Behavior.SwarmQueenRegenAura2.On" Send="Create"/>
+        <On Terms="Behavior.SwarmQueenRegenAura2.Off" Send="Destroy"/>
+        <HostSiteOps Ops="SOpShadow SOpForwardNorth"/>
+        <Model value="RegenAuraSplat2"/>
+        <AutoScaleFactor value="0.350000"/>
+    </CActorModel>
+    <CActorModel id="SwarmQueenRegenAuraSplat22" parent="ModelAddition">
+        <On Terms="Behavior.SwarmQueenRegenAura22.On" Send="Create"/>
+        <On Terms="Behavior.SwarmQueenRegenAura22.Off" Send="Destroy"/>
+        <HostSiteOps Ops="SOpShadow SOpForwardNorth"/>
+        <Model value="RegenAuraSplat22"/>
+        <AutoScaleFactor value="0.350000"/>
+    </CActorModel>
     <CActorMissile id="TankModeMorphModel">
         <On Terms="Upgrade.DominionForces.Add" Send="ModelSwap SiegeTankSiegedMorph23"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps2" Send="ModelSwap SiegeTankSiegedMorph23"/>

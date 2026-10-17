@@ -29,6 +29,14 @@
         <Visibility value="Visible"/>
         <Amount value="8"/>
     </CEffectDamage>
+    <!--CEffectLaunchMissile id="DefilerMPPlagueLM">-->
+    <!--        <ImpactEffect value="DefilerMPPlagueSearch"/>-->
+    <!--        <AmmoUnit value="DefilerMPPlagueWeapon"/>-->
+    <!--        <ImpactLocation Value="TargetPoint"/>-->
+    <!--    </CEffectLaunchMissile-->
+    <CEffectEnumArea id="DefilerMPPlagueSearch">
+        <AreaArray index="0" Radius="2.5"/>
+    </CEffectEnumArea>
     <CEffectCreatePersistent id="GoliathA22">
         <ValidatorArray value="CasterIsNotHidden"/>
         <EditorCategories value="Race:Terran"/>
@@ -428,7 +436,7 @@
     <CEffectDamage id="DiamondbackBeam3" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
-        <Amount value="8"/>
+        <Amount value="6"/>
         <Death value="Eviscerate"/>
     </CEffectDamage>
     <CEffectSet id="DiamondbackDamageSet2">
@@ -599,7 +607,7 @@
         <ResponseFlags index="Flee" value="1"/>
         <ImpactLocation Value="TargetUnit"/>
         <Flags index="Notification" value="1"/>
-        <Amount value="25"/>
+        <Amount value="60"/>
     </CEffectDamage>
     <!-- Thor Anti Massive Buff -->
     <CEffectDamage id="LanceMissileLaunchersDamage">
@@ -899,7 +907,7 @@
         <Amount value="10"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="SkyTankMissileBarrageCP">
-        <PeriodicPeriodArray index="0" value="2"/>
+        <PeriodicPeriodArray index="0" value="4"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="SkyTankMissileBarrageDamage">
         <Amount value="80"/>
@@ -909,14 +917,14 @@
         <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetUnit"/>
         <ArmorReduction value="0"/>
-        <Amount value="20"/>
+        <Amount value="40"/>
     </CEffectDamage>
     <CEffectDamage id="SkyTankMissileBarrageDamage22" parent="DU_WEAP">
         <ValidatorArray value="IsGroundUnit"/>
         <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetUnit"/>
         <ArmorReduction value="0"/>
-        <Amount value="10"/>
+        <Amount value="20"/>
     </CEffectDamage>
     <CEffectDamage id="SkyTankMissileBarrageDamage222" parent="DU_WEAP">
         <ValidatorArray value="IsGroundUnit"/>
@@ -928,7 +936,7 @@
     <CEffectEnumArea id="SkyTankMissileBarrageSearch">
         <AreaArray index="0" Radius="1"/>
         <AreaArray Radius="2.5" Effect="SkyTankMissileBarrageDamage2"/>
-        <AreaArray Radius="7.5" Effect="SkyTankMissileBarrageDamage22"/>
+        <AreaArray Radius="5" Effect="SkyTankMissileBarrageDamage22"/>
     </CEffectEnumArea>
     <CEffectDamage id="SpecterU">
         <AttributeBonus index="Armored" value="0"/>
@@ -939,6 +947,28 @@
         <AttributeFactor index="Armored" value="0.5"/>
         <Amount value="20"/>
     </CEffectDamage>
+    <CEffectEnumArea id="SwarmQueenRegenAuraSearch2">
+        <ImpactLocation Value="TargetUnit"/>
+        <SearchFilters value="-;Neutral,Enemy,Structure,Stasis,Dead,Hidden"/>
+        <AreaArray Radius="3" Effect="SwarmQueenRegenAuraTarget2"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="SwarmQueenRegenAuraSearch22">
+        <ImpactLocation Value="TargetUnit"/>
+        <SearchFilters value="-;Neutral,Enemy,Structure,Stasis,Dead,Hidden"/>
+        <AreaArray Radius="3" Effect="SwarmQueenRegenAuraTarget22"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="SwarmQueenRegenAuraTarget2">
+        <ValidatorArray index="0" value="LifeNotFull"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SwarmQueenRegenAuraTarget22">
+        <ValidatorArray index="0" value="LifeNotFull"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CEffectApplyBehavior>
     <CEffectCreatePersistent id="ThorsHammer">
         <PeriodCount value="6"/>
         <PeriodicEffectArray index="1" value="JavelinMissileLaunchersLM"/>

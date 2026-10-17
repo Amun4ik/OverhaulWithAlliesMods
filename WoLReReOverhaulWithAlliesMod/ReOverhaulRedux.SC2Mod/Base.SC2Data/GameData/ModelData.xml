@@ -48,6 +48,22 @@
         <Image value="Assets\Textures\Valkyrie_UED_Portrait_static.dds"/>
         <Lighting value="PortraitLiberatorEx2"/>
     </CModel>
+    <CModel id="RegenAuraSplat2" parent="PersistentSpellFX">
+        <Model value="Assets\COOP\Tychus\Effects\HealingWard_Heavens_COOP_Splat\HealingWard_Heavens_COOP_Splat.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="RegenAuraSplat22" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\QueenRegenAura\QueenRegenAura.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+    </CModel>
+    <CModel id="RegenImpact2" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\NanoRepairBeamImpact\NanoRepairBeamImpact.m3"/>
+    </CModel>
+    <CModel id="RegenImpact22" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Other\SwarmHeroGlow\SwarmHeroGlow.m3"/>
+    </CModel>
     <CModel id="Stalker2" parent="StalkerBase">
         <Model value="Assets\Units\Protoss\Stalker_Taldarim_Collection\Stalker_Taldarim_Collection.m3"/>
         <TextureDeclares Prefix="stalker_">
@@ -816,8 +832,8 @@
         <Model value="Assets\Units\Terran\SiegeTankMercenaryMorph\SiegeTankMercenaryMorph.m3"/>
     </CModel>
     <CModel id="SkyTankMissileBarrageMissileWarning">
-        <ScaleMax value="7.500000,7.500000,7.500000"/>
-        <ScaleMin value="7.500000,7.500000,7.500000"/>
+        <ScaleMax value="5.000000,5.000000,5.000000"/>
+        <ScaleMin value="5.000000,5.000000,5.000000"/>
     </CModel>
     <CModel id="SpartanCompany">
         <Model value="Assets\UED Units\UED_Goliath_V1.m3"/>

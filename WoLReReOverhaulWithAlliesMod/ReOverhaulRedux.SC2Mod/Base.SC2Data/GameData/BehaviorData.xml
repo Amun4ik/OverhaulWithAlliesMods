@@ -43,6 +43,7 @@
     <CBehaviorBuff id="AllyNormalMode">
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="DefilerMPPlague"/>
     <CBehaviorBuff id="DisableAlliedPing">
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
@@ -137,6 +138,32 @@
         <Modification>
             <VitalRegenArray index="Life" value="15"/>
         </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SwarmQueenRegenAura2">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Period value="0.95"/>
+        <PeriodicEffect value="SwarmQueenRegenAuraSearch2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SwarmQueenRegenAura22">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Period value="0.95"/>
+        <PeriodicEffect value="SwarmQueenRegenAuraSearch22"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SwarmQueenRegenAuraTarget2">
+        <InfoIcon value="Assets\Textures\btn-upgrade-swann-improvednanorepair.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SwarmQueenRegenAuraTarget22">
+        <InfoIcon value="Assets\Textures\talent-raynor-level14-infantryattackspeed.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <Modification AttackSpeedMultiplier="1.1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="VoodooShield">
         <Duration value="20"/>
