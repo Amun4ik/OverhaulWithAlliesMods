@@ -1,4 +1,5 @@
-﻿Button/Hotkey/DeploySpiderMines=W
+﻿Button/Hotkey/AlarakDeadlyCharge2=E
+Button/Hotkey/DeploySpiderMines=W
 Button/Hotkey/NovaXanthosToggleRepairModeOn=R
 Button/Hotkey/TossGrenade=Q
 Button/Hotkey/UltrasonicPulseEnhanced=Q

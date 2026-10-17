@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="Supplicant_DeathFX" parent="Combat">
+        <AssetArray File="Assets\Sounds\Adept_DeathFX00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Adept_DeathFX01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Adept_DeathFX02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Adept_DeathFX03.wav" FacialGroup=""/>
+        <Pitch value="-3.000000,-2.000000"/>
+        <Volume value="-7.000000,-7.000000"/>
+        <DupeDestroyCount value="3"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+    </CSound>
+    <CSound id="Supplicant_AttackImpact" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackImpact01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackImpact02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackImpact03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackImpact04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackImpact05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackImpact06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackImpact07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackImpact08.wav" FacialGroup=""/>
+        <DupeMuteCount value="3"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-7.000000,-7.000000"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeDestroyCount value="3"/>
+    </CSound>
+    <CSound id="Supplicant_AttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackLaunch01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackLaunch02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackLaunch03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackLaunch04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackLaunch05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackLaunch06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackLaunch07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackLaunch08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackLaunch09.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Supplicant_AttackLaunch10.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-11.000000,-4.000000"/>
+        <DupeDestroyCount value="3"/>
+    </CSound>
+    <CSound id="StalkerTaldarim_PhaseArmor_On" parent="Spell">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOn01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOn02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOn03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOn04_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOn05_1ch.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-6.000000,-6.000000"/>
+        <DupeDestroyCount value="3"/>
+    </CSound>
+    <CSound id="StalkerTaldarim_PhaseArmor_Off" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Immortal_BarrierOff_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Immortal_BarrierOff_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Immortal_BarrierOff_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Immortal_BarrierOff_04.wav" FacialGroup=""/>
+        <Pitch value="2.000000,3.000000"/>
+        <Volume value="-15.000000,-15.000000"/>
+    </CSound>
     <CSound id="Lurker_AttackLaunch2">
         <AssetArray index="0" File="Assets\Sounds\GrenadePulse_Explosion01.wav"/>
         <AssetArray index="1" File="Assets\Sounds\GrenadePulse_Explosion02.wav"/>

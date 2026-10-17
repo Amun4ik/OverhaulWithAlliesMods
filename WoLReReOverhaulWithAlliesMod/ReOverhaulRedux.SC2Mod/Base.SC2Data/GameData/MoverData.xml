@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CMoverMissile id="SupplicantWeapon" parent="MissileDefault"/>
     <CMoverMissile id="ImmortalTaldarimWeaponMover">
         <MotionPhases index="0">
             <MaxSpeed value="5"/>

@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="AlarakStalkerPhasingArmor">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse Handled="AlarakStalkerPhasingArmorBuffApply">
+            <Chance value="1"/>
+            <Cost>
+                <Cooldown TimeUse="20"/>
+            </Cost>
+        </DamageResponse>
+        <DisableValidatorArray value="HaveBlink"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AlarakStalkerPhasingArmorBuff">
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-phaseshift2.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <Duration value="3"/>
+        <Modification ShieldArmorBonus="10"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AlarakDeadlyChargeDamageReady2">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AlarakDeadlyCharging2">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-charge.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="ChargeMinDistance"/>
+        <BuffFlags index="Channeling" value="1"/>
+        <Duration value="3.5"/>
+        <InitialEffect value="AlarakDeadlyChargeDamageReadyApply2"/>
+        <FinalEffect value="AlarakDeadlyChargeFinalSet2"/>
+        <Modification MoveSpeedMultiplier="6.8">
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="AllyDefensiveMode">
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>

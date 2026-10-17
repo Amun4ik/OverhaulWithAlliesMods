@@ -1,4 +1,5 @@
-﻿Abil/Name/AlliedAIOrderAttack=AlliedAIOrderAttack
+﻿Abil/Name/AlarakDeadlyCharge2=Deadly Charge
+Abil/Name/AlliedAIOrderAttack=AlliedAIOrderAttack
 Abil/Name/AlliedAIOrderDefend=AlliedAIOrderDefend
 Abil/Name/AlliedAIOrderForceAttack=AlliedAIOrderForceAttack
 Abil/Name/AllyAgressiveMode=AllyAgressiveMode
@@ -12,6 +13,8 @@ Behavior/Name/AllyDefensiveMode=AllyDefensiveMode
 Behavior/Name/AllyNormalMode=AllyNormalMode
 Behavior/Name/DisableAlliedPing=DisableAlliedPing
 Behavior/Name/GeyserExhaustedHarvestable=Geyser Exhausted
+Button/Name/AlarakDeadlyCharge2=Deadly Charge
+Button/Name/AlarakStalkerPhasingArmor=Phasing Armor
 Button/Name/AlliedAIAggressive=Aggressive Mode
 Button/Name/AlliedAIAggressive2=Aggressive Mode
 Button/Name/AlliedAIAttack=Select Attack Target
@@ -27,6 +30,7 @@ Button/Name/EnableAllyPing=Enable Ally Help Pings
 Button/Name/ExperimentalPlasmaGun=Experimental Scourge Rifle Grenade
 Button/Name/NovaXanthosToggleRepairModeOn=Self Repair
 Button/Name/TossGrenade=HE Grenade
+Button/Tooltip/AlarakDeadlyCharge2=Supplicant intercepts target enemy unit and strikes it for <d ref="Effect,AlarakDeadlyChargeDamage,Amount"/> damage.
 Button/Tooltip/AlliedAIAggressive=Orders your ally to focus entirely on offense, attacking enemies more frequently while neglecting defense.
 Button/Tooltip/AlliedAIAggressive2=Orders your ally to focus entirely on offense, attacking enemies more frequently while neglecting defense.
 Button/Tooltip/AlliedAIAttack=Set a target point that your ally will prioritize for attacks.
@@ -58,6 +62,7 @@ Button/Tooltip/PickupMinerals100Text=<s val="Kicker_Minerals">+75 </s><IMG path=
 Button/Tooltip/RaynorCommando=Mysterious Field Captain of the Rebellion. Has a infantry railgun with different rounds.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/RenegadeMissileTurret=Experimental defense turret. Deal damage in a chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c><n/><c val="FFE303">Detector</c>
 Button/Tooltip/SiegeTank3=Heavy tank. Can switch into Siege Mode to provide long-range artillery support.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/Stalker2=Ranged attack strider. Can use Blink.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/Stetmann=Jezik can heal and repair at lightning speed. Also can take control over weak minded enemy. <n/><n/><c val="#ColorAttackInfo">Has no attack.</c><n/>
 Button/Tooltip/TossGrenade=Tosses a grenade that explodes for <d ref="Effect,TossGrenadeDamage,Amount"/> damage in a radius. <n/><n/><c val="ffff8a">Does not harm friendly units.</c>
 Button/Tooltip/TychusChaingun=A scoundrel, a Pirate and "Good" old friend of Raynor. Has a shit ton of explosives.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
@@ -66,6 +71,7 @@ Button/Tooltip/TychusCommando2=Long-hand of Dominion Infantry Corp. <n/><n/><c v
 Button/Tooltip/Vulture2=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Vulture3=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/WidowMineBioSplash=Attacks by launching missiles at enemy ground and air units that get too close. Missiles deal <d ref="Effect,WidowMineExplodeDirect,Amount"/> (+50% vs. shields) damage to their primary target, and <d ref="Effect,WidowMineExplodeSplash,Amount"/> (+<d ref="Effect,WidowMineExplodeSplashShields,VitalBonus[Shields]"/> vs. shields) splash damage to units nearby.<n/><n/><c val="#ColorAttackInfo">Cooldown: <d ref="Abil,WidowMineAttack,Cost[0].Cooldown[0].TimeUse[0]"/> seconds.</c>
+Button/Tooltip/Zealot2=Powerful melee warrior. Can use Charge.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Effect/Name/90mmCannons2=Arclite Cannon (Damage)
 Effect/Name/90mmCannons3=Arclite Cannon (Damage)
 Effect/Name/ATALaserBatteryLM=Light Laser Battery
@@ -74,6 +80,14 @@ Effect/Name/ATSLaserBatteryLM=Heavy Laser Battery
 Effect/Name/ATSLaserBatteryLM2=Heavy Laser Battery
 Effect/Name/ATSLaserBatteryU=Heavy Laser Battery
 Effect/Name/ATSLaserBatteryU2=Heavy Laser Battery
+Effect/Name/AlarakDeadlyCharge2=Supplicant Deadly Charge
+Effect/Name/AlarakDeadlyChargeAB2=Supplican tDeadly Charge AB
+Effect/Name/AlarakDeadlyChargeDamage2=Supplicant Deadly Charge Damage
+Effect/Name/AlarakDeadlyChargeDamageModelCP2=SupplicantDeadlyChargeDamageModelCP
+Effect/Name/AlarakDeadlyChargeDamageReadyApply2=Supplicant Deadly Charge Damage Ready Apply
+Effect/Name/AlarakDeadlyChargeDamageRemove2=Supplicant Deadly Charge Damage Remove
+Effect/Name/AlarakDeadlyChargeFinalSet2=Supplicant Deadly Charge Final Set
+Effect/Name/AlarakDeadlyChargeSearch2=Supplicant Deadly Charge Search
 Effect/Name/AllyAggressiveModeApply=AllyAggressiveModeApply
 Effect/Name/AllyAggressiveModeApply2=AllyDefensiveModeApply
 Effect/Name/AllyAggressiveModeRemove=AllyAggressiveModeRemove
@@ -113,6 +127,10 @@ Effect/Name/LiberatorMissileDamage2=Valkyrie Missile Damage
 Effect/Name/LurkerMP=Ultra-Sonic
 Effect/Name/LurkerMPDamage=Ultra-Sonic
 Effect/Name/LurkerMPSearch=Ultra-Sonic
+Effect/Name/ParticleDisruptors2=Entropy Lance (LM)
+Effect/Name/ParticleDisruptorsU2=Entropy Lance (Damage)
+Effect/Name/PsiBlades2=Psi Blades (Damage)
+Effect/Name/PsiBladesBurst2=Psi Blades
 Effect/Name/PunisherGrenadesLM2=Loyalist Grenades
 Effect/Name/PunisherGrenadesSet2=Loyalist Grenades
 Effect/Name/PunisherGrenadesU2=Loyalist Grenades
@@ -129,9 +147,14 @@ Effect/Name/SkyTankMissileBarrageDamage22=Mortar Missile Damage 3
 Effect/Name/SkyTankMissileBarrageDamage222=Mortar Missile Damage UI
 Effect/Name/SkyTankMissileBarrageLM=Mortar Missile
 Effect/Name/SkyTankMissileBarrageSearch=Mortar Missile Search
+Effect/Name/StalkerEntropyLanceSearch2=Stalker - Entropy Lance (Search)
+Effect/Name/StalkerEntropyLanceSearchSet2=Stalker - Entropy Lance (Impact Set)
+Effect/Name/StalkerEntropyLanceSecondaryDamage2=Entropy Lance Secondary Damage
+Effect/Name/StalkerEntropyLanceSecondaryLM2=Entropy Lance Secondary LM
 Effect/Name/WarHound=War Hound Damage
 Effect/Name/WarHoundSet=War Hound Set
 Effect/Name/WraithAG=WraithAG (Persistent)
+Effect/Name/ZealotPsiBladesCleaveSet2=Supplicant Psi Blades (Cleave Set)
 Param/Expression/lib_7D432011_226087B8=~A~'s Supply
 Param/Expression/lib_7D432011_316909C0=~C~~A~/~B~
 Param/Expression/lib_7D432011_5B275374=~C~~A~/~B~
@@ -175,13 +198,17 @@ Unit/Name/RaynorCommando=Nekromant
 Unit/Name/RenegadeMissileTurret=Tesla Coil
 Unit/Name/SiegeTank2=Bastion Tank
 Unit/Name/SiegeTank3=Beastslayer Self-Propelled Gun
+Unit/Name/Stalker2=Slayer
+Unit/Name/StalkerWeapon2=Stalker
 Unit/Name/Stetmann=Jezik
+Unit/Name/Supplicant=Votary
 Unit/Name/Swann=Defender
 Unit/Name/TychusCommando=Commando
 Unit/Name/TychusCommando2=Loyalist
 Unit/Name/VikingFighterWeapon2=Viking Fighter
 Unit/Name/Vulture2=Thunderlord
 Unit/Name/Vulture3=Condor
+Unit/Name/Zealot2=Supplicant
 UnitKillRank/Swann1=Sergeant
 UnitKillRank/Tychus2=Private
 UnitKillRank/Tychus3=Veteran
@@ -213,9 +240,12 @@ Weapon/Name/KorhalPalaceGate22=Earth Shatter Munition
 Weapon/Name/LanzerTorpedoes2=Lanzer Torpedoes
 Weapon/Name/LiberatorMissileLaunchers2=H.A.L.O. Rockets
 Weapon/Name/LongboltMissile2=Longbolt Missile
+Weapon/Name/ParticleDisruptors2=Particle Disruptors
+Weapon/Name/PsiBlades2=Blood Blades
 Weapon/Name/PunisherGrenades2=Diplomacy Grenades
 Weapon/Name/RailGunTurret=Drakken Grenade Launcher
 Weapon/Name/RenegadeLongboltMissile=Tesla Coil
+Weapon/Name/SupplicantWeapon=Blood Orb
 Weapon/Name/TyphoonMissilePod=Typhoon Ground-Ground Missiles
 Weapon/Name/TyphoonMissilePod2=Typhoon Ground-Air Missiles
 Weapon/Name/Vulture2=Ultra-Sonic Weapon

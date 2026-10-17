@@ -72,6 +72,7 @@ trigger lib7D432011_gt_ShareMineralPickupwithAllies;
 trigger lib7D432011_gt_ShareVespenePickupwithAllies;
 trigger lib7D432011_gt_RestoreInfiniteResources;
 trigger lib7D432011_gt_Checkifgeyserdepleted;
+trigger lib7D432011_gt_WarpgateAutocastForplayer;
 trigger lib7D432011_gt_AISupplyBlockPreventer;
 trigger lib7D432011_gt_AIBuildsuppliesonlyifneeded;
 trigger lib7D432011_gt_AIInDangerDontBuildWorkers;

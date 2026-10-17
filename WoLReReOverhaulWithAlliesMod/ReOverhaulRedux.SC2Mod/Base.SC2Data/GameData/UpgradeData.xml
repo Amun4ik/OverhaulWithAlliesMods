@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUpgrade id="AdeptPiercingAttack">
+        <EffectArray Reference="Weapon,SupplicantWeapon,RateMultiplier" Value="0.45"/>
+    </CUpgrade>
+    <CUpgrade id="Charge">
+        <EffectArray Reference="Unit,Zealot2,Speed" Value="0.250000"/>
+    </CUpgrade>
     <CUpgrade id="DominionForces">
         <EffectArray Reference="Unit,Marine,LifeMax" Value="25"/>
         <EffectArray Reference="Unit,Marine,LifeStart" Value="25"/>
@@ -24,6 +30,117 @@
         <EffectArray Reference="Unit,Ghost,LifeArmor" Value="1"/>
     </CUpgrade>
     <CUpgrade id="Mercenarys"/>
+    <CUpgrade id="ProtossGroundArmorsLevel1">
+        <AffectedUnitArray value="Zealot2"/>
+        <AffectedUnitArray value="Supplicant"/>
+        <EffectArray Reference="Unit,Zealot2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Zealot2,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Zealot2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray Reference="Unit,Supplicant,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Supplicant,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray Reference="Unit,Stalker2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Stalker2,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Stalker2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundArmorsLevel2">
+        <AffectedUnitArray value="Zealot2"/>
+        <AffectedUnitArray value="Supplicant"/>
+        <EffectArray Reference="Unit,Zealot2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Zealot2,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Zealot2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray Reference="Unit,Supplicant,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Supplicant,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray Reference="Unit,Stalker2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Stalker2,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Stalker2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundArmorsLevel3">
+        <AffectedUnitArray value="Zealot2"/>
+        <AffectedUnitArray value="Supplicant"/>
+        <EffectArray Reference="Unit,Zealot2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Zealot2,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Zealot2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray Reference="Unit,Supplicant,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Supplicant,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray Reference="Unit,Stalker2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Stalker2,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Stalker2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossShieldsLevel1">
+        <AffectedUnitArray value="Zealot2"/>
+        <AffectedUnitArray value="Supplicant"/>
+        <EffectArray Reference="Unit,Zealot2,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Zealot2,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Zealot2,Actor" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,Actor" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Reference="Unit,Stalker2,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Stalker2,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Stalker2,Actor" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossShieldsLevel2">
+        <AffectedUnitArray value="Zealot2"/>
+        <AffectedUnitArray value="Supplicant"/>
+        <EffectArray Reference="Unit,Zealot2,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Zealot2,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Zealot2,Actor" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,Actor" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Reference="Unit,Stalker2,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Stalker2,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Stalker2,Actor" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossShieldsLevel3">
+        <AffectedUnitArray value="Zealot2"/>
+        <AffectedUnitArray value="Supplicant"/>
+        <EffectArray Reference="Unit,Zealot2,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Zealot2,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Zealot2,Actor" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,Actor" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Reference="Unit,Stalker2,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Stalker2,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,Stalker2,Actor" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundWeaponsLevel1">
+        <EffectArray Reference="Weapon,PsiBlades2,Level" Value="1"/>
+        <EffectArray Reference="Effect,PsiBlades2,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,PsiBlades2,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray Reference="Weapon,SupplicantWeapon,Level" Value="1"/>
+        <EffectArray Reference="Effect,SupplicantWeapon,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,SupplicantWeapon,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray Reference="Weapon,ParticleDisruptors2,Level" Value="1"/>
+        <EffectArray Reference="Effect,ParticleDisruptorsU2,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,ParticleDisruptors2,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundWeaponsLevel2">
+        <EffectArray Reference="Weapon,PsiBlades2,Level" Value="1"/>
+        <EffectArray Reference="Effect,PsiBlades2,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,PsiBlades2,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel2.dds"/>
+        <EffectArray Reference="Weapon,SupplicantWeapon,Level" Value="1"/>
+        <EffectArray Reference="Effect,SupplicantWeapon,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,SupplicantWeapon,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel2.dds"/>
+        <EffectArray Reference="Weapon,ParticleDisruptors2,Level" Value="1"/>
+        <EffectArray Reference="Effect,ParticleDisruptorsU2,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,ParticleDisruptors2,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel2.dds"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundWeaponsLevel3">
+        <EffectArray Reference="Weapon,PsiBlades2,Level" Value="1"/>
+        <EffectArray Reference="Effect,PsiBlades2,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,PsiBlades2,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel3.dds"/>
+        <EffectArray Reference="Weapon,SupplicantWeapon,Level" Value="1"/>
+        <EffectArray Reference="Effect,SupplicantWeapon,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,SupplicantWeapon,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel3.dds"/>
+        <EffectArray Reference="Weapon,ParticleDisruptors2,Level" Value="1"/>
+        <EffectArray Reference="Effect,ParticleDisruptorsU2,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,ParticleDisruptors2,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel3.dds"/>
+    </CUpgrade>
     <CUpgrade id="RebellionForces"/>
     <CUpgrade id="ToshGoons"/>
     <CUpgrade id="TychusBoys"/>

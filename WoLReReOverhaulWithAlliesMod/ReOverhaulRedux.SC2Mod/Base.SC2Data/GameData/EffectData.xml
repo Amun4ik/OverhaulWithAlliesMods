@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="AlarakStalkerPhasingArmorBuffApply">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="AlarakStalkerPhasingArmorBuff"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="ParticleDisruptors2">
+        <ValidatorArray index="0" value="StalkerTargetFilters"/>
+        <ValidatorArray value=""/>
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="StalkerEntropyLanceSearchSet2"/>
+        <AmmoUnit value="StalkerWeapon2"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="ParticleDisruptorsU2" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Protoss"/>
+        <AttributeFactor index="Armored" value="0.4"/>
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="StalkerEntropyLanceSearch2">
+        <ValidatorArray value="HaveVoidStalkerMultishot"/>
+        <EditorCategories value=""/>
+        <ExcludeArray Effect="StalkerEntropyLanceSearchSet" Value="Target"/>
+        <SearchFilters value="Visible;Self,Player,Ally,Neutral,Missile,Item,Stasis,Hidden,Invulnerable"/>
+        <AreaArray MaxCount="1" Radius="3" Effect="StalkerEntropyLanceSecondaryLM2"/>
+    </CEffectEnumArea>
+    <CEffectSet id="StalkerEntropyLanceSearchSet2">
+        <EditorCategories value=""/>
+        <EffectArray value="ParticleDisruptorsU2"/>
+    </CEffectSet>
+    <CEffectDamage id="StalkerEntropyLanceSecondaryDamage2">
+        <EditorCategories value="Race:Protoss"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeBonus index="Armored" value="3"/>
+        <ArmorReduction value="1"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Ranged"/>
+        <Amount value="8"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="StalkerEntropyLanceSecondaryLM2">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="StalkerEntropyLanceSecondaryDamage2"/>
+        <AmmoUnit value="StalkerSecondaryWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="SupplicantDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Protoss"/>
+        <Kind value="Ranged"/>
+        <Amount value="20"/>
+        <Death value="Blast"/>
+        <AttributeFactor index="Light" value="0.5"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="SupplicantLM">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="SupplicantDamage"/>
+        <AmmoUnit value="SupplicantWeapon"/>
+        <Movers Link="AdeptWeapon"/>
+    </CEffectLaunchMissile>
     <CEffectDamage id="90mmCannons">
         <AttributeBonus index="Armored" value="0"/>
         <AttributeFactor index="Armored" value="0.5"/>
@@ -35,6 +94,50 @@
         <Amount value="32"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="AlarakDeadlyCharge2">
+        <ValidatorArray value="ChargeMinTriggerDistance"/>
+        <ValidatorArray value="ChargeMaxDistance"/>
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetUnit"/>
+        <InitialEffect value="AlarakDeadlyChargeAB2"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="AlarakDeadlyChargeAB2">
+        <ValidatorArray index="0" value="ChargeMinTriggerDistance"/>
+        <ValidatorArray value="ChargeMaxDistance"/>
+        <EditorCategories value="Race:Protoss"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="AlarakDeadlyCharging2"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="AlarakDeadlyChargeDamage2">
+        <EditorCategories value="Race:Protoss"/>
+        <Amount value="15"/>
+        <Death value="Eviscerate"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="AlarakDeadlyChargeDamageModelCP2">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Effect="AlarakDeadlyCharge" Value="TargetUnit"/>
+        <InitialEffect value="AlarakDeadlyChargeDamage2"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="AlarakDeadlyChargeDamageReadyApply2">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="AlarakDeadlyChargeDamageReady2"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="AlarakDeadlyChargeDamageRemove2">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <BehaviorLink value="AlarakDeadlyChargeDamageReady"/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="AlarakDeadlyChargeFinalSet2">
+        <EditorCategories value=""/>
+        <EffectArray value="AlarakDeadlyChargeDamageRemove2"/>
+        <EffectArray value="AlarakDeadlyChargeDamageModelCP2"/>
+    </CEffectSet>
+    <CEffectEnumArea id="AlarakDeadlyChargeSearch2">
+        <EditorCategories value="Race:Protoss"/>
+        <SearchFilters value="Ground;Player,Ally,Structure,Missile,Stasis,Dead,Hidden,Invulnerable,Unstoppable"/>
+        <AreaArray Radius="1.5" Effect="AlarakDeadlyChargeDamage2"/>
+    </CEffectEnumArea>
     <CEffectSet id="AllPurposeLaserBattery1Set">
         <EffectArray index="0" value="ATALaserBatteryLM"/>
     </CEffectSet>
@@ -703,6 +806,23 @@
     <CEffectDamage id="Predator">
         <Amount value="20"/>
     </CEffectDamage>
+    <CEffectDamage id="PsiBlades2" parent="DU_WEAP">
+        <ValidatorArray value="NotHidden"/>
+        <EditorCategories value="Race:Protoss"/>
+        <AttributeFactor index="Light" value="0.5"/>
+        <Amount value="6"/>
+        <Death value="Eviscerate"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="PsiBladesBurst2">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="PsiBlades2"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.28"/>
+    </CEffectCreatePersistent>
     <CEffectLaunchMissile id="PunisherGrenadesLM2">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PunisherGrenadesSet2"/>
@@ -952,4 +1072,8 @@
         <AreaArray index="1" Radius="0.8"/>
         <AreaArray index="2" Radius="1.6"/>
     </CEffectDamage>
+    <CEffectSet id="ZealotPsiBladesCleaveSet2">
+        <EditorCategories value=""/>
+        <EffectArray value="PsiBladesBurst2"/>
+    </CEffectSet>
 </Catalog>

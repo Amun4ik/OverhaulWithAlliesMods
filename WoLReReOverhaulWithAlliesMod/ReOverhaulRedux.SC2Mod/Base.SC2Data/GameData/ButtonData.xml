@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="AlarakStalkerPhasingArmor">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-stalkerphasingarmor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-protoss-alarak-stalkerphasingarmor.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="AlarakDeadlyCharge2">
+        <Icon value="Assets\Textures\btn-ability-protoss-deadlycharge.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-deadlycharge.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
     <CButton id="AlliedAIAggressive2">
         <Icon value="Assets\Textures\aicommand_harass1.dds"/>
         <AlertIcon value="Assets\Textures\aicommand_harass1.dds"/>

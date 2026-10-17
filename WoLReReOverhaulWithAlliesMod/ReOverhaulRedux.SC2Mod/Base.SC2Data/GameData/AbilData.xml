@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilAugment id="AlarakDeadlyCharge2">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlarakDeadlyCharge2" Requirements="UseCharge"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AbilCmd value="attack,Execute"/>
+        <Cost>
+            <Cooldown Link="Charge" Location="Unit" TimeUse="10"/>
+        </Cost>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Missile,Hidden,Invulnerable"/>
+        <AutoCastValidatorArray value="CasterNotHoldingPosition"/>
+        <AutoCastValidatorArray value="NoUnitKnockback"/>
+    </CAbilAugment>
     <CAbilEffectTarget id="AlliedAIOrderAttack">
         <Effect index="0" value="DummyEffectTarget"/>
         <Flags index="RequireTargetVision" value="0"/>
@@ -58,6 +71,9 @@
     <CAbilEffectTarget id="BonesHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
+    <CAbilAugment id="Charge">
+        <CmdButtonArray index="Execute" Requirements="UseCharge"/>
+    </CAbilAugment>
     <!-- Reaper AutoCast Bombs-->
     <CAbilEffectTarget id="D8Charge">
         <Range index="0" value="7"/>
@@ -88,6 +104,20 @@
     <CAbilTrain id="FactoryTrain">
         <InfoArray index="Train3">
             <Button Requirements=""/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="GatewayTrain">
+        <InfoArray index="Train9" Time="38">
+            <Button DefaultButtonFace="Zealot"/>
+            <Unit value="Zealot2"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="38">
+            <Button DefaultButtonFace="WarpInAdept"/>
+            <Unit value="Supplicant"/>
+        </InfoArray>
+        <InfoArray index="Train11" Time="42">
+            <Button DefaultButtonFace="Stalker" Requirements="HaveCyberneticsCore"/>
+            <Unit value="Stalker2"/>
         </InfoArray>
     </CAbilTrain>
     <CAbilAugment id="HellbatCharge">
@@ -242,6 +272,11 @@
         <CmdButtonArray index="Execute" Requirements=""/>
         <Range index="0" value="9"/>
     </CAbilEffectTarget>
+    <!-- Warp Gates Auto Morph -->
+    <CAbilMorph id="UpgradeToWarpGate">
+        <CmdButtonArray index="Execute" Requirements="UseWarpGate"/>
+        <Flags index="AutoCastOn" value="0"/>
+    </CAbilMorph>
     <CAbilEffectTarget id="WidowMineAttack">
         <Range index="0" value="6"/>
         <AutoCastRange value="6"/>

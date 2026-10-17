@@ -1,5 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="Stalker2" parent="StalkerBase">
+        <Model value="Assets\Units\Protoss\Stalker_Taldarim_Collection\Stalker_Taldarim_Collection.m3"/>
+        <TextureDeclares Prefix="stalker_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="StalkerAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\Stalker_TalDarim_Missile_Impact\Stalker_TalDarim_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="StalkerDeath2" parent="StalkerDeathBase">
+        <Model value="Assets\Units\Protoss\Stalker_Taldarim_Collection_Death\Stalker_Taldarim_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="StalkerPortrait2" parent="StalkerPortraitBase">
+        <Model value="Assets\Portraits\Protoss\Stalker_Taldarim_Collection_Portrait\Stalker_Taldarim_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\StalkerPortrait_Static.dds"/>
+        <Lighting value="StalkerPortrait"/>
+    </CModel>
+    <CModel id="StalkerWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\Stalker_TalDarim_Missile\Stalker_TalDarim_Missile.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+        <SelectionRadius value="0.714000"/>
+        <ShadowRadius value="0.714000"/>
+    </CModel>
+    <CModel id="Supplicant" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+        <ScaleMax value="0.950000,0.950000,0.950000"/>
+        <ScaleMin value="0.950000,0.950000,0.950000"/>
+    </CModel>
+    <CModel id="SupplicantDeath" parent="AdeptDeath">
+        <Model value="Assets\Units\Protoss\ZealotDeath\ZealotDeath.m3"/>
+    </CModel>
+    <CModel id="SupplicantPortrait" parent="ShadePortrait">
+        <FacialController value="LocalizedData\Facial\AdeptPortrait.fxa"/>
+        <Flags index="ForcePortraitModel" value="1"/>
+        <Model value="Assets\Portraits\Protoss\Supplicant_Portrait\Supplicant_Portrait.m3"/>
+    </CModel>
+    <CModel id="SupplicantImpact" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\Supplicant_COOP_Missile_Impact\Supplicant_COOP_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="SupplicantWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\Supplicant_COOP_Missile\Supplicant_COOP_Missile.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="Supplicant_COOP_Missile_Launch" parent="LaunchFX">
+        <Model value="Assets\Effects\Protoss\Supplicant_COOP_Missile_Launch\Supplicant_COOP_Missile_Launch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Supplicant_PlacementModel" parent="Placement">
+        <Model value="Assets\Units\Protoss\Supplicant_PlacementModel\Supplicant_PlacementModel.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.950000,0.950000,0.950000"/>
+        <ScaleMin value="0.950000,0.950000,0.950000"/>
+    </CModel>
+    <CModel id="Supplicant_WarpIn" parent="OneShotSpellFX">
+        <Model value="Assets\Units\Protoss\Supplicant_WarpIn\Supplicant_WarpIn.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <LowQualityModel value="ProtossUnitBirth"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
     <CModel id="ATSLaserBatteryLMWeapon">
         <Model value="Assets\Effects\Terran\BattlecruiserPlasmaMissile\BattlecruiserPlasmaMissile.m3"/>
     </CModel>
@@ -956,5 +1027,19 @@
     </CModel>
     <CModel id="WreckingCrewMorph">
         <Model value="Assets\Units\Terran\VikingMorph_CovertOps_Collection\VikingMorph_CovertOps_Collection.m3"/>
+    </CModel>
+    <CModel id="Zealot2" parent="ZealotBase">
+        <Model value="Assets\Units\Protoss\Zealot_Taldarim_Collection\Zealot_Taldarim_Collection.m3"/>
+        <TextureDeclares Prefix="zealot_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="ZealotDeath2" parent="ZealotDeathBase">
+        <Model value="Assets\Units\Protoss\Zealot_Taldarim_Collection_Death\Zealot_Taldarim_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="ZealotPortrait2" parent="ZealotPortraitBase">
+        <Model value="Assets\Portraits\Protoss\Zealot_Taldarim_Collection_Portrait\Zealot_Taldarim_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\ZealotPortrait_Static.dds"/>
+        <Lighting value="ZealotPortrait"/>
     </CModel>
 </Catalog>

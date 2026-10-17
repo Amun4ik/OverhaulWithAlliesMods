@@ -1,5 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="Stalker2" parent="GenericUnitBase" unitName="Stalker2">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="Behavior.Hallucination.On" Send="Create HallucinationBirthSoundMedium"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="ModelSwap DarkStalker"/>
+        <On Terms="UnitBirth; ValidateUnit NoDarkProtoss" Send="ModelSwap DarkStalker"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit NoDarkProtoss" Send="DeathCustomize DarkProtoss"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Stalker_Land"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="DeathCustomsEnablePhysics 0"/>
+        <On Terms="UnitBirth; ValidateUnit NoDarkProtoss" Send="DeathCustomsEnablePhysics 0"/>
+        <On Terms="UnitBirth; ValidateUnit HasPurifierProtoss" Send="TextureSelectById PurifierHackDiffuse"/>
+        <On Terms="Upgrade.PurifierProtoss.Add" Send="TextureSelectById PurifierHackDiffuse"/>
+        <On Terms="Signal.*.PurifierHack" Send="TextureSelectById PurifierHackDiffuse"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsTerrazineShadow" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="StalkerWarpIn"/>
+        <DeathArray index="Normal" ModelLink="StalkerDeath2"/>
+        <DeathCustoms ModelLink="HallucinationDeath" SoundLink="Sentry_HallucinationDeathMedium" Name="Hallucination"/>
+        <DeathCustoms ModelLink="DarkStalkerDeath" Name="DarkProtoss"/>
+        <DeathCustoms ModelLink="StalkerDeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="ProtossRobotSquibDeathRagdoll"/>
+            <BodySquibs Name="BloodReduced" Model="ProtossRobotBloodSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value="StalkerPlacement"/>
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <PortraitModel value="StalkerPortrait2"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLarge"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="3.1328"/>
+        <BarOffset value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Protoss-Stalker.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-stalker.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="Stalker_Ready"/>
+        <SoundArray index="Help" value="Stalker_Help"/>
+        <SoundArray index="What" value="Stalker_What"/>
+        <SoundArray index="Yes" value="Stalker_Yes"/>
+        <SoundArray index="Attack" value="Stalker_Attack"/>
+        <SoundArray index="Pissed" value="Stalker_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-stalker.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Protoss-Stalker.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Textures\Wireframe-Protoss-Stalker-Shield01.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-Stalker-Shield02.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-Stalker-Shield03.dds"/>
+        </WireframeShield>
+    </CActorUnit>
+    <CActorAction id="StalkerAttack2" parent="GenericAttack" effectImpact="ParticleDisruptorsU" effectLaunch="ParticleDisruptors">
+        <On index="1" Terms="Effect.ParticleDisruptorsU2.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On index="2" Terms="Effect.ParticleDisruptorsU2.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On index="6" Terms="Effect.ParticleDisruptors2.Start; At Caster" Send="Create"/>
+        <LaunchAssets Sound="Stalker_AttackLaunch"/>
+        <Missile value="StalkerAttackMissile2"/>
+        <ImpactMap index="None" Model="StalkerAttackImpact2" Sound="Stalker_AttackImpact"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <ImpactPhysics Name="ParticleDisruptorImpact" MatchKeys="Basic" Physics="StalkerAttackDeathForce"/>
+        <AcquisitionYawHalfArc value="7.500000"/>
+        <AcquisitionPitchHalfArc value="15.000000"/>
+        <AccuracyHalfArc value="10.000000"/>
+    </CActorAction>
+    <CActorMissile id="StalkerAttackMissile2" parent="GenericAttackMissile" unitName="StalkerWeapon2">
+        <Remove Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="ModelSwap DarkStalkerWeapon"/>
+        <On Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="ModelSwap DarkStalkerWeapon"/>
+    </CActorMissile>
+    <CActorSound id="StalkerTaldarimPhaseArmorOff" parent="SoundOneShot">
+        <On Terms="Behavior.AlarakStalkerPhasingArmorBuff.Off" Send="Create"/>
+        <On Terms="Behavior.AlarakStalkerPhasingArmorBuff.On" Send="Destroy"/>
+        <Sound value="StalkerTaldarim_PhaseArmor_Off"/>
+    </CActorSound>
+    <CActorSound id="StalkerTaldarimPhaseArmorOn" parent="SoundOneShot">
+        <On Terms="Behavior.AlarakStalkerPhasingArmorBuff.On" Send="Create"/>
+        <On Terms="Behavior.AlarakStalkerPhasingArmorBuff.Off" Send="Destroy"/>
+        <Sound value="StalkerTaldarim_PhaseArmor_On"/>
+    </CActorSound>
+    <CActorModelMaterial id="PhoenixPurifierPhaseArmorGlaze">
+        <On Terms="Behavior.AlarakStalkerPhasingArmorBuff.On" Send="Create"/>
+        <On Terms="Behavior.AlarakStalkerPhasingArmorBuff.Off" Send="Destroy"/>
+    </CActorModelMaterial>
+    <CActorSound id="Stalker_Death">
+        <On Terms="UnitDeathCustomize.Stalker2; ValidateUnit IsNotHallucination; PassChance 25.000000" Send="Create"/>
+    </CActorSound>
+    <CActorUnit id="Supplicant" parent="GenericUnitStandard" unitName="Supplicant">
+        <On Terms="UnitDeathCustomize; KilledByEffect AscendantSacrificeKillSupplicant" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Adept_Land"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Templar_LandSweetener"/>
+        <On Terms="Behavior.Hallucination.On" Send="Create HallucinationBirthSoundSmall"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying Spell" Send="AnimClear Spell"/>
+        <!-- Neural parasite setup, to disconnect tentacle -->
+        <On Terms="Signal.*.NeuralLinkStarted" Send="RefSetFromMsg ::actor.NeuralLinkSite ::Sender"/>
+        <On Terms="Effect.AdeptPhaseShiftTeleportSet.Start" Target="::actor.NeuralLinkSite" Send="Signal BreakLinkInstant"/>
+        <On Terms="Effect.AlarakTheStrongestSurviveStealLife.Start" Send="StatusSet TakeLife 1"/>
+        <On Terms="Effect.AlarakTheStrongestSurviveStealLife.Stop" Send="StatusSet TakeLife 0"/>
+        <On Terms="UnitDeathCustomize; IsStatus TakeLife 1" Send="DeathCustomize Shadow"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <!--On Terms="UnitDeathCustomize; !ValidateUnit IsHallucination" Send="Create AdeptProtossSpiritDeathModel"/-->
+        <BuildModel value="Supplicant_WarpIn"/>
+        <DeathArray index="Normal" ModelLink="SupplicantDeath" SoundLink="Supplicant_DeathFX"/>
+        <PlacementModel value="Supplicant_PlacementModel"/>
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <PortraitModel value="SupplicantPortrait"/>
+        <WalkAnimMoveSpeed value="3"/>
+        <BarOffset value="60"/>
+        <BarWidth value="42"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-protoss-supplicant-taldarim.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-alarak-taldarim-supplicant.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-protoss-supplicant-taldarim.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Textures\wireframe-protoss-supplicant-taldarim-shield01.dds"/>
+            <Image value="Assets\Textures\wireframe-protoss-supplicant-taldarim-shield02.dds"/>
+            <Image value="Assets\Textures\wireframe-protoss-supplicant-taldarim-shield03.dds"/>
+        </WireframeShield>
+        <SoundArray index="Ready" value="ZealotAlarak_Ready"/>
+        <SoundArray index="Help" value="ZealotAlarak_Help"/>
+        <SoundArray index="What" value="ZealotAlarak_What"/>
+        <SoundArray index="Yes" value="ZealotAlarak_Yes"/>
+        <SoundArray index="Attack" value="ZealotAlarak_Attack"/>
+        <SoundArray index="Pissed" value="ZealotAlarak_Pissed"/>
+        <DeathCustoms ModelLink="Supplicant_Sacrifice_Death" Name="Shadow"/>
+    </CActorUnit>
+    <CActorSound id="Supplicant_Death" parent="SoundOneShot">
+        <On Terms="UnitDeathCustomize.Supplicant; ValidateUnit IsNotHallucination; PassChance 25.000000" Send="Create"/>
+        <Sound value="ZealotAlarak_Death"/>
+    </CActorSound>
+    <CActorAction id="SupplicantAttack" parent="GenericAttack" effectImpact="SupplicantDamage" effectLaunch="SupplicantLM">
+        <LaunchAssets Model="Supplicant_COOP_Missile_Launch" Sound="Supplicant_AttackLaunch"/>
+        <ImpactMap index="None" Model="SupplicantImpact" Sound="Supplicant_AttackImpact"/>
+        <LaunchSiteOps Ops="SOpAttachWeaponRight"/>
+    </CActorAction>
+    <CActorMissile id="SupplicantAttackMissile" parent="GenericAttackMissile" unitName="SupplicantWeapon"/>
+    <CActorModel id="AlarakDeadlyCharge">
+        <On index="3" Terms="Effect.AlarakDeadlyCharge2; At Source" Send="Create"/>
+        <On Terms="ActorCreation" Send="RefSet ::scope.Launch ::Self"/>
+    </CActorModel>
+    <CActorSound id="AlarakDeadlyChargeCastSound">
+        <On Terms="Effect.AlarakDeadlyCharge2.Start" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="AlarakDeadlyChargeImpact">
+        <On Terms="Effect.AlarakDeadlyChargeDamage2.Start; At Target" Send="Create"/>
+    </CActorModel>
+    <CActorSound id="AlarakDeadlyChargeImpactSound">
+        <On Terms="Effect.AlarakDeadlyChargeDamage2.Start" Send="Create"/>
+    </CActorSound>
     <!--                                                                                         -->
     <!-- Swann ................................................................................. -->
     <!--                                                                                         -->
@@ -1527,4 +1722,94 @@
         <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Wraith22"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Wraith22"/>
     </CActorUnit>
+    <CActorUnit id="Zealot2" parent="GenericUnitStandard" unitName="Zealot2">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="ChargingAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <On Terms="Behavior.Charging.On" Send="ModelSuddenMotionStart"/>
+        <On Terms="Behavior.Charging.Off" Send="ModelSuddenMotionStop"/>
+        <On Terms="Behavior.Hallucination.On" Send="Create HallucinationBirthSoundSmall"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Zealot_Land"/>
+        <On Terms="UnitBirth; ValidateUnit HasPurifierProtoss" Send="TextureSelectById PurifierHackDiffuse"/>
+        <On Terms="Upgrade.PurifierProtoss.Add" Send="TextureSelectById PurifierHackDiffuse"/>
+        <On Terms="Signal.*.PurifierHack" Send="TextureSelectById PurifierHackDiffuse"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsTerrazineShadow" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitBirth; ValidateUnit HasSeveredCordsUpgrade" Send="ModelSwap ZealotNoCords"/>
+        <On Terms="Upgrade.SeveredCords.Add" Send="ModelSwap ZealotNoCords"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="ZealotWarpIn"/>
+        <DeathArray index="Normal" ModelLink="ZealotDeath2" SoundLink="Zealot_DeathFX"/>
+        <DeathCustoms ModelLink="HallucinationDeath" SoundLink="Sentry_HallucinationDeathSmall" Name="Hallucination"/>
+        <DeathCustoms ModelLink="DarkZealotDeath" Name="DarkProtoss"/>
+        <DeathCustoms ActorModel="ZealotDeathRagdoll" ModelLink="ZealotDeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollWithTeamColor" ModelLink="ZealotDeathRagdoll" Name="RagdollSpineCrawlerHurl"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowSmall"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value="ZealotPlacement"/>
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <PortraitModel value="ZealotPortrait2"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="0.600000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMedium"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="3"/>
+        <BarOffset value="45"/>
+        <BarWidth value="42"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Protoss-Zealot.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-collection-taldarim-zealot.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="Zealot_Ready"/>
+        <SoundArray index="Help" value="Zealot_Help"/>
+        <SoundArray index="What" value="ZealotVoid_What"/>
+        <SoundArray index="Yes" value="Zealot_Yes"/>
+        <SoundArray index="Attack" value="Zealot_Attack"/>
+        <SoundArray index="Pissed" value="Zealot_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zealot.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Protoss-Zealot.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Textures\Wireframe-Protoss-Zealot-Shield01.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-Zealot-Shield02.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-Zealot-Shield03.dds"/>
+        </WireframeShield>
+    </CActorUnit>
+    <CActorAction id="ZealotAttack">
+        <On Terms="Effect.PsiBlades2.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.PsiBlades2.Start; At Caster" Send="Create"/>
+    </CActorAction>
 </Catalog>

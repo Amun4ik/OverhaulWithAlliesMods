@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="ParticleDisruptors2">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="ParticleDisruptorsU2"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Period value="1.44"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SupplicantWeapon">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="SupplicantDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="2.25"/>
+        <Effect value="SupplicantLM"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="90mmCannons">
         <MinScanRange value="8.5"/>
         <Range value="8"/>
@@ -455,6 +472,17 @@
     <CWeaponLegacy id="P38ScytheGuassPistol">
         <TargetFilters value="Ground,Visible;Armored,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PsiBlades2">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.1"/>
+        <Period value="1.1"/>
+        <DamagePoint value="0"/>
+        <Effect value="ZealotPsiBladesCleaveSet2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="PunisherGrenades2">
         <EditorCategories value="Race:Terran"/>

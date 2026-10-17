@@ -893,6 +893,41 @@ void lib7D432011_gt_Checkifgeyserdepleted_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Warpgate Autocast For player
+//--------------------------------------------------------------------------------------------------
+bool lib7D432011_gt_WarpgateAutocastForplayer_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TechTreeUpgradeCount(1, "WarpGateResearch", c_techCountQueuedOrBetter) == 1))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(EventUnitProgressUnit()) == 1))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUnitType() == "Gateway"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitIssueOrder(EventUnitProgressUnit(), Order(AbilityCommand("UpgradeToWarpGate", 0)), c_orderQueueReplace);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib7D432011_gt_WarpgateAutocastForplayer_Init () {
+    lib7D432011_gt_WarpgateAutocastForplayer = TriggerCreate("lib7D432011_gt_WarpgateAutocastForplayer_Func");
+    TriggerAddEventUnitConstructProgress(lib7D432011_gt_WarpgateAutocastForplayer, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: AI Supply Block Preventer
 //--------------------------------------------------------------------------------------------------
 bool lib7D432011_gt_AISupplyBlockPreventer_Func (bool testConds, bool runActions) {
@@ -1587,6 +1622,7 @@ void lib7D432011_InitTriggers () {
     lib7D432011_gt_ShareVespenePickupwithAllies_Init();
     lib7D432011_gt_RestoreInfiniteResources_Init();
     lib7D432011_gt_Checkifgeyserdepleted_Init();
+    lib7D432011_gt_WarpgateAutocastForplayer_Init();
     lib7D432011_gt_AISupplyBlockPreventer_Init();
     lib7D432011_gt_AIBuildsuppliesonlyifneeded_Init();
     lib7D432011_gt_AIInDangerDontBuildWorkers_Init();

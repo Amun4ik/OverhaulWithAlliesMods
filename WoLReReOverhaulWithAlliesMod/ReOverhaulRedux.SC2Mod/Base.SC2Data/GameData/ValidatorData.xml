@@ -46,6 +46,10 @@
         <Find value="1"/>
         <Value value="HaveBlackOps23"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBlink">
+        <Find value="1"/>
+        <Value value="UseBlink"/>
+    </CValidatorPlayerRequirement>
     <CValidatorCombine id="NotMineralFieldRawisExhausted">
         <CombineArray value="MineralsExhausted"/>
         <CombineArray value="MineralsExhaustedUser"/>
