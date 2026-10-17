@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="BacklashRocketsLMWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile\MiraHorner_Carrier_Coop_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Banshee2" parent="BansheeBase">
+        <Model value="Assets\Terran\NC_HeloGunship.m3"/>
+        <RequiredAnims value="Assets\Units\Terran\Banshee_NovaAnims\Banshee_NovaAnims.m3a"/>
+    </CModel>
+    <CModel id="BansheeAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\MiraHorner_Wraith_Coop_Missile_Impact\MiraHorner_Wraith_Coop_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="BansheeDeath2" parent="BansheeDeathBase">
+        <Model value="Assets\Units\Terran\BansheeDeathEx1\BansheeDeathEx1.m3"/>
+    </CModel>
+    <CModel id="BansheePortrait2" parent="BansheePortraitBase">
+        <Model value="Assets\Portraits\Terran\BansheePortrait\BansheePortrait.m3"/>
+        <Image value="Assets\Textures\BansheePortrait_Static.dds"/>
+        <Lighting value="BansheePortrait"/>
+    </CModel>
+    <CModel id="Liberator2" parent="LiberatorBase">
+        <Model value="Assets\Terran\SC2Valkyrie_GhostNova_UED.m3"/>
+        <AttachProps index="0" Id="Ref_Weapon 01">
+            <Keys index="SetA" value="-128"/>
+            <Keys index="Weapon" value="1"/>
+        </AttachProps>
+        <AttachProps index="1" Id="Ref_Weapon 02">
+            <Keys index="SetA" value="0"/>
+            <Keys index="Weapon" value="6"/>
+        </AttachProps>
+        <AttachProps index="2" removed="1"/>
+    </CModel>
+    <CModel id="LiberatorAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Impact\Goliath_Lockdown_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="LiberatorDamageMissile2" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Missile\Goliath_Lockdown_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="LiberatorDeath2" parent="LiberatorDeathBase">
+        <Model value="Assets\Units\Terran\ValkyrieSCBW\ValkyrieSCBW@Death.m3"/>
+    </CModel>
+    <CModel id="LiberatorPortrait2" parent="LiberatorPortraitBase">
+        <Model value="Assets\UED Portraits\ValkyrieRemastered_UED_Portrait.m3"/>
+        <Image value="Assets\Textures\Valkyrie_UED_Portrait_static.dds"/>
+        <Lighting value="PortraitLiberatorEx2"/>
+    </CModel>
     <CModel id="Stalker2" parent="StalkerBase">
         <Model value="Assets\Units\Protoss\Stalker_Taldarim_Collection\Stalker_Taldarim_Collection.m3"/>
         <TextureDeclares Prefix="stalker_">
@@ -80,51 +128,11 @@
     <CModel id="AutoTurret22" parent="AutoTurretBase">
         <Model value="Assets\COOP\Tychus\Buildings\AutoTurret_Heavens_COOP_Warhound\AutoTurret_Heavens_COOP_Warhound.m3"/>
     </CModel>
-    <CModel id="Banshee2" parent="BansheeBase">
-        <Model value="Assets\Terran\NC_HeloGunship.m3"/>
-        <RequiredAnims value="Assets\Units\Terran\Banshee_NovaAnims\Banshee_NovaAnims.m3a"/>
-        <AttachProps index="0" Id="Ref_Hardpoint">
-            <Keys index="Turret" value="0"/>
-            <Keys index="Weapon" value="-128"/>
-        </AttachProps>
-        <AttachProps index="1" Id="Ref_Weapon 01">
-            <Keys index="Hit" value="1"/>
-            <Keys index="Weapon" value="-128"/>
-        </AttachProps>
-        <AttachProps Id="Ref_Weapon 02">
-            <Keys index="Hit" value="2"/>
-        </AttachProps>
-        <AttachProps Id="Ref_Weapon 03">
-            <Keys index="Hit" value="4"/>
-        </AttachProps>
-        <AttachProps Id="Ref_Weapon 04">
-            <Keys index="Hit" value="6"/>
-        </AttachProps>
-        <AttachProps Id="Ref_Weapon 05">
-            <Keys index="Weapon" value="0"/>
-        </AttachProps>
-        <AttachProps Id="Ref_Weapon 06">
-            <Keys index="Weapon" value="1"/>
-        </AttachProps>
-    </CModel>
     <CModel id="BansheeMercenaryPortrait">
         <Model value="Assets\Portraits\Terran\Banshee_CovertOps_Collection_Portrait\Banshee_CovertOps_Collection_Portrait.m3"/>
     </CModel>
     <CModel id="BarrageModel">
         <Model value="Assets\Effects\Terran\Nova_PulseGrenade\Nova_PulseGrenade.m3"/>
-    </CModel>
-    <CModel id="Battlecruiser2" parent="BattlecruiserBase">
-        <Model value="Assets\Units\Terran\Battlecruiser_Remastered\Battlecruiser_Remastered.m3"/>
-    </CModel>
-    <CModel id="BattlecruiserDeath2" parent="BattlecruiserDeathBase">
-        <Model value="Assets\Units\Terran\Battlecruiser_Remastered_Death\Battlecruiser_Remastered_Death_00.m3"/>
-        <SelectionRadius value="0.625000"/>
-        <ShadowRadius value="0.625000"/>
-    </CModel>
-    <CModel id="BattlecruiserPortrait2" parent="BattlecruiserPortraitBase">
-        <Model value="Assets\Portraits\Terran\BattlecruiserPortrait\BattlecruiserPortrait.m3"/>
-        <Image value="Assets\Textures\BattlecruiserPortrait_Static.dds"/>
-        <Lighting value="BattlecruiserPortrait"/>
     </CModel>
     <CModel id="Bunker2" parent="BunkerBase">
         <Model value="Assets\Buildings\Terran\BunkerSCBW\BunkerSCBW.m3"/>
@@ -520,26 +528,6 @@
         <ShadowRadius value="0.750000"/>
         <SquibTypeDefault value="Metal"/>
     </CModel>
-    <CModel id="Liberator2" parent="LiberatorBase">
-        <Model value="Assets\Terran\SC2Valkyrie_GhostNova_UED.m3"/>
-        <SelectionRadius value="1.000000"/>
-    </CModel>
-    <CModel id="LiberatorAttackImpact2" parent="ImpactFX">
-        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Impact\Goliath_Lockdown_Impact.m3"/>
-        <EditorCategories value="Race:Terran"/>
-    </CModel>
-    <CModel id="LiberatorDamageMissile2" parent="MissileFX">
-        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Missile\Goliath_Lockdown_Missile.m3"/>
-        <EditorCategories value="Race:Terran"/>
-    </CModel>
-    <CModel id="LiberatorDeath2" parent="LiberatorDeathBase">
-        <Model value="Assets\Units\Terran\ValkyrieDeath\ValkyrieDeath.m3"/>
-    </CModel>
-    <CModel id="LiberatorPortrait2" parent="LiberatorPortraitBase">
-        <Model value="Assets\UED Portraits\ValkyrieRemastered_UED_Portrait.m3"/>
-        <Image value="Assets\Textures\LiberatorPortrait_Static.dds"/>
-        <Lighting value="PortraitLiberatorEx2"/>
-    </CModel>
     <CModel id="MarauderKillSquadPortrait">
         <Model value="Assets\Terran\Marauder_Viper_Portrait.m3"/>
     </CModel>
@@ -893,18 +881,6 @@
         <FacialController value="LocalizedData\Facial\HellionPortrait.fxa"/>
         <Image value="Assets\Textures\hellion_covertops_collection_portrait_static.dds"/>
         <Lighting value="TychusPortrait"/>
-    </CModel>
-    <CModel id="VikingFighterAttackImpact2" parent="ImpactFX">
-        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Impact\Goliath_Lockdown_Impact.m3"/>
-        <EditorCategories value="Race:Terran"/>
-    </CModel>
-    <CModel id="VikingFighterAttackLaunch2" parent="LaunchFX">
-        <Model value="Assets\Effects\Terran\VikingFighterMissileLaunch\VikingFighterMissileLaunch.m3"/>
-        <EditorCategories value="Race:Terran"/>
-    </CModel>
-    <CModel id="VikingFighterWeapon2" parent="MissileFX">
-        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Missile\Goliath_Lockdown_Missile.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="Vulture2" parent="Unit">
         <Model value="Assets\Terran\Terran_Shatterer_V3.m3"/>

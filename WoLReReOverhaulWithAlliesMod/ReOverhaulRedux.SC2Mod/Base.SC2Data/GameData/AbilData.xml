@@ -86,6 +86,35 @@
         </Cost>
         <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectInstant>
+    <CAbilEffectTarget id="DefensiveMatrixDefender">
+        <AbilSetId value="dmatrix"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DefensiveMatrixSet"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="90"/>
+            </Charge>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <TargetFilters value="Visible;Self,Neutral,Enemy,Structure,Uncommandable,Stasis,Dead,Hidden"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DefensiveMatrix">
+            <Flags index="AllowMinimap" value="0"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DeploySpiderMines">
+        <Cost index="0">
+            <Charge CountMax="0" CountStart="0" CountUse="0"/>
+            <Cooldown TimeUse="120"/>
+        </Cost>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="EMP">
         <Cost index="0">
             <Vital index="Energy" value="0"/>
@@ -240,7 +269,7 @@
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SnipeVulture">
         <Cost index="0">
-            <Vital index="Energy" value="50"/>
+            <Vital index="Energy" value="0"/>
             <Cooldown TimeUse="15"/>
         </Cost>
     </CAbilEffectTarget>
@@ -256,6 +285,24 @@
         <Cost>
             <Cooldown TimeUse="10"/>
         </Cost>
+        <AutoCastFilters value="Ground,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CAbilAugment>
+    <CAbilAugment id="TornadoMissile2">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TornadoMissile2"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AbilCmd value="attack,Execute"/>
+        <Cost>
+            <Charge>
+                <CountMax value="4"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="10"/>
+            </Charge>
+            <Cooldown TimeUse="1"/>
+        </Cost>
+        <Effect value="BacklashRockets2"/>
         <AutoCastFilters value="Ground,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilAugment>
     <CAbilEffectTarget id="UltrasonicPulseEnhanced">

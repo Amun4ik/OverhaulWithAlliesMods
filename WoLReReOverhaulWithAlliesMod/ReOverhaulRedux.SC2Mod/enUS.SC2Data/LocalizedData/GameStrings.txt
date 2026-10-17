@@ -5,8 +5,10 @@ Abil/Name/AlliedAIOrderForceAttack=AlliedAIOrderForceAttack
 Abil/Name/AllyAgressiveMode=AllyAgressiveMode
 Abil/Name/AllyDefensiveMode=AllyDefensiveMode
 Abil/Name/AllyNormalMode=AllyNormalMode
+Abil/Name/DefensiveMatrixDefender=Defensive Matrix
 Abil/Name/DisableAlliedPings=Disable Allies Attack Ping
 Abil/Name/ImmortalOverload=Barrier - Life Triggered
+Abil/Name/TornadoMissile2=Crocodile Rockets
 Actor/HighlightTooltip/RenegadeMissileTurret=
 Behavior/Name/AllyAggressiveMode=AllyAggressiveMode
 Behavior/Name/AllyDefensiveMode=AllyDefensiveMode
@@ -29,6 +31,7 @@ Button/Name/DisableAllyPing=Disable Ally Help Pings
 Button/Name/EnableAllyPing=Enable Ally Help Pings
 Button/Name/ExperimentalPlasmaGun=Experimental Scourge Rifle Grenade
 Button/Name/NovaXanthosToggleRepairModeOn=Self Repair
+Button/Name/TornadoMissile2=Crocodile Missiles
 Button/Name/TossGrenade=HE Grenade
 Button/Tooltip/AlarakDeadlyCharge2=Supplicant intercepts target enemy unit and strikes it for <d ref="Effect,AlarakDeadlyChargeDamage,Amount"/> damage.
 Button/Tooltip/AlliedAIAggressive=Orders your ally to focus entirely on offense, attacking enemies more frequently while neglecting defense.
@@ -41,7 +44,6 @@ Button/Tooltip/AlliedAINormal=Orders your ally to maintain a balance between off
 Button/Tooltip/AlliedAIOrderPanel=im tired boss
 Button/Tooltip/AlliedControlInfo=Raynor's Raider's specialization for this mission:<n/><n/>Normal Mode:<n/><n/>Offensive Mode:<n/><n/>Defensive Mode:
 Button/Tooltip/Banshee2=Tactical-strike aircraft. Can use cloak.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
-Button/Tooltip/Battlecruiser2=Powerful warship. Can use Yamato Cannon.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/CommanderControllerIcon=Command Raynor's Raiders to change their combat behavior.
 Button/Tooltip/CommanderControllerIcon2=Command Raynor's Raiders to change their combat behavior.
 Button/Tooltip/Cyclone=Mobile assault drone. Effective against Air targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -54,6 +56,7 @@ Button/Tooltip/HERC2=Front-line infantry. Can use Grapple.<n/><n/><c val="#Color
 Button/Tooltip/Hellion2=Fast scout. Has a flame attack that damages all enemy units in its line of fire. Can transform into a close range combat unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/KorhalPalaceTurret2=Extremely powerful turrets that cannot be attacked. Breaking down the Palace Gate is the only way to victory.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/LeadFarmer=Commando's Chaingun deals splash damage in a small area around the target.
+Button/Tooltip/Liberator2=Artillery fighter. Loaded with missiles that deal area damage to enemy air targets. Can switch into Defender Mode to provide siege support.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
 Button/Tooltip/Medivac2=Armored Air Transport. Suddenly Valkyrie hull without it's armament can be used as transport or logistic ship.
 Button/Tooltip/MercReaper=Former Dominion Elite Reaper Corp. Strong and dangerous Raider. Can jump up and down cliffs.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/NovaXanthosToggleRepairModeOn=Order vehicle crew to repair their vehicle. During this vehicle is vulnerable to enemy fire, which stops repair process. Crew unable to move or attack during repair time.
@@ -64,6 +67,7 @@ Button/Tooltip/RenegadeMissileTurret=Experimental defense turret. Deal damage in
 Button/Tooltip/SiegeTank3=Heavy tank. Can switch into Siege Mode to provide long-range artillery support.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
 Button/Tooltip/Stalker2=Ranged attack strider. Can use Blink.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/Stetmann=Jezik can heal and repair at lightning speed. Also can take control over weak minded enemy. <n/><n/><c val="#ColorAttackInfo">Has no attack.</c><n/>
+Button/Tooltip/TornadoMissile2=When attacking a target, fire 3 missile, each deal 8 (+4 vs armored) damage.
 Button/Tooltip/TossGrenade=Tosses a grenade that explodes for <d ref="Effect,TossGrenadeDamage,Amount"/> damage in a radius. <n/><n/><c val="ffff8a">Does not harm friendly units.</c>
 Button/Tooltip/TychusChaingun=A scoundrel, a Pirate and "Good" old friend of Raynor. Has a shit ton of explosives.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/TychusCommando=Commando can throw demolition charge. Deal damage in small area. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
@@ -77,7 +81,6 @@ Effect/Name/90mmCannons3=Arclite Cannon (Damage)
 Effect/Name/ATALaserBatteryLM=Light Laser Battery
 Effect/Name/ATALaserBatteryU=Light Laser Battery
 Effect/Name/ATSLaserBatteryLM=Heavy Laser Battery
-Effect/Name/ATSLaserBatteryLM2=Heavy Laser Battery
 Effect/Name/ATSLaserBatteryU=Heavy Laser Battery
 Effect/Name/ATSLaserBatteryU2=Heavy Laser Battery
 Effect/Name/AlarakDeadlyCharge2=Supplicant Deadly Charge
@@ -115,15 +118,16 @@ Effect/Name/DiamondbackBeam2=Eviscerator (Beam)
 Effect/Name/DiamondbackBeam3=Eviscerator (Beam)
 Effect/Name/DummyEffectUnit=DummyEffectUnit
 Effect/Name/GoliathA2=Ground Attack
+Effect/Name/GoliathA22=Ground Attack
 Effect/Name/GoliathG2=Autocannon
 Effect/Name/HowitzerPersistent=Howitzer Persistent
 Effect/Name/KorhalPalaceGateDamage2=Mortar AA Attack
-Effect/Name/LanzerTorpedoes2=Ground Torpedoes (Persistent)
-Effect/Name/LanzerTorpedoesDamage2=Ground Torpedoes (Damage)
-Effect/Name/LanzerTorpedoesLM2=Ground Torpedoes (Launch Missile)
 Effect/Name/LiberatorDamageMissileLM2=Valkyrie Damage Missile LM
+Effect/Name/LiberatorDamageMissileLM3=Valkyrie Damage Missile LM
 Effect/Name/LiberatorMissileBurstPersistent2=Valkyrie Missile Burst Persistent
+Effect/Name/LiberatorMissileBurstPersistent3=Valkyrie Missile Burst Persistent
 Effect/Name/LiberatorMissileDamage2=Valkyrie Missile Damage
+Effect/Name/LiberatorMissileDamage3=Valkyrie Missile Damage
 Effect/Name/LurkerMP=Ultra-Sonic
 Effect/Name/LurkerMPDamage=Ultra-Sonic
 Effect/Name/LurkerMPSearch=Ultra-Sonic
@@ -173,10 +177,11 @@ Param/Value/lib_7D432011_A2F1FE8A='s Vespene
 Param/Value/lib_7D432011_C284B794='s Minerals
 Param/Value/lib_7D432011_C95425DE=<c val="FF0000">
 Param/Value/lib_7D432011_F4E42484=<c val="FF0000">
+Unit/Name/ATSLaserBatteryLMWeapon2=ATS Laser Battery
 Unit/Name/AlliedAIOrderPanel=Allies
-Unit/Name/Banshee2=Hammerhead Helicopter
+Unit/Name/BacklashRocketsLMWeapon2=Backlash Rockets
+Unit/Name/Banshee2=Crocodile Helicopter
 Unit/Name/Battlecruiser=Minotaur - class Battlecruiser
-Unit/Name/Battlecruiser2=Hammerhead - class Battlecruiser
 Unit/Name/Diamondback2=Tesla Tank
 Unit/Name/Diamondback3=Shaymen
 Unit/Name/DominionKillTeam=Red Raven
@@ -187,7 +192,8 @@ Unit/Name/HERCCompound=100 Rads bar
 Unit/Name/Hellion2=Baden Joru
 Unit/Name/KorhalPalaceTurret=Heavy Shreder Turret
 Unit/Name/KorhalPalaceTurret2=Mortar Pit
-Unit/Name/Liberator1=Valkyrie
+Unit/Name/Liberator2=Valkyrie
+Unit/Name/LiberatorDamageMissile2=Valkyrie Damage Missile
 Unit/Name/Loyalist=Loyalist
 Unit/Name/Medivac2=Valkyrie Transport
 Unit/Name/MengskReaper=Samuel Horsh
@@ -223,21 +229,19 @@ Weapon/Name/90mmCannons2=70mm Cannons
 Weapon/Name/90mmCannons3=180mm Cannons
 Weapon/Name/ATALaserBattery=Light Laser Battery
 Weapon/Name/ATSLaserBattery=Heavy Laser Battery
-Weapon/Name/ATSLaserBattery2=Heavy Laser Battery
 Weapon/Name/AllPurposeLaserBatterySecondry=ATX Hidden Battery 1
 Weapon/Name/AllPurposeLaserBatterySecondry2=ATX Hidden Battery 2
 Weapon/Name/AllPurposeLaserBatterySecondry3=ATX Hidden Battery 3
-Weapon/Name/BacklashRockets2=Backlash Rockets
+Weapon/Name/BacklashRockets2=Freya Missiles
 Weapon/Name/CommandoRifle=Infantry Railgun Tyranny's End
 Weapon/Name/Diamondback=Redeemer Heavy Rail Gun
 Weapon/Name/Diamondback2=Tesla Capacitors
 Weapon/Name/Diamondback3=Autocannon
 Weapon/Name/DominionKillTeam=Eradicator Grenades
 Weapon/Name/HERCWeapon2=H1 Flash Welder
-Weapon/Name/InfernalFlameThrower2=Long range Autocannon
+Weapon/Name/InfernalFlameThrower2=Autocannon
 Weapon/Name/KorhalPalaceGate2=Anti-Air Munition
 Weapon/Name/KorhalPalaceGate22=Earth Shatter Munition
-Weapon/Name/LanzerTorpedoes2=Lanzer Torpedoes
 Weapon/Name/LiberatorMissileLaunchers2=H.A.L.O. Rockets
 Weapon/Name/LongboltMissile2=Longbolt Missile
 Weapon/Name/ParticleDisruptors2=Particle Disruptors
@@ -251,10 +255,10 @@ Weapon/Name/TyphoonMissilePod2=Typhoon Ground-Air Missiles
 Weapon/Name/Vulture2=Ultra-Sonic Weapon
 Weapon/Name/WarHound=Meat Grinder Railgun Rounds
 Weapon/Name/WarHound2=Piercer Railgun Rounds
+Weapon/Name/WraithG2=Burst Lasers
 Weapon/Tip/90mmCannons3=Deal additional 20 damage in AoE
 Weapon/Tip/ATALaserBattery=Minimum Range: 4
 Weapon/Tip/ATSLaserBattery=Minimum Range: 5
-Weapon/Tip/ATSLaserBattery2=Minimum Range: 3
 Weapon/Tip/AllPurposeLaserBattery=Can attack up to 4 targets at once.
 Weapon/Tip/D8Charge=Only used against non-light targets
 Weapon/Tip/Diamondback2=Restore 5 shields each attack.

@@ -58,4 +58,9 @@
         <Icon value="btn-commander-rebels.dds"/>
         <AlertIcon value="btn-commander-rebels.dds"/>
     </CButton>
+    <CButton id="TornadoMissile2">
+        <Icon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
 </Catalog>
