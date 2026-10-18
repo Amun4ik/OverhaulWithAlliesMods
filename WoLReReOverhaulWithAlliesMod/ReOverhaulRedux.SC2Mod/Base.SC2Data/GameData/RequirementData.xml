@@ -33,4 +33,36 @@
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeMercenarysCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="Kit@HaveAttachedTechLabBarracks2">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="And2589852481CountUnitArmory2CompleteOnlyOrCountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="Kit@HaveAttachedTechLabBarracks22">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="And2589852481CountUnitArmory2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="Kit@HaveAttachedTechLabFactory2">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitSupplyDepot2CompleteOnly2589852481"/>
+    </CRequirement>
+    <CRequirement id="Kit@HaveAttachedTechLabFactoryAndArmory2">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndOr2589852481CountUnitFactoryTechLabCompleteOnlyAtUnitCountUnitFactoryTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="Kit@HaveAttachedTechLabFactoryAndArmory22">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndOr2589852481CountUnitFactoryTechLabCompleteOnlyAtUnitCountUnitFactoryTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot2CompleteOnlyCountUnitArmoryCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="Kit@HaveAttachedTechLabStarport2">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitSupplyDepot22CompleteOnly2589852481"/>
+    </CRequirement>
+    <CRequirement id="Kit@HaveAttachedTechLabStarportAndFusionCore2">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndOr2589852481CountUnitStarportTechLabCompleteOnlyAtUnitCountUnitStarportTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot22CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="Kit@HaveAttachedTechLabStarportAndFusionCore22">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndOr2589852481CountUnitStarportTechLabCompleteOnlyAtUnitCountUnitStarportTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot22CompleteOnlyCountUnitFusionCoreCompleteOnly"/>
+    </CRequirement>
 </Catalog>

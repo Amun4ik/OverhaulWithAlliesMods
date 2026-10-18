@@ -42,6 +42,14 @@
         <Icon value="Assets\Textures\btn-tips-tutorial.dds"/>
         <AlertIcon value="Assets\Textures\btn-tips-tutorial.dds"/>
     </CButton>
+    <CButton id="BuildScienceVessel">
+        <Hotkey value="Button/Hotkey/ScienceVessel"/>
+    </CButton>
+    <CButton id="DOMGhostPersonalDefensiveMatrix2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-personaldefensivematrix.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-personaldefensivematrix.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="DisableAllyPing">
         <Icon value="Assets\Textures\btn-ability-mengsk-blimp-propagandamode.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-blimp-propagandamode.dds"/>
@@ -58,9 +66,98 @@
         <Icon value="btn-commander-rebels.dds"/>
         <AlertIcon value="btn-commander-rebels.dds"/>
     </CButton>
+    <CButton id="Hellion2">
+        <Icon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Hellion22">
+        <Icon value="Assets\Textures\btn-unit-terran-predatortank.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-predatortank.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Hellion222">
+        <Icon value="Assets\UED Buttons\btn-unit-terran-hellionmissilebike.dds"/>
+        <AlertIcon value="Assets\UED Buttons\btn-unit-terran-hellionmissilebike.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Hellion2222">
+        <Icon value="Assets\Textures\btn-unit-waffentrager.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-waffentrager.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Hellion22222">
+        <Icon value="Assets\Textures\btn-unit-collection-vikingassault-umojan.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collection-vikingassault-umojan.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Hellion222222">
+        <Icon value="Assets\Textures\btn-unit-terran-teslatank.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-teslatank.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Separatist">
+        <Icon value="Assets\Textures\btn-unit-terran-lightinfantryshield.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-lightinfantryshield.dds"/>
+    </CButton>
+    <CButton id="MeleeTrooper">
+        <Icon value="Assets\Textures\btn-units-dominion-shielder-icon.dds"/>
+        <AlertIcon value="Assets\Textures\btn-units-dominion-shielder-icon.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TankBusterTrooper">
+        <Icon value="Assets\Textures\btn-unit-terran-troopermengskrocket.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-troopermengskrocket.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="StrikeTrooper">
+        <Icon value="Assets\Textures\btn-unit-terran-troopermengskrifle.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-troopermengskrifle.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="FlamerTrooper">
+        <Icon value="Assets\Textures\btn-unit-terran-troopermengskflamethrower.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-troopermengskflamethrower.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="TornadoMissile2">
         <Icon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
         <AlertIcon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TornadoMissile3">
+        <Icon value="Assets\Textures\btn-ability-mengsk-earthsplitterordnance-earthsplitterbombardment.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-earthsplitterordnance-earthsplitterbombardment.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TrainCommando">
+        <Icon value="Assets\Textures\btn-unit-terran-heavygunner.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-heavygunner.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TrainDefender">
+        <Icon value="Assets\Textures\btn-units-dominion-rockettrooperleader-icon.dds"/>
+        <AlertIcon value="Assets\Textures\btn-units-dominion-rockettrooperleader-icon.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TrainLoyalist">
+        <Icon value="Assets\Textures\wireframe-dominion-heavytychus-grenade-wire.dds"/>
+        <AlertIcon value="Assets\Textures\wireframe-dominion-heavytychus-grenade-wire.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Wraith2">
+        <Icon value="Assets\Textures\btn-unit-helogunshipbronze.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-helogunshipbronze.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Wraith22">
+        <Icon value="Assets\Textures\btn-unit-terran-valkyrie-ghostnova-ued.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-valkyrie-ghostnova-ued.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Wraith222">
+        <Icon value="Assets\Textures\btn-unit-terran-valkyrie@scbw.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-valkyrie@scbw.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
 </Catalog>

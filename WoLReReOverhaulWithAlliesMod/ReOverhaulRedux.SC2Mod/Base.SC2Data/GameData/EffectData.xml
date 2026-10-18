@@ -29,6 +29,22 @@
         <Visibility value="Visible"/>
         <Amount value="8"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="DOMGhostPersonalDefensiveMatrix2">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="DOMGhostPersonalDefensiveMatrixMU2">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactUnit Value="Caster"/>
+        <VitalArray index="Shields">
+            <ChangeFraction value="1"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectSet id="DOMGhostPersonalDefensiveMatrixSet2">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="DOMGhostPersonalDefensiveMatrixMU2"/>
+        <EffectArray value="DOMGhostPersonalDefensiveMatrix2"/>
+    </CEffectSet>
     <!--CEffectLaunchMissile id="DefilerMPPlagueLM">-->
     <!--        <ImpactEffect value="DefilerMPPlagueSearch"/>-->
     <!--        <AmmoUnit value="DefilerMPPlagueWeapon"/>-->
@@ -93,6 +109,25 @@
         <EditorCategories value="Race:Protoss"/>
         <AttributeFactor index="Armored" value="0.4"/>
         <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectDamage id="Predator2">
+        <EditorCategories value="Race:Terran"/>
+        <ArmorReduction value="1"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Melee"/>
+        <Amount value="10"/>
+        <Death value="Eviscerate"/>
+    </CEffectDamage>
+    <CEffectDamage id="Separatist2" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Kind value="Ranged"/>
+        <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectDamage id="Separatist3" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeFactor index="Light" value="0.5"/>
+        <Kind value="Ranged"/>
+        <Amount value="8"/>
     </CEffectDamage>
     <CEffectEnumArea id="StalkerEntropyLanceSearch2">
         <ValidatorArray value="HaveVoidStalkerMultishot"/>
@@ -991,6 +1026,43 @@
         <PeriodicEffectArray value="ATALaserBatteryLM"/>
         <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0.15"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="ThrowMolotovDamage">
+        <Amount value="8"/>
+        <AreaArray index="0" Radius="1.25" Fraction="0.5"/>
+    </CEffectDamage>
+    <CEffectDamage id="TitanMechMissileDamage2">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Splash"/>
+        <Amount value="40"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="1.5" Fraction="1"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="SameCliff" value="0"/>
+    </CEffectDamage>
+    <CEffectDamage id="TitanMechMissileDamageDummy2">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <Flags index="Notification" value="1"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="SameCliff" value="0"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="TitanMechMissileLM2">
+        <ValidatorArray value="CasterNotDead"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="TitanMechMissileDamage2"/>
+        <AmmoUnit value="TitanMechMissileWeapon2"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="TitanMechMissileShot2">
+        <EditorCategories value="Race:Terran"/>
+        <TimeScaleSource Value="Caster"/>
+        <InitialDelay value="2"/>
+        <InitialEffect value="TitanMechMissileLM2"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WraithAG">
         <EditorCategories value="Race:Terran"/>

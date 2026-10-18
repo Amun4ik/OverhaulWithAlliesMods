@@ -68,6 +68,76 @@
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="AlliedAINormal" Requirements="AllyNormalModeReq"/>
     </CAbilEffectInstant>
+    <!-- Terran Train Abilities Fix -->
+    <CAbilTrain id="BarracksTrain">
+        <InfoArray index="Train1">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="30">
+            <Button Requirements="Kit@HaveAttachedTechLabBarracks22"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="60">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train4">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train5">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train6">
+            <Button DefaultButtonFace="Firebat" Requirements="Kit@HaveAttachedTechLabBarracks22"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="60">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="10">
+            <Button State="Available"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="45">
+            <Button DefaultButtonFace="TrainCommando" State="Restricted" Requirements="Kit@HaveAttachedTechLabBarracks2"/>
+            <Unit value="TychusCommando"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="60">
+            <Button DefaultButtonFace="TrainDefender" State="Restricted" Requirements="Kit@HaveAttachedTechLabBarracks2"/>
+            <Unit value="Swann"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train11" Time="30">
+            <Button DefaultButtonFace="TrainHERC" Requirements="Kit@HaveAttachedTechLabBarracks"/>
+            <Unit value="HERC"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train12" Time="40">
+            <Button DefaultButtonFace="TrainLoyalist" State="Restricted" Requirements="Kit@HaveAttachedTechLabBarracks"/>
+            <Unit value="TychusCommando2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train13" Time="20">
+            <Button DefaultButtonFace="FlamerTrooper" State="Restricted" Requirements="Kit@HaveAttachedTechLabBarracks22"/>
+            <Unit value="Separatist4"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train14" Time="10">
+            <Button DefaultButtonFace="MeleeTrooper" State="Restricted" Requirements="Kit@HaveAttachedTechLabBarracks22"/>
+            <Unit value="Separatist5"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train15" Time="20">
+            <Button DefaultButtonFace="StrikeTrooper" State="Restricted" Requirements="Kit@HaveAttachedTechLabBarracks22"/>
+            <Unit value="Separatist3"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train16" Time="20">
+            <Button DefaultButtonFace="TankBusterTrooper" State="Restricted" Requirements="Kit@HaveAttachedTechLabBarracks22"/>
+            <Unit value="Separatist2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+    </CAbilTrain>
     <CAbilEffectTarget id="BonesHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
@@ -79,6 +149,20 @@
         <Range index="0" value="7"/>
         <AutoCastRange value="7"/>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="AssaultTrooperDefenseMatrix">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DOMGhostPersonalDefensiveMatrixSet2"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <AutoCastValidatorArray value="LifeLTThreeQuarter"/>
+        <AINotifyEffect value="PersonalDefensiveMatrix"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DOMGhostPersonalDefensiveMatrix2"/>
+    </CAbilEffectInstant>
     <CAbilEffectInstant id="DefensiveMatrix">
         <Cost index="0">
             <Vital index="Energy" value="0"/>
@@ -114,6 +198,7 @@
             <Charge CountMax="0" CountStart="0" CountUse="0"/>
             <Cooldown TimeUse="120"/>
         </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="EMP">
         <Cost index="0">
@@ -131,8 +216,75 @@
         <CastIntroTime index="0" value="0.45"/>
     </CAbilEffectTarget>
     <CAbilTrain id="FactoryTrain">
-        <InfoArray index="Train3">
-            <Button Requirements=""/>
+        <InfoArray index="Train2" Time="90">
+            <Button Requirements="Kit@HaveAttachedTechLabFactoryAndArmory2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="60">
+            <Button Requirements="Kit@HaveAttachedTechLabFactory2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train4">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="120">
+            <Button Requirements="Kit@HaveAttachedTechLabFactoryAndArmory22"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="40">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="40"/>
+        <InfoArray index="Train8" Time="50">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="40">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train11">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train13" Time="55">
+            <Button DefaultButtonFace="Hellion22" Requirements="Kit@HaveAttachedTechLabFactory"/>
+            <Unit value="SiegeTank2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train14" Time="80">
+            <Button DefaultButtonFace="Hellion2222" Requirements="Kit@HaveAttachedTechLabFactoryAndArmory22"/>
+            <Unit value="SiegeTank3"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train15" Time="40">
+            <Button DefaultButtonFace="Hellion2"/>
+            <Unit value="Vulture3"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train16" Time="60">
+            <Button DefaultButtonFace="Hellion222" Requirements="Kit@HaveAttachedTechLabFactory2"/>
+            <Unit value="Vulture2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train17" Time="120">
+            <Button DefaultButtonFace="Hellion22222" Requirements="Kit@HaveAttachedTechLabFactoryAndArmory22"/>
+            <Unit value="TitanMechAssault2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train18" Time="70">
+            <Button DefaultButtonFace="WarHound" Requirements="Kit@HaveAttachedTechLabFactoryAndArmory2"/>
+            <Unit value="WarHound"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train19" Time="50">
+            <Button DefaultButtonFace="Hellion222222" State="Restricted" Requirements="Kit@HaveAttachedTechLabFactory2"/>
+            <Unit value="Diamondback2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train20" Time="40">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train25" Time="50">
+            <Button Requirements="Kit@HaveAttachedTechLabFactory"/>
+            <Flags index="AutoCast" value="1"/>
         </InfoArray>
     </CAbilTrain>
     <CAbilTrain id="GatewayTrain">
@@ -153,6 +305,7 @@
         <Cost>
             <Cooldown TimeUse="5"/>
         </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilAugment>
     <CAbilEffectInstant id="ImmortalOverload">
         <AutoCastValidatorArray index="0" value="CasterLifeNotFull"/>
@@ -273,6 +426,56 @@
             <Cooldown TimeUse="15"/>
         </Cost>
     </CAbilEffectTarget>
+    <CAbilTrain id="StarportTrain">
+        <InfoArray index="Train1" Time="50">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train2">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="75">
+            <Button Requirements="Kit@HaveAttachedTechLabStarportAndFusionCore2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="150">
+            <Button Requirements="Kit@HaveAttachedTechLabStarportAndFusionCore22"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="50">
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="90">
+            <Button Requirements="Kit@HaveAttachedTechLabStarportAndFusionCore22"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="80">
+            <Button Requirements="Kit@HaveAttachedTechLabStarportAndFusionCore2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="70">
+            <Button Requirements="Kit@HaveAttachedTechLabStarport2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="75">
+            <Button Requirements="Kit@HaveAttachedTechLabStarportAndFusionCore2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="70">
+            <Button DefaultButtonFace="Wraith2" State="Restricted" Requirements="Kit@HaveAttachedTechLabStarport"/>
+            <Unit value="Banshee2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train11" Time="80">
+            <Button DefaultButtonFace="Wraith22" State="Restricted" Requirements="Kit@HaveAttachedTechLabStarportAndFusionCore2"/>
+            <Unit value="Liberator2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train12" Time="70">
+            <Button DefaultButtonFace="Wraith222" State="Restricted" Requirements="Kit@HaveAttachedTechLabStarport2"/>
+            <Unit value="Medivac2"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+    </CAbilTrain>
     <CAbilEffectTarget id="TitanMechBombardment">
         <Cost>
             <Charge Link="Abil/TitanMechBombardment"/>
@@ -283,7 +486,7 @@
     </CAbilEffectTarget>
     <CAbilAugment id="TornadoMissile">
         <Cost>
-            <Cooldown TimeUse="10"/>
+            <Cooldown TimeUse="8"/>
         </Cost>
         <AutoCastFilters value="Ground,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilAugment>
@@ -303,6 +506,18 @@
             <Cooldown TimeUse="1"/>
         </Cost>
         <Effect value="BacklashRockets2"/>
+        <AutoCastFilters value="Ground,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CAbilAugment>
+    <CAbilAugment id="TornadoMissile3">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TornadoMissile3"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AbilCmd value="attack,Execute"/>
+        <Cost>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <Effect value="ThrowMolotovSwitch"/>
         <AutoCastFilters value="Ground,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilAugment>
     <CAbilEffectTarget id="UltrasonicPulseEnhanced">

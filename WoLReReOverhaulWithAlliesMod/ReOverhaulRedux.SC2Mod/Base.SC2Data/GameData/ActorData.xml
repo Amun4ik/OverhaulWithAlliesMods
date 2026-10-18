@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="Armory2" parent="TerranBuildingEx" unitName="Armory2">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="SnowVisualBuildingMacro"/>
+        <On Terms="Behavior.ColonyInfestation.On" Send="Create InfestationArmory"/>
+        <On Terms="Abil.que5.Start" Send="AnimSetTimeScale ::Baseline 5.000000"/>
+        <On Terms="Abil.que5.Stop" Send="AnimSetTimeScale ::Baseline 1.000000"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="ArmoryDeath2"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranLargeBuildingDeath" SoundLink="Armory_Explode"/>
+        <PlacementModel value="ArmoryPlacement2"/>
+        <PortraitModel value="ArmoryPortrait2"/>
+        <BarOffset value="115"/>
+        <BarWidth value="135"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Armory.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-Armory.dds"/>
+        <NameOffset value="100"/>
+        <SoundArray index="Ready" value="Armory_Ready"/>
+        <SoundArray index="What" value="Armory_What"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-Armory.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Armory.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSplat id="ArmorySplat2" parent="GenericUnitSplat" unitName="Armory2"/>
     <CActorUnit id="Banshee2" parent="GenericUnitStandard" unitName="Banshee2">
         <Aliases value="_UnitLarge"/>
         <Macros value="TerrainSquibAnimations"/>
@@ -107,6 +133,23 @@
         <On index="110" removed="1"/>
         <On index="111" removed="1"/>
     </CActorUnit>
+    <CActorSound id="DOMGhostPersonalDefensiveMatrixBirth2" parent="SoundOneShot">
+        <On Terms="Behavior.DOMGhostPersonalDefensiveMatrix2.On" Send="Create"/>
+        <On Terms="Behavior.DOMGhostPersonalDefensiveMatrix2.Off" Send="Destroy"/>
+        <Sound value="DOMGhost_DefensiveMatrixBirth"/>
+    </CActorSound>
+    <CActorSound id="DOMGhostPersonalDefensiveMatrixDeath2" parent="SoundOneShot">
+        <On Terms="Behavior.DOMGhostPersonalDefensiveMatrix2.Off" Send="Create"/>
+        <Sound value="DOMGhost_DefensiveMatrixDeath"/>
+    </CActorSound>
+    <CActorModel id="DOMGhostPersonalDefensiveMatrixModel2" parent="ModelAnimationStyleContinuous">
+        <On Terms="Behavior.DOMGhostPersonalDefensiveMatrix2.On" Send="Create"/>
+        <On Terms="Behavior.DOMGhostPersonalDefensiveMatrix2.Off" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModel>
     <CActorAction id="GoliathGroundAttack2" parent="GenericAttack" effectAttack="GoliathG2">
         <LaunchAttachQuery Methods="AMFilterWeaponSetA0"/>
         <LaunchAssets Model="GoliathGroundAttackLaunch" Sound="GoliathGroundAttackLaunch"/>
@@ -203,6 +246,13 @@
         <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Liberator_Junker"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Liberator_Junker"/>
     </CActorUnit>
+    <CActorAction id="PredatorAttack2" parent="GenericAttack" effectAttack="Predator2">
+        <LaunchAttachQuery Methods="Weapon"/>
+        <LaunchAssets Sound="Predator_AttackLaunch"/>
+        <ImpactMap index="None" Sound="Predator_AttackImpact"/>
+        <ImpactMap index="Flesh" Model="BloodTargetImpact2"/>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
     <CActorModel id="RegenImpact2" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.SwarmQueenRegenAuraTarget2.Start; At Target" Send="Create"/>
         <On Terms="Effect.StukovRegenAuraTarget.Start; At Target" Send="Create"/>
@@ -217,6 +267,321 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOrigin"/>
     </CActorModel>
+    <CActorUnit id="Separatist2" parent="GenericUnitBase" unitName="Separatist2">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply Fast"/>
+        <On Terms="Behavior.WalkSlow.On" Send="AnimGroupRemove Fast"/>
+        <On Terms="Behavior.WalkSlow.Off" Send="AnimGroupApply Fast"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="SeparatistCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="SeparatistCheerSquibSound" Send="Destroy"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Separatist_Land"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SeparatistDeath2" SoundLink="Marine_DeathFXBloodSpray"/>
+        <DeathArray index="Eviscerate" ModelLink="SeparatistDeath_Eviscerate" SoundLink="Uni_DeathFXEviscerate" VoiceLink="DxFx_ManDeath_Exerts"/>
+        <DeathArray index="Fire" ModelLink="SeparatistDeath_Fire"/>
+        <DeathArray index="Silentkill" SoundLink="Nova_Q_NeckBreak" VoiceLink="DxFx_ManDeath_Exerts"/>
+        <DeathCustoms ActorModel="SeparatistDeathRagdoll" ModelLink="SeparatistDeath_Ragdoll" Name="RagdollBasic">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="SeparatistDeath_Ragdoll" Name="RagdollSpineCrawlerHurl">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="TerranSmallBiologicalUnitDeathLow" Name="AntiGravTerran"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="SeparatistPortrait2"/>
+        <StandAnimTurnTime value="4"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="0.600000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Trooper_Yes"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-terran-marine.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-dom-grunt.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="Trooper_Ready"/>
+        <SoundArray index="Help" value="Trooper_Help"/>
+        <SoundArray index="What" value="Trooper_What"/>
+        <SoundArray index="Yes" value="Trooper_Yes"/>
+        <SoundArray index="Attack" value="Trooper_Attack"/>
+        <SoundArray index="Pissed" value="Trooper_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-dom-grunt.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-dom-grunt.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="Separatist3" parent="GenericUnitBase" unitName="Separatist3">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply Fast"/>
+        <On Terms="Behavior.WalkSlow.On" Send="AnimGroupRemove Fast"/>
+        <On Terms="Behavior.WalkSlow.Off" Send="AnimGroupApply Fast"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="SeparatistCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="SeparatistCheerSquibSound" Send="Destroy"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Separatist_Land"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SeparatistDeath3" SoundLink="Marine_DeathFXBloodSpray"/>
+        <DeathArray index="Eviscerate" ModelLink="SeparatistDeath_Eviscerate" SoundLink="Uni_DeathFXEviscerate" VoiceLink="DxFx_ManDeath_Exerts"/>
+        <DeathArray index="Fire" ModelLink="SeparatistDeath_Fire"/>
+        <DeathArray index="Silentkill" SoundLink="Nova_Q_NeckBreak" VoiceLink="DxFx_ManDeath_Exerts"/>
+        <DeathCustoms ActorModel="SeparatistDeathRagdoll" ModelLink="SeparatistDeath_Ragdoll" Name="RagdollBasic">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="SeparatistDeath_Ragdoll" Name="RagdollSpineCrawlerHurl">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="TerranSmallBiologicalUnitDeathLow" Name="AntiGravTerran"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="SeparatistPortrait3"/>
+        <StandAnimTurnTime value="4"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="0.600000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Trooper_Yes"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-terran-marine.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-dom-grunt.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="Trooper_Ready"/>
+        <SoundArray index="Help" value="Trooper_Help"/>
+        <SoundArray index="What" value="Trooper_What"/>
+        <SoundArray index="Yes" value="Trooper_Yes"/>
+        <SoundArray index="Attack" value="Trooper_Attack"/>
+        <SoundArray index="Pissed" value="Trooper_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-dom-grunt.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-dom-grunt.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="Separatist4" parent="GenericUnitBase" unitName="Separatist4">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply Fast"/>
+        <On Terms="Behavior.WalkSlow.On" Send="AnimGroupRemove Fast"/>
+        <On Terms="Behavior.WalkSlow.Off" Send="AnimGroupApply Fast"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="SeparatistCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="SeparatistCheerSquibSound" Send="Destroy"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Separatist_Land"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SeparatistDeath4" SoundLink="Marine_DeathFXBloodSpray"/>
+        <DeathArray index="Eviscerate" ModelLink="SeparatistDeath_Eviscerate" SoundLink="Uni_DeathFXEviscerate" VoiceLink="DxFx_ManDeath_Exerts"/>
+        <DeathArray index="Fire" ModelLink="SeparatistDeath_Fire"/>
+        <DeathArray index="Silentkill" SoundLink="Nova_Q_NeckBreak" VoiceLink="DxFx_ManDeath_Exerts"/>
+        <DeathCustoms ActorModel="SeparatistDeathRagdoll" ModelLink="SeparatistDeath_Ragdoll" Name="RagdollBasic">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="SeparatistDeath_Ragdoll" Name="RagdollSpineCrawlerHurl">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="TerranSmallBiologicalUnitDeathLow" Name="AntiGravTerran"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="SeparatistPortrait4"/>
+        <StandAnimTurnTime value="4"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="0.600000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Trooper_Yes"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-terran-marine.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-dom-grunt.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="Trooper_Ready"/>
+        <SoundArray index="Help" value="Trooper_Help"/>
+        <SoundArray index="What" value="Trooper_What"/>
+        <SoundArray index="Yes" value="Trooper_Yes"/>
+        <SoundArray index="Attack" value="Trooper_Attack"/>
+        <SoundArray index="Pissed" value="Trooper_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-dom-grunt.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-dom-grunt.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="Separatist5" parent="GenericUnitBase" unitName="Separatist5">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply Fast"/>
+        <On Terms="Behavior.WalkSlow.On" Send="AnimGroupRemove Fast"/>
+        <On Terms="Behavior.WalkSlow.Off" Send="AnimGroupApply Fast"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="SeparatistCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="SeparatistCheerSquibSound" Send="Destroy"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Separatist_Land"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SeparatistDeath5" SoundLink="Marine_DeathFXBloodSpray"/>
+        <DeathArray index="Eviscerate" ModelLink="SeparatistDeath_Eviscerate" SoundLink="Uni_DeathFXEviscerate" VoiceLink="DxFx_ManDeath_Exerts"/>
+        <DeathArray index="Fire" ModelLink="SeparatistDeath_Fire"/>
+        <DeathArray index="Silentkill" SoundLink="Nova_Q_NeckBreak" VoiceLink="DxFx_ManDeath_Exerts"/>
+        <DeathCustoms ActorModel="SeparatistDeathRagdoll" ModelLink="SeparatistDeath_Ragdoll" Name="RagdollBasic">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="SeparatistDeath_Ragdoll" Name="RagdollSpineCrawlerHurl">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="TerranSmallBiologicalUnitDeathLow" Name="AntiGravTerran"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="SeparatistPortrait5"/>
+        <StandAnimTurnTime value="4"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="0.600000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <AbilSoundArray AbilCmd="Stimpack,Execute" Sound="Trooper_Yes"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-terran-marine.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-dom-grunt.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="Trooper_Ready"/>
+        <SoundArray index="Help" value="Trooper_Help"/>
+        <SoundArray index="What" value="Trooper_What"/>
+        <SoundArray index="Yes" value="Trooper_Yes"/>
+        <SoundArray index="Attack" value="Trooper_Attack"/>
+        <SoundArray index="Pissed" value="Trooper_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-dom-grunt.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-dom-grunt.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="SeparatistAttack2" parent="GenericAttack" effectAttack="Separatist2">
+        <LaunchAssets Model="SeparatistAttackLaunch2" Sound="Raven_AutoTurretAttackLaunch"/>
+        <ContainerAssets Model="SeparatistBunkerAttackLaunch2"/>
+        <ImpactMap index="None" Model="SeparatistAttackImpact2" Sound="Raven_AutoTurretAttackImpact"/>
+    </CActorAction>
+    <CActorAction id="SeparatistAttack3" parent="GenericAttack" effectAttack="Separatist3">
+        <LaunchAssets Model="SeparatistAttackLaunch3" Sound="Raven_AutoTurretAttackLaunch"/>
+        <ContainerAssets Model="SeparatistBunkerAttackLaunch3"/>
+        <ImpactMap index="None" Model="SeparatistAttackImpact3" Sound="Raven_AutoTurretAttackImpact"/>
+    </CActorAction>
+    <CActorAction id="SeparatistAttack4" parent="GenericAttack" effectAttack="Separatist4">
+        <LaunchAssets Model="SeparatistAttackLaunch4" Sound="Raven_AutoTurretAttackLaunch"/>
+        <ContainerAssets Model="SeparatistBunkerAttackLaunch4"/>
+        <ImpactMap index="None" Model="SeparatistAttackImpact4" Sound="Raven_AutoTurretAttackImpact"/>
+    </CActorAction>
     <CActorUnit id="Stalker2" parent="GenericUnitBase" unitName="Stalker2">
         <Aliases value="_UnitMedium"/>
         <Macros value="TerrainSquibAnimations"/>
@@ -1350,6 +1715,56 @@
         <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Spectre2"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Spectre2"/>
     </CActorUnit>
+    <CActorUnit id="SupplyDepot2" parent="TerranBuildingEx" unitName="SupplyDepot2">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="SnowVisualBuildingMacro"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="SupplyDepotDeath2" SoundLink="SupplyDepot_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="SupplyDepot_Explode"/>
+        <PlacementModel value="SupplyDepotPlacement2"/>
+        <PlacementSound value="Terran_BuildingPlacementSmall"/>
+        <PortraitModel value="SupplyDepotPortrait2"/>
+        <BarOffset value="70"/>
+        <BarWidth value="80"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SupplyDepot-Raised.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <NameOffset value="40"/>
+        <SoundArray index="Ready" value="SupplyDepot_Ready"/>
+        <SoundArray index="What" value="SupplyDepot_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SupplyDepot-Raised.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="SupplyDepot22" parent="TerranBuildingEx" unitName="SupplyDepot22">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="SnowVisualBuildingMacro"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="SupplyDepotDeath22" SoundLink="SupplyDepot_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="SupplyDepot_Explode"/>
+        <PlacementModel value="SupplyDepotPlacement22"/>
+        <PlacementSound value="Terran_BuildingPlacementSmall"/>
+        <PortraitModel value="SupplyDepotPortrait22"/>
+        <BarOffset value="70"/>
+        <BarWidth value="80"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SupplyDepot-Raised.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <NameOffset value="40"/>
+        <SoundArray index="Ready" value="SupplyDepot_Ready"/>
+        <SoundArray index="What" value="SupplyDepot_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SupplyDepot-Raised.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSplat id="SupplyDepotSplat2" parent="GenericUnitSplat" unitName="SupplyDepot2"/>
+    <CActorSplat id="SupplyDepotSplat22" parent="GenericUnitSplat" unitName="SupplyDepot22"/>
     <CActorModel id="SwarmQueenRegenAuraSplat2" parent="ModelAddition">
         <On Terms="Behavior.SwarmQueenRegenAura2.On" Send="Create"/>
         <On Terms="Behavior.SwarmQueenRegenAura2.Off" Send="Destroy"/>
@@ -1383,6 +1798,63 @@
         <On Terms="Upgrade.Mercenarys.Add" Send="ModelSwap Thor_Junker_Collection"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps23" Send="ModelSwap Thor_Junker_Collection"/>
     </CActorUnit>
+    <CActorUnit id="TitanMechAssault2" parent="GenericUnitMorph" unitName="TitanMechAssault2">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Effect.TitanMechShootCreatePersistent.Start" Send="AnimPlay Attack Attack"/>
+        <On Terms="Effect.TitanMechShootCreatePersistent2.Start" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.TitanMechGunShot.SourceFinishStop" Send="AnimClear Attack"/>
+        <On Terms="Effect.TitanMechMissileLM.Start" Send="$Spell"/>
+        <On Terms="Effect.TitanMechMissileDamage.Start" Send="AnimClear Spell"/>
+        <DeathArray index="Normal" ModelLink="TitanMechAssaultDeath2" SoundLink="ArchAngel_death"/>
+        <PortraitModel value="VikingMercenaryAssaultPortrait2"/>
+        <StandAnimTurnTime value="4"/>
+        <WalkAnimMoveSpeed value="2.5468"/>
+        <BarOffset value="150"/>
+        <BarWidth value="100"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-VikingTitan-Assault.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="Birth" value="Goliath_Birth"/>
+        <GroupSoundArray index="Ready" value="Goliath_Ready"/>
+        <GroupSoundArray index="Help" value="Goliath_Help"/>
+        <GroupSoundArray index="What" value="Goliath_What"/>
+        <GroupSoundArray index="Yes" value="Goliath_Yes"/>
+        <GroupSoundArray index="Attack" value="Goliath_Attack"/>
+        <GroupSoundArray index="Pissed" value="Goliath_Pissed"/>
+        <HeroIcon value="Assets\Textures\Wireframe-Terran-VikingTitan-Assault.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <SoundArray index="Birth" value="Goliath_Birth"/>
+        <SoundArray index="Ready" value="Goliath_Ready"/>
+        <SoundArray index="Help" value="Goliath_Help"/>
+        <SoundArray index="What" value="Goliath_What"/>
+        <SoundArray index="Yes" value="Goliath_Yes"/>
+        <SoundArray index="Attack" value="Goliath_Attack"/>
+        <SoundArray index="Pissed" value="Goliath_Pissed"/>
+        <UnitIcon value="Assets\Textures\Wireframe-Terran-VikingTitan-Assault.dds"/>
+        <UnitKillRank Text="UnitKillRank/Archangel"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-VikingTitan-Assault.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="TitanMechMissileAttack2" parent="GenericAttack" effectImpact="TitanMechMissileDamage2" effectLaunch="TitanMechMissileLM2">
+        <LaunchAttachQuery Methods="AMFilterWeaponSetA1 AMRandomUniform"/>
+        <LaunchAssets Sound="TitanMechMissileAttack"/>
+        <Missile value="TitanMechMissileAttackMissile2"/>
+        <ImpactMap index="None" Model="BarrageModel2" Sound="BarrageSound"/>
+    </CActorAction>
+    <CActorForceSphere id="TitanMechMissileAttackForce2">
+        <On Terms="Effect.TitanMechMissileDamage2.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="Create TitanMechMissileAttackUpForce"/>
+        <Host Subject="_ImpactGuide"/>
+        <HostSiteOps Ops="SOpRandomPointInSphereDot15"/>
+        <Duration value="0.150000"/>
+        <Magnitude value="47.500000,8.000000"/>
+        <Radius value="2.000000,0.150000"/>
+    </CActorForceSphere>
+    <CActorMissile id="TitanMechMissileAttackMissile2" parent="GenericAttackMissile" unitName="TitanMechMissileWeapon2">
+        <Model value="TitanMechMissileAttackMissile2"/>
+    </CActorMissile>
     <CActorUnit id="Tosh">
         <CustomUnitStatusFrame value=""/>
     </CActorUnit>

@@ -5,18 +5,22 @@ Abil/Name/AlliedAIOrderForceAttack=AlliedAIOrderForceAttack
 Abil/Name/AllyAgressiveMode=AllyAgressiveMode
 Abil/Name/AllyDefensiveMode=AllyDefensiveMode
 Abil/Name/AllyNormalMode=AllyNormalMode
+Abil/Name/AssaultTrooperDefenseMatrix=Assault Trooper Defense Matrix
 Abil/Name/DefensiveMatrixDefender=Defensive Matrix
 Abil/Name/DisableAlliedPings=Disable Allies Attack Ping
 Abil/Name/ImmortalOverload=Barrier - Life Triggered
 Abil/Name/TornadoMissile2=Crocodile Rockets
+Abil/Name/TornadoMissile3=Throw Molotov
 Actor/HighlightTooltip/RenegadeMissileTurret=
 Behavior/Name/AllyAggressiveMode=AllyAggressiveMode
 Behavior/Name/AllyDefensiveMode=AllyDefensiveMode
 Behavior/Name/AllyNormalMode=AllyNormalMode
+Behavior/Name/DOMGhostPersonalDefensiveMatrix2=Ionic Force Field
 Behavior/Name/DisableAlliedPing=DisableAlliedPing
 Behavior/Name/GeyserExhaustedHarvestable=Geyser Exhausted
 Behavior/Name/SwarmQueenRegenAuraTarget2=Regeneration Aura
 Behavior/Name/SwarmQueenRegenAuraTarget22=Inspiration Aura
+Behavior/Tooltip/DOMGhostPersonalDefensiveMatrix2=This unit is absorbing a portion of the damage dealt to it.
 Behavior/Tooltip/SwarmQueenRegenAuraTarget2=Shaymen slowly repair and heal all units around him.
 Behavior/Tooltip/SwarmQueenRegenAuraTarget22=Forces around Raynor attack 10% faster.
 Button/Name/AlarakDeadlyCharge2=Deadly Charge
@@ -29,14 +33,52 @@ Button/Name/AlliedAIDefensive=Defensive Mode
 Button/Name/AlliedAIForceAttack=Force to Attack
 Button/Name/AlliedAINormal=Normal Mode
 Button/Name/AlliedControlInfo=Raynor's Raiders: Mission Information
+Button/Name/Banshee=Calldown Banshee
+Button/Name/Battlecruiser=Calldown Battlecruiser
+Button/Name/BuildCyclone=Manufacture Cyclone
+Button/Name/BuildHercules=Calldown Hercules
+Button/Name/BuildScienceVessel=Calldown Science Vessel
 Button/Name/CommanderControllerIcon=Order Raynor's Raiders
 Button/Name/CommanderControllerIcon2=Order Rebels
+Button/Name/DOMGhostPersonalDefensiveMatrix2=Field Defense Matrix
+Button/Name/Diamondback=Manufacture Diamondback
 Button/Name/DisableAllyPing=Disable Ally Help Pings
 Button/Name/EnableAllyPing=Enable Ally Help Pings
 Button/Name/ExperimentalPlasmaGun=Experimental Scourge Rifle Grenade
+Button/Name/FlamerTrooper=Train Flamer Trooper
+Button/Name/Goliath=Manufacture Goliath
+Button/Name/Hellion=Manufacture Hellion
+Button/Name/Hellion2=Manufacture Condor
+Button/Name/Hellion22=Manufacture Bastion Tank
+Button/Name/Hellion222=Manufacture Thunderlord
+Button/Name/Hellion2222=Manufacture Beastslayer SPG
+Button/Name/Hellion22222=Manufacture War Angel
+Button/Name/Hellion222222=Manufacture Tesla Tank
+Button/Name/HellionTank=Manufacture Hellbat
+Button/Name/Liberator=Calldown Liberator
+Button/Name/Medivac=Calldown Medivac
+Button/Name/MeleeTrooper=Train Melee Trooper
 Button/Name/NovaXanthosToggleRepairModeOn=Self Repair
+Button/Name/Predator=Manufacture Predator
+Button/Name/Raven=Calldown Raven
+Button/Name/SiegeTank=Manufacture Siege Tank
+Button/Name/StrikeTrooper=Train Strike Trooper
+Button/Name/TankBusterTrooper=Train Tank Buster Trooper
+Button/Name/Thor=Manufacture Thor
 Button/Name/TornadoMissile2=Crocodile Missiles
+Button/Name/TornadoMissile3=Throw Molotov
 Button/Name/TossGrenade=HE Grenade
+Button/Name/TrainCommando=Train Commando
+Button/Name/TrainDefender=Train Defender
+Button/Name/TrainLoyalist=Train Loyalist
+Button/Name/VikingFighter=Calldown Viking
+Button/Name/Vulture=Manufacture Vulture
+Button/Name/WarHound=Manufacture Warhound
+Button/Name/WidowMine=Manufacture Widow Mine
+Button/Name/Wraith=Calldown Wraith
+Button/Name/Wraith2=Calldown Crocodile
+Button/Name/Wraith22=Calldown Valkyrie
+Button/Name/Wraith222=Calldown Valkyrie Transport
 Button/Tooltip/AlarakDeadlyCharge2=Supplicant intercepts target enemy unit and strikes it for <d ref="Effect,AlarakDeadlyChargeDamage,Amount"/> damage.
 Button/Tooltip/AlliedAIAggressive=Orders your ally to focus entirely on offense, attacking enemies more frequently while neglecting defense.
 Button/Tooltip/AlliedAIAggressive2=Orders your ally to focus entirely on offense, attacking enemies more frequently while neglecting defense.
@@ -47,38 +89,62 @@ Button/Tooltip/AlliedAIForceAttack=Orders your ally to immediately attack with a
 Button/Tooltip/AlliedAINormal=Orders your ally to maintain a balance between offense and defense, ensuring neither is compromised.
 Button/Tooltip/AlliedAIOrderPanel=im tired boss
 Button/Tooltip/AlliedControlInfo=Raynor's Raider's specialization for this mission:<n/><n/>Normal Mode:<n/><n/>Offensive Mode:<n/><n/>Defensive Mode:
+Button/Tooltip/Armory2=Contains weapon and armor upgrades for Factory and Starport units.
 Button/Tooltip/Banshee2=Tactical-strike aircraft. Can use cloak.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/CommanderControllerIcon=Command Raynor's Raiders to change their combat behavior.
 Button/Tooltip/CommanderControllerIcon2=Command Raynor's Raiders to change their combat behavior.
 Button/Tooltip/Cyclone=Mobile assault drone. Effective against Air targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/DOMGhostPersonalDefensiveMatrix2=Provides the Trooper with a shield that reduces incoming damage until 25 total damage is absorbed. Shield lasts for 20 seconds.
 Button/Tooltip/Diamondback2=Light armored experimental vehicle. Rebellion command transfer all their machines for our use. Deal additional damage in chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Diamondback3=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/DisableAllyPing=Turns off those annoying help pings on the minimap.
 Button/Tooltip/EnableAllyPing=Turns those annoying help pings back on.
 Button/Tooltip/ExperimentalPlasmaGun=Raynor uses his rifle to launch Scourge RPG, Dealing 130 Damage.
+Button/Tooltip/FlamerTrooper=Close combat anti-bio infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/HERC2=Front-line infantry. Can use Grapple.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
-Button/Tooltip/Hellion2=Fast scout. Has a flame attack that damages all enemy units in its line of fire. Can transform into a close range combat unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Hellion2=Fast scout. Uses both grenades and gun shots to attack.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Hellion22=Moderate MBT, that carry heavy armor and spider mines.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Hellion222=Experimental hovering vehicle that utilize Ultra-Sonic Technology. Deal damage in a line.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Hellion2222=Heavy mobile artillery. Deal high damage on a long distance.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Hellion22222=Heavy Dominion Walker<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Hellion222222=Mobile light armored tank. Attacks with chained lightning, that hits multiple targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/KorhalPalaceTurret2=Extremely powerful turrets that cannot be attacked. Breaking down the Palace Gate is the only way to victory.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/LeadFarmer=Commando's Chaingun deals splash damage in a small area around the target.
 Button/Tooltip/Liberator2=Artillery fighter. Loaded with missiles that deal area damage to enemy air targets. Can switch into Defender Mode to provide siege support.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
 Button/Tooltip/Medivac2=Armored Air Transport. Suddenly Valkyrie hull without it's armament can be used as transport or logistic ship.
+Button/Tooltip/MeleeTrooper=Melee cheap infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground.</c>
 Button/Tooltip/MercReaper=Former Dominion Elite Reaper Corp. Strong and dangerous Raider. Can jump up and down cliffs.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/NovaXanthosToggleRepairModeOn=Order vehicle crew to repair their vehicle. During this vehicle is vulnerable to enemy fire, which stops repair process. Crew unable to move or attack during repair time.
 Button/Tooltip/PickupGas100Text=<s val="Kicker_Gas">+75 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><n/><s val="Kicker_Gas">+25 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><s val="Kicker_Gas"> For Allies</s>
 Button/Tooltip/PickupMinerals100Text=<s val="Kicker_Minerals">+75 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/><n/><s val="Kicker_Minerals">+25 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/> <s val="Kicker_Minerals"> For Allies</s>
 Button/Tooltip/RaynorCommando=Mysterious Field Captain of the Rebellion. Has a infantry railgun with different rounds.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/RenegadeMissileTurret=Experimental defense turret. Deal damage in a chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c><n/><c val="FFE303">Detector</c>
+Button/Tooltip/Separatist3=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Separatist4=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Separatist5=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SiegeTank3=Heavy tank. Can switch into Siege Mode to provide long-range artillery support.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
 Button/Tooltip/Stalker2=Ranged attack strider. Can use Blink.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/Stetmann=Jezik can heal and repair at lightning speed. Also can take control over weak minded enemy. <n/><n/><c val="#ColorAttackInfo">Has no attack.</c><n/>
+Button/Tooltip/StrikeTrooper=General-purpose infantry. Can use Defense Matrix.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/SupplyDepot2=Provides supply.<n/>Supply allows you to create more units.<n/>Supply Depots can be lowered to allow units to walk over them.
+Button/Tooltip/SupplyDepot22=Provides supply.<n/>Supply allows you to create more units.<n/>Supply Depots can be lowered to allow units to walk over them.
+Button/Tooltip/TankBusterTrooper=Anti-air light infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TitanMechAssault2=Prototype Viking variant with advanced targeting and weapons systems.
 Button/Tooltip/TornadoMissile2=When attacking a target, fire 3 missile, each deal 8 (+4 vs armored) damage.
+Button/Tooltip/TornadoMissile3=When attacking a mechanical unit, the Warhound launches electrically charged missiles at its target, dealing 30 damage per volley.<n/><c val="#ColorAttackInfo">Can attack ground units.</c> 
 Button/Tooltip/TossGrenade=Tosses a grenade that explodes for <d ref="Effect,TossGrenadeDamage,Amount"/> damage in a radius. <n/><n/><c val="ffff8a">Does not harm friendly units.</c>
+Button/Tooltip/TrainCommando=Veteran of Marine Corp. Deal damage in AoE, can get access to Explosives. Attack ground and air targets.
+Button/Tooltip/TrainDefender=Dominion field caster. Deal high damage to targets and can protect forces around him.
+Button/Tooltip/TrainLoyalist=Dominion infantry long hand.
 Button/Tooltip/TychusChaingun=A scoundrel, a Pirate and "Good" old friend of Raynor. Has a shit ton of explosives.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/TychusCommando=Commando can throw demolition charge. Deal damage in small area. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/TychusCommando2=Long-hand of Dominion Infantry Corp. <n/><n/><c val="#ColorAttackInfo">Can attack ground</c><n/>
 Button/Tooltip/Vulture2=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Vulture3=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/WidowMineBioSplash=Attacks by launching missiles at enemy ground and air units that get too close. Missiles deal <d ref="Effect,WidowMineExplodeDirect,Amount"/> (+50% vs. shields) damage to their primary target, and <d ref="Effect,WidowMineExplodeSplash,Amount"/> (+<d ref="Effect,WidowMineExplodeSplashShields,VitalBonus[Shields]"/> vs. shields) splash damage to units nearby.<n/><n/><c val="#ColorAttackInfo">Cooldown: <d ref="Abil,WidowMineAttack,Cost[0].Cooldown[0].TimeUse[0]"/> seconds.</c>
+Button/Tooltip/Wraith2=Mobile and armored flying unit. Can use rockets alongside main weapon against ground targets. Ineffective against flying targets.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/Wraith22=Heavy UED Frigate effective in conquering airspace supremacy. Deal high damage in area.<n/><n/><c val="ffff8a">Can attack air units.</c>
+Button/Tooltip/Wraith222=Rebellion's Ersatz Dropship. Based on Valkyrie Hull provide much more protection than Medivac or old Dropship. And after throwing all missiles away, we can use it as good transport.
 Button/Tooltip/Zealot2=Powerful melee warrior. Can use Charge.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Effect/Name/90mmCannons2=Arclite Cannon (Damage)
 Effect/Name/90mmCannons3=Arclite Cannon (Damage)
@@ -137,6 +203,7 @@ Effect/Name/LurkerMPDamage=Ultra-Sonic
 Effect/Name/LurkerMPSearch=Ultra-Sonic
 Effect/Name/ParticleDisruptors2=Entropy Lance (LM)
 Effect/Name/ParticleDisruptorsU2=Entropy Lance (Damage)
+Effect/Name/Predator2=Melee Trooper
 Effect/Name/PsiBlades2=Psi Blades (Damage)
 Effect/Name/PsiBladesBurst2=Psi Blades
 Effect/Name/PunisherGrenadesLM2=Loyalist Grenades
@@ -148,6 +215,9 @@ Effect/Name/RailGunTurretSearch=War Hound Search
 Effect/Name/RailGunTurretSearchCP=War Hound Search CP
 Effect/Name/RenegadeLongboltMissileLM=Grenade Missile
 Effect/Name/RenegadeLongboltMissileU=Grenade Missile
+Effect/Name/Separatist=Trooper Damage
+Effect/Name/Separatist2=Tank Buster Trooper Damage
+Effect/Name/Separatist3=Assault Trooper Damage
 Effect/Name/SkyTankMissileBarrageCP=Mortar MissileCP (Unnamed)
 Effect/Name/SkyTankMissileBarrageDamage=Mortar Missile Damage 1
 Effect/Name/SkyTankMissileBarrageDamage2=Mortar Missile Damage 2
@@ -163,6 +233,10 @@ Effect/Name/SwarmQueenRegenAuraSearch2=Regeneration Aura (Search)
 Effect/Name/SwarmQueenRegenAuraSearch22=Regeneration Aura (Search)
 Effect/Name/SwarmQueenRegenAuraTarget2=Regeneration Aura (Target)
 Effect/Name/SwarmQueenRegenAuraTarget22=Regeneration Aura (Target)
+Effect/Name/TitanMechMissileDamage2=War Angel Missile (Damage)
+Effect/Name/TitanMechMissileDamageDummy2=War Angel Missile (Damage Dummy)
+Effect/Name/TitanMechMissileLM2=War Angel Missile (Launch Missile)
+Effect/Name/TitanMechMissileShot2=War Angel Missile (Persistent)
 Effect/Name/WarHound=War Hound Damage
 Effect/Name/WarHoundSet=War Hound Set
 Effect/Name/WraithAG=WraithAG (Persistent)
@@ -185,8 +259,15 @@ Param/Value/lib_7D432011_A2F1FE8A='s Vespene
 Param/Value/lib_7D432011_C284B794='s Minerals
 Param/Value/lib_7D432011_C95425DE=<c val="FF0000">
 Param/Value/lib_7D432011_F4E42484=<c val="FF0000">
+RequirementNode/Tooltip/And2589852481CountUnitArmory2CompleteOnly=Attached Tech Lab
+RequirementNode/Tooltip/And2589852481CountUnitArmory2CompleteOnlyOrCountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnit=Attached Tech Lab
+RequirementNode/Tooltip/CountUnitSupplyDepot22CompleteOnly2589852481=Attached Tech Lab
+RequirementNode/Tooltip/CountUnitSupplyDepot2CompleteOnly2589852481=Attached Tech Lab
+RequirementNode/Tooltip/Or2589852481CountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnitCountUpgradeAdvancedMedicTrainingCompleteOnlyCountUpgradeDominionForcesCompleteOnly=Attached Tech Lab
 Unit/Name/ATSLaserBatteryLMWeapon2=ATS Laser Battery
+Unit/Name/Academy=Academy
 Unit/Name/AlliedAIOrderPanel=Allies
+Unit/Name/Armory2=Armory
 Unit/Name/BacklashRocketsLMWeapon2=Backlash Rockets
 Unit/Name/Banshee2=Crocodile Helicopter
 Unit/Name/Battlecruiser=Minotaur - class Battlecruiser
@@ -210,13 +291,21 @@ Unit/Name/PunisherGrenadesLMWeapon2=Loyalist Grenades
 Unit/Name/RailGunTurret=Grenade Turret
 Unit/Name/RaynorCommando=Nekromant
 Unit/Name/RenegadeMissileTurret=Tesla Coil
+Unit/Name/Separatist2=Tank Buster Trooper
+Unit/Name/Separatist3=Strike Trooper
+Unit/Name/Separatist4=Flamer Trooper
+Unit/Name/Separatist5=Melee Trooper
 Unit/Name/SiegeTank2=Bastion Tank
 Unit/Name/SiegeTank3=Beastslayer Self-Propelled Gun
 Unit/Name/Stalker2=Slayer
 Unit/Name/StalkerWeapon2=Stalker
 Unit/Name/Stetmann=Jezik
 Unit/Name/Supplicant=Votary
+Unit/Name/SupplyDepot2=Machine Shop
+Unit/Name/SupplyDepot22=Control Tower
 Unit/Name/Swann=Defender
+Unit/Name/TitanMechAssault2=War Angel
+Unit/Name/TitanMechMissileWeapon2=Archangel Missile
 Unit/Name/TychusCommando=Commando
 Unit/Name/TychusCommando2=Loyalist
 Unit/Name/VikingFighterWeapon2=Viking Fighter
@@ -241,6 +330,7 @@ Weapon/Name/AllPurposeLaserBatterySecondry=ATX Hidden Battery 1
 Weapon/Name/AllPurposeLaserBatterySecondry2=ATX Hidden Battery 2
 Weapon/Name/AllPurposeLaserBatterySecondry3=ATX Hidden Battery 3
 Weapon/Name/BacklashRockets2=Freya Missiles
+Weapon/Name/BacklashRockets22=Tornado Missile
 Weapon/Name/CommandoRifle=Infantry Railgun Tyranny's End
 Weapon/Name/Diamondback=Redeemer Heavy Rail Gun
 Weapon/Name/Diamondback2=Tesla Capacitors
@@ -257,7 +347,13 @@ Weapon/Name/PsiBlades2=Blood Blades
 Weapon/Name/PunisherGrenades2=Diplomacy Grenades
 Weapon/Name/RailGunTurret=Drakken Grenade Launcher
 Weapon/Name/RenegadeLongboltMissile=Tesla Coil
+Weapon/Name/Separatist=CK-27 Carbine Rifle
+Weapon/Name/Separatist2=Ferromag SMG
+Weapon/Name/Separatist3=B-1 High-Cal LMG
+Weapon/Name/Separatist4=CPO-04 Salamander Flamethrower
+Weapon/Name/Separatist5=Negotiator
 Weapon/Name/SupplicantWeapon=Blood Orb
+Weapon/Name/TitanMechGun2=LB-10 Gatling Minigun
 Weapon/Name/TyphoonMissilePod=Typhoon Ground-Ground Missiles
 Weapon/Name/TyphoonMissilePod2=Typhoon Ground-Air Missiles
 Weapon/Name/Vulture2=Ultra-Sonic Weapon

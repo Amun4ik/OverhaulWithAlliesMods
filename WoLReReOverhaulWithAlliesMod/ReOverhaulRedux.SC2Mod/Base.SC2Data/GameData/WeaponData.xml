@@ -5,7 +5,7 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
         <DisplayEffect value="TornadoMissileDamage"/>
         <DisplayAttackCount value="2"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="7.5"/>
         <Range value="7"/>
         <Marker>
@@ -13,6 +13,22 @@
         </Marker>
         <Period value="0.6"/>
         <Effect value="TornadoMissileCP"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BacklashRockets22">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="TornadoMissileDamage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7.5"/>
+        <Range value="7"/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <Period value="0.6"/>
+        <Effect value="TornadoMissileLM"/>
         <LegacyOptions index="KeepChanneling" value="1"/>
         <AllowedMovement value="Slowing"/>
     </CWeaponLegacy>
@@ -34,6 +50,50 @@
         <MinScanRange value="6.5"/>
         <Range value="6"/>
         <Period value="1.44"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Separatist">
+        <Period value="0.7607"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Separatist2">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="0.8608"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0.75"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Separatist3">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6"/>
+        <Range value="6"/>
+        <Period value="0.45"/>
+        <DamagePoint value="0.3"/>
+        <Backswing value="0.85"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Separatist4">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="FirebatUFull"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="2"/>
+        <Range value="2"/>
+        <Period value="1"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="1.05"/>
+        <Effect value="FirebatSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Separatist5">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="Predator2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0"/>
+        <Period value="0.8608"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0.75"/>
+        <Effect value="Predator2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SupplicantWeapon">
         <EditorCategories value="Race:Protoss"/>
@@ -275,9 +335,9 @@
         <Effect value="LurkerMP"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Firebat">
-        <Period value="0.86"/>
+        <Period value="1"/>
         <DamagePoint value="0.1"/>
-        <Backswing value="0.2"/>
+        <Backswing value="0.1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="GoliathA">
         <DisplayAttackCount value="4"/>
@@ -496,6 +556,22 @@
     <CWeaponLegacy id="ThorsHammer">
         <Range value="8"/>
         <Period value="2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TitanMechGun2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="TitanMechShootDamage"/>
+        <TargetFilters value="Visible;Self,Player,Ally,Enemy,Air,Ground,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="12"/>
+        <Period value="0.2"/>
+        <Backswing value="0.15"/>
+        <Effect value="TitanMechShootDamage"/>
+        <CriticalChance value="0.1"/>
+        <CriticalEffect value="TitanMechMissileShot2"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="TwinGatlingCannon">
         <Period value="0.5"/>

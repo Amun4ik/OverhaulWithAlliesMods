@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirementAnd id="And2589852481CountUnitArmory2CompleteOnly">
+        <OperandArray value="CountUnitArmory2CompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="And2589852481CountUnitArmory2CompleteOnlyOrCountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnit">
+        <OperandArray value="CountUnitArmory2CompleteOnly"/>
+        <OperandArray value="OrCountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnit"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndOr2589852481CountUnitFactoryTechLabCompleteOnlyAtUnitCountUnitFactoryTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot2CompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="Or2589852481CountUnitFactoryTechLabCompleteOnlyAtUnitCountUnitFactoryTechReactorCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUnitSupplyDepot2CompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndOr2589852481CountUnitFactoryTechLabCompleteOnlyAtUnitCountUnitFactoryTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot2CompleteOnlyCountUnitArmoryCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="Or2589852481CountUnitFactoryTechLabCompleteOnlyAtUnitCountUnitFactoryTechReactorCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUnitSupplyDepot2CompleteOnly"/>
+        <OperandArray value="CountUnitArmoryCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndOr2589852481CountUnitStarportTechLabCompleteOnlyAtUnitCountUnitStarportTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot22CompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="Or2589852481CountUnitStarportTechLabCompleteOnlyAtUnitCountUnitStarportTechReactorCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUnitSupplyDepot22CompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndOr2589852481CountUnitStarportTechLabCompleteOnlyAtUnitCountUnitStarportTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot22CompleteOnlyCountUnitFusionCoreCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="Or2589852481CountUnitStarportTechLabCompleteOnlyAtUnitCountUnitStarportTechReactorCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUnitSupplyDepot22CompleteOnly"/>
+        <OperandArray value="CountUnitFusionCoreCompleteOnly"/>
+    </CRequirementAnd>
     <CRequirementCountBehavior id="CountBehaviorAllyAggressiveModeCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="AllyAggressiveMode" State="CompleteOnlyAtUnit" Unlock="1"/>
@@ -12,6 +41,29 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="AllyNormalMode" State="CompleteOnlyAtUnit" Unlock="1"/>
     </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnitArmory2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Armory2" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitSupplyDepot22CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="SupplyDepot22" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitSupplyDepot22CompleteOnly2589852481">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SupplyDepot22" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitSupplyDepot2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="SupplyDepot2" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitSupplyDepot2CompleteOnly2589852481">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SupplyDepot2" State="CompleteOnly"/>
+    </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeDominionForcesCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="DominionForces" State="CompleteOnly"/>
@@ -30,7 +82,6 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeTychusBoys2CompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="TychusBoys2" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeTychusBoysCompleteOnly">
@@ -46,4 +97,15 @@
     <CRequirementNot id="NotCountBehaviorAllyNormalModeCompleteOnlyAtUnit">
         <OperandArray index="0" value="CountBehaviorAllyNormalModeCompleteOnlyAtUnit"/>
     </CRequirementNot>
+    <CRequirementOr id="Or2589852481CountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnitCountUpgradeAdvancedMedicTrainingCompleteOnlyCountUpgradeDominionForcesCompleteOnly">
+        <OperandArray value="CountUnitBarracksTechLabCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUnitBarracksTechReactorCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUpgradeAdvancedMedicTrainingCompleteOnly"/>
+        <OperandArray value="CountUpgradeDominionForcesCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUnitBarracksTechLabCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUnitBarracksTechReactorCompleteOnlyAtUnit"/>
+    </CRequirementOr>
 </Catalog>

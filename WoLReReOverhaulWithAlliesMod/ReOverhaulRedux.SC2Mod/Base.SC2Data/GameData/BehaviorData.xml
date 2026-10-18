@@ -43,6 +43,16 @@
     <CBehaviorBuff id="AllyNormalMode">
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="DOMGhostPersonalDefensiveMatrix2">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-defensivematrix.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="TempShieldsNotEmptyOrNoTempShields"/>
+        <Duration value="20"/>
+        <Modification>
+            <VitalMaxArray index="Shields" value="25"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DefilerMPPlague"/>
     <CBehaviorBuff id="DisableAlliedPing">
         <EditorCategories value="AbilityorEffectType:Units"/>

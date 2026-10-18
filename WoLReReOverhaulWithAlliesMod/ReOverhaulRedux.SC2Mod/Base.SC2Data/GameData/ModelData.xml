@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="Armory2" parent="ArmoryBase">
+        <Model value="Assets\Buildings\Terran\AcademySCBW\AcademySCBW.m3"/>
+    </CModel>
+    <CModel id="ArmoryDeath2" parent="ArmoryDeathBase">
+        <Model value="Assets\Buildings\Terran\AcademySCBW\AcademySCBW@Death.m3"/>
+    </CModel>
+    <CModel id="ArmoryPlacement2" parent="ArmoryPlacementBase" low="Armory2">
+        <Model value="Assets\Buildings\Terran\AcademySCBW\AcademySCBW@Placement.m3"/>
+    </CModel>
+    <CModel id="ArmoryPortrait2" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
+        <Lighting value="AdjutantPortrait"/>
+    </CModel>
+    <CModel id="ArmorySplat2" parent="Splat">
+        <Model value="Assets\Splats\Splat_AcademySCBW\Splat_AcademySCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
     <CModel id="BacklashRocketsLMWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile\MiraHorner_Carrier_Coop_Missile.m3"/>
         <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModel>
     <CModel id="Banshee2" parent="BansheeBase">
         <Model value="Assets\Terran\NC_HeloGunship.m3"/>
@@ -19,6 +39,21 @@
         <Model value="Assets\Portraits\Terran\BansheePortrait\BansheePortrait.m3"/>
         <Image value="Assets\Textures\BansheePortrait_Static.dds"/>
         <Lighting value="BansheePortrait"/>
+    </CModel>
+    <CModel id="BarrageModel2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\MiraHorner_Battlecruiser_Coop_Yamato_Impact\MiraHorner_Battlecruiser_Coop_Yamato_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="BloodTargetImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Other\BloodTargetImpact\BloodTargetImpact.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+        <Flags index="Ignorable" value="1"/>
+    </CModel>
+    <CModel id="DOMGhostPersonalDefensiveMatrixModel2" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\Nova_Blink_Shield\Nova_Blink_Shield.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
     </CModel>
     <CModel id="Liberator2" parent="LiberatorBase">
         <Model value="Assets\Terran\SC2Valkyrie_GhostNova_UED.m3"/>
@@ -63,6 +98,336 @@
     </CModel>
     <CModel id="RegenImpact22" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Other\SwarmHeroGlow\SwarmHeroGlow.m3"/>
+    </CModel>
+    <CModel id="Separatist">
+        <Model value="Assets\Terran\Light_Infantry_Shield.m3"/>
+    </CModel>
+    <CModel id="Separatist2" parent="Unit" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP_Rocket\Trooper_Mengsk_COOP_Rocket.m3"/>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="1.219000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="Separatist3" parent="Unit" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP_Rifle\Trooper_Mengsk_COOP_Rifle.m3"/>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="1.219000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="Separatist4" parent="Unit" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP_Flamethrower\Trooper_Mengsk_COOP_Flamethrower.m3"/>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="1.219000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="Separatist5" parent="Unit" Race="Terran">
+        <Model value="Assets\Terran\dominion-shielder.m3"/>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="1.219000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="SeparatistAttackImpact2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SeparatistAttackImpact3" parent="LaunchFX">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponImpact\ScoutWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SeparatistAttackImpact4" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SeparatistAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SeparatistAttackLaunch3" parent="LaunchFX">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponLaunch\ScoutWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SeparatistAttackLaunch4" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SeparatistBunkerAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="SeparatistAttackLaunch"/>
+    </CModel>
+    <CModel id="SeparatistBunkerAttackLaunch3" parent="LaunchFX">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponLaunch\ScoutWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="SeparatistAttackLaunch"/>
+    </CModel>
+    <CModel id="SeparatistBunkerAttackLaunch4" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="SeparatistAttackLaunch"/>
+    </CModel>
+    <CModel id="SeparatistDeath2" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP_Death\Trooper_Mengsk_COOP_Death.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Blood_Spary"/>
+            <Type value="Sound"/>
+            <Time value="0.031000"/>
+            <Payload value="Blood_Spary"/>
+        </Events>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="1.010000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.921000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.361000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.582000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="2.068000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="SeparatistDeath3" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP_Death\Trooper_Mengsk_COOP_Death.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Blood_Spary"/>
+            <Type value="Sound"/>
+            <Time value="0.031000"/>
+            <Payload value="Blood_Spary"/>
+        </Events>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="1.010000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.921000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.361000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.582000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="2.068000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="SeparatistDeath4" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP_Death\Trooper_Mengsk_COOP_Death.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Blood_Spary"/>
+            <Type value="Sound"/>
+            <Time value="0.031000"/>
+            <Payload value="Blood_Spary"/>
+        </Events>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="1.010000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.921000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.361000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.582000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="2.068000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="SeparatistDeath5" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP_Death\Trooper_Mengsk_COOP_Death.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Blood_Spary"/>
+            <Type value="Sound"/>
+            <Time value="0.031000"/>
+            <Payload value="Blood_Spary"/>
+        </Events>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="1.010000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.921000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.361000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.582000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="2.068000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="SeparatistPortrait">
+        <Model value="Assets\COOP\Mengsk\Portraits\Trooper_Mengsk_COOP_Portrait\Trooper_Mengsk_COOP_Portrait.m3"/>
+    </CModel>
+    <CModel id="SeparatistPortrait2" parent="Portrait" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Portraits\Trooper_Mengsk_COOP_Rocket_Portrait\Trooper_Mengsk_COOP_Rocket_Portrait.m3"/>
+        <Image value="Assets\Textures\domgruntportrait_static.dds"/>
+        <Lighting value="SeparatistPortrait"/>
+    </CModel>
+    <CModel id="SeparatistPortrait3" parent="Portrait" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Portraits\Trooper_Mengsk_COOP_Rifle_Portrait\Trooper_Mengsk_COOP_Rifle_Portrait.m3"/>
+        <Image value="Assets\Textures\domgruntportrait_static.dds"/>
+        <Lighting value="SeparatistPortrait"/>
+    </CModel>
+    <CModel id="SeparatistPortrait4" parent="Portrait" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Portraits\Trooper_Mengsk_COOP_Flamethrower_Portrait\Trooper_Mengsk_COOP_Flamethrower_Portrait.m3"/>
+        <Image value="Assets\Textures\domgruntportrait_static.dds"/>
+        <Lighting value="SeparatistPortrait"/>
+    </CModel>
+    <CModel id="SeparatistPortrait5" parent="Portrait" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Portraits\Trooper_Mengsk_COOP_Portrait\Trooper_Mengsk_COOP_Portrait.m3"/>
+        <Image value="Assets\Textures\domgruntportrait_static.dds"/>
+        <Lighting value="SeparatistPortrait"/>
+    </CModel>
+    <CModel id="SkyTankMissileBarrageMissileImpact">
+        <Model value="Assets\COOP\Mengsk\Effects\Artillery_Mengsk_COOP_Impact\Artillery_Mengsk_COOP_Impact.m3"/>
+        <ScaleMax value="2.500000,2.500000,2.500000"/>
+        <ScaleMin value="2.500000,2.500000,2.500000"/>
     </CModel>
     <CModel id="Stalker2" parent="StalkerBase">
         <Model value="Assets\Units\Protoss\Stalker_Taldarim_Collection\Stalker_Taldarim_Collection.m3"/>
@@ -854,11 +1219,112 @@
     <CModel id="StetmannMedicPortrait">
         <Model value="Assets\Terran\DaveSpectrePortrait.m3"/>
     </CModel>
+    <CModel id="SupplyDepot2" parent="SupplyDepotBase">
+        <Model value="Assets\Buildings\Terran\MachineShopSCBW\MachineShopSCBWFix.m3"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionLayer value="1"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="SupplyDepot22" parent="SupplyDepotBase">
+        <Model value="Assets\Buildings\Terran\ControlTowerSCBW\ControlTowerSCBW.m3"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionLayer value="1"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="SupplyDepotDeath2" parent="SupplyDepotDeathBase">
+        <Model value="Assets\Buildings\Terran\MachineShopSCBW\MachineShopSCBW@Death.m3"/>
+    </CModel>
+    <CModel id="SupplyDepotDeath22" parent="SupplyDepotDeathBase">
+        <Model value="Assets\Buildings\Terran\ControlTowerSCBW\ControlTowerSCBW@Death.m3"/>
+    </CModel>
+    <CModel id="SupplyDepotPlacement2" parent="SupplyDepotPlacementBase" low="SupplyDepot2">
+        <Model value="Assets\Buildings\Terran\MachineShopSCBW\MachineShopSCBW@Placement.m3"/>
+    </CModel>
+    <CModel id="SupplyDepotPlacement22" parent="SupplyDepotPlacementBase" low="SupplyDepot22">
+        <Model value="Assets\Buildings\Terran\ControlTowerSCBW\ControlTowerSCBW@Placement.m3"/>
+    </CModel>
+    <CModel id="SupplyDepotPortrait2" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
+        <Lighting value="AdjutantPortrait"/>
+    </CModel>
+    <CModel id="SupplyDepotPortrait22" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
+        <Lighting value="AdjutantPortrait"/>
+    </CModel>
+    <CModel id="SupplyDepotSplat2" parent="Splat">
+        <Model value="Assets\Splats\Splat_MachineShopSCBW\Splat_MachineShopSCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="SupplyDepotSplat22" parent="Splat">
+        <Model value="Assets\Splats\Splat_ControlTowerSCBW\Splat_ControlTowerSCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
     <CModel id="Swann">
         <Model value="Assets\Terran\dominion-rockettrooperleader.m3"/>
     </CModel>
+    <CModel id="TitanMechAssault2" parent="Unit" Race="Terran">
+        <Model value="Assets\Terran\ArchAngelAssault_Xanthos_TeamColor.m3"/>
+        <AttachProps Id="Ref_Weapon Left">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon Right">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 06">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 07">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <SelectionRadius value="0.764400"/>
+        <ShadowRadius value="2.000000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
+    <CModel id="TitanMechAssaultDeath2" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\ArchAngelAssault_Xanthos_Experimentation_Death\ArchAngelAssault_Xanthos_Experimentation_Death.m3"/>
+        <LowQualityModel value="TerranLargeUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
     <CModel id="TitanMechFighter">
         <Model value="Assets\UED Units\Viper_NightRaven_V1.m3"/>
+    </CModel>
+    <CModel id="TitanMechMissileAttackMissile2" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\GoliathAirMissile\GoliathAirMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModel>
     <CModel id="Tosh">
         <Model value="Assets\Terran\Tosh_ToshsGoons_HD.m3"/>
@@ -897,6 +1363,12 @@
         <FacialController value="LocalizedData\Facial\HellionPortrait.fxa"/>
         <Image value="Assets\Textures\hellion_covertops_collection_portrait_static.dds"/>
         <Lighting value="TychusPortrait"/>
+    </CModel>
+    <CModel id="VikingMercenaryAssaultPortrait2" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\VikingMercenaryAssaultPortrait\VikingMercenaryAssaultPortrait.m3"/>
+        <FacialController value="LocalizedData\Facial\VikingAssaultPortrait.fxa"/>
+        <Image value="Assets\Textures\VikingMercenaryAssaultPortrait_Static.dds"/>
+        <Lighting value="VikingMercenaryAssaultPortrait"/>
     </CModel>
     <CModel id="Vulture2" parent="Unit">
         <Model value="Assets\Terran\Terran_Shatterer_V3.m3"/>
