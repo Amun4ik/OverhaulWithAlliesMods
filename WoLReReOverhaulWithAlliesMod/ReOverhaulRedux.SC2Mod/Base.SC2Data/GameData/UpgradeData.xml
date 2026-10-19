@@ -28,6 +28,103 @@
         <EffectArray Reference="Unit,Ghost,LifeStart" Value="80"/>
         <EffectArray Reference="Unit,Ghost,LifeMax" Value="80"/>
         <EffectArray Reference="Unit,Ghost,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,Marine,Name" Value="Unit/Name/MarineDominion"/>
+        <EffectArray Operation="Set" Reference="Unit,Medic,Name" Value="Unit/Name/MedicDominion"/>
+        <EffectArray Operation="Set" Reference="Unit,Marauder,Name" Value="Unit/Name/MarauderDominion"/>
+        <EffectArray Operation="Set" Reference="Unit,Firebat,Name" Value="Unit/Name/FirebatDominion"/>
+        <EffectArray Operation="Set" Reference="Unit,Ghost,Name" Value="Unit/Name/GhostDominion"/>
+        <EffectArray Operation="Set" Reference="Unit,Reaper,Name" Value="Unit/Name/ReaperDominion"/>
+        <EffectArray Reference="Unit,Hellion,LifeStart" Value="40"/>
+        <EffectArray Reference="Unit,Hellion,LifeMax" Value="40"/>
+        <EffectArray Operation="Set" Reference="Unit,Hellion,Name" Value="Unit/Name/HellionDominion"/>
+        <EffectArray Reference="Unit,HellionTank,LifeStart" Value="40"/>
+        <EffectArray Reference="Unit,HellionTank,LifeMax" Value="40"/>
+        <EffectArray Reference="Unit,HellionTank,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,HellionTank,Name" Value="Unit/Name/HellionTankDominion"/>
+        <EffectArray Reference="Unit,Hellion,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Predator,LifeStart" Value="40"/>
+        <EffectArray Reference="Unit,Predator,LifeMax" Value="40"/>
+        <EffectArray Reference="Unit,Predator,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,Predator,Name" Value="Unit/Name/PredatorDominion"/>
+        <EffectArray Reference="Unit,WidowMine,LifeMax" Value="50"/>
+        <EffectArray Reference="Unit,WidowMine,LifeStart" Value="50"/>
+        <EffectArray Operation="Set" Reference="Unit,WidowMine,Name" Value="Unit/Name/WidowMineDominion"/>
+        <EffectArray Operation="Set" Reference="Unit,WidowMineBurrowed,Name" Value="Unit/Name/WidowMineBurrowedDominion"/>
+        <EffectArray Reference="Unit,WidowMineBurrowed,LifeStart" Value="50"/>
+        <EffectArray Reference="Unit,WidowMineBurrowed,LifeMax" Value="50"/>
+        <EffectArray Reference="Unit,Goliath,LifeStart" Value="30"/>
+        <EffectArray Reference="Unit,Goliath,LifeMax" Value="30"/>
+        <EffectArray Reference="Unit,Goliath,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Effect,GoliathA2,PeriodicEffectArray[1]" Value="GoliathALM"/>
+        <EffectArray Operation="Set" Reference="Effect,GoliathA2,PeriodicEffectArray[2]" Value="GoliathALM"/>
+        <EffectArray Operation="Set" Reference="Effect,GoliathA2,PeriodCount" Value="3"/>
+        <EffectArray Operation="Set" Reference="Unit,Goliath,Name" Value="Unit/Name/GoliathDominion"/>
+        <EffectArray Reference="Unit,Diamondback,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,SiegeTank2,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Cyclone,LifeMax" Value="60"/>
+        <EffectArray Reference="Unit,Cyclone,LifeStart" Value="60"/>
+        <EffectArray Operation="Set" Reference="Unit,Cyclone,Name" Value="Unit/Name/CycloneDominion"/>
+        <EffectArray Operation="Set" Reference="Effect,CycloneRocketBarrage2,PeriodCount" Value="6"/>
+        <EffectArray Operation="Set" Reference="Effect,CycloneRocketBarrage,PeriodCount" Value="6"/>
+        <EffectArray Operation="Subtract" Reference="Weapon,TyphoonMissilePod2,Range" Value="1"/>
+        <EffectArray Reference="Weapon,TyphoonMissilePod,Period" Value="1.600000"/>
+        <EffectArray Reference="Weapon,TyphoonMissilePod,Range" Value="1"/>
+        <EffectArray Reference="Weapon,TyphoonMissilePod2,Period" Value="1.200000"/>
+        <EffectArray Operation="Subtract" Reference="Effect,CycloneAttackWeaponDamage,Amount" Value="6"/>
+        <EffectArray Reference="Unit,SiegeTank,LifeArmor" Value="2"/>
+        <EffectArray Reference="Unit,SiegeTankSieged,LifeArmor" Value="2"/>
+        <EffectArray Operation="Set" Reference="Unit,SiegeTankSieged,Name" Value="Unit/Name/SiegeTankDominion"/>
+        <EffectArray Operation="Set" Reference="Unit,SiegeTank,Name" Value="Unit/Name/SiegeTankDominion"/>
+        <EffectArray Reference="Effect,CrucioShockCannonBlast,AreaArray[2].Radius" Value="1"/>
+        <EffectArray Reference="Effect,CrucioShockCannonBlast,AreaArray[1].Radius" Value="0.5"/>
+        <EffectArray Reference="Effect,CrucioShockCannonBlast,AreaArray[0].Radius" Value="0.25"/>
+        <EffectArray Reference="Weapon,CrucioShockCannon,Range" Value="2"/>
+        <EffectArray Reference="Weapon,CrucioShockCannon,MinimumRange" Value="2"/>
+        <EffectArray Reference="Weapon,CrucioShockCannon,Period" Value="2.000000"/>
+        <EffectArray Reference="Unit,WarHound,LifeStart" Value="40"/>
+        <EffectArray Reference="Unit,WarHound,LifeMax" Value="40"/>
+        <EffectArray Reference="Unit,WarHound,LifeArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,WarHound,Name" Value="Unit/Name/WarHoundDominion"/>
+        <EffectArray Reference="Unit,Thor,LifeStart" Value="200"/>
+        <EffectArray Reference="Unit,Thor,LifeMax" Value="200"/>
+        <EffectArray Reference="Unit,ThorAP,LifeMax" Value="200"/>
+        <EffectArray Reference="Unit,ThorAP,LifeStart" Value="200"/>
+        <EffectArray Operation="Set" Reference="Unit,Thor,Name" Value="Unit/Name/ThorDominion"/>
+        <EffectArray Operation="Set" Reference="Unit,ThorAP,Name" Value="Unit/Name/ThorDominion"/>
+        <EffectArray Reference="Unit,VikingFighter,LifeMax" Value="60"/>
+        <EffectArray Reference="Unit,VikingFighter,LifeStart" Value="60"/>
+        <EffectArray Reference="Unit,VikingFighter,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,VikingAssault,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,VikingAssault,LifeMax" Value="60"/>
+        <EffectArray Reference="Unit,VikingAssault,LifeStart" Value="60"/>
+        <EffectArray Reference="Unit,Wraith,LifeStart" Value="60"/>
+        <EffectArray Reference="Unit,Wraith,LifeMax" Value="60"/>
+        <EffectArray Reference="Unit,Banshee,LifeMax" Value="60"/>
+        <EffectArray Reference="Unit,Banshee,LifeStart" Value="60"/>
+        <EffectArray Reference="Unit,Banshee,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Battlecruiser,LifeStart" Value="350"/>
+        <EffectArray Reference="Unit,Battlecruiser,LifeMax" Value="350"/>
+        <EffectArray Reference="Unit,Liberator,LifeMax" Value="55"/>
+        <EffectArray Reference="Unit,Liberator,LifeStart" Value="55"/>
+        <EffectArray Reference="Unit,Liberator,LifeArmor" Value="2"/>
+        <EffectArray Reference="Unit,LiberatorAG,LifeArmor" Value="2"/>
+        <EffectArray Reference="Unit,LiberatorAG,LifeMax" Value="55"/>
+        <EffectArray Reference="Unit,LiberatorAG,LifeStart" Value="55"/>
+        <EffectArray Operation="Set" Reference="Unit,LiberatorAG,Name" Value="Unit/Name/LiberatorAGDominion"/>
+        <EffectArray Operation="Set" Reference="Unit,Liberator,Name" Value="Unit/Name/LiberatorDominion"/>
+        <EffectArray Reference="Unit,AutoTurret,LifeStart" Value="75"/>
+        <EffectArray Reference="Unit,AutoTurret,LifeMax" Value="75"/>
+        <EffectArray Reference="Unit,AutoTurret,LifeArmor" Value="2"/>
+        <EffectArray Reference="Effect,AutoTurret,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,AutoTurret,Range" Value="1"/>
+        <EffectArray Operation="Subtract" Reference="Weapon,AutoTurret,Period" Value="0.160000"/>
+        <EffectArray Reference="Weapon,LongboltMissile,Range" Value="2"/>
+        <EffectArray Reference="Weapon,HailstormMissilePods,Range" Value="2"/>
+        <EffectArray Reference="Weapon,LongboltMissile,Period" Value="0.640000"/>
+        <EffectArray Reference="Effect,HailstormMissilePodsDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,LongboltMissileU,Amount" Value="4"/>
+        <EffectArray Operation="Set" Reference="Effect,LongboltMissile,PeriodCount" Value="4"/>
+        <EffectArray Operation="Set" Reference="Effect,LongboltMissile,PeriodicPeriodArray[0]" Value="0.200000"/>
     </CUpgrade>
     <CUpgrade id="Mercenarys"/>
     <CUpgrade id="ProtossGroundArmorsLevel1">
@@ -142,6 +239,27 @@
         <EffectArray Operation="Set" Reference="Weapon,ParticleDisruptors2,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel3.dds"/>
     </CUpgrade>
     <CUpgrade id="RebellionForces"/>
+    <!-- Infantry Upgrades -->
+    <CUpgrade id="TerranInfantryWeaponsLevel1">
+        <AffectedUnitArray index="4" value="Raynor"/>
+        <AffectedUnitArray index="5" value="TychusCommando"/>
+        <AffectedUnitArray index="6" value="TychusChaingun"/>
+        <AffectedUnitArray index="7" value="Dutch"/>
+        <AffectedUnitArray index="8" value="Bones"/>
+        <AffectedUnitArray index="9" value="Nova"/>
+        <AffectedUnitArray index="10" value="Tosh"/>
+        <AffectedUnitArray index="11" value="MengskMarine"/>
+        <AffectedUnitArray index="12" value="MengskMarauder"/>
+        <AffectedUnitArray index="13" value="MengskFirebat"/>
+        <AffectedUnitArray index="14" value="MengskReaper"/>
+        <AffectedUnitArray index="15" value="HERC"/>
+        <AffectedUnitArray index="16" value="Firebat"/>
+        <AffectedUnitArray index="17" value="Spectre"/>
+        <AffectedUnitArray index="18" value="WarPig"/>
+        <AffectedUnitArray index="19" value="DevilDog"/>
+        <AffectedUnitArray index="20" value="HammerSecurity"/>
+        <AffectedUnitArray index="21" removed="1"/>
+    </CUpgrade>
     <CUpgrade id="ToshGoons"/>
     <CUpgrade id="TychusBoys"/>
     <CUpgrade id="TychusBoys2"/>
