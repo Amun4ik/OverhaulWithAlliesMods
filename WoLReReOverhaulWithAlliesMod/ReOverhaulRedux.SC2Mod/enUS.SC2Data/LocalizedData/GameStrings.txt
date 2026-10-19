@@ -16,6 +16,7 @@ Behavior/Name/AllyAggressiveMode=AllyAggressiveMode
 Behavior/Name/AllyDefensiveMode=AllyDefensiveMode
 Behavior/Name/AllyNormalMode=AllyNormalMode
 Behavior/Name/DOMGhostPersonalDefensiveMatrix2=Ionic Force Field
+Behavior/Name/DevastatingShotExtraDamage=Corrosive Erosion
 Behavior/Name/DisableAlliedPing=DisableAlliedPing
 Behavior/Name/GeyserExhaustedHarvestable=Geyser Exhausted
 Behavior/Name/SwarmQueenRegenAuraTarget2=Regeneration Aura
@@ -62,6 +63,7 @@ Button/Name/NovaXanthosToggleRepairModeOn=Self Repair
 Button/Name/Predator=Manufacture Predator
 Button/Name/Raven=Calldown Raven
 Button/Name/SiegeTank=Manufacture Siege Tank
+Button/Name/SlivanPuke=Acid Swamp
 Button/Name/StrikeTrooper=Train Strike Trooper
 Button/Name/TankBusterTrooper=Train Tank Buster Trooper
 Button/Name/Thor=Manufacture Thor
@@ -95,6 +97,7 @@ Button/Tooltip/CommanderControllerIcon=Command Raynor's Raiders to change their 
 Button/Tooltip/CommanderControllerIcon2=Command Raynor's Raiders to change their combat behavior.
 Button/Tooltip/Cyclone=Mobile assault drone. Effective against Air targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/DOMGhostPersonalDefensiveMatrix2=Provides the Trooper with a shield that reduces incoming damage until 25 total damage is absorbed. Shield lasts for 20 seconds.
+Button/Tooltip/DevastatingShot=Deals 50 damage to target unit or structure. Target also takes increased damage for <d time="5"/>.
 Button/Tooltip/Diamondback2=Light armored experimental vehicle. Rebellion command transfer all their machines for our use. Deal additional damage in chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Diamondback3=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/DisableAllyPing=Turns off those annoying help pings on the minimap.
@@ -111,6 +114,8 @@ Button/Tooltip/Hellion222222=Mobile light armored tank. Attacks with chained lig
 Button/Tooltip/KorhalPalaceTurret2=Extremely powerful turrets that cannot be attacked. Breaking down the Palace Gate is the only way to victory.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/LeadFarmer=Commando's Chaingun deals splash damage in a small area around the target.
 Button/Tooltip/Liberator2=Artillery fighter. Loaded with missiles that deal area damage to enemy air targets. Can switch into Defender Mode to provide siege support.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
+Button/Tooltip/Marine2=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Marine22=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Medivac2=Armored Air Transport. Suddenly Valkyrie hull without it's armament can be used as transport or logistic ship.
 Button/Tooltip/MeleeTrooper=Melee cheap infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground.</c>
 Button/Tooltip/MercReaper=Former Dominion Elite Reaper Corp. Strong and dangerous Raider. Can jump up and down cliffs.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -123,6 +128,7 @@ Button/Tooltip/Separatist3=General-purpose infantry.<n/><n/><c val="#ColorAttack
 Button/Tooltip/Separatist4=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Separatist5=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SiegeTank3=Heavy tank. Can switch into Siege Mode to provide long-range artillery support.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/SlivanPuke=Doctor use acid acid missile onto the ground that damages and slows units in the area.
 Button/Tooltip/Stalker2=Ranged attack strider. Can use Blink.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/Stetmann=Jezik can heal and repair at lightning speed. Also can take control over weak minded enemy. <n/><n/><c val="#ColorAttackInfo">Has no attack.</c><n/>
 Button/Tooltip/StrikeTrooper=General-purpose infantry. Can use Defense Matrix.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -190,6 +196,8 @@ Effect/Name/DummyEffectUnit=DummyEffectUnit
 Effect/Name/GoliathA2=Ground Attack
 Effect/Name/GoliathA22=Ground Attack
 Effect/Name/GoliathG2=Autocannon
+Effect/Name/GuassRifle2=Guass Rifle
+Effect/Name/GuassRifle22=Guass Rifle
 Effect/Name/HowitzerPersistent=Howitzer Persistent
 Effect/Name/KorhalPalaceGateDamage2=Mortar AA Attack
 Effect/Name/LiberatorDamageMissileLM2=Valkyrie Damage Missile LM
@@ -293,6 +301,8 @@ Unit/Name/LiberatorDamageMissile2=Valkyrie Damage Missile
 Unit/Name/LiberatorDominion=Protector
 Unit/Name/Loyalist=Loyalist
 Unit/Name/MarauderDominion=Grenadier
+Unit/Name/Marine2=Gortok
+Unit/Name/Marine22=Plague Doctor
 Unit/Name/MarineDominion=Infantryman
 Unit/Name/MedicDominion=Field Medic
 Unit/Name/Medivac2=Valkyrie Transport
@@ -354,6 +364,8 @@ Weapon/Name/Diamondback=Redeemer Heavy Rail Gun
 Weapon/Name/Diamondback2=Tesla Capacitors
 Weapon/Name/Diamondback3=Autocannon
 Weapon/Name/DominionKillTeam=Eradicator Grenades
+Weapon/Name/GuassRifle2=C-16 Gauss Rifle
+Weapon/Name/GuassRifle22=Experimental Chemical Rifle
 Weapon/Name/HERCWeapon2=H1 Flash Welder
 Weapon/Name/InfernalFlameThrower2=Autocannon
 Weapon/Name/KorhalPalaceGate2=Anti-Air Munition

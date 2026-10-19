@@ -83,6 +83,54 @@
         <Image value="Assets\Textures\Valkyrie_UED_Portrait_static.dds"/>
         <Lighting value="PortraitLiberatorEx2"/>
     </CModel>
+    <CModel id="Marine2" parent="MarineBase">
+        <Model value="Assets\Terran\Marine_Mercenary_TigersClaw.m3"/>
+    </CModel>
+    <CModel id="Marine22" parent="MarineBase">
+        <Model value="Assets\Terran\SpecOps_Marine.m3"/>
+    </CModel>
+    <CModel id="MarineAttackImpact2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MarineAttackImpact22" parent="LaunchFX">
+        <Model value="Assets\Effects\Zerg\PrimalGuardianMissileImpact\PrimalGuardianMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MarineAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MarineAttackLaunch22" parent="LaunchFX">
+        <Model value="Assets\Effects\Zerg\Stukov_Infested_Liberator_Missile_Impact\Stukov_Infested_Liberator_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MarineBunkerAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="MarineAttackLaunch"/>
+    </CModel>
+    <CModel id="MarineBunkerAttackLaunch22" parent="LaunchFX">
+        <Model value="Assets\Effects\Zerg\Stukov_Infested_Liberator_Missile_Impact\Stukov_Infested_Liberator_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="MarineAttackLaunch"/>
+    </CModel>
+    <CModel id="MarineDeath2" parent="MarineDeathBase">
+        <Model value="Assets\Units\Terran\Marine_Merc_Collection_Death\Marine_Merc_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="MarineDeath22" parent="MarineDeathBase">
+        <Model value="Assets\Units\Terran\Marine_Merc_Collection_Death\Marine_Merc_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="MarinePortrait2" parent="MarinePortraitBase">
+        <Model value="Assets\Terran\Marine_Mercenary_TigersClaw_Portrait.m3"/>
+        <Image value="Assets\Textures\TigersClawPortrait_static.dds"/>
+        <Lighting value="MarinePortrait"/>
+    </CModel>
+    <CModel id="MarinePortrait22" parent="MarinePortraitBase">
+        <Model value="Assets\UED Portraits\UED_TITAN_Portrait_V4.m3"/>
+        <Image value="Assets\Textures\TigersClawPortrait_static.dds"/>
+        <Lighting value="MarinePortrait"/>
+    </CModel>
     <CModel id="RegenAuraSplat2" parent="PersistentSpellFX">
         <Model value="Assets\COOP\Tychus\Effects\HealingWard_Heavens_COOP_Splat\HealingWard_Heavens_COOP_Splat.m3"/>
         <EditorCategories value="Race:Neutral"/>
@@ -428,6 +476,9 @@
         <Model value="Assets\COOP\Mengsk\Effects\Artillery_Mengsk_COOP_Impact\Artillery_Mengsk_COOP_Impact.m3"/>
         <ScaleMax value="2.500000,2.500000,2.500000"/>
         <ScaleMin value="2.500000,2.500000,2.500000"/>
+    </CModel>
+    <CModel id="SlivanPukeWeapon">
+        <Model value="Assets\Effects\Terran\Nova_PulseGrenade_Missile\Nova_PulseGrenade_Missile.m3"/>
     </CModel>
     <CModel id="Stalker2" parent="StalkerBase">
         <Model value="Assets\Units\Protoss\Stalker_Taldarim_Collection\Stalker_Taldarim_Collection.m3"/>

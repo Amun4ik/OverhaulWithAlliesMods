@@ -53,6 +53,9 @@
     <CEffectEnumArea id="DefilerMPPlagueSearch">
         <AreaArray index="0" Radius="2.5"/>
     </CEffectEnumArea>
+    <CEffectDamage id="DevastatingShotDamage">
+        <Amount value="50"/>
+    </CEffectDamage>
     <CEffectCreatePersistent id="GoliathA22">
         <ValidatorArray value="CasterIsNotHidden"/>
         <EditorCategories value="Race:Terran"/>
@@ -71,6 +74,20 @@
         <Amount value="14"/>
         <AreaArray Radius="1" Fraction="0.25"/>
         <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectDamage id="GuassRifle2" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeFactor index="Armored" value="0.5"/>
+        <Kind value="Ranged"/>
+        <Amount value="16"/>
+    </CEffectDamage>
+    <CEffectDamage id="GuassRifle22" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeFactor index="Biological" value="1"/>
+        <Kind value="Ranged"/>
+        <Amount value="18"/>
+        <AreaArray Radius="1.5" Fraction="0.25"/>
+        <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="LiberatorDamageMissileLM3">
         <EditorCategories value="Race:Terran"/>
@@ -118,6 +135,12 @@
         <Amount value="10"/>
         <Death value="Eviscerate"/>
     </CEffectDamage>
+    <CEffectDamage id="PukePuddleDamage">
+        <AttributeBonus index="Biological" value="2"/>
+        <AttributeBonus index="Psionic" value="0"/>
+        <AttributeBonus index="Massive" value="0"/>
+        <Amount value="3"/>
+    </CEffectDamage>
     <CEffectDamage id="Separatist2" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
@@ -129,6 +152,10 @@
         <Kind value="Ranged"/>
         <Amount value="8"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="SlivanPukeCP">
+        <InitialDelay value="0.4"/>
+        <PeriodCount value="1"/>
+    </CEffectCreatePersistent>
     <CEffectEnumArea id="StalkerEntropyLanceSearch2">
         <ValidatorArray value="HaveVoidStalkerMultishot"/>
         <EditorCategories value=""/>

@@ -17,6 +17,7 @@ Button/Hotkey/NovaXanthosToggleRepairModeOn=R
 Button/Hotkey/Predator=Q
 Button/Hotkey/ScienceVessel=S
 Button/Hotkey/Separatist=H
+Button/Hotkey/SlivanPuke=E
 Button/Hotkey/StrikeTrooper=I
 Button/Hotkey/TankBusterTrooper=U
 Button/Hotkey/TornadoMissile2=E

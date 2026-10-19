@@ -138,6 +138,12 @@
             <Flags index="AutoCast" value="1"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectTarget id="BlindingCloud">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Cooldown TimeUse="45"/>
+        </Cost>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="BonesHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
@@ -199,6 +205,18 @@
             <Cooldown TimeUse="120"/>
         </Cost>
         <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DevastatingShot">
+        <Cost index="0">
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="30"/>
+            </Charge>
+            <Cooldown TimeUse="0"/>
+        </Cost>
+        <Range index="0" value="8"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="EMP">
         <Cost index="0">
@@ -327,6 +345,12 @@
         </Cost>
         <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectInstant>
+    <CAbilEffectTarget id="NovaGadgetFlashBangGrenades">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Cooldown TimeUse="45"/>
+        </Cost>
+    </CAbilEffectTarget>
     <CAbilEffectInstant id="NovaPersonalDefensiveMatrix">
         <Cost index="0">
             <Vital index="Energy" value="0"/>
@@ -392,6 +416,9 @@
         </Cost>
         <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="RavenDeploySpiderMines">
+        <Range index="0" value="7"/>
+    </CAbilEffectTarget>
     <!-- TValerian02a Shared Command Card -->
     <CAbilEffectTarget id="RaynorSnipe">
         <Cost index="0">
@@ -419,6 +446,13 @@
     </CAbilEffectInstant>
     <CAbilEffectTarget id="SiegeTankSiegedJumpJet">
         <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SlivanPuke">
+        <Cost>
+            <Charge Link="Abil/SlivanPuke"/>
+            <Cooldown Link="Abil/SlivanPuke" TimeUse="90"/>
+        </Cost>
+        <Range index="0" value="10"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SnipeVulture">
         <Cost index="0">

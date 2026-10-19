@@ -54,6 +54,9 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="DefilerMPPlague"/>
+    <CBehaviorBuff id="DevastatingShotExtraDamage">
+        <Duration value="10"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DisableAlliedPing">
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
