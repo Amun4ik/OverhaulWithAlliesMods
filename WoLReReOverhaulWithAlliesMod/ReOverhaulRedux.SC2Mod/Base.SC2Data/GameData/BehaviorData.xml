@@ -43,6 +43,18 @@
     <CBehaviorBuff id="AllyNormalMode">
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="BanelingExplode2">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <DeathResponse Chance="1" Effect="HeroNukeDetonate"/>
+        </Modification>
+        <AINotifyEffect value="VolatileBurstU"/>
+        <DamageResponse Fatal="1" Handled="HeroNukeDetonate" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DOMGhostPersonalDefensiveMatrix2">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-defensivematrix.dds"/>

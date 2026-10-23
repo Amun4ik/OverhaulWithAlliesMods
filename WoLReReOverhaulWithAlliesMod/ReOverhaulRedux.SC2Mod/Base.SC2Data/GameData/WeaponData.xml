@@ -32,6 +32,33 @@
         <LegacyOptions index="KeepChanneling" value="1"/>
         <AllowedMovement value="Slowing"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Claws2">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.1"/>
+        <Period value="0.696"/>
+        <Effect value="HotSZerglingClaws2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Claws22">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.1"/>
+        <Period value="0.696"/>
+        <Effect value="HotSZerglingClaws22"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Claws222">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.1"/>
+        <Period value="0.496"/>
+        <Effect value="HotSZerglingClaws222"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="GuassRifle2">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
@@ -51,6 +78,20 @@
         <Period value="1.4"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0.75"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HotSRaptorClaws">
+        <Period value="0.546"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KorhalPalaceGate3">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <DisplayEffect value="KorhalPalaceGateDamage3"/>
+        <TargetFilters value="Visible;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <Arc value="360"/>
+        <Period value="1.5"/>
+        <Effect value="JavelinMissileLaunchersPersistent2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="LiberatorMissileLaunchers2">
         <EditorCategories value="Race:Terran"/>
@@ -595,6 +636,16 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="TwinGatlingCannon">
         <Period value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TwinIbiksCannon2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <TargetFilters value="Visible;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Arc value="90"/>
+        <Period value="2"/>
+        <Effect value="JavelinMissileLaunchersPersistent22"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="TychusChaingun">
         <Period value="0.35"/>

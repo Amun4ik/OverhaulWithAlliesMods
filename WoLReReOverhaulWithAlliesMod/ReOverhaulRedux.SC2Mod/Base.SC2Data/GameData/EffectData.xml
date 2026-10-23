@@ -29,6 +29,20 @@
         <Visibility value="Visible"/>
         <Amount value="8"/>
     </CEffectDamage>
+    <CEffectDamage id="Claws2" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <ArmorReduction value="0.5"/>
+        <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectDamage id="Claws22" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectDamage id="Claws222" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <ArmorReduction value="0"/>
+        <Amount value="10"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="DOMGhostPersonalDefensiveMatrix2">
         <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
@@ -88,6 +102,75 @@
         <Amount value="18"/>
         <AreaArray Radius="1.5" Fraction="0.25"/>
         <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectSet id="HotSRaptorClaws">
+        <EffectArray index="1" value="HotSRaptorClawsDamage"/>
+        <EffectArray index="2" removed="1"/>
+    </CEffectSet>
+    <CEffectDamage id="HotSRaptorClawsDamage">
+        <Amount value="8"/>
+    </CEffectDamage>
+    <CEffectSet id="HotSSwarmlingClaws">
+        <EffectArray index="1" value="HotSSwarmlingClawsDamage"/>
+        <EffectArray index="2" removed="1"/>
+    </CEffectSet>
+    <CEffectSet id="HotSZerglingClaws">
+        <EffectArray index="1" value="ZerglingRangeReapply"/>
+        <EffectArray index="2" value="Claws"/>
+        <EffectArray index="3" removed="1"/>
+    </CEffectSet>
+    <CEffectSet id="HotSZerglingClaws2">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="ZerglingFrenzy"/>
+        <EffectArray value="ZerglingSunder"/>
+        <EffectArray value="ZerglingRangeReapply"/>
+        <EffectArray value="Claws2"/>
+    </CEffectSet>
+    <CEffectSet id="HotSZerglingClaws22">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="ZerglingFrenzy"/>
+        <EffectArray value="ZerglingRangeReapply"/>
+        <EffectArray value="Claws22"/>
+    </CEffectSet>
+    <CEffectSet id="HotSZerglingClaws222">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="ZerglingFrenzy"/>
+        <EffectArray value="ZerglingSunder"/>
+        <EffectArray value="ZerglingRangeReapply"/>
+        <EffectArray value="Claws222"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="JavelinMissileLaunchersPersistent2">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="KorhalPalaceGateDamage3"/>
+        <PeriodicPeriodArray value="0.15"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="JavelinMissileLaunchersPersistent22">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="TwinIbiksCannon2"/>
+        <PeriodicEffectArray value="TwinIbiksCannon2"/>
+        <PeriodicEffectArray value="TornadoMissileLM"/>
+        <PeriodicEffectArray value="TornadoMissileLM"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="KorhalPalaceGateDamage3">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="10"/>
+        <AttributeFactor index="Light" value="0.5"/>
+        <AreaArray Radius="0.5" Fraction="0.5"/>
+        <AreaArray Radius="1" Fraction="0.2"/>
+        <SearchFilters value="Air;RawResource,HarvestableResource,Missile,Stasis,Dead,Hidden,Powerup"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="LiberatorDamageMissileLM3">
         <EditorCategories value="Race:Terran"/>
@@ -185,6 +268,11 @@
         <ImpactEffect value="StalkerEntropyLanceSecondaryDamage2"/>
         <AmmoUnit value="StalkerSecondaryWeapon"/>
     </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="SuicideDelay2">
+        <EditorCategories value="Race:Zerg"/>
+        <ExpireDelay value="0.0625"/>
+        <FinalEffect value="Suicide"/>
+    </CEffectCreatePersistent>
     <CEffectDamage id="SupplicantDamage" parent="DU_WEAP">
         <EditorCategories value="Race:Protoss"/>
         <Kind value="Ranged"/>
@@ -1091,6 +1179,20 @@
         <InitialDelay value="2"/>
         <InitialEffect value="TitanMechMissileLM2"/>
     </CEffectCreatePersistent>
+    <CEffectDamage id="TwinIbiksCannon2" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Splash"/>
+        <Amount value="30"/>
+        <Death value="Fire"/>
+        <AreaArray Radius="0.5" Fraction="1"/>
+        <AreaArray Radius="0.8" Fraction="0.75"/>
+        <AreaArray Radius="1.25" Fraction="0.375"/>
+        <ExcludeArray Value="Outer"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="OffsetByUnitRadius" value="0"/>
+    </CEffectDamage>
     <CEffectCreatePersistent id="WraithAG">
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnitOrPoint"/>
@@ -1212,4 +1314,7 @@
         <EditorCategories value=""/>
         <EffectArray value="PsiBladesBurst2"/>
     </CEffectSet>
+    <CEffectApplyBehavior id="ZerglingSunder">
+        <ValidatorArray index="1" removed="1"/>
+    </CEffectApplyBehavior>
 </Catalog>

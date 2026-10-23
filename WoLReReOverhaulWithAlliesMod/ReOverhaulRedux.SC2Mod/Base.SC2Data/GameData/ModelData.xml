@@ -49,11 +49,42 @@
         <EditorCategories value="Race:Neutral"/>
         <Flags index="Ignorable" value="1"/>
     </CModel>
+    <CModel id="CommandCenter3" parent="CommandCenterBase">
+        <Model value="Assets\Terran\Storm_Building_SCBraxis_Keep.m3"/>
+    </CModel>
     <CModel id="DOMGhostPersonalDefensiveMatrixModel2" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\Nova_Blink_Shield\Nova_Blink_Shield.m3"/>
         <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.700000,0.700000,0.700000"/>
         <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="FlamingBetty">
+        <Model value="Assets\Terran\Terran_SonicEmitter.m3"/>
+    </CModel>
+    <CModel id="HotSRaptor">
+        <Model value="Assets\Zerg\ZerglingEX1A_Upgrade.m3"/>
+    </CModel>
+    <CModel id="HotSSwarmling">
+        <Model value="Assets\Zerg\ZerglingEX1B_Upgrade.m3"/>
+        <ScaleMax value="0.620000,0.620000,0.620000"/>
+        <ScaleMin value="0.620000,0.620000,0.620000"/>
+    </CModel>
+    <CModel id="KorhalPalaceGateAttackImpact3" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\OdinShoulderMissileImpact\OdinShoulderMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="KorhalPalaceTurret">
+        <Model value="Assets\Terran\Building_Terran_CannonTower.m3"/>
+    </CModel>
+    <CModel id="KorhalPalaceTurret3" parent="Building" Race="Terran">
+        <Model value="Assets\Terran\AntiAir-GunTurret.m3"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="0.750000"/>
+        <ShadowRadius value="0.750000"/>
+        <SquibTypeDefault value="Metal"/>
     </CModel>
     <CModel id="Liberator2" parent="LiberatorBase">
         <Model value="Assets\Terran\SC2Valkyrie_GhostNova_UED.m3"/>
@@ -131,6 +162,59 @@
         <Image value="Assets\Textures\TigersClawPortrait_static.dds"/>
         <Lighting value="MarinePortrait"/>
     </CModel>
+    <CModel id="MissileTurretDeath3" parent="MissileTurretDeathBase">
+        <Model value="Assets\Terran\Building_Terran_CannonTower_Death.m3"/>
+    </CModel>
+    <CModel id="MissileTurretPlacement2" parent="MissileTurretPlacementBase" low="MissileTurret">
+        <Model value="Assets\Buildings\Terran\MissileTurretPlacement\MissileTurretPlacement.m3"/>
+    </CModel>
+    <CModel id="Mitosaurus">
+        <Model value="Assets\Zerg\MitoscarabRavager.m3"/>
+    </CModel>
+    <CModel id="MitosaurusB">
+        <Model value="Assets\Zerg\MitoscarabRavager.m3"/>
+    </CModel>
+    <CModel id="MitosaurusC">
+        <Model value="Assets\Zerg\MitoscarabRavager.m3"/>
+    </CModel>
+    <CModel id="PlanetaryFortressAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\PlanetaryFortressMissileImpact\PlanetaryFortressMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PlanetaryFortressAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\SiegeTankFireSprite\SiegeTankFireSprite.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PlanetaryFortressDeath2" parent="PlanetaryFortressDeathBase">
+        <Model value="Assets\Terran\Storm_Building_SCBraxis_Keep_Death.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.433000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.966000"/>
+        </Events>
+    </CModel>
+    <CModel id="PlanetaryFortressSplat2" parent="Splat">
+        <Model value="Assets\Splats\Splat_CommandCenter\Splat_CommandCenter.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="Ravasaur">
+        <Model value="Assets\Zerg\RavasaurInfestor.m3"/>
+    </CModel>
     <CModel id="RegenAuraSplat2" parent="PersistentSpellFX">
         <Model value="Assets\COOP\Tychus\Effects\HealingWard_Heavens_COOP_Splat\HealingWard_Heavens_COOP_Splat.m3"/>
         <EditorCategories value="Race:Neutral"/>
@@ -146,6 +230,12 @@
     </CModel>
     <CModel id="RegenImpact22" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Other\SwarmHeroGlow\SwarmHeroGlow.m3"/>
+    </CModel>
+    <CModel id="ScantipedeParasitic">
+        <Model value="Assets\Zerg\ScantipedeRavager.m3"/>
+    </CModel>
+    <CModel id="ScantipedeParasiticSmall">
+        <Model value="Assets\Zerg\ScantipedeRavager.m3"/>
     </CModel>
     <CModel id="Separatist">
         <Model value="Assets\Terran\Light_Infantry_Shield.m3"/>
@@ -479,6 +569,12 @@
     </CModel>
     <CModel id="SlivanPukeWeapon">
         <Model value="Assets\Effects\Terran\Nova_PulseGrenade_Missile\Nova_PulseGrenade_Missile.m3"/>
+    </CModel>
+    <CModel id="SpaceCowMedium">
+        <Model value="Assets\Zerg\QuillgorBaneling.m3"/>
+    </CModel>
+    <CModel id="SpaceCowSmall">
+        <Model value="Assets\Zerg\QuillgorBaneling.m3"/>
     </CModel>
     <CModel id="Stalker2" parent="StalkerBase">
         <Model value="Assets\Units\Protoss\Stalker_Taldarim_Collection\Stalker_Taldarim_Collection.m3"/>
@@ -1556,5 +1652,83 @@
         <Model value="Assets\Portraits\Protoss\Zealot_Taldarim_Collection_Portrait\Zealot_Taldarim_Collection_Portrait.m3"/>
         <Image value="Assets\Textures\ZealotPortrait_Static.dds"/>
         <Lighting value="ZealotPortrait"/>
+    </CModel>
+    <CModel id="Zergling2" parent="ZerglingBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby\Zergling_CollectionSkin_Webby.m3"/>
+        <ScaleMax value="0.840000,0.840000,0.840000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="Zergling22" parent="ZerglingBase">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection\Zergling_Primal_Collection.m3"/>
+        <ScaleMax value="0.840000,0.840000,0.840000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="Zergling222" parent="ZerglingBase">
+        <Model value="Assets\Units\Zerg\ZerglingSCBW\ZerglingSCBW.m3"/>
+        <ScaleMax value="0.840000,0.840000,0.840000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="ZerglingDeath2" parent="ZerglingDeathBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby_Death\Zergling_CollectionSkin_Webby_Death.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeath22" parent="ZerglingDeathBase">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection_Death\Zergling_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeath222" parent="ZerglingDeathBase">
+        <Model value="Assets\Units\Zerg\ZerglingSCBW\ZerglingSCBW@Death_00.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathAcid2" parent="ZerglingDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby_DeathAcid\Zergling_CollectionSkin_Webby_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathAcid22" parent="ZerglingDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection_DeathAcid\Zergling_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathAcid222" parent="ZerglingDeathAcidBase">
+        <Model value="Assets\Units\Zerg\ZerglingSCBW\ZerglingSCBW@DeathAcid.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathEviscerate2" parent="ZerglingDeathEviscerateBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby_DeathEviscerate\Zergling_CollectionSkin_Webby_DeathEviscerate_00.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathEviscerate22" parent="ZerglingDeathEviscerateBase">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection_DeathEviscerate\Zergling_Primal_Collection_DeathEviscerate_00.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathEviscerate222" parent="ZerglingDeathEviscerateBase">
+        <Model value="Assets\Units\Zerg\ZerglingSCBW\ZerglingSCBW@Death_01.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathFire2" parent="ZerglingDeathFireBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby_DeathFire\Zergling_CollectionSkin_Webby_DeathFire.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathFire22" parent="ZerglingDeathFireBase">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection_DeathFire\Zergling_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathFire222" parent="ZerglingDeathFireBase">
+        <Model value="Assets\Units\Zerg\ZerglingSCBW\ZerglingSCBW@DeathFire.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathRagdoll2" parent="ZerglingDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby_DeathRagdoll\Zergling_CollectionSkin_Webby_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathRagdoll22" parent="ZerglingDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection_DeathRagdoll\Zergling_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="ZerglingDeathRagdoll222" parent="ZerglingDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\ZerglingSCBW\ZerglingSCBW@DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="ZerglingPortrait2" parent="ZerglingPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Zergling_Webby_Collection_Portrait\Zergling_Webby_Collection_Portrait.m3"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ZerglingPortrait_Static.dds"/>
+        <Lighting value="ZerglingPortrait"/>
+    </CModel>
+    <CModel id="ZerglingPortrait22" parent="ZerglingPortraitBase">
+        <Model value="Assets\Portraits\Zerg\PrimalZerg01Portrait\PrimalZerg01Portrait.m3"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ZerglingPortrait_Static.dds"/>
+        <Lighting value="ZerglingPortrait"/>
+    </CModel>
+    <CModel id="ZerglingPortrait222" parent="ZerglingPortraitBase">
+        <Model value="Assets\Portraits\Zerg\ZerglingPortraitSCBW\ZerglingPortraitSCBW.m3"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ZerglingPortrait_Static.dds"/>
+        <Lighting value="ZerglingPortrait"/>
     </CModel>
 </Catalog>

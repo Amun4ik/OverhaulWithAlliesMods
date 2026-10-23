@@ -112,6 +112,7 @@ Button/Tooltip/Hellion2222=Heavy mobile artillery. Deal high damage on a long di
 Button/Tooltip/Hellion22222=Heavy Dominion Walker<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Hellion222222=Mobile light armored tank. Attacks with chained lightning, that hits multiple targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/KorhalPalaceTurret2=Extremely powerful turrets that cannot be attacked. Breaking down the Palace Gate is the only way to victory.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/KorhalPalaceTurret3=Extremely powerful turrets that cannot be attacked. Breaking down the Palace Gate is the only way to victory.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/LeadFarmer=Commando's Chaingun deals splash damage in a small area around the target.
 Button/Tooltip/Liberator2=Artillery fighter. Loaded with missiles that deal area damage to enemy air targets. Can switch into Defender Mode to provide siege support.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
 Button/Tooltip/Marine2=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -122,6 +123,8 @@ Button/Tooltip/MercReaper=Former Dominion Elite Reaper Corp. Strong and dangerou
 Button/Tooltip/NovaXanthosToggleRepairModeOn=Order vehicle crew to repair their vehicle. During this vehicle is vulnerable to enemy fire, which stops repair process. Crew unable to move or attack during repair time.
 Button/Tooltip/PickupGas100Text=<s val="Kicker_Gas">+75 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><n/><s val="Kicker_Gas">+25 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><s val="Kicker_Gas"> For Allies</s>
 Button/Tooltip/PickupMinerals100Text=<s val="Kicker_Minerals">+75 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/><n/><s val="Kicker_Minerals">+25 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/> <s val="Kicker_Minerals"> For Allies</s>
+Button/Tooltip/PlanetaryFortress2=Defensive stronghold. <n/>Used to receive gathered resources. <n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/RaptorPassive=Zergling gains +3 damage.
 Button/Tooltip/RaynorCommando=Mysterious Field Captain of the Rebellion. Has a infantry railgun with different rounds.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/RenegadeMissileTurret=Experimental defense turret. Deal damage in a chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c><n/><c val="FFE303">Detector</c>
 Button/Tooltip/Separatist3=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -152,6 +155,9 @@ Button/Tooltip/Wraith2=Mobile and armored flying unit. Can use rockets alongside
 Button/Tooltip/Wraith22=Heavy UED Frigate effective in conquering airspace supremacy. Deal high damage in area.<n/><n/><c val="ffff8a">Can attack air units.</c>
 Button/Tooltip/Wraith222=Rebellion's Ersatz Dropship. Based on Valkyrie Hull provide much more protection than Medivac or old Dropship. And after throwing all missiles away, we can use it as good transport.
 Button/Tooltip/Zealot2=Powerful melee warrior. Can use Charge.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/Zergling2=Fast melee creature. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/Zergling22=Fast melee creature. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/Zergling222=Fast melee creature. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
 Effect/Name/90mmCannons2=Arclite Cannon (Damage)
 Effect/Name/90mmCannons3=Arclite Cannon (Damage)
 Effect/Name/ATALaserBatteryLM=Light Laser Battery
@@ -184,6 +190,9 @@ Effect/Name/BacklashRocketsLM2=Backlash Rockets
 Effect/Name/BacklashRocketsU2=Backlash Rockets
 Effect/Name/BattlecruiserBarrage=Battlecruiser Barrage (Persistent)
 Effect/Name/BattlecruiserBarrage2=Battlecruiser Barrage (Persistent)
+Effect/Name/Claws2=Claws (Damage)
+Effect/Name/Claws22=Claws (Damage)
+Effect/Name/Claws222=Claws (Damage)
 Effect/Name/CrucioShockCannonBlast2=Crucio Shock Cannon Blast
 Effect/Name/CycloneRocketBarrage=Cyclone Rocket Barrage Air
 Effect/Name/CycloneRocketBarrage2=Cyclone Rocket Barrage Ground
@@ -198,8 +207,14 @@ Effect/Name/GoliathA22=Ground Attack
 Effect/Name/GoliathG2=Autocannon
 Effect/Name/GuassRifle2=Guass Rifle
 Effect/Name/GuassRifle22=Guass Rifle
+Effect/Name/HotSZerglingClaws2=Sunderling Claws Set
+Effect/Name/HotSZerglingClaws22=Chargeling Claws Set
+Effect/Name/HotSZerglingClaws222=Devouring One Claws Set
 Effect/Name/HowitzerPersistent=Howitzer Persistent
+Effect/Name/JavelinMissileLaunchersPersistent2=Anti Air (Persistent)
+Effect/Name/JavelinMissileLaunchersPersistent22=Anti Air (Persistent)
 Effect/Name/KorhalPalaceGateDamage2=Mortar AA Attack
+Effect/Name/KorhalPalaceGateDamage3=Flak Turret
 Effect/Name/LiberatorDamageMissileLM2=Valkyrie Damage Missile LM
 Effect/Name/LiberatorDamageMissileLM3=Valkyrie Damage Missile LM
 Effect/Name/LiberatorMissileBurstPersistent2=Valkyrie Missile Burst Persistent
@@ -237,6 +252,7 @@ Effect/Name/StalkerEntropyLanceSearch2=Stalker - Entropy Lance (Search)
 Effect/Name/StalkerEntropyLanceSearchSet2=Stalker - Entropy Lance (Impact Set)
 Effect/Name/StalkerEntropyLanceSecondaryDamage2=Entropy Lance Secondary Damage
 Effect/Name/StalkerEntropyLanceSecondaryLM2=Entropy Lance Secondary LM
+Effect/Name/SuicideDelay2=Suicide Delay
 Effect/Name/SwarmQueenRegenAuraSearch2=Regeneration Aura (Search)
 Effect/Name/SwarmQueenRegenAuraSearch22=Regeneration Aura (Search)
 Effect/Name/SwarmQueenRegenAuraTarget2=Regeneration Aura (Target)
@@ -245,6 +261,7 @@ Effect/Name/TitanMechMissileDamage2=War Angel Missile (Damage)
 Effect/Name/TitanMechMissileDamageDummy2=War Angel Missile (Damage Dummy)
 Effect/Name/TitanMechMissileLM2=War Angel Missile (Launch Missile)
 Effect/Name/TitanMechMissileShot2=War Angel Missile (Persistent)
+Effect/Name/TwinIbiksCannon2=Quad Ganho Cannon
 Effect/Name/WarHound=War Hound Damage
 Effect/Name/WarHoundSet=War Hound Set
 Effect/Name/WraithAG=WraithAG (Persistent)
@@ -293,8 +310,11 @@ Unit/Name/HERCCompound=100 Rads bar
 Unit/Name/Hellion2=Baden Joru
 Unit/Name/HellionDominion=Flamer Light Tank
 Unit/Name/HellionTankDominion=Flamer Battlesuit
+Unit/Name/HotSRaptor=Raptorling
+Unit/Name/HotSSwarmling=Swarmling
 Unit/Name/KorhalPalaceTurret=Heavy Shreder Turret
 Unit/Name/KorhalPalaceTurret2=Mortar Pit
+Unit/Name/KorhalPalaceTurret3=Flak Turret
 Unit/Name/Liberator2=Valkyrie
 Unit/Name/LiberatorAGDominion=Protector
 Unit/Name/LiberatorDamageMissile2=Valkyrie Damage Missile
@@ -308,6 +328,7 @@ Unit/Name/MedicDominion=Field Medic
 Unit/Name/Medivac2=Valkyrie Transport
 Unit/Name/MengskReaper=Samuel Horsh
 Unit/Name/MercReaper=Death Scythe
+Unit/Name/PlanetaryFortress2=Royal Fortress
 Unit/Name/PredatorDominion=War Cat
 Unit/Name/PunisherGrenadesLMWeapon2=Loyalist Grenades
 Unit/Name/RailGunTurret=Grenade Turret
@@ -340,6 +361,9 @@ Unit/Name/WarHoundDominion=Warwolf
 Unit/Name/WidowMineBurrowedDominion=Sentinel Mine
 Unit/Name/WidowMineDominion=Sentinel Mine
 Unit/Name/Zealot2=Supplicant
+Unit/Name/Zergling2=Sunderling
+Unit/Name/Zergling22=Chargeling
+Unit/Name/Zergling222=Devouring One
 UnitKillRank/Swann1=Sergeant
 UnitKillRank/Tychus2=Private
 UnitKillRank/Tychus3=Veteran
@@ -359,6 +383,8 @@ Weapon/Name/AllPurposeLaserBatterySecondry2=ATX Hidden Battery 2
 Weapon/Name/AllPurposeLaserBatterySecondry3=ATX Hidden Battery 3
 Weapon/Name/BacklashRockets2=Freya Missiles
 Weapon/Name/BacklashRockets22=Tornado Missile
+Weapon/Name/Claws22=Claws
+Weapon/Name/Claws222=Devouring Claws
 Weapon/Name/CommandoRifle=Infantry Railgun Tyranny's End
 Weapon/Name/Diamondback=Redeemer Heavy Rail Gun
 Weapon/Name/Diamondback2=Tesla Capacitors
@@ -370,6 +396,7 @@ Weapon/Name/HERCWeapon2=H1 Flash Welder
 Weapon/Name/InfernalFlameThrower2=Autocannon
 Weapon/Name/KorhalPalaceGate2=Anti-Air Munition
 Weapon/Name/KorhalPalaceGate22=Earth Shatter Munition
+Weapon/Name/KorhalPalaceGate3=Korhal Palace Gate
 Weapon/Name/LiberatorMissileLaunchers2=H.A.L.O. Rockets
 Weapon/Name/LongboltMissile2=Longbolt Missile
 Weapon/Name/ParticleDisruptors2=Particle Disruptors
@@ -384,6 +411,7 @@ Weapon/Name/Separatist4=CPO-04 Salamander Flamethrower
 Weapon/Name/Separatist5=Negotiator
 Weapon/Name/SupplicantWeapon=Blood Orb
 Weapon/Name/TitanMechGun2=LB-10 Gatling Minigun
+Weapon/Name/TwinIbiksCannon2=Quad Ganho Cannons
 Weapon/Name/TyphoonMissilePod=Typhoon Ground-Ground Missiles
 Weapon/Name/TyphoonMissilePod2=Typhoon Ground-Air Missiles
 Weapon/Name/Vulture2=Ultra-Sonic Weapon
@@ -394,6 +422,8 @@ Weapon/Tip/90mmCannons3=Deal additional 20 damage in AoE
 Weapon/Tip/ATALaserBattery=Minimum Range: 4
 Weapon/Tip/ATSLaserBattery=Minimum Range: 5
 Weapon/Tip/AllPurposeLaserBattery=Can attack up to 4 targets at once.
+Weapon/Tip/Claws2=Pierce 50% armor
+Weapon/Tip/Claws222=Attack ignores all armor
 Weapon/Tip/D8Charge=Only used against non-light targets
 Weapon/Tip/Diamondback2=Restore 5 shields each attack.
 Weapon/Tip/KorhalPalaceGate22=Deal 80/40/20 damage in 1/2.5/5 AoE
