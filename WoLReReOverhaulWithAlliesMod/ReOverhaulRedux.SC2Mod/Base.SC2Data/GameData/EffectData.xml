@@ -8,6 +8,10 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="AlarakStalkerPhasingArmorBuff"/>
     </CEffectApplyBehavior>
+    <CEffectDamage id="BabyUltralisk">
+        <AttributeFactor index="Armored" value="0.5"/>
+        <Amount value="12"/>
+    </CEffectDamage>
     <CEffectCreatePersistent id="BacklashRockets2">
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
@@ -103,6 +107,32 @@
         <AreaArray Radius="1.5" Fraction="0.25"/>
         <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectDamage id="HotSBanelingExplodeLargeDirect">
+        <AttributeBonus index="Structure" value="0"/>
+        <AttributeFactor index="Light" value="0.5"/>
+        <AttributeFactor index="Structure" value="0.5"/>
+        <Amount value="30"/>
+    </CEffectDamage>
+    <CEffectModifyUnit id="HotSBanelingExplodeLargeHealSearchHeal">
+        <VitalArray index="Life">
+            <Change value="45"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectDamage id="HotSBanelingExplodeLargeSearchDamage">
+        <AttributeBonus index="Structure" value="0"/>
+        <AttributeFactor index="Light" value="0.5"/>
+        <AttributeFactor index="Structure" value="0.5"/>
+        <Amount value="30"/>
+    </CEffectDamage>
+    <CEffectModifyUnit id="HotSBanelingHealLargeDirect">
+        <VitalArray index="Life">
+            <Change value="45"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <!-- Additional effect for splitterlings -->
+    <CEffectCreateUnit id="HotSBanelingSplitterling">
+        <SpawnCount value="4"/>
+    </CEffectCreateUnit>
     <CEffectSet id="HotSRaptorClaws">
         <EffectArray index="1" value="HotSRaptorClawsDamage"/>
         <EffectArray index="2" removed="1"/>
@@ -198,6 +228,115 @@
         <ExcludeArray Value="Target"/>
         <SearchFilters value="Air;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectDamage id="LocustDamage"/>
+    <CEffectDamage id="LocustFlyingDamage">
+        <Amount value="12"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="LocustLM">
+        <ImpactLocation Value="TargetUnitOrPoint"/>
+        <ImpactEffect value="RavasaurSearch2"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="LocustMPCreateLMA2">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactLocation Value="TargetUnitOrPoint"/>
+        <FinishEffect value="LocustMPCreateLMImpactSetA2"/>
+        <AmmoUnit value="LocustMPEggAMissileWeapon2"/>
+        <Movers Link="LocustMPEggMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="LocustMPCreateLMB2">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactLocation Value="TargetUnitOrPoint"/>
+        <FinishEffect value="LocustMPCreateLMImpactSetB2"/>
+        <AmmoUnit value="LocustMPEggBMissileWeapon2"/>
+        <Movers Link="LocustMPEggMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="LocustMPCreateLMImpactSetA2">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="RemovePrecursorLocust2"/>
+        <EffectArray value="LocustMPStun2"/>
+    </CEffectSet>
+    <CEffectSet id="LocustMPCreateLMImpactSetB2">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="RemovePrecursorLocust2"/>
+        <EffectArray value="LocustMPStun2"/>
+    </CEffectSet>
+    <CEffectSet id="LocustMPCreateSet2">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="SwarmHostEggAnimationMPAB2"/>
+        <EffectArray value="LocustMPCreateUnitA2"/>
+        <EffectArray value="LocustMPCreateUnitB2"/>
+    </CEffectSet>
+    <CEffectSet id="LocustMPCreateSetA2">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="MakePrecursorLocust2"/>
+        <EffectArray value="LocustMPCreateLMA2"/>
+    </CEffectSet>
+    <CEffectSet id="LocustMPCreateSetB2">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="MakePrecursorLocust2"/>
+        <EffectArray value="LocustMPCreateLMB2"/>
+    </CEffectSet>
+    <CEffectCreateUnit id="LocustMPCreateUnitA2">
+        <EditorCategories value="Race:Zerg"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="TechComplete" value="0"/>
+        <RallyUnit Value="Source"/>
+        <SpawnEffect value="LocustMPCreateSetA2"/>
+        <SpawnUnit value="Swarmling"/>
+        <SpawnRange value="1.5"/>
+        <SpawnOffset value="0.4,-0.2"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="LocustMPCreateUnitB2">
+        <EditorCategories value="Race:Zerg"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="TechComplete" value="0"/>
+        <RallyUnit Value="Source"/>
+        <SpawnEffect value="LocustMPCreateSetB2"/>
+        <SpawnUnit value="Swarmling"/>
+        <SpawnRange value="1.5"/>
+        <SpawnOffset value="-0.4,-0.2"/>
+    </CEffectCreateUnit>
+    <CEffectDamage id="LocustMPDamage">
+        <Amount value="8"/>
+    </CEffectDamage>
+    <CEffectIssueOrder id="LocustMPIssueMorph2">
+        <ValidatorArray value="HaveFlyingLocusts"/>
+        <EditorCategories value="Race:Zerg"/>
+        <WhichUnit Value="Source"/>
+        <Abil value="LocustMPMorphToAir"/>
+        <CmdFlags index="Preempt" value="1"/>
+        <Player Value="Source"/>
+    </CEffectIssueOrder>
+    <CEffectDamage id="LocustMPMeleeDamage">
+        <Amount value="8"/>
+    </CEffectDamage>
+    <CEffectModifyUnit id="LocustMPRally2">
+        <EditorCategories value="Race:Zerg"/>
+        <RallyUnit Effect="LocustMPCreateSet" Value="Source"/>
+    </CEffectModifyUnit>
+    <CEffectSet id="LocustMPReady2">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="LocustMPRally2"/>
+        <EffectArray value="LocustMPTimedLife"/>
+        <EffectArray value="LocustMPIssueMorph2"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="LocustMPStun2">
+        <EditorCategories value="Race:Zerg"/>
+        <Behavior value="LocustMPStun"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="LocustMeleeDamage"/>
+    <CEffectCreateUnit id="LocustWeaponCreateUnitA">
+        <SpawnUnit index="0" value="LocustMP"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="LocustWeaponCreateUnitB">
+        <SpawnUnit index="0" value="LocustMP"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="MakePrecursorLocust2">
+        <Behavior value="PrecursorLocust"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="NeedleClaws">
+        <ArmorReduction value="0.5"/>
+    </CEffectDamage>
     <CEffectLaunchMissile id="ParticleDisruptors2">
         <ValidatorArray index="0" value="StalkerTargetFilters"/>
         <ValidatorArray value=""/>
@@ -218,11 +357,29 @@
         <Amount value="10"/>
         <Death value="Eviscerate"/>
     </CEffectDamage>
+    <CEffectDamage id="PsiStrikeDamage">
+        <Amount value="20"/>
+        <!--ValidatorArray value="noMarkers"/-->
+    </CEffectDamage>
     <CEffectDamage id="PukePuddleDamage">
         <AttributeBonus index="Biological" value="2"/>
         <AttributeBonus index="Psionic" value="0"/>
         <AttributeBonus index="Massive" value="0"/>
         <Amount value="3"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="RavasaurSearch2">
+        <EditorCategories value="Race:Zerg"/>
+        <SearchFilters value="Ground;Player,Ally,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="1" Effect="LocustMeleeDamage"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectRemoveBehavior id="RemovePrecursorLocust2">
+        <BehaviorLink value="PrecursorLocust"/>
+    </CEffectRemoveBehavior>
+    <CEffectDamage id="RoachlingNeedleClawsDamage">
+        <Amount value="4"/>
     </CEffectDamage>
     <CEffectDamage id="Separatist2" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
@@ -268,6 +425,9 @@
         <ImpactEffect value="StalkerEntropyLanceSecondaryDamage2"/>
         <AmmoUnit value="StalkerSecondaryWeapon"/>
     </CEffectLaunchMissile>
+    <CEffectDamage id="SuicideDamage">
+        <Amount value="70"/>
+    </CEffectDamage>
     <CEffectCreatePersistent id="SuicideDelay2">
         <EditorCategories value="Race:Zerg"/>
         <ExpireDelay value="0.0625"/>
@@ -1097,6 +1257,10 @@
         <AttributeFactor index="Armored" value="0.5"/>
         <Amount value="20"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="SwarmHostEggAnimationMPAB2">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SwarmHostEggAnimationMP"/>
+    </CEffectApplyBehavior>
     <CEffectEnumArea id="SwarmQueenRegenAuraSearch2">
         <ImpactLocation Value="TargetUnit"/>
         <SearchFilters value="-;Neutral,Enemy,Structure,Stasis,Dead,Hidden"/>
@@ -1119,6 +1283,9 @@
         <ValidatorArray index="0" value="LifeNotFull"/>
         <EditorCategories value="Race:Zerg"/>
     </CEffectApplyBehavior>
+    <CEffectDamage id="Swarmling">
+        <Amount value="6"/>
+    </CEffectDamage>
     <CEffectCreatePersistent id="ThorsHammer">
         <PeriodCount value="6"/>
         <PeriodicEffectArray index="1" value="JavelinMissileLaunchersLM"/>

@@ -19,6 +19,7 @@ Button/Hotkey/ScienceVessel=S
 Button/Hotkey/Separatist=H
 Button/Hotkey/SlivanPuke=E
 Button/Hotkey/StrikeTrooper=I
+Button/Hotkey/SwarmHost2=C
 Button/Hotkey/TankBusterTrooper=U
 Button/Hotkey/TornadoMissile2=E
 Button/Hotkey/TornadoMissile3=W

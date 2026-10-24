@@ -26,6 +26,93 @@
         </Wireframe>
     </CActorUnit>
     <CActorSplat id="ArmorySplat2" parent="GenericUnitSplat" unitName="Armory2"/>
+    <CActorUnit id="Baneling2" parent="GenericBurrowerStandard" unitName="Baneling2">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergSmallBurrowEffects"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <AcceptedHostedPropTransfers index="Scale" value="0"/>
+        <Remove Terms="UnitDeathCustomize; ValidateUnit NotStructure; IsStatus InAir 1" Send="DeathCustomize AntiGravGeneric"/>
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsZergUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravZerg"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Baneling; MorphFrom BanelingCocoon" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Baneling; MorphFrom BanelingCocoon" Send="$Birth 0 0.000000"/>
+        <On Terms="ActorCreation; ValidateUnit CentrificalHooksResearched" Send="AnimGroupApply Superior"/>
+        <On Terms="ActorCreation; ValidateUnit CentrificalHooksResearched" Send="SetWalkAnimMoveSpeed 3"/>
+        <On Terms="Upgrade.CentrificalHooks.Add" Send="AnimGroupApply Superior"/>
+        <On Terms="Upgrade.CentrificalHooks.Add" Send="SetWalkAnimMoveSpeed 3"/>
+        <On Terms="Upgrade.CentrificalHooks.Remove" Send="AnimGroupRemove Superior"/>
+        <On Terms="Upgrade.CentrificalHooks.Remove" Send="SetWalkAnimMoveSpeed 2"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom Baneling; MorphTo BanelingBurrowed" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Baneling; MorphFrom BanelingBurrowed" Send="AnimBracketStop Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Baneling; MorphFrom BanelingBurrowed" Send="AnimClear Burrow"/>
+        <On Terms="WeaponStart.VolatileBurst.AttackStart" Send="StatusSet DeathSuicide 1"/>
+        <On Terms="Abil.Explode.SourceCastStart" Send="StatusSet DeathSuicide 1"/>
+        <On Terms="UnitDeathCustomize; IsStatus DeathSuicide 0" Send="Create BanelingDeathNormalSound"/>
+        <On Terms="UnitDeathCustomize; IsStatus DeathSuicide 1" Send="Create BanelingDeathSuicideSound"/>
+        <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On Terms="UnitBirth.Baneling2" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Baneling; MorphFrom BanelingBurrowed" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BanelingBurrowed; MorphFrom Baneling" Send="TerrainSquibDeactivate"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Baneling_Land"/>
+        <On Terms="ActorCreation; ValidateUnit HotSCentrifugalHooksResearched" Send="AnimGroupApply Superior"/>
+        <On Terms="ActorCreation; ValidateUnit HotSCentrifugalHooksResearched" Send="SetWalkAnimMoveSpeed 3"/>
+        <On Terms="Upgrade.HotsCentrifugalHooks.Add" Send="AnimGroupApply Superior"/>
+        <On Terms="Upgrade.HotsCentrifugalHooks.Add" Send="SetWalkAnimMoveSpeed 3"/>
+        <On Terms="Upgrade.HotsCentrifugalHooks.Remove" Send="AnimGroupRemove Superior"/>
+        <On Terms="Upgrade.HotsCentrifugalHooks.Remove" Send="SetWalkAnimMoveSpeed 2"/>
+        <On Terms="AbilMorph.MorphBanelingToHunter.Finish; MorphTo Baneling; !AbilKey BurrowUp" Send="Create"/>
+        <On Terms="AbilMorph.MorphBanelingToHunter.Start; MorphFrom Baneling; !AbilKey BurrowDown" Send="Destroy"/>
+        <On Terms="AbilMorph.MorphBanelingToSplitterling.Finish; MorphTo Baneling; !AbilKey BurrowUp" Send="Create"/>
+        <On Terms="AbilMorph.MorphBanelingToSplitterling.Start; MorphFrom Baneling; !AbilKey BurrowDown" Send="Destroy"/>
+        <On Terms="WeaponStart.HotSBanelingExplode.AttackStart" Send="StatusSet DeathSuicide 1"/>
+        <On Terms="WeaponStart.HotSBanelingExplodeBuilding.AttackStart" Send="StatusSet DeathSuicide 1"/>
+        <On Terms="UnitDeathCustomize; ValidatePlayer HaveHotSRupture" Send="DeathCustomize Variation1"/>
+        <On Terms="UnitDeathCustomize; ValidatePlayer HaveHotSCorrosiveBile" Send="DeathCustomize Variation2"/>
+        <On Terms="Behavior.KerriganBanelingTimedLife.On" Send="SetStatusBarOn 1 Duration"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="BanelingDeath2" SoundLink=""/>
+        <DeathCustoms ModelLink="BanelingRuptureExplosion" Name="Variation1"/>
+        <DeathCustoms ModelLink="BanelingCorrosiveExplosion" Name="Variation2"/>
+        <PortraitModel value="BanelingPortrait2"/>
+        <TerrainSquibs>
+            <GroupName value="RippleStandard"/>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2"/>
+        <BarOffset value="35"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-Baneling.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-baneling.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <SoundArray index="Ready" value="Baneling_Ready"/>
+        <SoundArray index="Help" value="Baneling_Help"/>
+        <SoundArray index="What" value="Baneling_What"/>
+        <SoundArray index="Yes" value="Baneling_Yes"/>
+        <SoundArray index="Attack" value="Baneling_Attack"/>
+        <SoundArray index="Pissed" value="Baneling_Pissed"/>
+        <SoundArray index="Movement" value="Baneling_Movement"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-baneling.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-Baneling.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,128,255,255"/>
+    </CActorUnit>
     <CActorUnit id="Banshee2" parent="GenericUnitStandard" unitName="Banshee2">
         <Aliases value="_UnitLarge"/>
         <Macros value="TerrainSquibAnimations"/>
@@ -273,6 +360,27 @@
         <On Terms="Upgrade.ToshGoons.Add" Send="ModelSwap Liberator_Junker"/>
         <On Terms="ActorCreation; ValidateUnit HaveBlackOps25" Send="ModelSwap Liberator_Junker"/>
     </CActorUnit>
+    <CActorUnit id="Locust">
+        <Model value="Locust_CollectionSkin_Webby"/>
+    </CActorUnit>
+    <CActorAction id="LocustMPEggAAttack2" parent="GenericAttack" effectImpact="LocustMPCreateLMImpactSetA2" effectLaunch="LocustMPCreateLMA2">
+        <LaunchAttachQuery Methods="Weapon 4"/>
+        <LaunchAssets Sound="SwarmHost_EggLaunch"/>
+        <Missile value="LocustMPEggAAttackMissile2"/>
+        <ImpactAttachQuery Methods="Origin"/>
+    </CActorAction>
+    <CActorMissile id="LocustMPEggAAttackMissile2" parent="GenericAttackMissile" unitName="LocustMPEggAMissileWeapon2">
+        <On Terms="ActorCreation" Send="Create LocustMPEggAttackLaunchModel"/>
+    </CActorMissile>
+    <CActorAction id="LocustMPEggBAttack2" parent="GenericAttack" effectImpact="LocustMPCreateLMImpactSetB2" effectLaunch="LocustMPCreateLMB2">
+        <LaunchAttachQuery Methods="Weapon 2"/>
+        <LaunchAssets Sound="SwarmHost_EggLaunch"/>
+        <Missile value="LocustMPEggBAttackMissile2"/>
+        <ImpactAttachQuery Methods="Origin"/>
+    </CActorAction>
+    <CActorMissile id="LocustMPEggBAttackMissile2" parent="GenericAttackMissile" unitName="LocustMPEggBMissileWeapon2">
+        <On Terms="ActorCreation" Send="Create LocustMPEggAttackLaunchModel"/>
+    </CActorMissile>
     <CActorUnit id="Marine2" parent="GenericUnitBase" unitName="Marine2">
         <Aliases value="_UnitSmall"/>
         <Macros value="UnloadDropAnim"/>
@@ -2097,6 +2205,9 @@
     </CActorUnit>
     <CActorSplat id="SupplyDepotSplat2" parent="GenericUnitSplat" unitName="SupplyDepot2"/>
     <CActorSplat id="SupplyDepotSplat22" parent="GenericUnitSplat" unitName="SupplyDepot22"/>
+    <CActorUnit id="SwarmGuardianSpawn">
+        <PortraitModel value="SwarmlingPortrait2"/>
+    </CActorUnit>
     <CActorModel id="SwarmQueenRegenAuraSplat2" parent="ModelAddition">
         <On Terms="Behavior.SwarmQueenRegenAura2.On" Send="Create"/>
         <On Terms="Behavior.SwarmQueenRegenAura2.Off" Send="Destroy"/>

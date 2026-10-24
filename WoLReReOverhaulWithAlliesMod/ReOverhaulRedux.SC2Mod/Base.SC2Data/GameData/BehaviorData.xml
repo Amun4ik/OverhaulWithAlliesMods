@@ -51,7 +51,7 @@
             <DeathResponse Chance="1" Effect="HeroNukeDetonate"/>
         </Modification>
         <AINotifyEffect value="VolatileBurstU"/>
-        <DamageResponse Fatal="1" Handled="HeroNukeDetonate" ModifyFraction="0">
+        <DamageResponse Fatal="1" ModifyFraction="0">
             <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
@@ -74,6 +74,12 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="AllyAggressiveMode">
         <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LocustMPTimedLife">
+        <Duration value="20"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LocustTimedLife">
+        <Duration value="20"/>
     </CBehaviorBuff>
     <CBehaviorResource id="MineralFieldMinerals">
         <EmptyHarvestAmount value="2"/>
@@ -115,6 +121,9 @@
     <CBehaviorResource id="HarvestableVespeneGeyserGasZerg">
         <EmptyHarvestAmount value="2"/>
     </CBehaviorResource>
+    <CBehaviorBuff id="NovaSuppressCloakWhileMoving">
+        <DisableValidatorArray index="0" value="CasterIsAttackingTarget"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="OutOfCombatEnergyRegen">
         <Modification>
             <VitalRegenArray index="Life" value="4"/>

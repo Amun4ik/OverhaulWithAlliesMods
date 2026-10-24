@@ -96,6 +96,11 @@
         <AlertIcon value="Assets\Textures\btn-unit-terran-teslatank.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="LocustMP2">
+        <Icon value="Assets\Textures\btn-unit-zerg-locust.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-locust.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
     <CButton id="Separatist">
         <Icon value="Assets\Textures\btn-unit-terran-lightinfantryshield.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-lightinfantryshield.dds"/>

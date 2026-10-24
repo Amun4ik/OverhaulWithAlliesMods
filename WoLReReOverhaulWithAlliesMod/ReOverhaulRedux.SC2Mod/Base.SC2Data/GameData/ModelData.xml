@@ -24,6 +24,20 @@
         <ScaleMax value="0.600000,0.600000,0.600000"/>
         <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModel>
+    <CModel id="Baneling2" parent="BanelingBase">
+        <Model value="Assets\Units\Zerg\Baneling_Primal_Collection\Baneling_Primal_Collection.m3"/>
+        <ScaleMax value="0.880000,0.880000,0.880000"/>
+        <ScaleMin value="0.720000,0.720000,0.720000"/>
+    </CModel>
+    <CModel id="BanelingDeath2" parent="BanelingDeathBase">
+        <Model value="Assets\Units\Zerg\Baneling_Primal_Collection_Death\Baneling_Primal_Collection_Death.m3"/>
+        <LowQualityModel value="BanelingDeath_Low"/>
+    </CModel>
+    <CModel id="BanelingPortrait2" parent="BanelingPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Baneling_Primal_Collection_Portrait\Baneling_Primal_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\BanelingPortrait_Static.dds"/>
+        <Lighting value="BanelingPortrait"/>
+    </CModel>
     <CModel id="Banshee2" parent="BansheeBase">
         <Model value="Assets\Terran\NC_HeloGunship.m3"/>
         <RequiredAnims value="Assets\Units\Terran\Banshee_NovaAnims\Banshee_NovaAnims.m3a"/>
@@ -64,10 +78,16 @@
     <CModel id="HotSRaptor">
         <Model value="Assets\Zerg\ZerglingEX1A_Upgrade.m3"/>
     </CModel>
+    <CModel id="HotSSplitterlingBig">
+        <Model value="Assets\Units\Zerg\Baneling_CollectionSkin_Webby_MP\Baneling_CollectionSkin_Webby_MP.m3"/>
+    </CModel>
     <CModel id="HotSSwarmling">
         <Model value="Assets\Zerg\ZerglingEX1B_Upgrade.m3"/>
         <ScaleMax value="0.620000,0.620000,0.620000"/>
         <ScaleMin value="0.620000,0.620000,0.620000"/>
+    </CModel>
+    <CModel id="Hunter">
+        <Model value="Assets\Units\Zerg\Baneling_CollectionSkin_Webby\Baneling_CollectionSkin_Webby.m3"/>
     </CModel>
     <CModel id="KorhalPalaceGateAttackImpact3" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\OdinShoulderMissileImpact\OdinShoulderMissileImpact.m3"/>
@@ -113,6 +133,55 @@
         <Model value="Assets\UED Portraits\ValkyrieRemastered_UED_Portrait.m3"/>
         <Image value="Assets\Textures\Valkyrie_UED_Portrait_static.dds"/>
         <Lighting value="PortraitLiberatorEx2"/>
+    </CModel>
+    <CModel id="LocustFlying">
+        <Model value="Assets\Units\Zerg\SwarmHostSpawnFlyer_Primal_Collection\SwarmHostSpawnFlyer_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="LocustMPEggAMissileWeapon2" parent="MissileFX">
+        <Model value="Assets\Units\Zerg\LurkerEgg\LurkerEgg.m3"/>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="EggPop"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="SwarmHost_SpawnLaunch"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <SelectionLayer value="3"/>
+        <SelectionRadius value="0.666500"/>
+        <ShadowRadius value="0.666500"/>
+        <SquibTypeDefault value="Flesh"/>
+    </CModel>
+    <CModel id="LocustMPEggBMissileWeapon2" parent="MissileFX">
+        <Model value="Assets\Units\Zerg\LurkerEgg\LurkerEgg.m3"/>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="EggPop"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="SwarmHost_SpawnLaunch"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <SelectionLayer value="3"/>
+        <SelectionRadius value="0.666500"/>
+        <ShadowRadius value="0.666500"/>
+        <SquibTypeDefault value="Flesh"/>
+    </CModel>
+    <CModel id="LocustWeapon">
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="Locust_CollectionSkin_Webby">
+        <ScaleMax value="1.250000,1.250000,1.250000"/>
+        <ScaleMin value="1.250000,1.250000,1.250000"/>
+    </CModel>
+    <CModel id="LurkerMP">
+        <Model value="Assets\Zerg\Lurker_IzshaBrood.m3"/>
+    </CModel>
+    <CModel id="LurkerMPPortrait">
+        <Model value="Assets\Zerg\Lurker_IzshaBrood_Portrait.m3"/>
     </CModel>
     <CModel id="Marine2" parent="MarineBase">
         <Model value="Assets\Terran\Marine_Mercenary_TigersClaw.m3"/>
@@ -211,6 +280,9 @@
         <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="Pygalisk">
+        <Model value="Assets\Zerg\Pygalisk_DS.m3"/>
     </CModel>
     <CModel id="Ravasaur">
         <Model value="Assets\Zerg\RavasaurInfestor.m3"/>
@@ -1418,6 +1490,29 @@
     </CModel>
     <CModel id="Swann">
         <Model value="Assets\Terran\dominion-rockettrooperleader.m3"/>
+    </CModel>
+    <CModel id="SwarmHostSpawnDeath">
+        <Model value="Assets\Units\Zerg\Locust_CollectionSkin_Webby_Death\Locust_CollectionSkin_Webby_Death.m3"/>
+    </CModel>
+    <CModel id="SwarmHostSpawnDeathAcid">
+        <Model value="Assets\Units\Zerg\Locust_CollectionSkin_Webby_DeathAcid\Locust_CollectionSkin_Webby_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="SwarmHostSpawnDeathFire">
+        <Model value="Assets\Units\Zerg\Locust_CollectionSkin_Webby_DeathFire\Locust_CollectionSkin_Webby_DeathFire.m3"/>
+    </CModel>
+    <CModel id="SwarmHostSpawnPortrait">
+        <Model value="Assets\Portraits\Zerg\Locust_Webby_Collection_Portrait\Locust_Webby_Collection_Portrait.m3"/>
+    </CModel>
+    <CModel id="SwarmHostSplitB">
+        <Model value="Assets\Units\Zerg\SwarmHost_CollectionSkin_Webby\SwarmHost_CollectionSkin_Webby.m3"/>
+    </CModel>
+    <CModel id="Swarmling">
+        <Model value="Assets\Zerg\Lurkling_TCeyes_DS.m3"/>
+    </CModel>
+    <CModel id="SwarmlingPortrait2" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Zerg\Lurkling_Greeneyes_DS_Portrait.m3"/>
+        <Image value="Assets\Textures\lurkling_ds_portrait_static.dds"/>
+        <Lighting value="SwarmlingPortrait"/>
     </CModel>
     <CModel id="TitanMechAssault2" parent="Unit" Race="Terran">
         <Model value="Assets\Terran\ArchAngelAssault_Xanthos_TeamColor.m3"/>

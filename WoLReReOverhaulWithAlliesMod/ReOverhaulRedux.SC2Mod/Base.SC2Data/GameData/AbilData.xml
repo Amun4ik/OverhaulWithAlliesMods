@@ -328,6 +328,17 @@
     <CAbilEffectInstant id="ImmortalOverload">
         <AutoCastValidatorArray index="0" value="CasterLifeNotFull"/>
     </CAbilEffectInstant>
+    <CAbilEffectTarget id="LocustLaunch">
+        <Cost index="0">
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="20"/>
+            </Charge>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="MercMedicHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
@@ -408,6 +419,10 @@
             <Cooldown TimeUse="30"/>
         </Cost>
         <CmdButtonArray index="Execute" Requirements=""/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Structure,Stasis,Hidden"/>
+        <AutoCastRange value="6"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="PsionicLift">
         <Cost index="0">
@@ -510,6 +525,18 @@
             <Flags index="AutoCast" value="1"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectInstant id="SwarmHostSpawnLocusts2">
+        <Effect index="0" value="LocustMPCreateSet2"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link="SwarmHostSpawnLocustsSwarmHostSpawnLocusts2" TimeUse="25"/>
+        </Cost>
+        <Arc value="360"/>
+        <AutoCastFilters value="Self,Visible;-"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="LocustMP2" Requirements="SwarmHostSpawn"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="TitanMechBombardment">
         <Cost>
             <Charge Link="Abil/TitanMechBombardment"/>

@@ -103,6 +103,19 @@
         <Effect value="LiberatorMissileBurstPersistent3"/>
         <AllowedMovement value="Slowing"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Locust">
+        <Range value="5"/>
+        <MinimumRange value="2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LocustFlyingPressurizedGlands">
+        <Options index="Disabled" value="0"/>
+        <Options index="Hidden" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <!--Options index="IgnoreThreat" value="1"/-->
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LocustMP">
+        <Period value="0.6"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="ParticleDisruptors2">
         <EditorCategories value="Race:Protoss"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
