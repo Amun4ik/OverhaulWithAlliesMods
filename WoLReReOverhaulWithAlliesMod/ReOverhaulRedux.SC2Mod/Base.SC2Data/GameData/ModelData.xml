@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="AcidSalivaWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\Dehaka_Coop_ThornSpike_Missile\Dehaka_Coop_ThornSpike_Missile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
     <CModel id="Armory2" parent="ArmoryBase">
         <Model value="Assets\Buildings\Terran\AcademySCBW\AcademySCBW.m3"/>
     </CModel>
@@ -75,6 +79,17 @@
     <CModel id="FlamingBetty">
         <Model value="Assets\Terran\Terran_SonicEmitter.m3"/>
     </CModel>
+    <CModel id="HellionTankAttackFireAddition2" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\Primal_Roach_Coop_FireBreath_Impact\Primal_Roach_Coop_FireBreath_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="HellionTankAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Zerg\Primal_Roach_Coop_FireBreath\Primal_Roach_Coop_FireBreath.m3"/>
+        <LowQualityModel value="HellionTankAttackLaunchLow"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.650000,1.650000,1.000000"/>
+        <ScaleMin value="1.650000,1.650000,1.000000"/>
+    </CModel>
     <CModel id="HotSRaptor">
         <Model value="Assets\Zerg\ZerglingEX1A_Upgrade.m3"/>
     </CModel>
@@ -92,6 +107,8 @@
     <CModel id="KorhalPalaceGateAttackImpact3" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\OdinShoulderMissileImpact\OdinShoulderMissileImpact.m3"/>
         <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModel>
     <CModel id="KorhalPalaceTurret">
         <Model value="Assets\Terran\Building_Terran_CannonTower.m3"/>
@@ -283,9 +300,101 @@
     </CModel>
     <CModel id="Pygalisk">
         <Model value="Assets\Zerg\Pygalisk_DS.m3"/>
+        <RequiredAnimsEx FilePath="Assets\Units\Zerg\UltraliskEx1_RequiredAnims\UltraliskEx1_RequiredAnims.m3a"/>
+    </CModel>
+    <CModel id="Ravager">
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+    </CModel>
+    <CModel id="Ravager2" parent="RavagerBase">
+        <Model value="Assets\Units\Zerg\Ravager_CollectionSkin_Bone\Ravager_CollectionSkin_Bone.m3"/>
+    </CModel>
+    <CModel id="Ravager22" parent="RavagerBase">
+        <Model value="Assets\Units\Zerg\Ravager_CollectionSkin_Webby\Ravager_CollectionSkin_Webby.m3"/>
+    </CModel>
+    <CModel id="Ravager23" parent="RavagerBase">
+        <Model value="Assets\Units\Zerg\Ravager_Primal_Collection\Ravager_Primal_Collection.m3"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="RavagerDeath2" parent="RavagerDeathBase">
+        <Model value="Assets\Units\Zerg\Ravager_CollectionSkin_Bone_Death\Ravager_CollectionSkin_Bone_Death_00.m3"/>
+    </CModel>
+    <CModel id="RavagerDeath22" parent="RavagerDeathBase">
+        <Model value="Assets\Units\Zerg\Ravager_CollectionSkin_Webby_Death\Ravager_CollectionSkin_Webby_Death_01.m3"/>
+    </CModel>
+    <CModel id="RavagerDeath23" parent="RavagerDeathBase">
+        <Model value="Assets\Units\Zerg\Ravager_Primal_Collection_Death\Ravager_Primal_Collection_Death_01.m3"/>
+    </CModel>
+    <CModel id="RavagerDeathAcid2" parent="RavagerDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Ravager_CollectionSkin_Bone_Death_Acid\Ravager_CollectionSkin_Bone_Death_Acid.m3"/>
+    </CModel>
+    <CModel id="RavagerDeathAcid22" parent="RavagerDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Ravager_CollectionSkin_Webby_DeathAcid\Ravager_CollectionSkin_Webby_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="RavagerDeathAcid23" parent="RavagerDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Ravager_Primal_Collection_DeathAcid\Ravager_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="RavagerDeathFire2" parent="RavagerDeathFireBase">
+        <Model value="Assets\Units\Zerg\Ravager_CollectionSkin_Bone_Death_Fire\Ravager_CollectionSkin_Bone_Death_Fire.m3"/>
+    </CModel>
+    <CModel id="RavagerDeathFire22" parent="RavagerDeathFireBase">
+        <Model value="Assets\Units\Zerg\Ravager_CollectionSkin_Webby_DeathFire\Ravager_CollectionSkin_Webby_DeathFire.m3"/>
+    </CModel>
+    <CModel id="RavagerDeathFire23" parent="RavagerDeathFireBase">
+        <Model value="Assets\Units\Zerg\Ravager_Primal_Collection_DeathFire\Ravager_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="RavagerDeathRagdoll2" parent="RavagerDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Ravager_CollectionSkin_Bone_Death\Ravager_CollectionSkin_Bone_Death_01.m3"/>
+    </CModel>
+    <CModel id="RavagerDeathRagdoll22" parent="RavagerDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Ravager_CollectionSkin_Webby_Death\Ravager_CollectionSkin_Webby_Death_00.m3"/>
+    </CModel>
+    <CModel id="RavagerDeathRagdoll23" parent="RavagerDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Ravager_Primal_Collection_Death\Ravager_Primal_Collection_Death_00.m3"/>
+    </CModel>
+    <CModel id="RavagerPortrait2" parent="RavagerPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Ravager_CollectionSkin_Bone_Portrait\Ravager_CollectionSkin_Bone_Portrait.m3"/>
+        <Image value="Assets\Textures\RavagerPortrait_Static.dds"/>
+        <Lighting value="RavagerPortrait"/>
+    </CModel>
+    <CModel id="RavagerPortrait22" parent="RavagerPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Ravager_Webby_Collection_Portrait\Ravager_Webby_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\RavagerPortrait_Static.dds"/>
+        <Lighting value="RavagerPortrait"/>
+    </CModel>
+    <CModel id="RavagerPortrait23" parent="RavagerPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Ravager_Primal_Collection_Portrait\Ravager_Primal_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\RavagerPortrait_Static.dds"/>
+        <Lighting value="RavagerPortrait"/>
+    </CModel>
+    <CModel id="RavagerWeaponImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\Infested_Terran_AA_MP_Missile_Impact\Infested_Terran_AA_MP_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="RavagerWeaponMissile2" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\Infested_Terran_AA_MP_Missile\Infested_Terran_AA_MP_Missile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="Ravasaur">
         <Model value="Assets\Zerg\RavasaurInfestor.m3"/>
+    </CModel>
+    <CModel id="RavasaurAttackImpact2" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Zerg\Ravager_Artillery_Missile_Impact_Upgrade\Ravager_Artillery_Missile_Impact_Upgrade.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="Spit_Impact"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Ravasaur_Spit_Impact"/>
+        </Events>
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
+        <ScaleMin value="1.600000,1.600000,1.600000"/>
+    </CModel>
+    <CModel id="RavasaurWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\Ravager_Artillery_Missile_Upgrade\Ravager_Artillery_Missile_Upgrade.m3"/>
+        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="RegenAuraSplat2" parent="PersistentSpellFX">
         <Model value="Assets\COOP\Tychus\Effects\HealingWard_Heavens_COOP_Splat\HealingWard_Heavens_COOP_Splat.m3"/>
@@ -302,6 +411,67 @@
     </CModel>
     <CModel id="RegenImpact22" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Other\SwarmHeroGlow\SwarmHeroGlow.m3"/>
+    </CModel>
+    <CModel id="Roach2" parent="RoachBase">
+        <Model value="Assets\Units\Zerg\RoachUpgrade_Primal_Collection\RoachUpgrade_Primal_Collection.m3"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
+    <CModel id="Roach3" parent="RoachBase">
+        <Model value="Assets\Units\Zerg\Roach_Deluxe_Collection_Upgrade\Roach_Deluxe_Collection_Upgrade.m3"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
+    <CModel id="RoachAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\RoachWeaponImpact\RoachWeaponImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="RoachCorpser">
+        <Model value="Assets\Zerg\RoachEX1A_Upgrade.m3"/>
+    </CModel>
+    <CModel id="RoachDeath2" parent="RoachDeathBase">
+        <Model value="Assets\Units\Zerg\Roach_Primal_Collection_Death\Roach_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="RoachDeath3" parent="RoachDeathBase">
+        <Model value="Assets\Units\Zerg\Roach_Deluxe_Collection_Death\Roach_Deluxe_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="RoachDeathAcid2" parent="RoachDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Roach_Primal_Collection_DeathAcid\Roach_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="RoachDeathAcid3" parent="RoachDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Roach_Deluxe_Collection_Death_Acid\Roach_Deluxe_Collection_Death_Acid.m3"/>
+    </CModel>
+    <CModel id="RoachDeathFire2" parent="RoachDeathFireBase">
+        <Model value="Assets\Units\Zerg\Roach_Primal_Collection_DeathFire\Roach_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="RoachDeathFire3" parent="RoachDeathFireBase">
+        <Model value="Assets\Units\Zerg\Roach_Deluxe_Collection_Death_Fire\Roach_Deluxe_Collection_Death_Fire.m3"/>
+    </CModel>
+    <CModel id="RoachDeathRagdoll2" parent="RoachDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Roach_Primal_Collection_DeathRagdoll\Roach_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="RoachDeathRagdoll3" parent="RoachDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Roach_Deluxe_Collection_Death\Roach_Deluxe_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="RoachMissileImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\Primal_Tyrannosaur_Coop_FanofKnives_Impact\Primal_Tyrannosaur_Coop_FanofKnives_Impact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="RoachPortrait2" parent="RoachPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Roach_Primal_Collection_Portrait\Roach_Primal_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\RoachPortrait_Static.dds"/>
+        <Lighting value="RoachPortrait"/>
+    </CModel>
+    <CModel id="RoachPortrait3" parent="RoachPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Roach_Deluxe_Collection_Portrait\Roach_Deluxe_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\RoachPortrait_Static.dds"/>
+        <Lighting value="RoachPortrait"/>
+    </CModel>
+    <CModel id="RoachVile">
+        <Model value="Assets\Zerg\RoachEx1B_Upgrade.m3"/>
+    </CModel>
+    <CModel id="Roachling">
+        <Model value="Assets\Zerg\RoachlingEX1A_DS.m3"/>
     </CModel>
     <CModel id="ScantipedeParasitic">
         <Model value="Assets\Zerg\ScantipedeRavager.m3"/>

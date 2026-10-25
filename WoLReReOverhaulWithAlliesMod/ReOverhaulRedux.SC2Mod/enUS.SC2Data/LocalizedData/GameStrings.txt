@@ -129,8 +129,13 @@ Button/Tooltip/PickupGas100Text=<s val="Kicker_Gas">+75 </s><IMG path="Assets\Te
 Button/Tooltip/PickupMinerals100Text=<s val="Kicker_Minerals">+75 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/><n/><s val="Kicker_Minerals">+25 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/> <s val="Kicker_Minerals"> For Allies</s>
 Button/Tooltip/PlanetaryFortress2=Defensive stronghold. <n/>Used to receive gathered resources. <n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/RaptorPassive=Zergling gains +3 damage.
+Button/Tooltip/Ravager2=Ranged artillery. Can use Corrosive Bile.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Ravager22=Ranged artillery. Can use Corrosive Bile.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Ravager23=Ranged artillery. Can use Corrosive Bile.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommando=Mysterious Field Captain of the Rebellion. Has a infantry railgun with different rounds.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/RenegadeMissileTurret=Experimental defense turret. Deal damage in a chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c><n/><c val="FFE303">Detector</c>
+Button/Tooltip/Roach2=Assault unit. Regenerates life quickly when burrowed. Can morph into a Ravager.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/Roach3=Assault unit. Regenerates life quickly when burrowed. Can morph into a Ravager.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/Separatist3=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Separatist4=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Separatist5=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -172,6 +177,9 @@ Effect/Name/ATALaserBatteryU=Light Laser Battery
 Effect/Name/ATSLaserBatteryLM=Heavy Laser Battery
 Effect/Name/ATSLaserBatteryU=Heavy Laser Battery
 Effect/Name/ATSLaserBatteryU2=Heavy Laser Battery
+Effect/Name/AcidSalivaLM2=Needle Spines (Missile)
+Effect/Name/AcidSalivaSet2=Acid Saliva
+Effect/Name/AcidSalivaU2=Needle Spines
 Effect/Name/AlarakDeadlyCharge2=Supplicant Deadly Charge
 Effect/Name/AlarakDeadlyChargeAB2=Supplican tDeadly Charge AB
 Effect/Name/AlarakDeadlyChargeDamage2=Supplicant Deadly Charge Damage
@@ -198,6 +206,8 @@ Effect/Name/BacklashRocketsLM2=Backlash Rockets
 Effect/Name/BacklashRocketsU2=Backlash Rockets
 Effect/Name/BattlecruiserBarrage=Battlecruiser Barrage (Persistent)
 Effect/Name/BattlecruiserBarrage2=Battlecruiser Barrage (Persistent)
+Effect/Name/BileDuctsApplyBehavior2=Bile Ducts Apply Behavior
+Effect/Name/BileDuctsDamage2=Bile Ducts Damage
 Effect/Name/Claws2=Claws (Damage)
 Effect/Name/Claws22=Claws (Damage)
 Effect/Name/Claws222=Claws (Damage)
@@ -215,6 +225,10 @@ Effect/Name/GoliathA22=Ground Attack
 Effect/Name/GoliathG2=Autocannon
 Effect/Name/GuassRifle2=Guass Rifle
 Effect/Name/GuassRifle22=Guass Rifle
+Effect/Name/HellionTank2=Igniter
+Effect/Name/HellionTankApplyBehavior2=Igniter Apply Behavior
+Effect/Name/HellionTankDamage2=Igniter Damage
+Effect/Name/HellionTankSearch2=Igniter Search
 Effect/Name/HotSZerglingClaws2=Sunderling Claws Set
 Effect/Name/HotSZerglingClaws22=Chargeling Claws Set
 Effect/Name/HotSZerglingClaws222=Devouring One Claws Set
@@ -246,6 +260,8 @@ Effect/Name/LocustMPStun2=Locust MP Stun
 Effect/Name/LurkerMP=Ultra-Sonic
 Effect/Name/LurkerMPDamage=Ultra-Sonic
 Effect/Name/LurkerMPSearch=Ultra-Sonic
+Effect/Name/LurklingApplyDecloak=Lurkling Apply Decloak
+Effect/Name/LurklingClawsSet=Lurkling Claws Set
 Effect/Name/MakePrecursorLocust2=Make Precursor Locust
 Effect/Name/ParticleDisruptors2=Entropy Lance (LM)
 Effect/Name/ParticleDisruptorsU2=Entropy Lance (Damage)
@@ -259,10 +275,18 @@ Effect/Name/RailGunTurretDamage=War Hound Damage - Ground
 Effect/Name/RailGunTurretLaunchDummy=War Hound Launch Dummy
 Effect/Name/RailGunTurretSearch=War Hound Search
 Effect/Name/RailGunTurretSearchCP=War Hound Search CP
+Effect/Name/RavagerWeaponDamage2=Sky Wrecker Weapon Damage
+Effect/Name/RavagerWeaponDamage22=Sky Wrecker Weapon Air Damage
+Effect/Name/RavagerWeaponLM2=Sky Wrecker Weapon LM
+Effect/Name/RavagerWeaponLM22=Sky Wrecker Weapon Air LM
+Effect/Name/RavasaurDamage2=Mortarlisk Damage
+Effect/Name/RavasaurLM2=Mortarlisk LM
 Effect/Name/RavasaurSearch2=Siege Locust Search
+Effect/Name/RavasaurSearch3=Mortarlisk Search
 Effect/Name/RemovePrecursorLocust2=Remove Precursor Locust
 Effect/Name/RenegadeLongboltMissileLM=Grenade Missile
 Effect/Name/RenegadeLongboltMissileU=Grenade Missile
+Effect/Name/RoachMeleeSet2=Roach Melee Set
 Effect/Name/Separatist=Trooper Damage
 Effect/Name/Separatist2=Tank Buster Trooper Damage
 Effect/Name/Separatist3=Assault Trooper Damage
@@ -319,6 +343,7 @@ RequirementNode/Tooltip/CountUnitSupplyDepot2CompleteOnly2589852481=Attached Tec
 RequirementNode/Tooltip/Or2589852481CountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnitCountUpgradeAdvancedMedicTrainingCompleteOnlyCountUpgradeDominionForcesCompleteOnly=Attached Tech Lab
 Unit/Name/ATSLaserBatteryLMWeapon2=ATS Laser Battery
 Unit/Name/Academy=Academy
+Unit/Name/AcidSalivaWeapon2=Acid Saliva
 Unit/Name/AlliedAIOrderPanel=Allies
 Unit/Name/Armory2=Armory
 Unit/Name/BacklashRocketsLMWeapon2=Backlash Rockets
@@ -367,9 +392,20 @@ Unit/Name/PlanetaryFortress2=Royal Fortress
 Unit/Name/PredatorDominion=War Cat
 Unit/Name/PunisherGrenadesLMWeapon2=Loyalist Grenades
 Unit/Name/RailGunTurret=Grenade Turret
+Unit/Name/Ravager2=Destroyer
+Unit/Name/Ravager22=Sky Wrecker
+Unit/Name/Ravager23=Mortarlisk
+Unit/Name/RavagerWeaponMissile2=Ravager Weapon Missile
+Unit/Name/RavagerWeaponMissile22=Ravager Weapon Missile Air
+Unit/Name/RavasaurWeapon2=Ravasaur Weapon
 Unit/Name/RaynorCommando=Nekromant
 Unit/Name/ReaperDominion=Ranger
 Unit/Name/RenegadeMissileTurret=Tesla Coil
+Unit/Name/Roach2=Igniter
+Unit/Name/Roach3=Panzer
+Unit/Name/RoachCorpser=Corpser
+Unit/Name/RoachCorpserBurrowed=Corpser
+Unit/Name/RoachVile=Viler
 Unit/Name/Separatist2=Tank Buster Trooper
 Unit/Name/Separatist3=Strike Trooper
 Unit/Name/Separatist4=Flamer Trooper
@@ -419,6 +455,8 @@ Weapon/Name/90mmCannons2=70mm Cannons
 Weapon/Name/90mmCannons3=180mm Cannons
 Weapon/Name/ATALaserBattery=Light Laser Battery
 Weapon/Name/ATSLaserBattery=Heavy Laser Battery
+Weapon/Name/AcidSaliva2=Burning Breath
+Weapon/Name/AcidSaliva3=Piercing Spike
 Weapon/Name/AllPurposeLaserBatterySecondry=ATX Hidden Battery 1
 Weapon/Name/AllPurposeLaserBatterySecondry2=ATX Hidden Battery 2
 Weapon/Name/AllPurposeLaserBatterySecondry3=ATX Hidden Battery 3
@@ -444,7 +482,11 @@ Weapon/Name/ParticleDisruptors2=Particle Disruptors
 Weapon/Name/PsiBlades2=Blood Blades
 Weapon/Name/PunisherGrenades2=Diplomacy Grenades
 Weapon/Name/RailGunTurret=Drakken Grenade Launcher
+Weapon/Name/RavagerWeapon2=Plasma Discharge
+Weapon/Name/RavagerWeapon22=Plasma Discharge Air
+Weapon/Name/RavagerWeapon3=Concerntrated Plasma Launch
 Weapon/Name/RenegadeLongboltMissile=Tesla Coil
+Weapon/Name/RoachMelee2=Needle Spines (Melee)
 Weapon/Name/Separatist=CK-27 Carbine Rifle
 Weapon/Name/Separatist2=Ferromag SMG
 Weapon/Name/Separatist3=B-1 High-Cal LMG

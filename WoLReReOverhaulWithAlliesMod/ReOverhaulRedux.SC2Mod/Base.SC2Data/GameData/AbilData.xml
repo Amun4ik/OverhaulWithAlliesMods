@@ -350,6 +350,15 @@
         <Range index="0" value="9"/>
         <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectTarget>
+    <CAbilMorph id="MorphToSwarmHostBurrowed">
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToSwarmHostSplitABurrowed">
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToSwarmHostSplitBBurrowed">
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilMorph>
     <CAbilEffectInstant id="NovaApolloCloak">
         <Cost index="0">
             <Vital index="Energy" value="0"/>
@@ -430,6 +439,11 @@
             <Cooldown TimeUse="30"/>
         </Cost>
         <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="RavagerCorrosiveBile">
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AutoCastRange value="9"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="RavenDeploySpiderMines">
         <Range index="0" value="7"/>
