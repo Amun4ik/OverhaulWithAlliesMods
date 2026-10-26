@@ -29,6 +29,13 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="AlarakStalkerPhasingArmorBuff"/>
     </CEffectApplyBehavior>
+    <CEffectEnumArea id="AllPurposeLaserBattery2Search2">
+        <EditorCategories value="Race:Terran"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray MaxCount="2" Radius="2" Effect="NeedleSpinesLaunchMissile42"/>
+        <MaxCount value="3"/>
+    </CEffectEnumArea>
     <CEffectDamage id="BabyUltralisk">
         <AttributeFactor index="Armored" value="0.5"/>
         <Amount value="12"/>
@@ -159,7 +166,7 @@
         <Flags index="Notification" value="1"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
-        <Amount value="15"/>
+        <Amount value="16"/>
         <Death value="Fire"/>
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectDamage>
@@ -234,6 +241,27 @@
         <EffectArray value="ZerglingRangeReapply"/>
         <EffectArray value="Claws222"/>
     </CEffectSet>
+    <CEffectDamage id="HunterKillerU">
+        <ArmorReduction value="0.5"/>
+        <Amount value="15"/>
+    </CEffectDamage>
+    <CEffectDamage id="HydraliskImpaleDamage">
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="HydraliskImpaleImpactSearch">
+        <AreaArray index="0" Radius="0.4"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="HydraliskMelee2" parent="DU_WEAP">
+        <Name value="Effect/Name/NeedleSpinesDamage"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Marker Link="Effect/NeedleSpinesDamage"/>
+        <Amount value="12"/>
+        <Death value="Eviscerate"/>
+    </CEffectDamage>
+    <CEffectSet id="HydraliskMeleeSet">
+        <EffectArray index="0" value="HydraliskMelee"/>
+        <EffectArray index="1" removed="1"/>
+    </CEffectSet>
     <CEffectDamage id="InfestedAbomination">
         <AttributeBonus index="Armored" value="0"/>
         <AttributeFactor index="Armored" value="1"/>
@@ -252,11 +280,18 @@
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
-        <PeriodCount value="3"/>
+        <PeriodCount value="1"/>
         <PeriodicEffectArray value="TwinIbiksCannon2"/>
-        <PeriodicEffectArray value="TornadoMissileLM"/>
-        <PeriodicEffectArray value="TornadoMissileLM"/>
         <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="JavelinMissileLaunchersPersistent23">
+        <EditorCategories value="Race:Zerg"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="3"/>
+        <PeriodicEffectArray value="HunterKiller"/>
+        <PeriodicPeriodArray value="0.2"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="KorhalPalaceGateDamage3">
         <EditorCategories value="Race:Terran"/>
@@ -395,9 +430,11 @@
     <CEffectDamage id="LocustMeleeDamage"/>
     <CEffectCreateUnit id="LocustWeaponCreateUnitA">
         <SpawnUnit index="0" value="LocustMP"/>
+        <SpawnUnit value="LocustMP"/>
     </CEffectCreateUnit>
     <CEffectCreateUnit id="LocustWeaponCreateUnitB">
         <SpawnUnit index="0" value="LocustMP"/>
+        <SpawnUnit value="LocustMP"/>
     </CEffectCreateUnit>
     <CEffectApplyBehavior id="LurklingApplyDecloak">
         <EditorCategories value=""/>
@@ -412,9 +449,80 @@
     <CEffectApplyBehavior id="MakePrecursorLocust2">
         <Behavior value="PrecursorLocust"/>
     </CEffectApplyBehavior>
+    <CEffectSet id="MedusaSet">
+        <EditorCategories value=""/>
+        <EffectArray value="NeedleSpinesLaunchMissile4"/>
+        <EffectArray value="AllPurposeLaserBattery2Search2"/>
+    </CEffectSet>
     <CEffectDamage id="NeedleClaws">
         <ArmorReduction value="0.5"/>
     </CEffectDamage>
+    <CEffectDamage id="NeedleSpinesDamage">
+        <Amount value="14"/>
+    </CEffectDamage>
+    <CEffectDamage id="NeedleSpinesDamage2" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <Kind value="Ranged"/>
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectDamage id="NeedleSpinesDamage3" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <AttributeFactor index="Armored" value="0.5"/>
+        <Kind value="Ranged"/>
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectDamage id="NeedleSpinesDamage4" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <Kind value="Ranged"/>
+        <Amount value="22"/>
+    </CEffectDamage>
+    <CEffectDamage id="NeedleSpinesDamage42" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <Kind value="Ranged"/>
+        <Amount value="11"/>
+    </CEffectDamage>
+    <CEffectDamage id="NeedleSpinesDamage5" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <Kind value="Ranged"/>
+        <Amount value="12"/>
+    </CEffectDamage>
+    <CEffectSet id="NeedleSpinesImpactSet2">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="ParalyticSpines"/>
+        <EffectArray value="NeedleSpinesDamage2"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="NeedleSpinesLaunchMissile">
+        <ImpactEffect value="NeedleSpinesDamage"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="NeedleSpinesLaunchMissile2">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="NeedleSpinesImpactSet2"/>
+        <AmmoUnit value="NeedleSpinesWeapon2"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="NeedleSpinesLaunchMissile3">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="NeedleSpinesDamage3"/>
+        <AmmoUnit value="NeedleSpinesWeapon3"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="NeedleSpinesLaunchMissile4">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="NeedleSpinesDamage4"/>
+        <AmmoUnit value="NeedleSpinesWeapon4"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="NeedleSpinesLaunchMissile42">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="NeedleSpinesDamage42"/>
+        <AmmoUnit value="NeedleSpinesWeapon42"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="NeedleSpinesLaunchMissile5">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="NeedleSpinesDamage5"/>
+        <AmmoUnit value="NeedleSpinesWeapon5"/>
+    </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="ParalyticSpines">
+        <ValidatorArray index="0" value="TargetIsNotUnstoppable"/>
+        <ValidatorArray index="1" removed="1"/>
+    </CEffectApplyBehavior>
     <CEffectLaunchMissile id="ParticleDisruptors2">
         <ValidatorArray index="0" value="StalkerTargetFilters"/>
         <ValidatorArray value=""/>
@@ -466,6 +574,9 @@
         <ImpactEffect value="RavagerWeaponDamage22"/>
         <AmmoUnit value="RavagerWeaponMissile22"/>
     </CEffectLaunchMissile>
+    <CEffectDamage id="RavasaurDamage">
+        <Amount value="25"/>
+    </CEffectDamage>
     <CEffectDamage id="RavasaurDamage2" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:Zerg"/>
         <AttributeFactor index="Structure" value="1"/>
@@ -478,6 +589,9 @@
         <ImpactEffect value="RavasaurSearch3"/>
         <AmmoUnit value="RavasaurWeapon2"/>
     </CEffectLaunchMissile>
+    <CEffectEnumArea id="RavasaurSearch">
+        <AreaArray index="0" Radius="2.5"/>
+    </CEffectEnumArea>
     <CEffectEnumArea id="RavasaurSearch2">
         <EditorCategories value="Race:Zerg"/>
         <SearchFilters value="Ground;Player,Ally,Stasis,Dead,Hidden,Invulnerable"/>
@@ -497,6 +611,11 @@
     <CEffectRemoveBehavior id="RemovePrecursorLocust2">
         <BehaviorLink value="PrecursorLocust"/>
     </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="RoachCorpserApplyBehavior">
+        <ValidatorArray index="0" value="NotStructure"/>
+        <ValidatorArray index="1" value="NotDestructible"/>
+        <ValidatorArray index="2" removed="1"/>
+    </CEffectApplyBehavior>
     <CEffectSet id="RoachMeleeSet2">
         <EditorCategories value="Race:Zerg"/>
         <EffectArray value="BileDuctsApplyBehavior2"/>
@@ -1429,7 +1548,7 @@
         <EditorCategories value="Race:Zerg"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="Swarmling">
-        <Amount value="6"/>
+        <Amount value="8"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="ThorsHammer">
         <PeriodCount value="6"/>

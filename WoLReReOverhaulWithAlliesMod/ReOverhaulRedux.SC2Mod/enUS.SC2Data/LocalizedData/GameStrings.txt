@@ -9,6 +9,7 @@ Abil/Name/AssaultTrooperDefenseMatrix=Assault Trooper Defense Matrix
 Abil/Name/DefensiveMatrixDefender=Defensive Matrix
 Abil/Name/DisableAlliedPings=Disable Allies Attack Ping
 Abil/Name/ImmortalOverload=Barrier - Life Triggered
+Abil/Name/MakeServitors2=Lurklings
 Abil/Name/SwarmHostSpawnLocusts2=Spawn Lurklings
 Abil/Name/TornadoMissile2=Crocodile Rockets
 Abil/Name/TornadoMissile3=Throw Molotov
@@ -64,6 +65,7 @@ Button/Name/MeleeTrooper=Train Melee Trooper
 Button/Name/NovaXanthosToggleRepairModeOn=Self Repair
 Button/Name/Predator=Manufacture Predator
 Button/Name/Raven=Calldown Raven
+Button/Name/Servitors2=Lurklings
 Button/Name/SiegeTank=Manufacture Siege Tank
 Button/Name/SlivanPuke=Acid Swamp
 Button/Name/StrikeTrooper=Train Strike Trooper
@@ -114,6 +116,9 @@ Button/Tooltip/Hellion222=Experimental hovering vehicle that utilize Ultra-Sonic
 Button/Tooltip/Hellion2222=Heavy mobile artillery. Deal high damage on a long distance.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Hellion22222=Heavy Dominion Walker<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Hellion222222=Mobile light armored tank. Attacks with chained lightning, that hits multiple targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Hydralisk2=Ranged attacker. Can morph into a Lurker.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/Hydralisk3=Ranged attacker. Can morph into a Lurker.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/Hydralisk4=Ranged attacker. Can morph into a Lurker.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/KorhalPalaceTurret2=Extremely powerful turrets that cannot be attacked. Breaking down the Palace Gate is the only way to victory.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/KorhalPalaceTurret3=Extremely powerful turrets that cannot be attacked. Breaking down the Palace Gate is the only way to victory.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/LeadFarmer=Commando's Chaingun deals splash damage in a small area around the target.
@@ -188,6 +193,7 @@ Effect/Name/AlarakDeadlyChargeDamageReadyApply2=Supplicant Deadly Charge Damage 
 Effect/Name/AlarakDeadlyChargeDamageRemove2=Supplicant Deadly Charge Damage Remove
 Effect/Name/AlarakDeadlyChargeFinalSet2=Supplicant Deadly Charge Final Set
 Effect/Name/AlarakDeadlyChargeSearch2=Supplicant Deadly Charge Search
+Effect/Name/AllPurposeLaserBattery2Search2=Medusa AoE
 Effect/Name/AllyAggressiveModeApply=AllyAggressiveModeApply
 Effect/Name/AllyAggressiveModeApply2=AllyDefensiveModeApply
 Effect/Name/AllyAggressiveModeRemove=AllyAggressiveModeRemove
@@ -234,7 +240,8 @@ Effect/Name/HotSZerglingClaws22=Chargeling Claws Set
 Effect/Name/HotSZerglingClaws222=Devouring One Claws Set
 Effect/Name/HowitzerPersistent=Howitzer Persistent
 Effect/Name/JavelinMissileLaunchersPersistent2=Anti Air (Persistent)
-Effect/Name/JavelinMissileLaunchersPersistent22=Anti Air (Persistent)
+Effect/Name/JavelinMissileLaunchersPersistent22=Quad Attack (Persistent)
+Effect/Name/JavelinMissileLaunchersPersistent23=Needle Attack (Persistent)
 Effect/Name/KorhalPalaceGateDamage2=Mortar AA Attack
 Effect/Name/KorhalPalaceGateDamage3=Flak Turret
 Effect/Name/LiberatorDamageMissileLM2=Valkyrie Damage Missile LM
@@ -263,6 +270,18 @@ Effect/Name/LurkerMPSearch=Ultra-Sonic
 Effect/Name/LurklingApplyDecloak=Lurkling Apply Decloak
 Effect/Name/LurklingClawsSet=Lurkling Claws Set
 Effect/Name/MakePrecursorLocust2=Make Precursor Locust
+Effect/Name/MedusaSet=Medusa Set
+Effect/Name/NeedleSpinesDamage2=Needle Spines
+Effect/Name/NeedleSpinesDamage3=Needle Spines
+Effect/Name/NeedleSpinesDamage4=Needle Spines
+Effect/Name/NeedleSpinesDamage42=Needle Spines Multishot
+Effect/Name/NeedleSpinesDamage5=Needle Spines
+Effect/Name/NeedleSpinesImpactSet2=Needle Spines Impact Set
+Effect/Name/NeedleSpinesLaunchMissile2=Needle Spines
+Effect/Name/NeedleSpinesLaunchMissile3=Needle Spines
+Effect/Name/NeedleSpinesLaunchMissile4=Needle Spines
+Effect/Name/NeedleSpinesLaunchMissile42=Needle Spines Multishot
+Effect/Name/NeedleSpinesLaunchMissile5=Needle Spines
 Effect/Name/ParticleDisruptors2=Entropy Lance (LM)
 Effect/Name/ParticleDisruptorsU2=Entropy Lance (Damage)
 Effect/Name/Predator2=Melee Trooper
@@ -369,6 +388,11 @@ Unit/Name/HotSRaptor=Raptorling
 Unit/Name/HotSSplitterlingBig=Splitterling
 Unit/Name/HotSSplitterlingMedium=Bombling
 Unit/Name/HotSSwarmling=Swarmling
+Unit/Name/Hydralisk2=Medusalisk
+Unit/Name/Hydralisk3=Lurklisk
+Unit/Name/Hydralisk4=Psyolisk
+Unit/Name/HydraliskImpaler=Impalisk
+Unit/Name/HydraliskLurker=Cobra
 Unit/Name/KorhalPalaceTurret=Heavy Shreder Turret
 Unit/Name/KorhalPalaceTurret2=Mortar Pit
 Unit/Name/KorhalPalaceTurret3=Flak Turret
@@ -477,7 +501,12 @@ Weapon/Name/KorhalPalaceGate2=Anti-Air Munition
 Weapon/Name/KorhalPalaceGate22=Earth Shatter Munition
 Weapon/Name/KorhalPalaceGate3=Korhal Palace Gate
 Weapon/Name/LiberatorMissileLaunchers2=H.A.L.O. Rockets
+Weapon/Name/LocustFlyingLaunch=Locust Spawn 1
 Weapon/Name/LongboltMissile2=Longbolt Missile
+Weapon/Name/NeedleSpines2=Needle Spines
+Weapon/Name/NeedleSpines3=Needle Spines
+Weapon/Name/NeedleSpines4=Needle Spines
+Weapon/Name/NeedleSpines5=Needle Spines
 Weapon/Name/ParticleDisruptors2=Particle Disruptors
 Weapon/Name/PsiBlades2=Blood Blades
 Weapon/Name/PunisherGrenades2=Diplomacy Grenades
@@ -514,6 +543,7 @@ Weapon/Tip/LocustLaunch2=<c val="#ColorAttackInfo">Must be rooted or burrowed to
 Weapon/Tip/MengskReaperD8Charge=Only used against structure
 Weapon/Tip/MercReaperD8Charge=Only used against non-light targets
 Weapon/Tip/MercReaperP38ScytheGuassPistol=Only used against light targets
+Weapon/Tip/NeedleSpines4=Deal 50% to 2 additional targets
 Weapon/Tip/P38ScytheGuassPistol=Only used against light units
 Weapon/Tip/WarHound=Attack only Ground Targets
 Weapon/Tip/WarHound2=Attack only Air Targets

@@ -110,6 +110,10 @@
         <AlertIcon value="Assets\Textures\btn-units-dominion-shielder-icon.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="Servitors2">
+        <Icon value="Assets\Textures\btn-unit-zerg-lurkling-greeneyes-ds.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-lurkling-greeneyes-ds.dds"/>
+    </CButton>
     <CButton id="TankBusterTrooper">
         <Icon value="Assets\Textures\btn-unit-terran-troopermengskrocket.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-troopermengskrocket.dds"/>

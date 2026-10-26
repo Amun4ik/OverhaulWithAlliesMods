@@ -104,6 +104,110 @@
     <CModel id="Hunter">
         <Model value="Assets\Units\Zerg\Baneling_CollectionSkin_Webby\Baneling_CollectionSkin_Webby.m3"/>
     </CModel>
+    <CModel id="HunterKiller">
+        <Model value="Assets\Units\Zerg\Hydralisk_Remastered\Hydralisk_Remastered.m3"/>
+    </CModel>
+    <CModel id="HunterKillerAttackLaunch">
+        <Model value="Assets\Effects\Zerg\HydraliskWeaponSCBW\HydraliskWeaponSCBW@Launch.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
+    <CModel id="HunterKillerWeapon">
+        <Model value="Assets\Effects\Zerg\Dakrun_ThornSpike_Missile\Dakrun_ThornSpike_Missile.m3"/>
+    </CModel>
+    <CModel id="Hydralisk2" parent="HydraliskBase">
+        <Model value="Assets\Zerg\Hydralisk_PremiumSkin_Noxious_TC.m3"/>
+    </CModel>
+    <CModel id="Hydralisk3" parent="HydraliskBase">
+        <Model value="Assets\Zerg\Hydralisk_IzshaBrood.m3"/>
+    </CModel>
+    <CModel id="Hydralisk4" parent="HydraliskBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection\Hydralisk_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="HydraliskAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\MutaliskMissileImpact\MutaliskMissileImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.660000,0.660000,0.660000"/>
+        <ScaleMin value="0.660000,0.660000,0.660000"/>
+    </CModel>
+    <CModel id="HydraliskAttackImpact3" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\MutaliskMissileImpact\MutaliskMissileImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.660000,0.660000,0.660000"/>
+        <ScaleMin value="0.660000,0.660000,0.660000"/>
+    </CModel>
+    <CModel id="HydraliskAttackImpact4" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\MutaliskMissileImpact\MutaliskMissileImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.660000,0.660000,0.660000"/>
+        <ScaleMin value="0.660000,0.660000,0.660000"/>
+    </CModel>
+    <CModel id="HydraliskAttackImpact5" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\MutaliskMissileImpact\MutaliskMissileImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.660000,0.660000,0.660000"/>
+        <ScaleMin value="0.660000,0.660000,0.660000"/>
+    </CModel>
+    <CModel id="HydraliskDeath2" parent="HydraliskDeathBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_PremiumSkin_Noxious_Death\Hydralisk_PremiumSkin_Noxious_Death.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeath3" parent="HydraliskDeathBase">
+        <Model value="Assets\Units\Zerg\HydraliskDeathEx1\HydraliskDeathEx1.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeath4" parent="HydraliskDeathBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection_Death\Hydralisk_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathAcid2" parent="HydraliskDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_PremiumSkin_Noxious_DeathAcid\Hydralisk_PremiumSkin_Noxious_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathAcid3" parent="HydraliskDeathAcidBase">
+        <Model value="Assets\Units\Zerg\HydraliskDeathAcid\HydraliskDeathAcid.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathAcid4" parent="HydraliskDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection_DeathAcid\Hydralisk_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathFire2" parent="HydraliskDeathFireBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_PremiumSkin_Noxious_DeathFire\Hydralisk_PremiumSkin_Noxious_DeathFire.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathFire3" parent="HydraliskDeathFireBase">
+        <Model value="Assets\Units\Zerg\HydraliskDeathFire\HydraliskDeathFire.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathFire4" parent="HydraliskDeathFireBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection_DeathFire\Hydralisk_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathRagdoll2" parent="HydraliskDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_PremiumSkin_Noxious_DeathRagdoll\Hydralisk_PremiumSkin_Noxious_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathRagdoll3" parent="HydraliskDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\HydraliskDeathRagdoll\HydraliskDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="HydraliskDeathRagdoll4" parent="HydraliskDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection_DeathRagdoll\Hydralisk_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="HydraliskLurker">
+        <Model value="Assets\Units\Zerg\Hydralisk_Collection_Webby\Hydralisk_Collection_Webby.m3"/>
+    </CModel>
+    <CModel id="HydraliskLurkerDeath">
+        <Model value="Assets\Units\Zerg\Hydralisk_Collection_Webby_Death\Hydralisk_Collection_Webby_Death.m3"/>
+    </CModel>
+    <CModel id="HydraliskLurkerPortrait">
+        <Model value="Assets\Portraits\Zerg\Hydralisk_Webby_Collection_Portrait\Hydralisk_Webby_Collection_Portrait.m3"/>
+    </CModel>
+    <CModel id="HydraliskPortrait2" parent="HydraliskPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Hydralisk_PremiumSkin_Noxious_Portrait\Hydralisk_PremiumSkin_Noxious_Portrait.m3"/>
+        <Image value="Assets\Textures\HydraliskPortrait_Static.dds"/>
+        <Lighting value="HydraliskPortrait"/>
+    </CModel>
+    <CModel id="HydraliskPortrait3" parent="HydraliskPortraitBase">
+        <Model value="Assets\Zerg\Hydralisk_IzshaBrood_Portrait.m3"/>
+        <Image value="Assets\Textures\HydraliskPortrait_Static.dds"/>
+        <Lighting value="HydraliskPortrait"/>
+    </CModel>
+    <CModel id="HydraliskPortrait4" parent="HydraliskPortraitBase">
+        <Model value="Assets\Portraits\Zerg\HydraliskPortrait\HydraliskPortrait.m3"/>
+        <Image value="Assets\Textures\HydraliskPortrait_Static.dds"/>
+        <Lighting value="HydraliskPortrait"/>
+    </CModel>
     <CModel id="KorhalPalaceGateAttackImpact3" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\OdinShoulderMissileImpact\OdinShoulderMissileImpact.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -151,6 +255,9 @@
         <Image value="Assets\Textures\Valkyrie_UED_Portrait_static.dds"/>
         <Lighting value="PortraitLiberatorEx2"/>
     </CModel>
+    <CModel id="LocustAttackImpact">
+        <Model value="Assets\Effects\Zerg\SporeColonyMissileImpact\SporeColonyMissileImpact.m3"/>
+    </CModel>
     <CModel id="LocustFlying">
         <Model value="Assets\Units\Zerg\SwarmHostSpawnFlyer_Primal_Collection\SwarmHostSpawnFlyer_Primal_Collection.m3"/>
     </CModel>
@@ -189,6 +296,7 @@
     <CModel id="LocustWeapon">
         <ScaleMax value="1.200000,1.200000,1.200000"/>
         <ScaleMin value="1.200000,1.200000,1.200000"/>
+        <Model value="Assets\Effects\Zerg\SporeColonyMissile\SporeColonyMissile.m3"/>
     </CModel>
     <CModel id="Locust_CollectionSkin_Webby">
         <ScaleMax value="1.250000,1.250000,1.250000"/>
@@ -262,6 +370,22 @@
     </CModel>
     <CModel id="MitosaurusC">
         <Model value="Assets\Zerg\MitoscarabRavager.m3"/>
+    </CModel>
+    <CModel id="NeedleSpinesWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="NeedleSpinesWeapon3" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="NeedleSpinesWeapon4" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\CorruptorMissile\CorruptorMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="NeedleSpinesWeapon5" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="PlanetaryFortressAttackImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\PlanetaryFortressMissileImpact\PlanetaryFortressMissileImpact.m3"/>
@@ -378,6 +502,10 @@
     </CModel>
     <CModel id="Ravasaur">
         <Model value="Assets\Zerg\RavasaurInfestor.m3"/>
+    </CModel>
+    <CModel id="RavasaurAttackImpact">
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
     </CModel>
     <CModel id="RavasaurAttackImpact2" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Zerg\Ravager_Artillery_Missile_Impact_Upgrade\Ravager_Artillery_Missile_Impact_Upgrade.m3"/>

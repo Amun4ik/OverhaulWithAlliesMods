@@ -176,7 +176,7 @@
     <CBehaviorBuff id="SuppressCloak2">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value=""/>
-        <Duration value="0.5"/>
+        <Duration value="0.6"/>
         <Modification>
             <StateFlags index="SuppressCloak" value="1"/>
         </Modification>

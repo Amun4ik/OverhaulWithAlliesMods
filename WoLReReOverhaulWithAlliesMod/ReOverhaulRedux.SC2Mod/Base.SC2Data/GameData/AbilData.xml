@@ -328,17 +328,43 @@
     <CAbilEffectInstant id="ImmortalOverload">
         <AutoCastValidatorArray index="0" value="CasterLifeNotFull"/>
     </CAbilEffectInstant>
+    <CAbilEffectTarget id="Impale">
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Range index="0" value="7"/>
+        <AutoCastRange value="7"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="LocustLaunch">
         <Cost index="0">
-            <Charge>
-                <CountMax value="3"/>
-                <CountStart value="1"/>
-                <CountUse value="1"/>
-                <TimeUse value="20"/>
-            </Charge>
-            <Cooldown TimeUse="2"/>
+            <Cooldown TimeUse="20"/>
         </Cost>
     </CAbilEffectTarget>
+    <CAbilArmMagazine id="MakeServitors2">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Launch value="ReleaseAtSource"/>
+        <Flags index="AutoCreate" value="1"/>
+        <Flags index="Retarget" value="1"/>
+        <Leash value="7"/>
+        <InfoArray index="Ammo1" Time="60" CountStart="1" Manage="Recall" Unit="Swarmling">
+            <Charge HideCount="1" Link="KaraxMicroBotActivated" Location="Unit"/>
+            <Cooldown Link="Abil/##id##"/>
+            <Button DefaultButtonFace="Servitors2">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Flags index="AutoBuild" value="1"/>
+            <Flags index="AutoBuildOn" value="1"/>
+            <Flags index="External" value="1"/>
+        </InfoArray>
+        <ExternalAngle value="0"/>
+        <ExternalAngle value="45"/>
+        <ExternalAngle value="90"/>
+        <ExternalAngle value="135"/>
+        <ExternalAngle value="180"/>
+        <ExternalAngle value="225"/>
+        <ExternalAngle value="270"/>
+        <ExternalAngle value="315"/>
+        <MaxCount value="1"/>
+    </CAbilArmMagazine>
     <CAbilEffectTarget id="MercMedicHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
