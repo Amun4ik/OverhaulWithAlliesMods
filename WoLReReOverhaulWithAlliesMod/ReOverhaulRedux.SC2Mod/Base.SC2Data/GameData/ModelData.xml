@@ -4,6 +4,14 @@
         <Model value="Assets\Effects\Zerg\Dehaka_Coop_ThornSpike_Missile\Dehaka_Coop_ThornSpike_Missile.m3"/>
         <EditorCategories value="Race:Zerg"/>
     </CModel>
+    <CModel id="AcidSporesMissile2" parent="Unit" Race="Zerg">
+        <Model value="Assets\Effects\Zerg\PrimalGuardianMissile\PrimalGuardianMissile.m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.250000"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+        <SquibTypeDefault value="Flesh"/>
+    </CModel>
     <CModel id="Armory2" parent="ArmoryBase">
         <Model value="Assets\Buildings\Terran\AcademySCBW\AcademySCBW.m3"/>
     </CModel>
@@ -78,6 +86,10 @@
     </CModel>
     <CModel id="FlamingBetty">
         <Model value="Assets\Terran\Terran_SonicEmitter.m3"/>
+    </CModel>
+    <CModel id="GuardianAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\PrimalGuardianMissileImpact\PrimalGuardianMissileImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="HellionTankAttackFireAddition2" parent="ImpactFX">
         <Model value="Assets\Effects\Zerg\Primal_Roach_Coop_FireBreath_Impact\Primal_Roach_Coop_FireBreath_Impact.m3"/>
@@ -208,6 +220,36 @@
         <Image value="Assets\Textures\HydraliskPortrait_Static.dds"/>
         <Lighting value="HydraliskPortrait"/>
     </CModel>
+    <CModel id="Impaler">
+        <Model value="Assets\Units\Zerg\Lurker_CollectionSkin_Webby\Lurker_CollectionSkin_Webby.m3"/>
+    </CModel>
+    <CModel id="ImpalerDeath">
+        <Model value="Assets\Units\Zerg\Lurker_CollectionSkin_Webby_Death\Lurker_CollectionSkin_Webby_Death_00.m3"/>
+    </CModel>
+    <CModel id="ImpalerDeathAcid">
+        <Model value="Assets\Units\Zerg\Lurker_CollectionSkin_Webby_Death_Acid\Lurker_CollectionSkin_Webby_Death_Acid.m3"/>
+    </CModel>
+    <CModel id="ImpalerDeathFire">
+        <Model value="Assets\Units\Zerg\Lurker_CollectionSkin_Webby_Death_Fire\Lurker_CollectionSkin_Webby_Death_Fire.m3"/>
+    </CModel>
+    <CModel id="Infestor">
+        <Model value="Assets\Units\Zerg\Infestor_CollectionSkin_Webby\Infestor_CollectionSkin_Webby.m3"/>
+    </CModel>
+    <CModel id="InfestorDeath">
+        <Model value="Assets\Units\Zerg\Infestor_CollectionSkin_Webby_Death\Infestor_CollectionSkin_Webby_Death.m3"/>
+    </CModel>
+    <CModel id="InfestorDeathAcid">
+        <Model value="Assets\Units\Zerg\Infestor_CollectionSkin_Webby_DeathAcid\Infestor_CollectionSkin_Webby_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="InfestorDeathFire">
+        <Model value="Assets\Units\Zerg\Infestor_CollectionSkin_Webby_DeathFire\Infestor_CollectionSkin_Webby_DeathFire.m3"/>
+    </CModel>
+    <CModel id="InfestorDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Infestor_CollectionSkin_Webby_DeathRagdoll\Infestor_CollectionSkin_Webby_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="InfestorPortrait">
+        <Model value="Assets\Portraits\Zerg\Infestor_Webby_Collection_Portrait\Infestor_Webby_Collection_Portrait.m3"/>
+    </CModel>
     <CModel id="KorhalPalaceGateAttackImpact3" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\OdinShoulderMissileImpact\OdinShoulderMissileImpact.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -302,6 +344,21 @@
         <ScaleMax value="1.250000,1.250000,1.250000"/>
         <ScaleMin value="1.250000,1.250000,1.250000"/>
     </CModel>
+    <CModel id="Lurker">
+        <Model value="Assets\Units\Zerg\LurkerSCBW\LurkerSCBW.m3"/>
+    </CModel>
+    <CModel id="LurkerDeath">
+        <Model value="Assets\Units\Zerg\LurkerSCBW\LurkerSCBW@Death.m3"/>
+    </CModel>
+    <CModel id="LurkerDeathAcid">
+        <Model value="Assets\Units\Zerg\LurkerSCBW\LurkerSCBW@DeathAcid.m3"/>
+    </CModel>
+    <CModel id="LurkerDeathFire">
+        <Model value="Assets\Units\Zerg\LurkerSCBW\LurkerSCBW@DeathFire.m3"/>
+    </CModel>
+    <CModel id="LurkerEx1APortrait">
+        <Model value="Assets\Portraits\Zerg\Lurker_Webby_Collection_Portrait\Lurker_Webby_Collection_Portrait.m3"/>
+    </CModel>
     <CModel id="LurkerMP">
         <Model value="Assets\Zerg\Lurker_IzshaBrood.m3"/>
     </CModel>
@@ -365,11 +422,23 @@
     <CModel id="Mitosaurus">
         <Model value="Assets\Zerg\MitoscarabRavager.m3"/>
     </CModel>
+    <CModel id="MitosaurusASplitWeapon">
+        <ScaleMax value="4.000000,4.000000,4.000000"/>
+        <ScaleMin value="4.000000,4.000000,4.000000"/>
+    </CModel>
     <CModel id="MitosaurusB">
         <Model value="Assets\Zerg\MitoscarabRavager.m3"/>
     </CModel>
+    <CModel id="MitosaurusBSplitWeapon">
+        <ScaleMax value="2.100000,2.100000,2.100000"/>
+        <ScaleMin value="2.100000,2.100000,2.100000"/>
+    </CModel>
     <CModel id="MitosaurusC">
         <Model value="Assets\Zerg\MitoscarabRavager.m3"/>
+    </CModel>
+    <CModel id="MitosaurusCWeapon">
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
     </CModel>
     <CModel id="NeedleSpinesWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>

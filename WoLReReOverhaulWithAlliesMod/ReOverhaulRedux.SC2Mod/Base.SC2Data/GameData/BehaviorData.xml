@@ -167,6 +167,13 @@
         <PeriodCount value="1"/>
         <PeriodicEffect value="RichGeyserExhausted"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ScantipedeParasitic">
+        <MaxStackCount value="5"/>
+        <Duration value="30"/>
+        <Modification>
+            <LifeArmorBonus value="-1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SelfRepair">
         <Duration value="30"/>
         <Modification>
@@ -204,13 +211,18 @@
     <CBehaviorBuff id="SwarmQueenRegenAuraTarget22">
         <InfoIcon value="Assets\Textures\talent-raynor-level14-infantryattackspeed.dds"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
-        <Duration value="1"/>
-        <Modification AttackSpeedMultiplier="1.1"/>
+        <Duration value="1.1"/>
+        <Modification AttackSpeedMultiplier="1.2"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="VoodooShield">
         <Duration value="20"/>
         <Modification>
             <VitalMaxArray index="Shields" value="100"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WildMutation">
+        <Modification AttackSpeedMultiplier="1.25">
+            <VitalMaxArray index="Shields" value="50"/>
         </Modification>
     </CBehaviorBuff>
 </Catalog>

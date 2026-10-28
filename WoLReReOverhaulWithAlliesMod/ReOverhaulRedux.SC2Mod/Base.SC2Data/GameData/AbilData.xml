@@ -199,6 +199,10 @@
             <Flags index="AllowMinimap" value="0"/>
         </CmdButtonArray>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="DehakaHeal">
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="DeploySpiderMines">
         <Cost index="0">
             <Charge CountMax="0" CountStart="0" CountUse="0"/>
@@ -365,6 +369,9 @@
         <ExternalAngle value="315"/>
         <MaxCount value="1"/>
     </CAbilArmMagazine>
+    <CAbilMorph id="MediumTastyCorpse">
+        <InfoArray index="0" Unit=""/>
+    </CAbilMorph>
     <CAbilEffectTarget id="MercMedicHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
@@ -451,7 +458,7 @@
     <CAbilEffectTarget id="PsiStrike">
         <Cost index="0">
             <Vital index="Energy" value="0"/>
-            <Cooldown TimeUse="30"/>
+            <Cooldown TimeUse="10"/>
         </Cost>
         <CmdButtonArray index="Execute" Requirements=""/>
         <Flags index="AutoCast" value="1"/>
@@ -643,6 +650,9 @@
     <CAbilEffectTarget id="WidowMineAttack">
         <Range index="0" value="6"/>
         <AutoCastRange value="6"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="WildMutation">
+        <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectTarget>
     <!-- Battlecruiser No Energy -->
     <CAbilEffectTarget id="Yamato">

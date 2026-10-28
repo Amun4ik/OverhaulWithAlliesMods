@@ -23,6 +23,9 @@
         <Period value="2.5"/>
         <Effect value="AcidSalivaLM2"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="BabyUltralisk">
+        <Range value="0.2"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="BacklashRockets2">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
@@ -54,6 +57,17 @@
         <Effect value="TornadoMissileLM"/>
         <LegacyOptions index="KeepChanneling" value="1"/>
         <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BlightbringerVileStream">
+        <Options index="Hidden" value="0"/>
+        <Options index="Melee" value="1"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <DisplayEffect value="NovaAcidPuddleSlowDamage"/>
+        <AcquireScanFilters value="-;-"/>
+        <Range value="8"/>
+        <MinimumRange value="4"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Claws2">
         <EditorCategories value="Race:Zerg"/>
@@ -111,6 +125,10 @@
         <Period value="1.4"/>
         <Effect value="JavelinMissileLaunchersPersistent23"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Impaler">
+        <Range value="13"/>
+        <Period value="2.25"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="InfestedAbomination">
         <Period value="1"/>
     </CWeaponLegacy>
@@ -153,7 +171,7 @@
         <Options index="Disabled" value="0"/>
         <Options index="Hidden" value="0"/>
         <Options index="RequireEnabledAttackAbil" value="0"/>
-        <TargetFilters value="Air,Visible;Ground,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <!--Options index="IgnoreThreat" value="1"/-->
     </CWeaponLegacy>
     <CWeaponLegacy id="LocustLaunch">
@@ -168,8 +186,26 @@
     <CWeaponLegacy id="LocustMPMelee">
         <Period value="0.6"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Lurker">
+        <Range value="10"/>
+        <Period value="2"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="LurkerMP">
         <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Mitosaurus">
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="1.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MitosaurusB">
+        <MinScanRange value="6"/>
+        <Period value="1.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MitosaurusC">
+        <MinScanRange value="15"/>
+        <Range value="4"/>
+        <Period value="0.75"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="NeedleSpines">
         <Period value="0.71"/>
@@ -215,6 +251,17 @@
         <Period value="1"/>
         <DamagePoint value="0.208"/>
         <Effect value="NeedleSpinesLaunchMissile5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="NeedleSpines6">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <DisplayEffect value="AcidSporesDamage2"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="2.7"/>
+        <DamagePoint value="0.208"/>
+        <Effect value="AcidSporesLaunchMissile2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ParticleDisruptors2">
         <EditorCategories value="Race:Protoss"/>
@@ -263,6 +310,7 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="Ravasaur">
         <Range value="11"/>
+        <Period value="2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RoachCorpserAcidSaliva">
         <Range value="3"/>
@@ -295,6 +343,12 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="RoachVileMelee">
         <Period value="1.2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ScantipedeParasitic">
+        <MinScanRange value="6"/>
+        <Range value="6"/>
+        <Period value="2.6"/>
+        <Effect value="MedusaSet2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Separatist">
         <Period value="0.7607"/>
@@ -339,6 +393,17 @@
         <DamagePoint value="0.05"/>
         <Backswing value="0.75"/>
         <Effect value="Predator2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SpaceCowMedium">
+        <DisplayEffect value="InfestedGuassRifle"/>
+        <Range value="9"/>
+        <MinimumRange value="0"/>
+        <Period value="2"/>
+        <Effect value="InfestedTerransCreateEgg"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SpaceCowSmallMelee">
+        <Options index="Hidden" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SupplicantWeapon">
         <EditorCategories value="Race:Protoss"/>
@@ -718,7 +783,7 @@
     <CWeaponLegacy id="LanceMissileLaunchers">
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="10"/>
-        <Period value="1.5"/>
+        <Period value="0.45"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="LanzerTorpedoes">
         <DisplayAttackCount value="4"/>

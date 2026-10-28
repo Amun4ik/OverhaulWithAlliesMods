@@ -24,6 +24,16 @@
         <Amount value="20"/>
         <Death value="Disintegrate"/>
     </CEffectDamage>
+    <CEffectDamage id="AcidSporesDamage2" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Zerg"/>
+        <Visibility value="Visible"/>
+        <Amount value="6"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="AcidSporesLaunchMissile2">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="HotSZerglingClaws2222"/>
+        <AmmoUnit value="AcidSporesMissile2"/>
+    </CEffectLaunchMissile>
     <CEffectApplyBehavior id="AlarakStalkerPhasingArmorBuffApply">
         <EditorCategories value=""/>
         <WhichUnit Value="Caster"/>
@@ -34,7 +44,19 @@
         <ExcludeArray Value="Target"/>
         <SearchFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray MaxCount="2" Radius="2" Effect="NeedleSpinesLaunchMissile42"/>
-        <MaxCount value="3"/>
+        <MaxCount value="5"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="AllPurposeLaserBattery2Search22">
+        <EditorCategories value="Race:Terran"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray MaxCount="4" Radius="2" Effect="ScantipedeParasiticSmallLM"/>
+        <MaxCount value="5"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="AllPurposeLaserBattery2Search23">
+        <EditorCategories value="Race:Terran"/>
+        <SearchFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="2.5" Effect="DevastatingShotAB"/>
     </CEffectEnumArea>
     <CEffectDamage id="BabyUltralisk">
         <AttributeFactor index="Armored" value="0.5"/>
@@ -85,6 +107,9 @@
         <ArmorReduction value="0"/>
         <Amount value="10"/>
     </CEffectDamage>
+    <CEffectCreateUnit id="CreateNovaAcidPuddle">
+        <ValidatorArray index="0" removed="1"/>
+    </CEffectCreateUnit>
     <CEffectApplyBehavior id="DOMGhostPersonalDefensiveMatrix2">
         <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
@@ -109,9 +134,28 @@
     <CEffectEnumArea id="DefilerMPPlagueSearch">
         <AreaArray index="0" Radius="2.5"/>
     </CEffectEnumArea>
+    <CEffectModifyUnit id="DehakaHealBig">
+        <VitalArray index="Life">
+            <Change value="50"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectEnumArea id="DehakaHealSearch">
+        <AreaArray index="0" Radius="6"/>
+    </CEffectEnumArea>
+    <CEffectModifyUnit id="DehakaHealSmall">
+        <VitalArray index="Life">
+            <Change value="25"/>
+        </VitalArray>
+    </CEffectModifyUnit>
     <CEffectDamage id="DevastatingShotDamage">
         <Amount value="50"/>
     </CEffectDamage>
+    <CEffectDamage id="FungalGrowthDamage">
+        <Amount value="1"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="FungalGrowthSearch">
+        <AreaArray index="0" Radius="3"/>
+    </CEffectEnumArea>
     <CEffectCreatePersistent id="GoliathA22">
         <ValidatorArray value="CasterIsNotHidden"/>
         <EditorCategories value="Race:Terran"/>
@@ -241,6 +285,11 @@
         <EffectArray value="ZerglingRangeReapply"/>
         <EffectArray value="Claws222"/>
     </CEffectSet>
+    <CEffectSet id="HotSZerglingClaws2222">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="AllPurposeLaserBattery2Search23"/>
+        <EffectArray value="AcidSporesDamage2"/>
+    </CEffectSet>
     <CEffectDamage id="HunterKillerU">
         <ArmorReduction value="0.5"/>
         <Amount value="15"/>
@@ -262,9 +311,17 @@
         <EffectArray index="0" value="HydraliskMelee"/>
         <EffectArray index="1" removed="1"/>
     </CEffectSet>
+    <CEffectDamage id="ImpalerDamage">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeFactor index="Armored" value="1"/>
+        <Amount value="30"/>
+    </CEffectDamage>
     <CEffectDamage id="InfestedAbomination">
         <AttributeBonus index="Armored" value="0"/>
         <AttributeFactor index="Armored" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="InfestedGuassRifle">
+        <Amount value="6"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="JavelinMissileLaunchersPersistent2">
         <EditorCategories value="Race:Terran"/>
@@ -436,6 +493,20 @@
         <SpawnUnit index="0" value="LocustMP"/>
         <SpawnUnit value="LocustMP"/>
     </CEffectCreateUnit>
+    <CEffectCreatePersistent id="Lurker">
+        <PeriodCount value="13"/>
+        <PeriodicOffsetArray value="0,-8,0"/>
+        <PeriodicOffsetArray value="0,-9,0"/>
+        <PeriodicOffsetArray value="0,-10,0"/>
+        <PeriodicOffsetArray value="0,-11,0"/>
+        <PeriodicOffsetArray value="0,-12,0"/>
+        <PeriodicOffsetArray value="0,-13,0"/>
+        <PeriodicPeriodArray index="0" value="0.0424"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="LurkerU">
+        <AttributeBonus index="Light" value="0"/>
+        <Amount value="30"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="LurklingApplyDecloak">
         <EditorCategories value=""/>
         <WhichUnit Value="Caster"/>
@@ -454,6 +525,32 @@
         <EffectArray value="NeedleSpinesLaunchMissile4"/>
         <EffectArray value="AllPurposeLaserBattery2Search2"/>
     </CEffectSet>
+    <CEffectSet id="MedusaSet2">
+        <EditorCategories value=""/>
+        <EffectArray value="ScantipedeParasiticLM"/>
+        <EffectArray value="AllPurposeLaserBattery2Search22"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="MitosaurusASplit">
+        <PeriodCount value="3"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="MitosaurusBDamage">
+        <AttributeFactor index="Armored" value="1"/>
+        <AttributeFactor index="Massive" value="1"/>
+        <Amount value="12"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="MitosaurusBSplit">
+        <PeriodCount value="3"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="MitosaurusCDamage">
+        <AttributeFactor index="Armored" value="1"/>
+        <AttributeFactor index="Massive" value="1"/>
+        <Amount value="6"/>
+    </CEffectDamage>
+    <CEffectDamage id="MitosaurusDamage">
+        <AttributeFactor index="Armored" value="1"/>
+        <AttributeFactor index="Massive" value="1"/>
+        <Amount value="24"/>
+    </CEffectDamage>
     <CEffectDamage id="NeedleClaws">
         <ArmorReduction value="0.5"/>
     </CEffectDamage>
@@ -519,6 +616,10 @@
         <ImpactEffect value="NeedleSpinesDamage5"/>
         <AmmoUnit value="NeedleSpinesWeapon5"/>
     </CEffectLaunchMissile>
+    <CEffectDamage id="NovaAcidPuddleSlowDamage">
+        <AttributeBonus index="Massive" value="0"/>
+        <Amount value="4"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="ParalyticSpines">
         <ValidatorArray index="0" value="TargetIsNotUnstoppable"/>
         <ValidatorArray index="1" removed="1"/>
@@ -544,7 +645,7 @@
         <Death value="Eviscerate"/>
     </CEffectDamage>
     <CEffectDamage id="PsiStrikeDamage">
-        <Amount value="20"/>
+        <Amount value="10"/>
         <!--ValidatorArray value="noMarkers"/-->
     </CEffectDamage>
     <CEffectDamage id="PukePuddleDamage">
@@ -645,6 +746,15 @@
     <CEffectDamage id="RoachlingNeedleClawsDamage">
         <Amount value="4"/>
     </CEffectDamage>
+    <CEffectCreateUnit id="ScantipedeParasiticCU">
+        <SpawnCount value="1"/>
+    </CEffectCreateUnit>
+    <CEffectDamage id="ScantipedeParasiticDamage">
+        <Amount value="36"/>
+    </CEffectDamage>
+    <CEffectDamage id="ScantipedeParasiticSmallDamage">
+        <Amount value="12"/>
+    </CEffectDamage>
     <CEffectDamage id="Separatist2" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
@@ -660,6 +770,9 @@
         <InitialDelay value="0.4"/>
         <PeriodCount value="1"/>
     </CEffectCreatePersistent>
+    <CEffectDamage id="SpaceCowSmallDamage">
+        <Amount value="16"/>
+    </CEffectDamage>
     <CEffectEnumArea id="StalkerEntropyLanceSearch2">
         <ValidatorArray value="HaveVoidStalkerMultishot"/>
         <EditorCategories value=""/>
@@ -1187,7 +1300,7 @@
     <CEffectDamage id="LanceMissileLaunchersDamage">
         <AttributeBonus index="Massive" value="0"/>
         <AttributeFactor index="Massive" value="0.5"/>
-        <Amount value="30"/>
+        <Amount value="10"/>
         <AreaArray Radius="0.25" Fraction="1"/>
         <AreaArray Radius="0.5" Fraction="0.5"/>
         <AreaArray Radius="1" Fraction="0.25"/>
@@ -1544,7 +1657,7 @@
         <EditorCategories value="Race:Zerg"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="SwarmQueenRegenAuraTarget22">
-        <ValidatorArray index="0" value="LifeNotFull"/>
+        <ValidatorArray index="0" removed="1"/>
         <EditorCategories value="Race:Zerg"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="Swarmling">
@@ -1624,6 +1737,9 @@
         <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="OffsetByUnitRadius" value="0"/>
     </CEffectDamage>
+    <CEffectEnumArea id="WildMutationSearch">
+        <AreaArray index="0" Radius="3"/>
+    </CEffectEnumArea>
     <CEffectCreatePersistent id="WraithAG">
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnitOrPoint"/>

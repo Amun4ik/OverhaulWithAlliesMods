@@ -129,6 +129,9 @@ Button/Tooltip/Marine22=General-purpose infantry.<n/><n/><c val="#ColorAttackInf
 Button/Tooltip/Medivac2=Armored Air Transport. Suddenly Valkyrie hull without it's armament can be used as transport or logistic ship.
 Button/Tooltip/MeleeTrooper=Melee cheap infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground.</c>
 Button/Tooltip/MercReaper=Former Dominion Elite Reaper Corp. Strong and dangerous Raider. Can jump up and down cliffs.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Mitosaurus=A frenzyed Duelist. Has a decentralized nervous system allowing it to split into three smaller creatures upon death.
+Button/Tooltip/MitosaurusB=A frenzyed Duelist. Has a decentralized nervous system allowing it to split into three smaller creatures upon death.
+Button/Tooltip/MitosaurusC=A frenzyed Duelist.
 Button/Tooltip/NovaXanthosToggleRepairModeOn=Order vehicle crew to repair their vehicle. During this vehicle is vulnerable to enemy fire, which stops repair process. Crew unable to move or attack during repair time.
 Button/Tooltip/PickupGas100Text=<s val="Kicker_Gas">+75 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><n/><s val="Kicker_Gas">+25 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><s val="Kicker_Gas"> For Allies</s>
 Button/Tooltip/PickupMinerals100Text=<s val="Kicker_Minerals">+75 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/><n/><s val="Kicker_Minerals">+25 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/> <s val="Kicker_Minerals"> For Allies</s>
@@ -141,11 +144,13 @@ Button/Tooltip/RaynorCommando=Mysterious Field Captain of the Rebellion. Has a i
 Button/Tooltip/RenegadeMissileTurret=Experimental defense turret. Deal damage in a chain.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c><n/><c val="FFE303">Detector</c>
 Button/Tooltip/Roach2=Assault unit. Regenerates life quickly when burrowed. Can morph into a Ravager.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/Roach3=Assault unit. Regenerates life quickly when burrowed. Can morph into a Ravager.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/ScantipedeParasitic=Unfair Duelist. Infect units with parasites, that decreases target's armor. Can stack up to 5 parasite on each targets.<n/><n/>Attack ground and air targets
 Button/Tooltip/Separatist3=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Separatist4=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Separatist5=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SiegeTank3=Heavy tank. Can switch into Siege Mode to provide long-range artillery support.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
 Button/Tooltip/SlivanPuke=Doctor use acid acid missile onto the ground that damages and slows units in the area.
+Button/Tooltip/SpaceCowSmall=Zerg on field support. Can mend nearby zerg, and creates a toxic pool.
 Button/Tooltip/Stalker2=Ranged attack strider. Can use Blink.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/Stetmann=Jezik can heal and repair at lightning speed. Also can take control over weak minded enemy. <n/><n/><c val="#ColorAttackInfo">Has no attack.</c><n/>
 Button/Tooltip/StrikeTrooper=General-purpose infantry. Can use Defense Matrix.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -185,6 +190,8 @@ Effect/Name/ATSLaserBatteryU2=Heavy Laser Battery
 Effect/Name/AcidSalivaLM2=Needle Spines (Missile)
 Effect/Name/AcidSalivaSet2=Acid Saliva
 Effect/Name/AcidSalivaU2=Needle Spines
+Effect/Name/AcidSporesDamage2=Acid Spores
+Effect/Name/AcidSporesLaunchMissile2=Acid Spores
 Effect/Name/AlarakDeadlyCharge2=Supplicant Deadly Charge
 Effect/Name/AlarakDeadlyChargeAB2=Supplican tDeadly Charge AB
 Effect/Name/AlarakDeadlyChargeDamage2=Supplicant Deadly Charge Damage
@@ -194,6 +201,8 @@ Effect/Name/AlarakDeadlyChargeDamageRemove2=Supplicant Deadly Charge Damage Remo
 Effect/Name/AlarakDeadlyChargeFinalSet2=Supplicant Deadly Charge Final Set
 Effect/Name/AlarakDeadlyChargeSearch2=Supplicant Deadly Charge Search
 Effect/Name/AllPurposeLaserBattery2Search2=Medusa AoE
+Effect/Name/AllPurposeLaserBattery2Search22=Scantipede Multishot
+Effect/Name/AllPurposeLaserBattery2Search23=Defiler AoE Debuff
 Effect/Name/AllyAggressiveModeApply=AllyAggressiveModeApply
 Effect/Name/AllyAggressiveModeApply2=AllyDefensiveModeApply
 Effect/Name/AllyAggressiveModeRemove=AllyAggressiveModeRemove
@@ -238,7 +247,9 @@ Effect/Name/HellionTankSearch2=Igniter Search
 Effect/Name/HotSZerglingClaws2=Sunderling Claws Set
 Effect/Name/HotSZerglingClaws22=Chargeling Claws Set
 Effect/Name/HotSZerglingClaws222=Devouring One Claws Set
+Effect/Name/HotSZerglingClaws2222=Defiler Set
 Effect/Name/HowitzerPersistent=Howitzer Persistent
+Effect/Name/ImpalerDamage=Impaler Damage
 Effect/Name/JavelinMissileLaunchersPersistent2=Anti Air (Persistent)
 Effect/Name/JavelinMissileLaunchersPersistent22=Quad Attack (Persistent)
 Effect/Name/JavelinMissileLaunchersPersistent23=Needle Attack (Persistent)
@@ -271,6 +282,7 @@ Effect/Name/LurklingApplyDecloak=Lurkling Apply Decloak
 Effect/Name/LurklingClawsSet=Lurkling Claws Set
 Effect/Name/MakePrecursorLocust2=Make Precursor Locust
 Effect/Name/MedusaSet=Medusa Set
+Effect/Name/MedusaSet2=Scantipede Set
 Effect/Name/NeedleSpinesDamage2=Needle Spines
 Effect/Name/NeedleSpinesDamage3=Needle Spines
 Effect/Name/NeedleSpinesDamage4=Needle Spines
@@ -316,6 +328,7 @@ Effect/Name/SkyTankMissileBarrageDamage22=Mortar Missile Damage 3
 Effect/Name/SkyTankMissileBarrageDamage222=Mortar Missile Damage UI
 Effect/Name/SkyTankMissileBarrageLM=Mortar Missile
 Effect/Name/SkyTankMissileBarrageSearch=Mortar Missile Search
+Effect/Name/SpaceCowSmallDamage=Mendlisk Melee Damage
 Effect/Name/StalkerEntropyLanceSearch2=Stalker - Entropy Lance (Search)
 Effect/Name/StalkerEntropyLanceSearchSet2=Stalker - Entropy Lance (Impact Set)
 Effect/Name/StalkerEntropyLanceSecondaryDamage2=Entropy Lance Secondary Damage
@@ -336,7 +349,10 @@ Effect/Name/WarHound=War Hound Damage
 Effect/Name/WarHoundSet=War Hound Set
 Effect/Name/WraithAG=WraithAG (Persistent)
 Effect/Name/ZealotPsiBladesCleaveSet2=Supplicant Psi Blades (Cleave Set)
+Elite Zerg Strain=Elite Zerg Strain
+EliteZergStrain=
 MutatedStrain=Mutated Zerg Strain
+MutatedZergStrain=Mutated Zerg Strain
 Param/Expression/lib_7D432011_226087B8=~A~'s Supply
 Param/Expression/lib_7D432011_316909C0=~C~~A~/~B~
 Param/Expression/lib_7D432011_5B275374=~C~~A~/~B~
@@ -360,9 +376,12 @@ RequirementNode/Tooltip/And2589852481CountUnitArmory2CompleteOnlyOrCountUnitBarr
 RequirementNode/Tooltip/CountUnitSupplyDepot22CompleteOnly2589852481=Attached Tech Lab
 RequirementNode/Tooltip/CountUnitSupplyDepot2CompleteOnly2589852481=Attached Tech Lab
 RequirementNode/Tooltip/Or2589852481CountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnitCountUpgradeAdvancedMedicTrainingCompleteOnlyCountUpgradeDominionForcesCompleteOnly=Attached Tech Lab
+Unit/LifeArmorName/CritterGroundArmor=Zerg Ground Carapace
+Unit/LifeArmorName/ZergGroundArmor=Zerg Ground Carapace
 Unit/Name/ATSLaserBatteryLMWeapon2=ATS Laser Battery
 Unit/Name/Academy=Academy
 Unit/Name/AcidSalivaWeapon2=Acid Saliva
+Unit/Name/AcidSporesMissile2=Acid Spore
 Unit/Name/AlliedAIOrderPanel=Allies
 Unit/Name/Armory2=Armory
 Unit/Name/BacklashRocketsLMWeapon2=Backlash Rockets
@@ -393,6 +412,7 @@ Unit/Name/Hydralisk3=Lurklisk
 Unit/Name/Hydralisk4=Psyolisk
 Unit/Name/HydraliskImpaler=Impalisk
 Unit/Name/HydraliskLurker=Cobra
+Unit/Name/InfestorTerran=Infested Marine
 Unit/Name/KorhalPalaceTurret=Heavy Shreder Turret
 Unit/Name/KorhalPalaceTurret2=Mortar Pit
 Unit/Name/KorhalPalaceTurret3=Flak Turret
@@ -412,6 +432,9 @@ Unit/Name/MedicDominion=Field Medic
 Unit/Name/Medivac2=Valkyrie Transport
 Unit/Name/MengskReaper=Samuel Horsh
 Unit/Name/MercReaper=Death Scythe
+Unit/Name/Mitosaurus=Scarabalisk
+Unit/Name/MitosaurusB=Scarabalisk
+Unit/Name/MitosaurusC=Scarabalisk
 Unit/Name/PlanetaryFortress2=Royal Fortress
 Unit/Name/PredatorDominion=War Cat
 Unit/Name/PunisherGrenadesLMWeapon2=Loyalist Grenades
@@ -430,6 +453,8 @@ Unit/Name/Roach3=Panzer
 Unit/Name/RoachCorpser=Corpser
 Unit/Name/RoachCorpserBurrowed=Corpser
 Unit/Name/RoachVile=Viler
+Unit/Name/ScantipedeParasitic=Scantipedlisk
+Unit/Name/ScantipedeParasiticSmall=Scantipedling
 Unit/Name/Separatist2=Tank Buster Trooper
 Unit/Name/Separatist3=Strike Trooper
 Unit/Name/Separatist4=Flamer Trooper
@@ -437,6 +462,7 @@ Unit/Name/Separatist5=Melee Trooper
 Unit/Name/SiegeTank2=Bastion Tank
 Unit/Name/SiegeTank3=Beastslayer Self-Propelled Gun
 Unit/Name/SiegeTankDominion=Siege Breaker
+Unit/Name/SpaceCowSmall=Mendlisk
 Unit/Name/Stalker2=Slayer
 Unit/Name/StalkerWeapon2=Stalker
 Unit/Name/Stetmann=Jezik
@@ -465,7 +491,14 @@ Unit/Name/Zergling222=Devouring One
 UnitKillRank/Swann1=Sergeant
 UnitKillRank/Tychus2=Private
 UnitKillRank/Tychus3=Veteran
+UnitSubtitle/HotSHunter=Mutated Zerg Strain
 UnitSubtitle/HotSRaptor=Mutated Zerg Strain
+UnitSubtitle/HotSSplitterling=Mutated Zerg Strain
+UnitSubtitle/HydraliskImpaler=Mutated Zerg Strain
+UnitSubtitle/HydraliskLurker=Mutated Zerg Strain
+UnitSubtitle/ParasiticScantipede=Assimilated Beast
+UnitSubtitle/RoachCorpser=Mutated Zerg Strain
+UnitSubtitle/RoachVile=Mutated Zerg Strain
 UnitSubtitle/SwarmHostSplitA=Mutated Zerg Strain
 UnitSubtitle/SwarmHostSplitB=Mutated Zerg Strain
 Upgrade/Name/DominionForces=Dominion Forces
@@ -507,6 +540,7 @@ Weapon/Name/NeedleSpines2=Needle Spines
 Weapon/Name/NeedleSpines3=Needle Spines
 Weapon/Name/NeedleSpines4=Needle Spines
 Weapon/Name/NeedleSpines5=Needle Spines
+Weapon/Name/NeedleSpines6=Corrosive Plague
 Weapon/Name/ParticleDisruptors2=Particle Disruptors
 Weapon/Name/PsiBlades2=Blood Blades
 Weapon/Name/PunisherGrenades2=Diplomacy Grenades
@@ -521,6 +555,8 @@ Weapon/Name/Separatist2=Ferromag SMG
 Weapon/Name/Separatist3=B-1 High-Cal LMG
 Weapon/Name/Separatist4=CPO-04 Salamander Flamethrower
 Weapon/Name/Separatist5=Negotiator
+Weapon/Name/SpaceCowMedium=Infested Terran Barrage
+Weapon/Name/SpaceCowSmallMelee=Unmending Bite
 Weapon/Name/SupplicantWeapon=Blood Orb
 Weapon/Name/TitanMechGun2=LB-10 Gatling Minigun
 Weapon/Name/TwinIbiksCannon2=Quad Ganho Cannons
@@ -545,6 +581,8 @@ Weapon/Tip/MercReaperD8Charge=Only used against non-light targets
 Weapon/Tip/MercReaperP38ScytheGuassPistol=Only used against light targets
 Weapon/Tip/NeedleSpines4=Deal 50% to 2 additional targets
 Weapon/Tip/P38ScytheGuassPistol=Only used against light units
+Weapon/Tip/ScantipedeParasitic=Deal 33% damage to 4 nearby targets. Infest with parasites
+Weapon/Tip/SpaceCowMedium=Launch Infested Terran Egg
 Weapon/Tip/WarHound=Attack only Ground Targets
 Weapon/Tip/WarHound2=Attack only Air Targets
 ZerglingMutated=Mutated Zerg Strain
