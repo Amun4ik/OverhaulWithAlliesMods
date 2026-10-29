@@ -323,6 +323,31 @@
     <CUnit id="HotSHunter">
         <Speed value="3.25"/>
     </CUnit>
+    <CUnit id="HotSNoxious">
+        <LifeStart value="700"/>
+        <LifeMax value="700"/>
+        <LifeArmor value="5"/>
+        <LifeRegenRate value="2"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="6" Face="TissueAssimilation" Requirements="HaveHotSTissueAssimilation"/>
+            <LayoutButtons index="7" Face="MonarchBlades" Requirements="HaveHotSMonarchBlades" Column="2"/>
+            <LayoutButtons index="8" Face="BurrowChargeCampaignNoxious" Type="AbilCmd" AbilCmd="UltraliskBurrowChargeNoxious,Execute" Column="0"/>
+            <LayoutButtons index="9" Face="BurrowDown" AbilCmd="BurrowNoxiousDown,Execute" Column="4"/>
+            <LayoutButtons index="10" Row="1"/>
+            <LayoutButtons index="11" Face="NoxiousCloud" Type="Passive" AbilCmd="" Row="1"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="HotSNoxiousBurrowed">
+        <LifeStart value="700"/>
+        <LifeMax value="700"/>
+        <LifeArmor value="5"/>
+        <LifeRegenRate value="2"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="2" Face="TissueAssimilation" Requirements="HaveHotSTissueAssimilation"/>
+            <LayoutButtons index="3" Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowNoxiousUp,Execute" Requirements="" Column="4"/>
+            <LayoutButtons index="4" Face="MonarchBlades" Type="Passive" AbilCmd="" Requirements="HaveHotSMonarchBlades" Column="2"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="HotSRaptor">
         <LifeStart value="50"/>
         <LifeMax value="50"/>
@@ -389,6 +414,41 @@
         <Radius value="0.25"/>
         <MinimapRadius value="0.25"/>
         <Subtitle value="ZerglingMutated"/>
+    </CUnit>
+    <CUnit id="HotSTorrasque">
+        <LifeStart value="900"/>
+        <LifeMax value="900"/>
+        <LifeArmor value="6"/>
+        <LifeRegenRate value="2"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="6" Face="BurrowChargeCampaign" Type="AbilCmd" AbilCmd="UltraliskBurrowCharge,Execute" Requirements=""/>
+            <LayoutButtons index="7" Face="MonarchBlades" Requirements="HaveHotSMonarchBlades" Column="2"/>
+            <LayoutButtons index="8" Face="BurrowDown" AbilCmd="BurrowTorrasqueDown,Execute" Column="4"/>
+            <LayoutButtons index="9" Row="1" Column="4"/>
+            <LayoutButtons index="10" Row="1" Column="4"/>
+            <LayoutButtons index="11" Face="TissueAssimilation" Type="Passive" AbilCmd="" Requirements="HaveHotSTissueAssimilation" Column="1"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="HotSTorrasqueBurrowed">
+        <LifeStart value="900"/>
+        <LifeMax value="900"/>
+        <LifeArmor value="6"/>
+        <LifeRegenRate value="2"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="2" Face="UltraliskBurrowCharge" Requirements="HaveHotSBurrowCharge"/>
+            <LayoutButtons index="3" Face="MonarchBlades" Requirements="HaveHotSMonarchBlades" Column="2"/>
+            <LayoutButtons index="4">
+                <Face value="BurrowUp"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="BurrowTorrasqueUp,Execute"/>
+                <Behavior value=""/>
+                <Requirements value=""/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons index="5" Face="TorrasqueChrysalisFakeTimer" Behavior="TorrasqueTimerBehavior" Requirements="HaveTorrasqueTimerBehavior" Row="1" Column="4"/>
+            <LayoutButtons index="6" Face="TorrasqueChrysalis" Behavior="TorrasqueDontDie" Requirements="" Row="1" Column="4"/>
+            <LayoutButtons index="7" Face="TissueAssimilation" Type="Passive" AbilCmd="" Requirements="HaveHotSTissueAssimilation" Column="1"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="HunterKiller">
         <Attributes index="Light" value="0"/>
@@ -3696,6 +3756,211 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+    </CUnit>
+    <CUnit id="Ultralisk">
+        <LifeStart value="800"/>
+        <LifeMax value="800"/>
+        <LifeArmor value="5"/>
+        <LifeRegenRate value="2"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="7" Column="1"/>
+            <LayoutButtons index="8" Column="2"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="Ultralisk2">
+        <DeathRevealRadius value="3"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="AISplash" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Colossus" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <LifeStart value="600"/>
+        <LifeMax value="600"/>
+        <LifeArmor value="5"/>
+        <LifeRegenRate value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/ZergGroundArmor"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/ZergWildMutation"/>
+        <Speed value="3.6015"/>
+        <SpeedMultiplierCreep value="1.3"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <TurningRate value="360"/>
+        <Sight value="9"/>
+        <Food value="-6"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="300"/>
+        <CostResource index="Vespene" value="200"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="150"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="BurrowUltraliskDown"/>
+        <AbilArray Link="UltraliskBurrowCharge"/>
+        <AbilArray Link="UltraliskWeaponCooldown"/>
+        <BehaviorArray Link="Frenzy"/>
+        <BehaviorArray Link="Frenzy"/>
+        <BehaviorArray Link="UltraliskOutOfCombat1"/>
+        <BehaviorArray Link="ZergBuildingDies92"/>
+        <WeaponArray Link="KaiserBlades2"/>
+        <WeaponArray/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowUltraliskDown,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="Frenzied" Type="Passive" Behavior="Frenzy" Row="2" Column="3"/>
+            <LayoutButtons Face="MonarchBlades" Type="Passive" Requirements="HaveHotSMonarchBlades" Row="2" Column="1"/>
+            <LayoutButtons Face="TissueAssimilation" Type="Passive" Requirements="HaveHotSTissueAssimilation" Row="2" Column="2"/>
+            <LayoutButtons Face="BurrowChargeCampaign" Type="AbilCmd" AbilCmd="UltraliskBurrowCharge,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="1"/>
+        <SeparationRadius value="1"/>
+        <InnerRadius value="0.75"/>
+        <CargoSize value="8"/>
+        <ScoreMake value="500"/>
+        <ScoreKill value="500"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="18"/>
+        <MinimapRadius value="1"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Ultralisk"/>
+        <TacticalAIThink value="AIThinkUltralisk"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="180"/>
+        <GlossaryStrongArray value="Marauder"/>
+        <GlossaryStrongArray value="Roach"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryWeakArray value="Banshee"/>
+        <GlossaryWeakArray value="Mutalisk"/>
+        <GlossaryWeakArray value="VoidRay"/>
+        <HotkeyCategory value="Unit/Category/ZergUnits"/>
+        <KillDisplay value="Always"/>
+        <RankDisplay value="Always"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="50"/>
+            <ChanceArray index="Idle" value="50"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+    </CUnit>
+    <CUnit id="Ultralisk3">
+        <DeathRevealRadius value="3"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="AISplash" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Colossus" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <LifeStart value="400"/>
+        <LifeMax value="400"/>
+        <LifeArmor value="3"/>
+        <LifeRegenRate value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/ZergGroundArmor"/>
+        <ShieldsStart value="200"/>
+        <ShieldsMax value="200"/>
+        <ShieldArmor value="8"/>
+        <ShieldRegenDelay value="10"/>
+        <ShieldRegenRate value="5"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/ZergWildMutation"/>
+        <Speed value="2.9531"/>
+        <SpeedMultiplierCreep value="1.3"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <TurningRate value="360"/>
+        <Sight value="9"/>
+        <Food value="-6"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="300"/>
+        <CostResource index="Vespene" value="200"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="150"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="BurrowUltraliskDown"/>
+        <AbilArray Link="UltraliskBurrowCharge2"/>
+        <AbilArray Link="UltraliskWeaponCooldown"/>
+        <BehaviorArray Link="Frenzy"/>
+        <BehaviorArray Link="Frenzy"/>
+        <BehaviorArray Link="UltraliskOutOfCombat1"/>
+        <BehaviorArray Link="HardenedShield"/>
+        <WeaponArray Link="KaiserBlades3"/>
+        <WeaponArray/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowUltraliskDown,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="Frenzied" Type="Passive" Behavior="Frenzy" Row="2" Column="3"/>
+            <LayoutButtons Face="MonarchBlades" Type="Passive" Requirements="HaveHotSMonarchBlades" Row="2" Column="1"/>
+            <LayoutButtons Face="TissueAssimilation" Type="Passive" Requirements="HaveHotSTissueAssimilation" Row="2" Column="2"/>
+            <LayoutButtons Face="BurrowChargeCampaign" Type="AbilCmd" AbilCmd="UltraliskBurrowCharge2,0" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="1"/>
+        <SeparationRadius value="1"/>
+        <InnerRadius value="0.75"/>
+        <CargoSize value="8"/>
+        <ScoreMake value="500"/>
+        <ScoreKill value="500"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="18"/>
+        <MinimapRadius value="1"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Ultralisk"/>
+        <TacticalAIThink value="AIThinkUltralisk"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="180"/>
+        <GlossaryStrongArray value="Marauder"/>
+        <GlossaryStrongArray value="Roach"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryWeakArray value="Banshee"/>
+        <GlossaryWeakArray value="Mutalisk"/>
+        <GlossaryWeakArray value="VoidRay"/>
+        <HotkeyCategory value="Unit/Category/ZergUnits"/>
+        <KillDisplay value="Always"/>
+        <RankDisplay value="Always"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="50"/>
+            <ChanceArray index="Idle" value="50"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+    </CUnit>
+    <CUnit id="UltraliskBurrowed">
+        <LifeStart value="800"/>
+        <LifeMax value="800"/>
+        <LifeArmor value="5"/>
+        <LifeRegenRate value="2"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="3" Column="2"/>
+            <LayoutButtons index="4" Column="1"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="UltrasonicPulseEnhancedWeapon">
         <Mover value="ColonyInfestationWeapon"/>

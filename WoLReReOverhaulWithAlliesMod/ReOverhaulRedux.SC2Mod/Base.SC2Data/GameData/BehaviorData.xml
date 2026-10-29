@@ -55,6 +55,12 @@
             <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
+    <CBehaviorBuff id="BroodlingFate2" parent="TimedLife">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-explode.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="60"/>
+        <KillCredit Value="Unknown"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DOMGhostPersonalDefensiveMatrix2">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-defensivematrix.dds"/>
@@ -223,6 +229,16 @@
     <CBehaviorBuff id="WildMutation">
         <Modification AttackSpeedMultiplier="1.25">
             <VitalMaxArray index="Shields" value="50"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ZergBuildingDies92">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <Modification>
+            <DeathResponse Chance="1" Effect="ZergBuildingSpawnBroodling9Delay2">
+                <Type index="Remove" value="0"/>
+            </DeathResponse>
         </Modification>
     </CBehaviorBuff>
 </Catalog>

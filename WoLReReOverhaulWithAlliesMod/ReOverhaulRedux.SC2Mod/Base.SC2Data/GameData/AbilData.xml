@@ -349,7 +349,7 @@
         <Flags index="AutoCreate" value="1"/>
         <Flags index="Retarget" value="1"/>
         <Leash value="7"/>
-        <InfoArray index="Ammo1" Time="60" CountStart="1" Manage="Recall" Unit="Swarmling">
+        <InfoArray index="Ammo1" Time="15" CountStart="1" Manage="Recall" Unit="Swarmling">
             <Charge HideCount="1" Link="KaraxMicroBotActivated" Location="Unit"/>
             <Cooldown Link="Abil/##id##"/>
             <Button DefaultButtonFace="Servitors2">
@@ -357,7 +357,6 @@
             </Button>
             <Flags index="AutoBuild" value="1"/>
             <Flags index="AutoBuildOn" value="1"/>
-            <Flags index="External" value="1"/>
         </InfoArray>
         <ExternalAngle value="0"/>
         <ExternalAngle value="45"/>
@@ -628,6 +627,35 @@
         <Effect value="ThrowMolotovSwitch"/>
         <AutoCastFilters value="Ground,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilAugment>
+    <CAbilEffectTarget id="UltraliskBurrowCharge2">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="BurrowChargeSwitch"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="RangeUsePathing" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Smart" value="1"/>
+        <Cost>
+            <Cooldown Link="UltraliskBurrowChargeUltraliskBurrowCharge2" Location="Unit" TimeUse="10"/>
+        </Cost>
+        <Range value="9"/>
+        <Arc value="360"/>
+        <SmartValidatorArray value="TargetIsEnemy"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AutoCastRange value="9"/>
+        <AutoCastValidatorArray value="CasterNotHoldingPosition"/>
+        <AutoCastValidatorArray value="UltraliskHasntRecentlyAttacked"/>
+        <AutoCastValidatorArray value="TargetNotHarmless"/>
+        <AutoCastValidatorArray value="UltraliskBurrowChargeRangeFinder"/>
+        <AutoCastValidatorArray value="BurrowChargeMinimumRange"/>
+        <CastIntroTime value="0.5"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CursorEffect value="BurrowChargeTargetSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UltraliskBurrowCharge" Requirements="HaveHotSUltraliskBurrowCharge"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="UltrasonicPulseEnhanced">
         <Cost index="0">
             <Vital index="Energy" value="0"/>

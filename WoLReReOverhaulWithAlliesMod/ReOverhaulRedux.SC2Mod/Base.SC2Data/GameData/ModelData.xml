@@ -113,6 +113,9 @@
         <ScaleMax value="0.620000,0.620000,0.620000"/>
         <ScaleMin value="0.620000,0.620000,0.620000"/>
     </CModel>
+    <CModel id="HotSTorrasque">
+        <Model value="Assets\Zerg\Ultralisk_Torrasque_SC1.m3"/>
+    </CModel>
     <CModel id="Hunter">
         <Model value="Assets\Units\Zerg\Baneling_CollectionSkin_Webby\Baneling_CollectionSkin_Webby.m3"/>
     </CModel>
@@ -1935,6 +1938,9 @@
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModel>
+    <CModel id="TorrasquePortrait">
+        <Model value="Assets\Zerg\Ultralisk_Torrasque_SC1_Portrait.m3"/>
+    </CModel>
     <CModel id="Tosh">
         <Model value="Assets\Terran\Tosh_ToshsGoons_HD.m3"/>
     </CModel>
@@ -1972,6 +1978,49 @@
         <FacialController value="LocalizedData\Facial\HellionPortrait.fxa"/>
         <Image value="Assets\Textures\hellion_covertops_collection_portrait_static.dds"/>
         <Lighting value="TychusPortrait"/>
+    </CModel>
+    <CModel id="Ultralisk2" parent="UltraliskBase">
+        <Model value="Assets\Units\Zerg\UltraliskEx1CE\UltraliskEx1CE.m3"/>
+    </CModel>
+    <CModel id="Ultralisk3" parent="UltraliskBase">
+        <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby\Ultralisk_CollectionSkin_Webby.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeath2" parent="UltraliskDeathBase">
+        <Model value="Assets\Units\Zerg\UltraliskEx1BDeath\UltraliskEx1BDeath.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeath3" parent="UltraliskDeathBase">
+        <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby_Death\Ultralisk_CollectionSkin_Webby_Death.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeathAcid2" parent="UltraliskDeathAcidBase">
+        <Model value="Assets\Units\Zerg\UltraliskEx1BDeathAcid\UltraliskEx1BDeathAcid.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeathAcid3" parent="UltraliskDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby_DeathAcid\Ultralisk_CollectionSkin_Webby_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeathFire2" parent="UltraliskDeathFireBase">
+        <Model value="Assets\Units\Zerg\UltraliskEx1BDeathFire\UltraliskEx1BDeathFire.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeathFire3" parent="UltraliskDeathFireBase">
+        <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby_DeathFire\Ultralisk_CollectionSkin_Webby_DeathFire.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeathRagdoll2" parent="UltraliskDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\UltraliskEx1BDeathRagdoll\UltraliskEx1BDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeathRagdoll3" parent="UltraliskDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby_DeathRagdoll\Ultralisk_CollectionSkin_Webby_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="UltraliskEx1BDeath">
+        <Model value="Assets\Zerg\Ultralisk_Torrasque_SC1_Death01.m3"/>
+    </CModel>
+    <CModel id="UltraliskPortrait2" parent="UltraliskPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Ultralisk_Webby_Collection_Portrait\Ultralisk_Webby_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\UltraliskPortrait_Static.dds"/>
+        <Lighting value="UltraliskPortrait"/>
+    </CModel>
+    <CModel id="UltraliskPortrait3" parent="UltraliskPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Ultralisk_Webby_Collection_Portrait\Ultralisk_Webby_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\UltraliskPortrait_Static.dds"/>
+        <Lighting value="UltraliskPortrait"/>
     </CModel>
     <CModel id="VikingMercenaryAssaultPortrait2" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Portraits\Terran\VikingMercenaryAssaultPortrait\VikingMercenaryAssaultPortrait.m3"/>

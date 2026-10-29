@@ -13,6 +13,7 @@ Abil/Name/MakeServitors2=Lurklings
 Abil/Name/SwarmHostSpawnLocusts2=Spawn Lurklings
 Abil/Name/TornadoMissile2=Crocodile Rockets
 Abil/Name/TornadoMissile3=Throw Molotov
+Abil/Name/UltraliskBurrowCharge2=Ultralisk Burrow Charge
 Actor/HighlightTooltip/RenegadeMissileTurret=
 Behavior/Name/AllyAggressiveMode=AllyAggressiveMode
 Behavior/Name/AllyDefensiveMode=AllyDefensiveMode
@@ -169,6 +170,8 @@ Button/Tooltip/TrainLoyalist=Dominion infantry long hand.
 Button/Tooltip/TychusChaingun=A scoundrel, a Pirate and "Good" old friend of Raynor. Has a shit ton of explosives.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/TychusCommando=Commando can throw demolition charge. Deal damage in small area. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
 Button/Tooltip/TychusCommando2=Long-hand of Dominion Infantry Corp. <n/><n/><c val="#ColorAttackInfo">Can attack ground</c><n/>
+Button/Tooltip/Ultralisk2=Heavy assault beast. Has an area-damage attack.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/Ultralisk3=Heavy assault beast. Has an area-damage attack.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/Vulture2=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Vulture3=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/WidowMineBioSplash=Attacks by launching missiles at enemy ground and air units that get too close. Missiles deal <d ref="Effect,WidowMineExplodeDirect,Amount"/> (+50% vs. shields) damage to their primary target, and <d ref="Effect,WidowMineExplodeSplash,Amount"/> (+<d ref="Effect,WidowMineExplodeSplashShields,VitalBonus[Shields]"/> vs. shields) splash damage to units nearby.<n/><n/><c val="#ColorAttackInfo">Cooldown: <d ref="Abil,WidowMineAttack,Cost[0].Cooldown[0].TimeUse[0]"/> seconds.</c>
@@ -223,6 +226,7 @@ Effect/Name/BattlecruiserBarrage=Battlecruiser Barrage (Persistent)
 Effect/Name/BattlecruiserBarrage2=Battlecruiser Barrage (Persistent)
 Effect/Name/BileDuctsApplyBehavior2=Bile Ducts Apply Behavior
 Effect/Name/BileDuctsDamage2=Bile Ducts Damage
+Effect/Name/BroodlingTimedLife2=Broodling Timed Life
 Effect/Name/Claws2=Claws (Damage)
 Effect/Name/Claws22=Claws (Damage)
 Effect/Name/Claws222=Claws (Damage)
@@ -244,6 +248,18 @@ Effect/Name/HellionTank2=Igniter
 Effect/Name/HellionTankApplyBehavior2=Igniter Apply Behavior
 Effect/Name/HellionTankDamage2=Igniter Damage
 Effect/Name/HellionTankSearch2=Igniter Search
+Effect/Name/HotSUltraliskKaiserBlades2=Pygalord Kaiser Blades
+Effect/Name/HotSUltraliskKaiserBlades3=Blinkolisk Kaiser Blades
+Effect/Name/HotSUltraliskKaiserBladesDamage2=Pygalord Kaiser Blades Damage
+Effect/Name/HotSUltraliskKaiserBladesDamage3=Blinkolisk Kaiser Blades Damage
+Effect/Name/HotSUltraliskKaiserBladesSearch2=Pygalord Kaiser Blades Search
+Effect/Name/HotSUltraliskKaiserBladesSearch3=Blinkolisk Kaiser Blades Search
+Effect/Name/HotSUltraliskKaiserBladesSecondaryDamage2=Pygalord Kaiser Blades Secondary Damage
+Effect/Name/HotSUltraliskKaiserBladesSecondaryDamage3=Blinkolisk Kaiser Blades Secondary Damage
+Effect/Name/HotSUltraliskKaiserBladesSecondaryDamageSet2=Pygalord Kaiser Blades Secondary Damage Set
+Effect/Name/HotSUltraliskKaiserBladesSecondaryDamageSet3=Blinkolisk Kaiser Blades Secondary Damage Set
+Effect/Name/HotSUltraliskKaiserBladesSecondaryUpgradeDamage2=Pygalord Kaiser Blades Secondary Upgrade Damage
+Effect/Name/HotSUltraliskKaiserBladesSecondaryUpgradeDamage3=Blinkolisk Kaiser Blades Secondary Upgrade Damage
 Effect/Name/HotSZerglingClaws2=Sunderling Claws Set
 Effect/Name/HotSZerglingClaws22=Chargeling Claws Set
 Effect/Name/HotSZerglingClaws222=Devouring One Claws Set
@@ -349,6 +365,8 @@ Effect/Name/WarHound=War Hound Damage
 Effect/Name/WarHoundSet=War Hound Set
 Effect/Name/WraithAG=WraithAG (Persistent)
 Effect/Name/ZealotPsiBladesCleaveSet2=Supplicant Psi Blades (Cleave Set)
+Effect/Name/ZergBuildingSpawnBroodling92=Spawn Pygalisk
+Effect/Name/ZergBuildingSpawnBroodling9Delay2=Spawn Pygalisk (Delay)
 Elite Zerg Strain=Elite Zerg Strain
 EliteZergStrain=
 MutatedStrain=Mutated Zerg Strain
@@ -403,10 +421,12 @@ Unit/Name/Hellion2=Baden Joru
 Unit/Name/HellionDominion=Flamer Light Tank
 Unit/Name/HellionTankDominion=Flamer Battlesuit
 Unit/Name/HotSHunter=Hunterling
+Unit/Name/HotSNoxious=Toxilisk
 Unit/Name/HotSRaptor=Raptorling
 Unit/Name/HotSSplitterlingBig=Splitterling
 Unit/Name/HotSSplitterlingMedium=Bombling
 Unit/Name/HotSSwarmling=Swarmling
+Unit/Name/HotSTorrasque=Torrasque
 Unit/Name/Hydralisk2=Medusalisk
 Unit/Name/Hydralisk3=Lurklisk
 Unit/Name/Hydralisk4=Psyolisk
@@ -478,6 +498,8 @@ Unit/Name/TitanMechAssault2=War Angel
 Unit/Name/TitanMechMissileWeapon2=Archangel Missile
 Unit/Name/TychusCommando=Commando
 Unit/Name/TychusCommando2=Loyalist
+Unit/Name/Ultralisk2=Pygalord
+Unit/Name/Ultralisk3=Blinkolisk
 Unit/Name/VikingFighterWeapon2=Viking Fighter
 Unit/Name/Vulture2=Thunderlord
 Unit/Name/Vulture3=Condor
@@ -530,6 +552,8 @@ Weapon/Name/GuassRifle2=C-16 Gauss Rifle
 Weapon/Name/GuassRifle22=Experimental Chemical Rifle
 Weapon/Name/HERCWeapon2=H1 Flash Welder
 Weapon/Name/InfernalFlameThrower2=Autocannon
+Weapon/Name/KaiserBlades2=Kaiser Blades
+Weapon/Name/KaiserBlades3=Kaiser Blades
 Weapon/Name/KorhalPalaceGate2=Anti-Air Munition
 Weapon/Name/KorhalPalaceGate22=Earth Shatter Munition
 Weapon/Name/KorhalPalaceGate3=Korhal Palace Gate
