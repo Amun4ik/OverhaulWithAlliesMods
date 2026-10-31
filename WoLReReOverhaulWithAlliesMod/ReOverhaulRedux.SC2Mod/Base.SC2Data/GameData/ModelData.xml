@@ -75,6 +75,9 @@
         <EditorCategories value="Race:Neutral"/>
         <Flags index="Ignorable" value="1"/>
     </CModel>
+    <CModel id="Brutalisk">
+        <Model value="Assets\Units\Zerg\BrutaliskEx3\BrutaliskEx3.m3"/>
+    </CModel>
     <CModel id="CommandCenter3" parent="CommandCenterBase">
         <Model value="Assets\Terran\Storm_Building_SCBraxis_Keep.m3"/>
     </CModel>
@@ -90,6 +93,10 @@
     <CModel id="GuardianAttackImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Zerg\PrimalGuardianMissileImpact\PrimalGuardianMissileImpact.m3"/>
         <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="GuardianShieldImpact2" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Neutral\Fear_Coop\Fear_Coop.m3"/>
+        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="HellionTankAttackFireAddition2" parent="ImpactFX">
         <Model value="Assets\Effects\Zerg\Primal_Roach_Coop_FireBreath_Impact\Primal_Roach_Coop_FireBreath_Impact.m3"/>
@@ -425,23 +432,22 @@
     <CModel id="Mitosaurus">
         <Model value="Assets\Zerg\MitoscarabRavager.m3"/>
     </CModel>
-    <CModel id="MitosaurusASplitWeapon">
-        <ScaleMax value="4.000000,4.000000,4.000000"/>
-        <ScaleMin value="4.000000,4.000000,4.000000"/>
+    <CModel id="MitosaurusAWeapon">
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
     </CModel>
     <CModel id="MitosaurusB">
         <Model value="Assets\Zerg\MitoscarabRavager.m3"/>
     </CModel>
-    <CModel id="MitosaurusBSplitWeapon">
-        <ScaleMax value="2.100000,2.100000,2.100000"/>
-        <ScaleMin value="2.100000,2.100000,2.100000"/>
+    <CModel id="MitosaurusBWeapon">
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
     </CModel>
     <CModel id="MitosaurusC">
         <Model value="Assets\Zerg\MitoscarabRavager.m3"/>
     </CModel>
     <CModel id="MitosaurusCWeapon">
-        <ScaleMax value="1.000000,1.000000,1.000000"/>
-        <ScaleMin value="1.000000,1.000000,1.000000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="NeedleSpinesWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
@@ -458,6 +464,18 @@
     <CModel id="NeedleSpinesWeapon5" parent="MissileFX">
         <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
         <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="Omegalisk">
+        <Model value="Assets\Zerg\Ultralisk_WiseOldTorrasque_SC1.m3"/>
+    </CModel>
+    <CModel id="OmegaliskDeath">
+        <Model value="Assets\Zerg\Ultralisk_WiseOldTorrasque_SC1_Death01.m3"/>
+    </CModel>
+    <CModel id="OmegaliskDeathAcid">
+        <Model value="Assets\Zerg\Ultralisk_WiseOldTorrasque_SC1_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="OmegaliskDeathFire">
+        <Model value="Assets\Zerg\Ultralisk_WiseOldTorrasque_SC1_DeathFire.m3"/>
     </CModel>
     <CModel id="PlanetaryFortressAttackImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\PlanetaryFortressMissileImpact\PlanetaryFortressMissileImpact.m3"/>
@@ -672,6 +690,26 @@
     </CModel>
     <CModel id="Roachling">
         <Model value="Assets\Zerg\RoachlingEX1A_DS.m3"/>
+    </CModel>
+    <CModel id="SJPirateCapitalShipLeftImpact2" parent="ImpactFX">
+        <Model value="Assets\Zerg\CorruptorMissileImpact_PurpleColor.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+    </CModel>
+    <CModel id="SJPirateCapitalShipLeftLMWeapon2" parent="MissileFX">
+        <Model value="Assets\Zerg\CorruptorMissile_PurpleColor.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SJPirateCapitalShipRightImpact2" parent="ImpactFX">
+        <Model value="Assets\Zerg\CorruptorMissileImpact_PurpleColor.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+    </CModel>
+    <CModel id="SJPirateCapitalShipRightLMWeapon2" parent="MissileFX">
+        <Model value="Assets\Zerg\CorruptorMissile_PurpleColor.m3"/>
+        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="ScantipedeParasitic">
         <Model value="Assets\Zerg\ScantipedeRavager.m3"/>
@@ -1983,7 +2021,12 @@
         <Model value="Assets\Units\Zerg\UltraliskEx1CE\UltraliskEx1CE.m3"/>
     </CModel>
     <CModel id="Ultralisk3" parent="UltraliskBase">
-        <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby\Ultralisk_CollectionSkin_Webby.m3"/>
+        <Model value="Assets\Units\Zerg\Ultralisk_Primal_Collection\Ultralisk_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Ultralisk4" parent="UltraliskBase">
+        <Model value="Assets\Units\Zerg\Apocalisk_Stukov_Coop\Apocalisk_Stukov_Coop.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
     </CModel>
     <CModel id="UltraliskDeath2" parent="UltraliskDeathBase">
         <Model value="Assets\Units\Zerg\UltraliskEx1BDeath\UltraliskEx1BDeath.m3"/>
@@ -1991,11 +2034,17 @@
     <CModel id="UltraliskDeath3" parent="UltraliskDeathBase">
         <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby_Death\Ultralisk_CollectionSkin_Webby_Death.m3"/>
     </CModel>
+    <CModel id="UltraliskDeath4" parent="UltraliskDeathBase">
+        <Model value="Assets\Units\Zerg\Apocalisk_Stukov_Coop_Death\Apocalisk_Stukov_Coop_Death.m3"/>
+    </CModel>
     <CModel id="UltraliskDeathAcid2" parent="UltraliskDeathAcidBase">
         <Model value="Assets\Units\Zerg\UltraliskEx1BDeathAcid\UltraliskEx1BDeathAcid.m3"/>
     </CModel>
     <CModel id="UltraliskDeathAcid3" parent="UltraliskDeathAcidBase">
         <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby_DeathAcid\Ultralisk_CollectionSkin_Webby_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeathAcid4" parent="UltraliskDeathAcidBase">
+        <Model value="Assets\Units\Zerg\Apocalisk_Stukov_Coop_Death\Apocalisk_Stukov_Coop_Death.m3"/>
     </CModel>
     <CModel id="UltraliskDeathFire2" parent="UltraliskDeathFireBase">
         <Model value="Assets\Units\Zerg\UltraliskEx1BDeathFire\UltraliskEx1BDeathFire.m3"/>
@@ -2003,11 +2052,17 @@
     <CModel id="UltraliskDeathFire3" parent="UltraliskDeathFireBase">
         <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby_DeathFire\Ultralisk_CollectionSkin_Webby_DeathFire.m3"/>
     </CModel>
+    <CModel id="UltraliskDeathFire4" parent="UltraliskDeathFireBase">
+        <Model value="Assets\Units\Zerg\Apocalisk_Stukov_Coop_Death\Apocalisk_Stukov_Coop_Death.m3"/>
+    </CModel>
     <CModel id="UltraliskDeathRagdoll2" parent="UltraliskDeathRagdollBase">
         <Model value="Assets\Units\Zerg\UltraliskEx1BDeathRagdoll\UltraliskEx1BDeathRagdoll.m3"/>
     </CModel>
     <CModel id="UltraliskDeathRagdoll3" parent="UltraliskDeathRagdollBase">
         <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby_DeathRagdoll\Ultralisk_CollectionSkin_Webby_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeathRagdoll4" parent="UltraliskDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Apocalisk_Stukov_Coop_Death\Apocalisk_Stukov_Coop_Death.m3"/>
     </CModel>
     <CModel id="UltraliskEx1BDeath">
         <Model value="Assets\Zerg\Ultralisk_Torrasque_SC1_Death01.m3"/>
@@ -2019,6 +2074,11 @@
     </CModel>
     <CModel id="UltraliskPortrait3" parent="UltraliskPortraitBase">
         <Model value="Assets\Portraits\Zerg\Ultralisk_Webby_Collection_Portrait\Ultralisk_Webby_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\UltraliskPortrait_Static.dds"/>
+        <Lighting value="UltraliskPortrait"/>
+    </CModel>
+    <CModel id="UltraliskPortrait4" parent="UltraliskPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Apocalisk_Portrait\Apocalisk_Portrait.m3"/>
         <Image value="Assets\Textures\UltraliskPortrait_Static.dds"/>
         <Lighting value="UltraliskPortrait"/>
     </CModel>

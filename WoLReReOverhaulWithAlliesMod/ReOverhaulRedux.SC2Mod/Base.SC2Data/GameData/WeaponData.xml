@@ -69,6 +69,10 @@
         <Range value="8"/>
         <MinimumRange value="4"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Brutalize">
+        <Period value="2"/>
+        <DamagePoint value="0.65"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="Claws2">
         <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
@@ -95,6 +99,9 @@
         <Range value="0.1"/>
         <Period value="0.496"/>
         <Effect value="HotSZerglingClaws222"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="FerociousSpew">
+        <Range value="7"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="GuassRifle2">
         <EditorCategories value="Race:Terran"/>
@@ -132,6 +139,10 @@
     <CWeaponLegacy id="InfestedAbomination">
         <Period value="1"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="KaiserBlades">
+        <TargetFilters value="Ground,Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="1"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="KaiserBlades2">
         <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
@@ -143,7 +154,7 @@
         <Cost>
             <Cooldown Link="Abil/UltraliskWeaponCooldown" Location="Unit" TimeUse="0.86"/>
         </Cost>
-        <Period value="0.86"/>
+        <Period value="1"/>
         <DamagePoint value="0.3332"/>
         <Effect value="HotSUltraliskKaiserBlades2"/>
     </CWeaponLegacy>
@@ -154,11 +165,11 @@
         <DisplayEffect value="HotSUltraliskKaiserBladesDamage3"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AcquirePrioritization value="ByAngle"/>
-        <Range value="1"/>
+        <Range value="1.5"/>
         <Cost>
             <Cooldown Link="Abil/UltraliskWeaponCooldown" Location="Unit" TimeUse="0.86"/>
         </Cost>
-        <Period value="0.86"/>
+        <Period value="1.5"/>
         <DamagePoint value="0.3332"/>
         <Effect value="HotSUltraliskKaiserBlades3"/>
     </CWeaponLegacy>
@@ -226,11 +237,10 @@
     <CWeaponLegacy id="Mitosaurus">
         <MinScanRange value="7"/>
         <Range value="7"/>
-        <Period value="1.5"/>
+        <Period value="1.25"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MitosaurusB">
         <MinScanRange value="6"/>
-        <Period value="1.25"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MitosaurusC">
         <MinScanRange value="15"/>
@@ -292,6 +302,12 @@
         <Period value="2.7"/>
         <DamagePoint value="0.208"/>
         <Effect value="AcidSporesLaunchMissile2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Omegalisk">
+        <Period value="1.6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="OmegaliskHeadAttack">
+        <Period value="2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ParticleDisruptors2">
         <EditorCategories value="Race:Protoss"/>
@@ -373,6 +389,24 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="RoachVileMelee">
         <Period value="1.2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SJPirateCapitalShip2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <DisplayEffect value="SJPirateCapitalShipRightDamage2"/>
+        <DisplayAttackCount value="10"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <Range value="8"/>
+        <Arc value="360"/>
+        <Period value="0.625"/>
+        <Effect value="SJPirateCapitalShipLMSet2"/>
+        <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ScantipedeParasitic">
         <MinScanRange value="6"/>

@@ -81,6 +81,18 @@
     <CBehaviorBuff id="AllyAggressiveMode">
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="FenixSunderAura2">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\mutator_fear_skull_diff.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Period value="0.25"/>
+        <PeriodicEffect value="FenixSunderAuraSearch2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FenixSunderAuraEnemy2">
+        <InfoIcon value="Assets\Textures\mutator_fear_skull_diff.dds"/>
+        <Duration value="1"/>
+        <Modification MoveSpeedMultiplier="0.85" AttackSpeedMultiplier="0.85"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="LocustMPTimedLife">
         <Duration value="20"/>
     </CBehaviorBuff>
@@ -219,6 +231,9 @@
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
         <Duration value="1.1"/>
         <Modification AttackSpeedMultiplier="1.2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TorrasqueTimerBehavior">
+        <Duration value="0"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="VoodooShield">
         <Duration value="20"/>

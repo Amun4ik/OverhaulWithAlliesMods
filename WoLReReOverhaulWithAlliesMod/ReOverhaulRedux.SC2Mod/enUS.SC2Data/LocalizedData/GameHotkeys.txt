@@ -23,6 +23,7 @@ Button/Hotkey/SwarmHost2=C
 Button/Hotkey/TankBusterTrooper=U
 Button/Hotkey/TornadoMissile2=E
 Button/Hotkey/TornadoMissile3=W
+Button/Hotkey/TornadoMissile4=E
 Button/Hotkey/TossGrenade=Q
 Button/Hotkey/TrainCommando=V
 Button/Hotkey/TrainDefender=T

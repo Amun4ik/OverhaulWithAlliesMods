@@ -627,10 +627,29 @@
         <Effect value="ThrowMolotovSwitch"/>
         <AutoCastFilters value="Ground,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilAugment>
+    <CAbilAugment id="TornadoMissile4">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TornadoMissile4"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AbilCmd value="attack,Execute"/>
+        <Cost>
+            <Charge>
+                <CountMax value="20"/>
+                <CountStart value="20"/>
+                <CountUse value="1"/>
+                <TimeUse value="60"/>
+                <Flags index="RestoreAllChargesOnCooldown" value="1"/>
+            </Charge>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <Effect value="SJPirateCapitalShipLMSet2"/>
+        <AutoCastFilters value="Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CAbilAugment>
     <CAbilEffectTarget id="UltraliskBurrowCharge2">
         <Alignment value="Negative"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
-        <Effect index="0" value="BurrowChargeSwitch"/>
+        <Effect index="0" value="ZeratulBlink"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Flags index="RangeUsePathing" value="1"/>
@@ -639,11 +658,11 @@
         <Cost>
             <Cooldown Link="UltraliskBurrowChargeUltraliskBurrowCharge2" Location="Unit" TimeUse="10"/>
         </Cost>
-        <Range value="9"/>
+        <Range value="8"/>
         <Arc value="360"/>
         <SmartValidatorArray value="TargetIsEnemy"/>
         <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AutoCastRange value="9"/>
+        <AutoCastRange value="8"/>
         <AutoCastValidatorArray value="CasterNotHoldingPosition"/>
         <AutoCastValidatorArray value="UltraliskHasntRecentlyAttacked"/>
         <AutoCastValidatorArray value="TargetNotHarmless"/>

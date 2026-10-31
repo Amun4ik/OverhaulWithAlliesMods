@@ -139,6 +139,11 @@
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-earthsplitterordnance-earthsplitterbombardment.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="TornadoMissile4">
+        <Icon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="TrainCommando">
         <Icon value="Assets\Textures\btn-unit-terran-heavygunner.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-heavygunner.dds"/>
