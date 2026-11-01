@@ -309,6 +309,20 @@
             <Flags index="AutoCast" value="1"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectTarget id="Feedback2">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="FeedbackSet"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link="" TimeUse="60"/>
+        </Cost>
+        <TargetFilters value="CanHaveEnergy,Visible,HasEnergy;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <AINotifyEffect value=""/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Feedback"/>
+    </CAbilEffectTarget>
     <CAbilTrain id="GatewayTrain">
         <InfoArray index="Train9" Time="38">
             <Button DefaultButtonFace="Zealot"/>

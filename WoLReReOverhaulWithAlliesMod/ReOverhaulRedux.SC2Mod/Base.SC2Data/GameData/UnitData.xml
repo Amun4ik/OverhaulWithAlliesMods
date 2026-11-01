@@ -1199,6 +1199,188 @@
         <SeparationRadius value="0.5"/>
         <MinimapRadius value="0.5"/>
     </CUnit>
+    <CUnit id="Mutalisk">
+        <LifeStart value="140"/>
+        <LifeMax value="140"/>
+        <WeaponArray index="0" Link="MutaliskGlaiveWurm"/>
+    </CUnit>
+    <CUnit id="Mutalisk2">
+        <Subtitle value="MutatedZergStrain"/>
+        <DeathRevealRadius value="3"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <LifeStart value="80"/>
+        <LifeMax value="80"/>
+        <LifeRegenRate value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/ZergAirArmor"/>
+        <ShieldsStart value="60"/>
+        <ShieldsMax value="60"/>
+        <ShieldArmor value="5"/>
+        <ShieldRegenDelay value="10"/>
+        <ShieldRegenRate value="1"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/ZergWildMutation"/>
+        <Mover value="Fly"/>
+        <Speed value="4"/>
+        <Acceleration value="3.5"/>
+        <StationaryTurningRate value="1499.9414"/>
+        <TurningRate value="1499.9414"/>
+        <Sight value="11"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="100"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="40"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Feedback2"/>
+        <BehaviorArray Link="MutaliskOutOfCombat1"/>
+        <WeaponArray Link="MutaliskGlaiveWurm"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Feedback" Type="AbilCmd" AbilCmd="Feedback2,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="ViciousGlaive" Type="Passive" Requirements="HaveHotSViciousGlaive" Row="2" Column="1"/>
+            <LayoutButtons Face="ExplosiveGlaive" Type="Passive" Requirements="HaveHotSExplosiveGlaive" Row="2" Column="2"/>
+            <LayoutButtons Face="MutaliskRapidRegeneration" Type="Passive" Requirements="HaveHotSRapidRegeneration" Row="2" Column="3"/>
+            <LayoutButtons Face="MutaliskRegeneration" Type="Passive" Row="2" Column="3"/>
+        </CardLayouts>
+        <ScoreMake value="200"/>
+        <ScoreKill value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="130"/>
+        <GlossaryStrongArray value="VikingFighter"/>
+        <GlossaryStrongArray value="BroodLord"/>
+        <GlossaryStrongArray value="VoidRay"/>
+        <GlossaryWeakArray value="Thor"/>
+        <GlossaryWeakArray value="Corruptor"/>
+        <GlossaryWeakArray value="Phoenix"/>
+        <HotkeyCategory value="Unit/Category/ZergUnits"/>
+    </CUnit>
+    <CUnit id="Mutalisk3">
+        <Subtitle value="MutatedZergStrain"/>
+        <DeathRevealRadius value="3"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="180"/>
+        <LifeMax value="180"/>
+        <LifeArmor value="2"/>
+        <LifeRegenRate value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/ZergAirArmor"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/ZergWildMutation"/>
+        <Mover value="Fly"/>
+        <Speed value="4"/>
+        <Acceleration value="3.5"/>
+        <StationaryTurningRate value="1499.9414"/>
+        <TurningRate value="1499.9414"/>
+        <Sight value="11"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="100"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="40"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <BehaviorArray Link="MutaliskOutOfCombat1"/>
+        <WeaponArray Link="MutaliskGlaiveWurm2"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="ExplosiveGlaive" Type="Passive" Requirements="HaveHotSExplosiveGlaive" Row="2" Column="0"/>
+            <LayoutButtons Face="ViciousGlaive" Type="Passive" Requirements="HaveHotSViciousGlaive" Row="2" Column="0"/>
+            <LayoutButtons Face="MutaliskRapidRegeneration" Type="Passive" Requirements="HaveHotSRapidRegeneration" Row="2" Column="0"/>
+            <LayoutButtons Face="MutaliskRegeneration" Type="Passive" Row="2" Column="0"/>
+        </CardLayouts>
+        <ScoreMake value="200"/>
+        <ScoreKill value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="130"/>
+        <GlossaryStrongArray value="VikingFighter"/>
+        <GlossaryStrongArray value="BroodLord"/>
+        <GlossaryStrongArray value="VoidRay"/>
+        <GlossaryWeakArray value="Thor"/>
+        <GlossaryWeakArray value="Corruptor"/>
+        <GlossaryWeakArray value="Phoenix"/>
+        <HotkeyCategory value="Unit/Category/ZergUnits"/>
+    </CUnit>
+    <CUnit id="MutaliskBroodlord">
+        <Subtitle value="MutatedZergStrain"/>
+        <LifeStart value="160"/>
+        <LifeMax value="160"/>
+        <LifeArmor value="1"/>
+        <AbilArray index="3" removed="1"/>
+        <AbilArray index="4" removed="1"/>
+        <WeaponArray index="0" Link="MutaliskGlaiveWurm"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Column="2"/>
+            <LayoutButtons index="7" Column="3"/>
+            <LayoutButtons index="8" removed="1"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="MutaliskGlaveWurmAttack1Missile2" parent="MISSILE">
+        <Race value="Zerg"/>
+        <Mover value="MissileDefault"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="MutaliskGlaveWurmAttack2Missile2" parent="MISSILE">
+        <Race value="Zerg"/>
+        <Mover value="GlaiveWurmBounceMissile"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="MutaliskViper">
+        <Subtitle value="Elite Zerg Strain"/>
+        <Attributes index="Light" value="0"/>
+        <Attributes index="Armored" value="1"/>
+        <LifeStart value="240"/>
+        <LifeMax value="240"/>
+        <LifeArmor value="3"/>
+        <AbilArray index="3" removed="1"/>
+        <AbilArray index="4" removed="1"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Face="ViciousGlaive" Requirements="HaveHotSViciousGlaive"/>
+            <LayoutButtons index="6" Face="ExplosiveGlaive" Requirements="HaveHotSExplosiveGlaive" Column="2"/>
+            <LayoutButtons index="7" Column="3"/>
+            <LayoutButtons index="8" removed="1"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="NeedleSpinesWeapon2" parent="MISSILE">
         <Name value="Unit/Name/HydraliskGroundWeapon"/>
         <Mover value="NeedleSpinesWeapon"/>

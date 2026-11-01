@@ -449,6 +449,55 @@
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
+    <CModel id="Mutalisk2" parent="MutaliskBase">
+        <Model value="Assets\Units\Zerg\Mutalisk_Primal_Collection\Mutalisk_Primal_Collection.m3"/>
+        <ScaleMax value="0.660000,0.660000,0.660000"/>
+        <ScaleMin value="0.540000,0.540000,0.540000"/>
+    </CModel>
+    <CModel id="Mutalisk3" parent="MutaliskBase">
+        <Model value="Assets\Zerg\Mutalisk_IzshaBrood_GuardianStrain.m3"/>
+        <ScaleMax value="0.660000,0.660000,0.660000"/>
+        <ScaleMin value="0.540000,0.540000,0.540000"/>
+    </CModel>
+    <CModel id="MutaliskDeath2" parent="MutaliskDeathBase">
+        <Model value="Assets\Units\Zerg\Mutalisk_Primal_Collection_Death\Mutalisk_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="MutaliskDeath3" parent="MutaliskDeathBase">
+        <Model value="Assets\Units\Zerg\MutaliskDeathEx1\MutaliskDeathEx1.m3"/>
+    </CModel>
+    <CModel id="MutaliskDeathRagdoll2" parent="MutaliskDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Mutalisk_Primal_Collection_DeathRagdoll\Mutalisk_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="MutaliskDeathRagdoll3" parent="MutaliskDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\MutaliskDeathRagdoll\MutaliskDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="MutaliskGlaiveWurm2" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\Primal_Mutalisk_Coop_AirDamageBonus_Missile\Primal_Mutalisk_Coop_AirDamageBonus_Missile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="MutaliskGlaveWurmAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\Primal_Mutalisk_Coop_AirDamageBonus_Missile_Impact\Primal_Mutalisk_Coop_AirDamageBonus_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="MutaliskPortrait2" parent="MutaliskPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Mutalisk_Primal_Collection_Portrait\Mutalisk_Primal_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\MutaliskPortrait_Static.dds"/>
+        <Lighting value="MutaliskPortrait"/>
+    </CModel>
+    <CModel id="MutaliskPortrait3" parent="MutaliskPortraitBase">
+        <Model value="Assets\Zerg\Mutalisk_IzshaBrood_Portrait.m3"/>
+        <Image value="Assets\Textures\MutaliskPortrait_Static.dds"/>
+        <Lighting value="MutaliskPortrait"/>
+    </CModel>
+    <CModel id="MutaliskViper">
+        <Model value="Assets\Units\Zerg\Mutalisk_CollectionSkin_Webby\Mutalisk_CollectionSkin_Webby.m3"/>
+    </CModel>
+    <CModel id="MutaliskViperDeath">
+        <Model value="Assets\Units\Zerg\Mutalisk_CollectionSkin_Webby_Death\Mutalisk_CollectionSkin_Webby_Death.m3"/>
+    </CModel>
+    <CModel id="MutaliskViperPortrait">
+        <Model value="Assets\Portraits\Zerg\Mutalisk_Webby_Collection_Portrait\Mutalisk_Webby_Collection_Portrait.m3"/>
+    </CModel>
     <CModel id="NeedleSpinesWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
         <EditorCategories value="Race:Zerg"/>
