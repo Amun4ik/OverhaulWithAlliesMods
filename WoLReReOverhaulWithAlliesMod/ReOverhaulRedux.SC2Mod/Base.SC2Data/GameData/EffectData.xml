@@ -714,7 +714,7 @@
     <CEffectLaunchMissile id="MutaliskGlaiveWurmLaunchFirstBounceMissile2">
         <ValidatorArray index="0" value="noMarkers"/>
         <EditorCategories value="Race:Zerg"/>
-        <ImpactEffect value="MutaliskGlaiveWurmSecondImpactDamage"/>
+        <ImpactEffect value="MutaliskGlaiveWurmSecondImpactDamage2"/>
         <AmmoUnit value="MutaliskGlaveWurmAttack2Missile2"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="MutaliskGlaiveWurmLaunchMissile2">
@@ -818,6 +818,21 @@
         <ValidatorArray index="0" value="TargetIsNotUnstoppable"/>
         <ValidatorArray index="1" removed="1"/>
     </CEffectApplyBehavior>
+    <CEffectDamage id="ParasiteSporeDamage">
+        <AttributeBonus index="Massive" value="0"/>
+    </CEffectDamage>
+    <CEffectDamage id="ParasiteSporeDamage2" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Zerg"/>
+        <Visibility value="Visible"/>
+        <Amount value="14"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ParasiteSporeLaunchMissile2">
+        <ValidatorArray index="0" value="ParasiteSporeInfestMissileTargetFilters"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="ParasiteSporeDamage2"/>
+        <AmmoUnit value="ParasiteSporeWeapon2"/>
+    </CEffectLaunchMissile>
     <CEffectLaunchMissile id="ParticleDisruptors2">
         <ValidatorArray index="0" value="StalkerTargetFilters"/>
         <ValidatorArray value=""/>

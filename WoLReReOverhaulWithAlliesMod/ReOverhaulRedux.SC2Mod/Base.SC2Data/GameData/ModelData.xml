@@ -81,6 +81,28 @@
     <CModel id="CommandCenter3" parent="CommandCenterBase">
         <Model value="Assets\Terran\Storm_Building_SCBraxis_Keep.m3"/>
     </CModel>
+    <CModel id="Corruptor2" parent="CorruptorBase">
+        <Model value="Assets\Units\Zerg\Corruptor\Corruptor.m3"/>
+    </CModel>
+    <CModel id="CorruptorAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\CorruptorMissileImpact\CorruptorMissileImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="CorruptorAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Zerg\CorruptorMissileLaunch\CorruptorMissileLaunch.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="CorruptorDeath2" parent="CorruptorDeathBase">
+        <Model value="Assets\Units\Zerg\CorruptorDeathEx1\CorruptorDeathEx1.m3"/>
+    </CModel>
+    <CModel id="CorruptorDeathRagdoll2" parent="CorruptorDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\CorruptorDeathRagdoll\CorruptorDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="CorruptorPortrait2" parent="CorruptorPortraitBase">
+        <Model value="Assets\Portraits\Zerg\CorruptorPortrait\CorruptorPortrait.m3"/>
+        <Image value="Assets\Textures\CorruptorPortrait_Static.dds"/>
+        <Lighting value="CorruptorPortrait"/>
+    </CModel>
     <CModel id="DOMGhostPersonalDefensiveMatrixModel2" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\Nova_Blink_Shield\Nova_Blink_Shield.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -525,6 +547,10 @@
     </CModel>
     <CModel id="OmegaliskDeathFire">
         <Model value="Assets\Zerg\Ultralisk_WiseOldTorrasque_SC1_DeathFire.m3"/>
+    </CModel>
+    <CModel id="ParasiteSporeWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\CorruptorMissile\CorruptorMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="PlanetaryFortressAttackImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\PlanetaryFortressMissileImpact\PlanetaryFortressMissileImpact.m3"/>

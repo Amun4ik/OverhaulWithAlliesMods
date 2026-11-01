@@ -328,6 +328,16 @@
     <CWeaponLegacy id="OmegaliskHeadAttack">
         <Period value="2"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="ParasiteSpore2">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
+        <DisplayEffect value="ParasiteSporeDamage2"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1.9"/>
+        <Effect value="ParasiteSporeLaunchMissile2"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="ParticleDisruptors2">
         <EditorCategories value="Race:Protoss"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
