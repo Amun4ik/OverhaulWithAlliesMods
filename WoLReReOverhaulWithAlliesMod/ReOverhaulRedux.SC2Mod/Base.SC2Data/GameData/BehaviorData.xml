@@ -61,6 +61,9 @@
         <Duration value="60"/>
         <KillCredit Value="Unknown"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="CorrosiveAcid">
+        <Duration value="9"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DOMGhostPersonalDefensiveMatrix2">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-defensivematrix.dds"/>

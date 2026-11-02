@@ -23,6 +23,12 @@
         <Period value="2.5"/>
         <Effect value="AcidSalivaLM2"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="AcidSpores">
+        <Range value="10"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AcidSporesAir">
+        <Range value="12"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="BabyUltralisk">
         <Range value="0.2"/>
     </CWeaponLegacy>
@@ -100,8 +106,26 @@
         <Period value="0.496"/>
         <Effect value="HotSZerglingClaws222"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Devourer">
+        <MinScanRange value="8"/>
+        <Range value="8"/>
+        <MinimumRange value="2"/>
+        <Period value="4"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DevourerGround">
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.3"/>
+        <Period value="2"/>
+        <Effect value="DevourerDamage2"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="FerociousSpew">
         <Range value="7"/>
+    </CWeaponLegacy>
+    <!--                                                                                         -->
+    <!-- Guardian............................................................................... -->
+    <!--                                                                                         -->
+    <CWeaponLegacy id="GuardianMPWeapon">
+        <Period value="2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="GuassRifle2">
         <EditorCategories value="Race:Terran"/>
@@ -122,6 +146,14 @@
         <Period value="1.4"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0.75"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HotSLeviathanAir">
+        <DisplayAttackCount value="6"/>
+        <Range value="12"/>
+        <Period value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HotSLeviathanGround">
+        <Range value="8"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="HotSRaptorClaws">
         <Period value="0.546"/>
@@ -332,10 +364,22 @@
         <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
         <DisplayEffect value="ParasiteSporeDamage2"/>
-        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <Range value="6"/>
-        <Period value="1.9"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Period value="2.7"/>
         <Effect value="ParasiteSporeLaunchMissile2"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ParasiteSpore22">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
+        <DisplayEffect value="ParasiteSporeDamage22"/>
+        <DisplayAttackCount value="6"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Period value="2"/>
+        <Effect value="JavelinMissileLaunchersPersistent232"/>
         <AllowedMovement value="Slowing"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ParticleDisruptors2">
@@ -442,6 +486,9 @@
         <Range value="6"/>
         <Period value="2.6"/>
         <Effect value="MedusaSet2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ScourgeSwarm">
+        <DisplayAttackCount value="12"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Separatist">
         <Period value="0.7607"/>

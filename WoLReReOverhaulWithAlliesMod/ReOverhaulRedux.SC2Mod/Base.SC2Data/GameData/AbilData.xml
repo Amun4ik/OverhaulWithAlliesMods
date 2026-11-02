@@ -147,8 +147,27 @@
     <CAbilEffectTarget id="BonesHeal">
         <TargetFilters index="0" value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
+    <CAbilArmMagazine id="BroodLordHangar">
+        <InfoArray index="Ammo1" CountStart="4">
+            <Charge Link="Abil/##id##"/>
+            <Cooldown Link="Abil/##id##"/>
+        </InfoArray>
+    </CAbilArmMagazine>
     <CAbilAugment id="Charge">
         <CmdButtonArray index="Execute" Requirements="UseCharge"/>
+    </CAbilAugment>
+    <CAbilAugment id="Charge2">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Charge"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AbilCmd value="attack,Execute"/>
+        <Cost>
+            <Cooldown Link="ChargeCharge2" Location="Unit" TimeUse="10"/>
+        </Cost>
+        <Effect value="Charge"/>
+        <AutoCastValidatorArray value="CasterNotHoldingPosition"/>
     </CAbilAugment>
     <!-- Reaper AutoCast Bombs-->
     <CAbilEffectTarget id="D8Charge">

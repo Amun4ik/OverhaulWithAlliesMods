@@ -4,6 +4,9 @@
         <Model value="Assets\Effects\Zerg\Dehaka_Coop_ThornSpike_Missile\Dehaka_Coop_ThornSpike_Missile.m3"/>
         <EditorCategories value="Race:Zerg"/>
     </CModel>
+    <CModel id="AcidSporesMissile">
+        <Model value="Assets\Zerg\GuardianMissile_PurpleColor.m3"/>
+    </CModel>
     <CModel id="AcidSporesMissile2" parent="Unit" Race="Zerg">
         <Model value="Assets\Effects\Zerg\PrimalGuardianMissile\PrimalGuardianMissile.m3"/>
         <Occlusion value="Show"/>
@@ -75,6 +78,21 @@
         <EditorCategories value="Race:Neutral"/>
         <Flags index="Ignorable" value="1"/>
     </CModel>
+    <CModel id="BroodLord">
+        <Model value="Assets\Units\Zerg\Broodlord_PremiumSkin_Aquatic\Broodlord_PremiumSkin_Aquatic.m3"/>
+    </CModel>
+    <CModel id="BroodLordDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Broodlord_CollectionSkin_Webby_DeathRagdoll\Broodlord_CollectionSkin_Webby_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="BroodLordEx1">
+        <Model value="Assets\Units\Zerg\Broodlord_PremiumSkin_Aquatic\Broodlord_PremiumSkin_Aquatic.m3"/>
+    </CModel>
+    <CModel id="BroodLordEx1Death">
+        <Model value="Assets\Units\Zerg\Broodlord_CollectionSkin_Webby_Death\Broodlord_CollectionSkin_Webby_Death.m3"/>
+    </CModel>
+    <CModel id="BroodLordEx1Portrait">
+        <Model value="Assets\Portraits\Zerg\Broodlord_Webby_Collection_Portrait\Broodlord_Webby_Collection_Portrait.m3"/>
+    </CModel>
     <CModel id="Brutalisk">
         <Model value="Assets\Units\Zerg\BrutaliskEx3\BrutaliskEx3.m3"/>
     </CModel>
@@ -82,24 +100,46 @@
         <Model value="Assets\Terran\Storm_Building_SCBraxis_Keep.m3"/>
     </CModel>
     <CModel id="Corruptor2" parent="CorruptorBase">
-        <Model value="Assets\Units\Zerg\Corruptor\Corruptor.m3"/>
+        <Model value="Assets\Zerg\Corruptor_kilysabrood.m3"/>
+    </CModel>
+    <CModel id="Corruptor22" parent="CorruptorBase">
+        <Model value="Assets\Units\Zerg\Corruptor_CollectionSkin_Webby\Corruptor_CollectionSkin_Webby.m3"/>
     </CModel>
     <CModel id="CorruptorAttackImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Zerg\CorruptorMissileImpact\CorruptorMissileImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="CorruptorAttackImpact22" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\FrenzyMissileImpact\FrenzyMissileImpact.m3"/>
         <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="CorruptorAttackLaunch2" parent="LaunchFX">
         <Model value="Assets\Effects\Zerg\CorruptorMissileLaunch\CorruptorMissileLaunch.m3"/>
         <EditorCategories value="Race:Zerg"/>
     </CModel>
+    <CModel id="CorruptorAttackLaunch22" parent="LaunchFX">
+        <Model value="Assets\Effects\Zerg\CorruptorMissileLaunch\CorruptorMissileLaunch.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
     <CModel id="CorruptorDeath2" parent="CorruptorDeathBase">
-        <Model value="Assets\Units\Zerg\CorruptorDeathEx1\CorruptorDeathEx1.m3"/>
+        <Model value="Assets\Zerg\Corruptor_KilysaBrood_DeathEx2.m3"/>
+    </CModel>
+    <CModel id="CorruptorDeath22" parent="CorruptorDeathBase">
+        <Model value="Assets\Units\Zerg\Corruptor_CollectionSkin_Webby_Death\Corruptor_CollectionSkin_Webby_Death.m3"/>
     </CModel>
     <CModel id="CorruptorDeathRagdoll2" parent="CorruptorDeathRagdollBase">
-        <Model value="Assets\Units\Zerg\CorruptorDeathRagdoll\CorruptorDeathRagdoll.m3"/>
+        <Model value="Assets\Zerg\Corruptor_KilysaBrood_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="CorruptorDeathRagdoll22" parent="CorruptorDeathRagdollBase">
+        <Model value="Assets\Units\Zerg\Corruptor_CollectionSkin_Webby_DeathRagdoll\Corruptor_CollectionSkin_Webby_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="CorruptorPortrait2" parent="CorruptorPortraitBase">
-        <Model value="Assets\Portraits\Zerg\CorruptorPortrait\CorruptorPortrait.m3"/>
+        <Model value="Assets\Zerg\Corruptor_kilysabrood_portrait.m3"/>
+        <Image value="Assets\Textures\CorruptorPortrait_Static.dds"/>
+        <Lighting value="CorruptorPortrait"/>
+    </CModel>
+    <CModel id="CorruptorPortrait22" parent="CorruptorPortraitBase">
+        <Model value="Assets\Portraits\Zerg\Corruptor_Webby_Collection_Portrait\Corruptor_Webby_Collection_Portrait.m3"/>
         <Image value="Assets\Textures\CorruptorPortrait_Static.dds"/>
         <Lighting value="CorruptorPortrait"/>
     </CModel>
@@ -109,12 +149,41 @@
         <ScaleMax value="0.700000,0.700000,0.700000"/>
         <ScaleMin value="0.700000,0.700000,0.700000"/>
     </CModel>
+    <CModel id="Devourer">
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
     <CModel id="FlamingBetty">
         <Model value="Assets\Terran\Terran_SonicEmitter.m3"/>
+    </CModel>
+    <CModel id="Guardian">
+        <Model value="Assets\Zerg\Guardian_IzshaBrood.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
     </CModel>
     <CModel id="GuardianAttackImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Zerg\PrimalGuardianMissileImpact\PrimalGuardianMissileImpact.m3"/>
         <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="GuardianDeath">
+        <Model value="Assets\Zerg\Guardian_IzshaBrood_Death.m3"/>
+    </CModel>
+    <!--                                                                                         -->
+    <!-- Guardian............................................................................... -->
+    <!--                                                                                         -->
+    <CModel id="GuardianMP">
+        <Model value="Assets\Zerg\Guardian_KilysaBrood_Collection.m3"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="GuardianMPPortrait">
+        <Model value="Assets\Zerg\Guardian_KilysaBrood_Collection_portrait.m3"/>
+    </CModel>
+    <CModel id="GuardianMPWeaponImpact">
+        <Model value="Assets\Zerg\GuardianMissileImpact_PurpleColor.m3"/>
+    </CModel>
+    <CModel id="GuardianMPWeaponMissile">
+        <Model value="Assets\Zerg\GuardianMissile_PurpleColor.m3"/>
     </CModel>
     <CModel id="GuardianShieldImpact2" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Neutral\Fear_Coop\Fear_Coop.m3"/>
@@ -153,11 +222,13 @@
     </CModel>
     <CModel id="HunterKillerAttackLaunch">
         <Model value="Assets\Effects\Zerg\HydraliskWeaponSCBW\HydraliskWeaponSCBW@Launch.m3"/>
-        <ScaleMax value="1.000000,1.000000,1.000000"/>
-        <ScaleMin value="1.000000,1.000000,1.000000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="HunterKillerWeapon">
         <Model value="Assets\Effects\Zerg\Dakrun_ThornSpike_Missile\Dakrun_ThornSpike_Missile.m3"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
     </CModel>
     <CModel id="Hydralisk2" parent="HydraliskBase">
         <Model value="Assets\Zerg\Hydralisk_PremiumSkin_Noxious_TC.m3"/>
@@ -300,6 +371,9 @@
         <SelectionRadius value="0.750000"/>
         <ShadowRadius value="0.750000"/>
         <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="Leviathan">
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
     </CModel>
     <CModel id="Liberator2" parent="LiberatorBase">
         <Model value="Assets\Terran\SC2Valkyrie_GhostNova_UED.m3"/>
@@ -549,7 +623,11 @@
         <Model value="Assets\Zerg\Ultralisk_WiseOldTorrasque_SC1_DeathFire.m3"/>
     </CModel>
     <CModel id="ParasiteSporeWeapon2" parent="MissileFX">
-        <Model value="Assets\Effects\Zerg\CorruptorMissile\CorruptorMissile.m3"/>
+        <Model value="Assets\Effects\Zerg\ArcadeCorruptorMissile\ArcadeCorruptorMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="ParasiteSporeWeapon22" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\FrenzyMissile\FrenzyMissile.m3"/>
         <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="PlanetaryFortressAttackImpact2" parent="ImpactFX">
@@ -586,6 +664,12 @@
         <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="PrimalFlyerAttackImpact">
+        <Model value="Assets\Zerg\GuardianMissileImpact_PurpleColor.m3"/>
+    </CModel>
+    <CModel id="PrimalGuardianPortrait">
+        <Model value="Assets\Zerg\Guardian_IzshaBrood_Portrait.m3"/>
     </CModel>
     <CModel id="Pygalisk">
         <Model value="Assets\Zerg\Pygalisk_DS.m3"/>

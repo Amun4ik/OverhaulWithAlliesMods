@@ -289,15 +289,89 @@
         </Wireframe>
         <WireframeShieldColor value="255,0,128,0"/>
     </CActorUnit>
+    <CActorUnit id="Corruptor22" parent="GenericUnitMorph" unitName="Corruptor22">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <Macros value="PhysicsDeathsVoidAir"/>
+        <On Terms="Abil.MorphToBroodLord.Start" Send="AnimPlay Morph Stand,Morph,Start"/>
+        <On Terms="Abil.Corruption.SourceChannelStart" Send="$Spell"/>
+        <On Terms="Effect.InfestedVentSpawnCorruptorCreateCorruptor.Create" Send="$Birth 0 -1.000000 -1.000000 0.500000 AsDuration"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Corruptor_Land"/>
+        <On Terms="Effect.CorruptorGroundAttackLaunchMissile.Start" Send="AnimPlay Attack Attack"/>
+        <HostSiteOps Ops="SOpBankerCorruptor"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <Baselines index="Stand" BlendIn="1.000000" BlendOut="1.000000"/>
+        <Baselines index="Walk" BlendIn="1.000000" BlendOut="1.000000"/>
+        <DeathArray index="Normal" ModelLink="CorruptorDeath22" SoundLink="" VoiceLink="Corruptor_Death"/>
+        <DeathCustoms>
+            <ActorModel value="UnitDeathRagdollFlier"/>
+            <ModelLink value="CorruptorDeathRagdoll22"/>
+            <Name value="RagdollBasic"/>
+            <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+            <BodySquibs Name="FireOnMetal"/>
+            <BodySquibs Name="BloodReduced" IsFallback="1"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+        <PortraitModel value="CorruptorPortrait22"/>
+        <BarOffset value="55"/>
+        <BarWidth value="78"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-Corruptor.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-corruptor.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level0.dds"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <SoundArray index="Ready" value="Corruptor_Ready"/>
+        <SoundArray index="What" value="Corruptor_What"/>
+        <SoundArray index="Yes" value="Corruptor_Yes"/>
+        <SoundArray index="Attack" value="Corruptor_Attack"/>
+        <SoundArray index="Pissed" value="Corruptor_Pissed"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-corruptor.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-Corruptor.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,0,128,0"/>
+    </CActorUnit>
     <CActorAction id="CorruptorAttack2" parent="GenericAttack" effectImpact="ParasiteSporeDamage2" effectLaunch="ParasiteSporeLaunchMissile2">
         <LaunchAssets Model="CorruptorAttackLaunch2" Sound="Corruptor_AttackLaunch"/>
         <Missile value="CorruptorAttackMissile2"/>
         <ImpactMap index="None" Model="CorruptorAttackImpact2" Sound="Corruptor_AttackImpact"/>
         <ImpactPhysics Name="ParasiteSporeImpact" MatchKeys="Basic" Physics="CorruptorAttackDeathForce"/>
     </CActorAction>
+    <CActorAction id="CorruptorAttack22" parent="GenericAttack" effectImpact="ParasiteSporeDamage22" effectLaunch="ParasiteSporeLaunchMissile22">
+        <LaunchAssets Model="CorruptorAttackLaunch22" Sound="Corruptor_AttackLaunch"/>
+        <Missile value="CorruptorAttackMissile22"/>
+        <ImpactMap index="None" Model="CorruptorAttackImpact22" Sound="Corruptor_AttackImpact"/>
+        <ImpactPhysics Name="ParasiteSporeImpact" MatchKeys="Basic" Physics="CorruptorAttackDeathForce"/>
+    </CActorAction>
     <CActorMissile id="CorruptorAttackMissile2" parent="GenericAttackMissile" unitName="ParasiteSporeWeapon2"/>
+    <CActorMissile id="CorruptorAttackMissile22" parent="GenericAttackMissile" unitName="ParasiteSporeWeapon22"/>
     <CActorSound id="Corruptor_Death2" parent="SoundOneShot">
         <On Terms="UnitDeath.Corruptor2; PassChance 25.000000" Send="Create"/>
+        <Sound value="Corruptor_Death"/>
+    </CActorSound>
+    <CActorSound id="Corruptor_Death22" parent="SoundOneShot">
+        <On Terms="UnitDeath.Corruptor22; PassChance 25.000000" Send="Create"/>
         <Sound value="Corruptor_Death"/>
     </CActorSound>
     <CActorSound id="DOMGhostPersonalDefensiveMatrixBirth2" parent="SoundOneShot">
@@ -323,6 +397,13 @@
     <CActorUnit id="DefilerMP">
         <Scale value="1.200000"/>
     </CActorUnit>
+    <CActorAction id="DevourerAttack2" parent="GenericAttack" effectImpact="DevourerDamage2" effectLaunch="DevourerLaunchMissile">
+        <On Terms="ActorCreation" Send="SetTintColor 125,30,255"/>
+        <LaunchAssets Sound="Roach_AttackLaunchMelee"/>
+        <Missile value="DevourerAttackMissile"/>
+        <ImpactMap index="None" Model="CorrosiveAcidImpact" Sound="Roach_AttackImpactMelee"/>
+        <ImpactModel value="CorrosiveAcidImpactModel"/>
+    </CActorAction>
     <CActorModel id="FenixSunderAuraModel2" parent="ModelAnimationStyleContinuous">
         <Inherits index="CloakEffect" value="1"/>
         <On Terms="Behavior.FenixSunderAuraEnemy2.On" Send="Create"/>
@@ -335,6 +416,7 @@
         <HostSiteOps Ops="SOpAttachOverhead"/>
         <Model value="GuardianShieldImpact2"/>
         <ModelFlags index="AllowHitTest" value="0"/>
+        <Scale value="0.800000"/>
     </CActorModel>
     <CActorAction id="GoliathGroundAttack2" parent="GenericAttack" effectAttack="GoliathG2">
         <LaunchAttachQuery Methods="AMFilterWeaponSetA0"/>

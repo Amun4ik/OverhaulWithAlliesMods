@@ -9,6 +9,9 @@
     <CRequirement id="AllyNormalModeReq">
         <NodeArray index="Use" Link="NotCountBehaviorAllyNormalModeCompleteOnlyAtUnit"/>
     </CRequirement>
+    <CRequirement id="ArmBroodlingEscort">
+        <NodeArray index="Use" Link="LTCountUnitBroodlingEscortQueuedOrBetterAtUnit4"/>
+    </CRequirement>
     <CRequirement id="HaveBlackOps2">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeDominionForcesCompleteOnly"/>

@@ -252,6 +252,12 @@
         <GlossaryWeakArray value="Phoenix"/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
     </CUnit>
+    <CUnit id="BroodLord">
+        <LifeStart value="475"/>
+        <LifeMax value="475"/>
+        <LifeArmor value="4"/>
+        <LifeRegenRate value="1"/>
+    </CUnit>
     <CUnit id="Brutalisk">
         <LifeStart value="3500"/>
         <LifeMax value="3500"/>
@@ -271,6 +277,9 @@
             <LayoutButtons index="6" removed="1"/>
             <LayoutButtons index="7" removed="1"/>
         </CardLayouts>
+        <LifeStart value="260"/>
+        <LifeMax value="260"/>
+        <LifeRegenRate value="0.5"/>
     </CUnit>
     <CUnit id="Corruptor2">
         <Subtitle value="MutatedZergStrain"/>
@@ -284,10 +293,10 @@
         <Collide index="Flying" value="1"/>
         <Attributes index="Armored" value="1"/>
         <Attributes index="Biological" value="1"/>
-        <LifeStart value="200"/>
-        <LifeMax value="200"/>
+        <LifeStart value="320"/>
+        <LifeMax value="320"/>
         <LifeArmor value="2"/>
-        <LifeRegenRate value="0.2734"/>
+        <LifeRegenRate value="0.5"/>
         <LifeArmorName value="Unit/LifeArmorName/ZergAirArmor"/>
         <Mover value="Fly"/>
         <Speed value="2.9531"/>
@@ -305,11 +314,75 @@
         <DamageDealtXP value="1"/>
         <DamageTakenXP value="1"/>
         <KillXP value="70"/>
-        <AbilArray Link="CausticSpray"/>
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <WeaponArray Link="ParasiteSpore2"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.625"/>
+        <SeparationRadius value="0.625"/>
+        <ScoreMake value="250"/>
+        <ScoreKill value="250"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="17"/>
+        <MinimapRadius value="0.625"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAIThink value="AIThinkCorruptor"/>
+        <AIEvalFactor value="0.7"/>
+        <Mass value="0.6"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="140"/>
+        <GlossaryStrongArray value="Battlecruiser"/>
+        <GlossaryStrongArray value="Mutalisk"/>
+        <GlossaryStrongArray value="Phoenix"/>
+        <GlossaryWeakArray value="VikingFighter"/>
+        <GlossaryWeakArray value="Hydralisk"/>
+        <GlossaryWeakArray value="VoidRay"/>
+        <HotkeyCategory value="Unit/Category/ZergUnits"/>
+    </CUnit>
+    <CUnit id="Corruptor22">
+        <Subtitle value="MutatedZergStrain"/>
+        <DeathRevealRadius value="3"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="280"/>
+        <LifeMax value="280"/>
+        <LifeArmor value="4"/>
+        <LifeRegenRate value="0.5"/>
+        <LifeArmorName value="Unit/LifeArmorName/ZergAirArmor"/>
+        <Mover value="Fly"/>
+        <Speed value="2.9531"/>
+        <Acceleration value="2.625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="10"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="100"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="70"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <WeaponArray Link="ParasiteSpore22"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -368,6 +441,12 @@
         <EnergyMax value="300"/>
         <EnergyRegenRate value="0.75"/>
     </CUnit>
+    <CUnit id="Devourer">
+        <LifeStart value="410"/>
+        <LifeMax value="410"/>
+        <LifeArmor value="4"/>
+        <LifeRegenRate value="0.5"/>
+    </CUnit>
     <CUnit id="Factory">
         <CardLayouts index="0">
             <LayoutButtons index="0" Face="Hellion222222" AbilCmd="FactoryTrain,Train19"/>
@@ -406,8 +485,27 @@
             <LayoutButtons index="7" removed="1"/>
         </CardLayouts>
     </CUnit>
+    <CUnit id="Guardian">
+        <LifeStart value="350"/>
+        <LifeMax value="350"/>
+        <LifeArmor value="4"/>
+        <LifeRegenRate value="1"/>
+        <Speed value="2.25"/>
+    </CUnit>
+    <!--                                                                                         -->
+    <!-- Guardian .............................................................................. -->
+    <!--                                                                                         -->
+    <CUnit id="GuardianMP">
+        <Subtitle value="Elite Zerg Strain"/>
+        <WeaponArray Link="AcidSporesAir"/>
+    </CUnit>
     <CUnit id="HotSHunter">
         <Speed value="3.25"/>
+    </CUnit>
+    <CUnit id="HotSLeviathan">
+        <LifeStart value="3800"/>
+        <LifeMax value="3800"/>
+        <LifeArmor value="16"/>
     </CUnit>
     <CUnit id="HotSNoxious">
         <LifeStart value="850"/>
@@ -944,6 +1042,11 @@
         <SubgroupPriority value="3"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="Leviathan">
+        <LifeStart value="9000"/>
+        <LifeMax value="9000"/>
+        <LifeArmor value="60"/>
     </CUnit>
     <CUnit id="Liberator2">
         <DeathRevealRadius value="3"/>
@@ -1485,7 +1588,18 @@
         <LifeRegenRate value="5"/>
         <BehaviorArray Link="FenixSunderAura2"/>
     </CUnit>
+    <CUnit id="OmegaliskBurrowed">
+        <LifeStart value="4000"/>
+        <LifeMax value="4000"/>
+        <LifeArmor value="12"/>
+        <LifeRegenRate value="5"/>
+    </CUnit>
     <CUnit id="ParasiteSporeWeapon2" parent="MISSILE">
+        <Race value="Zerg"/>
+        <Mover value="MissileDefault"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="ParasiteSporeWeapon22" parent="MISSILE">
         <Race value="Zerg"/>
         <Mover value="MissileDefault"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
@@ -2084,6 +2198,10 @@
         <LifeStart value="60"/>
         <LifeMax value="60"/>
         <Speed value="4.25"/>
+        <AbilArray Link="Charge2"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="Charge" Type="AbilCmd" AbilCmd="Charge2,Execute" Row="0" Column="4"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="Separatist2">
         <DeathRevealRadius value="3"/>

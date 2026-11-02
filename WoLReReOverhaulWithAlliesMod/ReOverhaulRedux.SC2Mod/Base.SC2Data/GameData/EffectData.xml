@@ -24,6 +24,16 @@
         <Amount value="20"/>
         <Death value="Disintegrate"/>
     </CEffectDamage>
+    <CEffectDamage id="AcidSporesAirDamage">
+        <Amount value="70"/>
+        <AreaArray Radius="0.75" Fraction="0.5"/>
+        <AreaArray Radius="1.5" Fraction="0.25"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Air,Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectDamage id="AcidSporesDamage">
+        <Amount value="55"/>
+    </CEffectDamage>
     <CEffectDamage id="AcidSporesDamage2" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:Zerg"/>
         <Visibility value="Visible"/>
@@ -161,6 +171,17 @@
     <CEffectDamage id="DevastatingShotDamage">
         <Amount value="50"/>
     </CEffectDamage>
+    <CEffectDamage id="DevourerDamage">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeFactor index="Armored" value="0.5"/>
+        <Amount value="50"/>
+    </CEffectDamage>
+    <CEffectDamage id="DevourerDamage2" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <Amount value="90"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="FenixSunderAuraEnemy2"/>
     <CEffectEnumArea id="FenixSunderAuraSearch2">
         <SearchFilters value="Ground;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -226,6 +247,13 @@
         <Amount value="14"/>
         <AreaArray Radius="1" Fraction="0.25"/>
         <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectDamage id="GuardianMPWeaponDamage">
+        <Amount value="90"/>
+        <AreaArray Radius="0.75" Fraction="0.5"/>
+        <AreaArray Radius="1.5" Fraction="0.25"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Ground,Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectDamage id="GuassRifle2" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
@@ -301,6 +329,20 @@
     <CEffectCreateUnit id="HotSBanelingSplitterling">
         <SpawnCount value="4"/>
     </CEffectCreateUnit>
+    <CEffectCreatePersistent id="HotSLeviathanAirAttackCreatePersistent">
+        <PeriodCount value="6"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="HotSLeviathanAirAttackDamage">
+        <AttributeBonus index="Massive" value="0"/>
+        <ArmorReduction value="0"/>
+        <Amount value="16"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="HotSLeviathanAirAttackLaunchMissile">
+        <RetargetRange value="6"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="HotSLeviathanGroundAttackDamage">
+        <ArmorReduction value="0"/>
+    </CEffectDamage>
     <CEffectSet id="HotSRaptorClaws">
         <EffectArray index="1" value="HotSRaptorClawsDamage"/>
         <EffectArray index="2" removed="1"/>
@@ -484,7 +526,17 @@
         <Flags index="Channeled" value="1"/>
         <PeriodCount value="3"/>
         <PeriodicEffectArray value="HunterKiller"/>
-        <PeriodicPeriodArray value="0.2"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="JavelinMissileLaunchersPersistent232">
+        <EditorCategories value="Race:Zerg"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <Flags index="Channeling" value="1"/>
+        <PeriodCount value="6"/>
+        <PeriodicEffectArray value="ParasiteSporeLaunchMissile22"/>
+        <PeriodicPeriodArray value="0.12"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="KorhalPalaceGateDamage3">
         <EditorCategories value="Race:Terran"/>
@@ -497,6 +549,20 @@
         <AreaArray Radius="0.5" Fraction="0.5"/>
         <AreaArray Radius="1" Fraction="0.2"/>
         <SearchFilters value="Air;RawResource,HarvestableResource,Missile,Stasis,Dead,Hidden,Powerup"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="LeviathanAirAttackCreatePersistent">
+        <PeriodCount value="12"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="LeviathanAirAttackDamage">
+        <ArmorReduction value="0"/>
+        <Amount value="20"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="LeviathanAirAttackLaunchMissile">
+        <RetargetRange value="6"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="LeviathanGroundAttackDamage">
+        <ArmorReduction value="0"/>
+        <Amount value="40"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="LiberatorDamageMissileLM3">
         <EditorCategories value="Race:Terran"/>
@@ -805,6 +871,9 @@
     <CEffectEnumArea id="NoxiousDamageAuraSearch">
         <AreaArray index="0" Radius="4"/>
     </CEffectEnumArea>
+    <CEffectEnumArea id="OmegaliskCleave">
+        <AreaArray index="0" Radius="3.25"/>
+    </CEffectEnumArea>
     <CEffectDamage id="OmegaliskCleaveMU">
         <Amount value="50"/>
     </CEffectDamage>
@@ -824,7 +893,16 @@
     <CEffectDamage id="ParasiteSporeDamage2" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:Zerg"/>
         <Visibility value="Visible"/>
-        <Amount value="14"/>
+        <Amount value="37"/>
+        <Death value="Disintegrate"/>
+        <AttributeFactor index="Massive" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="ParasiteSporeDamage22" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Zerg"/>
+        <AttributeFactor index="Armored" value="0.5"/>
+        <ArmorReduction value="0"/>
+        <Visibility value="Visible"/>
+        <Amount value="8"/>
         <Death value="Disintegrate"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="ParasiteSporeLaunchMissile2">
@@ -832,6 +910,15 @@
         <EditorCategories value="Race:Zerg"/>
         <ImpactEffect value="ParasiteSporeDamage2"/>
         <AmmoUnit value="ParasiteSporeWeapon2"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="ParasiteSporeLaunchMissile22">
+        <ValidatorArray index="0" value="ParasiteSporeInfestMissileTargetFilters"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="ParasiteSporeDamage22"/>
+        <Flags index="Retarget" value="1"/>
+        <AmmoUnit value="ParasiteSporeWeapon22"/>
+        <RetargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <RetargetRange value="2"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="ParticleDisruptors2">
         <ValidatorArray index="0" value="StalkerTargetFilters"/>

@@ -8,23 +8,19 @@
         <OperandArray value="OrCountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnit"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndOr2589852481CountUnitFactoryTechLabCompleteOnlyAtUnitCountUnitFactoryTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot2CompleteOnly">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="Or2589852481CountUnitFactoryTechLabCompleteOnlyAtUnitCountUnitFactoryTechReactorCompleteOnlyAtUnit"/>
         <OperandArray value="CountUnitSupplyDepot2CompleteOnly"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndOr2589852481CountUnitFactoryTechLabCompleteOnlyAtUnitCountUnitFactoryTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot2CompleteOnlyCountUnitArmoryCompleteOnly">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="Or2589852481CountUnitFactoryTechLabCompleteOnlyAtUnitCountUnitFactoryTechReactorCompleteOnlyAtUnit"/>
         <OperandArray value="CountUnitSupplyDepot2CompleteOnly"/>
         <OperandArray value="CountUnitArmoryCompleteOnly"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndOr2589852481CountUnitStarportTechLabCompleteOnlyAtUnitCountUnitStarportTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot22CompleteOnly">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="Or2589852481CountUnitStarportTechLabCompleteOnlyAtUnitCountUnitStarportTechReactorCompleteOnlyAtUnit"/>
         <OperandArray value="CountUnitSupplyDepot22CompleteOnly"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndOr2589852481CountUnitStarportTechLabCompleteOnlyAtUnitCountUnitStarportTechReactorCompleteOnlyAtUnitCountUnitSupplyDepot22CompleteOnlyCountUnitFusionCoreCompleteOnly">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="Or2589852481CountUnitStarportTechLabCompleteOnlyAtUnitCountUnitStarportTechReactorCompleteOnlyAtUnit"/>
         <OperandArray value="CountUnitSupplyDepot22CompleteOnly"/>
         <OperandArray value="CountUnitFusionCoreCompleteOnly"/>
@@ -43,12 +39,10 @@
     </CRequirementCountBehavior>
     <CRequirementCountUnit id="CountUnitArmory2CompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="Armory2" State="CompleteOnly"/>
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitSupplyDepot22CompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="SupplyDepot22" State="CompleteOnly"/>
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitSupplyDepot22CompleteOnly2589852481">
@@ -57,7 +51,6 @@
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitSupplyDepot2CompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="SupplyDepot2" State="CompleteOnly"/>
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitSupplyDepot2CompleteOnly2589852481">
@@ -88,6 +81,11 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="TychusBoys" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementLT id="LTCountUnitBroodlingEscortQueuedOrBetterAtUnit4">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUnitBroodlingEscortQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementLT>
     <CRequirementNot id="NotCountBehaviorAllyAggressiveModeCompleteOnlyAtUnit">
         <OperandArray index="0" value="CountBehaviorAllyAggressiveModeCompleteOnlyAtUnit"/>
     </CRequirementNot>
@@ -104,7 +102,6 @@
         <OperandArray value="CountUpgradeDominionForcesCompleteOnly"/>
     </CRequirementOr>
     <CRequirementOr id="OrCountUnitBarracksTechLabCompleteOnlyAtUnitCountUnitBarracksTechReactorCompleteOnlyAtUnit">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="CountUnitBarracksTechLabCompleteOnlyAtUnit"/>
         <OperandArray value="CountUnitBarracksTechReactorCompleteOnlyAtUnit"/>
     </CRequirementOr>
