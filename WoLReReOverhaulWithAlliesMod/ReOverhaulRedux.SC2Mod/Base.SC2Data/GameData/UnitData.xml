@@ -1046,6 +1046,24 @@
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
     </CUnit>
+    <CUnit id="Larva">
+        <CardLayouts index="0">
+            <LayoutButtons index="9" Face="MorphToMutaliskBroodlord" AbilCmd="LarvaTrainSwarm,Train24" Row="2" Column="0"/>
+            <LayoutButtons index="10" Face="MorphToMutaliskViper" AbilCmd="LarvaTrainSwarm,Train25" Row="2" Column="0"/>
+            <LayoutButtons index="11" Face="Infestor" AbilCmd="LarvaTrain,Train11" Column="2"/>
+            <LayoutButtons index="12" Face="MorphtoDefiler" AbilCmd="LarvaTrainSwarm,Train3" Column="2"/>
+            <LayoutButtons index="13" Face="SwarmHostMP" AbilCmd="LarvaTrain,Train15" Row="1" Column="4"/>
+            <LayoutButtons index="14" Face="MorphToSwarmHostSplitB" AbilCmd="LarvaTrainSwarm,Train27" Row="1" Column="4"/>
+            <LayoutButtons Face="ZergMorphPage1" Type="Submenu" SubmenuCardId="0002" Row="2" Column="2"/>
+            <LayoutButtons Face="ZergMorphPage2" Type="Submenu" SubmenuCardId="0003" Row="2" Column="3"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="Leviathan">
         <LifeStart value="9000"/>
         <LifeMax value="9000"/>
@@ -3597,6 +3615,14 @@
         <Mover value="CliffJumper"/>
         <BehaviorArray Link="ReaperJump"/>
         <Food value="0"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Column="3"/>
+            <LayoutButtons index="11" Row="1" Column="2"/>
+            <LayoutButtons Face="TerranBuild2" Type="Submenu" SubmenuCardId="0004" Row="2" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0004">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="SentryGun">
         <LifeStart value="250"/>

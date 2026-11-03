@@ -371,6 +371,132 @@
         <Range index="0" value="7"/>
         <AutoCastRange value="7"/>
     </CAbilEffectTarget>
+    <CAbilTrain id="LarvaTrain">
+        <InfoArray index="Train1">
+            <Unit index="1" value="Zergling"/>
+        </InfoArray>
+        <InfoArray index="Train2">
+            <Button DefaultButtonFace="Overlord" State="Available" Requirements=""/>
+            <Unit index="0" value="Overlord"/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train3">
+            <Button DefaultButtonFace="Zergling" Requirements="HaveSpawningPool"/>
+            <Unit index="0" value="Zergling"/>
+        </InfoArray>
+        <InfoArray index="Train4">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train5">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train7">
+            <Button DefaultButtonFace="" Requirements="Kit@CanBuildGhostAcademy"/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train10">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train11">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train12">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train13">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train15">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="LarvaTrainSwarm">
+        <InfoArray index="Train1">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train3">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train4">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train7">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+            <Unit index="1" removed="1"/>
+            <Unit index="2" removed="1"/>
+            <Unit index="3" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train10">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+            <Unit index="1" removed="1"/>
+            <Unit index="2" removed="1"/>
+            <Unit index="3" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train13">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train17">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train18">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train21">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train22">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train23">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train24">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train25">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train26">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train27">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train28">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="LarvaTrainSwarmling">
+        <InfoArray index="Train1">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+            <Unit index="1" removed="1"/>
+            <Unit index="2" removed="1"/>
+        </InfoArray>
+    </CAbilTrain>
     <CAbilEffectTarget id="LocustLaunch">
         <Cost index="0">
             <Cooldown TimeUse="20"/>

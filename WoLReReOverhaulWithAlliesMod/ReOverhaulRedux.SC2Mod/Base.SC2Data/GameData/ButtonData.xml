@@ -129,6 +129,20 @@
         <AlertIcon value="Assets\Textures\btn-unit-terran-troopermengskflamethrower.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="TerranBuild">
+        <Icon value="Assets\Textures\ClassicIcons\SC1_TerranSCVBasicStructure.dds"/>
+        <AlertIcon value="Assets\Textures\ClassicIcons\SC1_TerranSCVBasicStructure.dds"/>
+    </CButton>
+    <CButton id="TerranBuild2">
+        <Icon value="Assets\Textures\ClassicIcons\SC1_TerranLongboltMissile.dds"/>
+        <AlertIcon value="Assets\Textures\ClassicIcons\SC1_TerranLongboltMissile.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+    </CButton>
+    <CButton id="TerranBuildAdvanced">
+        <Icon value="Assets\Textures\ClassicIcons\SC1_TerranAdvancedStructure.dds"/>
+        <AlertIcon value="Assets\Textures\ClassicIcons\SC1_TerranAdvancedStructure.dds"/>
+    </CButton>
     <CButton id="TornadoMissile2">
         <Icon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
         <AlertIcon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
@@ -173,5 +187,18 @@
         <Icon value="Assets\Textures\btn-unit-terran-valkyrie@scbw.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-valkyrie@scbw.dds"/>
         <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ZergMorphPage1">
+        <Icon value="Assets\Textures\ClassicIcons\SC1_ZergBasicMutation.dds"/>
+        <AlertIcon value="Assets\Textures\ClassicIcons\SC1_ZergBasicMutation.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+        <TintRacially value="1"/>
+    </CButton>
+    <CButton id="ZergMorphPage2">
+        <Icon value="Assets\Textures\ClassicIcons\SC1_ZergAdvancedMutation.dds"/>
+        <AlertIcon value="Assets\Textures\ClassicIcons\SC1_ZergAdvancedMutation.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="ZergMorphPage1"/>
     </CButton>
 </Catalog>
