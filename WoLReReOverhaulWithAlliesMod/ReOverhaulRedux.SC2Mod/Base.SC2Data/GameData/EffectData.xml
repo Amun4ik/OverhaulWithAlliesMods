@@ -2251,7 +2251,7 @@
     <CEffectCreatePersistent id="ZergBuildingSpawnBroodling9Delay2">
         <ValidatorArray value="CasterIsNotHidden"/>
         <EditorCategories value="Race:Zerg"/>
-        <ExpireDelay value="0.5"/>
+        <ExpireDelay value="0.1"/>
         <FinalEffect value="ZergBuildingSpawnBroodling92"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="ZerglingSunder">

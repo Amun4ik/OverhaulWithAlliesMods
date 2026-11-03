@@ -625,6 +625,8 @@
     <CModel id="ParasiteSporeWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Zerg\ArcadeCorruptorMissile\ArcadeCorruptorMissile.m3"/>
         <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
+        <ScaleMin value="1.600000,1.600000,1.600000"/>
     </CModel>
     <CModel id="ParasiteSporeWeapon22" parent="MissileFX">
         <Model value="Assets\Effects\Zerg\FrenzyMissile\FrenzyMissile.m3"/>

@@ -206,6 +206,7 @@ Behavior/EditorPrefix/BanelingExplode2=Dead Hand Protocol -
 Behavior/EditorPrefix/BroodlingFate2=
 Behavior/EditorPrefix/DOMGhostPersonalDefensiveMatrix2=Nova -
 Behavior/EditorPrefix/FenixSunderAura2=Ultralisk -
+Behavior/EditorPrefix/FenixSunderAura22=Apocalisk -
 Behavior/EditorPrefix/FenixSunderAuraEnemy2=Ultralisk -
 Behavior/EditorPrefix/LichLifeConsume=
 Behavior/EditorPrefix/SwarmQueenRegenAuraTarget2=Shaymen -

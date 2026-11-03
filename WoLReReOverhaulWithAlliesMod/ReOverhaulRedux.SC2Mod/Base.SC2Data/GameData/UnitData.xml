@@ -447,6 +447,9 @@
         <LifeArmor value="4"/>
         <LifeRegenRate value="0.5"/>
     </CUnit>
+    <CUnit id="DevourerMissile">
+        <Height value="3"/>
+    </CUnit>
     <CUnit id="Factory">
         <CardLayouts index="0">
             <LayoutButtons index="0" Face="Hellion222222" AbilCmd="FactoryTrain,Train19"/>
@@ -2159,12 +2162,12 @@
     </CUnit>
     <CUnit id="SJPirateCapitalShipLeftLMWeapon2" parent="MISSILE">
         <Race value="Terr"/>
-        <Mover value="NovaXanthosRocketBarrage"/>
+        <Mover value="WidowMineWeapon"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="SJPirateCapitalShipRightLMWeapon2" parent="MISSILE">
         <Race value="Terr"/>
-        <Mover value="NovaXanthosRocketBarrage"/>
+        <Mover value="WidowMineWeapon"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="ScantipedeParasitic">
@@ -4414,11 +4417,11 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="UltraliskWeaponCooldown"/>
-        <AbilArray Link="TornadoMissile4"/>
         <BehaviorArray Link="Frenzy"/>
         <BehaviorArray Link="Frenzy"/>
         <BehaviorArray Link="UltraliskOutOfCombat1"/>
         <BehaviorArray Link="FenixSunderAura2"/>
+        <BehaviorArray Link="FenixSunderAura22"/>
         <WeaponArray Link="KaiserBlades3"/>
         <WeaponArray Link="SJPirateCapitalShip2" Turret="Cerberus"/>
         <CardLayouts>
@@ -4430,7 +4433,6 @@
             <LayoutButtons Face="Frenzied" Type="Passive" Behavior="Frenzy" Row="2" Column="3"/>
             <LayoutButtons Face="MonarchBlades" Type="Passive" Requirements="HaveHotSMonarchBlades" Row="2" Column="1"/>
             <LayoutButtons Face="TissueAssimilation" Type="Passive" Requirements="HaveHotSTissueAssimilation" Row="2" Column="2"/>
-            <LayoutButtons Face="TornadoMissile4" Row="2" Column="0"/>
         </CardLayouts>
         <Radius value="1"/>
         <SeparationRadius value="1"/>

@@ -706,7 +706,7 @@
         <UninterruptibleArray index="Channel" value="1"/>
         <UninterruptibleArray index="Finish" value="1"/>
         <CursorEffect value="BurrowChargeTargetSearch"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="UltraliskBurrowCharge" Requirements="HaveHotSUltraliskBurrowCharge"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UltraliskBurrowCharge"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="UltrasonicPulseEnhanced">
         <Cost index="0">

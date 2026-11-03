@@ -24,11 +24,13 @@ Behavior/Name/AllyNormalMode=AllyNormalMode
 Behavior/Name/DOMGhostPersonalDefensiveMatrix2=Ionic Force Field
 Behavior/Name/DevastatingShotExtraDamage=Corrosive Erosion
 Behavior/Name/DisableAlliedPing=DisableAlliedPing
+Behavior/Name/FenixSunderAura22=Apocalisk Missiles
 Behavior/Name/FenixSunderAuraEnemy2=Fear Aura
 Behavior/Name/GeyserExhaustedHarvestable=Geyser Exhausted
 Behavior/Name/SwarmQueenRegenAuraTarget2=Regeneration Aura
 Behavior/Name/SwarmQueenRegenAuraTarget22=Inspiration Aura
 Behavior/Tooltip/DOMGhostPersonalDefensiveMatrix2=This unit is absorbing a portion of the damage dealt to it.
+Behavior/Tooltip/FenixSunderAura22=Apocalisk Periodically launches multiple rockets to nearby targets
 Behavior/Tooltip/FenixSunderAuraEnemy2=Unit is under heavy pressure, reducing it's attack and movement speed by 15%
 Behavior/Tooltip/SwarmQueenRegenAuraTarget2=Shaymen slowly repair and heal all units around him.
 Behavior/Tooltip/SwarmQueenRegenAuraTarget22=Forces around Raynor attack 10% faster.
@@ -174,6 +176,7 @@ Button/Tooltip/TitanMechAssault2=Prototype Viking variant with advanced targetin
 Button/Tooltip/TornadoMissile2=When attacking a target, fire 3 missile, each deal 8 (+4 vs armored) damage.
 Button/Tooltip/TornadoMissile3=When attacking a mechanical unit, the Warhound launches electrically charged missiles at its target, dealing 30 damage per volley.<n/><c val="#ColorAttackInfo">Can attack ground units.</c> 
 Button/Tooltip/TornadoMissile4=When attacking a mechanical unit, the Warhound launches electrically charged missiles at its target, dealing 30 damage per volley.<n/><c val="#ColorAttackInfo">Can attack ground units.</c> 
+Button/Tooltip/TorrasqueChrysalis=Allows the Ultralisk to revive upon death
 Button/Tooltip/TossGrenade=Tosses a grenade that explodes for <d ref="Effect,TossGrenadeDamage,Amount"/> damage in a radius. <n/><n/><c val="ffff8a">Does not harm friendly units.</c>
 Button/Tooltip/TrainCommando=Veteran of Marine Corp. Deal damage in AoE, can get access to Explosives. Attack ground and air targets.
 Button/Tooltip/TrainDefender=Dominion field caster. Deal high damage to targets and can protect forces around him.

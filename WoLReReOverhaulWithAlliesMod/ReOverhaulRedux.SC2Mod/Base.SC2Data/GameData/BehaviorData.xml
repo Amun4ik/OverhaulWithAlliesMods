@@ -91,6 +91,12 @@
         <Period value="0.25"/>
         <PeriodicEffect value="FenixSunderAuraSearch2"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="FenixSunderAura22">
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-stukov-siegetankvolatileammo.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Period value="2"/>
+        <PeriodicEffect value="SJPirateCapitalShipLMSet2"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="FenixSunderAuraEnemy2">
         <InfoIcon value="Assets\Textures\mutator_fear_skull_diff.dds"/>
         <Duration value="1"/>
@@ -235,8 +241,14 @@
         <Duration value="1.1"/>
         <Modification AttackSpeedMultiplier="1.2"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="TorrasqueDontDie">
+        <DisableValidatorArray index="1" removed="1"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="TorrasqueTimerBehavior">
-        <Duration value="0"/>
+        <Duration value="0.5"/>
+        <Cost>
+            <Cooldown TimeStart="1"/>
+        </Cost>
     </CBehaviorBuff>
     <CBehaviorBuff id="VoodooShield">
         <Duration value="20"/>

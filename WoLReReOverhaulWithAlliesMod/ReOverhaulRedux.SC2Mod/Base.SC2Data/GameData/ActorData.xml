@@ -397,6 +397,13 @@
     <CActorUnit id="DefilerMP">
         <Scale value="1.200000"/>
     </CActorUnit>
+    <CActorUnit id="Devourer">
+        <DeathArray index="Normal" VoiceLink="DevourerMP_Death"/>
+    </CActorUnit>
+    <CActorAction id="DevourerAttack">
+        <LaunchAssets Sound="DevourerMP_AttackLaunch"/>
+        <ImpactMap index="None" Sound="DevourerMP_AttackImpact"/>
+    </CActorAction>
     <CActorAction id="DevourerAttack2" parent="GenericAttack" effectImpact="DevourerDamage2" effectLaunch="DevourerLaunchMissile">
         <On Terms="ActorCreation" Send="SetTintColor 125,30,255"/>
         <LaunchAssets Sound="Roach_AttackLaunchMelee"/>
