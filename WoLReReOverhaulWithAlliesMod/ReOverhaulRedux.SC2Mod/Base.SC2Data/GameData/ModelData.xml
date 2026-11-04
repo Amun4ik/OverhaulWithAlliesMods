@@ -299,6 +299,14 @@
     <CModel id="HydraliskDeathRagdoll4" parent="HydraliskDeathRagdollBase">
         <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection_DeathRagdoll\Hydralisk_Primal_Collection_DeathRagdoll.m3"/>
     </CModel>
+    <CModel id="HydraliskImpaleAttackImpact">
+        <ScaleMax value="0.400000,0.400000,0.400000"/>
+        <ScaleMin value="0.400000,0.400000,0.400000"/>
+    </CModel>
+    <CModel id="HydraliskImpaleIndicator">
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
     <CModel id="HydraliskLurker">
         <Model value="Assets\Units\Zerg\Hydralisk_Collection_Webby\Hydralisk_Collection_Webby.m3"/>
     </CModel>

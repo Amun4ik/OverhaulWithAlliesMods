@@ -476,7 +476,7 @@
         <Amount value="10"/>
     </CEffectDamage>
     <CEffectEnumArea id="HydraliskImpaleImpactSearch">
-        <AreaArray index="0" Radius="0.4"/>
+        <AreaArray index="0" Radius="0.6"/>
     </CEffectEnumArea>
     <CEffectDamage id="HydraliskMelee2" parent="DU_WEAP">
         <Name value="Effect/Name/NeedleSpinesDamage"/>

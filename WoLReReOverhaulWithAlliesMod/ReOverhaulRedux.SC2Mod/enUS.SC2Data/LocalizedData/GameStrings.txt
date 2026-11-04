@@ -51,6 +51,8 @@ Button/Name/BuildHercules=Calldown Hercules
 Button/Name/BuildScienceVessel=Calldown Science Vessel
 Button/Name/CommanderControllerIcon=Order Raynor's Raiders
 Button/Name/CommanderControllerIcon2=Order Rebels
+Button/Name/Corruptor2=Morph to Vithrilir
+Button/Name/Corruptor22=Morph to Desecrator
 Button/Name/DOMGhostPersonalDefensiveMatrix2=Field Defense Matrix
 Button/Name/Diamondback=Manufacture Diamondback
 Button/Name/DisableAllyPing=Disable Ally Help Pings
@@ -68,10 +70,50 @@ Button/Name/Hellion222222=Manufacture Tesla Tank
 Button/Name/HellionTank=Manufacture Hellbat
 Button/Name/Liberator=Calldown Liberator
 Button/Name/LocustMP2=Locust
+Button/Name/Lurker2=Morph to Lurker Host
 Button/Name/Medivac=Calldown Medivac
 Button/Name/MeleeTrooper=Train Melee Trooper
+Button/Name/MorphToBroodling2=Morph To Broodling
+Button/Name/MorphToBroodling22=Morph To Roachling
+Button/Name/MorphToBroodling222=Morph To Lurkling
+Button/Name/MorphToBroodling2222=Morph To Locust
+Button/Name/MorphToBroodling22222=Morph To Siege Locust
+Button/Name/MorphToBroodling222222=Morph To Flying Locust
+Button/Name/MorphToCorpser=Morph to Corpser
+Button/Name/MorphToHotSNoxious=Morph to Toxilisk
+Button/Name/MorphToHotSNoxious2=Morph to Pygalord
+Button/Name/MorphToHotSNoxious22=Morph to Blinklisk
+Button/Name/MorphToHotSNoxious222=Morph to Apocalisk
+Button/Name/MorphToHotSNoxious2222=Morph to Omegalisk
+Button/Name/MorphToHotSTorrasque=Morph to Torrasque
+Button/Name/MorphToHydraliskImpaler=Morph to Impalisk
+Button/Name/MorphToHydraliskLurker=Morph to Cobralisk
+Button/Name/MorphToHydraliskLurker2=Morph to Medusalisk
+Button/Name/MorphToHydraliskLurker22=Morph to Lurklisk
+Button/Name/MorphToHydraliskLurker222=Morph to Psyolisk
+Button/Name/MorphToHydraliskLurker2222=Morph to Hunter Killer
+Button/Name/MorphToMutaliskBroodlord=Morph to Screamer
+Button/Name/MorphToMutaliskBroodlord2=Morph to Tosgrilisk
+Button/Name/MorphToMutaliskBroodlord22=Morph to Terrorlisk
+Button/Name/MorphToMutaliskViper=Morph to Kukulza
+Button/Name/MorphToRaptor=Morph to Raptorling
+Button/Name/MorphToRaptor2=Morph to Sunderling
+Button/Name/MorphToRaptor22=Morph to Chargeling
+Button/Name/MorphToRaptor222=Morph to Devouring One
+Button/Name/MorphToSwarmling=Morph to Swarmling
+Button/Name/MorphToVile=Morph to Viler
+Button/Name/MorphToVile2=Morph to Panzer
+Button/Name/MorphToVile22=Morph to Igniter
+Button/Name/MorphtoHunter=Morph to Hunterling
+Button/Name/MorphtoHunter2=Morph to Barrierling
+Button/Name/MorphtoSplitterling=Morph to Splitterling
 Button/Name/NovaXanthosToggleRepairModeOn=Self Repair
 Button/Name/Predator=Manufacture Predator
+Button/Name/PrimalFlyer2=Morph to Guardian
+Button/Name/PrimalFlyer22=Morph to High Guardian
+Button/Name/Ravager2=Morph To Destroyer
+Button/Name/Ravager22=Morph To Sky Wrecker
+Button/Name/Ravager23=Morph To Mortarlisk
 Button/Name/Raven=Calldown Raven
 Button/Name/Servitors2=Lurklings
 Button/Name/SiegeTank=Manufacture Siege Tank
@@ -97,6 +139,10 @@ Button/Name/Wraith22=Calldown Valkyrie
 Button/Name/Wraith222=Calldown Valkyrie Transport
 Button/Name/ZergMorphPage1=ZergMorphPage1
 Button/Name/ZergMorphPage2=ZergMorphPage2
+Button/Name/ZurvanSpawnRavasaur=Morph to Ravasaur
+Button/Name/ZurvanSpawnRavasaur2=Morph to Scantipedelisk
+Button/Name/ZurvanSpawnRavasaur22=Morph to Scarabalisk
+Button/Name/ZurvanSpawnRavasaur222=Morph to Mendlisk
 Button/Tooltip/AlarakDeadlyCharge2=Supplicant intercepts target enemy unit and strikes it for <d ref="Effect,AlarakDeadlyChargeDamage,Amount"/> damage.
 Button/Tooltip/AlliedAIAggressive=Orders your ally to focus entirely on offense, attacking enemies more frequently while neglecting defense.
 Button/Tooltip/AlliedAIAggressive2=Orders your ally to focus entirely on offense, attacking enemies more frequently while neglecting defense.
@@ -138,6 +184,7 @@ Button/Tooltip/KorhalPalaceTurret3=Extremely powerful turrets that cannot be att
 Button/Tooltip/LeadFarmer=Commando's Chaingun deals splash damage in a small area around the target.
 Button/Tooltip/Liberator2=Artillery fighter. Loaded with missiles that deal area damage to enemy air targets. Can switch into Defender Mode to provide siege support.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
 Button/Tooltip/LocustMP2=Timed life creature. Durable and dangerous.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Lurker2=Area-damage ambusher. Must burrow to attack. <n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/Marine2=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Marine22=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Medivac2=Armored Air Transport. Suddenly Valkyrie hull without it's armament can be used as transport or logistic ship.
@@ -146,12 +193,36 @@ Button/Tooltip/MercReaper=Former Dominion Elite Reaper Corp. Strong and dangerou
 Button/Tooltip/Mitosaurus=A frenzyed Duelist. Has a decentralized nervous system allowing it to split into three smaller creatures upon death.
 Button/Tooltip/MitosaurusB=A frenzyed Duelist. Has a decentralized nervous system allowing it to split into three smaller creatures upon death.
 Button/Tooltip/MitosaurusC=A frenzyed Duelist.
+Button/Tooltip/MorphToBroodling2=Weak melee spawn<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/MorphToBroodling22=Weak melee spawn<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/MorphToBroodling222=Weak melee spawn<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/MorphToBroodling2222=Weak melee spawn<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/MorphToBroodling22222=Weak melee spawn<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/MorphToBroodling222222=Weak melee spawn<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/MorphToHotSNoxious2=Noxious Strain<n/><n/>Heavy assault beast. Has an area-damage cleave attack. Poisons enemies.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/MorphToHotSNoxious22=Noxious Strain<n/><n/>Heavy assault beast. Has an area-damage cleave attack. Poisons enemies.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/MorphToHotSNoxious222=Noxious Strain<n/><n/>Heavy assault beast. Has an area-damage cleave attack. Poisons enemies.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/MorphToHotSNoxious2222=Noxious Strain<n/><n/>Heavy assault beast. Has an area-damage cleave attack. Poisons enemies.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/MorphToHydraliskLurker2=Lurker Strain<n/><n/>High-damage ranged unit. Can morph into a Lurker.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/MorphToHydraliskLurker22=Lurker Strain<n/><n/>High-damage ranged unit. Can morph into a Lurker.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/MorphToHydraliskLurker222=Lurker Strain<n/><n/>High-damage ranged unit. Can morph into a Lurker.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/MorphToHydraliskLurker2222=Lurker Strain<n/><n/>High-damage ranged unit. Can morph into a Lurker.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/MorphToMutaliskBroodlord2=Brood Lord Strain<n/><n/>Air unit. Bounces its shot to strike multiple targets. Can morph into a Brood Lord.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/MorphToMutaliskBroodlord22=Brood Lord Strain<n/><n/>Air unit. Bounces its shot to strike multiple targets. Can morph into a Brood Lord.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/MorphToRaptor2=Raptor Strain<n/><n/>Fast melee unit. Leaps over obstacles and onto targets from range. Deals increased damage. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/MorphToRaptor22=Raptor Strain<n/><n/>Fast melee unit. Leaps over obstacles and onto targets from range. Deals increased damage. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/MorphToRaptor222=Raptor Strain<n/><n/>Fast melee unit. Leaps over obstacles and onto targets from range. Deals increased damage. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/MorphToVile2=Vile Strain<n/><n/>Assault unit. Regenerates life quickly while burrowed. Can debilitate the enemy.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/MorphToVile22=Vile Strain<n/><n/>Assault unit. Regenerates life quickly while burrowed. Can debilitate the enemy.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/MorphtoHunter2=Hunter Strain<n/><n/>Suicide unit. Deals damage over a small area upon death. Launches toward enemies at range 6.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/Mutalisk2=Air unit. Bounces its shot to strike multiple targets.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/Mutalisk3=Air unit. Bounces its shot to strike multiple targets.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/NovaXanthosToggleRepairModeOn=Order vehicle crew to repair their vehicle. During this vehicle is vulnerable to enemy fire, which stops repair process. Crew unable to move or attack during repair time.
 Button/Tooltip/PickupGas100Text=<s val="Kicker_Gas">+75 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><n/><s val="Kicker_Gas">+25 </s><IMG path="Assets\Textures\icon-gas-terran.dds" height="28" width="28"/><s val="Kicker_Gas"> For Allies</s>
 Button/Tooltip/PickupMinerals100Text=<s val="Kicker_Minerals">+75 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/><n/><s val="Kicker_Minerals">+25 </s><IMG path="Assets\Textures\icon-mineral-terran.dds" height="28" width="28"/> <s val="Kicker_Minerals"> For Allies</s>
 Button/Tooltip/PlanetaryFortress2=Defensive stronghold. <n/>Used to receive gathered resources. <n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/PrimalFlyer2=Long-range anti-ground flyer. Has a weak anti-air attack.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/PrimalFlyer22=Long-range anti-ground flyer. Has a weak anti-air attack.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/RaptorPassive=Zergling gains +3 damage.
 Button/Tooltip/Ravager2=Ranged artillery. Can use Corrosive Bile.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Ravager22=Ranged artillery. Can use Corrosive Bile.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -203,6 +274,9 @@ Button/Tooltip/ZergMorphPage2=A list of Units
 Button/Tooltip/Zergling2=Fast melee creature. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
 Button/Tooltip/Zergling22=Fast melee creature. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
 Button/Tooltip/Zergling222=Fast melee creature. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/ZurvanSpawnRavasaur2=Infested Fauna
+Button/Tooltip/ZurvanSpawnRavasaur22=Infested Fauna
+Button/Tooltip/ZurvanSpawnRavasaur222=Infested Fauna
 DevouringOne=Elite Zerg Strain
 Effect/Name/90mmCannons2=Arclite Cannon (Damage)
 Effect/Name/90mmCannons3=Arclite Cannon (Damage)
