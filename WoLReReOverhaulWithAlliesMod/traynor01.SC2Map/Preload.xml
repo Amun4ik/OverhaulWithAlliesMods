@@ -28,6 +28,7 @@
 <Actor id="Garage" Variations="0,1"/>
 <Actor id="GasStationAngled"/>
 <Actor id="MarSaraBones" Variations="1,2,3,4"/>
+<Actor id="MarSaraBridge"/>
 <Actor id="MarSaraBridgeDestroyed"/>
 <Actor id="MarSaraCactus" Variations="0,1,2,3,4"/>
 <Actor id="MarSaraCliffDoodadLarge" Variations="2"/>
