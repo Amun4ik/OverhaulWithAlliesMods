@@ -9,27 +9,38 @@
 <Achievement id="TRaynor01_2"/>
 <Achievement id="TRaynor01_3"/>
 <Actor id="SYSTEM_ActorConfig"/>
+<Actor id="Korhal_ConstructionCranes" Variations="2"/>
+<Actor id="Korhal_TarmacSplat" Variations="2"/>
+<Actor id="PortCity_Rubble" Variations="0,2,3,4"/>
+<Actor id="Purifier_Trees_Log" Variations="0,1,2,3"/>
+<Actor id="Shakuras_Stone_Temple_Rubble" Variations="0,1"/>
+<Actor id="TerranButcherPropLarge" Variations="2"/>
+<Actor id="TerranHalfWall"/>
+<Actor id="Terran_Target_Splat"/>
+<Actor id="WaterGenerator" Variations="0,2,4"/>
+<Actor id="WaterGeneratorLarge"/>
 <Actor id="PathingBlocker1x1Doodad"/>
 <Actor id="Checkpoint"/>
+<Actor id="BarracksWrecked"/>
 <Actor id="BillboardTall" Variations="1"/>
 <Actor id="BirdsTarsonis"/>
-<Actor id="BloodSplats" Variations="0,1,2,3,4,5"/>
 <Actor id="BraxisAlphaBarrels" Variations="0,1,2"/>
+<Actor id="BraxisAlphaTallSign" Variations="1"/>
 <Actor id="BubbasFuelStop"/>
 <Actor id="BullhornLights" Variations="1"/>
 <Actor id="Bush" Variations="4,6"/>
 <Actor id="ChainLinkFenceDiagonal" Variations="0,1,2,3"/>
 <Actor id="ChainLinkFencePost"/>
-<Actor id="ChainLinkFenceStraight" Variations="1"/>
+<Actor id="ChainLinkFenceStraight" Variations="1,2"/>
 <Actor id="Crate" Variations="0,1,2,3,5"/>
-<Actor id="Decal" Variations="1,3,21,23,24,28"/>
+<Actor id="Decal" Variations="1,3,21,23,28"/>
 <Actor id="Dumpster" Variations="0,2"/>
 <Actor id="FireMedium"/>
+<Actor id="FloatingCreepPad"/>
 <Actor id="Garage" Variations="0,1"/>
 <Actor id="GasStationAngled"/>
 <Actor id="MarSaraBones" Variations="1,2,3,4"/>
 <Actor id="MarSaraBridge"/>
-<Actor id="MarSaraBridgeDestroyed"/>
 <Actor id="MarSaraCactus" Variations="0,1,2,3,4"/>
 <Actor id="MarSaraCliffDoodadLarge" Variations="2"/>
 <Actor id="MarSaraCurtain" Variations="0,1,2,3"/>
@@ -38,9 +49,9 @@
 <Actor id="MarSaraSkeletonLarge" Variations="0,1"/>
 <Actor id="MarSaraSkeletonSmall" Variations="0,1"/>
 <Actor id="MarSaraTree" Variations="0,1,2,3,4,5"/>
-<Actor id="MarSaraTreeDead" Variations="0,1,2,4,5"/>
+<Actor id="MarSaraTreeDead" Variations="0,1,2,3,4,5"/>
 <Actor id="MarSaraTunnel"/>
-<Actor id="NewFolsomSandbags" Variations="0,4,5"/>
+<Actor id="NewFolsomSandbags" Variations="0,1,2,3,4,5,6"/>
 <Actor id="Outhouse" Variations="0,2"/>
 <Actor id="PipesCap" Variations="0,1"/>
 <Actor id="PipesCorner" Variations="3"/>
@@ -54,9 +65,10 @@
 <Actor id="RockFormationLarge" Variations="0,1,2,3,4,5"/>
 <Actor id="RockLarge" Variations="0,1,2,3,4,5,7,9,17"/>
 <Actor id="RockSmall" Variations="0,1,2,3,4,5,6,7,8,9,10"/>
+<Actor id="RooftopACCreeped" Variations="0,1,3"/>
 <Actor id="Searchlight" Variations="1"/>
 <Actor id="SignsConstruction" Variations="12"/>
-<Actor id="SignsDirectional" Variations="11"/>
+<Actor id="SignsDirectional" Variations="11,14"/>
 <Actor id="SignsIcons" Variations="8"/>
 <Actor id="SignsWarning" Variations="0,19,21"/>
 <Actor id="SmokePillarsTall"/>
@@ -77,26 +89,30 @@
 <Actor id="WindRough"/>
 <Actor id="WindEmitterBrownMedium"/>
 <Actor id="WreckedSandbags" Variations="0,1,2"/>
+<Actor id="CargoTruckCreep" Variations="2"/>
 <Actor id="ColonistVehicleAbandoned" Variations="0,3"/>
+<Actor id="ColonistSupplyCrate" Variations="0,2,3,4,5,7"/>
 <Actor id="MarSaraFoliage" Variations="2"/>
-<Actor id="AnimalCorpse" Variations="1,2,3,4,5,6,7,8"/>
-<Actor id="Bodybag" Variations="0,1,2,3"/>
-<Actor id="KillwallLarge"/>
+<Actor id="SpacePlatformCreepedDoodads" Variations="0,3"/>
+<Actor id="AnimalCorpse" Variations="1,3,4,5,6,7"/>
 <Actor id="CivilianCars" Variations="0,1,3,4"/>
 <Actor id="KorhalFlag" Variations="2"/>
-<Actor id="ColonistHutDoodad" Variations="0,1,4,5,7"/>
-<Actor id="ColonistHutBurntOut" Variations="0,1,2,3,4,5,6,7"/>
+<Actor id="ColonistHutDoodad" Variations="0,1,2,4,5,7"/>
+<Actor id="ColonistHutBurntOut" Variations="0,1,2,3,6,7"/>
+<Actor id="ColonistHutHalfBuilt" Variations="1,2"/>
 <Actor id="TalkIcon"/>
 <Actor id="ColonistSandbagsCarried" Variations="0,2"/>
-<Actor id="BillboardPropaganda" Variations="1,2,3,4,6,7,8,9,10"/>
-<Actor id="ColonistCorpse" Variations="0,2,7,8,9,12,16,17"/>
-<Actor id="DeadVandals" Variations="2"/>
+<Actor id="BillboardPropaganda" Variations="1,3,5,7"/>
+<Actor id="ColonistCorpse" Variations="0,2"/>
 <Actor id="KorhalPodium"/>
+<Actor id="MengskStatueAloneCreep"/>
+<Actor id="SignPropaganda" Variations="1"/>
 <Actor id="TRaynor01RadarDish"/>
 <Actor id="TruckTanker"/>
 <Actor id="TRaynorDumpTruck"/>
 <Actor id="TruckFlatbed"/>
 <Actor id="TruckSemi"/>
+<Actor id="VultureChase_CargoTruckUnitFlatbed"/>
 <Behavior id="CritterWanderLeashShort"/>
 <Behavior id="CivilianEnableWeapon"/>
 <Behavior id="Run"/>
@@ -167,21 +183,51 @@
 <Soundtrack id="TRaynor01MusicMain"/>
 <Soundtrack id="TRaynor01MusicOutro"/>
 <Terrain id="MarSaraEx1"/>
+<Unit id="SupplyDepot"/>
+<Unit id="Barracks"/>
+<Unit id="EngineeringBay"/>
+<Unit id="MissileTurret"/>
+<Unit id="Factory"/>
+<Unit id="AutoTurret"/>
 <Unit id="VikingAssault"/>
 <Unit id="VikingFighter"/>
+<Unit id="BarracksTechLab"/>
+<Unit id="BarracksReactor"/>
+<Unit id="SCV"/>
 <Unit id="Marine"/>
+<Unit id="Marauder"/>
 <Unit id="Raven"/>
 <Unit id="Dog" Variations="0"/>
 <Unit id="Cow"/>
 <Unit id="MengskStatueAlone"/>
 <Unit id="MengskStatue"/>
+<Unit id="WarPig"/>
 <Unit id="Firebat"/>
+<Unit id="CargoTruckUnitFlatbed"/>
+<Unit id="CargoTruckUnitTrailer"/>
 <Unit id="Raynor01"/>
+<Unit id="CargoTruckUnitBarrels"/>
 <Unit id="SpecialOpsDropship"/>
 <Unit id="TransportTruck"/>
 <Unit id="Civilian" Variations="0,1,2,3"/>
 <Unit id="CivilianFemale" Variations="1,2"/>
+<Unit id="CruiserBike"/>
+<Unit id="DumpTruck"/>
 <Unit id="LogisticsHeadquarters"/>
 <Unit id="MengskHologramBillboard"/>
 <Unit id="ColonistTransport"/>
+<Unit id="MercMedic"/>
+<Unit id="MengskReaper"/>
+<Unit id="KorhalPalaceTurret"/>
+<Unit id="InfestedDominionHousing1"/>
+<Unit id="InfestedDominionHousing2"/>
+<Unit id="InfestedDominionHousing3"/>
+<Unit id="RailGunTurret"/>
+<Unit id="Separatist"/>
+<Unit id="TychusCommando2"/>
+<Unit id="Separatist4"/>
+<Unit id="Separatist5"/>
+<Unit id="Separatist3"/>
+<Unit id="Separatist2"/>
+<Unit id="Armory2"/>
 </Preload>
