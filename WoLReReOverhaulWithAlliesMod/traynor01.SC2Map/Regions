@@ -64,11 +64,11 @@
         <name value="Cheering Crowd Reveal"/>
         <color value="255,0,0,0"/>
         <shape type="circle">
-            <center value="95.1926,176.186"/>
+            <center value="93,179"/>
             <radius value="7"/>
         </shape>
         <shape type="circle">
-            <center value="106.2946,171.2934"/>
+            <center value="92,183"/>
             <radius value="3.5"/>
         </shape>
     </region>
@@ -110,11 +110,11 @@
         <name value="Reveal Intro Canyon01"/>
         <color value="255,0,0,0"/>
         <shape type="circle">
-            <center value="93.5178,113.3183"/>
+            <center value="90,24.5"/>
             <radius value="4"/>
         </shape>
         <shape type="circle">
-            <center value="98.162,115.4536"/>
+            <center value="94,29"/>
             <radius value="3.8298"/>
         </shape>
     </region>
@@ -122,11 +122,11 @@
         <name value="Reveal Intro Canyon02"/>
         <color value="255,0,0,0"/>
         <shape type="circle">
-            <center value="102.4423,118.6301"/>
+            <center value="98.307,24.729"/>
             <radius value="5.5"/>
         </shape>
         <shape type="circle">
-            <center value="105.9941,118.15"/>
+            <center value="103.5,28.5"/>
             <radius value="5.25"/>
         </shape>
     </region>
@@ -134,7 +134,7 @@
         <name value="Reveal Intro Canyon03"/>
         <color value="255,0,0,0"/>
         <shape type="circle">
-            <center value="109.2121,118.1232"/>
+            <center value="111.0002,29.5002"/>
             <radius value="4.25"/>
         </shape>
     </region>
@@ -142,39 +142,39 @@
         <name value="RevealIntroPath01"/>
         <color value="255,255,128,128"/>
         <shape type="rect">
-            <quad value="90.0002,94.5197,100.4458,112"/>
+            <quad value="78.7775,41.7602,89.2231,59.2404"/>
         </shape>
     </region>
     <region id="40">
         <name value="RevealIntroPath02"/>
         <color value="255,255,128,128"/>
         <shape type="rect">
-            <quad value="99.0002,96.9311,105.9692,113"/>
+            <quad value="88.0158,44.9658,94.9848,61.0346"/>
         </shape>
     </region>
     <region id="41">
         <name value="RevealIntroPath03"/>
         <color value="255,255,128,128"/>
         <shape type="rect">
-            <quad value="104.2502,98.6308,114.0397,115"/>
+            <quad value="93.1054,45.3156,102.895,61.6848"/>
         </shape>
     </region>
     <region id="42">
         <name value="RevealIntroPath04"/>
         <color value="255,255,128,128"/>
         <shape type="rect">
-            <quad value="111.5002,99.124,122.8432,115.2504"/>
+            <quad value="101.3288,48.437,112.6718,64.5634"/>
         </shape>
     </region>
     <region id="29">
         <name value="Reveal Intro Canyon04"/>
         <color value="255,0,0,0"/>
         <shape type="circle">
-            <center value="116.5698,118.2236"/>
+            <center value="110,35.5"/>
             <radius value="4.5"/>
         </shape>
         <shape type="circle">
-            <center value="121.3671,118.3022"/>
+            <center value="115,28"/>
             <radius value="5.5"/>
         </shape>
     </region>
@@ -182,7 +182,7 @@
         <name value="Reveal Intro Canyon05"/>
         <color value="255,0,0,0"/>
         <shape type="circle">
-            <center value="125.2138,114.3383"/>
+            <center value="112.0002,67.5002"/>
             <radius value="4.5"/>
         </shape>
     </region>
@@ -190,14 +190,14 @@
         <name value="RevealIntroPath05"/>
         <color value="255,255,128,128"/>
         <shape type="rect">
-            <quad value="120.462,98.5,128.9616,113.5"/>
+            <quad value="109.7504,47,118.2502,62"/>
         </shape>
     </region>
     <region id="13">
         <name value="Billboard01 Trigger"/>
         <color value="255,0,128,0"/>
         <shape type="rect">
-            <quad value="136.9138,116.7387,158.7011,121.9836"/>
+            <quad value="152.1066,235.378,173.894,240.6228"/>
         </shape>
     </region>
     <region id="59">
@@ -227,10 +227,10 @@
         <name value="RoadblockAgro01"/>
         <color value="255,0,128,0"/>
         <shape type="rect">
-            <quad value="143.5141,102.5131,149.0141,108.0131"/>
+            <quad value="125.75,50.25,131.25,55.75"/>
         </shape>
         <shape type="rect">
-            <quad value="144.513,101.5085,150.013,107.0085"/>
+            <quad value="125.25,54.75,130.75,60.25"/>
         </shape>
     </region>
     <region id="57">
@@ -245,7 +245,7 @@
         <name value="RevealLeftSidePath01"/>
         <color value="255,255,128,192"/>
         <shape type="circle">
-            <center value="83.2866,144.7482"/>
+            <center value="83.5002,144.5002"/>
             <radius value="6.25"/>
         </shape>
     </region>
@@ -277,7 +277,7 @@
         <name value="Reveal LeftSide Canyon03"/>
         <color value="255,0,0,0"/>
         <shape type="circle">
-            <center value="68.3444,157.4714"/>
+            <center value="59.0002,158.0002"/>
             <radius value="8"/>
         </shape>
     </region>
@@ -285,11 +285,11 @@
         <name value="Reveal LeftSide Canyon04"/>
         <color value="255,0,0,0"/>
         <shape type="circle">
-            <center value="67.8005,162.1074"/>
+            <center value="63.0563,164.6921"/>
             <radius value="8"/>
         </shape>
         <shape type="circle">
-            <center value="67.688,171.7233"/>
+            <center value="70.5,174"/>
             <radius value="8"/>
         </shape>
     </region>
@@ -385,11 +385,11 @@
             <radius value="12"/>
         </shape>
         <shape type="circle">
-            <center value="79.5966,205.4904"/>
+            <center value="85,196.5"/>
             <radius value="17.5"/>
         </shape>
         <shape type="circle">
-            <center value="93.769,211.782"/>
+            <center value="89,209"/>
             <radius value="14.5"/>
         </shape>
     </region>
@@ -403,7 +403,7 @@
     <region id="7">
         <name value="Intro Raynor&quot;s Raiders"/>
         <shape type="circle">
-            <center value="83.293,103.3151"/>
+            <center value="49.001,33.5002"/>
             <radius value="2.3752"/>
         </shape>
     </region>
@@ -467,31 +467,31 @@
         <name value="IntroReveal"/>
         <color value="255,0,0,0"/>
         <shape type="circle">
-            <center value="68.4194,120.5227"/>
+            <center value="28,16"/>
             <radius value="6.838"/>
         </shape>
         <shape type="circle">
-            <center value="71.4611,115.1276"/>
+            <center value="31,33"/>
             <radius value="6.731"/>
         </shape>
         <shape type="circle">
-            <center value="76.516,108.7966"/>
+            <center value="29.5,26"/>
             <radius value="6.731"/>
         </shape>
         <shape type="circle">
-            <center value="82.9165,103.4985"/>
+            <center value="40,29"/>
             <radius value="6.731"/>
         </shape>
         <shape type="circle">
-            <center value="80.3662,93.962"/>
+            <center value="37.5,19"/>
             <radius value="6.731"/>
         </shape>
         <shape type="circle">
-            <center value="89.9465,99.882"/>
+            <center value="43,18"/>
             <radius value="6.731"/>
         </shape>
         <shape type="circle">
-            <center value="95.4704,104.8647"/>
+            <center value="47,29"/>
             <radius value="2.6276"/>
         </shape>
     </region>
@@ -515,23 +515,43 @@
         <name value="Auto-Save_Triggered01"/>
         <color value="255,128,0,255"/>
         <shape type="circle">
-            <center value="130.5888,144.4375"/>
+            <center value="162,101"/>
             <radius value="1.7202"/>
         </shape>
         <shape type="circle">
-            <center value="124.9963,150.072"/>
+            <center value="156,99"/>
             <radius value="1.7202"/>
         </shape>
         <shape type="circle">
-            <center value="126.7263,148.2255"/>
+            <center value="158,99.5"/>
             <radius value="1.7202"/>
         </shape>
         <shape type="circle">
-            <center value="128.752,146.4147"/>
+            <center value="160,100.5"/>
             <radius value="1.7202"/>
         </shape>
         <shape type="circle">
-            <center value="132.3134,143.1083"/>
+            <center value="86.5,111"/>
+            <radius value="1.7202"/>
+        </shape>
+        <shape type="circle">
+            <center value="86,113.5"/>
+            <radius value="1.7202"/>
+        </shape>
+        <shape type="circle">
+            <center value="85.5,116"/>
+            <radius value="1.7202"/>
+        </shape>
+        <shape type="circle">
+            <center value="68.5,110.5"/>
+            <radius value="1.7202"/>
+        </shape>
+        <shape type="circle">
+            <center value="70.5,112.5"/>
+            <radius value="1.7202"/>
+        </shape>
+        <shape type="circle">
+            <center value="72.5,114.5"/>
             <radius value="1.7202"/>
         </shape>
     </region>
@@ -559,35 +579,35 @@
     <region id="19">
         <name value="&quot;This is bad&quot;"/>
         <shape type="circle">
-            <center value="90.726,123.3017"/>
+            <center value="168.678,178.3752"/>
             <radius value="4.5"/>
         </shape>
         <shape type="circle">
-            <center value="89.024,124.7653"/>
+            <center value="166.9758,179.8388"/>
             <radius value="4.5"/>
         </shape>
         <shape type="circle">
-            <center value="86.3105,127.3942"/>
+            <center value="164.2624,182.4677"/>
             <radius value="4.5"/>
         </shape>
         <shape type="circle">
-            <center value="80.9362,129.4746"/>
+            <center value="158.8881,184.548"/>
             <radius value="1.582"/>
         </shape>
         <shape type="circle">
-            <center value="81.3322,126.7333"/>
+            <center value="159.2841,181.807"/>
             <radius value="1.582"/>
         </shape>
         <shape type="circle">
-            <center value="82.4218,131.6132"/>
+            <center value="160.3737,186.6867"/>
             <radius value="2"/>
         </shape>
         <shape type="circle">
-            <center value="84.8713,133.2463"/>
+            <center value="162.8232,188.3198"/>
             <radius value="2"/>
         </shape>
         <shape type="circle">
-            <center value="86.083,131.6777"/>
+            <center value="164.035,186.7512"/>
             <radius value="2"/>
         </shape>
     </region>
@@ -752,7 +772,7 @@
         <name value="RoadblockReveal_Tripwire"/>
         <color value="255,0,128,0"/>
         <shape type="rect">
-            <quad value="138.0122,98.0244,158.599,114.852"/>
+            <quad value="118.7067,48.0864,139.2937,64.914"/>
         </shape>
     </region>
     <region id="53">
@@ -793,7 +813,7 @@
     <region id="51">
         <name value="Intro Dropship Cleanup"/>
         <shape type="circle">
-            <center value="67.3017,95.7375"/>
+            <center value="43.5002,28.5002"/>
             <radius value="3.1125"/>
         </shape>
     </region>

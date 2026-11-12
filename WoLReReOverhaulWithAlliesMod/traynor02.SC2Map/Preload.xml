@@ -13,6 +13,19 @@
 <Achievement id="TRaynor02_3"/>
 <Actor id="SYSTEM_ActorConfig"/>
 <Actor id="LightOmniCyan"/>
+<Actor id="Blast_Craters" Variations="0,1,2,3"/>
+<Actor id="Blast_Craters_Big" Variations="0,2"/>
+<Actor id="DefendersCity_Warehouse" Variations="0,4"/>
+<Actor id="Elsecaro_Colonist_Hut_Doodad" Variations="0,2,3"/>
+<Actor id="IceWorldAmbientCrystals" Variations="0"/>
+<Actor id="JarbanMinor_Outpost" Variations="2"/>
+<Actor id="Korhal_Mart_Destroyed" Variations="1"/>
+<Actor id="Korhal_SiegeTank_Destroyed"/>
+<Actor id="SnowRefinery_Terran_WindSock" Variations="0"/>
+<Actor id="StarshipIceWorldMinerals" Variations="0"/>
+<Actor id="TerranHalfWall"/>
+<Actor id="WaterGenerator" Variations="0,1,3,4"/>
+<Actor id="WaterGeneratorLarge"/>
 <Actor id="PathingBlocker1x1Doodad"/>
 <Actor id="AvernusBarrier" Variations="3,4,5"/>
 <Actor id="BirdsTarsonis"/>
@@ -21,7 +34,9 @@
 <Actor id="BunkerWrecked"/>
 <Actor id="ChainLinkFenceDiagonal" Variations="1,2,3"/>
 <Actor id="ChainLinkFencePost"/>
-<Actor id="ChainLinkFenceStraight" Variations="0,2,3,4,5,6,7"/>
+<Actor id="ChainLinkFenceStraight" Variations="0,1,2,3,4,5,6,7"/>
+<Actor id="CharRockLarge" Variations="0,1,2"/>
+<Actor id="CliffSpires" Variations="0,1"/>
 <Actor id="CommandCenterWrecked"/>
 <Actor id="Crate" Variations="0,1,4,5"/>
 <Actor id="Decal" Variations="0,1,3,17"/>
@@ -46,11 +61,12 @@
 <Actor id="MarSaraSkeletonLarge" Variations="0,1"/>
 <Actor id="MarSaraSkeletonSmall" Variations="0,1"/>
 <Actor id="MarSaraTree" Variations="0,1,2,3,4,5,6,7"/>
-<Actor id="MarSaraTreeDead" Variations="1,2,3,4,5"/>
+<Actor id="MarSaraTreeDead" Variations="0,1,2,3,4,5"/>
 <Actor id="MarSaraTunnel"/>
-<Actor id="MineralCart" Variations="3"/>
+<Actor id="MineralCart" Variations="0,1,2,3"/>
 <Actor id="MiningBot"/>
 <Actor id="MiningBotWrecked" Variations="0"/>
+<Actor id="NewFolsomSandbags" Variations="0,1,2,3,4,5,6,7"/>
 <Actor id="Outhouse" Variations="1"/>
 <Actor id="PipesCap" Variations="0"/>
 <Actor id="PipesCorner" Variations="3"/>
@@ -63,17 +79,21 @@
 <Actor id="PortZionGroundMix" Variations="0,1,3,4,5,6,7,9"/>
 <Actor id="PortZionTires" Variations="0,1,2"/>
 <Actor id="PortZionTower" Variations="2,9"/>
+<Actor id="PortZionTowerDestroyed" Variations="0,3"/>
 <Actor id="PowerLine" Variations="0,1,2,4"/>
+<Actor id="RedstoneRockSpires" Variations="0,1,4"/>
 <Actor id="Rock" Variations="0,1,2,3,4,5,6,7,8,9"/>
-<Actor id="RockFormationLarge" Variations="5"/>
-<Actor id="RockLarge" Variations="0,1,2,3,5"/>
+<Actor id="RockFormationLarge" Variations="0,1,2,3,4,5"/>
+<Actor id="RockLarge" Variations="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23"/>
 <Actor id="Searchlight" Variations="1"/>
 <Actor id="SignsWarning" Variations="1,10"/>
 <Actor id="SpacePlatformBarrier" Variations="0,1"/>
 <Actor id="SpacePlatformBillboard" Variations="1"/>
 <Actor id="SpacePlatformCautionLights" Variations="1"/>
+<Actor id="SpacePlatformRockSpireLarge" Variations="0,1"/>
 <Actor id="SpacePlatformSignDestructible" Variations="1"/>
 <Actor id="SpacePlatformSignTowerLarge" Variations="0,1"/>
+<Actor id="SpiresLarge" Variations="0,1,2,3"/>
 <Actor id="TRaynor02Crane" Variations="0,2"/>
 <Actor id="TRaynor02CranePart2x2" Variations="0,2,3,4"/>
 <Actor id="TRaynor02CranePart3x3" Variations="1,4,6,7,8,9"/>
@@ -81,11 +101,19 @@
 <Actor id="WaterTankTall" Variations="0,1"/>
 <Actor id="WindEmitterMedium"/>
 <Actor id="WindTurbine"/>
+<Actor id="WreckedSandbags" Variations="0,1,2"/>
+<Actor id="CargoTruck" Variations="0"/>
 <Actor id="AnimalCorpse" Variations="1"/>
+<Actor id="ColonistHutBurntOut" Variations="3,4,5"/>
+<Actor id="ColonistHutHalfBuilt" Variations="0"/>
 <Actor id="PipesSmallCorner" Variations="0"/>
 <Actor id="PipesSmallShort"/>
 <Actor id="TRaynor02MineLift"/>
+<Actor id="TTosh01RockSpires" Variations="0,1,2,3,4"/>
+<Actor id="TruckUtility"/>
+<Actor id="TruckFlatbedConstruction"/>
 <Actor id="TRaynorDumpTruck"/>
+<Actor id="TruckFlatbed"/>
 <Behavior id="Run"/>
 <Model id="TalkIcon"/>
 <Model id="BriefingUnitSelect"/>
@@ -134,10 +162,16 @@
 <Unit id="Reactor"/>
 <Unit id="CommandCenter"/>
 <Unit id="SupplyDepot"/>
+<Unit id="Refinery"/>
 <Unit id="Barracks"/>
+<Unit id="EngineeringBay"/>
+<Unit id="MissileTurret"/>
 <Unit id="Bunker"/>
 <Unit id="Factory"/>
+<Unit id="AutoTurret"/>
 <Unit id="SiegeTankSieged"/>
+<Unit id="BarracksTechLab"/>
+<Unit id="BarracksReactor"/>
 <Unit id="SCV"/>
 <Unit id="Marine"/>
 <Unit id="Hellion"/>
@@ -147,6 +181,8 @@
 <Unit id="VespeneGeyser"/>
 <Unit id="WarPig"/>
 <Unit id="DevilDog"/>
+<Unit id="RaynorCommando"/>
+<Unit id="TychusChaingun"/>
 <Unit id="SpecialOpsDropship"/>
 <Unit id="MinerMale"/>
 <Unit id="Civilian" Variations="0,1,2"/>
@@ -156,4 +192,7 @@
 <Unit id="TerranBuggy"/>
 <Unit id="Food1000"/>
 <Unit id="Medic"/>
+<Unit id="HERCCompound"/>
+<Unit id="Separatist"/>
+<Unit id="Armory2"/>
 </Preload>

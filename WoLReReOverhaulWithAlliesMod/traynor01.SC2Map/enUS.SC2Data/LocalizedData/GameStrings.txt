@@ -19,6 +19,7 @@ MapInfo/Player08/Name=Raven's Mercenary
 MapInfo/Player09/Name=Backwater Station Guard
 MapInfo/Player10/Name=Dominion Garrisons
 MapInfo/Player11/Name=Dominion Engineers
+MapInfo/Player12/Name=Dominion Troopers
 Param/Value/01D82F01=/
 Param/Value/026FC5EA=Holoboard
 Param/Value/0AA42C42=Civilian
