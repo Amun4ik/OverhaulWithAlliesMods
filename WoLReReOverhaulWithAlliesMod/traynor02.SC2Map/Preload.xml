@@ -13,14 +13,28 @@
 <Achievement id="TRaynor02_3"/>
 <Actor id="SYSTEM_ActorConfig"/>
 <Actor id="LightOmniCyan"/>
+<Actor id="Aiur_Zerg_GlowingPods" Variations="0,1,2,3,4,5"/>
+<Actor id="Aiur_Zerg_Horn" Variations="0,1,2,3,4"/>
+<Actor id="Aiur_Zerg_Intestines" Variations="0,2"/>
+<Actor id="Aiur_Zerg_Ribs" Variations="0,1,2,3"/>
 <Actor id="Blast_Craters" Variations="0,1,2,3"/>
-<Actor id="Blast_Craters_Big" Variations="0,2"/>
+<Actor id="Blast_Craters_Big" Variations="0,2,4,5"/>
 <Actor id="DefendersCity_Warehouse" Variations="0,4"/>
 <Actor id="Elsecaro_Colonist_Hut_Doodad" Variations="0,2,3"/>
 <Actor id="IceWorldAmbientCrystals" Variations="0"/>
 <Actor id="JarbanMinor_Outpost" Variations="2"/>
+<Actor id="KorhalBuildingsMedium" Variations="3"/>
+<Actor id="KorhalMart" Variations="0"/>
+<Actor id="Korhal_Antenna" Variations="0"/>
+<Actor id="Korhal_ControlTower"/>
+<Actor id="Korhal_FuelTank" Variations="1"/>
 <Actor id="Korhal_Mart_Destroyed" Variations="1"/>
+<Actor id="Korhal_Platform_Pipes" Variations="4,6"/>
+<Actor id="Korhal_Platform_Post" Variations="2"/>
+<Actor id="Korhal_Platform_Ramp"/>
+<Actor id="Korhal_Platform_Road_EndCap"/>
 <Actor id="Korhal_SiegeTank_Destroyed"/>
+<Actor id="SnowRefinery_Terran_Barrier" Variations="3,5"/>
 <Actor id="SnowRefinery_Terran_WindSock" Variations="0"/>
 <Actor id="StarshipIceWorldMinerals" Variations="0"/>
 <Actor id="TerranHalfWall"/>
@@ -32,9 +46,9 @@
 <Actor id="Brambles" Variations="0,1,2,3,4,5,6,7"/>
 <Actor id="BraxisAlphaBarrels" Variations="0,1,2"/>
 <Actor id="BunkerWrecked"/>
-<Actor id="ChainLinkFenceDiagonal" Variations="1,2,3"/>
+<Actor id="ChainLinkFenceDiagonal" Variations="0,1,2,3"/>
 <Actor id="ChainLinkFencePost"/>
-<Actor id="ChainLinkFenceStraight" Variations="0,1,2,3,4,5,6,7"/>
+<Actor id="ChainLinkFenceStraight" Variations="0,1,2,4,5,6,7"/>
 <Actor id="CharRockLarge" Variations="0,1,2"/>
 <Actor id="CliffSpires" Variations="0,1"/>
 <Actor id="CommandCenterWrecked"/>
@@ -46,9 +60,10 @@
 <Actor id="Garage" Variations="1"/>
 <Actor id="GarageLarge" Variations="1"/>
 <Actor id="GasStationAngled"/>
+<Actor id="KorhalLoneMarineStatue"/>
 <Actor id="MammothFossils" Variations="0"/>
 <Actor id="MarSaraBones" Variations="0,2,4"/>
-<Actor id="MarSaraBridgeDestroyed"/>
+<Actor id="MarSaraBridge"/>
 <Actor id="MarSaraBridgeLong" Variations="0"/>
 <Actor id="MarSaraCactus" Variations="0,1,2,3,4"/>
 <Actor id="MarSaraCliffDoodadLarge" Variations="0"/>
@@ -71,7 +86,7 @@
 <Actor id="PipesCap" Variations="0"/>
 <Actor id="PipesCorner" Variations="3"/>
 <Actor id="PipesCorner45" Variations="0,1"/>
-<Actor id="PipesLong" Variations="0,1,2,3"/>
+<Actor id="PipesLong" Variations="1,2,3"/>
 <Actor id="PipesLong45" Variations="2"/>
 <Actor id="PipesShort" Variations="1"/>
 <Actor id="PipesShort45" Variations="0,1"/>
@@ -80,7 +95,6 @@
 <Actor id="PortZionTires" Variations="0,1,2"/>
 <Actor id="PortZionTower" Variations="2,9"/>
 <Actor id="PortZionTowerDestroyed" Variations="0,3"/>
-<Actor id="PowerLine" Variations="0,1,2,4"/>
 <Actor id="RedstoneRockSpires" Variations="0,1,4"/>
 <Actor id="Rock" Variations="0,1,2,3,4,5,6,7,8,9"/>
 <Actor id="RockFormationLarge" Variations="0,1,2,3,4,5"/>
@@ -95,8 +109,8 @@
 <Actor id="SpacePlatformSignTowerLarge" Variations="0,1"/>
 <Actor id="SpiresLarge" Variations="0,1,2,3"/>
 <Actor id="TRaynor02Crane" Variations="0,2"/>
-<Actor id="TRaynor02CranePart2x2" Variations="0,2,3,4"/>
-<Actor id="TRaynor02CranePart3x3" Variations="1,4,6,7,8,9"/>
+<Actor id="TRaynor02CranePart2x2" Variations="0,3,4"/>
+<Actor id="TRaynor02CranePart3x3" Variations="1,6,8,9"/>
 <Actor id="WaterTank" Variations="0,1,2"/>
 <Actor id="WaterTankTall" Variations="0,1"/>
 <Actor id="WindEmitterMedium"/>
@@ -104,10 +118,14 @@
 <Actor id="WreckedSandbags" Variations="0,1,2"/>
 <Actor id="CargoTruck" Variations="0"/>
 <Actor id="AnimalCorpse" Variations="1"/>
+<Actor id="KorhalFlag" Variations="0,2"/>
 <Actor id="ColonistHutBurntOut" Variations="3,4,5"/>
 <Actor id="ColonistHutHalfBuilt" Variations="0"/>
 <Actor id="PipesSmallCorner" Variations="0"/>
 <Actor id="PipesSmallShort"/>
+<Actor id="SpacePlatformSignLargeZerged"/>
+<Actor id="TerrainObjectBraxisAlphaZergHoleLargeDoodad" Variations="0,1"/>
+<Actor id="TRaynor01RadarDish"/>
 <Actor id="TRaynor02MineLift"/>
 <Actor id="TTosh01RockSpires" Variations="0,1,2,3,4"/>
 <Actor id="TruckUtility"/>
@@ -160,6 +178,7 @@
 <TerrainObject id="TRaynor02DigSite"/>
 <Unit id="TechLab"/>
 <Unit id="Reactor"/>
+<Unit id="Baneling"/>
 <Unit id="CommandCenter"/>
 <Unit id="SupplyDepot"/>
 <Unit id="Refinery"/>
@@ -172,27 +191,74 @@
 <Unit id="SiegeTankSieged"/>
 <Unit id="BarracksTechLab"/>
 <Unit id="BarracksReactor"/>
+<Unit id="FactoryTechLab"/>
+<Unit id="FactoryReactor"/>
 <Unit id="SCV"/>
 <Unit id="Marine"/>
+<Unit id="Reaper"/>
+<Unit id="Marauder"/>
 <Unit id="Hellion"/>
-<Unit id="Beacon_Terran"/>
+<Unit id="Hatchery"/>
+<Unit id="SpawningPool"/>
+<Unit id="EvolutionChamber"/>
+<Unit id="HydraliskDen"/>
+<Unit id="InfestationPit"/>
+<Unit id="BanelingNest"/>
+<Unit id="RoachWarren"/>
+<Unit id="SpineCrawler"/>
+<Unit id="SporeCrawler"/>
+<Unit id="Lair"/>
+<Unit id="Drone"/>
+<Unit id="Zergling"/>
+<Unit id="Overlord"/>
+<Unit id="Hydralisk"/>
+<Unit id="Roach"/>
+<Unit id="Infestor"/>
+<Unit id="Queen"/>
 <Unit id="Lyote"/>
 <Unit id="MineralField" Variations="0,1,2,3,4,5,6,7,8,9"/>
 <Unit id="VespeneGeyser"/>
+<Unit id="InfestedCivilian" Variations="0,1,2"/>
+<Unit id="PerditionTurret"/>
 <Unit id="WarPig"/>
 <Unit id="DevilDog"/>
+<Unit id="InfestedTerranCampaign"/>
+<Unit id="DominionKillTeam"/>
+<Unit id="Firebat"/>
+<Unit id="Goliath"/>
+<Unit id="Swann"/>
 <Unit id="RaynorCommando"/>
+<Unit id="Pygalisk"/>
 <Unit id="TychusChaingun"/>
 <Unit id="SpecialOpsDropship"/>
 <Unit id="MinerMale"/>
 <Unit id="Civilian" Variations="0,1,2"/>
-<Unit id="Hut" Variations="2,3,4,5"/>
 <Unit id="PalletGas"/>
 <Unit id="PalletMinerals"/>
 <Unit id="TerranBuggy"/>
+<Unit id="InfestedCC"/>
+<Unit id="InfestedSupply"/>
 <Unit id="Food1000"/>
 <Unit id="Medic"/>
+<Unit id="LocustMP"/>
+<Unit id="MercHellion"/>
+<Unit id="MercMedic"/>
+<Unit id="MengskReaper"/>
+<Unit id="MengskGoliath"/>
+<Unit id="Roachling"/>
+<Unit id="Locust"/>
+<Unit id="KorhalPalaceTurret"/>
+<Unit id="HERC"/>
+<Unit id="NovaInfestedSiegeTank"/>
 <Unit id="HERCCompound"/>
+<Unit id="RailGunTurret"/>
 <Unit id="Separatist"/>
+<Unit id="TychusCommando2"/>
+<Unit id="Separatist4"/>
+<Unit id="Separatist5"/>
+<Unit id="Separatist3"/>
+<Unit id="Separatist2"/>
+<Unit id="SiegeTank2"/>
 <Unit id="Armory2"/>
+<Unit id="KorhalPalaceTurret2"/>
 </Preload>

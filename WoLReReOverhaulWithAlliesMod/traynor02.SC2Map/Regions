@@ -95,7 +95,7 @@
     <region id="9">
         <name value="Mine Spawn"/>
         <shape type="circle">
-            <center value="90.5175,145.9101"/>
+            <center value="84.001,71.001"/>
             <radius value="0.9731"/>
         </shape>
     </region>
@@ -117,7 +117,19 @@
         <name value="Hellions Triggered"/>
         <color value="255,0,128,0"/>
         <shape type="circle">
-            <center value="75.4423,160.7932"/>
+            <center value="106,89"/>
+            <radius value="10"/>
+        </shape>
+        <shape type="circle">
+            <center value="20,76"/>
+            <radius value="9.513"/>
+        </shape>
+        <shape type="circle">
+            <center value="146.5,145.5"/>
+            <radius value="10"/>
+        </shape>
+        <shape type="circle">
+            <center value="63.0002,71"/>
             <radius value="10"/>
         </shape>
     </region>
@@ -506,20 +518,20 @@
     <region id="26">
         <name value="Starting SCVs"/>
         <shape type="rect">
-            <quad value="117.4658,121.0043,120.4243,127.6274"/>
+            <quad value="113.3444,19.4645,116.303,26.0876"/>
         </shape>
         <shape type="rect">
-            <quad value="120.429,120.771,124.429,123.271"/>
+            <quad value="116.3076,19.2312,120.3076,21.7312"/>
         </shape>
     </region>
     <region id="30">
         <name value="Starting Minerals"/>
         <color value="255,0,255,0"/>
         <shape type="rect">
-            <quad value="114.0361,120.9606,117.036,128.9604"/>
+            <quad value="110.1452,19.0571,113.145,27.057"/>
         </shape>
         <shape type="rect">
-            <quad value="116.0104,117.9853,123.0102,120.985"/>
+            <quad value="112.1196,16.0817,119.1193,19.0815"/>
         </shape>
     </region>
     <region id="31">

@@ -475,14 +475,10 @@ bool gt_Init03Units_Func (bool testConds, bool runActions) {
         if (autoFACADB5B_var == null) { break; }
         UnitGroupAdd(gv_startingSCVs, autoFACADB5B_var);
     }
-    gf_CreateInfoText(UnitFromId(606));
     if ((libNtve_gf_DifficultyValueInt(1, 0, 0, 0) == 1)) {
         gf_CreateInfoText(UnitFromId(18));
         gf_CreateInfoText(UnitFromId(106));
-        gf_CreateInfoText(UnitFromId(149));
         gf_CreateInfoText(UnitFromId(1024));
-        gf_CreateInfoText(UnitFromId(90));
-        gf_CreateInfoText(UnitFromId(591));
         gf_CreateInfoText(UnitFromId(28));
         autoCEAD8C02_g = gv_startingSCVs;
         autoCEAD8C02_u = UnitGroupCount(autoCEAD8C02_g, c_unitCountAll);
@@ -552,22 +548,16 @@ bool gt_Init03Units_Func (bool testConds, bool runActions) {
     libNtve_gf_PauseUnit(UnitFromId(227), true);
     UnitSetState(UnitFromId(1314), c_unitStateFidget, false);
     libNtve_gf_PauseUnit(UnitFromId(1314), true);
-    gv_rebelBeacon = UnitFromId(606);
-    gv_medicBarracks = UnitFromId(149);
     TriggerExecute(gt_MedicEnergy, true, false);
-    UnitIssueOrder(UnitFromId(1187), Order(AbilityCommand("move", 2)), c_orderQueueReplace);
-    UnitIssueOrder(UnitFromId(1188), Order(AbilityCommand("move", 2)), c_orderQueueReplace);
-    UnitIssueOrder(UnitFromId(1189), Order(AbilityCommand("move", 2)), c_orderQueueReplace);
-    UnitIssueOrder(UnitFromId(1190), Order(AbilityCommand("move", 2)), c_orderQueueReplace);
     libNtve_gf_PlayAnimationOnDoodadsInRegion(RegionFromId(18), "TRaynor02Crane", c_animNameDefault, "Stand 02", c_animFlagPlayForever, c_animTimeDefault);
     TriggerExecute(gt_RockMiners, true, false);
     TriggerExecute(gt_MinerLeft, true, false);
     TriggerExecute(gt_MinerTop, true, false);
     TriggerExecute(gt_MinerRight, true, false);
-    UnitGroupAdd(gv_hellions, UnitFromId(430));
-    UnitGroupAdd(gv_hellions, UnitFromId(87));
-    UnitGroupAdd(gv_hellions, UnitFromId(367));
-    UnitGroupAdd(gv_hellions, UnitFromId(431));
+    UnitGroupAdd(gv_hellions, UnitFromId(194909569));
+    UnitGroupAdd(gv_hellions, UnitFromId(1287554270));
+    UnitGroupAdd(gv_hellions, UnitFromId(1943763551));
+    UnitGroupAdd(gv_hellions, UnitFromId(1743669091));
     autoE63642CF_g = UnitGroup("Marine", gv_pLAYER_02_DOMINION, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
     autoE63642CF_u = UnitGroupCount(autoE63642CF_g, c_unitCountAll);
     for (;; autoE63642CF_u -= 1) {
