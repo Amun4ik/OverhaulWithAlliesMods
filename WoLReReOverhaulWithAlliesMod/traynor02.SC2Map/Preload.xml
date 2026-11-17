@@ -187,12 +187,16 @@
 <Unit id="MissileTurret"/>
 <Unit id="Bunker"/>
 <Unit id="Factory"/>
+<Unit id="Starport"/>
+<Unit id="Armory"/>
 <Unit id="AutoTurret"/>
 <Unit id="SiegeTankSieged"/>
+<Unit id="SiegeTank"/>
 <Unit id="BarracksTechLab"/>
 <Unit id="BarracksReactor"/>
 <Unit id="FactoryTechLab"/>
 <Unit id="FactoryReactor"/>
+<Unit id="StarportTechLab"/>
 <Unit id="SCV"/>
 <Unit id="Marine"/>
 <Unit id="Reaper"/>
@@ -215,11 +219,13 @@
 <Unit id="Roach"/>
 <Unit id="Infestor"/>
 <Unit id="Queen"/>
+<Unit id="Cyclone"/>
 <Unit id="Lyote"/>
 <Unit id="MineralField" Variations="0,1,2,3,4,5,6,7,8,9"/>
 <Unit id="VespeneGeyser"/>
 <Unit id="InfestedCivilian" Variations="0,1,2"/>
 <Unit id="PerditionTurret"/>
+<Unit id="SentryGun"/>
 <Unit id="WarPig"/>
 <Unit id="DevilDog"/>
 <Unit id="InfestedTerranCampaign"/>
@@ -261,4 +267,5 @@
 <Unit id="SiegeTank2"/>
 <Unit id="Armory2"/>
 <Unit id="KorhalPalaceTurret2"/>
+<Unit id="SupplyDepot2"/>
 </Preload>
